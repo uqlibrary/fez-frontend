@@ -7,24 +7,15 @@ test.describe('Thesis admin add', () => {
         await expect(page.locator('h2')).toContainText('Add a new work');
         await page.getByTestId('rek-ismemberof-input').click();
 
-        await page
-            .locator('li[role="option"]')
-            .first()
-            .click();
+        await page.locator('li[role="option"]').first().click();
 
         // Choose display type
         await page.getByTestId('rek-display-type-select').click();
-        await page
-            .getByTestId('rek-display-type-options')
-            .locator('li', { hasText: 'Thesis' })
-            .click();
+        await page.getByTestId('rek-display-type-options').locator('li', { hasText: 'Thesis' }).click();
 
         // Choose subtype
         await page.getByTestId('rek-subtype-select').click();
-        await page
-            .getByTestId('rek-subtype-options')
-            .locator('li', { hasText: 'Honours Thesis' })
-            .click();
+        await page.getByTestId('rek-subtype-options').locator('li', { hasText: 'Honours Thesis' }).click();
 
         // Apply selections
         await page.getByRole('button', { name: 'Create work' }).click();

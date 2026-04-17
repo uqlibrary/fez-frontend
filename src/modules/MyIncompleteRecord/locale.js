@@ -21,7 +21,6 @@ help: {
 - if help is not required, delete help: {} fully (including closing '},')
 
 */
-/* eslint-disable max-len */
 export default {
     title: 'Complete my work',
     loadingMessage: 'Loading work',
@@ -47,7 +46,7 @@ export default {
         notes: {
             title: 'Notes',
             label: 'Notes for this work',
-            placeholder: 'Add any other notes or comments about this work to send to the eSpace team.',
+            placeholder: 'Add any other notes or comments about this work to send to the UQ eSpace team.',
         },
         grants: {
             title: 'Grant information',
@@ -135,7 +134,7 @@ export default {
     prompt: {
         title: 'Missing data',
         message:
-            'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
+            'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the UQ eSpace team.',
         type: 'info_outline',
     },
     progressAlert: {

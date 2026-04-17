@@ -3,18 +3,19 @@
 exports[`Component CulturalAdvice should render component 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
     data-testid="standard-card-cultural-advice"
     id="standard-card-cultural-advice"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
     >
       <div
-        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
           data-testid="standard-card-cultural-advice-header"
           id="standard-card-cultural-advice-header"
         >
@@ -23,13 +24,13 @@ exports[`Component CulturalAdvice should render component 1`] = `
       </div>
     </div>
     <div
-      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
       data-analyticsid="standard-card-cultural-advice-content"
       data-testid="standard-card-cultural-advice-content"
       id="standard-card-cultural-advice-content"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
       >
         <span>
           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.

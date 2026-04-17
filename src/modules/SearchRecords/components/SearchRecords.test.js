@@ -19,8 +19,8 @@ jest.mock('actions', () => ({
 const mockUseNavigate = jest.fn();
 let mockUseLocation = {};
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
     useLocation: () => mockUseLocation,
 }));
@@ -337,8 +337,7 @@ describe('SearchRecords page', () => {
         expect(mockUseNavigate).toHaveBeenCalled();
         expect(mockUseNavigate).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search:
-                'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
+            search: 'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
@@ -468,8 +467,13 @@ describe('SearchRecords page', () => {
         setup({ ...testProps }, { ...testState }, rerender);
 
         fireEvent.mouseDown(within(getByTestId('export-publications-format')).getByRole('combobox'));
-        expect(getAllByRole('option').length).toBe(3);
-        fireEvent.click(getAllByRole('option')[1]);
+        expect(getAllByRole('option').map(el => el.textContent)).toStrictEqual([
+            'Please select',
+            'BibTex File',
+            'Excel File',
+            'Endnote File',
+        ]);
+        fireEvent.click(getAllByRole('option')[2]);
 
         expect(actions.exportEspacePublications).toHaveBeenCalledWith({
             ...searchQuery,

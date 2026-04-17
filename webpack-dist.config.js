@@ -24,7 +24,6 @@ const options = {
                 '/data/*',
                 '/assets/*.svg',
                 '/sitemap/*.xml',
-                '/list-by-year/*.html',
                 '/*.js',
                 '/*.css',
             ],
@@ -82,9 +81,7 @@ const outputLastCommitHashes = ({
 };
 
 // get last commit hash, and use in output filenames.
-const currentCommitHash = execSync('git rev-parse --short HEAD')
-    .toString()
-    .trim();
+const currentCommitHash = execSync('git rev-parse --short HEAD').toString().trim();
 
 /** */
 
@@ -94,7 +91,7 @@ const webpackConfig = {
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment'],
+        vendor: ['react', 'react-dom', 'react-router', 'redux', 'react-redux', 'moment'],
     },
     // Where you want the output to go
     output: {
@@ -135,7 +132,7 @@ const webpackConfig = {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
                 type: 'asset/resource',
                 generator: {
-                    publicPath: '/assets/',
+                    publicPath: `/${config.basePath}assets/`,
                     outputPath: 'assets/',
                     filename: '[hash][ext]',
                 },
@@ -182,7 +179,6 @@ const webpackConfig = {
             'process.env.AUTH_LOGIN_URL': JSON.stringify(config.auth_login),
             'process.env.AUTH_LOGOUT_URL': JSON.stringify(config.auth_logout),
             'process.env.APP_URL': JSON.stringify(config.url(process.env.CI_BRANCH)),
-            'process.env.FULL_PATH': JSON.stringify(config.fullPath(process.env.CI_BRANCH)),
             'process.env.BRANCH': JSON.stringify(config.environment),
             'process.env.ORCID_URL': JSON.stringify(config.orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(config.orcidClientId),

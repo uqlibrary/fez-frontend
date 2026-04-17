@@ -6,13 +6,13 @@ import queryString from 'query-string';
 import { styled } from '@mui/material/styles';
 import * as actions from 'actions';
 import { useDispatch } from 'react-redux';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import { useFormContext } from 'react-hook-form';
 import * as Sentry from '@sentry/react';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import Badge from '@mui/material/Badge';
 import Typography from '@mui/material/Typography';

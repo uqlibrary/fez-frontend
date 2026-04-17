@@ -13,8 +13,12 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltip
                 id="auth-button"
                 title={isAuthorizedUser ? signOutTooltipText : signInTooltipText}
                 placement="bottom-start"
-                TransitionComponent={Fade}
-                TransitionProps={{ timeout: 300 }}
+                slots={{
+                    transition: Fade,
+                }}
+                slotProps={{
+                    transition: { timeout: 300 },
+                }}
             >
                 <IconButton
                     onClick={onClick}

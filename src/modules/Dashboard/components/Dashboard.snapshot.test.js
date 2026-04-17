@@ -1,8 +1,8 @@
 import React from 'react';
-import Dashboard, { fibonacci, isWaitingForSync } from './Dashboard';
+import Dashboard from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
-import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
+import { render, WithReduxStore, WithMemoryRouter, fireEvent } from 'test-utils';
 
 const publicationTotalCount = {
     account: mock.accounts.uqresearcher,
@@ -18,13 +18,7 @@ const mockActions = {
     loadOrcidSyncStatus: jest.fn(),
 };
 
-const mockUseNavigate = jest.fn();
-
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
-    useNavigate: () => mockUseNavigate,
-}));
-
+const loadOrcidSyncDelay = 1;
 function setup(testProps = {}, renderMethod = render) {
     const props = {
         theme: {},
@@ -54,26 +48,20 @@ function setup(testProps = {}, renderMethod = render) {
             publicationsListFacets: {},
             ...testProps.incomplete,
         },
+        loadOrcidSyncDelay,
         ...orcidSyncInitialState,
         ...testProps,
     };
     return renderMethod(
         <WithReduxStore>
-            <WithRouter>
+            <WithMemoryRouter>
                 <Dashboard {...props} />
-            </WithRouter>
+            </WithMemoryRouter>
         </WithReduxStore>,
     );
 }
 
 describe('Dashboard test', () => {
-    afterEach(() => {
-        Object.values(mockActions).forEach(action => {
-            action.mockClear();
-        });
-        mockUseNavigate.mockRestore();
-    });
-
     it('renders alert for non-authors', () => {
         const { container } = setup({ account: mock.accounts.uqstaff });
         expect(container).toMatchSnapshot();
@@ -153,19 +141,34 @@ describe('Dashboard test', () => {
     it('does render the donut/bar graph cards when data is available', () => {
         const { container } = setup({
             authorDetails: mock.authorDetails.uqresearcher,
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
-                    { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                    { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                    { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                    {
+                        'name': 'Journal Article',
+                        'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5],
+                    },
+                    {
+                        'name': 'Conference Paper',
+                        'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0],
+                    },
+                    {
+                        'name': 'Book Chapter',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Book',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Other',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -175,12 +178,6 @@ describe('Dashboard test', () => {
             ],
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('does navigate to records add find page when clicked addPublicationLure', () => {
-        const { getByTestId } = setup({});
-        fireEvent.click(getByTestId('action-button'));
-        expect(mockUseNavigate).toHaveBeenCalledWith('/records/add/find');
     });
 
     it('does render latest and trending publications tabs correctly', () => {
@@ -208,12 +205,6 @@ describe('Dashboard test', () => {
             showTrendingPublicationsTab: true,
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('_claimYourPublications method', () => {
-        const { getByTestId } = setup({ possiblyYourPublicationsCount: 5 });
-        fireEvent.click(getByTestId('action-button'));
-        expect(mockUseNavigate).toBeCalledWith('/records/possible');
     });
 
     it('handleTabChange method', () => {
@@ -244,19 +235,34 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10 },
                 scopus_citation_count_i: { count: 10 },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
-                    { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                    { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                    { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                    {
+                        'name': 'Journal Article',
+                        'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5],
+                    },
+                    {
+                        'name': 'Conference Paper',
+                        'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0],
+                    },
+                    {
+                        'name': 'Book Chapter',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Book',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Other',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -280,19 +286,34 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10, years: '1000 - 2019' },
                 scopus_citation_count_i: { count: 10, years: '1000 - 2019' },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
-                    { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                    { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                    { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                    {
+                        'name': 'Journal Article',
+                        'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5],
+                    },
+                    {
+                        'name': 'Conference Paper',
+                        'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0],
+                    },
+                    {
+                        'name': 'Book Chapter',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Book',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Other',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -316,19 +337,34 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10, years: '1000 - 2019' },
                 scopus_citation_count_i: { count: 10, years: '1000 - 2019' },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
-                    { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                    { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                    { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                    {
+                        'name': 'Journal Article',
+                        'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5],
+                    },
+                    {
+                        'name': 'Conference Paper',
+                        'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0],
+                    },
+                    {
+                        'name': 'Book Chapter',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Book',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Other',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -398,22 +434,36 @@ describe('Dashboard test', () => {
             accountAuthorDetailsLoading: false,
             loadingPublicationsStats: false,
             publicationsStats: undefined,
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
-                    { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                    { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                    { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                    {
+                        'name': 'Journal Article',
+                        'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5],
+                    },
+                    {
+                        'name': 'Conference Paper',
+                        'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0],
+                    },
+                    {
+                        'name': 'Book Chapter',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Book',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Other',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-            // eslint-disable-next-line prettier/prettier
+
             },
         });
 
-        /* eslint-enable max-len */
         expect(container).toMatchSnapshot();
     });
 
@@ -428,19 +478,34 @@ describe('Dashboard test', () => {
                 thomson_citation_count_i: { count: 10 },
                 scopus_citation_count_i: { count: 10 },
             },
-            /* eslint-disable max-len */
+
             // prettier-ignore
             publicationsByYear: {
                 'series': [
-                    { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
-                    { 'name': 'Conference Paper', 'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0] },
-                    { 'name': 'Book Chapter', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Book', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-                    { 'name': 'Other', 'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+                    {
+                        'name': 'Journal Article',
+                        'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5],
+                    },
+                    {
+                        'name': 'Conference Paper',
+                        'data': [0, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 4, 1, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 0, 1, 0, 5, 0, 0, 2, 1, 1, 0, 9, 0],
+                    },
+                    {
+                        'name': 'Book Chapter',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Book',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
+                    {
+                        'name': 'Other',
+                        'data': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    },
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-enable max-len */
+
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -513,6 +578,26 @@ describe('Dashboard test', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('displays a lure when the user has non-compliant open access submissions', () => {
+        const { container } = setup({
+            noncompliantoa: {
+                publicationsList: [],
+                publicationsListPagingData: {
+                    total: 2,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 3,
+                    data: [1, 2],
+                    filters: {},
+                },
+            },
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        expect(container).toMatchSnapshot();
+    });
+
     it('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
         const { container } = setup({
             incomplete: {
@@ -533,93 +618,11 @@ describe('Dashboard test', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('redirectToMissingRecordslist method', () => {
-        const { getByText } = setup({
-            incomplete: {
-                publicationsList: [],
-                publicationsListPagingData: {
-                    total: 1,
-                    took: 30,
-                    per_page: 20,
-                    current_page: 1,
-                    from: 1,
-                    to: 1,
-                    data: [1],
-                    filters: {},
-                },
-            },
-            authorDetails: mock.authorDetails.uqresearcher,
-        });
-        fireEvent.click(getByText(/View and Complete/i));
-        expect(mockUseNavigate).toBeCalledWith('/records/incomplete');
-    });
-
-    /* it('calls action to sync to ORCID', () => {
-        const testFn = jest.fn();
-        const { getByTestId } = setup({
-            loadingOrcidSyncStatus: false,
-            orcidSyncEnabled: true,
-            actions: {
-                ...mockActions,
-                requestOrcidSync: testFn,
-            },
-        });
-
-        fireEvent.click(getByTestId('help-icon-orcid'));
-        expect(testFn).toHaveBeenCalledTimes(1);
-    });*/
-
     it('sets context for showing ORCID sync UI', () => {
         const { container } = setup({
             orcidSyncEnabled: true,
             loadingOrcidSyncStatus: false,
         });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should have helper to generate fibonacci numbers', () => {
-        const fibonacciSeries = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
-        fibonacciSeries.forEach((num, index) => {
-            expect(fibonacci(index)).toBe(num);
-        });
-    });
-
-    it('should have helper to determine orcId loading status', () => {
-        expect(isWaitingForSync({ orj_status: 'Pending' })).toBe(true);
-        expect(isWaitingForSync({ orj_status: 'In Progress' })).toBe(true);
-        expect(isWaitingForSync({ orj_status: 'Fail' })).toBe(false);
-        expect(isWaitingForSync({ other_status: 'Pending' })).toBe(false);
-        expect(isWaitingForSync({})).toBe(false);
-        expect(isWaitingForSync()).toBe(false);
-    });
-
-    it('should wait for ORCID sync to complete', () => {
-        jest.useFakeTimers();
-        const { container, rerender } = setup({
-            orcidSyncEnabled: false,
-            loadingOrcidSyncStatus: true,
-        });
-        jest.runAllTimers();
-        setup(
-            {
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-                orcidSyncStatus: {
-                    orj_status: 'Pending',
-                },
-            },
-            rerender,
-        );
-        jest.runAllTimers();
-        expect(mockActions.loadOrcidSyncStatus).toHaveBeenCalledTimes(1);
-        setup(
-            {
-                orcidSyncEnabled: true,
-                loadingOrcidSyncStatus: false,
-                orcidSyncStatus: null,
-            },
-            rerender,
-        );
         expect(container).toMatchSnapshot();
     });
 });

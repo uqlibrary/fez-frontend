@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import JournalFieldsMap from './JournalFieldsMap';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Checkbox from '@mui/material/Checkbox';
@@ -17,6 +17,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Link, useHref } from 'react-router';
 
 const classesInternal = {
     iconClosed: {
@@ -46,9 +47,9 @@ const StyledTableCell = styled(TableCell, {
     shouldForwardProp: prop => !['isSelectable'].includes(prop),
 })(({ theme, isSelectable }) => ({
     ...(isSelectable
-        ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
-        : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
-          /* istanbul ignore next */ {}),
+        ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {})
+        : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+          /* istanbul ignore next */ {})),
     [theme.breakpoints.down('xs')]: { padding: 'none' },
     [theme.breakpoints.down('sm')]: {
         verticalAlign: 'top',
@@ -58,33 +59,35 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+              /* istanbul ignore next */ {})),
     },
 }));
 
 const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
-
+    // account for HashRouter usage
+    const href = useHref((<Link to={`/journal/view/${row.jnl_jid}?fromSearch=true`} />).props.to);
+    // istanbul ignore next
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
 
     const compactViewFields = JournalFieldsMap.slice(1).filter(item => item.compactView || false);
@@ -139,7 +142,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         >
                             <Typography variant="body1" component="span">
                                 <ExternalLink
-                                    href={`/journal/view/${row.jnl_jid}`}
+                                    href={href}
                                     title={row.jnl_title}
                                     id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
                                     sx={{
@@ -202,6 +205,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                                 id={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
                                                 data-testid={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
                                                 component={'div'}
+                                                sx={{ display: 'inline-flex' }}
                                             >
                                                 {(itemData && field.prefix) || ''}
                                                 {itemData || /* istanbul ignore next */ ''}

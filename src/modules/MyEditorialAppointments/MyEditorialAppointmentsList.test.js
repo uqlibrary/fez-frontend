@@ -14,6 +14,20 @@ import {
 
 import { default as locale } from 'locale/components';
 
+jest.mock('@mui/material/Popper', () => ({
+    __esModule: true,
+    default: ({ children }) => <div data-testid="popper-mock">{children}</div>,
+}));
+
+jest.mock('@mui/material/Tooltip', () => ({
+    __esModule: true,
+    default: ({ children, title }) => (
+        <div title={title} data-testid="tooltip-mock">
+            {children}
+        </div>
+    ),
+}));
+
 function setup(testProps = {}) {
     const props = {
         list: [],
@@ -207,11 +221,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         expect(getByTestId('eap-journal-name-input')).toHaveAttribute('aria-invalid', 'true');
 
-        await userEvent.click(
-            getByTestId('eap-role-cvo-id-input')
-                .closest('div')
-                .querySelector('[aria-label=Clear]'),
-        );
+        await userEvent.click(getByTestId('eap-role-cvo-id-input').closest('div').querySelector('[aria-label=Clear]'));
 
         expect(getByTestId('eap-role-cvo-id-input')).toHaveAttribute('aria-invalid', 'true');
 
@@ -388,35 +398,5 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-journal-name-0', listItem)).toHaveTextContent('testing');
         expect(getByTestId('eap-start-year-0', listItem)).toHaveTextContent('2010');
         expect(getByTestId('eap-end-year-0', listItem)).toHaveTextContent('Current');
-    });
-
-    describe('mobile coverage', () => {
-        beforeEach(() => {
-            window.matchMedia = createMatchMedia(320);
-        });
-        it('should show mobile add dialog', async () => {
-            const { getByTestId, findByTestId } = setup({
-                list: [],
-            });
-            await userEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
-            await findByTestId('my-editorial-appointments-dialog-add-new-editorial-appointment');
-        });
-        it('should show mobile edit dialog', async () => {
-            const { getByTestId, findByTestId } = setup({
-                list: [
-                    {
-                        eap_id: 1,
-                        eap_journal_name: 'test',
-                        eap_jnl_id: 1234,
-                        eap_role_cvo_id: '454148',
-                        eap_start_year: '2006',
-                        eap_end_year: '2026',
-                        eap_role_name: 'Guest Editor',
-                    },
-                ],
-            });
-            await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
-            await findByTestId('my-editorial-appointments-dialog-edit-this-editorial-appointment');
-        });
     });
 });

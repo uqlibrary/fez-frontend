@@ -11,6 +11,8 @@ export const ULRICHS_URL_PREFIX =
 
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
+export const getDoajUrl = issn => prefixByUrlResolver(`https://doaj.org/toc/${issn}`);
+
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
@@ -20,30 +22,47 @@ export const numberToWords = value => {
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
-export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 export const UQ_FULL_NAME = 'The University of Queensland';
 
-// URLS - values are set in webpack build
+export const IS_JEST_TEST = !!process.env.JEST_WORKER_ID;
+export const IS_PLAYWRIGHT_TEST = !!process.env.PW_IS_RUNNING;
+export const IS_TEST = IS_JEST_TEST || IS_PLAYWRIGHT_TEST;
+
+// URLS
+export const LOCALHOST_DOMAIN = 'localhost';
+export const LOCALHOST_ALIAS_DOMAIN = 'dev-espace.library.uq.edu.au';
+export const LOCALHOST_URL = `http://${LOCALHOST_DOMAIN}/`;
+export const PRODTEST_URL = 'https://fez-testing.library.uq.edu.au/';
 export const PRODUCTION_URL = 'https://espace.library.uq.edu.au/';
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
+export const DEVELOPMENT_BRANCH_URL = 'https://development.library.uq.edu.au/';
 export const PRODUCTION_API_URL = 'https://api.library.uq.edu.au/v1/';
 export const STAGING_API_URL = 'https://api.library.uq.edu.au/staging/';
-export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
 export const API_URL = process.env.API_URL || STAGING_API_URL;
-export const APP_URL = process.env.APP_URL || STAGING_URL;
-export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
-export const IS_DEVELOPMENT_SERVER =
-    APP_URL.indexOf('localhost') > -1 || (!process.env.USE_MOCK && APP_URL.indexOf(DEVELOPMENT_DOMAIN) > -1);
+export const APP_URL = process.env.APP_URL || LOCALHOST_URL;
+export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_URL) || APP_URL.includes(PRODTEST_URL);
+export const IS_LOCAL_DEV = APP_URL.includes(LOCALHOST_DOMAIN) || APP_URL.includes(LOCALHOST_ALIAS_DOMAIN);
+export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
-export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login';
+export const ESPACE_TEAM_CONTACT_US_URL =
+    'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us';
+
+export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || `${APP_URL}login`;
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
+
+export const FEZ_USER_SYSTEM_ID = 41783;
+export const FEZ_USER_SYSTEM_USERNAME = 'webcron';
+export const FEZ_USER_SYSTEM_LABEL = 'System';
 
 export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
+export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
 
 export const ROR_BASE_URL = 'https://ror.org';
+
+export const RAID_BASE_URL = 'https://raid.org';
 
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
@@ -53,7 +72,7 @@ export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${get
 )}v=3.exp&libraries=geometry,drawing,places`;
 
 // convenience method to return an image via require() with a leading / where necessary
-export const getRequiredImagePath = imagePath => `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${imagePath}`;
+export const getRequiredImagePath = imagePath => `${!IS_LOCAL_DEV && !IS_DEVELOPMENT_BRANCH ? '/' : ''}${imagePath}`;
 
 // these values must match what is in api at fez_core/src/config/fez_core.php
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
@@ -629,6 +648,7 @@ export const THESIS_SUBMISSION_SUBTYPES = [
 export const EXPORT_FORMAT_TO_EXTENSION = {
     excel: 'xlsx',
     endnote: 'enw',
+    bibtex: 'bib',
     csv: 'csv',
 };
 
@@ -1687,6 +1707,12 @@ export const OA_STATUS = [
     { value: '454118', text: 'Not yet assessed (Unpaywall)' },
 ];
 
+export const OA_STATUS_CATEGORIES = [
+    { value: 'publisher_open_access', text: 'Publisher open access' },
+    { value: 'repository_open_access', text: 'Repository open access' },
+    { value: 'to_be_confirmed', text: 'To be confirmed' },
+];
+
 export const OA_STATUS_TYPE = [
     { value: 454120, text: 'Green' },
     { value: 454121, text: 'Gold' },
@@ -1709,8 +1735,7 @@ export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;
 export const SENSITIVE_HANDLING_NOTE_TYPE = [
     {
         value: 456855,
-        text:
-            'Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.',
+        text: 'Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.',
     },
     {
         value: 456856,
@@ -1750,6 +1775,25 @@ export const ANDS_COLLECTION_TYPE_OPTIONS = [
         value: ANDS_COLLECTION_TYPE_DATASET,
         text: 'Dataset',
     },
+];
+
+export const CAPPED_OPTIONS = [
+    { value: 'Y', text: 'Y' },
+    { value: 'Approaching', text: 'Approaching' },
+    { value: 'Exceeded', text: 'Exceeded' },
+    { value: 'Nodeal', text: 'No deal' },
+    { value: 'N', text: 'N' },
+];
+
+export const S2O_OPTIONS = [
+    { value: 'Y', text: 'Y' },
+    { value: 'S2O', text: 'S2O' },
+    { value: 'N', text: 'N' },
+];
+
+export const BOOLEAN_OPTIONS = [
+    { value: true, text: 'Y' },
+    { value: false, text: 'N' },
 ];
 
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
@@ -1844,31 +1888,15 @@ export const COLLECTION_VIEW_TYPE = [
 /** journalAdmin  */
 export const ADMIN_JOURNAL = 'adminjournal';
 
+/** journalSearch  */
+export const JOURNAL_SEARCH_OPERANDS = ['OR', 'AND', 'NOT'];
+
 /** Links */
 export const dataTeamCollections = ['UQ:06510ce'];
 
 /** read only controlled vocabularies (hard coded above) */
 const READONLY_VOCABS_IDS = [
-    453607,
-    453982,
-    453991,
-    453995,
-    453596,
-    454089,
-    454025,
-    450000,
-    453219,
-    453222,
-    453630,
-    453691,
-    454119,
-    456854,
-    454139,
-    453617,
-    453614,
-    456851,
-    456849,
-    456850,
-    453662,
+    453607, 453982, 453991, 453995, 453596, 454089, 454025, 450000, 453219, 453222, 453630, 453691, 454119, 456854,
+    454139, 453617, 453614, 456851, 456849, 456850, 453662,
 ];
 export const isReadonlyVocab = id => READONLY_VOCABS_IDS.includes(id);

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { numberToWords } from 'config';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 import RadioButtonUnchecked from '@mui/icons-material/RadioButtonUnchecked';

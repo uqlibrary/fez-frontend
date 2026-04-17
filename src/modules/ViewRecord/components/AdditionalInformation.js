@@ -14,18 +14,19 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { parseHtmlToJSX } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import {
     CURRENT_LICENCES,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     PLACEHOLDER_ISO8601_ZULU_DATE,
     PUBLICATION_TYPE_INSTRUMENT,
     ORCID_BASE_URL,
+    RAID_BASE_URL,
     ROR_BASE_URL,
 } from 'config/general';
 import { isValidOrcid, isValidROR } from 'config/validation';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
@@ -75,26 +76,36 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             <Box
                 sx={theme => ({
                     padding: { xs: `${theme.spacing(1)} 0`, sm: 1 },
+                    borderBottom: '1px solid',
+                    borderBottomColor: 'secondary.light',
                 })}
                 key={index}
             >
                 <Grid
                     container
                     spacing={2}
-                    padding={0}
                     key={`additional-info-${heading}`}
                     sx={{
-                        borderBottom: '1px solid',
-                        borderBottomColor: 'secondary.light',
+                        padding: 0,
+                        alignItems: 'flex-start',
                     }}
-                    alignItems="flex-start"
                 >
-                    <Grid xs={12} sm={3}>
+                    <Grid
+                        size={{
+                            xs: 12,
+                            sm: 3,
+                        }}
+                    >
                         <Typography variant="body2" component={'span'} data-testid={labelTestId}>
                             {heading}
                         </Typography>
                     </Grid>
-                    <Grid xs={12} sm={9}>
+                    <Grid
+                        size={{
+                            xs: 12,
+                            sm: 9,
+                        }}
+                    >
                         <Typography variant="body2" component={'span'}>
                             {data}
                         </Typography>
@@ -222,6 +233,30 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
     };
 
+    const renderRaid = (objects, subKey) => {
+        if (objects.filter(item => !!item[subKey]).length === 0) return null;
+        return (
+            <Box component={'ul'} key={'rek-raids'} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                {objects.map((item, index) => (
+                    <li key={`rek-raid-${index}`} data-testid={`rek-raid-${index}`}>
+                        {(() => {
+                            const id = item[subKey];
+                            return (
+                                <ExternalLink
+                                    id={`rek-raid-${index}`}
+                                    data-testid={`rek-raid-${index}`}
+                                    href={`${RAID_BASE_URL}/${id}`}
+                                >
+                                    {id}
+                                </ExternalLink>
+                            );
+                        })()}
+                    </li>
+                ))}
+            </Box>
+        );
+    };
+
     // TODO: display original contact email for admin users
     const renderContactEmail = (objects, subKey) => {
         const isInstrument = publication.rek_display_type === PUBLICATION_TYPE_INSTRUMENT;
@@ -287,6 +322,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     };
 
+    const isDatePlaceholder = value => moment(value).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE));
+
     const getCINoticeValue = publication => {
         return !!publication.rek_ci_notice_attribution_incomplete &&
             publication.rek_ci_notice_attribution_incomplete === 1
@@ -306,6 +343,24 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         } else {
             return headings.default[field];
         }
+    };
+
+    const renderRelatedServices = (objects, subkey, publication) => {
+        const descriptions = publication?.fez_record_search_key_related_service_description;
+        const enhanced = objects.map(item => {
+            const order = item?.rek_related_service_order;
+            /* istanbul ignore next */
+            if (!order || !descriptions) return item;
+            const description = descriptions
+                .find(item => parseInt(item.rek_related_service_description_order, 10) === parseInt(order, 10))
+                ?.rek_related_service_description?.trim?.();
+            if (!description?.length) return item;
+            return {
+                ...item,
+                rek_related_service: `${item.rek_related_service} - ${description}`,
+            };
+        });
+        return renderList(enhanced, subkey);
     };
 
     const renderSDG = publication => {
@@ -396,9 +451,11 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_geographic_area':
                 return renderMap(objects);
             case 'rek_raid':
-                return renderList(objects, subkey, pathConfig.list.raid);
+                return renderRaid(objects, subkey);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_related_service':
+                return renderRelatedServices(objects, subkey, publication);
             case 'rek_sdg_source':
                 return renderSDG(publication);
             default:
@@ -504,20 +561,29 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 let data = '';
                 const field = item.field;
                 let value;
+                let subkey;
                 switch (field) {
                     case 'rek_description':
                         value = getAbstract(publication);
                         break;
                     case 'rek_date':
-                        value = moment(publication[field]).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE))
-                            ? null
-                            : publication[field];
+                        value = isDatePlaceholder(publication[field]) ? null : publication[field];
+                        break;
+                    case 'fez_record_search_key_start_date':
+                    case 'fez_record_search_key_end_date':
+                        subkey = transformFieldNameToSubkey(field);
+                        value =
+                            publication[field] &&
+                            publication[field][subkey] &&
+                            isDatePlaceholder(publication[field][subkey])
+                                ? null
+                                : publication[field];
                         break;
                     case 'rek_ci_notice_attribution_incomplete':
                         value = getCINoticeValue(publication);
                         break;
                     case 'fez_record_search_key_herdc_code':
-                        const subkey = transformFieldNameToSubkey(field);
+                        subkey = transformFieldNameToSubkey(field);
                         value = publication[field] && publication[field][subkey] !== 0 ? publication[field] : null;
                         break;
                     default:
@@ -551,7 +617,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return null;
     }
     return (
-        <Grid xs={12}>
+        <Grid size={{ xs: 12 }}>
             <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
                 {renderColumns()}
             </StandardCard>

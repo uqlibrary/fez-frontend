@@ -4,12 +4,12 @@ import {
     filterObjectKeys,
     reorderObjectKeys,
     combineObjects,
-    isDevEnv,
     isFezRecordOneToOneRelation,
     isFezRecordOneToManyRelation,
 } from '../helpers/general';
 import arrayDiff from 'locutus/php/array/array_diff';
 import { merge } from 'lodash';
+import { IS_PRODUCTION } from '../config/general';
 
 export const SERVER_ERROR_NAMESPACE = 'root';
 export const SERVER_ERROR_KEY = 'serverError';
@@ -105,63 +105,65 @@ export const getPropsForAlertInconsistencyWarning = diff =>
  * @param attributes
  * @return {(function(...[*]): ({submitting: *, submitSucceeded: *, error: *}))|*}
  */
-const getPropsForAlert = attributes => (...additionalValidationErrors) => {
-    const props = {
-        submitting: !!attributes.formState.isSubmitting,
-        submitSucceeded: !!attributes.formState.isSubmitSuccessful,
-    };
-
-    if (attributes.formState.hasServerError) {
-        return {
-            ...props,
-            error: attributes.formState.serverError?.message,
+const getPropsForAlert =
+    attributes =>
+    (...additionalValidationErrors) => {
+        const props = {
+            submitting: !!attributes.formState.isSubmitting,
+            submitSucceeded: !!attributes.formState.isSubmitSuccessful,
         };
-    }
 
-    if (!attributes.formState.hasValidationError && !additionalValidationErrors.length) {
-        return props;
-    }
+        if (attributes.formState.hasServerError) {
+            return {
+                ...props,
+                error: attributes.formState.serverError?.message,
+            };
+        }
 
-    // if `values` or `formState.defaultValues` props are set, its keys are used for ordering returned
-    // formErrors object.
-    // Note: when using theses props, they must include all forms fields in the desired order.
-    // Otherwise, the missing fields will not be present in the formErrors object. Unfortunately,
-    // with the current RHF implementation, this is not possible to be solved programmatically.
-    const formFields = flattenFormFieldKeys(
-        attributes.values && !!Object.keys(attributes.values).length
-            ? attributes.values
-            : attributes.formState?.defaultValues,
-    );
+        if (!attributes.formState.hasValidationError && !additionalValidationErrors.length) {
+            return props;
+        }
 
-    if (formFields.length) {
-        const { validationErrors } = attributes.formState;
-        const orderedErrors = reorderObjectKeys(flattenErrors(validationErrors), formFields);
+        // if `values` or `formState.defaultValues` props are set, its keys are used for ordering returned
+        // formErrors object.
+        // Note: when using theses props, they must include all forms fields in the desired order.
+        // Otherwise, the missing fields will not be present in the formErrors object. Unfortunately,
+        // with the current RHF implementation, this is not possible to be solved programmatically.
+        const formFields = flattenFormFieldKeys(
+            attributes.values && !!Object.keys(attributes.values).length
+                ? attributes.values
+                : attributes.formState?.defaultValues,
+        );
 
-        // warn devs in case not all errors are present in the ordered errors object
-        if (isDevEnv()) {
-            const validationErrorsKeys = Object.keys(validationErrors);
-            const orderedErrorsKeys = Object.keys(orderedErrors);
-            /* istanbul ignore next */
-            if (validationErrorsKeys.length !== orderedErrorsKeys.length) {
-                const result = Object.values(arrayDiff(validationErrorsKeys, orderedErrorsKeys));
-                console.error(getPropsForAlertInconsistencyWarning(result));
+        if (formFields.length) {
+            const { validationErrors } = attributes.formState;
+            const orderedErrors = reorderObjectKeys(flattenErrors(validationErrors), formFields);
+
+            // warn devs in case not all errors are present in the ordered errors object
+            if (!IS_PRODUCTION) {
+                const validationErrorsKeys = Object.keys(validationErrors);
+                const orderedErrorsKeys = Object.keys(orderedErrors);
+                /* istanbul ignore next */
+                if (validationErrorsKeys.length !== orderedErrorsKeys.length) {
+                    const result = Object.values(arrayDiff(validationErrorsKeys, orderedErrorsKeys));
+                    console.error(getPropsForAlertInconsistencyWarning(result));
+                }
             }
+
+            return {
+                ...props,
+                formErrors: {
+                    ...orderedErrors,
+                    ...combineObjects(...additionalValidationErrors),
+                },
+            };
         }
 
         return {
             ...props,
-            formErrors: {
-                ...orderedErrors,
-                ...combineObjects(...additionalValidationErrors),
-            },
+            formErrors: flattenErrors(attributes.formState.validationErrors, ...additionalValidationErrors),
         };
-    }
-
-    return {
-        ...props,
-        formErrors: flattenErrors(attributes.formState.validationErrors, ...additionalValidationErrors),
     };
-};
 
 /**
  * @param props

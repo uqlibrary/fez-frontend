@@ -106,11 +106,10 @@ export const createDefaultDrawerDescriptorObject = (
         locale.authorAffiliations;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].error =
         !!shouldHandleAffiliations && AAProblems.length > 0;
-    adminViewRecordDefaultContentObject.sections[
-        adminViewRecordDefaultContentIndex.authors
-    ][1].value = !!shouldHandleAffiliations
-        ? authorAffiliates(fields.authorAffiliates, content, navigate, pid, AAProblems)
-        : config.viewRecord.adminViewRecordDrawerFields.affiliatesDoNotApply;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][1].value =
+        !!shouldHandleAffiliations
+            ? authorAffiliates(fields.authorAffiliates, content, navigate, pid, AAProblems)
+            : config.viewRecord.adminViewRecordDrawerFields.affiliatesDoNotApply;
     // WoS
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][1].value = formattedString(

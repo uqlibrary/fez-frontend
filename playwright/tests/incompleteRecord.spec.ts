@@ -4,10 +4,7 @@ import { readCKEditor, typeCKEditor } from '../lib/ckeditor';
 test.describe('Incomplete record form', () => {
     const checkSignificance = async (page: Page, significance: string) => {
         await page.getByTestId('rek-significance-select').click();
-        await page
-            .getByTestId('rek-significance-options')
-            .getByText(significance, { exact: true })
-            .click();
+        await page.getByTestId('rek-significance-options').getByText(significance, { exact: true }).click();
         await expect(page.getByTestId('rek-significance-select')).toHaveText(significance);
     };
 
@@ -18,20 +15,13 @@ test.describe('Incomplete record form', () => {
 
     const checkAudienceSize = async (page: Page, sizeText: string) => {
         await page.getByTestId('rek-audience-size-select').click();
-        await page
-            .getByTestId('rek-audience-size-options')
-            .getByText(sizeText, { exact: true })
-            .click();
+        await page.getByTestId('rek-audience-size-options').getByText(sizeText, { exact: true }).click();
         await expect(page.getByTestId('rek-audience-size-select')).toHaveText(sizeText);
     };
 
     const checkQualityIndicators = async (page: Page, indicator: string) => {
         await page.getByTestId('rek-quality-indicator-select').click();
-        await page
-            .getByTestId('rek-quality-indicator-options')
-            .locator('li')
-            .filter({ hasText: indicator })
-            .click();
+        await page.getByTestId('rek-quality-indicator-options').locator('li').filter({ hasText: indicator }).click();
         await page.getByTestId('rek-quality-indicator-options').click({ position: { x: 10, y: 10 } });
         await expect(page.getByTestId('rek-quality-indicator-select')).toHaveText(indicator);
     };
@@ -62,11 +52,7 @@ test.describe('Incomplete record form', () => {
 
         // Select affiliation type
         await page.locator('#org-affiliation-type').click();
-        await page
-            .locator('#menu-org-affiliation-type')
-            .locator('li')
-            .getByText(orgType, { exact: true })
-            .click();
+        await page.locator('#menu-org-affiliation-type').locator('li').getByText(orgType, { exact: true }).click();
 
         // Apply changes
         await expect(page.getByTestId('rek-author-add')).toHaveAttribute('tabindex', '0');
@@ -97,17 +83,8 @@ test.describe('Incomplete record form', () => {
 
         // Mark as UQ author
         await page.locator('#org-affiliation-select').click();
-        await expect(
-            page
-                .locator('#org-affiliation-options')
-                .locator('li')
-                .nth(1),
-        ).not.toContainText('Not');
-        await page
-            .locator('#org-affiliation-options')
-            .locator('li')
-            .nth(1)
-            .click();
+        await expect(page.locator('#org-affiliation-options').locator('li').nth(1)).not.toContainText('Not');
+        await page.locator('#org-affiliation-options').locator('li').nth(1).click();
 
         await expect(page.getByTestId('rek-author-input')).toBeDisabled();
 
@@ -206,10 +183,7 @@ test.describe('Incomplete record form', () => {
         // navigate back to the list
         await page.goBack();
 
-        await page
-            .locator('button')
-            .getByText(/yes/i)
-            .click();
+        await page.locator('button').getByText(/yes/i).click();
 
         // ensure the list page is loaded
         await expect(page).toHaveURL('/records/incomplete');

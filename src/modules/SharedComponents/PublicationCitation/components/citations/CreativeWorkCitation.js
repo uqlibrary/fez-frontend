@@ -18,7 +18,7 @@ export const CreativeWorkCitation = ({ publication, citationStyle }) => {
     // eSpace citation view for Creative Work
     // {Creator}{Publication Year| (|).}<i>{Title| |.}</i>{Place of Publication| |:}{Publisher| |.}
     return (
-        <div className="citationContent citationCreativeWork">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationCreativeWork">
             {/* {Creator} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -40,7 +40,7 @@ export const CreativeWorkCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 CreativeWorkCitation.propTypes = {

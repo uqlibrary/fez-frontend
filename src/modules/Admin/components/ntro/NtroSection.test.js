@@ -1,14 +1,21 @@
+import React from 'react';
+import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import NtroSection from './NtroSection';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         ...testProps,
     };
-
-    return renderComponent(NtroSection, props, args);
+    return renderer(
+        <WithReduxStore>
+            <FormProviderWrapper values={{}}>
+                <NtroSection {...props} />
+            </FormProviderWrapper>
+        </WithReduxStore>,
+    );
 }
 
 describe('NtroSection component', () => {
@@ -31,8 +38,9 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({});
+        expect(document.querySelectorAll('input[disabled=""]')).toHaveLength(0);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
@@ -54,8 +62,9 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const render = setup({ disabled: true });
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup({ disabled: true });
+        expect(document.querySelectorAll('input[disabled=""]')).toHaveLength(2);
+        expect(container).toMatchSnapshot();
     });
 
     it('should render design form fields', () => {
@@ -77,8 +86,8 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 
     it('should not render ismn field for Book - Creative Work - Musical Composition', () => {
@@ -100,7 +109,7 @@ describe('NtroSection component', () => {
             },
         }));
 
-        const render = setup();
-        expect(render.getRenderOutput()).toMatchSnapshot();
+        const { container } = setup();
+        expect(container).toMatchSnapshot();
     });
 });

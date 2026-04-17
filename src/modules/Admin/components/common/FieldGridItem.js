@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { fieldConfig } from 'config/admin';
 import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'config/general';
 import { useRecordContext } from 'context';
+
+import { default as Controller } from './AdminController';
 
 export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const { record } = useRecordContext();
@@ -19,6 +21,8 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const componentProps = {
         ...fieldConfig.default[field].componentProps,
         ...(((fieldConfig.override[record.rek_display_type] || {})[field] || (() => {}))({
+            displayType: record.rek_display_type,
+            subtype: form.getValues('adminSection.rek_subtype'),
             isNtro:
                 (NTRO_SUBTYPES.includes(record.rek_subtype) && record.rek_subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) ||
                 props.isNtro ||
@@ -43,6 +47,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
             <Field
                 name={componentProps.name}
                 control={form.control}
+                controller={Controller}
                 component={fieldConfig.default[field].component}
                 disabled={disabled}
                 {...componentProps}

@@ -6,7 +6,36 @@ import { withNavigate } from 'helpers/withNavigate';
 import * as actions from 'actions';
 import { pathConfig } from 'config';
 
-const mapStateToProps = state => {
+export const openAccessibleProps = props => {
+    const txt = locale.components.myLatestPublications;
+
+    const _actions = [
+        {
+            label: txt.openAccessible.openAccess,
+            handleAction: record => {
+                props.navigate(pathConfig.records.openAccessComplianceFix(record.rek_pid));
+            },
+            primary: true,
+        },
+        {
+            label: txt.openAccessible.correction,
+            handleAction: record => {
+                props.navigate(pathConfig.records.fix(record.rek_pid));
+            },
+            primary: false,
+        },
+    ];
+
+    return {
+        publicationsListCustomActions: _actions,
+        publicationsListOtherProps: {
+            forceUseCustomActions: record => record.potentiallyOpenAccessible(),
+            showDefaultActions: true,
+        },
+    };
+};
+
+const mapStateToProps = (state, ownProps) => {
     return {
         authorDetails: state.get('accountReducer').authorDetails || {},
         accountLoading: state.get('accountReducer').accountLoading,
@@ -18,6 +47,7 @@ const mapStateToProps = state => {
             state.get('accountReducer') &&
             state.get('accountReducer').account &&
             !!state.get('accountReducer').account.hasSession,
+        ...openAccessibleProps(ownProps),
     };
 };
 

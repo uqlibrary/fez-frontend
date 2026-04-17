@@ -36,7 +36,6 @@ import {
     PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
-    AUTHOR_AFFILIATIONS_ALLOWED_TYPES,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
 
@@ -81,9 +80,6 @@ export const identifiersParams = record => ({
         ].includes(record.rek_subtype),
 });
 
-export const shouldHandleAuthorAffiliations = record =>
-    AUTHOR_AFFILIATIONS_ALLOWED_TYPES?.[record.rek_display_type]?.includes(record.rek_subtype) ?? false;
-
 export const bibliographicParams = (record, formValues) => ({
     isLote:
         (record.fez_record_search_key_language &&
@@ -109,11 +105,9 @@ export const bibliographicParams = (record, formValues) => ({
 });
 
 export const authorsParams = (record, isNtro) => {
-    const shouldHandleAffiliations = !isNtro && shouldHandleAuthorAffiliations(record);
     return {
         isNtro: isNtro,
         isDesignNtro: record.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-        shouldHandleAffiliations,
     };
 };
 

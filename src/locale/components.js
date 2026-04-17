@@ -1,28 +1,13 @@
-/* eslint-disable max-len */
 import React from 'react';
 
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
-
-import HelpIcon from '@mui/icons-material/Help';
-import Tooltip from '@mui/material/Tooltip';
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
-export const loremIpsum =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-    'Duis turpis risus, mollis in sem id, auctor tempus tellus. ' +
-    'Praesent maximus tempor tellus pellentesque tincidunt. ' +
-    'Integer maximus accumsan tellus ac aliquet. Nam sollicitudin ' +
-    'odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada ' +
-    'id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. ' +
-    'Pellentesque leo nibh, ornare non metus consequat, tincidunt ' +
-    'scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. ' +
-    'Nullam sit amet mattis est, ut finibus orci.';
 
 export default {
     components: {
@@ -49,32 +34,42 @@ export default {
                         },
                     },
                     works: {
-                        unprocessed: 'Unprocessed Works',
-                        unprocessedSubText: 'view',
-                        processed: 'Processed Works',
-                        processedSubText: (dateFrom, dateTo) => {
-                            const from = getFormattedServerDate(dateFrom, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
-                            const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
-                            return (
-                                <>
-                                    this iteration{' '}
-                                    <Tooltip title={`${from} to ${to}`} describeChild arrow>
-                                        <HelpIcon fontSize="small" />
-                                    </Tooltip>
-                                </>
-                            );
+                        unprocessed: {
+                            title: 'Unprocessed Works',
+                            subText: 'view',
+                            tooltip: 'Works currently in unprocessed',
+                        },
+                        processed: {
+                            title: 'Processed Works',
+                            subTextAndTooltip: (dateFrom, dateTo) => {
+                                const from = getFormattedServerDate(
+                                    dateFrom,
+                                    DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
+                                );
+                                const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
+                                return {
+                                    text: 'this iteration',
+                                    tooltip: `Saves to processed works ${from} to ${to}`,
+                                };
+                            },
                         },
                     },
                     openaccess: {
                         researchOutput: {
                             title: 'OA Status',
-                            subText: 'of research output',
+                            subText: 'of research doc types',
+                            tooltip: 'OA record counts in the past 365 days',
                             chart: {
                                 text: (current, total) =>
                                     `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
                                 subtext: total => `of ${total} records`,
                             },
                         },
+                    },
+                    openAccessCategories: {
+                        title: 'OA Status Categories',
+                        subText: 'of research subtypes',
+                        tooltip: 'OA status counts in the past 5 years',
                     },
                     quicklinks: {
                         title: 'Quick Links ',
@@ -145,6 +140,7 @@ export default {
                         updating: 'Updating...',
                         alertId: 'Alert ID',
                         received: 'Received',
+                        creator: 'Requester ID',
                         status: 'Status',
                         statusHelpText: 'Assign a staff member to this issue',
                     },
@@ -422,6 +418,10 @@ export default {
         myLatestPublications: {
             loading: 'Loading your latest works',
             viewAllButtonLabel: 'View all',
+            openAccessible: {
+                openAccess: 'Make open access',
+                correction: 'Request correction',
+            },
         },
         topCitedPublications: {
             loading: 'Loading trending works',
@@ -1589,8 +1589,16 @@ export default {
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         editHint: 'Edit this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete author',
+                            confirmationMessage: `Are you sure you want to delete this ${suffix}?`,
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
                     },
                 },
+                tablePageSizeOptions: [10, 20, 50],
+                largeListDefaultPageSize: 50,
             },
         }),
         editors: {
@@ -2049,8 +2057,7 @@ export default {
             title: 'Contributors',
             help: {
                 title: 'Contributors',
-                text:
-                    'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -2407,6 +2414,7 @@ export default {
         export: {
             label: 'Export page results',
             format: [
+                { value: 'bibtex', label: 'BibTex File' },
                 { value: 'excel', label: 'Excel File' },
                 { value: 'endnote', label: 'Endnote File' },
             ],
@@ -2436,7 +2444,7 @@ export default {
                 selectAria: 'Click to select a field to search from the list - [current_selection] currently selected',
                 deleteAria: 'Click to delete this search row',
                 fieldTypes: {
-                    '0': {
+                    0: {
                         order: 0, // order of appearance in adv search field list
                         map: '', // map refers to its real world lookup name to match Facets
                         title: 'Select a field',
@@ -3418,8 +3426,7 @@ export default {
             title: 'Architects',
             help: {
                 title: 'Architects',
-                text:
-                    'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
+                text: 'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -4015,6 +4022,10 @@ export default {
                     lastName: {
                         label: 'Last name',
                     },
+                    isNameOverride: {
+                        label: 'Prevent automatic updates',
+                        helperText: 'Switch on to prevent automatic names updates from HR data.',
+                    },
                     email: {
                         label: 'Email',
                     },
@@ -4072,9 +4083,6 @@ export default {
                     },
                     openOrcidProfileInNewWindow: {
                         label: 'Open ORCID profile in new window',
-                    },
-                    isUsernameOverridden: {
-                        label: 'Is username overridden by an admin?',
                     },
                 },
                 validation: {
@@ -4469,8 +4477,7 @@ export default {
             },
             favouriteJournalsList: {
                 loading: 'Loading ...',
-                empty:
-                    "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
+                empty: "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
             },
             sortingDefaults: {
                 pageSize: 20,
@@ -4495,6 +4502,16 @@ export default {
                 message: 'Search results updated',
             },
             partials: {
+                addToSelectedSubjects: {
+                    button: {
+                        title: 'Add a subject to broaden results',
+                    },
+                },
+                forCodeAutocompleteField: {
+                    input: {
+                        placeholder: 'type new subject',
+                    },
+                },
                 FAQ: {
                     title: 'Learn more',
                     items: [
@@ -4754,7 +4771,6 @@ export default {
                         </ul>
                     </React.Fragment>
                 ),
-                instructions: loremIpsum,
                 buttons: {
                     myFavouriteJournals: {
                         title: 'My favourite journals',
@@ -4804,7 +4820,7 @@ export default {
                     },
                     accepted: {
                         open: 'Immediate access via UQ eSpace',
-                        embargo: 'Delayed access via UQ eSpace',
+                        embargo: months => `${months} months delayed access via UQ eSpace`,
                     },
                 },
             },

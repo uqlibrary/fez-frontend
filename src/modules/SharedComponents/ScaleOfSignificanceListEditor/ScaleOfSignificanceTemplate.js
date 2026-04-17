@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { numberToWords, SIGNIFICANCE_MAP } from 'config/general';
 import { parseHtmlToJSX } from 'helpers/general';
 
 export const ScaleOfSignificanceTemplate = ({ item }) => {
-    // eslint-disable-next-line camelcase
     const authorNameIfKnown = <>{!!item.author?.rek_author ? `(${item.author.rek_author})` : ''}</>;
     return (
         <Grid container>

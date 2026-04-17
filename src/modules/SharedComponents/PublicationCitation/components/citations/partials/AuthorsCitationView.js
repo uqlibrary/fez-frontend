@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CitationView from './CitationView';
 import { locale } from 'locale';
 import { pathConfig } from 'config/pathConfig';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { useTheme } from '@mui/material/styles';
 
 const classes = {

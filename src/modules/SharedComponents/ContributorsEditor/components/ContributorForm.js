@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -140,9 +140,9 @@ export const ContributorForm = ({
                 contributor.orgaff,
             orgtype:
                 (contributor.affiliation !== AFFILIATION_TYPE_NOT_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
-            uqUsername: `${selectedItem.aut_org_username ||
-                selectedItem.aut_student_username ||
-                selectedItem.aut_ref_num} - ${selectedItem.aut_id}`,
+            uqUsername: `${
+                selectedItem.aut_org_username || selectedItem.aut_student_username || selectedItem.aut_ref_num
+            } - ${selectedItem.aut_id}`,
             ...selectedItem,
         });
         setUqIdentifierUpdatedFlag(true);

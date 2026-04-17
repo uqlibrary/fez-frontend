@@ -78,7 +78,13 @@ const JournalFieldsMap = [
             translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">
-                        <Box display="flex" alignItems="flex-end" key={data.key}>
+                        <Box
+                            key={data.key}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'flex-end',
+                            }}
+                        >
                             <Typography
                                 variant="body1"
                                 sx={{ ...classes?.inputLabel }}
@@ -87,11 +93,13 @@ const JournalFieldsMap = [
                                 data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
                             >
                                 {data.label}
-                                {/* istanbul ignore next */ !!data.subLabel && (
-                                    <Box component={'span'} sx={{ ...classes?.subLabel }}>
-                                        {data.subLabel}
-                                    </Box>
-                                )}
+                                {
+                                    /* istanbul ignore next */ !!data.subLabel && (
+                                        <Box component={'span'} sx={{ ...classes?.subLabel }}>
+                                            {data.subLabel}
+                                        </Box>
+                                    )
+                                }
                             </Typography>
                             {!!data.titleHelp && (
                                 <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
@@ -124,6 +132,17 @@ const JournalFieldsMap = [
                             The final, published version of the article is openly available for everyone to read
                             directly from the publisher. The article is available immediately after publication. No fees
                             are payable by the author.
+                        </li>
+                        <li key="published-open-diamond">
+                            <JournalsOpenAccessIndicator type={types.published} status={status.open} showDiamond />
+                            The final, published version of the article is openly available for everyone to read
+                            directly from the community driven or institutional publisher, immediately after
+                            publication. No fees are payable by the author.
+                        </li>
+                        <li key="published-open-s2o">
+                            <JournalsOpenAccessIndicator type={types.published} status={status.open} showS2O />
+                            The final, published version of the article is open access with no fees payable by the
+                            author. Open access is enabled when enough institutions subscribe to the journal.
                         </li>
                         <li key="published-cap">
                             <JournalsOpenAccessIndicator type={types.published} status={status.cap} />
@@ -221,7 +240,13 @@ const JournalFieldsMap = [
             translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">
-                        <Box display="flex" alignItems="flex-end" key={data.key}>
+                        <Box
+                            key={data.key}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'flex-end',
+                            }}
+                        >
                             <Typography
                                 variant="body1"
                                 sx={{ ...classes?.inputLabel }}
@@ -280,28 +305,30 @@ const JournalFieldsMap = [
 
             if (!!data.fez_journal_jcr_scie && data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0) {
                 data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
-                    quartileList.push(parseInt(item.jnl_jcr_scie_category_quartile.replace('Q', ''), 10));
+                    quartileList.push(parseInt(item.jnl_jcr_scie_category_quartile?.replace('Q', ''), 10));
                 });
             }
 
             if (data.fez_journal_jcr_ssci && data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0) {
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
-                    quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile.replace('Q', ''), 10));
+                    quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile?.replace('Q', ''), 10));
                 });
             }
 
             if (data.fez_journal_jcr_esci && data.fez_journal_jcr_esci.fez_journal_jcr_esci_category.length > 0) {
                 data.fez_journal_jcr_esci.fez_journal_jcr_esci_category.map(item => {
-                    quartileList.push(parseInt(item.jnl_jcr_esci_category_quartile.replace('Q', ''), 10));
+                    quartileList.push(parseInt(item.jnl_jcr_esci_category_quartile?.replace('Q', ''), 10));
                 });
             }
 
             if (data.fez_journal_jcr_ahci && data.fez_journal_jcr_ahci.fez_journal_jcr_ahci_category.length > 0) {
                 data.fez_journal_jcr_ahci.fez_journal_jcr_ahci_category.map(item => {
-                    quartileList.push(parseInt(item.jnl_jcr_ahci_category_quartile.replace('Q', ''), 10));
+                    quartileList.push(parseInt(item.jnl_jcr_ahci_category_quartile?.replace('Q', ''), 10));
                 });
             }
-            return quartileList.length > 0 ? Array.min(quartileList) : null;
+
+            const filteredList = quartileList.filter(Number.isFinite);
+            return filteredList.length > 0 ? Array.min(filteredList) : null;
         },
     },
     {

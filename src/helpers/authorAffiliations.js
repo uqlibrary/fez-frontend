@@ -1,3 +1,5 @@
+import { AUTHOR_AFFILIATIONS_ALLOWED_TYPES } from 'config/general';
+
 export const TOTAL = 100;
 export const PRECISION = 1000;
 export const MAX_TOTAL = TOTAL * PRECISION;
@@ -18,7 +20,7 @@ export const deepClone = obj => {
 export const getFilteredAffiliations = (author, affiliations) =>
     affiliations.length > 0
         ? affiliations?.filter(item => item.af_author_id === author.rek_author_id)
-        : author.affiliations ?? [];
+        : (author.affiliations ?? []);
 
 export const hasValidAuthorAffiliations = record => {
     return record.fez_author_affiliation.every(item =>
@@ -169,3 +171,6 @@ export const createNewAffiliationObject = (rowData, organisation, id = Date.now(
     fez_author: { aut_id: rowData.aut_id, aut_display_name: rowData.aut_display_name },
     fez_org_structure: { ...organisation },
 });
+
+export const shouldHandleAuthorAffiliations = (displayType, subtype) =>
+    AUTHOR_AFFILIATIONS_ALLOWED_TYPES?.[displayType]?.includes(subtype) ?? false;

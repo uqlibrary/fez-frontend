@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation } from 'react-router';
 import Cookies from 'js-cookie';
 import { styled } from '@mui/material/styles';
 import { pathConfig, routes, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';
@@ -29,7 +29,7 @@ import Fade from '@mui/material/Fade';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/icons-material/Menu';
 
@@ -95,7 +95,6 @@ const AppClass = ({
     useEffect(() => {
         if (!account?.id || hadLoggedInUser.current) return;
         hadLoggedInUser.current = true;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [account?.id]);
 
     useEffect(() => {
@@ -121,9 +120,9 @@ const AppClass = ({
 
     useEffect(() => {
         // don't call the api for non author users since the api call requires an author
-        // eslint-disable-next-line camelcase
         if (!accountAuthorLoading && author?.aut_id) {
             actions.searchAuthorPublications({}, 'incomplete');
+            actions.searchAuthorPublications({}, 'noncompliantoa');
         }
     }, [accountAuthorLoading, actions, author?.aut_id]);
 
@@ -177,7 +176,6 @@ const AppClass = ({
         authorDetails &&
         authorDetails.is_administrator !== 1 &&
         authorDetails.is_super_administrator !== 1 &&
-        // eslint-disable-next-line camelcase
         author?.aut_id &&
         !author.aut_orcid_id &&
         location.pathname !== pathConfig.authorIdentifiers.orcid.link;
@@ -187,12 +185,16 @@ const AppClass = ({
         account.class &&
         account.class.indexOf('IS_CURRENT') >= 0 &&
         account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-    // eslint-disable-next-line camelcase
     const isAuthor = !isAuthorLoading && !!account && author?.aut_id;
     const hasIncompleteWorks = !!(
         incompleteRecordList &&
         incompleteRecordList.incomplete.publicationsListPagingData &&
         incompleteRecordList.incomplete.publicationsListPagingData.total > 0
+    );
+    const hasOaComplianceWorks = !!(
+        incompleteRecordList &&
+        incompleteRecordList.noncompliantoa?.publicationsListPagingData &&
+        incompleteRecordList.noncompliantoa?.publicationsListPagingData.total > 0
     );
     const menuItems = routes.getMenuConfig(
         account,
@@ -200,6 +202,7 @@ const AppClass = ({
         authorDetails,
         isHdrStudent && !isAuthor,
         hasIncompleteWorks,
+        hasOaComplianceWorks,
     );
 
     const isPublicPage = isPublic(menuItems);
@@ -228,7 +231,6 @@ const AppClass = ({
             ...locale.global.loginAlert,
             action: redirectUserToLogin(),
         };
-        // eslint-disable-next-line camelcase
     } else if (!isPublicPage && !isAuthorLoading && !isJournalRelatedPage && account && (!author || !author.aut_id)) {
         // user is logged in, but doesn't have eSpace author identifier
         userStatusAlert = {
@@ -280,7 +282,9 @@ const AppClass = ({
                                 <Tooltip
                                     title={locale.global.mainNavButton.tooltip}
                                     placement="bottom-end"
-                                    TransitionComponent={Fade}
+                                    slots={{
+                                        transition: Fade,
+                                    }}
                                 >
                                     <IconButton
                                         aria-label={locale.global.mainNavButton.aria}

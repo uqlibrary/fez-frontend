@@ -3,18 +3,19 @@
 exports[`Component AcknowledgementOfCountry should render component 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
     data-testid="standard-card-acknowledgement-of-country"
     id="standard-card-acknowledgement-of-country"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-1flbv6b-MuiCardHeader-root"
+      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
     >
       <div
-        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
           data-testid="standard-card-acknowledgement-of-country-header"
           id="standard-card-acknowledgement-of-country-header"
         >
@@ -23,13 +24,13 @@ exports[`Component AcknowledgementOfCountry should render component 1`] = `
       </div>
     </div>
     <div
-      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
       data-analyticsid="standard-card-acknowledgement-of-country-content"
       data-testid="standard-card-acknowledgement-of-country-content"
       id="standard-card-acknowledgement-of-country-content"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
       >
         <span>
           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.

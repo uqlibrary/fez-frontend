@@ -48,6 +48,15 @@ describe('JournalsOpenAccessIndicator', () => {
             const { getByTestId } = setup({ type: types.published, status: status.open });
             assertIndicator(getByTestId('open-access-testIndicator'), types.published, status.open);
         });
+        it('renders Diamond Icon', () => {
+            const { getByTestId } = setup({ type: types.published, status: status.open, showDiamond: true });
+            expect(getByTestId('DiamondIcon')).toBeInTheDocument();
+        });
+        it('renders S2O Icon', () => {
+            const { getByTestId } = setup({ type: types.published, status: status.open, showS2O: true });
+            expect(getByTestId('open-access-testIndicator')).toHaveTextContent('S2O');
+            assertIndicator(getByTestId('open-access-testIndicator'), types.published, status.open);
+        });
         it('renders CAP', () => {
             const { getByTestId } = setup({ type: types.published, status: status.cap });
             assertIndicator(getByTestId('open-access-testIndicator'), types.published, status.cap);

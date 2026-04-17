@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { render, within } from '@testing-library/react';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider, MemoryRouter } from 'react-router';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
@@ -50,8 +50,18 @@ export const rtlRender = (ui, options) => {
     };
 };
 
+export const WithMemoryRouter = ({ children, route = '/', initialEntries = [route] }) => {
+    return (
+        <MemoryRouter
+            initialEntries={initialEntries}
+            initialIndex={initialEntries.findIndex(entry => entry === route)}
+            children={children}
+        />
+    );
+};
 export const WithRouter = ({ children, route = '/', initialEntries = [route] }) => {
     const routes = [{ path: route, element: children }];
+    // Creates a data router, different to the MemoryRouter used in WithMemoryRouter
     const router = createMemoryRouter(routes, { initialEntries: initialEntries });
     return <RouterProvider router={router} />;
 };
@@ -112,8 +122,8 @@ export const createFezDatastreamInfoArray = (datastreams, pid = null, withPrevie
             const derivativeMimetype = mimetype.includes('audio')
                 ? 'audio/mp3'
                 : mimetype.includes('video')
-                ? 'video/mp4'
-                : 'image/jpg';
+                  ? 'video/mp4'
+                  : 'image/jpg';
 
             (derivativeMimetype.includes('image') ? ['preview_', 'thumbnail_', 'web_'] : ['']).forEach(prefix => {
                 processed.push({
@@ -162,17 +172,15 @@ export const getDatastreamByFilename = (filename, datastreams) =>
 export const createMatchMedia = width => {
     return query => ({
         matches: mediaQuery.match(query, { width }),
-        /* istanbul ignore next */
-        addListener: () => {},
-        /* istanbul ignore next */
-        removeListener: () => {},
+        addEventListener: () => {},
+        removeEventListener: () => {},
     });
 };
 
 const getFilenameExtension = filename => filename.split('.').pop();
 const getFilenameBasename = filename => filename.replace(new RegExp(`/\.${getFilenameExtension(filename)}$/`), '');
 const addFilesToFileUploader = async (files, timeout = 500) => {
-    const { screen, fireEvent } = reactTestingLib;
+    const { screen, fireEvent, act } = reactTestingLib;
     // create a list of Files
     const fileList = files.map(file => {
         // if file it's a string, treat it as a filename
@@ -182,12 +190,14 @@ const addFilesToFileUploader = async (files, timeout = 500) => {
         // otherwise expect it to be a object with filename and mimeType keys
         return new File([getFilenameBasename(file.filename)], file.filename, { type: file.mimeType });
     });
-    // drag and drop files
-    fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
-        dataTransfer: {
-            files: fileList,
-            types: ['Files'],
-        },
+    await act(async () => {
+        // drag and drop files
+        fireEvent.drop(screen.getByTestId('fez-datastream-info-input'), {
+            dataTransfer: {
+                files: fileList,
+                types: ['Files'],
+            },
+        });
     });
     for (const file of files) {
         await waitFor(() => screen.getByText(new RegExp(getFilenameBasename(file))), { timeout });
@@ -217,6 +227,13 @@ const waitElementToBeInDocument = async (dataTestId, options) =>
         expect(element).toBeInTheDocument();
         return element;
     }, options);
+
+/**
+ * @param {string|function} testId
+ * @return {HTMLElement}
+ */
+const assertMissingElement = testId =>
+    expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
 
 /**
  * note: it will match visible texts in DOM or input's values
@@ -311,7 +328,6 @@ const mockWebApiFile = () => {
     };
 };
 
-// eslint-disable-next-line react/prop-types
 export const FormProviderWrapper = ({ children, methods, ...props }) => {
     const attributes = useValidatedForm.useValidatedForm(props);
     return (
@@ -347,10 +363,12 @@ const requestHistoryToString = history =>
 
 const debugApiRequestHistory = () => console.log(requestHistoryToString(apiRequestHistory));
 
-const requestFilter = ({ method, url, partialUrl }) => entry =>
-    (!method || entry.method === method) &&
-    (!url || entry.url === url) &&
-    (!partialUrl || entry.url.includes(partialUrl));
+const requestFilter =
+    ({ method, url, partialUrl }) =>
+    entry =>
+        (!method || entry.method === method) &&
+        (!url || entry.url === url) &&
+        (!partialUrl || entry.url.includes(partialUrl));
 
 const findRequestHistoryIndex = ({ history, method, url, partialUrl }) =>
     history.findIndex(requestFilter({ method, url, partialUrl }));
@@ -402,9 +420,9 @@ const assertApiRequest = ({ method, url, partialUrl, data }) => {
     const index = findRequestHistoryIndex({ history: apiRequestHistory, method, url, partialUrl });
     if (index < 0) {
         throw new Error(
-            `No ${(method || 'N/A').toUpperCase()} request has been made to ${url ||
-                partialUrl ||
-                'N/A'}\n\nRequest queue:\n${requestHistoryToString(apiRequestHistory)}`,
+            `No ${(method || 'N/A').toUpperCase()} request has been made to ${
+                url || partialUrl || 'N/A'
+            }\n\nRequest queue:\n${requestHistoryToString(apiRequestHistory)}`,
         );
     }
     // pop match from queue, so that similar requests can be processed by consecutive calls
@@ -543,6 +561,9 @@ const assertRichTextEditorValue = async (testId, value) => {
     expect(editor).toHaveTextContent(value, { exact: true });
 };
 
+const getTableBodyRows = element =>
+    element.querySelectorAll('tr.MuiTableRow-root:not(.Mui-TableBodyCell-DetailPanel):not(.MuiTableRow-head)');
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -553,6 +574,7 @@ module.exports = {
     WithReduxStore,
     assertTooltipText,
     WithRouter,
+    WithMemoryRouter,
     createFezDatastreamInfoArray,
     getDatastreamByFilename,
     withDatastreams,
@@ -564,6 +586,7 @@ module.exports = {
     waitToBeEnabled,
     waitToBeDisabled,
     waitElementToBeInDocument,
+    assertMissingElement,
     waitForText,
     waitForTextToBeRemoved,
     expectRequiredFieldError,
@@ -595,5 +618,6 @@ module.exports = {
     addAndSelectContributorsEditorItem,
     clearAndType,
     sortObjectProps,
+    getTableBodyRows,
     api,
 };

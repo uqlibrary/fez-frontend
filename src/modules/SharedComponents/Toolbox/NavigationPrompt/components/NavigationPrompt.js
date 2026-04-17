@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useBlocker, useNavigate } from 'react-router-dom';
+import { useBlocker, useNavigate } from 'react-router';
 
 /**
  * A replacement component for the react-router `Prompt`.
@@ -26,7 +26,7 @@ const NavigationPrompt = ({ when, children }) => {
     const blocker = useBlocker(({ currentLocation, nextLocation }) => blockNavigation(currentLocation, nextLocation));
 
     const navigateToNextLocation = () => {
-        blocker.proceed();
+        blocker?.proceed?.();
         navigate(nextLocation.pathname);
     };
 
@@ -35,7 +35,7 @@ const NavigationPrompt = ({ when, children }) => {
     };
 
     const _onCancel = () => {
-        blocker.reset();
+        blocker?.reset?.();
         setNextLocation(null);
     };
 

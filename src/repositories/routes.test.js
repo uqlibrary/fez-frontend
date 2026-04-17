@@ -1,6 +1,5 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
-import { ROR_LOOKUP_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -185,6 +184,22 @@ describe('Backend routes method', () => {
                     page: 1,
                     per_page: 20,
                     rule: 'incomplete',
+                    sort: 'score',
+                },
+            },
+        });
+    });
+
+    it('should construct url for OACOMPLIANCE_RECORDS_API', () => {
+        expect(routes.OACOMPLIANCE_RECORDS_API({})).toEqual({
+            apiUrl: 'records/search',
+            options: {
+                params: {
+                    export_to: '',
+                    order_by: 'desc',
+                    page: 1,
+                    per_page: 20,
+                    rule: 'noncompliantoa',
                     sort: 'score',
                 },
             },
@@ -582,6 +597,13 @@ describe('Backend routes method', () => {
         expect(routes.RECORDS_ISSUES_API({ pid: 'UQ:1001' })).toEqual({ apiUrl: 'records/UQ:1001/issues' });
     });
 
+    it('should construct url for MAKE_OPEN_ACCESS_API', () => {
+        expect(routes.MAKE_OPEN_ACCESS_API({ pid: 'UQ:1001' })).toEqual({
+            apiUrl: 'records/UQ:1001/issues',
+            options: { params: { myOpenAccess: 1 } },
+        });
+    });
+
     it('should construct url for NEW_COLLECTION_API', () => {
         expect(routes.NEW_COLLECTION_API()).toEqual({ apiUrl: 'collections' });
     });
@@ -776,7 +798,6 @@ describe('Backend routes method', () => {
         });
     });
 
-
     it('should construct url for THIRD_PARTY_LOOKUP_API_1FIELD', () => {
         expect(
             routes.THIRD_PARTY_LOOKUP_API_1FIELD({
@@ -865,8 +886,7 @@ describe('Backend routes method', () => {
 
     it('should construct url for journal lookup api', () => {
         expect(routes.JOURNAL_LOOKUP_API({ query: 'test + - = & | > < ! ( ) { } [ ] ^ " ~ * ? : \\ /' })).toEqual({
-            apiUrl:
-                'journals/search?rule=lookup&query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
+            apiUrl: 'journals/search?rule=lookup&query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
         });
     });
 
@@ -874,8 +894,7 @@ describe('Backend routes method', () => {
         expect(
             routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: 'test + - = & | > < ! ( ) { } [ ] ^ " ~ * ? : \\ /' }),
         ).toEqual({
-            apiUrl:
-                'journals/search?query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
+            apiUrl: 'journals/search?query=test%20%2B%20-%20%3D%20%26%20%7C%20%3E%20%3C%20!%20(%20)%20%7B%20%7D%20%5B%20%5D%20%5E%20%22%20~%20*%20%3F%20%3A%20%5C%20%2F',
         });
     });
 
@@ -909,9 +928,9 @@ describe('Backend routes method', () => {
         expect(
             routes.JOURNAL_SEARCH_API({
                 keywords: [
-                    { type: 'Title', text: 'apple' },
-                    { type: 'Keyword', text: 'apple' },
-                    { type: 'Subject', text: 'apple', cvoId: 12345 },
+                    { type: 'Title', text: 'apple', operand: 'AND' },
+                    { type: 'Keyword', text: 'apple', operand: 'OR' },
+                    { type: 'Subject', text: 'apple', cvoId: 12345, operand: 'OR' },
                 ],
             }),
         ).toEqual({
@@ -919,28 +938,7 @@ describe('Backend routes method', () => {
             options: {
                 params: {
                     ...commonQueryParams,
-                    description: ['apple'],
-                    subject: [12345],
-                    title: ['apple'],
-                },
-            },
-        });
-
-        expect(
-            routes.JOURNAL_SEARCH_API({
-                keywords: [
-                    { type: 'unknown', text: 'apple' },
-                    { type: 'Title', text: 'apple' },
-                ],
-            }),
-        ).toEqual({
-            apiUrl: 'journals/search',
-            options: {
-                params: {
-                    ...commonQueryParams,
-                    description: [],
-                    subject: [],
-                    title: ['apple'],
+                    query: 'title:apple OR description:apple OR subject:12345',
                 },
             },
         });
@@ -953,7 +951,7 @@ describe('Backend routes method', () => {
         ).toEqual({
             apiUrl: 'journals/search',
             options: {
-                params: { ...commonQueryParams, description: [], subject: [], title: ['apple'], per_page: 20 }, // per_page should be 20, not 1
+                params: { ...commonQueryParams, query: 'title:apple', per_page: 20 }, // per_page should be 20, not 1
             },
         });
     });
@@ -982,9 +980,9 @@ describe('Backend routes method', () => {
             routes.JOURNAL_FAVOURITES_API({
                 query: {
                     keywords: [
-                        { type: 'Title', text: 'apple' },
-                        { type: 'Keyword', text: 'apple' },
-                        { type: 'Subject', text: 'apple', cvoId: 12345 },
+                        { type: 'Title', text: 'apple', operand: 'AND' },
+                        { type: 'Keyword', text: 'apple', operand: 'OR' },
+                        { type: 'Subject', text: 'apple', cvoId: 12345, operand: 'OR' },
                     ],
                 },
             }),
@@ -993,9 +991,7 @@ describe('Backend routes method', () => {
             options: {
                 params: {
                     ...commonQueryParams,
-                    description: ['apple'],
-                    subject: [12345],
-                    title: ['apple'],
+                    query: 'title:apple OR description:apple OR subject:12345',
                 },
             },
         });

@@ -261,6 +261,11 @@ export const COLLECTION_LIST_API = (config, action = null) => {
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
+export const MAKE_OPEN_ACCESS_API = ({ pid }) => ({
+    ...RECORDS_ISSUES_API({ pid }),
+    options: { params: { myOpenAccess: 1 } },
+});
+
 export const RECORDS_FEEDBACK_API = ({ pid }) => ({ apiUrl: `records/${pid}/feedback` });
 
 // search/list records apis
@@ -296,6 +301,16 @@ export const INCOMPLETE_RECORDS_API = values => ({
             rule: 'incomplete',
             ...getStandardSearchParams(values),
             ...getOpenAccessSearchParams(values),
+        },
+    },
+});
+
+export const OACOMPLIANCE_RECORDS_API = values => ({
+    apiUrl: 'records/search',
+    options: {
+        params: {
+            rule: 'noncompliantoa',
+            ...getStandardSearchParams(values),
         },
     },
 });
@@ -526,8 +541,8 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
     return { apiUrl: 'fez-users' };
 };
 
-export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
-    apiUrl: `journals/search?query=${encodeURIComponent(query)}`,
+export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query, keywordsOnly = false }) => ({
+    apiUrl: `journals/search?query=${encodeURIComponent(query)}${keywordsOnly ? '&rule=subject' : ''}`,
 });
 
 /**
@@ -538,28 +553,19 @@ export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
  */
 export const getKeywordsParams = keywords => {
     if (!!keywords && Object.values(keywords).length > 0) {
-        const title = [];
-        const description = [];
-        const subject = [];
-        Object.keys(keywords).map(item => {
-            switch (keywords[item].type) {
-                case 'Title':
-                    title.push(keywords[item].text);
-                    break;
-                case 'Keyword':
-                    description.push(keywords[item].text);
-                    break;
-                case 'Subject':
-                    subject.push(keywords[item].cvoId);
-                    break;
-                default:
-                    break;
-            }
+        let query = '';
+        const keys = Object.keys(keywords);
+        keys.map((item, index) => {
+            const addOperand = index + 1 !== keys.length;
+            const type = keywords[item].type.toLowerCase();
+
+            const field = type === 'keyword' ? 'description' : type;
+            const value = type === 'subject' ? keywords[item].cvoId : keywords[item].text;
+            const operand = addOperand ? ` ${keywords[keys[index + 1]].operand} ` : '';
+            query += `${field}:${value}${operand}`;
         });
         return {
-            title: [...title],
-            description: [...description],
-            subject: [...subject],
+            query: query,
         };
     } else {
         return {};
@@ -635,8 +641,8 @@ export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
     apiUrl: 'dashboard/quicklinks',
 });
 
-export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
-    apiUrl: 'dashboard/alerts',
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = ({ id } = { id: null }) => ({
+    apiUrl: `dashboard/alerts${id ? `/${id}` : ''}`,
 });
 
 export const simpleQueryEncode = request =>

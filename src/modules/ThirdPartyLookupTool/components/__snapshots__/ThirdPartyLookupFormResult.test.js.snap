@@ -3,24 +3,25 @@
 exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-test-form"
         id="standard-card-test-form"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -29,7 +30,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
@@ -40,18 +41,19 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
             dummy UT
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-test-results"
             id="standard-card-test-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -60,7 +62,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
@@ -75,7 +77,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"
@@ -92,24 +94,25 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
 exports[`Component ThirdPartyLookupFormResult renders api data when no second field provided 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-label-9"
         id="standard-card-label-9"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-label-9-header"
               id="standard-card-label-9-header"
             >
@@ -118,7 +121,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-label-9-content"
           data-testid="standard-card-label-9-content"
           id="standard-card-label-9-content"
@@ -129,18 +132,19 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
             dummy UT
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-test-results"
             id="standard-card-test-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -149,7 +153,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
@@ -164,7 +168,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"
@@ -181,24 +185,25 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
 exports[`Component ThirdPartyLookupFormResult should display a blank when the response is blank 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-test-form"
         id="standard-card-test-form"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -207,7 +212,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
@@ -218,18 +223,19 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
             dummy UT
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-results"
             id="standard-card-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-results-header"
                   id="standard-card-results-header"
                 >
@@ -238,28 +244,29 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-results-content"
               data-testid="standard-card-results-content"
               id="standard-card-results-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                   data-testid="standard-card"
                   id="standard-card"
+                  style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                 >
                   <div
-                    class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                    class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
                   >
                     <div
-                      class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                      class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                     />
                   </div>
                   <div
-                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                    class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                     data-analyticsid="standard-card-content"
                     data-testid="standard-card-content"
                     id="standard-card-content"
@@ -271,7 +278,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"
@@ -288,24 +295,25 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
 exports[`Component ThirdPartyLookupFormResult should display the secondary field when required 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-label-10"
         id="standard-card-label-10"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-label-10-header"
               id="standard-card-label-10-header"
             >
@@ -314,7 +322,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-label-10-content"
           data-testid="standard-card-label-10-content"
           id="standard-card-label-10-content"
@@ -330,18 +338,19 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
             123456789
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-test-results"
             id="standard-card-test-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -350,7 +359,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
@@ -365,7 +374,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"
@@ -382,24 +391,25 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
 exports[`Component ThirdPartyLookupFormResult should not display the secondary field if reportInOutput is not specifically turned on 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-label-8"
         id="standard-card-label-8"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-label-8-header"
               id="standard-card-label-8-header"
             >
@@ -408,7 +418,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-label-8-content"
           data-testid="standard-card-label-8-content"
           id="standard-card-label-8-content"
@@ -419,18 +429,19 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
             dummy UT
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-test-results"
             id="standard-card-test-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -439,7 +450,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
@@ -454,7 +465,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"
@@ -471,24 +482,25 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
 exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-test-form"
         id="standard-card-test-form"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -497,7 +509,7 @@ exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] =
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
@@ -508,18 +520,19 @@ exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] =
             dummy UT
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-test-results"
             id="standard-card-test-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -528,28 +541,29 @@ exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] =
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                   data-testid="standard-card"
                   id="standard-card"
+                  style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                 >
                   <div
-                    class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                    class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
                   >
                     <div
-                      class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                      class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                     />
                   </div>
                   <div
-                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                    class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                     data-analyticsid="standard-card-content"
                     data-testid="standard-card-content"
                     id="standard-card-content"
@@ -561,7 +575,7 @@ exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] =
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"
@@ -578,24 +592,25 @@ exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] =
 exports[`Component ThirdPartyLookupFormResult should show locale-defined message when no results 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-test-form"
         id="standard-card-test-form"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -604,7 +619,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
@@ -615,18 +630,19 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
             dummy UT
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-test-results"
             id="standard-card-test-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -635,28 +651,29 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-test-results-content"
               data-testid="standard-card-test-results-content"
               id="standard-card-test-results-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
               >
                 <div
-                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
                   data-testid="standard-card"
                   id="standard-card"
+                  style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                 >
                   <div
-                    class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+                    class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
                   >
                     <div
-                      class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                      class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                     />
                   </div>
                   <div
-                    class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                    class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
                     data-analyticsid="standard-card-content"
                     data-testid="standard-card-content"
                     id="standard-card-content"
@@ -668,7 +685,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"
@@ -685,24 +702,25 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
 exports[`Component ThirdPartyLookupFormResult should use defaults when locale values are not provided 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-test-form"
         id="standard-card-test-form"
+        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
         >
           <div
-            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -711,7 +729,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
           </div>
         </div>
         <div
-          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
           data-analyticsid="standard-card-test-form-content"
           data-testid="standard-card-test-form-content"
           id="standard-card-test-form-content"
@@ -722,18 +740,19 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
             dummy UT
           </p>
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-985319-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-results"
             id="standard-card-results"
+            style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-16c6n48-MuiCardHeader-root"
+              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1hzv55z-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
                   data-testid="standard-card-results-header"
                   id="standard-card-results-header"
                 >
@@ -742,7 +761,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
               </div>
             </div>
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
               data-analyticsid="standard-card-results-content"
               data-testid="standard-card-results-content"
               id="standard-card-results-content"
@@ -757,7 +776,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
             </div>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-argx73-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1k7sra0-MuiButtonBase-root-MuiButton-root"
             style="margin-top: 20px;"
             tabindex="0"
             type="button"

@@ -3,13 +3,13 @@
 exports[`Snapshot tests for StandardPage component renders StandardPage with help 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -22,7 +22,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
     >
       <button
         aria-label="Click for more information"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
@@ -31,7 +31,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16iszhv-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -47,10 +47,10 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       </button>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     >
       Test
     </div>
@@ -61,13 +61,13 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
 exports[`Snapshot tests for StandardPage component renders StandardPage with title 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-v2c8i0-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -76,10 +76,10 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     />
   </div>
 </div>
@@ -88,13 +88,13 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
 exports[`Snapshot tests for StandardPage component renders StandardPage without a title 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-item css-1guqyqn-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
     />
   </div>
 </div>

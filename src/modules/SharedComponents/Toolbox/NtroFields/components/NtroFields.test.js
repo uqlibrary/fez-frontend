@@ -9,7 +9,6 @@ const ControlledFieldWithReduxStore = props => {
         formState: { isSubmitting },
     } = useForm();
 
-    // eslint-disable-next-line react/prop-types
     return (
         <WithReduxStore>
             <NtroFields {...{ control, isSubmitting, ...props }} />

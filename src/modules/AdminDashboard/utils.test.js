@@ -227,4 +227,12 @@ describe('utils', () => {
             expect(Utils.trimTrailingSlash('/ Test / text /')).toEqual('/ Test / text ');
         });
     });
+
+    describe('getTotalDocCount', () => {
+        it('returns expected results', () => {
+            expect(Utils.getTotalDocCount({ item_a: { doc_count: 1 } })).toEqual(1);
+            expect(Utils.getTotalDocCount({ item_a: { doc_count: 1 }, item_b: { doc_count: 2 } })).toEqual(3);
+            expect(Utils.getTotalDocCount({ item_a: { doc_count: 1 }, item_b: { count: 2 } })).toEqual(1);
+        });
+    });
 });

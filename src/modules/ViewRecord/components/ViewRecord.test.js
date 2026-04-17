@@ -7,7 +7,7 @@ import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
 import { recordWithNoAffiliationIssues } from 'mock/data/records';
 import { accounts, currentAuthor } from 'mock/data/account';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { recordVersionLegacy } from 'mock/data';
 import locale from 'locale/pages';
 import { notFound } from 'config/routes';
@@ -24,8 +24,8 @@ jest.mock('../../../hooks', () => ({
 
 const mockNavigate = jest.fn();
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
     useNavigate: () => mockNavigate,
 }));
@@ -235,6 +235,32 @@ describe('ViewRecord', () => {
         expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
     });
 
+    it('should render advisory statement', () => {
+        const { getByTestId } = setup({
+            viewRecordReducer: {
+                recordToView: {
+                    ...record,
+                    fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
+                },
+            },
+        });
+
+        expect(getByTestId('alert-message')).toHaveTextContent('hello');
+    });
+
+    it('should not render advisory statement', () => {
+        const { queryByTestId } = setup({
+            viewRecordReducer: {
+                recordToView: {
+                    ...record,
+                    fez_record_search_key_advisory_statement: { rek_advisory_statement: null },
+                },
+            },
+        });
+
+        expect(queryByTestId('alert-message')).not.toBeInTheDocument();
+    });
+
     it('should render deleted record correctly', () => {
         const { getByText } = setup({ viewRecordReducer: { isDeleted: true, recordToView: record } });
         expect(getByText('This work has been deleted.')).toBeInTheDocument();
@@ -425,7 +451,7 @@ describe('ViewRecord', () => {
 
         fireEvent.click(getByTestId('action-button'));
 
-        expect(assignFn).toHaveBeenCalledWith('https://fez-staging.library.uq.edu.au/login?url=dW5kZWZpbmVk');
+        expect(assignFn).toHaveBeenCalledWith('http://localhost/login?url=dW5kZWZpbmVk');
 
         window.location = location;
     });

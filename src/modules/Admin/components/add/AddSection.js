@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { useFormContext } from 'react-hook-form';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -94,8 +94,8 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                         {...(!!form.getFieldState('adminSection.collections').error
                                             ? {
                                                   error: true,
-                                                  errorText: form.getFieldState('adminSection.collections').error
-                                                      ?.message,
+                                                  errorText:
+                                                      form.getFieldState('adminSection.collections').error?.message,
                                               }
                                             : {})}
                                     />
@@ -140,8 +140,8 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                                 {...(!!form.getFieldState('adminSection.rek_subtype').error
                                                     ? {
                                                           error: true,
-                                                          errorText: form.getFieldState('adminSection.rek_subtype')
-                                                              .error,
+                                                          errorText:
+                                                              form.getFieldState('adminSection.rek_subtype').error,
                                                       }
                                                     : {})}
                                             >

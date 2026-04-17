@@ -159,4 +159,35 @@ describe('NewListEditor component', () => {
 
         expect(getByTestId('keywords-scroll-list')).toBeInTheDocument();
     });
+
+    it('should update on receiving new props', () => {
+        const onChangeFn = jest.fn();
+        const { rerender } = setup({
+            canEdit: true,
+            key: 1,
+            list: [],
+            listEditorId: 'keywords',
+            searchKey: { value: 'rek_keywords', order: 'rek_keywords_order' },
+            scrollList: true,
+            scrollListHeight: 55,
+            onChange: onChangeFn,
+        });
+
+        setup(
+            {
+                list: ['one', 'two', 'three'],
+                key: 2,
+                listEditorId: 'keywords',
+                searchKey: { value: 'rek_keywords', order: 'rek_keywords_order' },
+                onChange: onChangeFn,
+            },
+            rerender,
+        );
+
+        expect(onChangeFn).toHaveBeenLastCalledWith([
+            { rek_keywords: 'one', rek_keywords_order: 1 },
+            { rek_keywords: 'two', rek_keywords_order: 2 },
+            { rek_keywords: 'three', rek_keywords_order: 3 },
+        ]);
+    });
 });

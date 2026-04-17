@@ -15,7 +15,7 @@ export const PatentCitation = ({ publication, citationStyle }) => {
     // eSpace citation view for Patent
     // {Creator}{Date of issue| (|).|y}<i>{Patent title| |.}</i>{Patent number| |.}
     return (
-        <div className="citationContent citationPatent">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationPatent">
             {/* {Creator} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -30,7 +30,7 @@ export const PatentCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 PatentCitation.propTypes = {

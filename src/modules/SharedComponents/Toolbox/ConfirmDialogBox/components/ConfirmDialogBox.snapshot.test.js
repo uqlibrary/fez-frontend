@@ -15,7 +15,6 @@ const defaultProps = {
     onAction: jest.fn(),
     onCancelAction: jest.fn(),
     onAlternateAction: jest.fn(),
-    onRef: jest.fn(),
     showAlternateActionButton: false,
     isOpen: true,
 };
@@ -94,6 +93,21 @@ describe('ConfirmDialogBox snapshots tests', () => {
         });
         fireEvent.click(getByRole('button', { name: /Maybe/ }));
         expect(testFn).toHaveBeenCalled();
+    });
+
+    describe('onRef behavior', () => {
+        it('calls onRef with instance on mount and undefined on unmount', () => {
+            const onRef = jest.fn();
+            const { unmount } = setup({ onRef });
+
+            // on mount
+            expect(onRef).toHaveBeenCalledWith(expect.any(ConfirmDialogBoxClass));
+            // sanity check
+            expect(onRef.mock.calls[0][0]).toHaveProperty('showConfirmation');
+            // on unmount
+            unmount();
+            expect(onRef).toHaveBeenLastCalledWith(undefined);
+        });
     });
 
     describe('Class instance', () => {

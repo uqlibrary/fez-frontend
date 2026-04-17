@@ -1,7 +1,7 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import TextField from '@mui/material/TextField';
@@ -70,16 +70,12 @@ export const actionHandler = {
 };
 
 const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
-    const uniqueOrgs = useRef([]);
+    const [uniqueOrgs, setUniqueOrgs] = useState([]);
     const theme = useTheme();
     const dispatch = useDispatch();
 
-    const {
-        organisationUnits,
-        organisationUnitsLoaded,
-        organisationUnitsLoading,
-        organisationUnitsFailed,
-    } = useSelector(state => state.get('organisationalUnitsReducer'));
+    const { organisationUnits, organisationUnitsLoaded, organisationUnitsLoading, organisationUnitsFailed } =
+        useSelector(state => state.get('organisationalUnitsReducer'));
     const {
         suggestedAuthorId,
         suggestedOrganisationUnits,
@@ -87,6 +83,14 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
         suggestedOrganisationUnitsLoading,
         suggestedOrganisationUnitsFailed,
     } = useSelector(state => state.get('suggestedOrganisationalUnitsReducer'));
+
+    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
+    const [currentAffiliations, actionDispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
+
+    const currentAffiliationOrgIds = React.useMemo(
+        () => currentAffiliations.map(item => item.af_org_id),
+        [currentAffiliations],
+    );
 
     React.useEffect(() => {
         const loadOrganisationalUnitsList = () => dispatch(loadOrganisationalUnits());
@@ -110,6 +114,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
             // dispatch
             clearSuggestedOrganisationalUnitsList();
             loadSuggestedOrganisationalUnitsList(rowData.aut_id);
+        } else if (organisationUnitsLoaded && suggestedOrganisationUnitsLoaded) {
+            // update suggestion list
+            const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
+            const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
+            const uniqueOptions = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
+            setUniqueOrgs(uniqueOptions);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
@@ -121,18 +131,9 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
         suggestedOrganisationUnitsFailed,
         suggestedOrganisationUnitsLoaded,
         suggestedOrganisationUnitsLoading,
+        currentAffiliationOrgIds,
+        setUniqueOrgs,
     ]);
-
-    const recalculatedAffiliations = calculateAffiliationPercentile(rowData.affiliations);
-    const [currentAffiliations, actionDispatch] = useReducer(editAffiliationReducer, recalculatedAffiliations);
-
-    if (uniqueOrgs.current.length === 0 && organisationUnitsLoaded && suggestedOrganisationUnitsLoaded) {
-        const combinedArr = suggestedOrganisationUnits.concat(organisationUnits);
-        const uniqueIds = Array.from(new Set(combinedArr.map(item => item.org_id)));
-        uniqueOrgs.current = uniqueIds.map(id => combinedArr.find(obj => obj.org_id === id));
-    }
-
-    const currentAffiliationOrgIds = currentAffiliations.map(item => item.af_org_id);
 
     const {
         organisationalUnits: organisationalUnitsTitle,
@@ -147,14 +148,20 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
     } = locale;
 
     return (
-        <Grid container xs={12} alignItems={'center'} spacing={2}>
-            <Grid xs={7} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
+        <Grid
+            container
+            spacing={2}
+            size={12}
+            sx={{
+                alignItems: 'center',
+            }}
+        >
+            <Grid sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }} size={7}>
                 <Typography variant="caption">{organisationalUnitsTitle}</Typography>
             </Grid>
-            <Grid xs={5} sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }}>
+            <Grid sx={{ borderBlockEnd: '1px solid rgba(0,0,0,0.12)' }} size={5}>
                 <Typography variant="caption">{affiliationTitle}</Typography>
             </Grid>
-
             {(organisationUnitsLoading || suggestedOrganisationUnitsLoading) &&
                 !organisationUnitsFailed &&
                 !suggestedOrganisationUnitsFailed && <ContentLoader message={loadingOrganisationalUnitsText} />}
@@ -165,20 +172,26 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                     <React.Fragment>
                         {currentAffiliations.map((item, index) => (
                             <React.Fragment key={`${item.af_author_id}-${item.af_id}`}>
-                                <Grid xs={7} padding={1}>
+                                <Grid
+                                    size={7}
+                                    sx={{
+                                        padding: 1,
+                                    }}
+                                >
                                     <Autocomplete
                                         id={`orgSelect-${item.af_org_id}`}
                                         clearOnBlur
                                         disableClearable
                                         value={
-                                            uniqueOrgs.current?.find(
+                                            uniqueOrgs?.find(
                                                 org => org.org_id === item.af_org_id,
                                             ) ?? /* istanbul ignore next */ {
                                                 org_title: organisationMissingLabel,
                                             }
                                         }
-                                        options={uniqueOrgs.current ?? /* istanbul ignore next */ []}
+                                        options={uniqueOrgs ?? /* istanbul ignore next */ []}
                                         getOptionLabel={option => option.org_title}
+                                        getOptionDisabled={option => currentAffiliationOrgIds.includes(option.org_id)}
                                         renderOption={(props, option) => (
                                             <Box
                                                 component="li"
@@ -200,17 +213,20 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 {...params}
                                                 size={'small'}
                                                 variant={'standard'}
-                                                inputProps={{
-                                                    ...params.inputProps,
-                                                    id: `orgSelect-${item.af_org_id}-input`,
-                                                    'data-testid': `orgSelect-${item.af_org_id}-input`,
-                                                    placeholder: organisationPlaceholderText,
-                                                }}
-                                                InputProps={{
-                                                    ...params.InputProps,
-                                                    error: !!!uniqueOrgs.current?.find(
-                                                        org => org.org_id === item.af_org_id,
-                                                    ),
+                                                slotProps={{
+                                                    input: {
+                                                        ...params.InputProps,
+                                                        error: !!!uniqueOrgs?.find(
+                                                            org => org.org_id === item.af_org_id,
+                                                        ),
+                                                    },
+
+                                                    htmlInput: {
+                                                        ...params.inputProps,
+                                                        id: `orgSelect-${item.af_org_id}-input`,
+                                                        'data-testid': `orgSelect-${item.af_org_id}-input`,
+                                                        placeholder: organisationPlaceholderText,
+                                                    },
                                                 }}
                                             />
                                         )}
@@ -220,7 +236,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                     actionDispatch,
                                                     rowData,
                                                     newValue,
-                                                    uniqueOrgs.current[
+                                                    uniqueOrgs[
                                                         suggestedOrganisationUnits.length > 0
                                                             ? 0
                                                             : /* istanbul ignore next */ 1
@@ -230,13 +246,20 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 actionHandler[ACTIONS.CHANGE](actionDispatch, item, newValue);
                                             }
                                         }}
-                                        ListboxProps={{
-                                            id: `orgSelect-${item.af_org_id}-options`,
-                                            'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                        slotProps={{
+                                            listbox: {
+                                                id: `orgSelect-${item.af_org_id}-options`,
+                                                'data-testid': `orgSelect-${item.af_org_id}-options`,
+                                            },
                                         }}
                                     />
                                 </Grid>
-                                <Grid xs={4} padding={1}>
+                                <Grid
+                                    size={4}
+                                    sx={{
+                                        padding: 1,
+                                    }}
+                                >
                                     <Chip
                                         id={`orgChip-${item.af_org_id}`}
                                         data-testid={`orgChip-${item.af_org_id}`}
@@ -247,7 +270,13 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                     />
                                 </Grid>
 
-                                <Grid xs={1} justifyContent={'flex-end'} padding={1}>
+                                <Grid
+                                    size={1}
+                                    sx={{
+                                        justifyContent: 'flex-end',
+                                        padding: 1,
+                                    }}
+                                >
                                     {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
                                         <IconButton
                                             aria-label="delete"
@@ -262,7 +291,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                             </React.Fragment>
                         ))}
                         {!hasNonHerdc(currentAffiliations) && (
-                            <Grid xs={7} padding={1}>
+                            <Grid
+                                size={7}
+                                sx={{
+                                    padding: 1,
+                                }}
+                            >
                                 <Autocomplete
                                     id={'orgSelect-add'}
                                     data-testid={'orgSelect-add'}
@@ -270,9 +304,8 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                     clearOnBlur
                                     disableClearable
                                     options={
-                                        uniqueOrgs.current?.filter(
-                                            org => !currentAffiliationOrgIds.includes(org.org_id),
-                                        ) ?? /* istanbul ignore next */ []
+                                        uniqueOrgs?.filter(org => !currentAffiliationOrgIds.includes(org.org_id)) ??
+                                        /* istanbul ignore next */ []
                                     }
                                     getOptionLabel={option => option.org_title}
                                     renderOption={(props, option) => (
@@ -295,10 +328,12 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                             size={'small'}
                                             variant={'standard'}
                                             placeholder={organisationPlaceholderText}
-                                            inputProps={{
-                                                ...params.inputProps,
-                                                id: 'orgSelect-add-input',
-                                                'data-testid': 'orgSelect-add-input',
+                                            slotProps={{
+                                                htmlInput: {
+                                                    ...params.inputProps,
+                                                    id: 'orgSelect-add-input',
+                                                    'data-testid': 'orgSelect-add-input',
+                                                },
                                             }}
                                         />
                                     )}
@@ -308,7 +343,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                                 actionDispatch,
                                                 rowData,
                                                 newValue,
-                                                uniqueOrgs.current[
+                                                uniqueOrgs[
                                                     suggestedOrganisationUnits.length > 0
                                                         ? 0
                                                         : /* istanbul ignore next */ 1
@@ -316,16 +351,24 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                             );
                                         } else actionHandler[ACTIONS.ADD](actionDispatch, rowData, newValue);
                                     }}
-                                    ListboxProps={{
-                                        id: 'orgSelect-add-options',
-                                        'data-testid': 'orgSelect-add-options',
+                                    slotProps={{
+                                        listbox: {
+                                            id: 'orgSelect-add-options',
+                                            'data-testid': 'orgSelect-add-options',
+                                        },
                                     }}
                                 />
                             </Grid>
                         )}
                     </React.Fragment>
                 )}
-            <Grid container xs={12} justifyContent={'flex-end'}>
+            <Grid
+                container
+                size={12}
+                sx={{
+                    justifyContent: 'flex-end',
+                }}
+            >
                 <Button
                     id="affiliationCancelBtn"
                     data-testid="affiliationCancelBtn"

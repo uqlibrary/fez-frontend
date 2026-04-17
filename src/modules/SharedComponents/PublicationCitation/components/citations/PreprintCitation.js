@@ -12,7 +12,7 @@ export const PreprintCitation = ({ publication, citationStyle }) => {
     // eSpace citation view for Preprint
     // {Author}{Year| (|).}<i>{Title| |.}</i>
     return (
-        <div className="citationContent citationPreprint">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationPreprint">
             {/* {Author}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -24,7 +24,7 @@ export const PreprintCitation = ({ publication, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} />
-        </div>
+        </span>
     );
 };
 PreprintCitation.propTypes = {

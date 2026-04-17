@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 
 import { default as defaultConfig } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const StyledLazyLoadImage = styled(LazyLoadImage, {
+const StyledLazyLoadImage = styled('img', {
     shouldForwardProp: prop => prop !== 'classes',
 })(({ classes }) => ({
     objectFit: 'cover',
@@ -34,7 +33,6 @@ const ImageGalleryItemImage = ({
     const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* istanbul ignore next */ true;
     const thumbnailRestricted =
         (!!fileData?.thumbnailFileName && !fileData?.securityStatus) ?? /* istanbul ignore next */ false;
-    // eslint-disable-next-line camelcase
     const thumbnailAdvisory = item.fez_record_search_key_advisory_statement?.rek_advisory_statement ?? false;
 
     // at this stage fileData could still be null, which is fine as below will fall back to default image
@@ -74,6 +72,7 @@ const ImageGalleryItemImage = ({
             src={imgSrc || filename}
             classes={classes}
             className={'image-gallery-item-image'}
+            loading="lazy"
             {...errorHandler}
             {...rest}
         />

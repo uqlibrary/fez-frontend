@@ -7,7 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
@@ -106,38 +106,44 @@ export const ThirdPartyLookupForm = ({
                                             ? txt.thisForm.primaryField.inputPlaceholder
                                             : ''
                                     }
-                                    inputProps={{
-                                        'aria-label': txt.thisForm.primaryField.fromAria || '',
-                                    }}
                                     value={state.primaryValue}
                                     onChange={_onChange}
                                     required
                                     className={'primaryValue'}
+                                    slotProps={{
+                                        htmlInput: {
+                                            'aria-label': txt.thisForm.primaryField.fromAria || '',
+                                        },
+                                    }}
                                 />
                             </div>
-                            {// not all forms will have a second field
-                            !!txt.thisForm.secondaryField && (
-                                <div>
-                                    <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                    <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
-                                    <TextField
-                                        variant="standard"
-                                        fullWidth
-                                        name={'secondaryValue'}
-                                        inputProps={{
-                                            'aria-label': txt.thisForm.secondaryField.fromAria || '',
-                                        }}
-                                        placeholder={
-                                            txt.thisForm.secondaryField.inputPlaceholder
-                                                ? txt.thisForm.secondaryField.inputPlaceholder
-                                                : ''
-                                        }
-                                        value={state.secondaryValue}
-                                        onChange={_onChange}
-                                        className={'secondaryValue'}
-                                    />
-                                </div>
-                            )}
+                            {
+                                // not all forms will have a second field
+                                !!txt.thisForm.secondaryField && (
+                                    <div>
+                                        <h4>{txt.thisForm.secondaryField.heading}</h4>
+                                        <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
+                                        <TextField
+                                            variant="standard"
+                                            fullWidth
+                                            name={'secondaryValue'}
+                                            placeholder={
+                                                txt.thisForm.secondaryField.inputPlaceholder
+                                                    ? txt.thisForm.secondaryField.inputPlaceholder
+                                                    : ''
+                                            }
+                                            value={state.secondaryValue}
+                                            onChange={_onChange}
+                                            className={'secondaryValue'}
+                                            slotProps={{
+                                                htmlInput: {
+                                                    'aria-label': txt.thisForm.secondaryField.fromAria || '',
+                                                },
+                                            }}
+                                        />
+                                    </div>
+                                )
+                            }
                             <p>{txt.thisForm.bottomTip ? txt.thisForm.bottomTip : ''}</p>
                             <Button
                                 children={txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}

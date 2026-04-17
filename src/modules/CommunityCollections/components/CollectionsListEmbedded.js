@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import * as actions from 'actions';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config';
 import { parseHtmlToJSX } from 'helpers/general';
@@ -17,7 +17,7 @@ import { useQueryStringParams, useCommunityCollectionControls } from '../hooks';
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 import param from 'can-param';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 const moment = require('moment');
 
@@ -33,11 +33,7 @@ const classes = {
 const returnDateField = (date, conf, classes) => {
     return (
         <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
-            <Typography variant="body2">
-                {moment(date)
-                    .local()
-                    .format(conf.dateFormat)}
-            </Typography>
+            <Typography variant="body2">{moment(date).local().format(conf.dateFormat)}</Typography>
         </Grid>
     );
 };

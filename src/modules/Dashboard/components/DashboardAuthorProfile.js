@@ -6,7 +6,7 @@ import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Card from '@mui/material/Card';
 
 const background = require('../../../../public/images/dashboard_cover.jpg');

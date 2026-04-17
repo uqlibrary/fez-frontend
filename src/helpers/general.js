@@ -1,27 +1,26 @@
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
 
-// note: dd usage is stripped by WebpackStrip for dist builds
-global.dd = (...args) => args.forEach(arg => console.dir.bind(console)(arg, { depth: null }));
+/* istanbul ignore next */
+global.dd = console.dir.bind(console);
 /* istanbul ignore next */
 global.dc = console.log;
-global.dj = (...args) => args.forEach(arg => console.log.bind(console)(JSON.stringify(arg)));
-
 /* istanbul ignore next */
-const tryCatch = (callback, _default = undefined) => {
+global.dr = arg => {
+    console.dir.apply(console, [arg, { depth: null }]);
+    return arg;
+};
+/* istanbul ignore next */
+global.dj = console.log.bind(console, '%O');
+
+export const tryCatch = (callback, _default = undefined) => {
     try {
         return callback();
     } catch (e) {
+        /* istanbul ignore next */
         return _default;
     }
 };
-
-export const isDevEnv = () => tryCatch(() => process.env.BRANCH === 'development', false);
-export const isJestTest = () => tryCatch(() => !!process.env.JEST_WORKER_ID, false);
-/* istanbul ignore next */
-export const isPlaywrightTest = () => tryCatch(() => !!process?.env?.PW_IS_RUNNING, false);
-/* istanbul ignore next */
-export const isTest = () => isJestTest() || isPlaywrightTest();
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {

@@ -17,7 +17,7 @@ export const DataCollectionCitation = ({ publication, hideDoiLink, citationStyle
     // {Creator name}{Publication Year| (|).}<i>{Dataset Title| |.}</i>{Publisher| |.} Collection Type. {doi| doi:|}
 
     return (
-        <div className="citationContent citationDataCollection">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationDataCollection">
             {/* {Creator} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} suffix="" />
 
@@ -35,7 +35,7 @@ export const DataCollectionCitation = ({ publication, hideDoiLink, citationStyle
 
             {/* {doi| doi:|} */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 DataCollectionCitation.propTypes = {

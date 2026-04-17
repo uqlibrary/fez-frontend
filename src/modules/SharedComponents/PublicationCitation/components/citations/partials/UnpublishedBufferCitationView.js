@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import CitationView from './CitationView';
 import DateCitationView from './DateCitationView';

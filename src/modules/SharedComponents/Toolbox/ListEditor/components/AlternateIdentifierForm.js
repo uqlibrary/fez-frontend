@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ALTERNATE_IDENTIFIER_TYPE } from 'config/general';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
 

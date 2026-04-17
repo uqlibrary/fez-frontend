@@ -45,12 +45,12 @@ test.describe('Homepage', () => {
 
     test('Has expected menu items for a researcher', async ({ page }) => {
         await page.goto('/?user=uqresearcher');
-        await checkMenuItemCount(page, 16);
+        await checkMenuItemCount(page, 17);
     });
 
     test('Has expected menu items for an admin with full masquerade', async ({ page }) => {
         await page.goto('/?user=uqstaff');
-        await checkMenuItemCount(page, 29);
+        await checkMenuItemCount(page, 30);
     });
 
     test('Redirects to admin dashboard for admin with full masquerade and URL switch present', async ({ page }) => {
@@ -60,7 +60,7 @@ test.describe('Homepage', () => {
 
     test('Should not redirect for readonly masquerade user even if URL switch present', async ({ page }) => {
         await page.goto('/?user=uqmasquerade&adrd=1');
-        await checkMenuItemCount(page, 17);
+        await checkMenuItemCount(page, 18);
         await expect(page).not.toHaveURL('/admin/dashboard');
     });
 
@@ -71,12 +71,12 @@ test.describe('Homepage', () => {
 
     test('Has expected menu items for a RHD student', async ({ page }) => {
         await page.goto('/?user=s2222222');
-        await checkMenuItemCount(page, 16);
+        await checkMenuItemCount(page, 17);
     });
 
     test('Has expected menu items for a Masqueradable staff member', async ({ page }) => {
         await page.goto('/?user=uqmasquerade');
-        await checkMenuItemCount(page, 17);
+        await checkMenuItemCount(page, 18);
         await expect(
             page
                 .locator('#mainMenu .menu-item-container p')
@@ -94,11 +94,7 @@ test.describe('Homepage', () => {
                 .getByText(/About these metrics/)
                 .first(),
         ).toBeVisible();
-        await page
-            .getByTestId('help-drawer-close')
-            .getByText(/CLOSE/)
-            .first()
-            .click();
+        await page.getByTestId('help-drawer-close').getByText(/CLOSE/).first().click();
         await expect(page.getByTestId('help-drawer-title')).not.toBeVisible();
     });
 });

@@ -38,8 +38,8 @@ describe('SelectedKeywords', () => {
         const { getByTestId } = setup({
             keywords: keywords,
         });
-        expect(getByTestId('separator-0')).toHaveTextContent('OR');
-        expect(getByTestId('separator-1')).toHaveTextContent('OR');
-        expect(getByTestId('separator-2')).toHaveTextContent('AND');
+        expect(getByTestId('operand-chip-title-dogs')).toHaveTextContent('OR');
+        expect(getByTestId('operand-chip-subject-dogs')).toHaveTextContent('OR');
+        expect(getByTestId('operand-chip-keyword-dogs')).toHaveTextContent('AND');
     });
 });

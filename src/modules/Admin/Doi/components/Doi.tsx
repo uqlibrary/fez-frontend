@@ -1,8 +1,8 @@
 import React from 'react';
 import { parseHtmlToJSX } from 'helpers/general';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
@@ -125,9 +125,11 @@ export const getInvalidPreviewFields = (record: FezRecord) => {
     previewFields.map((fieldConfig: DoiFieldNames) => {
         const fieldName = fieldConfig.field;
         const subKey = fieldName.replace('fez_record_search_key', 'rek');
-        const value = (typeof record[fieldName] === 'object' && !Array.isArray(record[fieldName])
-            ? record[fieldName]?.[subKey]
-            : record[fieldName]) as string;
+        const value = (
+            typeof record[fieldName] === 'object' && !Array.isArray(record[fieldName])
+                ? record[fieldName]?.[subKey]
+                : record[fieldName]
+        ) as string;
 
         let isValid = true;
         switch (fieldName as string) {
@@ -235,7 +237,7 @@ export const getErrorMessage = (record: FezRecord) => {
 
         // Subtype restrictions
         const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
-        if (!!supportedSubtypes) {
+        if (supportedSubtypes) {
             const subtype = !!record && (record.rek_subtype as string);
             if (supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(
@@ -318,7 +320,7 @@ export const Doi: React.FC<Doi> = ({
     const { pid: pidParam } = useParams();
     React.useEffect(() => {
         // Load record if it hasn't
-        !!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView && loadRecordToView(pidParam);
+        if (!!pidParam && (!record || record.rek_pid !== pidParam) && !!loadRecordToView) loadRecordToView(pidParam);
         return () => {
             // Clear form status
             resetDoi();
@@ -334,7 +336,10 @@ export const Doi: React.FC<Doi> = ({
     }, [showConfirmation, doiUpdated]);
 
     if (!!pidParam && loadingRecordToView) {
-        return <InlineLoader message={txt.loadingMessage} />;
+        return (
+            // @ts-ignore
+            <InlineLoader message={txt.loadingMessage} />
+        );
     }
 
     // Record not found
@@ -384,11 +389,13 @@ export const Doi: React.FC<Doi> = ({
     });
 
     return (
+        // @ts-ignore
         <StandardPage>
             {!!pid && (
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         {renderTitle({ doi, displayTypeLookup, title, pid })}
+                        {/* @ts-ignore */}
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
                     <Grid item xs={12}>
@@ -397,7 +404,7 @@ export const Doi: React.FC<Doi> = ({
                                 // @ts-ignore
                                 message={errorMessage}
                                 type="error"
-                                testId="rek-doi-error"
+                                alertId="rek-doi-error"
                             />
                         )) ||
                             (!!warningMessage && (
@@ -405,7 +412,7 @@ export const Doi: React.FC<Doi> = ({
                                     // @ts-ignore
                                     message={warningMessage}
                                     type="warning"
-                                    testId="rek-doi-warning"
+                                    alertId="rek-doi-warning"
                                 />
                             ))}
                     </Grid>
@@ -424,7 +431,12 @@ export const Doi: React.FC<Doi> = ({
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
-                            <Alert testId="rek-doi-submit-status" {...alertProps} />
+                            <Alert
+                                // @ts-ignore
+                                alertId="rek-doi-submit-status"
+                                message=""
+                                {...alertProps}
+                            />
                         </Grid>
                     )}
                     <Grid item xs={12}>

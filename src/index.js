@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
-import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router-dom';
+import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router';
 import { setup } from 'mock';
 
 // pick utils
@@ -18,7 +18,7 @@ import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import 'sass/index.scss';
 import { store, reducers } from 'config/store';
-import { isTest } from './helpers/general';
+import { IS_TEST } from './config/general';
 
 // Increase default (10) event listeners to 30
 require('events').EventEmitter.prototype._maxListeners = 30;
@@ -28,7 +28,7 @@ if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
     setup();
 }
 
-if (!isTest() && process.env.ENABLE_LOG) {
+if (!IS_TEST && process.env.ENABLE_LOG) {
     Sentry.init({
         dsn: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
         integrations: [
@@ -42,6 +42,8 @@ if (!isTest() && process.env.ENABLE_LOG) {
         ],
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
+        sendDefaultPii: false,
+        enableMetrics: false,
         allowUrls: [/library\.uq\.edu\.au/],
         ignoreErrors: [
             // Ignore browser extension errors
@@ -67,8 +69,14 @@ if (!isTest() && process.env.ENABLE_LOG) {
     });
 }
 
+const onReactError = process.env.ENABLE_LOG && typeof Sentry !== 'undefined' ? Sentry.reactErrorHandler() : () => {};
+
 const render = () => {
-    const root = createRoot(document.getElementById('react-root'));
+    const root = createRoot(document.getElementById('react-root'), {
+        onUncaughtError: onReactError, // errors uncaught by react router error boundary nor AppErrorBoundary component
+        onCaughtError: onReactError, // includes errors caught by react router error boundary, remove if it gets too noisy
+    });
+
     root.render(
         <React.StrictMode>
             <AppErrorBoundary>

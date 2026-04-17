@@ -4,18 +4,18 @@ import Meta, { getMetaTagContent, getMetaTags } from './Meta';
 import { pathConfig } from 'config';
 import { render, WithReduxStore, WithRouter } from 'test-utils';
 import { metaExpected } from 'mock/data/testing/meta';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: jest.fn(() => jest.fn()),
     useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
 }));
 
 const mockHelmet = jest.fn();
 
-jest.mock('react-helmet-async', () => ({
-    ...jest.requireActual('react-helmet-async'),
+jest.mock('@dr.pogodin/react-helmet', () => ({
+    ...jest.requireActual('@dr.pogodin/react-helmet'),
     Helmet: props => {
         mockHelmet(props);
     },

@@ -1,8 +1,9 @@
+@use "sass:color";
 #myTrendingPublications {
   @for $i from 1 through 5 {
     div:nth-of-type(#{$i}) {
       .citationMetrics, .citationMetrics a {
-        color: adjust-hue(hsl(-45, 100%, 20%), calc($i/5)*120) !important;
+        color: color.adjust(hsl(-45, 100%, 20%), $hue: calc($i/5)*120) !important;
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { sanitiseId } from 'helpers/general';
 import ForCodeSource from './ForCodeSource';
@@ -38,7 +38,7 @@ export const getId = (keyword, variant, type, index) =>
 export const SearchKeyword = ({
     keyword,
     onKeywordClick,
-    variant,
+    variant = 'default',
     type,
     index,
     cvoId,
@@ -59,9 +59,12 @@ export const SearchKeyword = ({
             <Typography
                 component="span"
                 sx={{
-                    color: 'accent.main',
-                    cursor: 'pointer',
-                    ...classes[variant || 'default'],
+                    ...((onKeywordClick && {
+                        color: 'accent.main',
+                        cursor: 'pointer',
+                    }) ||
+                        {}),
+                    ...classes[variant],
                     ...(isSelected ? classes.added : {}),
                 }}
                 onKeyPress={key => handleKeyboardPressActivate(key, handleKeywordClick)}

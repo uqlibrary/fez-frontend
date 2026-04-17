@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -45,7 +45,13 @@ const JournalsListCollapsibleDataPanelContent = ({ item, index, data, isFirstRow
                 ...(!isLastRow ? classes.collapsibleContainerDataRowBottom : {}),
             }}
         >
-            <Box display="flex" alignItems="flex-end" key={item.key}>
+            <Box
+                key={item.key}
+                sx={{
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                }}
+            >
                 <Typography
                     variant="body1"
                     sx={{ ...classes.inputLabel }}

@@ -9,7 +9,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import locale from 'locale/components';
 import { isReadonlyVocab } from 'config/general';
 
@@ -44,12 +44,12 @@ export const VocabDataRow = ({ row }) => {
                 {state.cvo_id !== row.cvo_id && (
                     <Box
                         sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            width: '100%',
+                            paddingBlockEnd: '10px',
                             ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}),
                         }}
-                        display={'flex'}
-                        alignItems={'center'}
-                        width={'100%'}
-                        paddingBlockEnd={'10px'}
                     >
                         <Grid item xs={12} sm={1}>
                             <IconButton

@@ -1,10 +1,11 @@
-/* eslint-disable max-len */
 import React from 'react';
 import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import OpenInNew from '@mui/icons-material/OpenInNew';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 import locale from 'locale/components';
 import globalLocale from './global';
@@ -13,9 +14,15 @@ import { pathConfig } from 'config/pathConfig';
 import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
+    ESPACE_TEAM_CONTACT_US_URL,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
+
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Link } from 'react-router';
+import { Box } from '@mui/material';
+
 /*
 
 NOTE:
@@ -38,7 +45,6 @@ help: {
 As the contact details changes are only temporary I think this is an ok (not great) approach to display the external link icon.
 
 */
-/* eslint-disable max-len */
 export default {
     pages: {
         index: {
@@ -188,8 +194,8 @@ export default {
                     <p>The work you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
-                            contact the eSpace team.
+                        <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                            contact the UQ eSpace team.
                         </a>
                     </p>
                 </div>
@@ -272,8 +278,7 @@ export default {
                             orcid: 'https://orcid.org/',
                         },
                         notLinkedUrl: {
-                            scopus:
-                                'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
+                            scopus: 'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
                             researcher:
                                 ' https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/web-science-researcher-profile',
                             // google scholar is linked via ORCID
@@ -286,22 +291,28 @@ export default {
                     badgeTooltip: 'Information about uploading your eSpace works to ORCID',
                     helpDrawer: {
                         messages: {
-                            // Persistent help message
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
                             // Statuses
-                            done:
-                                'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
-                            error:
-                                'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
+                            done: 'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
+                            error: 'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
                             inProgress: 'A manual upload of your eSpace works to ORCID is in progress.',
                             // Date of last upload
                             lastUpload: 'The last upload was on [syncTime].',
                             noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                            syncPreference: {
+                                saving: 'Saving ORCID sync preferences.',
+                                error: 'Error while saving ORCID sync preferences.',
+                            },
                         },
                         title: 'ORCID Upload',
                         type: 'info',
                         actionButtonLabel: 'Upload works to ORCID',
                         alternateActionButtonLabel: 'View works in ORCID',
+                    },
+                },
+                dashboardOrcidSyncPreferences: {
+                    labels: {
+                        switch: 'Enable weekly automatic upload of your works to ORCID.',
                     },
                 },
             },
@@ -323,6 +334,12 @@ export default {
                 type: 'info_outline',
                 actionButtonLabel: 'Add a missing work',
             },
+            enableOrcidSyncLure: {
+                title: 'Enable now!',
+                message: 'You can authorise UQ eSpace to update ORCID on your behalf.',
+                type: 'info_outline',
+                actionButtonLabel: 'Enable ORCID sync now',
+            },
             publicationsByYearChart: {
                 title: 'eSpace works per year',
                 yAxisTitle: 'Total works',
@@ -336,6 +353,13 @@ export default {
                 type: 'warning',
                 actionButtonLabel: 'View and Complete',
             },
+            oacomplianceRecordLure: {
+                title: 'Open Access Required',
+                message: 'We have found [count] work(s) that may not meet the funder(s) Open Access requirements.',
+                type: 'warning',
+                actionButtonLabel: 'View and Fix',
+                icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
+            },
         },
         myResearch: {
             pageTitle: 'My works',
@@ -343,8 +367,8 @@ export default {
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (
                 <span>
-                    Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
-                    <a href={pathConfig.records.add.find}>adding a missing work</a>.
+                    Add to this list by <Link to={pathConfig.records.possible}>claiming a work</Link> or{' '}
+                    <Link to={pathConfig.records.add.find}>adding a missing work</Link>.
                 </span>
             ),
             loadingMessage: 'Searching for your works',
@@ -355,8 +379,8 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <a href={pathConfig.records.possible}>claim works we think may be yours</a> or{' '}
-                        <a href={pathConfig.records.add.find}>add a missing publication</a>
+                        <Link to={pathConfig.records.possible}>claim works we think may be yours</Link> or{' '}
+                        <Link to={pathConfig.records.add.find}>add a missing publication</Link>
                     </div>
                 ),
             },
@@ -367,7 +391,7 @@ export default {
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.dataset.add}`}>adding a missing dataset</a>.
+                    Add to this list by <Link to={`${pathConfig.dataset.add}`}>adding a missing dataset</Link>.
                 </span>
             ),
             loadingMessage: 'Searching for your datasets',
@@ -377,7 +401,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <a href={pathConfig.dataset.add}>add a missing dataset</a>.
+                        <Link to={pathConfig.dataset.add}>add a missing dataset</Link>.
                     </div>
                 ),
             },
@@ -429,8 +453,7 @@ export default {
             },
             searchResults: {
                 // title: 'Possibly your publications',
-                text:
-                    '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
+                text: '[resultsCount] out of [totalCount] potential match(es) displayed. Select any item to claim it as your work.',
                 // help: {
                 //     title: 'Possibly your publications',
                 //     text: 'Help about ....',
@@ -466,8 +489,7 @@ export default {
             stepper: [{ label: 'Search for your work' }, { label: 'Search results' }, { label: 'Add your work' }],
             step1: {
                 title: 'Search for your works',
-                text:
-                    'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.',
+                text: 'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.',
                 // help: {
                 //     title: 'Search for your publication',
                 //     text: 'Help about search....',
@@ -482,8 +504,7 @@ export default {
             step2: {
                 noResultsFound: {
                     title: 'No matching works found',
-                    text:
-                        'We were unable to match any results to your search criteria. Please search again or create a new eSpace work.',
+                    text: 'We were unable to match any results to your search criteria. Please search again or create a new eSpace work.',
                     // help: {
                     //     title: 'No matching works found',
                     //     text: 'Why search didn\'t return any items....',
@@ -572,13 +593,70 @@ export default {
             actionsOptions: [
                 {
                     action: 'fix',
-                    title:
-                        'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
+                    title: 'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
                 },
                 {
                     action: 'unclaim',
-                    title:
-                        'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
+                },
+            ],
+            cancel: 'Cancel',
+            submit: 'Submit',
+        },
+        openAccessComplianceRecord: {
+            loadingMessage: 'Loading work',
+            title: 'Work to make open access',
+            subTitle: (
+                <div>
+                    Upload an Author Accepted Manuscript for green open access
+                    <Box sx={{ typography: 'body1' }}>
+                        <p>
+                            Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this
+                            research more visible.
+                        </p>
+                        <p>
+                            Visit{' '}
+                            <ExternalLink
+                                id="make-research-open-access-link"
+                                href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
+                                target="_blank"
+                            >
+                                Make research open access in UQ eSpace
+                            </ExternalLink>{' '}
+                            for information.
+                        </p>
+                        <p>If a work has been identified in error, please suggest a correction.</p>
+                    </Box>
+                </div>
+            ),
+            help: {
+                title: 'Author Accepted Manuscript',
+                text: (
+                    <>
+                        <p>
+                            You can make your work openly accessible by depositing the Author Accepted Manuscript
+                            (post-print) of your article.
+                        </p>
+                        <p>
+                            An Author Accepted Manuscript is the version of an article that has been peer-reviewed and
+                            accepted for publication but before the publisher has applied formatting, typesetting and
+                            branding.
+                        </p>
+                    </>
+                ),
+                buttonLabel: 'Close',
+            },
+            fieldLabels: {
+                action: 'Select an action',
+            },
+            actionsOptions: [
+                {
+                    action: 'fix',
+                    title: 'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files',
+                },
+                {
+                    action: 'unclaim',
+                    title: 'I am not the author/editor/contributor of this work - I would like this work removed from my profile',
                 },
             ],
             cancel: 'Cancel',
@@ -903,8 +981,25 @@ export default {
                 type: 'done',
                 alertId: 'alert-done',
                 title: 'ORCID linked',
-                message:
-                    'Your ORCID has been linked to your eSpace profile. Works from Web of Science, Scopus PubMed and Crossref will be synced to your eSpace profile within the next 7 days.',
+                message: (
+                    <>
+                        <Alert
+                            alertId="orcid-sync-confirmation-message"
+                            message="You have successfully linked your ORCID to your UQ eSpace profile."
+                            type="done"
+                        />
+                        <span style={{ display: 'block', marginTop: '1em' }}>
+                            Works in your ORCID profile from Web of Science, Scopus, PubMed, and CrossRef will be synced
+                            to your UQ eSpace profile within 7 days. Read more about{' '}
+                            <ExternalLink
+                                id="dashboard-orcid-linking-confirmation-dialog-link-to-docs"
+                                href="https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/orcid"
+                            >
+                                populating your ORCID.
+                            </ExternalLink>
+                        </span>
+                    </>
+                ),
                 allowDismiss: true,
             },
             progressAlert: {
@@ -1038,11 +1133,14 @@ export default {
                 uqData: {
                     title: 'UQ eSpace',
                 },
-                doaj: {
-                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                openAccess: {
+                    title: 'Open Access Options',
                 },
-                indexed: {
-                    title: 'Indexed in',
+                listed: {
+                    title: 'Listed in',
+                },
+                readAndPublish: {
+                    title: 'Publisher Agreements',
                 },
             },
             help: {
@@ -1242,6 +1340,10 @@ export default {
                 advisoryStatement: {
                     title: 'Advisory statement',
                 },
+                publishAsOAButton: {
+                    tooltip: 'Avoid fees and meet mandates by viewing similar journals with open access.',
+                    text: "I'd like to publish open access",
+                },
             },
         },
         authors: {
@@ -1254,6 +1356,75 @@ export default {
         },
         controlledVocabularies: {
             title: 'Controlled Vocabularies',
+        },
+        openAccessPublications: {
+            pageTitle: 'My open access',
+            cardTitle: 'Work(s) to make open access',
+            text: (
+                <div>
+                    <p>
+                        Work(s) below may require an Author Accepted Manuscript (AAM) to meet{' '}
+                        <ExternalLink
+                            id="open-access-policies-link"
+                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/policies-and-mandates"
+                            target="_blank"
+                        >
+                            funder open access policies
+                        </ExternalLink>
+                        .
+                    </p>
+                    <p>If a work has been identified in error, please request a correction.</p>
+                    <p>
+                        Visit{' '}
+                        <ExternalLink
+                            id="make-research-open-access-link"
+                            href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
+                            target="_blank"
+                        >
+                            Make research open access in UQ eSpace
+                        </ExternalLink>{' '}
+                        for information.
+                    </p>
+                </div>
+            ),
+            help: {
+                title: 'Author Accepted Manuscript',
+                text: (
+                    <>
+                        <p>
+                            You can make your work openly accessible by depositing the Author Accepted Manuscript
+                            (post-print) of your article.
+                        </p>
+                        <p>
+                            An Author Accepted Manuscript is the version of an article that has been peer-reviewed and
+                            accepted for publication but before the publisher has applied formatting, typesetting and
+                            branding.
+                        </p>
+                    </>
+                ),
+                buttonLabel: 'Close',
+            },
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            loadingMessage: 'Searching for open access non-compliant works',
+            noResultsFound: {
+                title: 'No open access works found',
+                text: (
+                    <div>
+                        <p>No open access works were found for you to rectify.</p>
+                    </div>
+                ),
+            },
+            publicationsList: {
+                complete: 'Make open access',
+                fix: 'Request Correction',
+            },
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: [...locale.components.facetsFilter.excludeFacetsList, 'Author'],
+            },
+        },
+        openAccessPublication: {
+            title: 'Complete my open access work',
         },
     },
 };

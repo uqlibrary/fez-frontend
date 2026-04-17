@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import { default as txt } from './components';
 import {
@@ -1585,7 +1584,7 @@ export default {
         afterSubmitButton: 'Return to the homepage',
         reloadFormButton: 'Add another collection',
         addFailedMessage: error =>
-            `Your attempt to add this collection has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`,
+            `Your attempt to add this collection has failed (Error: ${error.message}). Please try again later or contact the UQ eSpace team.`,
     },
     addACommunity: {
         title: 'Add a missing community',
@@ -1655,6 +1654,6 @@ export default {
         afterSubmitButton: 'Return to the homepage',
         AddAnotherButton: 'Add another community',
         addFailedMessage: error =>
-            `Your attempt to add this community has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`,
+            `Your attempt to add this community has failed (Error: ${error.message}). Please try again later or contact the UQ eSpace team.`,
     },
 };

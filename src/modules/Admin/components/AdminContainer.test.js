@@ -1,5 +1,4 @@
 import React from 'react';
-import Immutable from 'immutable';
 import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 
 import * as Actions from 'actions/viewRecord';
@@ -7,7 +6,7 @@ import AdminContainer from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import { useIsMobileView } from '../../../hooks';
 import { useRecordContext, useTabbedContext } from 'context';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 class ResizeObserver {
     observe() {}
@@ -41,8 +40,8 @@ jest.mock('react-redux', () => ({
     useDispatch: () => mockDispatch,
 }));
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useParams: jest.fn(() => ({ pid: 'UQ:111111' })),
 }));
 
@@ -76,8 +75,7 @@ function setup({ state, ...testProps } = {}, renderer = rtlRender) {
         </WithReduxStore>,
     );
 }
-// global.console.error = jest.fn();
-// global.console.warn = jest.fn();
+
 describe('AdminContainer component', () => {
     beforeEach(() => {
         mockCookieSetter = cookieSetterOriginal;
@@ -129,15 +127,18 @@ describe('AdminContainer component', () => {
         });
         expect(container).toMatchSnapshot();
     });
-    it('should render when form errors are present', () => {
+
+    it('should render when form errors are present', async () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-        const actualHook = jest.requireActual('../validators');
-        jest.spyOn(require('../validators'), 'useFormValidator').mockImplementation(() => ({
-            ...actualHook,
-            errors: {
-                bibliographicSection: {
-                    rek_date: 'Publication date is required',
-                    rek_title: 'Title is required',
+        const actualHook = jest.requireActual('../../../hooks');
+        jest.spyOn(require('../../../hooks'), 'useValidatedForm').mockImplementation(() => ({
+            ...actualHook.useValidatedForm(),
+            formState: {
+                errors: {
+                    bibliographicSection: {
+                        rek_date: 'Publication date is required',
+                        rek_title: 'Title is required',
+                    },
                 },
             },
         }));
@@ -145,6 +146,7 @@ describe('AdminContainer component', () => {
         const { container } = setup({});
         expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toHaveTextContent('2');
     });
+
     it('should render with an empty record', () => {
         useParams.mockImplementation(() => ({ pid: 'UQ:123456' }));
         const { container } = setup({

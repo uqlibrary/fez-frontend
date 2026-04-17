@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 
 export function usePrevious<T>(value: T): T | undefined {
-    const prev = useRef<T>();
+    const prev = useRef<T>(undefined);
 
     // sync prev upon value changes
     useEffect(() => {

@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
@@ -49,7 +49,6 @@ export const ListRow = ({
 
     const _handleEdit = useCallback(() => {
         !!onEdit && onEdit(index);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index, onEdit]);
 
     const _handleMoveUp = useCallback(() => {

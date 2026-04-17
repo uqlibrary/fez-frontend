@@ -109,10 +109,10 @@ export default {
             groups: [['fez_record_search_key_isderivationof']],
         },
     ],
-    authors: ({ shouldHandleAffiliations = false }) => [
+    authors: () => [
         {
             title: 'Authors',
-            groups: [...(!shouldHandleAffiliations ? [['authors']] : [['authorsWithAffiliations']])],
+            groups: [['authors']],
         },
         {
             title: 'Editors',

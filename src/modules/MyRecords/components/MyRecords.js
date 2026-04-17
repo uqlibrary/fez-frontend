@@ -14,7 +14,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import locale from 'locale/components';
 import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
 import { pathConfig } from 'config';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -36,6 +36,7 @@ export default class MyRecords extends PureComponent {
         navigate: PropTypes.func.isRequired,
         navigationType: PropTypes.string,
         actions: PropTypes.object,
+        publicationsListOtherProps: PropTypes.object,
     };
 
     constructor(props) {
@@ -216,137 +217,149 @@ export default class MyRecords extends PureComponent {
         return (
             <StandardPage title={txt.pageTitle}>
                 <Grid container spacing={2}>
-                    {// first time loading my publications - account hasn't been
-                    // loaded or any my publications haven't been loaded
-                    !this.state.hasPublications && this.props.loadingPublicationsList && (
-                        <Grid item xs={12}>
-                            <InlineLoader message={txt.loadingMessage} />
-                        </Grid>
-                    )}
-                    {// no results to display
-                    !this.props.loadingPublicationsList &&
-                        this.props.publicationsList &&
-                        this.props.publicationsList.length === 0 && (
-                            <Grid item xs={12} md={9}>
-                                <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
+                    {
+                        // first time loading my publications - account hasn't been
+                        // loaded or any my publications haven't been loaded
+                        !this.state.hasPublications && this.props.loadingPublicationsList && (
+                            <Grid item xs={12}>
+                                <InlineLoader message={txt.loadingMessage} />
                             </Grid>
-                        )}
-                    {// results to display or loading if user is filtering/paging
-                    this.state.hasPublications &&
-                        (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
-                            <Grid item xs={12} md={9}>
-                                <StandardCard noHeader>
-                                    {pagingData && pagingData.to && pagingData.from && pagingData.total && (
-                                        <span>
-                                            {txt.recordCount
-                                                .replace('[recordsTotal]', pagingData.total)
-                                                .replace('[recordsFrom]', pagingData.from)
-                                                .replace('[recordsTo]', pagingData.to)}
-                                        </span>
-                                    )}
-                                    {this.state.bulkExportSelected && (
-                                        <span data-testid="my-records-bulk-export-size-message">
-                                            {txt.bulkExportSizeMessage.replace(
-                                                '[bulkExportSize]',
-                                                MY_RECORDS_BULK_EXPORT_SIZE,
-                                            )}
-                                        </span>
-                                    )}
-                                    <Grid container spacing={2}>
-                                        <Grid item xs={12}>
-                                            {txt.text}
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsListSorting
-                                                initPageLength={this.initState.pageSize}
-                                                sortBy={this.state.sortBy}
-                                                sortDirection={this.state.sortDirection}
-                                                pageSize={this.state.pageSize}
-                                                pagingData={pagingData}
-                                                onSortByChanged={this.sortByChanged}
-                                                onPageSizeChanged={this.pageSizeChanged}
-                                                onExportPublications={this.handleExportPublications}
-                                                canUseExport={this.props.canUseExport}
-                                                disabled={isLoadingOrExporting}
-                                                bulkExportSize={MY_RECORDS_BULK_EXPORT_SIZE}
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsListPaging
-                                                loading={isLoadingOrExporting}
-                                                pagingData={pagingData}
-                                                onPageChanged={this.pageChanged}
-                                                disabled={isLoadingOrExporting || this.state.bulkExportSelected}
-                                                pagingId="my-records-paging-top"
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <ConfirmDialogBox
-                                                locale={confirmationLocale}
-                                                hideCancelButton
-                                                onRef={this._setSuccessConfirmation}
-                                            />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            {isLoadingOrExporting && (
-                                                <div className="is-centered">
-                                                    <InlineLoader
-                                                        message={
-                                                            this.props.loadingPublicationsList
-                                                                ? txt.loadingPagingMessage
-                                                                : txt.exportPublicationsLoadingMessage
-                                                        }
-                                                    />
-                                                </div>
-                                            )}
-                                            {!this.props.exportPublicationsLoading &&
-                                                !this.props.loadingPublicationsList &&
-                                                this.props.publicationsList &&
-                                                this.props.publicationsList.length > 0 && (
-                                                    <PublicationsList
-                                                        publicationsList={this.props.publicationsList}
-                                                        {...actionProps}
-                                                        showAdminActions={isAdmin}
-                                                    />
+                        )
+                    }
+                    {
+                        // no results to display
+                        !this.props.loadingPublicationsList &&
+                            this.props.publicationsList &&
+                            this.props.publicationsList.length === 0 && (
+                                <Grid item xs={12} md={9}>
+                                    <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
+                                </Grid>
+                            )
+                    }
+                    {
+                        // results to display or loading if user is filtering/paging
+                        this.state.hasPublications &&
+                            (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
+                                <Grid item xs={12} md={9}>
+                                    <StandardCard
+                                        {...(txt?.help ? { title: txt.cardTitle, help: txt.help } : { noHeader: true })}
+                                    >
+                                        {pagingData && pagingData.to && pagingData.from && pagingData.total && (
+                                            <span>
+                                                {txt.recordCount
+                                                    .replace('[recordsTotal]', pagingData.total)
+                                                    .replace('[recordsFrom]', pagingData.from)
+                                                    .replace('[recordsTo]', pagingData.to)}
+                                            </span>
+                                        )}
+                                        {this.state.bulkExportSelected && (
+                                            <span data-testid="my-records-bulk-export-size-message">
+                                                {txt.bulkExportSizeMessage.replace(
+                                                    '[bulkExportSize]',
+                                                    MY_RECORDS_BULK_EXPORT_SIZE,
                                                 )}
+                                            </span>
+                                        )}
+                                        <Grid container spacing={2}>
+                                            <Grid item xs={12}>
+                                                {txt.text}
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <PublicationsListSorting
+                                                    initPageLength={this.initState.pageSize}
+                                                    sortBy={this.state.sortBy}
+                                                    sortDirection={this.state.sortDirection}
+                                                    pageSize={this.state.pageSize}
+                                                    pagingData={pagingData}
+                                                    onSortByChanged={this.sortByChanged}
+                                                    onPageSizeChanged={this.pageSizeChanged}
+                                                    onExportPublications={this.handleExportPublications}
+                                                    canUseExport={this.props.canUseExport}
+                                                    disabled={isLoadingOrExporting}
+                                                    bulkExportSize={MY_RECORDS_BULK_EXPORT_SIZE}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <PublicationsListPaging
+                                                    loading={isLoadingOrExporting}
+                                                    pagingData={pagingData}
+                                                    onPageChanged={this.pageChanged}
+                                                    disabled={isLoadingOrExporting || this.state.bulkExportSelected}
+                                                    pagingId="my-records-paging-top"
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <ConfirmDialogBox
+                                                    locale={confirmationLocale}
+                                                    hideCancelButton
+                                                    onRef={this._setSuccessConfirmation}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                {isLoadingOrExporting && (
+                                                    <div className="is-centered">
+                                                        <InlineLoader
+                                                            message={
+                                                                this.props.loadingPublicationsList
+                                                                    ? txt.loadingPagingMessage
+                                                                    : txt.exportPublicationsLoadingMessage
+                                                            }
+                                                        />
+                                                    </div>
+                                                )}
+                                                {!this.props.exportPublicationsLoading &&
+                                                    !this.props.loadingPublicationsList &&
+                                                    this.props.publicationsList &&
+                                                    this.props.publicationsList.length > 0 && (
+                                                        <PublicationsList
+                                                            publicationsList={this.props.publicationsList}
+                                                            {...actionProps}
+                                                            showAdminActions={isAdmin}
+                                                            {...this.props.publicationsListOtherProps}
+                                                        />
+                                                    )}
+                                            </Grid>
+                                            <Grid item xs={12}>
+                                                <PublicationsListPaging
+                                                    loading={isLoadingOrExporting}
+                                                    pagingData={pagingData}
+                                                    onPageChanged={this.pageChanged}
+                                                    disabled={isLoadingOrExporting || this.state.bulkExportSelected}
+                                                    pagingId="my-records-paging-bottom"
+                                                />
+                                            </Grid>
                                         </Grid>
-                                        <Grid item xs={12}>
-                                            <PublicationsListPaging
-                                                loading={isLoadingOrExporting}
-                                                pagingData={pagingData}
-                                                onPageChanged={this.pageChanged}
-                                                disabled={isLoadingOrExporting || this.state.bulkExportSelected}
-                                                pagingId="my-records-paging-bottom"
-                                            />
-                                        </Grid>
-                                    </Grid>
-                                </StandardCard>
+                                    </StandardCard>
+                                </Grid>
+                            )
+                    }
+                    {
+                        // show available filters or selected filters (even if there are no results)
+                        ((this.props.publicationsListFacets &&
+                            Object.keys(this.props.publicationsListFacets).length > 0) ||
+                            (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters)) ||
+                            (this.state.activeFacets &&
+                                this.state.activeFacets.ranges &&
+                                Object.keys(this.state.activeFacets.ranges).length > 0) ||
+                            (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
+                            <Grid item xs={12} md={3}>
+                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                    <FacetsFilter
+                                        facetsData={this.props.publicationsListFacets}
+                                        onFacetsChanged={this.facetsChanged}
+                                        activeFacets={this.state.activeFacets}
+                                        initialFacets={this.props.initialFacets}
+                                        disabled={isLoadingOrExporting}
+                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                        isMyDataSetPage={this.props.location.pathname === pathConfig.dataset.mine}
+                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                        showOpenAccessFilter
+                                    />
+                                </StandardRighthandCard>
                             </Grid>
-                        )}
-                    {// show available filters or selected filters (even if there are no results)
-                    ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
-                        (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters)) ||
-                        (this.state.activeFacets &&
-                            this.state.activeFacets.ranges &&
-                            Object.keys(this.state.activeFacets.ranges).length > 0) ||
-                        (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
-                        <Grid item xs={12} md={3}>
-                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                <FacetsFilter
-                                    facetsData={this.props.publicationsListFacets}
-                                    onFacetsChanged={this.facetsChanged}
-                                    activeFacets={this.state.activeFacets}
-                                    initialFacets={this.props.initialFacets}
-                                    disabled={isLoadingOrExporting}
-                                    excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                    isMyDataSetPage={this.props.location.pathname === pathConfig.dataset.mine}
-                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                    showOpenAccessFilter
-                                />
-                            </StandardRighthandCard>
-                        </Grid>
-                    )}
+                        )
+                    }
                 </Grid>
             </StandardPage>
         );

@@ -2,7 +2,7 @@ import React from 'react';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useFormContext } from 'react-hook-form';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import UserFieldData from './UserFieldData';

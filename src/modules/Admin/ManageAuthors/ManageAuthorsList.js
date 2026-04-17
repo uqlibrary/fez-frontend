@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { useSelector } from 'react-redux';
 
-// eslint-disable-next-line camelcase
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
 import { debounce } from 'throttle-debounce';
@@ -73,7 +72,12 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
 
     const { authorListLoading, authorListItemDeleting } = useSelector(state => state?.get('manageAuthorsReducer'));
 
-    const { data: list, pagination, request, onPaginationChange } = useServerData({
+    const {
+        data: list,
+        pagination,
+        request,
+        onPaginationChange,
+    } = useServerData({
         actions,
         pageSize: tablePageSizeDefault,
     });
@@ -127,9 +131,11 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 Cell: ({ cell, row }) => (
                     <ColumnData
                         data={cell.getValue() || row.original.aut_student_username}
-                        columnDataId={`${(row._valuesCache.aut_org_username && 'aut-org-username') ||
+                        columnDataId={`${
+                            (row._valuesCache.aut_org_username && 'aut-org-username') ||
                             (row.original.aut_student_username && 'aut-student-username') ||
-                            'aut-org-username'}-${row.id}`}
+                            'aut-org-username'
+                        }-${row.id}`}
                     />
                 ),
                 size: 300,
@@ -268,6 +274,11 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         table.setCreatingRow(true);
     };
 
+    React.useEffect(() => {
+        onSearchTermChange('');
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const table = useMaterialReactTable({
         columns,
         data,
@@ -287,6 +298,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         manualPagination: true,
         rowCount: pagination.resultCount,
         autoResetPageIndex: false,
+        enableKeyboardShortcuts: false,
         displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
         initialState: {
             expanded: true,
@@ -382,29 +394,32 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     title=""
                     placeholder={searchPlaceholder}
                     variant="standard"
-                    inputProps={{
-                        inputMode: 'search',
-                        'data-testid': 'authors-search-input',
-                        'aria-label': searchAriaLabel,
-                    }}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="start">
-                                <tableIcons.Search />
-                            </InputAdornment>
-                        ),
-                        endAdornment: (
-                            <InputAdornment position="end">
-                                <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
-                                    <tableIcons.Clear />
-                                </IconButton>
-                            </InputAdornment>
-                        ),
-                    }}
                     sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
                     disabled={table.getState().creatingRow !== null}
+                    slotProps={{
+                        input: {
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <tableIcons.Search />
+                                </InputAdornment>
+                            ),
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton disabled={!!!searchTerm} onClick={() => handleSearch()}>
+                                        <tableIcons.Clear />
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        },
+
+                        htmlInput: {
+                            inputMode: 'search',
+                            'data-testid': 'authors-search-input',
+                            'aria-label': searchAriaLabel,
+                        },
+                    }}
                 />
                 <Button
                     id={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)

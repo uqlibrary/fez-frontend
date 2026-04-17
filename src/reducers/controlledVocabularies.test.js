@@ -113,7 +113,7 @@ describe('Controlled vocabularies reducer', () => {
         ];
 
         const expectedState = {
-            '123456': {
+            123456: {
                 itemsKeyValueList: [
                     {
                         key: 453582,
@@ -167,7 +167,7 @@ describe('Controlled vocabularies reducer', () => {
                     },
                 ],
             },
-            '987655': {
+            987655: {
                 itemsList: ['One', 'Two'],
                 itemsLoading: false,
                 itemsLoadingError: false,

@@ -4,7 +4,7 @@ import { default as globalLocale } from 'locale/global';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { pathConfig } from 'config/pathConfig';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 // fez_journal returns era data
 export const getERAYears = matchedJournal => {

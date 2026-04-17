@@ -3,7 +3,7 @@ import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -15,7 +15,7 @@ import { requestMJLIngest } from 'actions';
 import { validation, pathConfig } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const MasterJournalListIngest = () => {
     const [apiError, setApiError] = React.useState('');

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 
 export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser }) => {

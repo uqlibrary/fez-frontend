@@ -23,7 +23,7 @@ export const JournalArticleCitation = ({ publication, hideDoiLink, citationStyle
 
     // eSpace citation view for Journal Article
     return (
-        <div className="citationContent citationJournalArticle">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationJournalArticle">
             {/* {Author}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -50,7 +50,7 @@ export const JournalArticleCitation = ({ publication, hideDoiLink, citationStyle
             <span>. </span>
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 JournalArticleCitation.propTypes = {

@@ -12,7 +12,7 @@ import Box from '@mui/material/Box';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import { communityCollectionsConfig } from 'config';
 const moment = require('moment');
@@ -20,16 +20,12 @@ const moment = require('moment');
 const returnDateField = (date, conf, classes) => {
     return (
         <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
-            <Typography variant="body2">
-                {moment(date)
-                    .local()
-                    .format(conf.dateFormat)}
-            </Typography>
+            <Typography variant="body2">{moment(date).local().format(conf.dateFormat)}</Typography>
         </Grid>
     );
 };
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();
@@ -89,9 +85,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                                 <Typography variant="caption" sx={{ fontStyle: 'italic' }}>
                                     {communityCollectionsConfig.formatCreationDate(
-                                        moment(row.rek_created_date)
-                                            .local()
-                                            .format(conf.dateFormat),
+                                        moment(row.rek_created_date).local().format(conf.dateFormat),
                                     )}
                                     <Box sx={{ display: { xs: 'inline', sm: 'none' } }} component="span">
                                         <br />
@@ -104,9 +98,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                         {' / '}
                                     </Typography>
                                     {communityCollectionsConfig.formatUpdatedDate(
-                                        moment(row.rek_updated_date)
-                                            .local()
-                                            .format(conf.dateFormat),
+                                        moment(row.rek_updated_date).local().format(conf.dateFormat),
                                     )}
                                 </Typography>
                             </Box>

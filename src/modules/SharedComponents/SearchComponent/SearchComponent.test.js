@@ -28,8 +28,7 @@ describe('mapStateToProps', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
-                search:
-                    '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=IsMemberOf',
+                search: '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=IsMemberOf',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual({
@@ -46,8 +45,7 @@ describe('mapStateToProps', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
-                search:
-                    '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
+                search: '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual({
@@ -64,8 +62,7 @@ describe('mapStateToProps', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
-                search:
-                    '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&rek_ismemberof%5D%5Blabel%5D=Malformed',
+                search: '?searchMode=advanced&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&rek_ismemberof%5D%5Blabel%5D=Malformed',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual({
@@ -81,8 +78,7 @@ describe('mapStateToProps', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
-                search:
-                    '?searchMode=advanced&rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=LabelOnly',
+                search: '?searchMode=advanced&rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=LabelOnly',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual(expected);
@@ -91,8 +87,7 @@ describe('mapStateToProps', () => {
         const state = Immutable.Map({});
         const ownProps = {
             location: {
-                search:
-                    '?searchMode=advanced&rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
+                search: '?searchMode=advanced&rek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A12345&searchQueryParams%5Brek_ismemberof%5D%5Blabel%5D=',
             },
         };
         expect(mapStateToProps(state, ownProps)).toEqual(expected);

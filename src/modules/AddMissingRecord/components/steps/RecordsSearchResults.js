@@ -3,21 +3,21 @@ import React, { Suspense } from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 
-const PublicationsList = React.lazy(() =>
-    import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
+const PublicationsList = React.lazy(
+    () => import('modules/SharedComponents/PublicationsList/components/PublicationsList'),
 );
 /* istanbul ignore next */
-const PublicationListLoadingProgress = React.lazy(() =>
-    import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
+const PublicationListLoadingProgress = React.lazy(
+    () => import('modules/SharedComponents/PublicationsList/components/LoadingProgress/PublicationListLoadingProgress'),
 );
 
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { setClaimPublication, setRedirectPath } from '../../../../actions';
 

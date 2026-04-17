@@ -1,7 +1,8 @@
 import React from 'react';
-import { APP_URL } from 'config/general';
+import { APP_URL, ESPACE_TEAM_CONTACT_US_URL } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { RESOLVER_URL_PREFIX } from 'config/general';
+import { Link } from 'react-router';
 
 /*
 
@@ -27,14 +28,14 @@ export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         appTitle: (
-            <a
-                href={`${pathConfig.index}`}
+            <Link
+                to={pathConfig.index}
                 className="appTitle"
                 title="Click to return to the eSpace home page"
                 style={{ color: '#FFFFFF' }}
             >
                 UQ eSpace {process.env.TITLE_SUFFIX || ''}
-            </a>
+            </Link>
         ),
         logo: {
             // image: 'https://static.uq.net.au/v2/logos/corporate/uq-logo-white.svg',
@@ -112,7 +113,14 @@ export default {
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
-            message: 'Please contact the UQ eSpace administrator to resolve this.',
+            message: (
+                <>
+                    Please{' '}
+                    <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                        contact the UQ eSpace team.
+                    </a>
+                </>
+            ),
             type: 'info_outline',
             alertId: 'not-registered-author',
         },

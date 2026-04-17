@@ -5,7 +5,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Tooltip from '@mui/material/Tooltip';
 
 import Search from '@mui/icons-material/Search';
@@ -120,7 +120,7 @@ export const SimpleSearchComponent = ({
                                     item
                                     xs={'auto'}
                                     sx={{
-                                        '&.MuiGrid-item': {
+                                        '&.MuiGridLegacy-item': {
                                             padding: '4px',
                                         },
                                     }}
@@ -135,7 +135,7 @@ export const SimpleSearchComponent = ({
                                 item
                                 xs
                                 sx={{
-                                    '&.MuiGrid-item': {
+                                    '&.MuiGridLegacy-item': {
                                         padding: '4px',
                                     },
                                 }}
@@ -162,8 +162,12 @@ export const SimpleSearchComponent = ({
                                 <Tooltip
                                     title={txt.searchBoxPlaceholder}
                                     placement="bottom-end"
-                                    TransitionComponent={Fade}
-                                    TransitionProps={{ timeout: 300 }}
+                                    slots={{
+                                        transition: Fade,
+                                    }}
+                                    slotProps={{
+                                        transition: { timeout: 300 },
+                                    }}
                                 >
                                     <IconButton
                                         onClick={_handleToggleMobile}

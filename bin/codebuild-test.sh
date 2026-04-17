@@ -6,12 +6,13 @@ export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"
 export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%B")
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
-export PW_CC_REPORT_FILENAME="coverage-final-${PIPE_NUM}.json"
+export PWTEST_SHARD_WEIGHTS=36:51:13 # ENV VAR name expected by PW, please don't rename it
+export PW_SHARD_COUNT=3
 
 # Run CC only on these branches
 # NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
 CODE_COVERAGE_REQUIRED=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-react-18" || $CI_BRANCH == "feature-uqclien-1" || $CI_BRANCH == "feature-marcelopm-1" || $CI_BRANCH == *"coverage"*) ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-uqlsibba-1" || $CI_BRANCH == "feature-uqclien-1" || $CI_BRANCH == "feature-marcelopm-1" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
 fi
 
@@ -42,6 +43,7 @@ fi
 printf "(Build of branch \"$CI_BRANCH\")\n"
 
 function check_code_style() {
+    printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
     FILES=$(npm run codestyles:files -s)
     if [[ "$?" == 0 ]]; then
         printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
@@ -58,11 +60,19 @@ function check_code_style() {
 }
 
 function fix_coverage_report_paths() {
+    if [[ ! -f "$1" ]]; then
+        return 0
+    fi
+
     sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "$1"
 }
 
 function install_pw_deps() {
     printf "\n--- \e[INSTALLING PW DEPS [STARTING AT $(date)] 1\e[0m ---\n"
+    sed -i 's|http://archive.ubuntu.com/ubuntu|http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu|g' /etc/apt/sources.list
+    sed -i 's|http://security.ubuntu.com/ubuntu|http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu|g' /etc/apt/sources.list
+    apt-get clean
+    apt-get update
     npx playwright install chromium-headless-shell
     npx playwright install-deps chromium-headless-shell
     printf "\n--- \e[ENDED INSTALLING PW DEPS AT $(date)] 1\e[0m ---\n"
@@ -70,19 +80,21 @@ function install_pw_deps() {
 
 function run_pw_test_shard() {
     set -e
-
+    npm run start:mock &
     install_pw_deps
+    export PW_SHARD_INDEX="$1"
 
-    local SHARD_INDEX="$1"
-    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #$SHARD_INDEX [STARTING AT $(date)] 2\e[0m ---\n"
+    printf "\n--- \e[1mRUNNING E2E TESTS GROUP #${PW_SHARD_INDEX} [STARTING AT $(date)] 2\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        npm run test:e2e:cc -- -- --shard="$SHARD_INDEX/2"
-        fix_coverage_report_paths "coverage/playwright/${PW_CC_REPORT_FILENAME}"
+        npm run test:e2e:cc -- -- --shard="${PW_SHARD_INDEX}/${PW_SHARD_COUNT}"
+        fix_coverage_report_paths coverage/playwright/coverage-final.json
     else
-        npm run test:e2e -- --shard="$SHARD_INDEX/2"
+        npm run test:e2e -- --shard="${PW_SHARD_INDEX}/${PW_SHARD_COUNT}"
     fi
-    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #$SHARD_INDEX AT $(date)] \n"
+    printf "\n--- [ENDED RUNNING E2E TESTS GROUP #${PW_SHARD_INDEX} AT $(date)] \n"
 }
+
+check_code_style
 
 case "$PIPE_NUM" in
 "1")
@@ -92,21 +104,25 @@ case "$PIPE_NUM" in
     run_pw_test_shard "$PIPE_NUM"
 ;;
 "3")
-    export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
+    set -e
+    printf "\n\n--- INSTALL JEST ---\n"
+    npm install -g jest
+    printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
-        printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-        check_code_style
-        set -e
-        printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
+        export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest-serial/jest-html-report.html
         # Jest tests which are required to run in serial
         npm run test:unit:ci:serial
         fix_coverage_report_paths coverage/jest-serial/coverage-final.json
-
         # All other jest tests
         export JEST_HTML_REPORTER_OUTPUT_PATH=coverage/jest/jest-html-report.html
         npm run test:unit:ci
         fix_coverage_report_paths coverage/jest/coverage-final.json
+    else
+        npm run test:unit:ci:serial:nocoverage
+        npm run test:unit:ci:nocoverage
     fi
+
+    run_pw_test_shard "$PIPE_NUM"
 ;;
 *)
 ;;

@@ -34,12 +34,7 @@ test.describe('Working paper admin edit', () => {
         const titleCard = bibliographicContent.locator('.AdminCard').nth(0);
         await expect(titleCard.locator('h4')).toHaveText(/Title/); // Using regex for "Title"
 
-        await expect(
-            titleCard
-                .locator('span')
-                .locator('span')
-                .nth(0),
-        ).toContainText('Formatted title');
+        await expect(titleCard.locator('span').locator('span').nth(0)).toContainText('Formatted title');
 
         expect(await readCKEditor(page, 'rek-title')).toContain(record.rek_title);
 

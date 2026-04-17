@@ -22,7 +22,7 @@ exports[`RichEditor should render alternative error from react-hook-form 1`] = `
   >
     <span>
       <p
-        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12zg3fi-MuiTypography-root"
       >
         This is title with error
         <span>
@@ -30,14 +30,14 @@ exports[`RichEditor should render alternative error from react-hook-form 1`] = `
         </span>
       </p>
       <span
-        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       >
         This is description with error
       </span>
     </span>
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       This field is required
@@ -69,7 +69,7 @@ exports[`RichEditor should render error as one child 1`] = `
     <span />
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       This field is required
@@ -78,7 +78,7 @@ exports[`RichEditor should render error as one child 1`] = `
       </span>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       18
@@ -100,7 +100,7 @@ exports[`RichEditor should render error as react children 1`] = `
     <span />
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       <span>
@@ -111,7 +111,7 @@ exports[`RichEditor should render error as react children 1`] = `
       </span>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       18
@@ -132,7 +132,7 @@ exports[`RichEditor should render error from react-hook-form 1`] = `
   >
     <span>
       <p
-        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12zg3fi-MuiTypography-root"
       >
         This is title with error
         <span>
@@ -140,14 +140,14 @@ exports[`RichEditor should render error from react-hook-form 1`] = `
         </span>
       </p>
       <span
-        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       >
         This is description with error
       </span>
     </span>
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       This field is required
@@ -166,7 +166,7 @@ exports[`RichEditor should render error showing input length 1`] = `
     <span />
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       This field is required
@@ -175,7 +175,7 @@ exports[`RichEditor should render error showing input length 1`] = `
       </span>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
       style="display: inline-block;"
     >
       18
@@ -197,7 +197,7 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
     <span />
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       This field is required
@@ -206,7 +206,7 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
       </span>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
       style="display: inline-block;"
     >
       0
@@ -227,12 +227,12 @@ exports[`RichEditor should render given title and description 1`] = `
   >
     <span>
       <p
-        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
       >
         This is test title
       </p>
       <span
-        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
       >
         This is test description
       </span>
@@ -251,7 +251,7 @@ exports[`RichEditor should render given title and description with error 1`] = `
   >
     <span>
       <p
-        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
       >
         This is title with error
         <span>
@@ -259,14 +259,14 @@ exports[`RichEditor should render given title and description with error 1`] = `
         </span>
       </p>
       <span
-        class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
       >
         This is description with error
       </span>
     </span>
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
       style="display: inline-block;"
     >
       This field is required
@@ -298,7 +298,7 @@ exports[`RichEditor should render maxValue with missing instructions 1`] = `
     <span />
     <div />
     <span
-      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
       style="display: inline-block;"
     >
       0

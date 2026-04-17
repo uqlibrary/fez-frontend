@@ -1,12 +1,11 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import { styled } from '@mui/material/styles';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router';
 
 import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Badge from '@mui/material/Badge';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
@@ -25,8 +24,8 @@ import globalLocale from 'locale/global';
 import * as actions from 'actions';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
-import { parseHtmlToJSX, doesListContainItem } from 'helpers/general';
-import { composeAuthorAffiliationProblems } from 'helpers/authorAffiliations';
+import { parseHtmlToJSX, doesListContainItem, stripHtml } from 'helpers/general';
+import { composeAuthorAffiliationProblems, shouldHandleAuthorAffiliations } from 'helpers/authorAffiliations';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -34,7 +33,6 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { DetailedHistory } from './DetailedHistory';
-import { shouldHandleAuthorAffiliations } from 'modules/Admin/helpers';
 import AdditionalInformation from './AdditionalInformation';
 import AvailableVersions from './AvailableVersions';
 import Files from './Files';
@@ -136,7 +134,7 @@ export const ViewRecord = () => {
         let Component = null;
         const Problems =
             (recordToView &&
-                shouldHandleAuthorAffiliations(recordToView) &&
+                shouldHandleAuthorAffiliations(recordToView.rek_display_type, recordToView.rek_subtype) &&
                 composeAuthorAffiliationProblems(recordToView)) ||
             /* istanbul ignore next */ [];
         if (recordToView?.fez_internal_notes?.ain_detail) {
@@ -164,7 +162,6 @@ export const ViewRecord = () => {
                 );
         }
         return (
-            // eslint-disable-next-line jsx-a11y/click-events-have-key-events
             <Badge
                 color="error"
                 overlap="circular"
@@ -201,7 +198,7 @@ export const ViewRecord = () => {
                 fields.viewRecord.adminViewRecordDrawerFields,
                 navigate,
                 pid,
-                shouldHandleAuthorAffiliations(recordToView),
+                shouldHandleAuthorAffiliations(recordToView.rek_display_type, recordToView.rek_subtype),
                 composeAuthorAffiliationProblems(
                     recordToView,
                     locale.pages.viewRecord.adminRecordData.drawer.nameIfAuthorUnavailable,
@@ -241,7 +238,7 @@ export const ViewRecord = () => {
                     />
                 )}
                 <StyledGridWithTopMargin container>
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <PublicationCitation
                             publication={recordToView}
                             hideTitle
@@ -250,11 +247,13 @@ export const ViewRecord = () => {
                             isPublicationDeleted={isDeleted}
                             citationStyle={'header'}
                             hideCitationText={hideCitationText}
+                            showAltmetricWidget
+                            showCopyTextButton
                         />
                     </Grid>
 
                     {!isDeleted && !!recordToView && (
-                        <Grid xs={12}>
+                        <Grid size={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
                                 {isAdmin && !isDeleted && (
                                     <Grid>
@@ -288,7 +287,7 @@ export const ViewRecord = () => {
                                         </Tooltip>
                                     </Grid>
                                 )}
-                                <Grid xs sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Grid sx={{ display: 'flex', alignItems: 'center' }} size="grow">
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
                                         <Chip label={recordToView.rek_status_lookup} variant="outlined" />
                                     )}
@@ -306,18 +305,17 @@ export const ViewRecord = () => {
                     )}
                 </StyledGridWithTopMargin>
                 {isAdmin && (
-                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                    <Grid style={{ marginBottom: 24 }} size={12}>
                         <DetailedHistory record={recordToView} />
                     </Grid>
                 )}
                 {isDeleted && (
-                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                    <Grid style={{ marginBottom: 24 }} size={12}>
                         <Alert {...txt.deletedAlert} message={txt.deletedAlert.message(recordToView)} />
                     </Grid>
                 )}
-                {/* eslint-disable-next-line camelcase */}
                 {!!version && !!recordToView?.rek_version && (
-                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                    <Grid style={{ marginBottom: 24 }} size={12}>
                         <Alert
                             {...{
                                 ...txt.version.alert.version,
@@ -326,6 +324,18 @@ export const ViewRecord = () => {
                         />
                         <br />
                         <Alert {...txt.version.alert.warning} />
+                    </Grid>
+                )}
+                {/* eslint-disable-next-line camelcase */}
+                {!!recordToView.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
+                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                        <Alert
+                            allowDismiss
+                            type={'info'}
+                            message={stripHtml(
+                                recordToView.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                            )}
+                        />
                     </Grid>
                 )}
                 <Grid container spacing={3}>

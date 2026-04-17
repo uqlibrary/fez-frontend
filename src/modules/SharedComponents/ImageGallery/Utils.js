@@ -90,6 +90,6 @@ export const getUrl = (pid, fileName, checksum = '') => {
             ? /* istanbul ignore next*/ `${process.env.GALLERY_IMAGE_PATH_PREPEND}${fullUrl.substr(
                   fullUrl.indexOf(fileName),
               )}`
-            : fullUrl ?? '';
+            : (fullUrl ?? '');
     return url;
 };

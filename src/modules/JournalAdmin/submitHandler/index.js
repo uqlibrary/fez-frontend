@@ -4,6 +4,7 @@ export const onSubmit = (values, dispatch, { setServerError }) => {
     const requestObject = {
         adminSection: { ...values.adminSection },
         bibliographicSection: { ...values.bibliographicSection },
+        readAndPublishSection: { ...values.readAndPublishSection },
         jnl_jid: values.journal.jnl_jid,
         journal: { ...values.journal },
     };

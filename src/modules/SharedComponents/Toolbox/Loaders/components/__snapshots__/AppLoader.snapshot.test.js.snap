@@ -3,22 +3,22 @@
 exports[`Component AppLoader should render as expected 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-asygwg-MuiGrid-root"
+    class="MuiGridLegacy-root MuiGridLegacy-container css-1tn8p30-MuiGridLegacy-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
     >
       <span
-        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jvygfr-MuiCircularProgress-root"
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jb97hd-MuiCircularProgress-root"
         role="progressbar"
         style="width: 80px; height: 80px;"
       >
         <svg
-          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+          class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
           viewBox="22 22 44 44"
         >
           <circle
-            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
             cx="44"
             cy="44"
             fill="none"
@@ -29,7 +29,7 @@ exports[`Component AppLoader should render as expected 1`] = `
       </span>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
     >
       <div
         alt="Fez logo"
@@ -37,10 +37,10 @@ exports[`Component AppLoader should render as expected 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item css-m47mkr-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
     >
       <h6
-        class="MuiTypography-root MuiTypography-h6 css-1cgw6ig-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 css-12tzrfb-MuiTypography-root"
       >
         Fez frontend
       </h6>

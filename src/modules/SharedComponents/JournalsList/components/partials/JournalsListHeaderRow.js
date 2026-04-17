@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
@@ -19,9 +19,9 @@ const StyledTableCell = styled(TableCell, {
 })(({ theme, isSelectable }) => ({
     borderBottomWidth: '2px',
     ...(isSelectable
-        ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
-        : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
-          /* istanbul ignore next */ {}),
+        ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {})
+        : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+          /* istanbul ignore next */ {})),
     [theme.breakpoints.down('sm')]: {
         verticalAlign: 'top',
         paddingLeft: 0,
@@ -30,27 +30,27 @@ const StyledTableCell = styled(TableCell, {
     },
     [theme.breakpoints.up('sm')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('md')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('lg')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+              /* istanbul ignore next */ {})),
     },
     [theme.breakpoints.up('xl')]: {
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
-            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
-              /* istanbul ignore next */ {}),
+            ? (JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {})
+            : /* istanbul ignore next */ (JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+              /* istanbul ignore next */ {})),
     },
 }));
 const classes = {
@@ -115,7 +115,12 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                                         ...classes.inputLabel,
                                     }}
                                 >
-                                    <Box display="flex" alignItems="flex-end">
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            alignItems: 'flex-end',
+                                        }}
+                                    >
                                         <Typography variant="body1" sx={{ ...classes.inputLabel }}>
                                             {header.label}
                                             {!!header.subLabel && (

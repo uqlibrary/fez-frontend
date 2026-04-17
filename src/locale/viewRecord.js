@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 export default {
     viewRecord: {
         fireFoxAlert: {
@@ -319,6 +318,7 @@ export default {
                 fez_record_search_key_type_of_data: 'Type of data',
                 fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
+                fez_record_search_key_related_service: 'Related service(s)',
                 fez_record_search_key_related_publications: 'Additional related publication(s)',
                 fez_record_search_key_related_datasets: 'Additional related dataset(s)',
             },
@@ -1482,6 +1482,10 @@ export default {
                 {
                     field: 'fez_record_search_key_related_datasets',
                     order: 34,
+                },
+                {
+                    field: 'fez_record_search_key_related_service',
+                    order: 35,
                 },
             ],
             'Department Technical Report': [
@@ -3608,8 +3612,7 @@ export default {
         culturalNoticeAI: {
             title: 'Attribution Incomplete',
             imagePath: 'https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png',
-            text:
-                'Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution',
+            text: 'Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution',
         },
     },
 };

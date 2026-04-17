@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import VocabDataRow from './VocabDataRow';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 export const VocabTable = ({ records, labels }) => {
     return (

@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
-import { FormValuesContext } from 'context';
+import { useFormContext } from 'react-hook-form';
 
 /**
  * Remove invalid file names
@@ -32,7 +32,8 @@ export const FileUploadDropzone = ({
     fileUploadLimit = 10,
     disabled,
 }) => {
-    const formValues = useContext(FormValuesContext);
+    const form = useFormContext();
+    const formValues = form?.getValues('filesSection.fez_datastream_info');
 
     /* istanbul ignore next */
     const onReadFileError = (file, errors, resolve) => () => {
@@ -92,7 +93,6 @@ export const FileUploadDropzone = ({
                     item =>
                         item.dsi_dsid.slice(0, item.dsi_dsid.lastIndexOf('.')).toLowerCase() ===
                             fileNameWithoutExt.toLowerCase() ||
-                        // eslint-disable-next-line camelcase
                         (!!item?.dsi_dsid_new &&
                             item.dsi_dsid_new.slice(0, item.dsi_dsid_new.lastIndexOf('.')).toLowerCase() ===
                                 fileNameWithoutExt.toLowerCase()),
@@ -179,26 +179,14 @@ export const FileUploadDropzone = ({
             file =>
                 file &&
                 file.name &&
-                mimeTypeWhitelist.hasOwnProperty(
-                    file.name
-                        .split('.')
-                        .pop()
-                        .toString()
-                        .toLowerCase(),
-                ),
+                mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop().toString().toLowerCase()),
         );
         const invalidMimeTypeFiles = files
             .filter(
                 file =>
                     file &&
                     file.name &&
-                    !mimeTypeWhitelist.hasOwnProperty(
-                        file.name
-                            .split('.')
-                            .pop()
-                            .toString()
-                            .toLowerCase(),
-                    ),
+                    !mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop().toString().toLowerCase()),
             )
             .map(file => file.name);
         return { validMimeTypeFiles: validMimeTypeFiles, invalidMimeTypeFiles: invalidMimeTypeFiles };
@@ -226,8 +214,7 @@ export const FileUploadDropzone = ({
      * @private
      */
     const _onDrop = (incomingFiles, rejectedFiles) => {
-        // eslint-disable-next-line camelcase
-        const existingFiles = formValues?.formValues?.fez_datastream_info ?? [];
+        const existingFiles = formValues || [];
         const notFiles = [];
         // Remove folders from accepted files (async)
         removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
@@ -251,7 +238,11 @@ export const FileUploadDropzone = ({
             );
 
             onDrop(
-                limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })),
+                limitedFiles
+                    .map(file => ({ fileData: file, name: file.name, size: file.size }))
+                    .sort((a, b) => {
+                        return a.name < b.name ? -1 : 1;
+                    }),
                 {
                     tooBigFiles: rejectedFiles.map(file => file.file.name),
                     notFiles: notFiles,

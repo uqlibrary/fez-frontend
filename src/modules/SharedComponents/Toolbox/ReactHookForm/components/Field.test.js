@@ -36,7 +36,7 @@ describe('Field component', () => {
         // verify that the Controller is called with the correct props
         expect(Controller).toHaveBeenCalledWith(
             expect.objectContaining({ name: 'testField', control: mockControl }),
-            expect.any(Object),
+            undefined,
         );
 
         // verify that the component renders correctly

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import locale from 'locale/pages';

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Controller, useForm } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import CircularProgress from '@mui/material/CircularProgress';

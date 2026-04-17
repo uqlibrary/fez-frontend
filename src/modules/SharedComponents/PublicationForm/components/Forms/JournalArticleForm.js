@@ -11,7 +11,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
 import { locale } from 'locale';
 import { IssnListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isAuthorSelected }) => {

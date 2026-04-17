@@ -100,6 +100,9 @@ export default {
                 primaryText: 'Journal search',
             },
         },
+        myOpenAccess: {
+            primaryText: 'My open access',
+        },
     },
     footer: {
         cricos: {

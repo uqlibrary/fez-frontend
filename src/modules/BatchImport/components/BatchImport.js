@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useWatch } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
@@ -24,7 +24,7 @@ import { validation, publicationTypes } from 'config';
 import { pathConfig } from 'config/pathConfig';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from '../../../hooks';
 

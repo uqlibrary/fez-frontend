@@ -12,7 +12,7 @@ import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { dateRange } from 'config/validation';
 

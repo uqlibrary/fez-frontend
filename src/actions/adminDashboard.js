@@ -155,10 +155,10 @@ export function loadAdminDashboardSystemAlerts() {
  * Handles admin operations on system alerts (assign, resolve)
  * @returns {function(*)}
  */
-export function adminDashboardSystemAlerts(request) {
+export function adminDashboardSystemAlerts(id, request) {
     return dispatch => {
         dispatch({ type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATING });
-        return put(ADMIN_DASHBOARD_SYSTEM_ALERTS_API(), request)
+        return put(ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id }), request)
             .then(response => {
                 dispatch({
                     type: actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS,

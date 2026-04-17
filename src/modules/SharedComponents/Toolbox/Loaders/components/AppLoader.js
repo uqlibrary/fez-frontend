@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 
 const StyledGrid = styled(Grid)(({ theme }) => ({

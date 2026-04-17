@@ -115,6 +115,9 @@ module.exports = {
             devServer: true, // required for webpack-dev-server to display TS errors
         }),
         new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
+        new webpack.ProvidePlugin({
             process: 'process/browser.js',
         }),
         new HtmlWebpackPlugin({
@@ -140,11 +143,6 @@ module.exports = {
                     outputStyle: 'expanded',
                     sourceMap: true,
                 },
-                eslint: {
-                    configFile: '.eslintrc',
-                    failOnWarning: false,
-                    failOnError: true,
-                },
                 postcss: {},
                 context: join(__dirname),
             },
@@ -154,7 +152,6 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('development'),
             'process.env.USE_MOCK': JSON.stringify(useMock),
             'process.env.APP_URL': JSON.stringify(`http://${url}:${port}/`),
-            'process.env.FULL_PATH': JSON.stringify(process.env.FULL_PATH),
             'process.env.ORCID_URL': JSON.stringify(orcidUrl),
             'process.env.ORCID_CLIENT_ID': JSON.stringify(orcidClientId),
             'process.env.TITLE_SUFFIX': JSON.stringify('LOCAL'),
@@ -165,8 +162,7 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
-        process.env.NODE_ENV === 'cc' &&
-            new ESLintPlugin({ exclude: ['node_modules', 'custom_modules', 'mock', 'mocks'] }),
+        process.env.NODE_ENV === 'cc' && new ESLintPlugin({ quiet: true }),
         new Dotenv(),
     ].filter(Boolean),
     resolve: {

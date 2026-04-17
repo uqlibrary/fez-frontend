@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuDrawer } from './MenuDrawer';
-import { render, WithRouter, fireEvent } from 'test-utils';
+import { render, WithMemoryRouter, fireEvent } from 'test-utils';
 
 const defaultMenuItems = [
     {
@@ -25,8 +25,8 @@ const defaultLocale = {
 };
 
 const mockUseNavigate = jest.fn();
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
 }));
 
@@ -44,9 +44,9 @@ function setup(testProps = {}, renderMethod = render) {
         docked: testProps.docked || false,
     };
     return renderMethod(
-        <WithRouter>
+        <WithMemoryRouter>
             <MenuDrawer {...props} />
-        </WithRouter>,
+        </WithMemoryRouter>,
     );
 }
 

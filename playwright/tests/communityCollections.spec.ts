@@ -130,31 +130,19 @@ test.describe('Communities and Collections - Admin', () => {
     test('Renders result rows correctly at smaller screen resolutions', async ({ page }) => {
         await page.setViewportSize({ width: 320, height: 480 });
         await expect(
-            page
-                .locator('[data-testid="row-UQ:12096"] > div')
-                .locator(':scope > *')
-                .locator(':visible:scope'),
+            page.locator('[data-testid="row-UQ:12096"] > div').locator(':scope > *').locator(':visible:scope'),
         ).toHaveCount(2);
         await page.setViewportSize({ width: 640, height: 480 });
         await expect(
-            page
-                .locator('[data-testid="row-UQ:12096"] > div')
-                .locator(':scope > *')
-                .locator(':visible:scope'),
+            page.locator('[data-testid="row-UQ:12096"] > div').locator(':scope > *').locator(':visible:scope'),
         ).toHaveCount(2);
         await page.setViewportSize({ width: 800, height: 600 });
         await expect(
-            page
-                .locator('[data-testid="row-UQ:12096"] > div')
-                .locator(':scope > *')
-                .locator(':visible:scope'),
+            page.locator('[data-testid="row-UQ:12096"] > div').locator(':scope > *').locator(':visible:scope'),
         ).toHaveCount(2);
         await page.setViewportSize({ width: 1024, height: 768 });
         await expect(
-            page
-                .locator('[data-testid="row-UQ:12096"] > div')
-                .locator(':scope > *')
-                .locator(':visible:scope'),
+            page.locator('[data-testid="row-UQ:12096"] > div').locator(':scope > *').locator(':visible:scope'),
         ).toHaveCount(4);
     });
 });

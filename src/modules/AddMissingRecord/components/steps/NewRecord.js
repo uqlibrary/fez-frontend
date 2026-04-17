@@ -4,12 +4,12 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { PublicationForm } from 'modules/SharedComponents/PublicationForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 // forms & custom components
 import { pathConfig } from 'config';
 import locale from 'locale/pages';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearNewRecord } from '../../../../actions';
 import { createConfirmDialogBoxRefAssigner } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
@@ -37,7 +37,6 @@ export const NewRecord = () => {
     };
 
     // wait for author to load before rendering
-    // eslint-disable-next-line camelcase
     if (!author?.aut_id) {
         return <span />;
     }

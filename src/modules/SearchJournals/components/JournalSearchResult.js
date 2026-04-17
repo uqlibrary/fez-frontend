@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -17,7 +17,7 @@ import locale from 'locale/components';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../hooks';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
@@ -39,7 +39,7 @@ export const getSearchResultSortingParams = (journalSearchQueryParams, journalsL
     };
     const pageSize = journalSearchQueryParams?.pageSize
         ? Number(journalSearchQueryParams.pageSize)
-        : journalsListPerPage ?? sortingDefaults?.pageSize ?? 20;
+        : (journalsListPerPage ?? sortingDefaults?.pageSize ?? 20);
     return { sortBy, sortDirection, pageSize };
 };
 
@@ -105,12 +105,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
 
     const { sortBy, sortDirection, pageSize } = journalsListLoading
         ? { ...sortingDefaults }
-        : getSearchResultSortingParams(
-              journalSearchQueryParams,
-              // eslint-disable-next-line camelcase
-              journalsList?.per_page,
-              sortingDefaults,
-          );
+        : getSearchResultSortingParams(journalSearchQueryParams, journalsList?.per_page, sortingDefaults);
 
     return (
         <Grid container spacing={2} id={`${id}-container`} data-testid={`${id}-container`}>

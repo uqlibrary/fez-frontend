@@ -2,6 +2,7 @@ import * as routes from './routes';
 import * as pages from 'modules/App/components/pages';
 import { accounts, authorDetails, currentAuthor } from 'mock/data/account';
 import { getDatastreamVersionQueryString, pathConfig } from './pathConfig';
+import { APP_URL } from './general';
 
 describe('Routes getMenuConfig method', () => {
     it('should return a list of menus for a non user', () => {
@@ -159,7 +160,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(29);
+        expect(testRoutes.length).toEqual(31);
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
@@ -168,7 +169,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqmasquerade,
             authorDetails: authorDetails.uqmasquerade,
         });
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(32);
     });
 
     it('should return a list of routes for user who has admin (uqstaff)', () => {
@@ -177,7 +178,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(53);
+        expect(testRoutes.length).toEqual(55);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -198,7 +199,7 @@ describe('Routes getRoutesConfig method', () => {
             isHdrStudent: true,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(29);
+        expect(testRoutes.length).toEqual(31);
     });
 });
 
@@ -207,7 +208,7 @@ describe('Routes other methods', () => {
         const pid = 'UQ:12345';
         const filename = 'image.jpg';
         const url = pathConfig.file.url(pid, filename);
-        expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}`);
+        expect(url).toEqual(`${APP_URL}view/${pid}/${filename}`);
     });
 
     it('file.url should with checksum', () => {
@@ -216,6 +217,6 @@ describe('Routes other methods', () => {
         const checksum = 'a5a5d5qwe5dq5f5qefqe';
         const versionHash = getDatastreamVersionQueryString(filename, checksum);
         const url = pathConfig.file.url(pid, filename, checksum);
-        expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}?dsi_version=${versionHash}`);
+        expect(url).toEqual(`${APP_URL}view/${pid}/${filename}?dsi_version=${versionHash}`);
     });
 });

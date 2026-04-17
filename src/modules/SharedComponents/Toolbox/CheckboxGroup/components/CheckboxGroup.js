@@ -74,12 +74,14 @@ const CheckboxGroup = props => {
                                             ? filteredProps.value[`${option.value}Text`]
                                             : ''
                                     }
-                                    inputProps={{
-                                        'data-analyticsid': `${props.checkboxGroupId}-${option.value}-option-text`,
-                                        'data-testid': `${props.checkboxGroupId}-${option.value}-option-text`,
-                                        id: `${props.checkboxGroupId}-${option.value}-option-text`,
-                                    }}
                                     onChange={e => handleChange(e.target.value, `${option.value}Text`, true)}
+                                    slotProps={{
+                                        htmlInput: {
+                                            'data-analyticsid': `${props.checkboxGroupId}-${option.value}-option-text`,
+                                            'data-testid': `${props.checkboxGroupId}-${option.value}-option-text`,
+                                            id: `${props.checkboxGroupId}-${option.value}-option-text`,
+                                        },
+                                    }}
                                 />
                             )}
                         </Box>

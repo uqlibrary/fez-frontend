@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled, useTheme } from '@mui/material/styles';
 
 import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import GetAppIcon from '@mui/icons-material/GetApp';
 

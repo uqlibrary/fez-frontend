@@ -3,69 +3,70 @@
 exports[`DataStreamSecuritySelector component should hide derivative datastreams 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
   />
   <div
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 css-mqdkjr-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-4 css-98kob1-MuiGrid-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
       >
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
           title="testA.txt"
         >
           testA.txt
         </a>
         <br />
         <span
-          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
         >
           Overridden
         </span>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
       >
         <div
-          class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
             Override datastream security policy
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
             >
                *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -75,7 +76,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
               aria-hidden="true"
               aria-invalid="false"
               aria-labelledby="dsi-security-policy-0-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="dsi-security-policy-0-input"
               data-testid="dsi-security-policy-0-input"
               id="dsi-security-policy-0-input"
@@ -86,7 +87,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -111,63 +112,63 @@ Compared values have no visual difference."
 exports[`DataStreamSecuritySelector component should render default view 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
   />
   <div
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 css-mqdkjr-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-4 css-98kob1-MuiGrid-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
       >
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
           title="test4.txt"
         >
           test4.txt
         </a>
         <br />
         <span
-          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
         >
           Overridden
         </span>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
       >
         <div
-          class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-c95u6h-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="dsi-security-policy-0-label"
           >
             Override datastream security policy
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
             >
                *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
               role="combobox"
@@ -179,7 +180,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
               aria-hidden="true"
               aria-invalid="false"
               aria-labelledby="dsi-security-policy-0-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="dsi-security-policy-0-input"
               data-testid="dsi-security-policy-0-input"
               id="dsi-security-policy-0-input"
@@ -190,7 +191,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -210,69 +211,70 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
 exports[`DataStreamSecuritySelector component should show non-derivative datastreams 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
   />
   <div
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 css-mqdkjr-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-4 css-98kob1-MuiGrid-root"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-10dv3g5-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
       >
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-g46iui-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
           title="test9.txt"
         >
           test9.txt
         </a>
         <br />
         <span
-          class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
         >
           Overridden
         </span>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
       >
         <div
-          class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
             Override datastream security policy
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
             >
                *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-16gkaxk-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
 }"
           >
             <div
-              aria-controls="<dynamic>"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
               role="combobox"
               tabindex="0"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -282,7 +284,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
               aria-hidden="true"
               aria-invalid="false"
               aria-labelledby="dsi-security-policy-0-label"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               data-analyticsid="dsi-security-policy-0-input"
               data-testid="dsi-security-policy-0-input"
               id="dsi-security-policy-0-input"
@@ -293,7 +295,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"

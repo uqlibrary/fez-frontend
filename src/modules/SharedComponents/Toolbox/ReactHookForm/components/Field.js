@@ -54,9 +54,18 @@ export const validateHandler = async (value, formValues, validators) => {
  * @return {Element}
  * @constructor
  */
-const Field = ({ name, control, rules, component: Component, validate, normalize, ...childProps }) => {
+const Field = ({
+    name,
+    control,
+    rules,
+    component: Component,
+    validate,
+    normalize,
+    controller: ControllerComponent = Controller,
+    ...childProps
+}) => {
     return (
-        <Controller
+        <ControllerComponent
             name={name}
             control={control}
             rules={{
@@ -84,6 +93,7 @@ Field.propTypes = {
     validate: PropTypes.array,
     component: PropTypes.elementType.isRequired,
     normalize: PropTypes.func,
+    controller: PropTypes.node,
 };
 
 export default Field;

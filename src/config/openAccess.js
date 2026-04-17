@@ -11,6 +11,8 @@ export const OPEN_ACCESS_ID_PMC = 453954;
 export const OPEN_ACCESS_ID_RDM = 454116;
 export const DATASET_OPEN_ACCESS_ID = 453619;
 export const DATASET_MEDIATED_ACCESS_ID = 453618;
+export const POTENTIALLY_OPEN_ACCESSIBLE_MAX_UNITS_PAST = 2;
+export const POTENTIALLY_OPEN_ACCESSIBLE_UNIT = 'year';
 
 export const openAccessIds = [
     OPEN_ACCESS_ID_DOI,
@@ -54,4 +56,9 @@ export const labels = {
     [OPEN_ACCESS_ID_RDM]: 'RDM open',
     [DATASET_OPEN_ACCESS_ID]: 'Open Access',
     [DATASET_MEDIATED_ACCESS_ID]: 'Mediated Access',
+};
+
+export const openAccessibilityStatus = {
+    unit: POTENTIALLY_OPEN_ACCESSIBLE_UNIT,
+    maxUnitsPast: POTENTIALLY_OPEN_ACCESSIBLE_MAX_UNITS_PAST,
 };

@@ -14,7 +14,7 @@ exports[`Audio Player Component  should render component 1`] = `
     </audio>
     <button
       aria-label="Click to play audio file test_t.mp3"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
       id="playButton"
       style="margin-top: -10px; margin-bottom: -10px;"
       tabindex="0"
@@ -22,7 +22,7 @@ exports[`Audio Player Component  should render component 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium play css-i4bv87-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium play css-1umw9bq-MuiSvgIcon-root"
         data-testid="PlayArrowIcon"
         focusable="false"
         viewBox="0 0 24 24"

@@ -19,8 +19,8 @@ jest.mock('actions', () => ({
 let mockUseLocation = {};
 const mockUseNavigate = jest.fn();
 let mockUseNavigationType = 'PUSH';
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useLocation: () => mockUseLocation,
     useNavigate: () => mockUseNavigate,
     useNavigationType: () => mockUseNavigationType,

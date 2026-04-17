@@ -1,5 +1,6 @@
 import React from 'react';
 import { Controller as Base } from 'react-hook-form';
+import { get } from 'lodash';
 
 /**
  * Decorate the original `field` object with additional attributes required to make
@@ -13,7 +14,7 @@ const getDecoratedField = (field, fieldState, formState) => {
     // expose state required only props to minimize memory consumption and unexpected props warnings
     field.state = {
         error: fieldState.error?.message,
-        defaultValue: formState?.defaultValues?.[field.name],
+        defaultValue: get(formState?.defaultValues, field.name),
     };
     // to avoid `ref` & forwardRef() errors
     field.ref = null;
@@ -38,16 +39,15 @@ const Controller = ({ render, ...props }) => {
     return (
         <Base
             {...props}
-            // required to avoid "A component is changing an uncontrolled input to be controlled" warnings
             /* eslint-disable-next-line react/prop-types */
             defaultValue={props.state?.defaultValue || ''}
-            render={({ field, fieldState, formState }) =>
-                render({
+            render={({ field, fieldState, formState }) => {
+                return render({
                     field: getDecoratedField(field, fieldState, formState),
                     fieldState,
                     formState,
-                })
-            }
+                });
+            }}
         />
     );
 };

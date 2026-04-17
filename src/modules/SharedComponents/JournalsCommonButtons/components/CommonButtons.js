@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import locale from 'locale/components';
 import { pathConfig } from 'config';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 
 const StyledGridButtonContainer = styled(Grid)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {

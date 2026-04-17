@@ -1,7 +1,6 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 export const JournalTemplate = ({ option }) => {

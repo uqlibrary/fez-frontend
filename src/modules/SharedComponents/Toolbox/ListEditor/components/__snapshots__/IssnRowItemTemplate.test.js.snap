@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssnRowItemTemplate renderer should render default view 1`] = `
+<DocumentFragment>
+  <span
+    class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+  >
+    0000-0000
+  </span>
+</DocumentFragment>
+`;

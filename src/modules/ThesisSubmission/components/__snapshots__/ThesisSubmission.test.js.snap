@@ -6,7 +6,8 @@ exports[`ThesisSubmission HDR submission form should display confirmation messag
 
 exports[`ThesisSubmission HDR submission form should display confirmation message and successful submission screen after proceeding with form submission 3`] = `
 File {
-  "path": "myTestImage.png",
+  "path": "./myTestImage.png",
+  "relativePath": "./myTestImage.png",
 }
 `;
 
@@ -16,6 +17,7 @@ exports[`ThesisSubmission SBS submission form should display confirmation messag
 
 exports[`ThesisSubmission SBS submission form should display confirmation message and successful submission screen after proceeding with form submission 3`] = `
 File {
-  "path": "myTestImage.png",
+  "path": "./myTestImage.png",
+  "relativePath": "./myTestImage.png",
 }
 `;

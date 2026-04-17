@@ -31,20 +31,6 @@ describe('datastream derivative helpers', () => {
         expect(actual).toEqual(true);
     });
 
-    it("getAdvisoryStatement should return record's value when present", () => {
-        const expected = 'test';
-        const actual = getAdvisoryStatement({
-            fez_record_search_key_advisory_statement: { rek_advisory_statement: expected },
-        });
-        expect(actual).toEqual(expected);
-    });
-
-    it("getAdvisoryStatement should return given default when record's value is not present", () => {
-        const expected = 'default';
-        const actual = getAdvisoryStatement(null, expected);
-        expect(actual).toEqual(expected);
-    });
-
     it("getSensitiveHandlingNote should sensitive handling note's text", () => {
         const option = SENSITIVE_HANDLING_NOTE_TYPE.find(item => item.text !== 'Other').text;
         const actual = getSensitiveHandlingNote({

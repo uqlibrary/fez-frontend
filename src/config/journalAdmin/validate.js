@@ -16,6 +16,7 @@ export default values => {
     // the admin system was originally built.
     !(data.adminSection || {}).jnl_title && (errors.adminSection.jnl_title = summary.jnl_title);
     !(data.adminSection || {}).jnl_publisher && (errors.adminSection.jnl_publisher = summary.jnl_publisher);
+    ((data.bibliographicSection || {}).issns || []).length === 0 && (errors.bibliographicSection.issns = summary.issns);
 
     const adminJournalErrors = validateAdminJournal(data, locale);
     errors = deepmerge(errors, adminJournalErrors);

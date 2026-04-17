@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import locale from 'locale/components';

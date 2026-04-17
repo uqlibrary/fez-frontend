@@ -10,7 +10,7 @@ import { styled } from '@mui/material/styles';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import Badge from '@mui/material/Badge';
 import Typography from '@mui/material/Typography';
@@ -29,7 +29,7 @@ import { useJournalContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { translateFormErrorsToText } from 'config/validation';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 
 const AdminTab = styled(Tab)({
     minWidth: 84,

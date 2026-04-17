@@ -8,7 +8,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { clearJournalSearchKeywords, loadJournalSearchKeywords } from 'actions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import locale from 'locale/components';
 import { VoiceToText } from './partials/voiceToText';
@@ -101,7 +101,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
                                     <Tooltip
                                         id="strategic-publishing-voice-record"
                                         data-testid="strategic-publishing-voice-record"
-                                        title={'Click to clear search keywords'}
+                                        title={'Click to start over'}
                                     >
                                         <IconButton
                                             style={{ marginRight: -12 }}

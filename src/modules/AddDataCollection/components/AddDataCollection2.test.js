@@ -5,6 +5,18 @@ import userEvent from '@testing-library/user-event';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
 
+// insert a 'specialKey' and 'fieldsToUnset' to ensure coverage of empty string to array and 'unset' behaviour in component
+jest.mock('config/general', () => ({
+    ...jest.requireActual('config/general'),
+    NEW_DATASET_DEFAULT_VALUES: {
+        ...jest.requireActual('config/general').NEW_DATASET_DEFAULT_VALUES,
+        fez_record_search_key_grant_id: '', // specialKey
+        fez_record_search_key_notes: {
+            rek_notes: '', // fieldsToUnset
+        },
+    },
+}));
+
 let mockDoiExist = false;
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
@@ -58,7 +70,6 @@ async function inputRequired(getByTestId) {
         ['rek-contact-details-email-input', 'test@t.au'],
         ['rek-date-day-input', '1'],
         ['rek-date-year-input', '2000'],
-        ['rek-author-input', 'test'],
         ['rek-project-name-input', 'test'],
         ['rek-project-description-input', 'test'],
     ]);
@@ -78,8 +89,6 @@ async function inputRequired(getByTestId) {
         ['rek-subject-input', '010101', /010101/i],
         // Contact Name ID
         ['rek-contributor-id-input', 'David Johnsen', 'David Johnsen'],
-        // Creator Role
-        ['rek-author-role-input', 'a', /Project Lead/i],
     ]);
 }
 

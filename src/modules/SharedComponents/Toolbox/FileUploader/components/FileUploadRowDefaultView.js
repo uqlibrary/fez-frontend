@@ -8,20 +8,16 @@ import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_P
 import { selectFields } from 'locale/selectFields';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import IconButton from '@mui/material/IconButton';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown';
 
 export const FileUploadRowDefaultView = ({
     index,
     name,
-    rowCount,
     size,
     accessConditionId,
     embargoDate,
@@ -33,8 +29,6 @@ export const FileUploadRowDefaultView = ({
     onEmbargoDateChange,
     onFileDescriptionChange,
     onAccessConditionChange,
-    onOrderUpClick,
-    onOrderDownClick,
     onSecurityPolicyChange,
     focusOnIndex,
     accessConditionLocale,
@@ -54,20 +48,6 @@ export const FileUploadRowDefaultView = ({
                 marginBottom: '12px',
             }}
         >
-            <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
-                <Grid item xs={1} sx={{ padding: '0 0 0 10px !important', height: '30px' }}>
-                    <IconButton
-                        disabled={index === 0}
-                        id={`new-file-upload-down-${index}`}
-                        data-analyticsid={`new-file-upload-up-${index}`}
-                        data-testid={`new-file-upload-up-${index}`}
-                        sx={{ height: '30px', padding: 0 }}
-                        onClick={onOrderUpClick}
-                    >
-                        <ExpandLessIcon />
-                    </IconButton>
-                </Grid>
-            </Grid>
             <Grid container direction="row" alignItems="center" spacing={1}>
                 <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
                     <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
@@ -154,7 +134,12 @@ export const FileUploadRowDefaultView = ({
                     <Grid item sm={2}>
                         {((isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||
                             (!isAdmin && accessConditionId !== FILE_ACCESS_CONDITION_OPEN)) && (
-                            <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
+                            <Typography
+                                variant="body2"
+                                component={'div'}
+                                gutterBottom
+                                data-testid={`dsi-embargo-date-${index}`}
+                            >
                                 {embargoDateClosedAccess}
                             </Typography>
                         )}
@@ -177,20 +162,6 @@ export const FileUploadRowDefaultView = ({
                         name={name}
                         fileUploadRowStatusId={`dsi-dsid-${index}`}
                     />
-                </Grid>
-            </Grid>
-            <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
-                <Grid item xs={1} sx={{ padding: '0 0 0 10px!important', height: '30px', margin: '0 0 10px' }}>
-                    <IconButton
-                        id={`new-file-upload-down-${index}`}
-                        data-analyticsid={`new-file-upload-down-${index}`}
-                        data-testid={`new-file-upload-down-${index}`}
-                        disabled={index === rowCount - 1}
-                        sx={{ height: '30px', padding: 0 }}
-                        onClick={onOrderDownClick}
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
                 </Grid>
             </Grid>
         </Box>

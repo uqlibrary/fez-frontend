@@ -6,7 +6,7 @@ import locale from 'locale/components';
 
 import * as actions from 'actions';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -47,10 +47,10 @@ const SystemAlerts = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const columns = React.useMemo(() => getSystemAlertColumns(txt, adminDashboardConfigData.admin_users), [
-        adminDashboardConfigData.admin_users,
-        txt,
-    ]);
+    const columns = React.useMemo(
+        () => getSystemAlertColumns(txt, adminDashboardConfigData.admin_users),
+        [adminDashboardConfigData.admin_users, txt],
+    );
 
     const handleRowClick = params => {
         openDrawer(params.row);
@@ -65,7 +65,7 @@ const SystemAlerts = () => {
             row,
         });
 
-        dispatch(actions.adminDashboardSystemAlerts(wrappedRequest))
+        dispatch(actions.adminDashboardSystemAlerts(row.sat_id, wrappedRequest))
             .then(() => {
                 /* istanbul ignore else */
                 if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
@@ -85,13 +85,17 @@ const SystemAlerts = () => {
 
     return (
         <StandardCard noHeader>
-            <Typography fontSize={'1.25rem'} fontWeight={'300'}>
+            <Typography
+                sx={{
+                    fontSize: '1.25rem',
+                    fontWeight: '300',
+                }}
+            >
                 {txt.title(adminDashboardSystemAlertsData?.length ?? /* istanbul ignore next */ '')}
                 {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
                     <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
                 )}
             </Typography>
-
             {alertIsVisible && (
                 <Grid item xs={12} sx={{ mb: 1 }}>
                     <Alert

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import locale from 'locale/pages';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 const StyledGridNumArticles = styled(Grid)(({ theme }) => ({
     padding: '0 16px',

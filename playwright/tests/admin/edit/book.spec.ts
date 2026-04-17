@@ -55,17 +55,14 @@ test.describe('Book admin edit', () => {
         // Clear and check required validation
         const placeOfPublicationInput = bibliographicTab.getByTestId('rek-place-of-publication-input');
         await placeOfPublicationInput.clear();
-        await expect(
-            placeOfPublicationInput
-                .locator('..')
-                .locator('..')
-                .locator('p'),
-        ).toHaveText('This field is required');
+        await expect(placeOfPublicationInput.locator('..').locator('..').locator('p')).toHaveText(
+            'This field is required',
+        );
 
         await adminEditVerifyAlerts(page, 1, ['Place of publication is required']);
     });
 
-    test('should render ISSN as expected', async ({ page } ) => {
+    test('should render ISSN as expected', async ({ page }) => {
         await page.setViewportSize({ width: 960, height: 7000 });
         const recordWithIssn = recordList.data[1]; // Using a different record from the list for this test
         await loadRecordForAdminEdit(page, recordWithIssn.rek_pid);
@@ -77,7 +74,7 @@ test.describe('Book admin edit', () => {
                 sherpaMocks[0].srm_journal_link;
 
             await expect(container.getByText(issn, { exact: true })).toBeVisible();
-            
+
             await page.waitForSelector('a[data-testid="sherparomeo-link"]');
 
             const sherpaRomeoLink = container.locator('a[data-testid="sherparomeo-link"]');
@@ -126,7 +123,7 @@ test.describe('Book admin edit', () => {
         const issnInput = issnBlock.locator('input');
         await issnInput.press('End');
         await issnInput.press('Backspace');
-        await issnInput.pressSequentially('0', {delay: 100});
+        await issnInput.pressSequentially('0', { delay: 100 });
         await issnInput.press('Enter');
         const updatedRow1 = issnBlock.locator('#rek-issn-list-row-1');
         await checkIssnLinks(updatedRow1, '1611-3340');

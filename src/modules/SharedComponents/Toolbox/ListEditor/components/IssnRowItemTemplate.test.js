@@ -51,15 +51,7 @@ describe('IssnRowItemTemplate', () => {
 
         it('should render default view', () => {
             const { asFragment } = setup();
-            expect(asFragment()).toMatchInlineSnapshot(`
-                <DocumentFragment>
-                  <span
-                    class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
-                  >
-                    0000-0000
-                  </span>
-                </DocumentFragment>
-            `);
+            expect(asFragment()).toMatchSnapshot();
         });
 
         it('should render a value', () => {

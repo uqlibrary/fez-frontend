@@ -8,7 +8,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 
@@ -61,7 +61,6 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
 
     React.useEffect(() => {
         trigger();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [trigger]);
     const watchedFields = useWatch({ control, name: ['usr_username'] });
     // Track previous field values to validate only the changed field

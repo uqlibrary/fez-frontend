@@ -1,13 +1,12 @@
 import React from 'react';
 import RecordsSearchResults from './RecordsSearchResults';
-import { accounts } from 'mock/data/account';
 import { render, WithReduxStore, WithRouter, waitFor, userEvent } from 'test-utils';
 import { SEARCH_EXTERNAL_RECORDS_API } from 'repositories/routes';
 
 const mockUseNavigate = jest.fn();
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
 }));
 

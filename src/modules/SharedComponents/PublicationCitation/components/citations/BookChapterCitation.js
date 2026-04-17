@@ -20,7 +20,7 @@ export const BookChapterCitation = ({ publication, hideDoiLink, citationStyle })
 
     // eSpace citation view for Book Chapter
     return (
-        <div className="citationContent citationBookChapter">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationBookChapter">
             {/* {Author} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -51,7 +51,7 @@ export const BookChapterCitation = ({ publication, hideDoiLink, citationStyle })
 
             {/* {doi| doi:|} */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 

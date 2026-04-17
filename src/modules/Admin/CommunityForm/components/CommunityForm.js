@@ -17,7 +17,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 
@@ -44,7 +44,6 @@ export const CommunityForm = () => {
         delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
 
         const currentAuthor = author;
-        // eslint-disable-next-line camelcase
         return dispatch(createCommunity(data, currentAuthor?.aut_id)).catch(error => {
             setApiError(error);
         });

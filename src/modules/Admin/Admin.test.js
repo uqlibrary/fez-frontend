@@ -20,6 +20,7 @@ import {
     selectDropDownOption,
     clearAndType,
     sortObjectProps,
+    within,
 } from 'test-utils';
 
 function setup(testProps = {}, testState = {}, renderer = rtlRender) {
@@ -190,7 +191,7 @@ describe('form submission', () => {
                     ],
                 };
 
-                const { getByTestId } = setup(
+                const { getByTestId, findByTestId } = setup(
                     {},
                     {
                         viewRecordReducer: {
@@ -198,6 +199,12 @@ describe('form submission', () => {
                         },
                     },
                 );
+
+                // SECURITY
+                // override security
+                // [LS Aug 25] Don't know why this needs to be here, but if it's near the bottom
+                // where it used to be, the selector element never appears.
+                await userEvent.click(getByTestId('rek-security-inherited-input'));
 
                 // ADMIN
                 await selectDropDownOption('rek-herdc-code-select', 'A1 Authored Book (Research)');
@@ -283,9 +290,6 @@ describe('form submission', () => {
                 await userEvent.click(getByTestId('attributionIncomplete-input'));
 
                 // FILES
-                // adjust order of am existing attachment
-                await userEvent.click(getByTestId('order-down-file-0'));
-
                 // add new file
                 await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesSecurityPolicy(fileMock, 'Administrators');
@@ -295,17 +299,13 @@ describe('form submission', () => {
                     'rek-sensitive-handling-note-id-select',
                     'Indigenous/First Nations people should be aware that this output is about men’s business.',
                 );
-
-                // SECURITY
-                // override security
-                await userEvent.click(getByTestId('rek-security-inherited-input'));
+                await findByTestId('rek-security-policy-select', { timeout: 2000 });
 
                 // select a work override
                 await selectDropDownOption('rek-security-policy-select', 'Administrators');
 
                 // change security of a file to test
                 await selectDropDownOption('dsi-security-policy-5-select', 'Public');
-
                 await submitForm();
                 expectApiRequestToMatchSnapshot('post', api.url.files.create, null, data =>
                     sortObjectProps(JSON.parse(data)),
@@ -315,5 +315,100 @@ describe('form submission', () => {
             },
             timeout,
         );
+        const assertAuthorData = data => {
+            const requestData = JSON.parse(data);
+            expect(requestData).toEqual(
+                expect.objectContaining({
+                    fez_record_search_key_author_id: expect.arrayContaining([
+                        {
+                            rek_author_id: 0,
+                            rek_author_id_order: 7,
+                        },
+                    ]),
+                }),
+            );
+            return true;
+        };
+
+        it('should handle author removal of UQ ID', async () => {
+            const pid = record.rek_pid;
+            const recordToView = {
+                ...record,
+                fez_record_search_key_advisory_statement: {
+                    rek_advisory_statement_id: 1,
+                    rek_advisory_statement_pid: pid,
+                    rek_advisory_statement_xsdmf_id: null,
+                    rek_advisory_statement: '<p>Test advisory statement</p>',
+                },
+                fez_internal_notes: {
+                    ain_id: 1,
+                    ain_pid: pid,
+                    ain_detail: '<p>Test admin notes</p>',
+                },
+                fez_record_search_key_notes: {
+                    rek_notes_id: 1,
+                    rek_notes_pid: pid,
+                    rek_notes_xsdmf_id: null,
+                    rek_notes: '<p>Test public notes</p>',
+                },
+                fez_record_search_key_author: [
+                    ...record.fez_record_search_key_author,
+                    {
+                        rek_author_id: 37743157,
+                        rek_author_pid: pid,
+                        rek_author_xsdmf_id: null,
+                        rek_author: 'Test author',
+                        rek_author_order: 7,
+                    },
+                ],
+                fez_record_search_key_author_id: [
+                    ...record.fez_record_search_key_author_id,
+                    {
+                        rek_author_id_id: 37944514,
+                        rek_author_id_pid: pid,
+                        rek_author_id_xsdmf_id: null,
+                        rek_author_id: 7626877,
+                        rek_author_id_order: 7,
+                        author: {
+                            aut_id: 7626877,
+                            aut_orcid_id: null,
+                            aut_scopus_id: null,
+                            aut_researcher_id: null,
+                            aut_title: 'Mr',
+                            aut_org_username: 'uqaabuay',
+                            aut_student_username: null,
+                        },
+                        rek_author_id_lookup: 'Abu-Aysha, Ahmad',
+                    },
+                ],
+            };
+
+            const { getByTestId, findByTestId } = setup(
+                {},
+                {
+                    viewRecordReducer: {
+                        recordToView,
+                    },
+                },
+            );
+
+            expect(recordToView).toEqual(
+                expect.objectContaining({
+                    fez_record_search_key_author_id: expect.arrayContaining([
+                        expect.objectContaining({
+                            rek_author_id: 7626877,
+                            rek_author_id_order: 7,
+                        }),
+                    ]),
+                }),
+            );
+
+            await userEvent.click(await findByTestId('rek-author-list-row-6-edit'));
+            // clear UQ ID & save
+            await userEvent.click(within(getByTestId('rek-author-list-row-6')).getByTestId('CloseIcon'));
+            await userEvent.click(within(getByTestId('rek-author-list-row-6')).getByLabelText('Save'));
+            await submitForm();
+            expectApiRequestToMatchSnapshot('post', api.url.records.create, assertAuthorData);
+        });
     });
 });

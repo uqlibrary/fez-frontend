@@ -2,8 +2,9 @@
 
 exports[`AudioDocumentCitation renders  component with a mock espace record 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationAudio"
+    id="citation-content-UQ:151787"
   >
     <span
       class="citationAuthors"
@@ -72,14 +73,15 @@ exports[`AudioDocumentCitation renders  component with a mock espace record 1`] 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationAudio"
+    id="citation-content-UQ:151787"
   >
     <span
       class="citationAuthors"
@@ -148,14 +150,15 @@ exports[`AudioDocumentCitation renders  component with an empty doi view  1`] = 
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
 <div>
-  <div
+  <span
     class="citationContent citationAudio"
+    id="citation-content-undefined"
   >
     <span
       class="citationAuthors empty"
@@ -175,6 +178,6 @@ exports[`AudioDocumentCitation renders  component with empty publication 1`] = `
     <span
       class="citationDOI empty"
     />
-  </div>
+  </span>
 </div>
 `;

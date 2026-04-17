@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import * as actions from 'actions';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -26,7 +26,7 @@ import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/genera
 import { getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 import { pathConfig } from 'config/pathConfig';
 
 /*
@@ -62,13 +62,8 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
         isUnpublishedBufferPage,
     );
 
-    const {
-        publicationsList,
-        publicationsListPagingData,
-        publicationsListFacets,
-        searchLoading,
-        searchLoadingError,
-    } = useSelector(state => state.get('searchRecordsReducer'));
+    const { publicationsList, publicationsListPagingData, publicationsListFacets, searchLoading, searchLoadingError } =
+        useSelector(state => state.get('searchRecordsReducer'));
     const { exportPublicationsLoading } = useSelector(state => state.get('exportPublicationsReducer'));
     const { account, author } = useSelector(state => state.get('accountReducer'));
 
@@ -85,13 +80,8 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [queryParamsHash]);
 
-    const {
-        pageSizeChanged,
-        pageChanged,
-        sortByChanged,
-        facetsChanged,
-        displayRecordsAsChanged,
-    } = useSearchRecordsControls(queryParams, updateQueryString);
+    const { pageSizeChanged, pageChanged, sortByChanged, facetsChanged, displayRecordsAsChanged } =
+        useSearchRecordsControls(queryParams, updateQueryString);
 
     const handleExport = exportFormat => {
         dispatch(
@@ -210,119 +200,125 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                         />
                     </StandardCard>
                 </Grid>
-                {// first time loading search results
-                searchLoading && (
-                    <Grid item xs={12}>
-                        <InlineLoader message={txt.loadingMessage} loaderId="search-records-loading" />
-                    </Grid>
-                )}
+                {
+                    // first time loading search results
+                    searchLoading && (
+                        <Grid item xs={12}>
+                            <InlineLoader message={txt.loadingMessage} loaderId="search-records-loading" />
+                        </Grid>
+                    )
+                }
                 {searchLoadingError && (
                     <Grid item xs={12}>
                         <Alert pushToTop {...alertProps} />
                     </Grid>
                 )}
-                {// no results to display
-                hasSearchParams && !searchLoading && publicationsList && publicationsList.length === 0 && (
-                    <Grid item xs={12}>
-                        <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
-                    </Grid>
-                )}
-                {// results to display or loading if user is filtering/paging
-                (exportPublicationsLoading ||
-                    (hasSearchParams && searchLoading) ||
-                    (!!publicationsList && publicationsList.length > 0)) && (
-                    <Grid item xs sm md={9}>
-                        <StandardCard noHeader standardCardId="search-records-results">
-                            <Grid container spacing={2} justifyContent="space-between">
-                                <Grid item xs="auto">
-                                    {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
-                                        <span>
-                                            {txt.recordCount
-                                                .replace('[recordsTotal]', pagingData.total)
-                                                .replace('[recordsFrom]', pagingData.from)
-                                                .replace('[recordsTo]', pagingData.to)}
-                                        </span>
-                                    ) : (
-                                        <span>{txt.loadingPagingMessage}</span>
-                                    )}
-                                </Grid>
-                                <Grid item xs="auto">
-                                    {(isAdmin || isResearcher) && (
-                                        <BulkExport
-                                            exportPublications={handleExport}
-                                            locale={txt.bulkExport}
-                                            pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
-                                            totalMatches={publicationsListPagingData.total}
-                                            disabled={isLoadingOrExporting}
-                                        />
-                                    )}
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <PublicationsListSorting
-                                        showDisplayAs
-                                        canUseExport={canUseExport}
-                                        disabled={isLoadingOrExporting}
-                                        onExportPublications={handleExport}
-                                        onPageSizeChanged={pageSizeChanged}
-                                        onSortByChanged={sortByChanged}
-                                        onDisplayRecordsAsChanged={onDisplayRecordsAsChanged}
-                                        pageSize={searchParams.pageSize}
-                                        pagingData={pagingData}
-                                        sortBy={searchParams.sortBy}
-                                        sortDirection={searchParams.sortDirection}
-                                        displayRecordsAs={displayLookup}
-                                        sortingData={sortingData}
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <PublicationsListPaging
-                                        disabled={isLoadingOrExporting}
-                                        loading={isLoadingOrExporting}
-                                        onPageChanged={pageChanged}
-                                        pagingData={pagingData}
-                                        pagingId="search-records-paging-top"
-                                    />
-                                </Grid>
-                                {isLoadingOrExporting && (
+                {
+                    // no results to display
+                    hasSearchParams && !searchLoading && publicationsList && publicationsList.length === 0 && (
+                        <Grid item xs={12}>
+                            <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
+                        </Grid>
+                    )
+                }
+                {
+                    // results to display or loading if user is filtering/paging
+                    (exportPublicationsLoading ||
+                        (hasSearchParams && searchLoading) ||
+                        (!!publicationsList && publicationsList.length > 0)) && (
+                        <Grid item xs sm md={9}>
+                            <StandardCard noHeader standardCardId="search-records-results">
+                                <Grid container spacing={2} justifyContent="space-between">
+                                    <Grid item xs="auto">
+                                        {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
+                                            <span>
+                                                {txt.recordCount
+                                                    .replace('[recordsTotal]', pagingData.total)
+                                                    .replace('[recordsFrom]', pagingData.from)
+                                                    .replace('[recordsTo]', pagingData.to)}
+                                            </span>
+                                        ) : (
+                                            <span>{txt.loadingPagingMessage}</span>
+                                        )}
+                                    </Grid>
+                                    <Grid item xs="auto">
+                                        {(isAdmin || isResearcher) && (
+                                            <BulkExport
+                                                exportPublications={handleExport}
+                                                locale={txt.bulkExport}
+                                                pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
+                                                totalMatches={publicationsListPagingData.total}
+                                                disabled={isLoadingOrExporting}
+                                            />
+                                        )}
+                                    </Grid>
                                     <Grid item xs={12}>
-                                        <Grid container justifyContent={'center'}>
-                                            <Grid item xs={12}>
-                                                <InlineLoader
-                                                    loaderId="search-records-page-loading"
-                                                    message={
-                                                        searchLoading
-                                                            ? txt.loadingPagingMessage
-                                                            : txt.exportPublicationsLoadingMessage
-                                                    }
-                                                />
+                                        <PublicationsListSorting
+                                            showDisplayAs
+                                            canUseExport={canUseExport}
+                                            disabled={isLoadingOrExporting}
+                                            onExportPublications={handleExport}
+                                            onPageSizeChanged={pageSizeChanged}
+                                            onSortByChanged={sortByChanged}
+                                            onDisplayRecordsAsChanged={onDisplayRecordsAsChanged}
+                                            pageSize={searchParams.pageSize}
+                                            pagingData={pagingData}
+                                            sortBy={searchParams.sortBy}
+                                            sortDirection={searchParams.sortDirection}
+                                            displayRecordsAs={displayLookup}
+                                            sortingData={sortingData}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <PublicationsListPaging
+                                            disabled={isLoadingOrExporting}
+                                            loading={isLoadingOrExporting}
+                                            onPageChanged={pageChanged}
+                                            pagingData={pagingData}
+                                            pagingId="search-records-paging-top"
+                                        />
+                                    </Grid>
+                                    {isLoadingOrExporting && (
+                                        <Grid item xs={12}>
+                                            <Grid container justifyContent={'center'}>
+                                                <Grid item xs={12}>
+                                                    <InlineLoader
+                                                        loaderId="search-records-page-loading"
+                                                        message={
+                                                            searchLoading
+                                                                ? txt.loadingPagingMessage
+                                                                : txt.exportPublicationsLoadingMessage
+                                                        }
+                                                    />
+                                                </Grid>
                                             </Grid>
                                         </Grid>
-                                    </Grid>
-                                )}
-                                {!isLoadingOrExporting && publicationsList && publicationsList.length > 0 && (
+                                    )}
+                                    {!isLoadingOrExporting && publicationsList && publicationsList.length > 0 && (
+                                        <Grid item xs={12}>
+                                            <RecordsSelectorContext.Provider
+                                                value={{
+                                                    records: publicationsList,
+                                                }}
+                                            >
+                                                {SelectRecordView(publicationsList)}
+                                            </RecordsSelectorContext.Provider>
+                                        </Grid>
+                                    )}
                                     <Grid item xs={12}>
-                                        <RecordsSelectorContext.Provider
-                                            value={{
-                                                records: publicationsList,
-                                            }}
-                                        >
-                                            {SelectRecordView(publicationsList)}
-                                        </RecordsSelectorContext.Provider>
+                                        <PublicationsListPaging
+                                            disabled={isLoadingOrExporting}
+                                            loading={isLoadingOrExporting}
+                                            onPageChanged={pageChanged}
+                                            pagingData={pagingData}
+                                            pagingId="search-records-paging-bottom"
+                                        />
                                     </Grid>
-                                )}
-                                <Grid item xs={12}>
-                                    <PublicationsListPaging
-                                        disabled={isLoadingOrExporting}
-                                        loading={isLoadingOrExporting}
-                                        onPageChanged={pageChanged}
-                                        pagingData={pagingData}
-                                        pagingId="search-records-paging-bottom"
-                                    />
                                 </Grid>
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-                )}
+                            </StandardCard>
+                        </Grid>
+                    )
+                }
                 {publicationsListFacets && Object.keys(publicationsListFacets).length !== 0 && (
                     <Grid
                         item

@@ -1,12 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUploadField method should return <FileUploader> 1`] = `
-<Memo(Connect(FileUploader))
-  input={
-    {
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_owner": null,
+  "_store": {},
+  "key": null,
+  "props": {
+    "input": {
       "onChange": [MockFunction],
-    }
-  }
-  onChange={[MockFunction]}
-/>
+    },
+    "onChange": [MockFunction],
+  },
+  "type": {
+    "$$typeof": Symbol(react.memo),
+    "WrappedComponent": [Function],
+    "compare": null,
+    "type": [Function],
+  },
+}
 `;

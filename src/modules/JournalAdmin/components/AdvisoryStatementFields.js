@@ -5,7 +5,7 @@ import JournalAdvisoryStatementTypeField from '../../SharedComponents/LookupFiel
 import { RichEditorField } from '../../SharedComponents/RichEditor';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useFormContext, useWatch } from 'react-hook-form';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { useControlledVocabs } from '../../../hooks/useControlledVocabs';
 import { JOURNAL_ADVISORY_STATEMENT_TYPE as cvoId } from '../../../config/general';
 import { usePrevious } from '../../../hooks/usePrevious';

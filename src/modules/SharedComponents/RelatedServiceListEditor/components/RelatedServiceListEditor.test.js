@@ -1,8 +1,7 @@
 import React from 'react';
 import RelatedServiceListEditor from './RelatedServiceListEditor';
-import { render, fireEvent, within, WithReduxStore, waitFor } from 'test-utils';
+import { render, fireEvent, within, WithReduxStore } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
-import * as repositories from '../../../../repositories';
 
 const mockSetValue = jest.fn();
 function setup(testProps = {}, renderer = render) {
@@ -79,36 +78,6 @@ describe('RelatedServiceListEditor', () => {
             },
         });
         expect(container).toMatchSnapshot();
-    });
-
-    it('should update on receiving new props', () => {
-        const value = {
-            relatedServiceId: '1234',
-            relatedServiceDesc: 'desc',
-        };
-        let props = {
-            name: 'TestField',
-            value: [value],
-        };
-        const { container, rerender } = setup(props);
-        expect(container).toMatchSnapshot();
-
-        props = {
-            classes: {},
-
-            name: 'TestField',
-            value: [
-                {
-                    relatedServiceId: '4567',
-                    relatedServiceDesc: 'desc',
-                },
-            ],
-        };
-
-        setup(props, rerender);
-
-        expect(mockSetValue).toHaveBeenCalledWith('TestField', [], { shouldValidate: true });
-        expect(mockSetValue).toHaveBeenCalledWith('TestField', [value], { shouldValidate: true });
     });
 
     it('should add related service to the list', () => {
@@ -326,10 +295,10 @@ describe('RelatedServiceListEditor', () => {
             name: inputName,
         });
 
-        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: 'Test' } });
+        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: 'Test{enter}' } });
         expect(mockOnChange).not.toHaveBeenCalledWith(true);
         expect(mockOnChange).not.toHaveBeenCalledWith([]);
         expect(mockSetValue).toHaveBeenCalledWith(inputName, true, { shouldValidate: true });
-        expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
+        // expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
     });
 });

@@ -4,10 +4,22 @@ import { BrowserContext } from '@playwright/test';
 import moment from 'moment/moment';
 import path from 'path';
 
+/**
+ * PW Clock management doesn't work with Axios Mock Adapter, so we have to rely on global vars
+ * for that same purpose. See where window.__PW__TEST_API_MOCK_IS_PAUSED is used in /mock/index.js
+ */
+export const apiMockIsPaused = async (page: Page, value = true) =>
+    await page.evaluate(value => (window.__PW__TEST_API_MOCK_IS_PAUSED = value), value);
+
+// See where window.__PW__TEST_API_MOCK_RESPONSE_SHOULD_FAIL is used in /mock/index.js
+export const apiMockResponseShouldFail = async (page: Page, value = true) =>
+    await page.evaluate(value => (window.__PW__TEST_API_MOCK_RESPONSE_SHOULD_FAIL = value), value);
+
 export const assertEnabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeEnabled();
 
 export const assertDisabled = async (page: Page, selector: string) => expect(page.locator(selector)).toBeDisabled();
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const assertTriggersDisabled = async (page: Page, selector: string, callback: any) => {
     await assertEnabled(page, selector);
     await callback();
@@ -30,6 +42,7 @@ export const navToHomeFromMenu = async (
     }
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const fillInput = async (page: Page, selector: string, value: any, times: number = 1) => {
     await page.fill(selector, String(value).repeat(times));
 };

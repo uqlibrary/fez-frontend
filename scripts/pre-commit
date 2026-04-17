@@ -9,29 +9,48 @@ C_BROWN='\e[33m'
 C_YELLOW='\e[93m'
 C_GREY='\e[90m'
 
+IS_MERGE=$(git rev-parse -q --verify MERGE_HEAD)
+PRODUCTION_BRANCH="production"
+LIVE_BRANCHES=("staging" "$PRODUCTION_BRANCH")
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+block_prohibit_merges() {
+	local MERGED_BRANCH=$(git rev-parse --abbrev-ref HEAD@{upstream})
+	local ALLOWED_BRANCH="master"
+	if [[ "$PRODUCTION_BRANCH" == "$CURRENT_BRANCH" && "$MERGED_BRANCH" != "$ALLOWED_BRANCH" ]]; then
+		echo "Error: Merging $MERGED_BRANCH directly into $CURRENT_BRANCH is not allowed. Please merge from $ALLOWED_BRANCH."
+		exit 1
+	fi
+}
+
+block_prohibit_commits() {
+	for BRANCH in "${LIVE_BRANCHES[@]}"; do
+		if [[ "$CURRENT_BRANCH" == "$BRANCH" ]]; then
+			printf "${C_RED}\n"
+			echo "Error: You are trying to commit directly to the $BRANCH branch."
+			echo "Please commit your changes to a feature branch and then merge into the $BRANCH branch instead."
+			printf "\n${C_RED}Aborting commit.${C_RESET}\n\n"
+			exit 1
+		fi
+	done
+}
+
 printf "${C_GREEN}Pre-commit hook running...${C_RESET}\n\n"
+if [[ -n "$IS_MERGE" ]]; then
+	printf "\n[MERGE DETECTED] ... skipping code checks\n"
+	block_prohibit_merges
+	exit 0
+fi
 
 # Commits should not be made directly on Staging branch.
-# (Do work in feature branch and then merge into Staging branch)
-
-FORBIDDEN="staging"
-THIS_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-
-if [[ "$THIS_BRANCH" == "$FORBIDDEN" ]] ; then
-  if [ ! -e ".git/MERGE_MODE" ]; then
-    printf "\e[31m\n"
-    echo "${C_RED}Error${C_RESET}: You are trying to commit directly on the $FORBIDDEN branch."
-    echo "Please commit in a feature branch and then merge into $FORBIDDEN branch instead."
-    printf "\n\e[1mAborting commit.\e[0m\n\n"
-    exit 1
-  fi
-fi
+block_prohibit_commits
 
 # Run code style checks on staged files
 
 GIT_DIFF="git diff --cached --name-only --diff-filter=ACM"
 STAGED_FILES=$(eval "$GIT_DIFF" | grep ".jsx\{0,1\}$")
-FORMATTER="$(git rev-parse --show-toplevel)/node_modules/.bin/prettier-eslint"
+PRETTIER="$(git rev-parse --show-toplevel)/node_modules/.bin/prettier"
+ESLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/eslint"
 
 if [[ "$STAGED_FILES" = "" ]]; then
   printf "\e[92mNo files to check.\e[0m\nProceeding with commit..."
@@ -45,9 +64,15 @@ if [ -f ~/.nvm/nvm.sh ]; then
   source ~/.nvm/nvm.sh
 fi
 
-# Check for prettier-eslint
-if [[ ! -x "$FORMATTER" ]]; then
-  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! \e[0m\n"
+# Check for prettier
+if [[ ! -x "$PRETTIER" ]]; then
+  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! (missing prettier)\e[0m\n"
+  exit 1
+fi
+
+# Check for eslint
+if [[ ! -x "$ESLINT" ]]; then
+  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! (missing eslint)\e[0m\n"
   exit 1
 fi
 
@@ -57,13 +82,20 @@ SECONDS=0
 
 printf "${C_YELLOW}$FILE_COUNT${C_RESET} staged file(s) will be checked for code styles.\n\n\e[31m"
 
-"$FORMATTER" $FILES_ONE_LINE --list-different -l silent
+# Run Prettier in check mode
+"$PRETTIER" --check $FILES_ONE_LINE
 if [[ "$?" != 0 ]]; then
   PASS=false
-  printf "\nFile(s) above failed code style checks!"
-else
-  printf "\033[3A"
+  printf "\nFile(s) above failed Prettier checks!"
 fi
+
+# Run ESLint using eslint.config.mjs
+"$ESLINT" $FILES_ONE_LINE
+if [[ "$?" != 0 ]]; then
+  PASS=false
+  printf "\nFile(s) above failed ESLint checks!"
+fi
+
 printf "\e[0m\n\n"
 
 echo "Code style checks completed in $SECONDS seconds."
@@ -74,12 +106,3 @@ if ! $PASS; then
   printf "\nYou can run '\e[1mnpm run eslint\e[0m' to view ESLint code quality issues, if any.\n\n"
   exit 1
 fi
-
-# printf "\n\e[32mRunning Jest...\e[0m\n"
-
-# npm test -- --ci --findRelatedTests $STAGED_FILES
-
-# if [[ "$?" != 0 ]]; then
-#   printf "\e[31mEither Jest tests failed, or code coverage is not complete. Please fix and try again.\e[0m\n"
-#   exit 2
-# fi

@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Tooltip from '@mui/material/Tooltip';
 import Checkbox from '@mui/material/Checkbox';
 import Typography from '@mui/material/Typography';
@@ -12,12 +12,9 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
         <Grid
             container
             spacing={1}
-            padding={0}
             direction="row"
             id={`journal-list-data-col-1-${index}`}
             data-testid={`journal-list-data-col-1-${index}`}
-            alignItems="center"
-            alignContent="center"
             style={{
                 borderBottom: '1px dashed #e6e6e6',
                 borderRight: '1px dashed #e6e6e6',
@@ -26,9 +23,14 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                 overflow: 'hidden',
                 minWidth: '50%',
             }}
+            sx={{
+                padding: 0,
+                alignItems: 'center',
+                alignContent: 'center',
+            }}
         >
             {isSelectable && (
-                <Grid xs={1} style={{ height: 48 }}>
+                <Grid style={{ height: 48 }} size={1}>
                     <Tooltip title={`Select ${journal.jnl_title}`} placement="right">
                         <Checkbox
                             id={`journal-list-data-col-1-checkbox-${index}`}
@@ -46,7 +48,6 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                 </Grid>
             )}
             <Grid
-                xs={11}
                 id={`journal-list-data-col-1-title-${index}`}
                 data-testid={`journal-list-data-col-1-title-${index}`}
                 style={{
@@ -57,6 +58,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                     paddingRight: 16,
                     lineHeight: 2,
                 }}
+                size={11}
             >
                 <Tooltip title={`Click for detailed view of ${journal.jnl_title}`} placement="right">
                     <Typography
@@ -74,7 +76,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                     </Typography>
                 </Tooltip>
             </Grid>
-            <Grid xs />
+            <Grid size="grow" />
         </Grid>
     );
 };

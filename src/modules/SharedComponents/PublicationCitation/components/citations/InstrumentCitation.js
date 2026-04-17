@@ -17,7 +17,7 @@ export const InstrumentCitation = ({ publication, hideDoiLink, citationStyle }) 
     // {Manufacturer name}{Publication Year| (|).}<i>{Instrument Title| |.}</i>{Publisher| |.} {doi| doi:|}
 
     return (
-        <div className="citationContent citationInstrument">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationInstrument">
             {/* {Manufacturer} */}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} suffix="" />
 
@@ -32,7 +32,7 @@ export const InstrumentCitation = ({ publication, hideDoiLink, citationStyle }) 
 
             {/* {doi| doi:|} */}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 InstrumentCitation.propTypes = {

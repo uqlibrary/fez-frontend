@@ -6,7 +6,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -100,11 +100,24 @@ export const optionDoubleRowRender = (props, option) => {
             }}
             data-testid={props.id}
         >
-            <Typography component={'div'} variant="body1" color="textPrimary" fontWeight={500}>
+            <Typography
+                component={'div'}
+                variant="body1"
+                color="textPrimary"
+                sx={{
+                    fontWeight: 500,
+                }}
+            >
                 {option.sel_title}{' '}
                 {hasBindings && (
                     <Stack direction="row" spacing={1}>
-                        <Typography variant="body2" color="textPrimary" fontWeight={500}>
+                        <Typography
+                            variant="body2"
+                            color="textPrimary"
+                            sx={{
+                                fontWeight: 500,
+                            }}
+                        >
                             Requires:{' '}
                         </Typography>
                         {option.sel_bindings.map((binding, index) => (
@@ -151,7 +164,7 @@ export const getSystemAlertColumns = (locale, users) => {
             width: 160,
             valueGetter: (_, row) =>
                 !!row.sat_assigned_to
-                    ? users.find(user => user.id === row.sat_assigned_to)?.preferred_name ?? alertStatus.UNKNOWN
+                    ? (users.find(user => user.id === row.sat_assigned_to)?.preferred_name ?? alertStatus.UNKNOWN)
                     : alertStatus.UNASSIGNED,
             renderCell: params => (
                 <Chip
@@ -166,7 +179,7 @@ export const getSystemAlertColumns = (locale, users) => {
     ];
 };
 
-export const getDisplayReportColumns = ({ locale, actionState, params }) => {
+export const getDisplayReportColumns = ({ locale, actionState, params, ReportRowActions }) => {
     const report = actionState?.report?.value || getReportTypeFromValue(params.report_type);
 
     const txt = locale.columns[report];
@@ -303,6 +316,19 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     exportOrder: 10,
                 });
             }
+
+            if (report === 'systemalertlog') {
+                cols.push({
+                    field: 'actions',
+                    headerName: 'Actions',
+                    width: 140,
+                    sortable: false,
+                    filterable: false,
+                    order: 999,
+                    exportOnly: false,
+                    renderCell: params => <ReportRowActions row={params.row} gridApi={params.api} />,
+                });
+            }
             return cols;
     }
 };
@@ -344,9 +370,7 @@ export const exportReportFilters = {
                                 onChange?.({
                                     type: 'fromDate',
                                     value: !!props
-                                        ? moment(props)
-                                              .startOf('day')
-                                              .format(DEFAULT_SERVER_DATE_FORMAT)
+                                        ? moment(props).startOf('day').format(DEFAULT_SERVER_DATE_FORMAT)
                                         : null,
                                 });
                                 if (!hasDependantBinding) {
@@ -448,9 +472,7 @@ export const exportReportFilters = {
                                 onChange?.({
                                     type: 'toDate',
                                     value: !!props
-                                        ? moment(props)
-                                              .endOf('day')
-                                              .format(DEFAULT_SERVER_DATE_FORMAT)
+                                        ? moment(props).endOf('day').format(DEFAULT_SERVER_DATE_FORMAT)
                                         : null,
                                 })
                             }

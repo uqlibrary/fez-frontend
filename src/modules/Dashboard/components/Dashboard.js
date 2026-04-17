@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import { OrcidSyncContext } from 'context';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 
 import {
     AuthorsPublicationsPerYearChart,
@@ -28,6 +28,8 @@ import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';
 import { useIsMobileView } from 'hooks';
+import Cookies from 'js-cookie';
+import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -70,14 +72,15 @@ export const fibonacci = (iteration, from = 0) => {
     return b;
 };
 
-export const isWaitingForSync = orcidSyncStatus =>
-    ['Pending', 'In Progress'].indexOf((orcidSyncStatus || /* istanbul ignore next */ {}).orj_status) > -1;
+export const isWaitingForSync = orcidSyncStatus => ['Pending', 'In Progress'].indexOf(orcidSyncStatus?.orj_status) > -1;
 
 const Dashboard = ({
     account,
     authorDetails,
     author,
     accountAuthorDetailsLoading,
+    accountAuthorSaving,
+    accountAuthorError,
 
     // graph data
     loadingPublicationsByYear,
@@ -91,6 +94,9 @@ const Dashboard = ({
 
     // incomplete Record lure
     incomplete,
+
+    // Open Access Compliance Record lure
+    noncompliantoa,
 
     // wos/scopus data
     loadingPublicationsStats,
@@ -114,22 +120,24 @@ const Dashboard = ({
     const isMobileView = useIsMobileView();
     const [dashboardPubsTabs, setDashboardPubsTabs] = useState(1);
     const [orcidSyncStatusRefreshCount, setOrcidSyncStatusRefreshCount] = useState(0);
-    const [lastOrcidSyncScheduledRequest, setLastOrcidSyncScheduledRequest] = useState();
+    const [hideTurnOnOrcidSyncReminder, setHideTurnOnOrcidSyncReminder] = useState(
+        String(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)) === 'true',
+    );
+    const lastOrcidSyncStatusRequestRef = useRef(null);
+    const orcidSyncSettingsButtonRef = useRef(null);
 
     const _loadOrcidSync = (waitTime = 1) => {
-        // considering loadOrcidSyncDelay props, we have to clear any previously scheduled requests
-        !!lastOrcidSyncScheduledRequest && global.clearTimeout(lastOrcidSyncScheduledRequest);
-        const timeoutId = global.setTimeout(
-            () =>
-                !loadingOrcidSyncStatus &&
-                orcidSyncEnabled &&
-                (orcidSyncStatus === null || !!waitTime) &&
-                actions &&
-                actions.loadOrcidSyncStatus &&
-                actions.loadOrcidSyncStatus(),
+        if (!waitTime || !author?.aut_orcid_id || !orcidSyncEnabled || loadingOrcidSyncStatus) {
+            return;
+        }
+        clearTimeout(lastOrcidSyncStatusRequestRef?.current);
+        lastOrcidSyncStatusRequestRef.current = setTimeout(
+            () => {
+                lastOrcidSyncStatusRequestRef.current = null;
+                actions.loadOrcidSyncStatus();
+            },
             waitTime * loadOrcidSyncDelay * 1000,
         );
-        setLastOrcidSyncScheduledRequest(timeoutId);
     };
 
     // A repeating check for latest status that gets progressively longer
@@ -153,6 +161,16 @@ const Dashboard = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [loadingOrcidSyncStatus]);
 
+    const openOrcidSyncSettings = () => {
+        orcidSyncSettingsButtonRef.current?.openDrawer?.();
+        setHideTurnOnOrcidSyncReminder(true);
+    };
+
+    const dismissEnableOrcidSyncDialog = () => {
+        Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'true');
+        setHideTurnOnOrcidSyncReminder(true);
+    };
+
     const _claimYourPublications = () => {
         navigate(pathConfig.records.possible);
     };
@@ -165,8 +183,12 @@ const Dashboard = ({
         setDashboardPubsTabs(value);
     };
 
-    const redirectToIncompleteRecordlist = () => {
+    const redirectToIncompleteRecordList = () => {
         navigate(pathConfig.records.incomplete);
+    };
+
+    const redirectToOaComplianceRecordlist = () => {
+        navigate(pathConfig.records.openAccessCompliance);
     };
 
     const requestOrcidSync = () => {
@@ -177,12 +199,15 @@ const Dashboard = ({
         <Grid item xs={12}>
             <OrcidSyncContext.Provider
                 value={{
-                    showSyncUI: orcidSyncEnabled && !loadingOrcidSyncStatus,
                     orcidSyncProps: {
-                        author: author,
-                        orcidSyncStatus: orcidSyncStatus,
-                        requestingOrcidSync: requestingOrcidSync,
-                        requestOrcidSync: requestOrcidSync,
+                        author,
+                        accountAuthorSaving,
+                        accountAuthorError,
+                        orcidSyncEnabled,
+                        orcidSyncStatus,
+                        requestingOrcidSync,
+                        requestOrcidSync,
+                        settingsButtonRef: orcidSyncSettingsButtonRef,
                     },
                 }}
             >
@@ -201,7 +226,6 @@ const Dashboard = ({
     const txt = locale.pages.dashboard;
     const loading =
         // nothing to load for non author users
-        // eslint-disable-next-line camelcase
         !!author?.aut_id && (loadingPublicationsByYear || accountAuthorDetailsLoading || loadingPublicationsStats);
     const userHasPublications = authorDetails && authorDetails.espace && authorDetails.espace.doc_count > 0;
     const barChart =
@@ -291,9 +315,7 @@ const Dashboard = ({
         authorDetails && (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1);
 
     useEffect(() => {
-        // eslint-disable-next-line camelcase
         if (account && account.id && author?.aut_id) {
-            // eslint-disable-next-line camelcase
             // don't call the api for non author users since the api call requires an author
             actions.countPossiblyYourPublications(account.id);
             actions.loadAuthorPublicationsStats(account.id, authorDetails);
@@ -301,6 +323,9 @@ const Dashboard = ({
             _loadOrcidSync();
             setOrcidSyncStatusRefreshCount(1);
         }
+        return () => {
+            clearTimeout(lastOrcidSyncStatusRequestRef.current);
+        };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -318,6 +343,27 @@ const Dashboard = ({
                 )}
                 {!loading && authorDetails && (
                     <React.Fragment>
+                        {!!txt.oacomplianceRecordLure &&
+                            !!noncompliantoa &&
+                            !noncompliantoa.loadingPublicationsList &&
+                            noncompliantoa.publicationsListPagingData &&
+                            noncompliantoa.publicationsListPagingData.total > 0 && (
+                                <Grid item xs={12} style={{ marginTop: -27 }}>
+                                    <Alert
+                                        title={txt.oacomplianceRecordLure.title}
+                                        message={txt.oacomplianceRecordLure.message
+                                            .replace('[count]', noncompliantoa.publicationsListPagingData.total)
+                                            .replace('[plural]', pluralTextReplacement)
+                                            .replace('[verbEnding]', verbEndingTextReplacement)}
+                                        actionButtonLabel={txt.oacomplianceRecordLure.actionButtonLabel}
+                                        action={redirectToOaComplianceRecordlist}
+                                        type="custom"
+                                        customType={txt.oacomplianceRecordLure.type}
+                                        customIcon={txt.oacomplianceRecordLure.icon}
+                                        wiggle
+                                    />
+                                </Grid>
+                            )}
                         {!!txt.incompleteRecordLure &&
                             !!incomplete &&
                             !incomplete.loadingPublicationsList &&
@@ -332,7 +378,7 @@ const Dashboard = ({
                                             .replace('[verbEnding]', verbEndingTextReplacement)}
                                         type={txt.incompleteRecordLure.type}
                                         actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
-                                        action={redirectToIncompleteRecordlist}
+                                        action={redirectToIncompleteRecordList}
                                     />
                                 </Grid>
                             )}
@@ -365,6 +411,23 @@ const Dashboard = ({
                         )}
                     </React.Fragment>
                 )}
+                {/* render orcid sync lure */}
+                {author?.aut_orcid_id &&
+                    String(author?.aut_is_orcid_sync_enabled) !== '1' &&
+                    !hideTurnOnOrcidSyncReminder && (
+                        <Grid item xs={12} style={{ marginTop: -27 }}>
+                            <Alert
+                                title={txt.enableOrcidSyncLure.title}
+                                message={txt.enableOrcidSyncLure.message}
+                                type={txt.enableOrcidSyncLure.type}
+                                actionButtonLabel={txt.enableOrcidSyncLure.actionButtonLabel}
+                                alertId="dashboard-orcid-linking-dashboard"
+                                action={openOrcidSyncSettings}
+                                dismissAction={dismissEnableOrcidSyncDialog}
+                                allowDismiss
+                            />
+                        </Grid>
+                    )}
                 {/* render charts/stats depending on availability of data */}
                 {barChart && (publicationStats || (!donutChart && !publicationStats)) && (
                     <Grid item xs={12}>
@@ -388,7 +451,7 @@ const Dashboard = ({
                         </Grid>
                     </React.Fragment>
                 )}
-                {/* render donut chart chart next to publication stats if both available */}
+                {/* render donut chart next to publication stats if both available */}
                 {donutChart && publicationStats && (
                     <React.Fragment>
                         <Grid item xs={12} sm={4}>
@@ -443,6 +506,8 @@ Dashboard.propTypes = {
     authorDetails: PropTypes.object,
     author: PropTypes.object,
     accountAuthorDetailsLoading: PropTypes.bool,
+    accountAuthorSaving: PropTypes.bool,
+    accountAuthorError: PropTypes.bool,
 
     // graph data
     loadingPublicationsByYear: PropTypes.bool,
@@ -456,6 +521,9 @@ Dashboard.propTypes = {
 
     // incomplete Record lure
     incomplete: PropTypes.object,
+
+    // Open Access Compliance Record lure
+    noncompliantoa: PropTypes.object,
 
     // wos/scopus data
     loadingPublicationsStats: PropTypes.bool,

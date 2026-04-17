@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from '@dr.pogodin/react-helmet';
 import PropTypes from 'prop-types';
 import { viewRecordsConfig } from 'config/viewRecord';
 import { locale } from 'locale';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 const dompurify = require('dompurify');
 const moment = require('moment');

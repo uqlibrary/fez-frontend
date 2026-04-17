@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
@@ -134,15 +134,8 @@ export const GrantListEditorRow = ({
         );
     };
 
-    const {
-        deleteRecordConfirmation,
-        moveUpHint,
-        moveDownHint,
-        deleteHint,
-        editHint,
-        selectHint,
-        editButtonId,
-    } = locale;
+    const { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, editHint, selectHint, editButtonId } =
+        locale;
 
     const ariaLabel =
         selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', grant.nameAsPublished) : null;

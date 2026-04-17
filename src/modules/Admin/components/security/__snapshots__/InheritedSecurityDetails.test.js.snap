@@ -3,69 +3,69 @@
 exports[`InheritedSecurityDetails component should render collections correctly 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:11111
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         >
           Theses Assessors (2)
         </p>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:22222
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Another test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         >
           Staff and Students (4)
         </p>
@@ -78,69 +78,69 @@ exports[`InheritedSecurityDetails component should render collections correctly 
 exports[`InheritedSecurityDetails component should render collections for datastreams correctly 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited datastream security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:11111
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         >
           Theses Assessors (2)
         </p>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:22222
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Another test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         >
           Staff and Students (4)
         </p>
@@ -153,67 +153,67 @@ exports[`InheritedSecurityDetails component should render collections for datast
 exports[`InheritedSecurityDetails component should render collections for datastreams correctly with empty policy description 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited datastream security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:11111
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         />
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:22222
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Another test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         />
       </div>
     </div>
@@ -224,67 +224,67 @@ exports[`InheritedSecurityDetails component should render collections for datast
 exports[`InheritedSecurityDetails component should render collections for record correctly with empty policy description 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:11111
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         />
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-2 css-asmogt-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1 css-qw7qxe-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
         >
           UQ:22222
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-7 css-zf6jg7-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
       >
         <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-x1voni-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-subtitle2 css-101yt3s-MuiTypography-root"
         >
           Another test collection
         </h6>
       </div>
       <div
-        class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
         />
       </div>
     </div>
@@ -295,17 +295,17 @@ exports[`InheritedSecurityDetails component should render collections for record
 exports[`InheritedSecurityDetails component should render properly 1`] = `
 <div>
   <div
-    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1uywuy6-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
     </h6>
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-1 css-1urk9zy-MuiGrid2-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
       style="margin-top: 8px;"
     />
   </div>

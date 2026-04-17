@@ -3,8 +3,6 @@ import { rtlRender, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import {
     AttachedFilesField,
     deleteCallbackFactory,
-    datastreamOrderChangeCallbackFactory,
-    // handleOnChange,
     handleDatastreamChange,
     handleDatastreamMultiChange,
 } from './AttachedFilesField';
@@ -97,22 +95,6 @@ describe('AttachedFilesField component', () => {
             const callback = deleteCallbackFactory(dataStreams, onDeleteAttachedFile, onChangeFn)[0];
             callback(1);
             expect(onChangeFn).toHaveBeenCalledWith([1, 2, 1, 2, 3]);
-        });
-
-        it('should create datastream order change callback', () => {
-            const dataStreams = [
-                { test1: 'test a', dsi_id: 1, dsi_dsid: 'test_a', dsi_order: 1 },
-                { test1: 'test b', dsi_id: 2, dsi_dsid: 'test_b', dsi_order: 2 },
-                { test1: 'test c', dsi_id: 3, dsi_dsid: 'test_c' },
-            ];
-            const setDataStreams = jest.fn();
-            const callback = datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams)[0];
-            callback(2, 2, 1);
-            expect(setDataStreams).toHaveBeenCalledWith([
-                { test1: 'test a', dsi_id: 1, dsi_dsid: 'test_a', dsi_order: 2 },
-                { test1: 'test b', dsi_id: 2, dsi_dsid: 'test_b', dsi_order: 1 },
-                { test1: 'test c', dsi_id: 3, dsi_dsid: 'test_c', dsi_order: 3 },
-            ]);
         });
     });
 

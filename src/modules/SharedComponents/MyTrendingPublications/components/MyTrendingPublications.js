@@ -7,7 +7,7 @@ import * as actions from 'actions';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 export const MyTrendingPublications = () => {

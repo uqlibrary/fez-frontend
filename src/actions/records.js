@@ -350,7 +350,6 @@ const getAdminRecordRequest = data => {
             ...data.publication,
             ...{
                 rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
-                // eslint-disable-next-line camelcase
                 rek_genre_type: data.adminSection?.rek_subtype ?? null,
             },
             ...sanitiseData(data, makeReplacer(keys)),
@@ -358,7 +357,6 @@ const getAdminRecordRequest = data => {
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
             ...transformers.getBibliographicSectionSearchKeys(
                 data.bibliographicSection,
-                // eslint-disable-next-line camelcase
                 data.adminSection?.rek_subtype,
             ),
             ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -73,14 +73,21 @@ export const ContributorRowHeader = ({
 
                 <Grid container classes={{ container: classes?.listContainer }}>
                     <Grid item xs={10} sm={5} md={3}>
-                        <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
+                        <ListItemText
+                            secondary={nameColumn}
+                            slotProps={{
+                                secondary: { variant: 'caption' },
+                            }}
+                        />
                     </Grid>
                     {showIdentifierLookup && (
                         <Grid item xs={12} sm={4}>
                             <ListItemText
                                 secondary={identifierColumn}
-                                secondaryTypographyProps={{ variant: 'caption' }}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
+                                slotProps={{
+                                    secondary: { variant: 'caption' },
+                                }}
                             />
                         </Grid>
                     )}
@@ -88,8 +95,10 @@ export const ContributorRowHeader = ({
                         {showRoleInput && (
                             <ListItemText
                                 secondary={roleColumn}
-                                secondaryTypographyProps={{ variant: 'caption' }}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
+                                slotProps={{
+                                    secondary: { variant: 'caption' },
+                                }}
                             />
                         )}
                     </Grid>
@@ -97,7 +106,6 @@ export const ContributorRowHeader = ({
                 <ListItemSecondaryAction classes={{ root: classes?.paddingRight64 }}>
                     <ListItemText
                         secondary={reorderColumn}
-                        secondaryTypographyProps={{ variant: 'caption' }}
                         sx={{
                             display: { xs: 'none', sm: 'block' },
                             '& .MuiListItemText-secondary': {
@@ -106,6 +114,9 @@ export const ContributorRowHeader = ({
                                 ...(isInfinite && { paddingRight: '36px' }),
                                 ...(canEdit && { paddingRight: '78px' }),
                             },
+                        }}
+                        slotProps={{
+                            secondary: { variant: 'caption' },
                         }}
                     />
                 </ListItemSecondaryAction>

@@ -17,7 +17,6 @@ export const NewListEditorField = props => {
 
     return (
         <NewListEditor
-            key={propValueNormalised.length}
             error={!!props.state?.error}
             errorText={props.state?.error}
             remindToAdd={props.remindToAdd}

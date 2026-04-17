@@ -10,10 +10,12 @@ import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from '../config/general';
  * @param statusCode
  * @return [int, {}]
  */
-const assertPayloadsRekDateAndReturnMockedData = (expectedRekDate, response = record, statusCode = 200) => request => {
-    expect(JSON.parse(request.data).rek_date).toBe(expectedRekDate);
-    return [statusCode, { data: { ...response } }];
-};
+const assertPayloadsRekDateAndReturnMockedData =
+    (expectedRekDate, response = record, statusCode = 200) =>
+    request => {
+        expect(JSON.parse(request.data).rek_date).toBe(expectedRekDate);
+        return [statusCode, { data: { ...response } }];
+    };
 
 describe('Record action creators', () => {
     beforeEach(() => {

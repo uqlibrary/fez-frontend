@@ -23,17 +23,21 @@ const isMockToken = node => {
     return node.right.type === 'Literal' && node.right.value === MOCK_UQL_TOKEN;
 };
 
-module.exports = context => ({
-    AssignmentExpression: node => {
-        if (isLeftNodeApiToken(node)) {
-            if (
-                node.right.type === 'LogicalExpression' &&
-                (node.right.left.type === 'Literal' || node.right.right.type === 'Literal')
-            ) {
-                context.report(node, ERROR_MESSAGE_CONDITIONAL);
-            } else if (node.right.type === 'Literal' && !isMockToken(node)) {
-                context.report(node, ERROR_MESSAGE_DIRECT_ASSIGNMENT);
-            }
-        }
+module.exports = {
+    create(context) {
+        return {
+            AssignmentExpression: node => {
+                if (isLeftNodeApiToken(node)) {
+                    if (
+                        node.right.type === 'LogicalExpression' &&
+                        (node.right.left.type === 'Literal' || node.right.right.type === 'Literal')
+                    ) {
+                        context.report(node, ERROR_MESSAGE_CONDITIONAL);
+                    } else if (node.right.type === 'Literal' && !isMockToken(node)) {
+                        context.report(node, ERROR_MESSAGE_DIRECT_ASSIGNMENT);
+                    }
+                }
+            },
+        };
     },
-});
+};

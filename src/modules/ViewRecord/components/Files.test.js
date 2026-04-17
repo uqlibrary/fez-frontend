@@ -89,8 +89,21 @@ describe('Files Component ', () => {
 
     afterEach(() => {
         MockDate.reset();
-        // eslint-disable-next-line max-len
-        mockOnVideoLoad = mockOnVideoFailed = mockOnClose = mockOnImageFailed = mockOnImageFailed = filenameUrl = videoLoadingState = mediaUrlState = previewMediaUrlState = mimeTypeState = videoLoadingState = imageErrorState = videoErrorCodeState = videoErrorMsgState = undefined;
+        mockOnVideoLoad =
+            mockOnVideoFailed =
+            mockOnClose =
+            mockOnImageFailed =
+            mockOnImageFailed =
+            filenameUrl =
+            videoLoadingState =
+            mediaUrlState =
+            previewMediaUrlState =
+            mimeTypeState =
+            videoLoadingState =
+            imageErrorState =
+            videoErrorCodeState =
+            videoErrorMsgState =
+                undefined;
     });
 
     it('should render component', () => {
@@ -99,28 +112,6 @@ describe('Files Component ', () => {
     });
 
     it('should not render advisory statement', () => {
-        const { container } = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_advisory_statement: {
-                    rek_advisory_statement: null,
-                },
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not render advisory statement', () => {
-        const { container } = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render advisory statement', () => {
         const { container } = setup({
             publication: {
                 ...journalArticle,
@@ -206,7 +197,6 @@ describe('Files Component ', () => {
                         dsi_size: 97786,
                     },
                 ],
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'No statement' },
                 fez_record_search_key_sensitive_handling_note_id: {
                     rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
                 },
@@ -333,7 +323,6 @@ describe('Files Component ', () => {
                 ],
             },
         });
-
         expect(container).toMatchSnapshot();
     });
 
@@ -424,7 +413,7 @@ describe('Files Component ', () => {
         const code = 1234;
         const message = 'video failed';
         act(() => {
-            mockOnVideoFailed({ target: { error: { code, message } }} );
+            mockOnVideoFailed({ target: { error: { code, message } } });
         });
         expect(videoErrorCodeState).toEqual(code);
         expect(videoErrorMsgState).toEqual(message);
@@ -968,7 +957,6 @@ describe('Files Component ', () => {
                         rek_ismemberof_order: 1,
                     },
                 ],
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'No statement' },
                 fez_record_search_key_sensitive_handling_note_id: {
                     rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
                 },
@@ -1019,7 +1007,7 @@ describe('Files Component ', () => {
             const fezDatastreamInfo = createFezDatastreamInfoArray(anotherSources, journalArticle.rek_pid);
             const { queryByTestId } = setup(
                 { publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } },
-                { isShallow: false, renderer: rtlRender },
+                { renderer: rtlRender },
             );
 
             expect(fezDatastreamInfo).toMatchSnapshot();
@@ -1049,7 +1037,7 @@ describe('Files Component ', () => {
                         },
                     },
                 },
-                { isShallow: false, renderer: rtlRender },
+                { renderer: rtlRender },
             );
 
             expect(fezDatastreamInfo).toMatchSnapshot();

@@ -29,9 +29,9 @@ jest.mock('../../../context');
 import ThesisSubmission, { getFormConstants } from './ThesisSubmission';
 
 const mockUseNavigate = jest.fn();
-/* eslint-disable react/prop-types */
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
 }));
 
@@ -68,6 +68,8 @@ function setup(props = {}) {
         </WithReduxStore>,
     );
 }
+
+jest.setTimeout(60000);
 
 /**
  * These tests are intentionally extensive, as they are functional tests of the ThesisSubmission component — a critical

@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
@@ -117,7 +117,6 @@ export const ScaleOfSignificanceForm = ({
         significanceInputFieldLabel,
         contributionStatementInputFieldLabel,
         resetFormLabel,
-        id,
         emptySignificanceLabel,
     } = locale;
 
@@ -183,7 +182,6 @@ export const ScaleOfSignificanceForm = ({
                 <RichEditorField
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
-                    id={(!!id && /* istanbul ignore next */ id) || ''}
                     onChange={handleContributionStatement}
                     onKeyPress={saveChanges}
                     error={!!errorText}

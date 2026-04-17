@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
@@ -240,34 +240,38 @@ export default class NtroFields extends React.PureComponent {
         return (
             <React.Fragment>
                 {(this.props.showContributionStatement || this.props.showSignificance) && (
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
                             <Grid container spacing={1}>
-                                {// In theory, we should show them separately.
-                                // In practice, they are always incomplete together
-                                (this.props.showContributionStatement || this.props.showSignificance) && (
-                                    <Grid xs={12}>
-                                        <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
-                                        <Field
-                                            control={control}
-                                            component={SelectField}
-                                            disabled={this.props.isSubmitting}
-                                            name="significance"
-                                            label={contributionStatement.fields.scaleOfWork.label}
-                                            required
-                                            validate={[validation.required]}
-                                            selectFieldId="rek-significance"
-                                        >
-                                            {SIGNIFICANCE.map(item => (
-                                                <MenuItem key={item.value} value={item.value}>
-                                                    {item.text}
-                                                </MenuItem>
-                                            ))}
-                                        </Field>
-                                    </Grid>
-                                )}
+                                {
+                                    // In theory, we should show them separately.
+                                    // In practice, they are always incomplete together
+                                    (this.props.showContributionStatement || this.props.showSignificance) && (
+                                        <Grid size={12}>
+                                            <Typography>
+                                                {contributionStatement.fields.scaleOfWork.description}
+                                            </Typography>
+                                            <Field
+                                                control={control}
+                                                component={SelectField}
+                                                disabled={this.props.isSubmitting}
+                                                name="significance"
+                                                label={contributionStatement.fields.scaleOfWork.label}
+                                                required
+                                                validate={[validation.required]}
+                                                selectFieldId="rek-significance"
+                                            >
+                                                {SIGNIFICANCE.map(item => (
+                                                    <MenuItem key={item.value} value={item.value}>
+                                                        {item.text}
+                                                    </MenuItem>
+                                                ))}
+                                            </Field>
+                                        </Grid>
+                                    )
+                                }
                                 {this.props.showContributionStatement && (
-                                    <Grid xs={12} style={{ marginTop: 24 }}>
+                                    <Grid style={{ marginTop: 24 }} size={12}>
                                         <Field
                                             control={control}
                                             component={RichEditorField}
@@ -300,10 +304,10 @@ export default class NtroFields extends React.PureComponent {
                     !this.props.hideSeries ||
                     !this.props.hideIsrc ||
                     !this.props.hideIsmn) && (
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
                             <Grid container spacing={2}>
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     {!this.props.hideAbstract && (
                                         <>
                                             <Field
@@ -321,7 +325,7 @@ export default class NtroFields extends React.PureComponent {
                                     )}
                                 </Grid>
                                 {!this.props.hideIsmn && (
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={ListEditorField}
@@ -338,7 +342,7 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideIsrc && (
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={ListEditorField}
@@ -356,7 +360,7 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideSeries && (
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={SeriesField}
@@ -367,7 +371,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideVolume && (
-                                    <Grid xs={12} sm={this.row3Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -381,7 +390,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideIssue && (
-                                    <Grid xs={12} sm={this.row3Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -395,7 +409,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideStartPage && (
-                                    <Grid xs={12} sm={this.row3Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -409,7 +428,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideEndPage && (
-                                    <Grid xs={12} sm={this.row3Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row3Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -423,7 +447,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideExtent && (
-                                    <Grid xs={12} sm={this.row4Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row4Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -441,7 +470,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideOriginalFormat && (
-                                    <Grid xs={12} sm={this.row4Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row4Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -455,7 +489,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideAudienceSize && (
-                                    <Grid xs={12} sm={this.row5Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row5Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={SelectField}
@@ -475,7 +514,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hideLanguage && (
-                                    <Grid xs={12} sm={this.row5Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row5Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}
@@ -490,7 +534,12 @@ export default class NtroFields extends React.PureComponent {
                                     </Grid>
                                 )}
                                 {!this.props.hidePeerReviewActivity && (
-                                    <Grid xs={12} sm={this.row5Width}>
+                                    <Grid
+                                        size={{
+                                            xs: 12,
+                                            sm: this.row5Width,
+                                        }}
+                                    >
                                         <Field
                                             control={control}
                                             component={NewGenericSelectField}
@@ -512,7 +561,7 @@ export default class NtroFields extends React.PureComponent {
                     </Grid>
                 )}
                 {!this.props.hideGrants && (
-                    <Grid xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={grantEditor.title}>
                             <Field
                                 control={control}

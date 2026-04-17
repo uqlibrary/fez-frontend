@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageUsers from './index';
-import { render, WithReduxStore, waitFor, waitForElementToBeRemoved, fireEvent, userEvent } from 'test-utils';
+import { render, WithReduxStore, waitFor, fireEvent, userEvent } from 'test-utils';
 import * as repository from 'repositories';
 
 const setup = (testProps = {}) => {
@@ -90,7 +90,7 @@ describe('ManageUsers', () => {
 
         const { getByTestId, findByTestId, queryByTestId, queryAllByText } = setup();
 
-        await waitForElementToBeRemoved(() => document.querySelector('.MuiCircularProgress-svg'), { timeout: 2000 });
+        await waitFor(() => expect(getByTestId('users-list-row-0-edit-this-user')).toBeInTheDocument());
 
         fireEvent.click(getByTestId('users-list-row-0-edit-this-user'));
         await findByTestId('standard-card-user-information');

@@ -318,28 +318,24 @@ describe('ImageGallery Utils', () => {
             );
         });
         it('should blacklist record if display type matches but subtype does not match whitelist', () => {
-            // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
             publication.rek_subtype = 'SomethingElse';
             const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(false);
         });
         it('should whitelist record if display type matches but subtype does not match whitelist for Admin user', () => {
-            // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
             publication.rek_subtype = 'SomethingElse';
             const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(false);
         });
         it('should whitelist record if display type is Design and subtype is Non-NTRO', () => {
-            // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
             publication.rek_subtype = 'Non-NTRO';
             const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(true);
         });
         it('should whitelist record if display type is Design and subtype null', () => {
-            // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
             publication.rek_subtype = null;
             const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
@@ -382,7 +378,7 @@ describe('ImageGallery Utils', () => {
                     },
                 ],
             };
-            // eslint-disable-next-line prettier/prettier
+
             const author = { pol_id: 1 };
             const fd = getThumbnail(testPublication, { isAdmin: false, isAuthor: false, author });
             expect(fd.securityStatus).toEqual(true);

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { TopCitedPublications } from 'modules/TopCitedPublications';
 import { CulturalAdvice, CulturalNotice } from 'modules/SharedComponents/CulturalAdvice';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/GridLegacy';
 import { AcknowledgementOfCountry } from '../../SharedComponents/AcknowledgementOfCountry';
 import { GenAiTermsOfUse } from '../../SharedComponents/GenAiTermsOfUse';
 

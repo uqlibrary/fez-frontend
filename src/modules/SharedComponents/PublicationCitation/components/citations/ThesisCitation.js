@@ -20,7 +20,7 @@ export const ThesisCitation = ({ publication, hideDoiLink, citationStyle }) => {
     // {Author}{Year| (|).}<i>{Title| |.}</i>{Thesis type| |,}{School, Centre or Institute| |,}{Institution| |.} {doi| https://doi.org/|}
 
     return (
-        <div className="citationContent citationThesis">
+        <span id={`citation-content-${publication.rek_pid}`} className="citationContent citationThesis">
             {/* {Author}*/}
             <Partials.AuthorsCitationView citationStyle={citationStyle} publication={publication} />
 
@@ -41,7 +41,7 @@ export const ThesisCitation = ({ publication, hideDoiLink, citationStyle }) => {
 
             {/* {doi| doi:|}*/}
             <Partials.DoiCitationView doi={record.doi} hideDoiLink={hideDoiLink} />
-        </div>
+        </span>
     );
 };
 ThesisCitation.propTypes = {
