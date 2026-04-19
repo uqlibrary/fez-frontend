@@ -26,7 +26,7 @@ const NavigationPrompt = ({ when, children }) => {
     const blocker = useBlocker(({ currentLocation, nextLocation }) => blockNavigation(currentLocation, nextLocation));
 
     const navigateToNextLocation = () => {
-        blocker.proceed();
+        blocker?.proceed?.();
         navigate(nextLocation.pathname);
     };
 
@@ -35,7 +35,7 @@ const NavigationPrompt = ({ when, children }) => {
     };
 
     const _onCancel = () => {
-        blocker.reset();
+        blocker?.reset?.();
         setNextLocation(null);
     };
 
