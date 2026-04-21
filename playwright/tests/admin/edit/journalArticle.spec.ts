@@ -16,7 +16,7 @@ import {
 } from '../helpers';
 import { readCKEditor } from '../../../lib/ckeditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
-import { arraySortByField } from '../../../../src/helpers/general';
+import { sortByNumericField } from '../../../../src/helpers/general';
 
 test.describe('Journal Article admin edit', () => {
     const record = { ...recordList.data[0] };
@@ -178,7 +178,7 @@ test.describe('Journal Article admin edit', () => {
             const card = bibliographicCards.nth(6);
             await expect(card.locator('h4')).toHaveText(/Subject/);
             const subjects = record.fez_record_search_key_subject
-                .sort((a: object, b: object) => arraySortByField(a, b, 'rek_subject_order'))
+                .sort((a: object, b: object) => sortByNumericField(a, b, 'rek_subject_order'))
                 .map(item => item.rek_subject_lookup);
             for (const [index, subject] of subjects.entries()) {
                 await expect(card.locator('p').nth(index)).toHaveText(subject);

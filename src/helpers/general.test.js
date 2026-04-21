@@ -17,7 +17,7 @@ import {
     filterObject,
     numbersOnly,
     hasAtLeastOneItemSelected,
-    arraySortByField,
+    sortByNumericField,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
@@ -559,7 +559,7 @@ describe('general helpers', () => {
         });
     });
 
-    describe('arraySortByField', () => {
+    describe('sortByNumericField', () => {
         test('should sort correctly', () => {
             const items = [
                 { anotherField: 'b', order: 2 },
@@ -567,7 +567,7 @@ describe('general helpers', () => {
                 { anotherField: 'a', order: '1' },
                 { anotherField: 'c', order: 3 },
             ];
-            expect([...items].sort((a, b) => arraySortByField(a, b, 'order'))).toEqual([
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order'))).toEqual([
                 {
                     anotherField: 'a',
                     order: '1',
@@ -583,7 +583,7 @@ describe('general helpers', () => {
                 { anotherField: 'd' },
             ]);
             // desc
-            expect([...items].sort((a, b) => arraySortByField(a, b, 'order', 'desc'))).toEqual([
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order', 'desc'))).toEqual([
                 {
                     anotherField: 'd',
                 },
