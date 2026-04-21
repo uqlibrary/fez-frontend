@@ -156,7 +156,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                 }
                             })()}
                         </li>
-                ))}
+                    ))}
             </Box>
         );
     };
