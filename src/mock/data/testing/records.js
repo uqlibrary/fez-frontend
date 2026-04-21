@@ -4335,7 +4335,19 @@ export const journalArticle = {
     "fez_record_search_key_structural_systems": [],
     "fez_record_search_key_style": [],
     "fez_record_search_key_subcategory": [],
-    "fez_record_search_key_subject": [],
+    "fez_record_search_key_subject": [{
+        "rek_subject_order": 2,
+        "rek_subject": 453298,
+        "rek_subject_lookup": "1312 Molecular Biology"
+    }, {
+        "rek_subject_order": 1,
+        "rek_subject": 453471,
+        "rek_subject_lookup": "2804 Cellular and Molecular Neuroscience"
+    }, {
+        "rek_subject_order": 3,
+        "rek_subject": 453293,
+        "rek_subject_lookup": "1307 Cell Biology"
+    }],
     "fez_record_search_key_supervisor": [],
     "fez_record_search_key_supervisor_id": [],
     "fez_record_search_key_surrounding_features": [],

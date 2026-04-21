@@ -11,7 +11,7 @@ import {
     EditorsCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { parseHtmlToJSX } from 'helpers/general';
+import { parseHtmlToJSX, silentTryCatch, arraySortByField } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router';
@@ -137,23 +137,25 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         const testId = subkey.replace(/_/g, '-');
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                {list.map((item, index) => (
-                    <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
-                        {(() => {
-                            const data = getData(item, subkey);
-                            if (getLink) {
-                                const firstTwo = subkey.split('_').slice(0, 2).join('_');
-                                const icon = item[firstTwo + '_icon'] ?? '';
-                                const iconHint =
-                                    icon === 'openalex'
-                                        ? 'OpenAlex'
-                                        : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
-                                return renderLink(getLink(item[subkey], data), data, '', icon, iconHint);
-                            } else {
-                                return data;
-                            }
-                        })()}
-                    </li>
+                {list
+                    .sort((a, b) => silentTryCatch(() => arraySortByField(a, b, `${subkey}_order`), 0))
+                    .map((item, index) => (
+                        <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
+                            {(() => {
+                                const data = getData(item, subkey);
+                                if (getLink) {
+                                    const firstTwo = subkey.split('_').slice(0, 2).join('_');
+                                    const icon = item[firstTwo + '_icon'] ?? '';
+                                    const iconHint =
+                                        icon === 'openalex'
+                                            ? 'OpenAlex'
+                                            : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
+                                    return renderLink(getLink(item[subkey], data), data, '', icon, iconHint);
+                                } else {
+                                    return data;
+                                }
+                            })()}
+                        </li>
                 ))}
             </Box>
         );
