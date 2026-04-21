@@ -13,13 +13,28 @@ global.dr = arg => {
 /* istanbul ignore next */
 global.dj = console.log.bind(console, '%O');
 
-export const tryCatch = (callback, _default = undefined) => {
+export const silentTryCatch = (callback, _default = undefined) => {
     try {
         return callback();
     } catch (e) {
         /* istanbul ignore next */
         return _default;
     }
+};
+
+/**
+ * @param {object} itemA
+ * @param {object} itemB
+ * @param {string} field
+ * @param {string} direction
+ * @return {number}
+ */
+export const sortByNumericField = (a, b, field, direction = 'asc') => {
+    const valueA = Number(a[field]);
+    const valueB = Number(b[field]);
+    return direction === 'asc'
+        ? (isNaN(valueA) ? Infinity : valueA) - (isNaN(valueB) ? Infinity : valueB)
+        : (isNaN(valueB) ? Infinity : valueB) - (isNaN(valueA) ? Infinity : valueA);
 };
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
@@ -72,8 +87,8 @@ export function hydrateMock(truncatedData) {
                         [`${shortKey}_id`]: truncatedData[`rek_${shortKey}_id`] || 547492, // any random number to mock db long unique id
                         [`${shortKey}_pid`]: truncatedData.rek_pid,
                         [`${shortKey}_xsdmf_id`]: null,
-                        ...field2,
                         [`${shortKey}_order`]: order + 1,
+                        ...field2,
                     };
                 } else {
                     newEntry = {
