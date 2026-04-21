@@ -11,7 +11,7 @@ import {
     EditorsCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { parseHtmlToJSX, silentTryCatch, sortByField } from 'helpers/general';
+import { parseHtmlToJSX, silentTryCatch, arraySortByField } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router';
@@ -133,7 +133,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                 {list
-                    .sort((a, b) => silentTryCatch(() => sortByField(a, b, `${subkey}_order`), 0))
+                    .sort((a, b) => silentTryCatch(() => arraySortByField(a, b, `${subkey}_order`), 0))
                     .map((item, index) => (
                         <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
                             {(() => {

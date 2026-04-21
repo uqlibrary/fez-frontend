@@ -29,7 +29,7 @@ export const silentTryCatch = (callback, _default = undefined) => {
  * @param {string} direction
  * @return {number}
  */
-export const sortByField = (a, b, field, direction = 'asc') => {
+export const arraySortByField = (a, b, field, direction = 'asc') => {
     const valueA = Number(a[field]);
     const valueB = Number(b[field]);
     return direction === 'asc'

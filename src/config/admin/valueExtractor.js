@@ -2,7 +2,7 @@ import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
 import locale from 'locale/global';
-import { silentTryCatch, sortByField } from '../../helpers/general';
+import { silentTryCatch, arraySortByField } from '../../helpers/general';
 
 const authorsGetValue = record => {
     const authors = (record.fez_record_search_key_author || []).reduce(
@@ -359,7 +359,7 @@ export default {
     subjects: {
         getValue: record => {
             const returnValue = (record.fez_record_search_key_subject || [])
-                .sort((a, b) => silentTryCatch(() => sortByField(a, b, 'rek_subject_order'), 0))
+                .sort((a, b) => silentTryCatch(() => arraySortByField(a, b, 'rek_subject_order'), 0))
                 .map(subject => ({
                     rek_value: {
                         key: subject.rek_subject,
