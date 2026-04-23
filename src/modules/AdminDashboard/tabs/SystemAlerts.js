@@ -15,16 +15,16 @@ import { DataGrid } from '@mui/x-data-grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { getSystemAlertColumns, getDefaultSorting, SYSTEM_ALERT_ACTION } from '../config';
+import { getDefaultSorting, SYSTEM_ALERT_ACTION } from '../config';
 import { transformSystemAlertRequest } from '../transformers';
-import { useSystemAlertDrawer, useAlertStatus } from '../hooks';
+import { useSystemAlertDrawer, useAlertStatus, useSystemAlertColumns, useAdminDashboardConfig } from '../hooks';
 
 import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
 
 const SystemAlerts = () => {
     const txt = locale.components.adminDashboard.tabs.systemalerts;
 
-    const { adminDashboardConfigData } = useSelector(state => state.get('adminDashboardConfigReducer'));
+    const adminDashboardConfigData = useAdminDashboardConfig();
 
     const {
         adminDashboardSystemAlertsData,
@@ -47,10 +47,7 @@ const SystemAlerts = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const columns = React.useMemo(
-        () => getSystemAlertColumns(txt, adminDashboardConfigData.admin_users),
-        [adminDashboardConfigData.admin_users, txt],
-    );
+    const columns = useSystemAlertColumns(txt);
 
     const handleRowClick = params => {
         openDrawer(params.row);
@@ -132,7 +129,7 @@ const SystemAlerts = () => {
                                 sortingOrder={['asc', 'desc']}
                                 initialState={{
                                     pagination: {
-                                        paginationModel: { page: 0, pageSize: 10 },
+                                        paginationModel: { page: 0, pageSize: 25 },
                                     },
                                     sorting: {
                                         sortModel: defaultSorting,
@@ -142,7 +139,7 @@ const SystemAlerts = () => {
                                 onRowClick={handleRowClick}
                                 autoHeight
                                 getRowId={row => row.sat_id}
-                                disableColumnMenu
+                                disableColumnSelector
                             />
                             <SystemAlertsDrawer
                                 open={open}
