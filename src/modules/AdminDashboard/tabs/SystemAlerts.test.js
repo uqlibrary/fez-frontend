@@ -43,6 +43,30 @@ describe('SystemAlerts tab', () => {
         mockApi.reset();
         jest.clearAllMocks();
     });
+
+    const openStatusFilter = async utils => {
+        const { getByLabelText, getByRole } = utils;
+
+        // open column menu
+        await userEvent.click(getByLabelText('Status column menu'));
+
+        // open filter panel
+        await userEvent.click(getByRole('menuitem', { name: /filter/i }));
+    };
+
+    const selectFilterValue = async (utils, valueLabel) => {
+        const { getByRole } = utils;
+
+        // filter panel is a tooltip
+        const dialog = getByRole('tooltip');
+
+        // value combobox inside dialog
+        const valueCombo = within(dialog).getByLabelText('Value');
+
+        await userEvent.click(valueCombo);
+        await userEvent.click(getByRole('option', { name: valueLabel }));
+    };
+
     it('should render loading state', async () => {
         const { getByText, getByTestId } = setup();
         expect(getByTestId('admin-dashboard-systemalerts-skeleton')).toBeInTheDocument();
@@ -159,5 +183,123 @@ describe('SystemAlerts tab', () => {
         });
 
         await waitForElementToBeRemoved(getByTestId('system-alert-detail'));
+    });
+
+    it('filters Mine correctly', async () => {
+        mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl).reply(200, {
+            data: [
+                ...adminDashboardSystemAlerts,
+                {
+                    sat_id: 14,
+                    sat_title: 'Mine',
+                    sat_content: 'Test Mine.',
+                    sat_created_date: '2024-5-6 15:55:00',
+                    sat_assigned_date: null,
+                    sat_resolved_date: undefined,
+                    sat_assigned_to: mockUserid,
+                    sat_resolved_by: undefined,
+                },
+            ],
+        });
+
+        const utils = setup();
+        const { getByTestId, getAllByRole } = utils;
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        await openStatusFilter(utils);
+        await selectFilterValue(utils, 'Mine');
+
+        await waitFor(() => {
+            expect(getAllByRole('row').length).toBe(2);
+        });
+    });
+
+    it('filters Unassigned correctly', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        const utils = setup();
+        const { getByTestId, getAllByRole, queryByText } = utils;
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        await openStatusFilter(utils);
+        await selectFilterValue(utils, 'Unassigned');
+
+        await waitFor(() => {
+            expect(getAllByRole('row').length).toBe(2);
+        });
+
+        expect(queryByText('Another Staff')).not.toBeInTheDocument();
+    });
+
+    it('filters by specific user correctly', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        const utils = setup();
+        const { getByTestId, getAllByRole, queryByText } = utils;
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        await openStatusFilter(utils);
+        await selectFilterValue(utils, 'Another Staff');
+
+        await waitFor(() => {
+            expect(getAllByRole('row').length).toBe(2);
+        });
+
+        expect(queryByText('Unassigned')).not.toBeInTheDocument();
+    });
+
+    it('clears status filter correctly', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        const utils = setup();
+        const { getByTestId, getByRole, getAllByRole } = utils;
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        // apply filter
+        await openStatusFilter(utils);
+        await selectFilterValue(utils, 'Mine');
+
+        // assert filtered results - only title row
+        expect(getAllByRole('row').length).toBe(1);
+
+        // reopen filter
+        await openStatusFilter(utils);
+
+        // clear filter = select empty value (first option in dropdown)
+        const valueCombo = within(getByRole('tooltip')).getByLabelText('Value');
+        await userEvent.click(valueCombo);
+
+        const options = getAllByRole('option');
+        await userEvent.click(options[0]); // first option = clear/reset
+
+        // assert reset state
+        expect(getAllByRole('row').length).toBe(4);
+    });
+
+    it('should render safely when adminDashboardConfigReducer is null', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        const state = { adminDashboardConfigReducer: null };
+        const { getByTestId, getByText, getAllByRole } = setup({}, state);
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        // table still renders
+        expect(getByText(/system alerts/i)).toBeInTheDocument();
+
+        // rows still render (system should fallback safely)
+        expect(getAllByRole('row').length).toBeGreaterThan(0);
     });
 });

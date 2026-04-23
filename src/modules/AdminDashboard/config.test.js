@@ -13,6 +13,8 @@ import {
     getFormattedServerDate,
     dateToUtc,
     DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
+    buildStatusOptions,
+    getSystemAlertColumns,
 } from './config';
 
 describe('config', () => {
@@ -176,6 +178,93 @@ describe('config', () => {
                 const result = dateToUtc({ date, format: DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS });
                 expect(result).toBe('1st October 2023 02:00:00'); // Adjusted for UTC conversion with format
             });
+        });
+    });
+
+    describe('buildStatusOptions', () => {
+        it('returns Mine, Unassigned, and users', () => {
+            const users = [
+                { id: 1, preferred_name: 'Alice' },
+                { id: 2, preferred_name: 'Bob' },
+            ];
+
+            const locale = {
+                alertStatus: { UNASSIGNED: 'Unassigned' },
+            };
+
+            const result = buildStatusOptions(users, { id: 1 }, locale);
+
+            expect(result).toEqual([
+                { value: '__MINE__', label: 'Mine' },
+                { value: '__UNASSIGNED__', label: 'Unassigned' },
+                { value: 1, label: 'Alice' },
+                { value: 2, label: 'Bob' },
+            ]);
+        });
+    });
+
+    describe('getSystemAlertColumns', () => {
+        const locale = {
+            columns: {
+                createdDate: 'Created',
+                topic: 'Topic',
+                status: 'Status',
+            },
+            alertStatus: {
+                UNASSIGNED: 'Unassigned',
+                UNKNOWN: 'Unknown',
+            },
+        };
+
+        const statusOptions = [
+            { value: '__MINE__', label: 'Mine' },
+            { value: '__UNASSIGNED__', label: 'Unassigned' },
+            { value: 1, label: 'Alice' },
+        ];
+
+        const users = [
+            { id: 1, preferred_name: 'Alice' },
+            { id: 2, preferred_name: 'Bob' },
+        ];
+
+        const currentUser = { id: 1 };
+
+        it('formats assigned user correctly', () => {
+            const columns = getSystemAlertColumns(locale, users, currentUser, statusOptions);
+
+            const statusCol = columns.find(c => c.field === 'sat_assigned_to');
+
+            expect(statusCol.valueFormatter(1)).toBe('Alice');
+            expect(statusCol.valueFormatter(null)).toBe('Unassigned');
+            expect(statusCol.valueFormatter(999)).toBe('Unknown');
+        });
+
+        it('filters Mine correctly', () => {
+            const columns = getSystemAlertColumns(locale, users, currentUser, statusOptions);
+
+            const operator = columns.find(c => c.field === 'sat_assigned_to').filterOperators[0];
+
+            const fn = operator.getApplyFilterFn({ value: '__MINE__' });
+
+            const rowMine = { sat_assigned_to: 1 };
+            const rowOther = { sat_assigned_to: 2 };
+
+            expect(fn(null, rowMine)).toBe(true);
+            expect(fn(null, rowOther)).toBe(false);
+        });
+
+        it('filters Unassigned correctly', () => {
+            const columns = getSystemAlertColumns(locale, users, currentUser, statusOptions);
+
+            const operator = columns.find(c => c.field === 'sat_assigned_to').filterOperators[0];
+
+            const fn = operator.getApplyFilterFn({ value: '__UNASSIGNED__' });
+
+            const rowUnassigned = { sat_assigned_to: null };
+            const rowAssigned = { sat_assigned_to: 1 };
+
+            expect(fn(null, rowUnassigned)).toBe(true);
+            expect(fn(null, rowAssigned)).toBe(false);
         });
     });
 });
