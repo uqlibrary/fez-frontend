@@ -73,7 +73,7 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
         }
 
         await expect(page.locator('.MuiTablePagination-displayedRows')).toHaveText('1–9 of 9');
-        await expect(page.locator('.MuiTablePagination-input > input')).toHaveValue('10');
+        await expect(page.locator('.MuiTablePagination-input > input')).toHaveValue('25');
     });
 
     test('shows detail drawer when row is clicked', async ({ page }) => {
