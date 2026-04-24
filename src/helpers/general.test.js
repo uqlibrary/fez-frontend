@@ -17,6 +17,7 @@ import {
     filterObject,
     numbersOnly,
     hasAtLeastOneItemSelected,
+    sortByNumericField,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
@@ -555,6 +556,50 @@ describe('general helpers', () => {
         it('should return true', () => {
             expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, selected: true }])).toBeTruthy();
             expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, custom: true }], 'custom')).toBeTruthy();
+        });
+    });
+
+    describe('sortByNumericField', () => {
+        test('should sort correctly', () => {
+            const items = [
+                { anotherField: 'b', order: 2 },
+                { anotherField: 'd' },
+                { anotherField: 'a', order: '1' },
+                { anotherField: 'c', order: 3 },
+            ];
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order'))).toEqual([
+                {
+                    anotherField: 'a',
+                    order: '1',
+                },
+                {
+                    anotherField: 'b',
+                    order: 2,
+                },
+                {
+                    anotherField: 'c',
+                    order: 3,
+                },
+                { anotherField: 'd' },
+            ]);
+            // desc
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order', 'desc'))).toEqual([
+                {
+                    anotherField: 'd',
+                },
+                {
+                    anotherField: 'c',
+                    order: 3,
+                },
+                {
+                    anotherField: 'b',
+                    order: 2,
+                },
+                {
+                    anotherField: 'a',
+                    order: '1',
+                },
+            ]);
         });
     });
 });
