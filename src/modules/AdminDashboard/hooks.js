@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useConfirmationState } from 'hooks';
 import { isEmptyStr } from './utils';
-import { getSystemAlertColumns, buildStatusOptions } from './config';
+import { getSystemAlertColumns, buildStatusFilterOptions, buildAdminUserOptions } from './config';
 
 const EMPTY_ARRAY = [];
 
@@ -64,13 +64,29 @@ export const useAdminDashboardConfig = () => {
     return useSelector(state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData || {});
 };
 
-export const useSystemAlertColumns = locale => {
+export const useAdminUsers = () => {
     const config = useAdminDashboardConfig();
-    const users = config.admin_users ?? EMPTY_ARRAY;
-    const currentUser = config.logged_in_user;
+
+    return {
+        users: config.admin_users ?? EMPTY_ARRAY,
+        currentUser: config.logged_in_user,
+    };
+};
+
+export const useAdminUserOptions = unassignedLabel => {
+    const { users, currentUser } = useAdminUsers();
+
+    return React.useMemo(
+        () => buildAdminUserOptions(users, currentUser, unassignedLabel),
+        [users, currentUser, unassignedLabel],
+    );
+};
+
+export const useSystemAlertColumns = locale => {
+    const { users, currentUser } = useAdminUsers();
 
     const statusOptions = React.useMemo(
-        () => buildStatusOptions(users, currentUser, locale),
+        () => buildStatusFilterOptions(users, currentUser, locale),
         [users, currentUser, locale],
     );
 

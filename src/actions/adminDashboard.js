@@ -1,5 +1,5 @@
 import * as actions from './actionTypes';
-import { get, post, put, destroy } from 'repositories/generic';
+import { get, post, put, patch, destroy } from 'repositories/generic';
 import {
     ADMIN_DASHBOARD_CONFIG_API,
     ADMIN_DASHBOARD_TODAY_API,
@@ -7,6 +7,7 @@ import {
     ADMIN_DASHBOARD_SYSTEM_ALERTS_API,
     ADMIN_DASHBOARD_DISPLAY_REPORT_API,
     ADMIN_DASHBOARD_EXPORT_REPORT_API,
+    ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API,
 } from 'repositories/routes';
 
 import { promptForDownload } from './exportPublicationsDataTransformers';
@@ -181,6 +182,40 @@ export function adminDashboardSystemAlertsUpdateClear() {
     return dispatch => {
         dispatch({
             type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_UPDATE_CLEAR,
+        });
+    };
+}
+
+/**
+ * Handles system alerts batch assign operation
+ * @returns {function(*)}
+ */
+export function adminDashboardSystemAlertsBatchAssign(request) {
+    return dispatch => {
+        dispatch({ type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_UPDATING });
+        return patch(ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API(), request)
+            .then(response => {
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_SUCCESS,
+                    payload: response,
+                });
+
+                return Promise.resolve(response);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+}
+
+export function adminDashboardSystemAlertsBatchAssignClear() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_CLEAR,
         });
     };
 }

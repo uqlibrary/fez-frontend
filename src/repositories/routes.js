@@ -645,6 +645,10 @@ export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = ({ id } = { id: null }) => ({
     apiUrl: `dashboard/alerts${id ? `/${id}` : ''}`,
 });
 
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API = () => ({
+    apiUrl: 'dashboard/alerts/assign',
+});
+
 export const simpleQueryEncode = request =>
     Object.keys(request)
         .filter(key => request[key] !== '' && request[key] !== undefined)
