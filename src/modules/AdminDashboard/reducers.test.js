@@ -120,6 +120,36 @@ describe('reducers', () => {
             });
         });
 
+        it('should handle requestor_id action', () => {
+            const initialState = { ...emptyReportActionState };
+            const action = {
+                type: 'requestor_id',
+                value: 'data',
+            };
+
+            const newState = reportActionReducer(initialState, action);
+
+            expect(newState).toEqual({
+                ...initialState,
+                filters: { ...initialState.filters, requestor_id: 'data' },
+            });
+        });
+
+        it('should handle pid action', () => {
+            const initialState = { ...emptyReportActionState };
+            const action = {
+                type: 'pid',
+                value: 'uq:data',
+            };
+
+            const newState = reportActionReducer(initialState, action);
+
+            expect(newState).toEqual({
+                ...initialState,
+                filters: { ...initialState.filters, pid: 'uq:data' },
+            });
+        });
+
         it('should handle default case', () => {
             const initialState = { ...emptyReportActionState };
             const action = { type: 'UNKNOWN_ACTION' }; // An unknown action type
