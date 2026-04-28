@@ -17,9 +17,18 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { getDefaultSorting, SYSTEM_ALERT_ACTION } from '../config';
 import { transformSystemAlertRequest } from '../transformers';
-import { useSystemAlertDrawer, useAlertStatus, useSystemAlertColumns, useAdminDashboardConfig } from '../hooks';
+import {
+    useSystemAlertDrawer,
+    useAlertStatus,
+    useSystemAlertColumns,
+    useAdminDashboardConfig,
+    useAdminUserOptions,
+} from '../hooks';
 
 import SystemAlertsDrawer from '../components/SystemAlertsDrawer';
+import Box from '@mui/material/Box';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
 
 const SystemAlerts = () => {
     const txt = locale.components.adminDashboard.tabs.systemalerts;
@@ -33,17 +42,41 @@ const SystemAlerts = () => {
         adminDashboardSystemAlertsUpdateFailed,
     } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
 
+    const { adminDashboardSystemAlertsBatchAssignUpdating, adminDashboardSystemAlertsBatchAssignFailed } = useSelector(
+        state => state.get('adminDashboardSystemAlertsBatchAssignReducer'),
+    );
+
     const dispatch = useDispatch();
 
     const { open, row, openDrawer, closeDrawer } = useSystemAlertDrawer(adminDashboardSystemAlertsData);
 
     const [alertIsVisible, hideAlert] = useAlertStatus({
-        message: adminDashboardSystemAlertsFailed || adminDashboardSystemAlertsUpdateFailed,
+        message:
+            adminDashboardSystemAlertsFailed ||
+            adminDashboardSystemAlertsUpdateFailed ||
+            adminDashboardSystemAlertsBatchAssignFailed,
         hideAction: actions.adminDashboardSystemAlertsUpdateClear,
     });
 
+    const [selectionModel, setSelectionModel] = React.useState([]);
+    const [assignValue, setAssignValue] = React.useState(null);
+
+    const selectedRows = React.useMemo(() => {
+        if (!adminDashboardSystemAlertsData) return [];
+
+        const selectedIds = new Set(selectionModel);
+        return adminDashboardSystemAlertsData.filter(r => selectedIds.has(r.sat_id));
+    }, [selectionModel, adminDashboardSystemAlertsData]);
+
+    const canAssign = React.useMemo(() => {
+        return selectedRows.length > 0 && selectedRows.every(r => !r.sat_resolved_by);
+    }, [selectedRows]);
+
+    const assignOptions = useAdminUserOptions();
+
     React.useEffect(() => {
         dispatch(actions.loadAdminDashboardSystemAlerts());
+        dispatch(actions.adminDashboardSystemAlertsBatchAssignClear());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -55,6 +88,12 @@ const SystemAlerts = () => {
     const handleCloseDrawer = () => {
         closeDrawer();
     };
+
+    const refreshData = () => {
+        dispatch(actions.loadAdminDashboardSystemAlerts());
+        dispatch(actions.loadAdminDashboardToday());
+    };
+
     const handleSystemAlertUpdate = (action, row) => {
         const wrappedRequest = transformSystemAlertRequest({
             user: adminDashboardConfigData.logged_in_user,
@@ -68,8 +107,7 @@ const SystemAlerts = () => {
                 if (action === SYSTEM_ALERT_ACTION.RESOLVE) {
                     closeDrawer();
                 }
-                dispatch(actions.loadAdminDashboardSystemAlerts());
-                dispatch(actions.loadAdminDashboardToday());
+                refreshData();
             })
             .catch(
                 /* istanbul ignore next */ error => {
@@ -78,6 +116,24 @@ const SystemAlerts = () => {
                 },
             );
     };
+
+    const handleBatchAssign = userId => {
+        /* istanbul ignore next */
+        if (!userId) return;
+
+        const payload = {
+            ids: [...selectionModel],
+            sat_assigned_to: userId,
+        };
+
+        dispatch(actions.adminDashboardSystemAlertsBatchAssign(payload))
+            .then(() => {
+                setSelectionModel([]);
+                refreshData();
+            })
+            .catch(/* istanbul ignore next */ () => {});
+    };
+
     const defaultSorting = getDefaultSorting('alerts');
 
     return (
@@ -123,6 +179,29 @@ const SystemAlerts = () => {
                 <Grid item xs={12}>
                     {!!adminDashboardSystemAlertsData && (
                         <>
+                            {selectionModel.length > 0 && (
+                                <Box sx={{ mb: 1, display: 'flex', gap: 1, alignItems: 'center' }}>
+                                    <Typography>{selectionModel.length} selected</Typography>
+
+                                    <Autocomplete
+                                        size="small"
+                                        sx={{ minWidth: 180 }}
+                                        options={assignOptions}
+                                        value={assignValue}
+                                        getOptionLabel={option => option.preferred_name}
+                                        onChange={(_, selectedUser) => {
+                                            /* istanbul ignore next */
+                                            if (!selectedUser) return;
+
+                                            handleBatchAssign(selectedUser.id);
+                                            setAssignValue(null); // reset after action
+                                        }}
+                                        renderInput={params => <TextField {...params} label="Assign" size="small" />}
+                                        disabled={!canAssign || adminDashboardSystemAlertsBatchAssignUpdating}
+                                    />
+                                    {adminDashboardSystemAlertsBatchAssignUpdating && <CircularProgress size={16} />}
+                                </Box>
+                            )}
                             <DataGrid
                                 rows={adminDashboardSystemAlertsData ?? /* istanbul ignore next */ []}
                                 columns={columns}
@@ -140,6 +219,10 @@ const SystemAlerts = () => {
                                 autoHeight
                                 getRowId={row => row.sat_id}
                                 disableColumnSelector
+                                checkboxSelection
+                                disableRowSelectionOnClick
+                                rowSelectionModel={selectionModel}
+                                onRowSelectionModelChange={setSelectionModel}
                             />
                             <SystemAlertsDrawer
                                 open={open}
