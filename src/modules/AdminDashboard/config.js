@@ -151,20 +151,43 @@ export const getDefaultSorting = reportType => DEFAULT_SORTING?.[reportType] || 
 export const getFormattedServerDate = (dateStr, format = DEFAULT_DATE_FORMAT) =>
     (dateStr && moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(format)) || '';
 
-export const buildStatusOptions = (users, currentUser, locale) => [
-    {
-        value: FILTER_VALUES.MINE,
-        label: 'Mine',
-    },
-    {
-        value: FILTER_VALUES.UNASSIGNED,
-        label: locale.alertStatus.UNASSIGNED,
-    },
-    ...users.map(user => ({
-        value: user.id,
-        label: user.preferred_name,
-    })),
-];
+export const sortUsersByName = (users = []) =>
+    [...users].sort((a, b) =>
+        a.preferred_name.localeCompare(b.preferred_name, undefined, {
+            sensitivity: 'base',
+        }),
+    );
+
+export const buildAdminUserOptions = (users = [], currentUser, unassignedLabel) => {
+    const sorted = sortUsersByName(users);
+    const activeUser = sorted.find(user => user.id === currentUser?.id);
+    const others = sorted.filter(user => user.id !== currentUser?.id);
+
+    const options = [activeUser, ...others].filter(Boolean);
+
+    if (!unassignedLabel) return options;
+
+    return [{ id: 0, preferred_name: unassignedLabel }, ...options];
+};
+
+export const buildStatusFilterOptions = (users = [], currentUser, locale) => {
+    const sorted = sortUsersByName(users);
+
+    return [
+        {
+            value: FILTER_VALUES.MINE,
+            label: 'Mine',
+        },
+        {
+            value: FILTER_VALUES.UNASSIGNED,
+            label: locale.alertStatus.UNASSIGNED,
+        },
+        ...sorted.map(user => ({
+            value: user.id,
+            label: user.preferred_name,
+        })),
+    ];
+};
 
 export const getSystemAlertColumns = (locale, users, currentUser, statusOptions) => {
     const alertStatus = locale.alertStatus;

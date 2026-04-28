@@ -302,4 +302,99 @@ describe('SystemAlerts tab', () => {
         // rows still render (system should fallback safely)
         expect(getAllByRole('row').length).toBeGreaterThan(0);
     });
+
+    it('should show batch assign controls when rows are selected', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        const { getByTestId, getAllByRole, getByText, getByLabelText } = setup();
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        // select first row (skip header checkbox)
+        const checkboxes = getAllByRole('checkbox');
+        await userEvent.click(checkboxes[1]);
+
+        expect(getByText(/1 selected/i)).toBeInTheDocument();
+        expect(getByLabelText(/assign/i)).toBeInTheDocument();
+    });
+
+    it('should call batch assign API with correct payload', async () => {
+        const expectedPayload = {
+            ids: [1],
+            sat_assigned_to: 13,
+        };
+
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        mockApi
+            .onPatch(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API().apiUrl, expectedPayload)
+            .reply(200, {});
+
+        const batchAssignSpy = jest.spyOn(DashboardActions, 'adminDashboardSystemAlertsBatchAssign');
+
+        const { getByTestId, getAllByRole, getByLabelText, getByRole, queryByText } = setup();
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        const checkboxes = getAllByRole('checkbox');
+        await userEvent.click(checkboxes[1]); // select first row
+
+        // open assign dropdown
+        await userEvent.click(getByLabelText(/assign/i));
+
+        // select user
+        await userEvent.click(getByRole('option', { name: 'Staff' }));
+
+        await waitFor(() => {
+            expect(batchAssignSpy).toHaveBeenCalledWith(expectedPayload);
+        });
+
+        await waitFor(() => {
+            expect(queryByText(/selected/i)).not.toBeInTheDocument();
+        });
+    });
+
+    it('should disable batch assign when selection includes resolved alerts', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts, { sat_id: 12, sat_resolved_by: 123 }] });
+
+        const { getByTestId, getAllByRole, getByLabelText } = setup();
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        const checkboxes = getAllByRole('checkbox');
+
+        // select multiple rows (including resolved one)
+        await userEvent.click(checkboxes[1]);
+        await userEvent.click(checkboxes[4]);
+
+        expect(getByLabelText(/assign/i)).toBeDisabled();
+    });
+
+    it('should keep selection if batch assign fails', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        mockApi.onPatch(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API().apiUrl).reply(500);
+
+        const { getByTestId, getAllByRole, getByLabelText, getByRole, getByText } = setup();
+
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        const checkboxes = getAllByRole('checkbox');
+        await userEvent.click(checkboxes[1]);
+
+        await userEvent.click(getByLabelText(/assign/i));
+        await userEvent.click(getByRole('option', { name: 'Staff' }));
+
+        await waitFor(() => {
+            expect(getByText(/1 selected/i)).toBeInTheDocument();
+        });
+    });
 });
