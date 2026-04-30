@@ -47,15 +47,15 @@ This means that it's exactly like production, except for the git branch that use
    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    ```
-- With `nvm` installed and/or updated, install `node` version of at least 22.22.0:
+- With `nvm` installed and/or updated, install `node` version of at least 24.15.0:
 
    ```
-   nvm install 22.22.0 
+   nvm install 24.15.0 
    ```
 
 - Switch to the `node` version just installed and begin initial setup:
   ```
-  nvm use 22.22.0 && npm i -g npm@10.9.4 jest webpack-dev-server
+  nvm use 24.15.0 && npm i -g npm@11.12.1 jest webpack-dev-server
   ```
   See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
