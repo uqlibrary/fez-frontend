@@ -352,7 +352,7 @@ export const getRoutesConfig = ({
                   },
               ]
             : []),
-        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
+        ...(account && account.canMasquerade && authorDetails && isAdmin(authorDetails)
             ? [
                   {
                       path: pathConfig.admin.dashboard,
@@ -616,7 +616,7 @@ export const getMenuConfig = (
 
     return [
         ...homePage,
-        ...(account && account.canMasquerade && account.canMasqueradeType === 'full'
+        ...(account && account.canMasquerade && authorDetails && isAdmin(authorDetails)
             ? [
                   {
                       linkTo: pathConfig.admin.dashboard,
