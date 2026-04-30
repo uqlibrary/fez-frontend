@@ -1,8 +1,11 @@
 import React from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useConfirmationState } from 'hooks';
 import { isEmptyStr } from './utils';
+import { getSystemAlertColumns, buildStatusFilterOptions, buildAdminUserOptions } from './config';
+
+const EMPTY_ARRAY = [];
 
 export const useSystemAlertDrawer = data => {
     const [_open, _setOpen] = React.useState(false);
@@ -55,4 +58,40 @@ export const useAlertStatus = ({ message, hideAction }) => {
     }, [alertIsVisible, message]);
 
     return [alertIsVisible, hideAlert, showAlert, _message];
+};
+
+export const useAdminDashboardConfig = () => {
+    return useSelector(state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData || {});
+};
+
+export const useAdminUsers = () => {
+    const config = useAdminDashboardConfig();
+
+    return {
+        users: config.admin_users ?? EMPTY_ARRAY,
+        currentUser: config.logged_in_user,
+    };
+};
+
+export const useAdminUserOptions = unassignedLabel => {
+    const { users, currentUser } = useAdminUsers();
+
+    return React.useMemo(
+        () => buildAdminUserOptions(users, currentUser, unassignedLabel),
+        [users, currentUser, unassignedLabel],
+    );
+};
+
+export const useSystemAlertColumns = locale => {
+    const { users, currentUser } = useAdminUsers();
+
+    const statusOptions = React.useMemo(
+        () => buildStatusFilterOptions(users, currentUser, locale),
+        [users, currentUser, locale],
+    );
+
+    return React.useMemo(
+        () => getSystemAlertColumns(locale, users, currentUser, statusOptions),
+        [locale, users, currentUser, statusOptions],
+    );
 };

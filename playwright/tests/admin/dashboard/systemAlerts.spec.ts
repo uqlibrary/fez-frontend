@@ -63,17 +63,17 @@ test.describe('Admin Dashboard - System Alerts tab', () => {
 
         {
             const row = getRow(page, 1);
-            await expect(getCell(row, 1)).toContainText('Issues on record - UQ:34555c6');
-            await expect(getByTestId(getCell(row, 2), 'alert-status-12')).toContainText('Feeney, Michael');
+            await expect(getCell(row, 2)).toContainText('Issues on record - UQ:34555c6');
+            await expect(getByTestId(getCell(row, 3), 'alert-status-12')).toContainText('Feeney, Michael');
         }
         {
             const row = getRow(page, 4);
-            await expect(getCell(row, 1)).toContainText('My Works - Claimed Work - UQ:1494946 - uqmdeben');
-            await expect(getByTestId(getCell(row, 2), 'alert-status-13')).toContainText('Staff, Another');
+            await expect(getCell(row, 2)).toContainText('My Works - Claimed Work - UQ:1494946 - uqmdeben');
+            await expect(getByTestId(getCell(row, 3), 'alert-status-13')).toContainText('Staff, Another');
         }
 
         await expect(page.locator('.MuiTablePagination-displayedRows')).toHaveText('1–9 of 9');
-        await expect(page.locator('.MuiTablePagination-input > input')).toHaveValue('10');
+        await expect(page.locator('.MuiTablePagination-input > input')).toHaveValue('25');
     });
 
     test('shows detail drawer when row is clicked', async ({ page }) => {
