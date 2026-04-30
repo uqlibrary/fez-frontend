@@ -13,6 +13,10 @@ import {
     getFormattedServerDate,
     dateToUtc,
     DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
+    buildStatusFilterOptions,
+    getSystemAlertColumns,
+    buildAdminUserOptions,
+    sortUsersByName,
 } from './config';
 
 describe('config', () => {
@@ -176,6 +180,209 @@ describe('config', () => {
                 const result = dateToUtc({ date, format: DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS });
                 expect(result).toBe('1st October 2023 02:00:00'); // Adjusted for UTC conversion with format
             });
+        });
+    });
+
+    describe('buildStatusFilterOptions', () => {
+        it('returns Mine, Unassigned, and users', () => {
+            const users = [
+                { id: 1, preferred_name: 'Alice' },
+                { id: 2, preferred_name: 'Bob' },
+            ];
+
+            const locale = {
+                alertStatus: { UNASSIGNED: 'Unassigned' },
+            };
+
+            const result = buildStatusFilterOptions(users, { id: 1 }, locale);
+
+            expect(result).toEqual([
+                { value: '__MINE__', label: 'Mine' },
+                { value: '__UNASSIGNED__', label: 'Unassigned' },
+                { value: 1, label: 'Alice' },
+                { value: 2, label: 'Bob' },
+            ]);
+        });
+    });
+
+    describe('getSystemAlertColumns', () => {
+        const locale = {
+            columns: {
+                createdDate: 'Created',
+                topic: 'Topic',
+                status: 'Status',
+            },
+            alertStatus: {
+                UNASSIGNED: 'Unassigned',
+                UNKNOWN: 'Unknown',
+            },
+        };
+
+        const statusOptions = [
+            { value: '__MINE__', label: 'Mine' },
+            { value: '__UNASSIGNED__', label: 'Unassigned' },
+            { value: 1, label: 'Alice' },
+        ];
+
+        const users = [
+            { id: 1, preferred_name: 'Alice' },
+            { id: 2, preferred_name: 'Bob' },
+        ];
+
+        const currentUser = { id: 1 };
+
+        it('formats assigned user correctly', () => {
+            const columns = getSystemAlertColumns(locale, users, currentUser, statusOptions);
+
+            const statusCol = columns.find(c => c.field === 'sat_assigned_to');
+
+            expect(statusCol.valueFormatter(1)).toBe('Alice');
+            expect(statusCol.valueFormatter(null)).toBe('Unassigned');
+            expect(statusCol.valueFormatter(999)).toBe('Unknown');
+        });
+
+        it('filters Mine correctly', () => {
+            const columns = getSystemAlertColumns(locale, users, currentUser, statusOptions);
+
+            const operator = columns.find(c => c.field === 'sat_assigned_to').filterOperators[0];
+
+            const fn = operator.getApplyFilterFn({ value: '__MINE__' });
+
+            const rowMine = { sat_assigned_to: 1 };
+            const rowOther = { sat_assigned_to: 2 };
+
+            expect(fn(null, rowMine)).toBe(true);
+            expect(fn(null, rowOther)).toBe(false);
+        });
+
+        it('filters Unassigned correctly', () => {
+            const columns = getSystemAlertColumns(locale, users, currentUser, statusOptions);
+
+            const operator = columns.find(c => c.field === 'sat_assigned_to').filterOperators[0];
+
+            const fn = operator.getApplyFilterFn({ value: '__UNASSIGNED__' });
+
+            const rowUnassigned = { sat_assigned_to: null };
+            const rowAssigned = { sat_assigned_to: 1 };
+
+            expect(fn(null, rowUnassigned)).toBe(true);
+            expect(fn(null, rowAssigned)).toBe(false);
+        });
+    });
+
+    describe('buildAdminUserOptions', () => {
+        const mockUsers = [
+            { id: 13, preferred_name: 'Staff' },
+            { id: 23, preferred_name: 'Another Staff' },
+            { id: 33, preferred_name: 'Zoo Staff' },
+        ];
+
+        const mockCurrentUser = { id: 23, preferred_name: 'Another Staff' };
+
+        it('always places the unassigned option first', () => {
+            const result = buildAdminUserOptions(mockUsers, mockCurrentUser, 'Unassigned');
+            expect(result[0]).toEqual({ id: 0, preferred_name: 'Unassigned' });
+        });
+
+        it('places current user second after unassigned', () => {
+            const result = buildAdminUserOptions(mockUsers, mockCurrentUser, 'Unassigned');
+            expect(result[1]).toEqual(mockCurrentUser);
+        });
+
+        it('places remaining users after current user, sorted by name', () => {
+            const result = buildAdminUserOptions(mockUsers, mockCurrentUser, 'Unassigned');
+            expect(result[2]).toEqual({ id: 13, preferred_name: 'Staff' });
+            expect(result[3]).toEqual({ id: 33, preferred_name: 'Zoo Staff' });
+        });
+
+        it('returns only unassigned option and sorted users when currentUser is not in list', () => {
+            const result = buildAdminUserOptions(mockUsers, { id: 999 }, 'Unassigned');
+            expect(result[0]).toEqual({ id: 0, preferred_name: 'Unassigned' });
+            expect(result).toHaveLength(4); // unassigned + 3 users
+        });
+
+        it('returns only unassigned option when users is empty', () => {
+            const result = buildAdminUserOptions([], mockCurrentUser, 'Unassigned');
+            expect(result).toEqual([{ id: 0, preferred_name: 'Unassigned' }]);
+        });
+
+        it('defaults to empty array when users is undefined', () => {
+            const result = buildAdminUserOptions(undefined, mockCurrentUser, 'Unassigned');
+            expect(result).toEqual([{ id: 0, preferred_name: 'Unassigned' }]);
+        });
+
+        it('handles null currentUser without crashing', () => {
+            const result = buildAdminUserOptions(mockUsers, null, 'Unassigned');
+            expect(result[0]).toEqual({ id: 0, preferred_name: 'Unassigned' });
+            expect(result).toHaveLength(4); // unassigned + 3 users, no current user promoted
+        });
+
+        it('uses the provided unassigned label', () => {
+            const result = buildAdminUserOptions(mockUsers, mockCurrentUser, 'None');
+            expect(result[0].preferred_name).toBe('None');
+        });
+
+        it('includes default unassigned option by default', () => {
+            const result = buildAdminUserOptions(mockUsers, mockCurrentUser, 'Unassigned');
+            expect(result[0]).toEqual({ id: 0, preferred_name: 'Unassigned' });
+        });
+
+        it('excludes default option when unassigned label is not provided', () => {
+            const result = buildAdminUserOptions(mockUsers, mockCurrentUser);
+            expect(result[0]).toEqual(mockCurrentUser);
+            expect(result.every(u => u.id !== 0)).toBe(true);
+        });
+    });
+
+    describe('sortUsersByName', () => {
+        const mockUsers = [
+            { id: 33, preferred_name: 'Zoo Staff' },
+            { id: 13, preferred_name: 'Staff' },
+            { id: 23, preferred_name: 'Another Staff' },
+        ];
+
+        it('sorts users alphabetically by preferred_name', () => {
+            const result = sortUsersByName(mockUsers);
+            expect(result.map(u => u.preferred_name)).toEqual(['Another Staff', 'Staff', 'Zoo Staff']);
+        });
+
+        it('does not mutate the original array', () => {
+            const original = [...mockUsers];
+            sortUsersByName(mockUsers);
+            expect(mockUsers).toEqual(original);
+        });
+
+        it('sorts case-insensitively', () => {
+            const users = [
+                { id: 1, preferred_name: 'zoo' },
+                { id: 2, preferred_name: 'Another' },
+                { id: 3, preferred_name: 'Staff' },
+            ];
+            const result = sortUsersByName(users);
+            expect(result.map(u => u.preferred_name)).toEqual(['Another', 'Staff', 'zoo']);
+        });
+
+        it('returns empty array when users is empty', () => {
+            expect(sortUsersByName([])).toEqual([]);
+        });
+
+        it('returns empty array when users is undefined', () => {
+            expect(sortUsersByName(undefined)).toEqual([]);
+        });
+
+        it('returns single item array unchanged', () => {
+            const users = [{ id: 1, preferred_name: 'Only User' }];
+            expect(sortUsersByName(users)).toEqual(users);
+        });
+
+        it('handles users with identical names stably', () => {
+            const users = [
+                { id: 1, preferred_name: 'Same Name' },
+                { id: 2, preferred_name: 'Same Name' },
+            ];
+            const result = sortUsersByName(users);
+            expect(result).toHaveLength(2);
+            expect(result.every(u => u.preferred_name === 'Same Name')).toBe(true);
         });
     });
 });

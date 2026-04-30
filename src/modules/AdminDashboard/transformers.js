@@ -99,6 +99,10 @@ export const transformDisplayReportRequest = data => {
         ...(data.report.value === 'systemalertlog' && !!data.filters?.record_id
             ? { record_id: data.filters.record_id }
             : {}),
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.requestor_id
+            ? { requestor_id: data.filters.requestor_id }
+            : {}),
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.pid ? { pid: data.filters.pid } : {}),
     };
 
     return request;

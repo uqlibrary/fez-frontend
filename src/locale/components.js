@@ -171,6 +171,8 @@ export default {
                     label: {
                         report: 'Report',
                         systemId: 'System alert ID',
+                        requestorId: 'Requestor username',
+                        pid: 'PID',
                         dateFrom: 'From',
                         dateTo: 'To',
                         runReport: 'Run report',
@@ -209,6 +211,7 @@ export default {
                         dateNotBefore: 'Must not be before "from" date',
                         dateNotAfter: 'Must not be after "to" date',
                         recordId: 'Must be a positive whole number',
+                        requestorId: 'Must be alphanumeric',
                     },
                     alert: {
                         noResults: reportName => ({
@@ -4027,6 +4030,10 @@ export default {
                     lastName: {
                         label: 'Last name',
                     },
+                    isNameOverride: {
+                        label: 'Prevent automatic updates',
+                        helperText: 'Switch on to prevent automatic names updates from HR data.',
+                    },
                     email: {
                         label: 'Email',
                     },
@@ -4084,9 +4091,6 @@ export default {
                     },
                     openOrcidProfileInNewWindow: {
                         label: 'Open ORCID profile in new window',
-                    },
-                    isUsernameOverridden: {
-                        label: 'Is username overridden by an admin?',
                     },
                 },
                 validation: {

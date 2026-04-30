@@ -701,6 +701,8 @@ export const setup = () => {
         .reply(200, { data: [...mockData.adminDashboardQuickLinks] })
         .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
         .reply(200, { data: [...mockData.adminDashboardSystemAlerts] })
+        .onPatch(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API().apiUrl)))
+        .reply(200, { data: { updated: 1, not_found: 0 } })
         .onGet(
             new RegExp(
                 escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 5, date_from: '.*' }).apiUrl),

@@ -371,12 +371,19 @@ const publicationTypeListJournalArticle = {
                 'fez_scopus_citations': null,
             },
             'fez_record_search_key_start_page': '312',
-            'fez_record_search_key_subject': [
-                {
-                    'rek_subject': 453486,
-                    'rek_subject_lookup': '2910 Issues, ethics and legal aspects',
-                },
-            ],
+            "fez_record_search_key_subject": [{
+                "rek_subject_order": 2,
+                "rek_subject": 453298,
+                "rek_subject_lookup": "1312 Molecular Biology"
+            }, {
+                "rek_subject_order": 1,
+                "rek_subject": 453471,
+                "rek_subject_lookup": "2804 Cellular and Molecular Neuroscience"
+            }, {
+                "rek_subject_order": 3,
+                "rek_subject": 453293,
+                "rek_subject_lookup": "1307 Cell Biology"
+            }],
             ...sdgSKs,
             'fez_record_search_key_total_pages': '13',
             'fez_record_search_key_volume_number': '20',

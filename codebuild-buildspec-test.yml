@@ -27,10 +27,6 @@ phases:
     commands:
       set &&
       bin/codebuild-test.sh
-  #post_build:
-    #commands:
-      # - command
-      # - command
 reports:
   coverage-report:
     files:
@@ -41,6 +37,3 @@ artifacts:
     - 'coverage/**/*'
     - 'playwright/.results/**/trace.zip'
   name: builds/$CODEBUILD_BUILD_NUMBER/coverage
-#cache:
-  #paths:
-    # - paths

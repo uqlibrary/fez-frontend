@@ -10,12 +10,14 @@ import AuthorFieldData from './AuthorFieldData';
 
 import { validation } from 'config';
 import { default as locale } from 'locale/components';
+import Divider from '@mui/material/Divider';
+import { NameOverride } from './NameOverride';
 
 export const NameData = () => {
     const {
         title: cardTitle,
         editRow: {
-            fields: { title, displayName, firstName, middleName, lastName, position, email },
+            fields: { title, displayName, firstName, middleName, lastName, isNameOverride, position, email },
         },
     } = locale.components.manageAuthors;
     const { control } = useFormContext();
@@ -66,6 +68,16 @@ export const NameData = () => {
                     required
                     validate={[validation.required, validation.spacelessMaxLength255Validator]}
                 />
+                <Field
+                    {...isNameOverride}
+                    control={control}
+                    component={NameOverride}
+                    data-testid="aut-name-overridden"
+                    name="aut_name_overridden"
+                />
+                <Grid xs={12} sx={{ mx: 2 }}>
+                    <Divider />
+                </Grid>
                 <Field
                     {...position}
                     control={control}

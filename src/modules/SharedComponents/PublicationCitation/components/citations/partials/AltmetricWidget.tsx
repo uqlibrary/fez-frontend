@@ -4,14 +4,14 @@ import Grid from '@mui/material/Grid';
 import Popover from '@mui/material/Popover';
 import CircularProgress from '@mui/material/CircularProgress';
 import { debounce } from 'throttle-debounce';
-import { tryCatch } from 'helpers/general';
+import { silentTryCatch } from 'helpers/general';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const hidePopoverDelayInMs = 300;
 export const externalDependenciesUrl = 'https://embed.altmetric.com/assets/embed.js';
 
 const cleanUpWidgetCreationDeps = () =>
-    tryCatch(() =>
+    silentTryCatch(() =>
         document.querySelectorAll<HTMLScriptElement>('script[src*="altmetric.com/"]').forEach(script => {
             // keep imported main deps, as we want to reuse it
             if (script.src?.startsWith?.(externalDependenciesUrl)) return;
@@ -55,7 +55,7 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
         script.src = externalDependenciesUrl;
         script.async = true;
         document.body.appendChild(script);
-        // eslint-disable-next-line consistent-return
+
         return cleanUpWidgetCreationDeps; // onunmount
     }, []);
 
@@ -65,7 +65,7 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
     };
     // add a small delay before hiding the popover to allow it to remain open while the user moves the cursor over to
     // its contents
-    const scheduleHidePopover = debounce(hidePopoverDelayInMs, () => tryCatch(hidePopover));
+    const scheduleHidePopover = debounce(hidePopoverDelayInMs, () => silentTryCatch(hidePopover));
     const cancelScheduledHidePopoverCall = () => scheduleHidePopover.cancel({ upcomingOnly: true });
     const showPopover = (event: React.MouseEvent<HTMLElement>) => {
         cancelScheduledHidePopoverCall();

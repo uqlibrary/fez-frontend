@@ -301,12 +301,15 @@ const myRecordsList = {
         "fez_record_search_key_scopus_id": "2-s2.0-85026774540",
         "fez_record_search_key_start_page": "100",
         "fez_record_search_key_subject": [{
+            "rek_subject_order": 2,
             "rek_subject": 453298,
             "rek_subject_lookup": "1312 Molecular Biology"
         }, {
+            "rek_subject_order": 1,
             "rek_subject": 453471,
             "rek_subject_lookup": "2804 Cellular and Molecular Neuroscience"
         }, {
+            "rek_subject_order": 3,
             "rek_subject": 453293,
             "rek_subject_lookup": "1307 Cell Biology"
         }],

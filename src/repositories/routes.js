@@ -645,15 +645,18 @@ export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = ({ id } = { id: null }) => ({
     apiUrl: `dashboard/alerts${id ? `/${id}` : ''}`,
 });
 
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API = () => ({
+    apiUrl: 'dashboard/alerts/assign',
+});
+
 export const simpleQueryEncode = request =>
     Object.keys(request)
         .filter(key => request[key] !== '' && request[key] !== undefined)
         .map(key => key + '=' + encodeURIComponent(request[key]))
         .join('&');
 
-// eslint-disable-next-line camelcase
+/* eslint-disable camelcase */
 export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date_to }) => {
-    // eslint-disable-next-line camelcase
     const request = { sel_id: report_type, date_from, date_to };
     const query = simpleQueryEncode(request);
 
@@ -662,13 +665,19 @@ export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date
     };
 };
 
-// eslint-disable-next-line camelcase
-export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ report_type, date_from, date_to, record_id }) => {
-    // eslint-disable-next-line camelcase
-    const request = { report_type, date_from, date_to, record_id };
+export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({
+    report_type,
+    date_from,
+    date_to,
+    record_id,
+    requestor_id,
+    pid,
+}) => {
+    const request = { report_type, date_from, date_to, record_id, requestor_id, pid };
     const query = simpleQueryEncode(request);
 
     return {
         apiUrl: `dashboard/reports?${query}`,
     };
 };
+/* eslint-enable camelcase */

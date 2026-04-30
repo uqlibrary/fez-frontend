@@ -141,6 +141,11 @@ export const isValidROR = value => {
     return isValid.test(value.toString().trim());
 };
 
+export const isValidAlphanumeric = value => {
+    const isValid = /^[a-z0-9]+$/i;
+    return isValid.test(value.toString().trim());
+};
+
 // Generic
 export const required = value => (value ? undefined : locale.validationErrors.required);
 
