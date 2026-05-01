@@ -1,9 +1,28 @@
 {
     "compilerOptions": {
-        "baseUrl": "src",
         "paths": {
-            "modules/*": ["modules/*"],
-            "react": ["./node_modules/@types/react"]
+            "actions": ["./src/actions"],
+            "actions/*": ["./src/actions/*"],
+            "config": ["./src/config"],
+            "config/*": ["./src/config/*"],
+            "helpers": ["./src/helpers"],
+            "helpers/*": ["./src/helpers/*"],
+            "hooks": ["./src/hooks"],
+            "hooks/*": ["./src/hooks/*"],
+            "locale": ["./src/locale"],
+            "locale/*": ["./src/locale/*"],
+            "middleware": ["./src/middleware"],
+            "middleware/*": ["./src/middleware/*"],
+            "modules": ["./src/modules"],
+            "modules/*": ["./src/modules/*"],
+            "reducer": ["./src/reducer"],
+            "reducers": ["./src/reducers"],
+            "reducers/*": ["./src/reducers/*"],
+            "repositories": ["./src/repositories"],
+            "repositories/*": ["./src/repositories/*"],
+            "types/*": ["./src/@types/*"],
+            "utils": ["./utils"],
+            "utils/*": ["./utils/*"]
         },
         "target": "esnext",
         "jsx": "react-jsxdev",
@@ -19,9 +38,10 @@
         "noEmit": true,
         "forceConsistentCasingInFileNames": true,
         "noImplicitAny": true,
+        "types": ["node"],
         // for MUI types
         "lib": ["es6", "dom"]
     },
     "include": ["src/**/*.tsx", "src/**/*.ts", "utils/**/*.ts"],
-    "exclude": ["node_modules", "custom_modules", "/src/mocks/", "dist" ]
+    "exclude": ["node_modules", "custom_modules", "/src/mocks/", "dist"]
 }
