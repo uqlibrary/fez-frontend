@@ -71,6 +71,11 @@ export default {
                         subText: 'of research subtypes',
                         tooltip: 'OA status counts in the past 5 years',
                     },
+                    doiPopulateDocTypes: {
+                        title: 'DOI by Doc Type',
+                        subText: 'In Last 12 Months',
+                        tooltip: 'Doc types record counts with UQ minted DOI populated in the past 12 months',
+                    },
                     quicklinks: {
                         title: 'Quick Links ',
                         addLinkText: '+ add',
