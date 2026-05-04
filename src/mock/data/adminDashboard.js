@@ -95,6 +95,48 @@ export const adminDashboardToday = {
             doc_count: 8764,
         },
     },
+    doi_populated_doc_type_counts: [
+        {
+            key: 179,
+            doc_count: 1405,
+        },
+        {
+            key: 204,
+            doc_count: 64,
+        },
+        {
+            key: 371,
+            doc_count: 26,
+        },
+        {
+            key: 177,
+            doc_count: 17,
+        },
+        {
+            key: 174,
+            doc_count: 16,
+        },
+        {
+            key: 130,
+            doc_count: 8,
+        },
+        {
+            key: 187,
+            doc_count: 1,
+        },
+        {
+            key: 272,
+            doc_count: 1,
+        },
+        {
+            key: 275,
+            doc_count: 1,
+        },
+        {
+            key: 378,
+            doc_count: 1,
+        }
+    ],
 };
 
 export const adminDashboardQuickLinks =  [
