@@ -1,5 +1,6 @@
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
+import { ORCID_BASE_URL } from 'config';
 
 /* istanbul ignore next */
 global.dd = console.dir.bind(console);
@@ -576,3 +577,9 @@ export const numbersOnly = value => (value?.replace && value?.replace(/[^\d]/g, 
  * @return {boolean}
  */
 export const hasAtLeastOneItemSelected = (items, attr = 'selected') => !!items?.some?.(v => v[attr] === true);
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getOrcidURL = id => (id?.trim?.() && `${ORCID_BASE_URL}/${id.trim()}`) || '';

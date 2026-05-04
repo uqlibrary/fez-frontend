@@ -55,7 +55,8 @@ export const FEZ_USER_SYSTEM_ID = 41783;
 export const FEZ_USER_SYSTEM_USERNAME = 'webcron';
 export const FEZ_USER_SYSTEM_LABEL = 'System';
 
-export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
+export const ORCID_DOMAIN = 'orcid.org';
+export const ORCID_BASE_URL = process.env.ORCID_URL || `https://${ORCID_DOMAIN}`;
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
