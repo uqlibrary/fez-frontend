@@ -1,6 +1,6 @@
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
-import { ORCID_BASE_URL } from 'config';
+import { ORCID_BASE_URL } from '../config/general';
 
 /* istanbul ignore next */
 global.dd = console.dir.bind(console);
