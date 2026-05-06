@@ -6,7 +6,12 @@ export default {
         },
         {
             title: 'Bibliographic',
-            groups: [['fez_record_search_key_publisher'], ['rek_date'], ['rek_description']],
+            groups: [
+                ['fez_record_search_key_publisher'],
+                ['rek_date'],
+                ['rek_description'],
+                ['fez_record_search_key_raid'],
+            ],
         },
         {
             title: 'Model',
