@@ -12,9 +12,9 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 22
+      nodejs: 24
     commands:
-      - n 22.22.2
+      - n 24
   pre_build:
     commands:
       sysctl fs.inotify.max_user_watches &&
