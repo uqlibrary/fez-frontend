@@ -548,6 +548,10 @@ export default {
                     order: 25,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 25.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 25.5,
                 },
@@ -684,6 +688,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 22,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 22.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -826,6 +834,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 27,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 27.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -1026,6 +1038,10 @@ export default {
                     order: 35,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 35.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 35.5,
                 },
@@ -1196,6 +1212,10 @@ export default {
                     order: 35,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 35.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 35.5,
                 },
@@ -1312,6 +1332,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 22,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 22.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -1574,6 +1598,10 @@ export default {
                     order: 17,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 17.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 17.5,
                 },
@@ -1710,6 +1738,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 20,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 20.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -1874,8 +1906,12 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_rights',
+                    field: 'fez_record_search_key_raid',
                     order: 23,
+                },
+                {
+                    field: 'fez_record_search_key_rights',
+                    order: 24,
                 },
             ],
             'Generic Document': [
@@ -1952,8 +1988,12 @@ export default {
                     order: 14,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 15,
+                },
+                {
                     field: 'rek_ci_notice_attribution_incomplete',
-                    order: 14.5,
+                    order: 16,
                 },
             ],
             Image: [
@@ -2050,6 +2090,10 @@ export default {
                     order: 18,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 18.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 18.5,
                 },
@@ -2134,6 +2178,10 @@ export default {
                 {
                     field: 'fez_record_search_key_alternate_identifier',
                     order: 15,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 16,
                 },
             ],
             Journal: [
@@ -2232,6 +2280,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -2364,6 +2416,10 @@ export default {
                     order: 24,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 24.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 24.5,
                 },
@@ -2460,6 +2516,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 15,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 15.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -2580,6 +2640,10 @@ export default {
                     order: 19,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
@@ -2688,6 +2752,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -2813,6 +2881,10 @@ export default {
                     order: 19,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
@@ -2907,6 +2979,10 @@ export default {
                     order: 13,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 13.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 13.5,
                 },
@@ -2983,6 +3059,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 12,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 12.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -3087,6 +3167,10 @@ export default {
                     order: 16,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 16.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 16.5,
                 },
@@ -3189,6 +3273,10 @@ export default {
                     order: 15,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 15.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 15.5,
                 },
@@ -3289,6 +3377,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 18,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 18.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -3411,6 +3503,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
