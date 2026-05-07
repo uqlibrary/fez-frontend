@@ -218,7 +218,6 @@ export function hydrateMock(truncatedData) {
         fez_record_search_key_grant_agency_id: [],
         fez_record_search_key_grant_agency_type: [],
         fez_record_search_key_grant_id: [],
-        fez_record_search_key_grant_url: [],
         fez_record_search_key_grant_text: [],
         fez_record_search_key_grant_type: [],
         fez_record_search_key_isbn: [],

@@ -2821,7 +2821,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
               style="margin-top: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2857,7 +2857,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2893,45 +2893,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-              >
-                <div
-                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                  data-testid="rek-grant-url"
-                >
-                  <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="false"
-                    data-testid="rek-grant-url-label"
-                    for="rek-grant-url-input"
-                    id="rek-grant-url-label"
-                  >
-                    Grant URL
-                  </label>
-                  <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-                  >
-                    <input
-                      aria-invalid="false"
-                      aria-label="Grant URL"
-                      autocomplete="off"
-                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                      data-analyticsid="rek-grant-url-input"
-                      data-testid="rek-grant-url-input"
-                      disabled=""
-                      id="rek-grant-url-input"
-                      label="Grant URL"
-                      name="grantUrl"
-                      placeholder="Grant URL"
-                      spellcheck="false"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -4482,7 +4444,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
               style="margin-top: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -4518,7 +4480,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -4554,45 +4516,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-              >
-                <div
-                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                  data-testid="rek-grant-url"
-                >
-                  <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="false"
-                    data-testid="rek-grant-url-label"
-                    for="rek-grant-url-input"
-                    id="rek-grant-url-label"
-                  >
-                    Grant URL
-                  </label>
-                  <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-                  >
-                    <input
-                      aria-invalid="false"
-                      aria-label="Grant URL"
-                      autocomplete="off"
-                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                      data-analyticsid="rek-grant-url-input"
-                      data-testid="rek-grant-url-input"
-                      disabled=""
-                      id="rek-grant-url-input"
-                      label="Grant URL"
-                      name="grantUrl"
-                      placeholder="Grant URL"
-                      spellcheck="false"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"

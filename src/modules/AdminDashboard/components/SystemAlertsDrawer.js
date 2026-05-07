@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
-import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate } from '../config';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate, isUrl } from '../config';
 
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
@@ -21,7 +21,6 @@ import Copy from '@mui/icons-material/FileCopyOutlined';
 import Tooltip from '@mui/material/Tooltip';
 import { FEZ_USER_SYSTEM_ID, FEZ_USER_SYSTEM_LABEL } from '../../../config/general';
 import { useAdminUserOptions } from '../hooks';
-import { isURL } from '../../../config/validation';
 
 const rootId = 'system-alert-detail';
 const StyledDivider = styled(Divider)(({ theme }) => ({
@@ -142,7 +141,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     >
                         {row.sat_title}
                     </Typography>
-                    {isURL(row.sat_link) && (
+                    {isUrl(row.sat_link) && (
                         <ExternalLink id={rootId} href={row.sat_link}>
                             {row.sat_link}
                         </ExternalLink>

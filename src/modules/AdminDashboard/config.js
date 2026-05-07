@@ -12,7 +12,6 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { isEmptyStr } from './utils';
 import { GridFilterInputSingleSelect } from '@mui/x-data-grid';
-import { isURL } from '../../config/validation';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 
@@ -76,6 +75,15 @@ export const EXPORT_REPORT_JOBS = {
 
 export const maxDefaultDateRange = 52;
 export const defaultDateRangeUnit = 'weeks'; // must match expected date units e.g. Moment.js https://momentjs.com/docs/#/manipulating/subtract/
+
+export const isUrl = str => {
+    try {
+        const newUrl = new URL(str);
+        return newUrl.protocol === 'http:' || newUrl.protocol === 'https:';
+    } catch (err) {
+        return false;
+    }
+};
 
 export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_description: '' };
 
@@ -359,7 +367,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params, ReportRow
                     minWidth: 400,
                     flex: 1,
                     renderCell: row =>
-                        isURL(row.value) ? (
+                        isUrl(row.value) ? (
                             <ExternalLink id={`link_${row.id}`} href={row.value} inline>
                                 {row.value}
                             </ExternalLink>

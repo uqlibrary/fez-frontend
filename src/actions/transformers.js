@@ -777,12 +777,6 @@ export const getGrantsListSearchKey = grants => {
                 rek_grant_id_order: index + 1,
             })),
         ],
-        fez_record_search_key_grant_url: [
-            ...grants.map((item, index) => ({
-                rek_grant_url: item.grantUrl || '',
-                rek_grant_url_order: index + 1,
-            })),
-        ],
         fez_record_search_key_grant_agency_type: [
             ...grants.map((item, index) => ({
                 rek_grant_agency_type: parseInt(item.grantAgencyType, 10) || 454045, // Vocab value for "Not set"

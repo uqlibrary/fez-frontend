@@ -6,6 +6,7 @@ import locale from 'locale/components';
 import {
     exportReportFilters,
     animationTemplate,
+    isUrl,
     optionDoubleRowRender,
     getReportTypeFromValue,
     getDefaultSorting,
@@ -21,6 +22,13 @@ import {
 describe('config', () => {
     it('animationTemplate', () => {
         expect(animationTemplate(1, 100, 10)).toEqual('animateFadeIn 100ms ease-out 20ms forwards');
+    });
+
+    it('isUrl', () => {
+        expect(isUrl('http://library.uq.edu.au')).toBeTruthy();
+        expect(isUrl('https://library.uq.edu.au')).toBeTruthy();
+        expect(isUrl('library.uq.edu.au')).not.toBeTruthy();
+        expect(isUrl('abc')).not.toBeTruthy();
     });
 
     it('optionDoubleRowRender', () => {

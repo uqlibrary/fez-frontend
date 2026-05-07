@@ -2202,7 +2202,6 @@ describe('transformers', () => {
                 {
                     grantAgencyName: 'test',
                     grantId: 'test123',
-                    grantUrl: 'http://doi.org/10.1234/test',
                     grantAgencyType: '12345',
                 },
             ];
@@ -2220,12 +2219,6 @@ describe('transformers', () => {
                         rek_grant_id_order: 1,
                     },
                 ],
-                fez_record_search_key_grant_url: [
-                    {
-                        rek_grant_url: 'http://doi.org/10.1234/test',
-                        rek_grant_url_order: 1,
-                    },
-                ],
                 fez_record_search_key_grant_agency_type: [
                     {
                         rek_grant_agency_type: 12345,
@@ -2239,7 +2232,6 @@ describe('transformers', () => {
             // Check defaults
             expected.fez_record_search_key_grant_agency[0].rek_grant_agency = 'Not set';
             expected.fez_record_search_key_grant_id[0].rek_grant_id = 'Not set';
-            expected.fez_record_search_key_grant_url[0].rek_grant_url = '';
             expected.fez_record_search_key_grant_agency_type[0].rek_grant_agency_type = 454045;
             expect(transformers.getGrantsListSearchKey([{}])).toEqual(expected);
         });
@@ -2252,7 +2244,6 @@ describe('transformers', () => {
                 },
                 {
                     grantId: 'testing123',
-                    grantUrl: 'http://doi.org/10.1234/test',
                     grantAgencyType: '12345',
                 },
                 {
@@ -2302,20 +2293,6 @@ describe('transformers', () => {
                     {
                         rek_grant_id: 'Not set',
                         rek_grant_id_order: 3,
-                    },
-                ],
-                fez_record_search_key_grant_url: [
-                    {
-                        rek_grant_url: '',
-                        rek_grant_url_order: 1,
-                    },
-                    {
-                        rek_grant_url: 'http://doi.org/10.1234/test',
-                        rek_grant_url_order: 2,
-                    },
-                    {
-                        rek_grant_url: '',
-                        rek_grant_url_order: 3,
                     },
                 ],
             };
@@ -5151,7 +5128,6 @@ describe('transformers', () => {
                             grantAgencyName: 'Test',
                             grantAgencyType: 123,
                             grantId: '1234',
-                            grantUrl: 'http://doi.com/1234',
                         },
                     ],
                 }),
@@ -5166,12 +5142,6 @@ describe('transformers', () => {
                     {
                         rek_grant_id: '1234',
                         rek_grant_id_order: 1,
-                    },
-                ],
-                fez_record_search_key_grant_url: [
-                    {
-                        rek_grant_url: 'http://doi.com/1234',
-                        rek_grant_url_order: 1,
                     },
                 ],
                 fez_record_search_key_grant_agency_type: [
