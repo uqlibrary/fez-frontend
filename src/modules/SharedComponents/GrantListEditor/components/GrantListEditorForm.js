@@ -10,7 +10,6 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import { ORG_AFFILIATION_TYPES, ORG_TYPE_NOT_SET } from 'config/general';
 import validationLocale from 'locale/validationErrors';
-import { validation } from 'config';
 
 export const GrantListEditorForm = ({
     disabled,
@@ -22,8 +21,6 @@ export const GrantListEditorForm = ({
         grantAgencyNameHint: 'Funder/sponsor name for this work',
         grantIdLabel: 'Grant ID',
         grantIdHint: 'Grant number for this work',
-        grantUrlLabel: 'Grant URL',
-        grantUrlHint: 'Grant URL',
         grantAgencyTypeLabel: 'Funder/Sponsor type',
         grantAgencyTypeHint: 'Funder/Sponsor type',
         addButton: 'Add grant',
@@ -39,7 +36,7 @@ export const GrantListEditorForm = ({
     onAdd,
     required,
 }) => {
-    const [grant, setGrant] = React.useState({ grantAgencyName: '', grantId: '', grantUrl: '', grantAgencyType: '' });
+    const [grant, setGrant] = React.useState({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
     const [dirty, setDirty] = React.useState(null);
 
     React.useEffect(() => {
@@ -87,7 +84,7 @@ export const GrantListEditorForm = ({
         // pass on the selected grant
         onAdd(grant);
         setDirty(false);
-        setGrant({ grantAgencyName: '', grantId: '', grantUrl: '', grantAgencyType: '' });
+        setGrant({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
     };
 
     const {
@@ -98,23 +95,16 @@ export const GrantListEditorForm = ({
         grantAgencyNameHint,
         grantIdHint,
         grantIdLabel,
-        grantUrlHint,
-        grantUrlLabel,
         grantAgencyTypeLabel,
         grantAgencyTypeHint,
     } = locale;
 
-    const { grantAgencyName, grantId, grantUrl, grantAgencyType } = grant;
-    const grantUrlError =
-        (required && !grantAgencyName && validationLocale.validationErrors.required) ||
-        validation.url(grantUrl) ||
-        validation.spacelessMaxLength255Validator(grantUrl);
-
+    const { grantAgencyName, grantAgencyType, grantId } = grant;
     return (
         <React.Fragment>
             {description}
             <Grid container spacing={1} style={{ marginTop: 8 }}>
-                <Grid item xs={12} sm={12} md={6}>
+                <Grid item xs={12} sm={12} md>
                     <TextField
                         fullWidth
                         name="grantAgencyName"
@@ -131,7 +121,7 @@ export const GrantListEditorForm = ({
                         errorText={required && !grantAgencyName && validationLocale.validationErrors.required}
                     />
                 </Grid>
-                <Grid item xs={12} sm={12} md={6}>
+                <Grid item xs={12} sm={12} md={!hideType ? 3 : 4}>
                     <TextField
                         fullWidth
                         name="grantId"
@@ -145,26 +135,8 @@ export const GrantListEditorForm = ({
                         required={required}
                     />
                 </Grid>
-                <Grid item xs={12} sm={12} md={hideType ? 12 : 8}>
-                    <TextField
-                        fullWidth
-                        name="grantUrl"
-                        textFieldId="rek-grant-url"
-                        label={grantUrlLabel}
-                        placeholder={grantUrlHint}
-                        value={grantUrl}
-                        onChange={handleChange}
-                        onKeyDown={_addGrant}
-                        disabled={disabled || !grantAgencyName || grantAgencyName.trim().length === 0}
-                        required={required}
-                        autoComplete="off"
-                        error={!!grantUrlError}
-                        errorText={grantUrlError}
-                        inputProps={{ spellCheck: 'false' }}
-                    />
-                </Grid>
                 {!hideType && (
-                    <Grid item xs={12} sm={12} md={4}>
+                    <Grid item xs={12} sm={12} md={3}>
                         <FormControl
                             variant="standard"
                             fullWidth
@@ -231,8 +203,7 @@ export const GrantListEditorForm = ({
                             disabled ||
                             !grantAgencyName ||
                             grantAgencyName.trim().length === 0 ||
-                            (!hideType && !grantAgencyType) ||
-                            !!grantUrlError
+                            (!hideType && !grantAgencyType)
                         }
                         onClick={_addGrant}
                     >

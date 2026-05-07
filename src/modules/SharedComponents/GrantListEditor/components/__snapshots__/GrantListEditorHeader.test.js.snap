@@ -19,7 +19,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
           class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -33,7 +33,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -43,20 +43,6 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                 class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
               >
                 Funder/sponsor ID
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-              style="padding: 0px;"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-              >
-                Grant Url
               </span>
             </div>
           </div>
@@ -143,7 +129,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
           class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -157,7 +143,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -171,21 +157,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-              style="padding: 0px;"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-              >
-                Grant Url
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -281,7 +253,7 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
           class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -295,7 +267,7 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -309,21 +281,7 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-              style="padding: 0px;"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-              >
-                Grant Url
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -419,7 +377,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
           class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -433,7 +391,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -447,21 +405,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-              style="padding: 0px;"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-              >
-                Grant Url
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -557,7 +501,7 @@ exports[`GrantListEditorHeader should render with default props 1`] = `
           class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -571,7 +515,7 @@ exports[`GrantListEditorHeader should render with default props 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -585,21 +529,7 @@ exports[`GrantListEditorHeader should render with default props 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-              style="padding: 0px;"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-              >
-                Grant Url
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -697,7 +627,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
           class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -711,7 +641,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -725,21 +655,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-          >
-            <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-              style="padding: 0px;"
-            >
-              <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-              >
-                Grant Url
-              </span>
-            </div>
-          </div>
-          <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
           >
             <div
               class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"

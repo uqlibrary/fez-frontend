@@ -16,7 +16,6 @@ export const GrantListEditorHeader = ({
     locale = {
         GrantAgencyName: 'Grant name',
         GrantID: 'Funder/sponsor ID',
-        GrantUrl: 'Grant Url',
         GrantAgencyType: 'Funder/sponsor type',
         reorderColumn: 'Reorder entries',
         deleteAll: 'Remove all entries',
@@ -37,8 +36,7 @@ export const GrantListEditorHeader = ({
         confirmationBox.showConfirmation();
     };
 
-    const { GrantAgencyName, GrantID, GrantUrl, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn } =
-        locale;
+    const { GrantAgencyName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn } = locale;
 
     return (
         <Fragment>
@@ -54,7 +52,7 @@ export const GrantListEditorHeader = ({
                 <Grid container spacing={0}>
                     <Grid item xs={10} sm={11} md={9}>
                         <Grid container spacing={0}>
-                            <Grid item xs={12} sm={3}>
+                            <Grid item xs={12} sm={5}>
                                 <ListItemText
                                     secondary={GrantAgencyName}
                                     style={{ padding: 0 }}
@@ -63,7 +61,7 @@ export const GrantListEditorHeader = ({
                                     }}
                                 />
                             </Grid>
-                            <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' }, px: 1 }}>
+                            <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <ListItemText
                                     secondary={GrantID}
                                     style={{ padding: 0 }}
@@ -72,17 +70,8 @@ export const GrantListEditorHeader = ({
                                     }}
                                 />
                             </Grid>
-                            <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' }, px: 1 }}>
-                                <ListItemText
-                                    secondary={GrantUrl}
-                                    style={{ padding: 0 }}
-                                    slotProps={{
-                                        secondary: { variant: 'caption' },
-                                    }}
-                                />
-                            </Grid>
                             {!hideType && (
-                                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                     <ListItemText
                                         secondary={GrantAgencyType}
                                         style={{ padding: 0 }}

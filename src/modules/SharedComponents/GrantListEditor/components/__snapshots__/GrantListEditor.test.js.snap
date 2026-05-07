@@ -9,7 +9,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -61,7 +61,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -105,61 +105,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -256,7 +202,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -270,7 +216,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -284,21 +230,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -401,7 +333,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -418,7 +350,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -435,22 +367,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -586,7 +503,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -638,7 +555,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -682,61 +599,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -833,7 +696,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -847,7 +710,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -861,21 +724,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -978,7 +827,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -995,7 +844,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -1012,22 +861,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -1163,7 +997,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -1180,7 +1014,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -1197,22 +1031,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -1345,7 +1164,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1397,7 +1216,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1441,61 +1260,7 @@ exports[`GrantListEditor should delete all grants 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1579,7 +1344,7 @@ exports[`GrantListEditor should delete grant 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1631,7 +1396,7 @@ exports[`GrantListEditor should delete grant 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1675,61 +1440,7 @@ exports[`GrantListEditor should delete grant 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1826,7 +1537,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -1840,7 +1551,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -1854,21 +1565,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -1971,7 +1668,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -1988,7 +1685,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2005,22 +1702,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2156,7 +1838,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2173,7 +1855,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2190,22 +1872,7 @@ exports[`GrantListEditor should delete grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2340,7 +2007,7 @@ exports[`GrantListEditor should delete grant 2`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2392,7 +2059,7 @@ exports[`GrantListEditor should delete grant 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2436,61 +2103,7 @@ exports[`GrantListEditor should delete grant 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2587,7 +2200,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -2601,7 +2214,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -2615,21 +2228,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -2732,7 +2331,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2749,7 +2348,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2766,22 +2365,7 @@ exports[`GrantListEditor should delete grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -2915,7 +2499,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2967,7 +2551,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -3011,61 +2595,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -3162,7 +2692,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -3176,7 +2706,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -3190,21 +2720,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -3307,7 +2823,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -3324,7 +2840,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -3341,22 +2857,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -3492,7 +2993,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -3509,7 +3010,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -3526,22 +3027,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -3674,7 +3160,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -3726,7 +3212,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -3770,61 +3256,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -3921,7 +3353,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -3935,7 +3367,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -3949,21 +3381,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -4066,7 +3484,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4083,7 +3501,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4100,22 +3518,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4251,7 +3654,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4268,7 +3671,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4285,22 +3688,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4433,7 +3821,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -4485,7 +3873,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -4529,61 +3917,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -4680,7 +4014,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -4694,7 +4028,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -4708,21 +4042,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -4825,7 +4145,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4842,7 +4162,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -4859,22 +4179,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5010,7 +4315,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5027,7 +4332,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5044,22 +4349,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5192,7 +4482,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -5244,7 +4534,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -5288,61 +4578,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -5439,7 +4675,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -5453,7 +4689,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -5467,21 +4703,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -5584,7 +4806,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5601,7 +4823,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5618,22 +4840,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5769,7 +4976,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5786,7 +4993,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5803,22 +5010,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5951,7 +5143,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -6003,7 +5195,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -6047,61 +5239,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -6198,7 +5336,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -6212,7 +5350,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -6226,21 +5364,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -6343,7 +5467,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -6360,7 +5484,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -6377,22 +5501,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -6526,7 +5635,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -6578,7 +5687,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -6622,61 +5731,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -6773,7 +5828,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -6787,7 +5842,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -6801,21 +5856,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -6918,7 +5959,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -6935,7 +5976,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -6952,22 +5993,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -7101,7 +6127,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -7153,7 +6179,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -7197,61 +6223,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -7348,7 +6320,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -7362,7 +6334,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -7376,21 +6348,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -7493,7 +6451,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -7510,7 +6468,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -7527,22 +6485,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -7680,7 +6623,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -7697,7 +6640,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -7714,22 +6657,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -7862,7 +6790,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -7914,7 +6842,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -7958,61 +6886,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -8109,7 +6983,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -8123,7 +6997,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -8137,21 +7011,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -8254,7 +7114,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -8271,7 +7131,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -8288,22 +7148,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -8441,7 +7286,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -8458,7 +7303,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -8475,22 +7320,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -8623,7 +7453,7 @@ exports[`GrantListEditor should render default view 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8675,7 +7505,7 @@ exports[`GrantListEditor should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8719,61 +7549,7 @@ exports[`GrantListEditor should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -8857,7 +7633,7 @@ exports[`GrantListEditor should render error from props 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8909,7 +7685,7 @@ exports[`GrantListEditor should render error from props 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8953,61 +7729,7 @@ exports[`GrantListEditor should render error from props 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -9096,7 +7818,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -9148,7 +7870,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -9192,61 +7914,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -9340,7 +8008,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -9392,7 +8060,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -9436,61 +8104,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -9587,7 +8201,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -9601,7 +8215,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -9615,21 +8229,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -9732,7 +8332,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -9749,7 +8349,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -9766,22 +8366,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -9917,7 +8502,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -9934,7 +8519,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -9951,22 +8536,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -10101,7 +8671,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -10118,7 +8688,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -10135,22 +8705,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -10285,7 +8840,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -10302,7 +8857,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -10319,22 +8874,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      />
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -10467,7 +9007,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -10519,7 +9059,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -10563,61 +9103,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -10706,7 +9192,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -10758,7 +9244,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -10802,61 +9288,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -10953,7 +9385,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -10967,7 +9399,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -10981,21 +9413,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -11098,7 +9516,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -11115,7 +9533,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -11132,24 +9550,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      >
-                        https://doi.org/1234
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -11283,7 +9684,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
       style="margin-top: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -11335,7 +9736,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -11379,61 +9780,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
-      >
-        <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-          data-testid="rek-grant-url"
-        >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            data-testid="rek-grant-url-label"
-            for="rek-grant-url-input"
-            id="rek-grant-url-label"
-          >
-            Grant URL
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-          >
-            <input
-              aria-describedby="rek-grant-url-helper-text"
-              aria-invalid="true"
-              aria-label="Grant URL"
-              autocomplete="off"
-              class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-              data-analyticsid="rek-grant-url-input"
-              data-testid="rek-grant-url-input"
-              disabled=""
-              id="rek-grant-url-input"
-              label="Grant URL"
-              name="grantUrl"
-              placeholder="Grant URL"
-              required=""
-              spellcheck="false"
-              type="text"
-              value=""
-            />
-          </div>
-          <p
-            class="MuiFormHelperText-root Mui-disabled Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
-            data-testid="rek-grant-url-helper-text"
-            id="rek-grant-url-helper-text"
-          >
-            This field is required
-          </p>
-        </div>
-      </div>
-      <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -11530,7 +9877,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -11544,7 +9891,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -11558,21 +9905,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
-                      >
-                        Grant Url
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -11675,7 +10008,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                   class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -11692,7 +10025,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -11709,24 +10042,7 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1gmsxg2-MuiGridLegacy-root"
-                  >
-                    <div
-                      class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
-                      style="padding: 0px;"
-                    >
-                      <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
-                      >
-                        https://doi.org/1234
-                      </p>
-                      <span
-                        class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 css-1dt03kf-MuiGridLegacy-root"
                   >
                     <div
                       class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"

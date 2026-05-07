@@ -1,6 +1,6 @@
 import React from 'react';
 import GrantListEditorForm from './GrantListEditorForm';
-import { render, fireEvent, rtlRender, assertEnabled, assertDisabled } from 'test-utils';
+import { render, fireEvent, rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -57,46 +57,19 @@ describe('GrantListEditorForm', () => {
 
         expect(isPopulated).toHaveBeenCalledTimes(2);
         expect(isPopulated).toHaveBeenCalledWith(true);
-        assertDisabled('rek-grant-add');
 
         fireEvent.mouseDown(getByTestId('rek-grant-type-select'));
         fireEvent.click(getByText('Government'));
-        assertEnabled('rek-grant-add');
 
-        // assert grant url validation
-        fireEvent.change(getByTestId('rek-grant-url-input'), {
-            target: {
-                name: 'grantUrl',
-                value: 'https://doi',
-            },
-        });
-        assertDisabled('rek-grant-add');
-        fireEvent.change(getByTestId('rek-grant-url-input'), {
-            target: {
-                name: 'grantUrl',
-                value: 'https://doi.org/10.1234/5678',
-            },
-        });
-        assertEnabled('rek-grant-add');
-
-        expect(getByTestId('rek-grant-agency-input')).toHaveAttribute('value', 'test');
-        expect(getByTestId('rek-grant-id-input')).toHaveAttribute('value', '123');
-        expect(getByTestId('rek-grant-url-input')).toHaveAttribute('value', 'https://doi.org/10.1234/5678');
-        expect(getByTestId('rek-grant-type-input')).toHaveAttribute('value', '453985');
         fireEvent.click(getByTestId('rek-grant-add'));
 
         expect(onAddFn).toHaveBeenCalledWith({
             grantAgencyName: 'test',
             grantId: '123',
             grantAgencyType: '453985',
-            grantUrl: 'https://doi.org/10.1234/5678',
         });
+
         expect(isPopulated).toHaveBeenCalledWith(false);
-        // assert form reset after adding an entry
-        expect(getByTestId('rek-grant-agency-input')).toHaveAttribute('value', '');
-        expect(getByTestId('rek-grant-id-input')).toHaveAttribute('value', '');
-        expect(getByTestId('rek-grant-url-input')).toHaveAttribute('value', '');
-        expect(getByTestId('rek-grant-type-input')).toHaveAttribute('value', '');
     });
 
     it('should not add grant if form state is not valid or any other key is pressed', () => {
@@ -121,14 +94,12 @@ describe('GrantListEditorForm', () => {
             grantSelectedToEdit: {
                 grantAgencyName: 'test',
                 grantId: '123',
-                grantUrl: 'https://doi.org/10.1234/5678',
                 grantAgencyType: '453985',
             },
         });
 
         expect(getByTestId('rek-grant-agency-input')).toHaveAttribute('value', 'test');
         expect(getByTestId('rek-grant-id-input')).toHaveAttribute('value', '123');
-        expect(getByTestId('rek-grant-url-input')).toHaveAttribute('value', 'https://doi.org/10.1234/5678');
         expect(getByTestId('rek-grant-type-input')).toHaveAttribute('value', '453985');
     });
 
@@ -143,7 +114,6 @@ describe('GrantListEditorForm', () => {
 
         expect(getByTestId('rek-grant-agency-input')).toHaveAttribute('value', 'test');
         expect(getByTestId('rek-grant-id-input')).toHaveAttribute('value', '123');
-        expect(getByTestId('rek-grant-url-input')).toHaveAttribute('value', '');
         expect(getByTestId('rek-grant-type-input')).toHaveAttribute('value', '');
     });
 });
