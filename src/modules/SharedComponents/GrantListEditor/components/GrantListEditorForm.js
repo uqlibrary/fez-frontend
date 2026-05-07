@@ -134,6 +134,7 @@ export const GrantListEditorForm = ({
                         disabled={disabled || !grantAgencyName || grantAgencyName.trim().length === 0}
                         required={required}
                     />
+                    <FormHelperText>{'Accepts IDs or full URLs'}</FormHelperText>
                 </Grid>
                 {!hideType && (
                     <Grid item xs={12} sm={12} md={3}>
