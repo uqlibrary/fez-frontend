@@ -159,7 +159,7 @@ export const requiredList = value => {
 export const email = value =>
     value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
-    value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value)
+    value && !/^http[s]?:\/\/\S+\.\S+$/i.test(value)
         ? locale.validationErrors.url
         : spacelessMaxLength2000Validator(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);

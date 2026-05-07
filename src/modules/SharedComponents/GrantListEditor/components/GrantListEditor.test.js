@@ -38,6 +38,7 @@ describe('GrantListEditor', () => {
                 {
                     grantAgencyName: 'Testing',
                     grantId: '1234',
+                    grantUrl: 'https://doi.org/1234',
                     grantAgencyType: 'Test',
                 },
             ],
@@ -87,6 +88,7 @@ describe('GrantListEditor', () => {
                 {
                     grantAgencyName: 'Testing',
                     grantId: '1234',
+                    grantUrl: 'https://doi.org/1234',
                     grantAgencyType: 'Test',
                 },
             ],
@@ -299,6 +301,7 @@ describe('GrantListEditor', () => {
         const grant2 = {
             grantAgencyName: 'Test 2',
             grantId: '456',
+            grantUrl: 'https://doi.org/1234',
             grantAgencyType: 'Testing 2',
         };
 

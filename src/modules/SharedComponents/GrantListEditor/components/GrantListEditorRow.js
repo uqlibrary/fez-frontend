@@ -111,18 +111,26 @@ export const GrantListEditorRow = ({
     const getGrantRowText = selectedClass => {
         return (
             <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
-                <Grid item xs={12} sm={5}>
+                <Grid item xs={12} sm={3}>
                     {getListItemTypoGraphy(grant.grantAgencyName, '', { ...classes.primary, ...selectedClass }, {})}
                 </Grid>
-                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' }, px: 1 }}>
                     {getListItemTypoGraphy(
-                        `${grant.grantId}`,
+                        grant.grantId,
                         '',
                         { ...(width === 'xs' ? classes.identifierName : classes.primary), ...selectedClass },
                         {},
                     )}
                 </Grid>
-                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' }, px: 1 }}>
+                    {getListItemTypoGraphy(
+                        grant.grantUrl,
+                        '',
+                        { ...(width === 'xs' ? classes.identifierName : classes.primary), ...selectedClass },
+                        {},
+                    )}
+                </Grid>
+                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {getListItemTypoGraphy(
                         `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
                         '',
