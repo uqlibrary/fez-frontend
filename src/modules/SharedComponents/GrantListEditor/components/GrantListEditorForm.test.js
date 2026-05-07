@@ -67,7 +67,7 @@ describe('GrantListEditorForm', () => {
         fireEvent.change(getByTestId('rek-grant-url-input'), {
             target: {
                 name: 'grantUrl',
-                value: 'https://doi',
+                value: 'https://',
             },
         });
         assertDisabled('rek-grant-add');

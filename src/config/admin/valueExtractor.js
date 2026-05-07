@@ -639,6 +639,13 @@ export default {
                 }),
                 {},
             );
+            const grantUrls = (record.fez_record_search_key_grant_url || []).reduce(
+                (items, item) => ({
+                    ...items,
+                    [item.rek_grant_url_order]: item,
+                }),
+                {},
+            );
             const grantAgencyTypes = (record.fez_record_search_key_grant_agency_type || []).reduce(
                 (grantAgencyTypesObject, grantAgencyType) => ({
                     ...grantAgencyTypesObject,
@@ -650,11 +657,13 @@ export default {
             const returnValue = record.fez_record_search_key_grant_agency.map(({ rek_grant_agency_order: order }) => ({
                 grantAgencyName: grantAgencyNames[order].rek_grant_agency,
                 grantId: (grantIds[order] || {}).rek_grant_id || '',
+                grantUrl: (grantUrls[order] || {}).rek_grant_url || '',
                 grantAgencyType: (grantAgencyTypes[order] || {}).rek_grant_agency_type || ORG_TYPE_NOT_SET,
             }));
 
             delete record.fez_record_search_key_grant_agency;
             delete record.fez_record_search_key_grant_id;
+            delete record.fez_record_search_key_grant_url;
             delete record.fez_record_search_key_grant_agency_type;
 
             return returnValue;
