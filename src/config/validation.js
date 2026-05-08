@@ -5,7 +5,7 @@ import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
 
 import { isAdded } from 'helpers/datastreams';
-import { silentTryCatch } from '../helpers/general';
+import { isURL } from '../helpers/general';
 
 export const isEmpty = value => !value?.length;
 export const hasLengthGreaterThan = (value, maxlength) => !isEmpty(value) && value?.length > maxlength;
@@ -156,8 +156,6 @@ export const requireChecked = value => (value === 'on' ? undefined : locale.vali
 export const requiredList = value => {
     return !value?.length && locale.validationErrors.required;
 };
-
-export const isURL = value => silentTryCatch(() => !!String(new URL(value).protocol).match(/^https?:/), false);
 
 export const email = value =>
     value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;

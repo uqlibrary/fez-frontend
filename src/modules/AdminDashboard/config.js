@@ -12,7 +12,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { isEmptyStr } from './utils';
 import { GridFilterInputSingleSelect } from '@mui/x-data-grid';
-import { isURL } from '../../config/validation';
+import { isURL } from '../../helpers/general';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 

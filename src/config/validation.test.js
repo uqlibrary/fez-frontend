@@ -2,7 +2,7 @@ import * as validation from './validation';
 import { locale } from 'locale';
 import { APP_URL, viewRecordsConfig } from 'config';
 import { MEDIATED_ACCESS_ID } from 'config/general';
-import { isFileValid, isURL } from './validation';
+import { isFileValid } from './validation';
 import { STATE_DELETED } from './viewRecord';
 
 describe('Validation method', () => {
@@ -64,15 +64,6 @@ describe('Validation method', () => {
 
         const testValue = validation.email('abc@abc.com');
         expect(testValue).toEqual(undefined);
-    });
-
-    it('isURL', () => {
-        expect(isURL('http://library.uq.edu.au')).toBeTruthy();
-        expect(isURL('https://library.uq.edu.au')).toBeTruthy();
-        expect(isURL('https://a')).toBeTruthy();
-        expect(isURL('https://')).toBeFalsy();
-        expect(isURL('library.uq.edu.au')).toBeFalsy();
-        expect(isURL('abc')).toBeFalsy();
     });
 
     it('should validate url', () => {

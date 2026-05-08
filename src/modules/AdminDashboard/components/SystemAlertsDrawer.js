@@ -21,8 +21,7 @@ import Copy from '@mui/icons-material/FileCopyOutlined';
 import Tooltip from '@mui/material/Tooltip';
 import { FEZ_USER_SYSTEM_ID, FEZ_USER_SYSTEM_LABEL } from '../../../config/general';
 import { useAdminUserOptions } from '../hooks';
-import { isURL } from '../../../config/validation';
-
+import { isURL } from '../../../helpers/general';
 const rootId = 'system-alert-detail';
 const StyledDivider = styled(Divider)(({ theme }) => ({
     marginTop: theme.spacing(2),

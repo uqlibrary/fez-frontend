@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
-import { isURL } from '../../../config/validation';
 import { ExternalLink } from '../../SharedComponents/ExternalLink';
 import { md5 } from 'locutus/php/strings';
+import { isURL } from '../../../helpers/general';
 
 const searchByOrder = (grantData, orderSubkey, order) => {
     return grantData && grantData.filter(grantData => grantData[orderSubkey] === order)[0];
