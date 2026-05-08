@@ -141,7 +141,7 @@ test.describe('Claim possible work', () => {
             await page
                 .locator('.StandardCard', { hasText: claimFormLocale.comments.title })
                 .locator('input')
-                .fill('https://');
+                .fill('https://a.b');
             await expect(page.locator('button', { hasText: claimFormLocale.submit })).not.toBeDisabled();
         });
 
