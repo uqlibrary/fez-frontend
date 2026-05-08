@@ -103,11 +103,11 @@ exports[`GrantListEditor should add grant to the list 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -602,11 +602,11 @@ exports[`GrantListEditor should delete all grants 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -1268,11 +1268,11 @@ exports[`GrantListEditor should delete all grants 2`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -1453,11 +1453,11 @@ exports[`GrantListEditor should delete grant 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -2121,11 +2121,11 @@ exports[`GrantListEditor should delete grant 2`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -2618,11 +2618,11 @@ exports[`GrantListEditor should move the grant down 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -3284,11 +3284,11 @@ exports[`GrantListEditor should move the grant down 2`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -3950,11 +3950,11 @@ exports[`GrantListEditor should move the grant up 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -4616,11 +4616,11 @@ exports[`GrantListEditor should move the grant up 2`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -5282,11 +5282,11 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -5779,11 +5779,11 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -6276,11 +6276,11 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -6944,11 +6944,11 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -7612,11 +7612,11 @@ exports[`GrantListEditor should render default view 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -7797,11 +7797,11 @@ exports[`GrantListEditor should render error from props 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -7987,11 +7987,11 @@ exports[`GrantListEditor should render error from props as children 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -8182,11 +8182,11 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -9186,11 +9186,11 @@ exports[`GrantListEditor should render string error from props 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -9376,11 +9376,11 @@ exports[`GrantListEditor should render with default given value 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -9873,11 +9873,11 @@ exports[`GrantListEditor should render with default given value is List 1`] = `
             />
           </div>
         </div>
-        <p
+        <div
           class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
         >
           Accepts IDs or full URLs
-        </p>
+        </div>
       </div>
       <div
         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"

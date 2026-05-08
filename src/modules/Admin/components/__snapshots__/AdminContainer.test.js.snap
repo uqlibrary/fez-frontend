@@ -3852,11 +3852,11 @@ exports[`AdminContainer component should render default view 1`] = `
                                       />
                                     </div>
                                   </div>
-                                  <p
+                                  <div
                                     class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
                                   >
                                     Accepts IDs or full URLs
-                                  </p>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"

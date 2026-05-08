@@ -622,11 +622,11 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
                   />
                 </div>
               </div>
-              <p
+              <div
                 class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
               >
                 Accepts IDs or full URLs
-              </p>
+              </div>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -962,11 +962,11 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
                   />
                 </div>
               </div>
-              <p
+              <div
                 class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
               >
                 Accepts IDs or full URLs
-              </p>
+              </div>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -2043,11 +2043,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                   />
                 </div>
               </div>
-              <p
+              <div
                 class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
               >
                 Accepts IDs or full URLs
-              </p>
+              </div>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -3110,11 +3110,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   />
                 </div>
               </div>
-              <p
+              <div
                 class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
               >
                 Accepts IDs or full URLs
-              </p>
+              </div>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -3987,11 +3987,11 @@ exports[`Component NtroFields should render default view 1`] = `
                   />
                 </div>
               </div>
-              <p
+              <div
                 class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
               >
                 Accepts IDs or full URLs
-              </p>
+              </div>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -5892,11 +5892,11 @@ exports[`Component NtroFields should show significance field even if contributio
                   />
                 </div>
               </div>
-              <p
+              <div
                 class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
               >
                 Accepts IDs or full URLs
-              </p>
+              </div>
             </div>
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
