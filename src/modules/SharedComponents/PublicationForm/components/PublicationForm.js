@@ -25,6 +25,7 @@ import { default as txt } from 'locale/publicationForm';
 import {
     DOCTYPE_SUBTYPE_MAPPING,
     NEW_DOCTYPES_OPTIONS,
+    NTRO_COMMISSIONED_RESEARCH_REPORT_SUBTYPES,
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     PUBLICATION_TYPE_DESIGN,
     SUBTYPE_EDITED_BOOK,
@@ -96,8 +97,19 @@ const validatePages = data => {
     return {};
 };
 
+const validateResearchReportForm = data => {
+    if (
+        !NTRO_COMMISSIONED_RESEARCH_REPORT_SUBTYPES.includes(data.rek_subtype) ||
+        data?.research_report_form_commissioned_ntro
+    ) {
+        return {};
+    }
+    return { commissionedNtroResearchReport: { message: locale.validationErrors.commissionedNtroResearchReport } };
+};
+
 const getFormLevelError = data => {
     return {
+        ...validateResearchReportForm(data),
         ...validateAuthors(data),
         ...validateDates(data),
         ...validatePages(data),

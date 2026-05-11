@@ -51,7 +51,7 @@ export const validateHandler = async (value, formValues, validators) => {
  * @param {[function]} validate
  * @param {function} normalize
  * @param {*} childProps
- * @return {Element}
+ * @return {React.JSX.Element}
  * @constructor
  */
 const Field = ({
@@ -63,28 +63,25 @@ const Field = ({
     normalize,
     controller: ControllerComponent = Controller,
     ...childProps
-}) => {
-    return (
-        <ControllerComponent
-            name={name}
-            control={control}
-            rules={{
-                ...rules,
-                validate: /* istanbul ignore next */ (value, formValues) =>
-                    validateHandler(value, formValues, validate),
-            }}
-            render={({ field }) => {
-                if (typeof field.onChange === 'function' && typeof normalize === 'function') {
-                    const originalOnChange = field.onChange;
-                    field.onChange = event => {
-                        originalOnChange(normalize(event && event?.target ? event.target.value : event));
-                    };
-                }
-                return <Component {...childProps} {...field} />;
-            }}
-        />
-    );
-};
+}) => (
+    <ControllerComponent
+        name={name}
+        control={control}
+        rules={{
+            ...rules,
+            validate: /* istanbul ignore next */ (value, formValues) => validateHandler(value, formValues, validate),
+        }}
+        render={({ field }) => {
+            if (typeof field.onChange === 'function' && typeof normalize === 'function') {
+                const originalOnChange = field.onChange;
+                field.onChange = event => {
+                    originalOnChange(normalize(event && event?.target ? event.target.value : event));
+                };
+            }
+            return <Component {...childProps} {...field} />;
+        }}
+    />
+);
 
 Field.propTypes = {
     name: PropTypes.string.isRequired,
