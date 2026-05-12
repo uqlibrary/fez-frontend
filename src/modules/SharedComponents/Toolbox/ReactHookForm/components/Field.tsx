@@ -1,36 +1,42 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Controller from './Controller';
+import { Control, FieldValues } from 'react-hook-form';
+import Controller, { DecoratedField } from './Controller';
+
+type Validator = (
+    value: unknown,
+    formValues: FieldValues,
+) => Promise<string | null | undefined> | string | null | undefined;
+
+interface FieldProps {
+    name: string;
+    control: Control;
+    rules?: Record<string, unknown>;
+    component: React.ComponentType<DecoratedField & Record<string, unknown>>;
+    validate?: Validator[];
+    normalize?: (value: unknown) => unknown;
+    controller?: React.ComponentType<React.ComponentProps<typeof Controller>>;
+    [key: string]: unknown;
+}
 
 /**
  * Validate handler that validates a value against a list of validators.
  * It returns the first error message, if any
- *
- * @param value
- * @param validate
- * @return {string|null}
  */
-export const validateHandler = async (value, formValues, validators) => {
-    if (!(validators instanceof Array)) {
-        return null;
-    }
+export const validateHandler = async (
+    value: unknown,
+    formValues: FieldValues,
+    validators: Validator[],
+): Promise<string | undefined> => {
+    if (!Array.isArray(validators)) return undefined;
 
     for (const validator of validators) {
         if (typeof validator !== 'function') continue;
-
         let result = await Promise.resolve(validator(value, formValues));
-
-        if (typeof result !== 'string') {
-            continue;
-        }
-
+        if (typeof result !== 'string') continue;
         result = result.trim();
-        if (result.length > 0) {
-            return result;
-        }
+        if (result.length > 0) return result;
     }
-
-    return null;
+    return undefined;
 };
 
 /**
@@ -43,16 +49,6 @@ export const validateHandler = async (value, formValues, validators) => {
  * Props notes:
  * - validate: an array of validators that are checks the field's value sequentially, in left-to-right order.
  * - normalize: function that gets called on every field's value change event.
- *
- * @param {string} name
- * @param {object} control
- * @param {*} rules
- * @param {function} Component
- * @param {[function]} validate
- * @param {function} normalize
- * @param {*} childProps
- * @return {React.JSX.Element}
- * @constructor
  */
 const Field = ({
     name,
@@ -63,34 +59,25 @@ const Field = ({
     normalize,
     controller: ControllerComponent = Controller,
     ...childProps
-}) => (
+}: FieldProps) => (
     <ControllerComponent
         name={name}
         control={control}
         rules={{
             ...rules,
-            validate: /* istanbul ignore next */ (value, formValues) => validateHandler(value, formValues, validate),
+            validate: /* istanbul ignore next */ (value: unknown, formValues: FieldValues) =>
+                validateHandler(value, formValues, validate ?? []),
         }}
         render={({ field }) => {
             if (typeof field.onChange === 'function' && typeof normalize === 'function') {
                 const originalOnChange = field.onChange;
-                field.onChange = event => {
-                    originalOnChange(normalize(event && event?.target ? event.target.value : event));
+                field.onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+                    originalOnChange(normalize(event?.target ? event.target.value : event) as never);
                 };
             }
             return <Component {...childProps} {...field} />;
         }}
     />
 );
-
-Field.propTypes = {
-    name: PropTypes.string.isRequired,
-    control: PropTypes.object.isRequired,
-    rules: PropTypes.object,
-    validate: PropTypes.array,
-    component: PropTypes.elementType.isRequired,
-    normalize: PropTypes.func,
-    controller: PropTypes.node,
-};
 
 export default Field;
