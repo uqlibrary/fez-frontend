@@ -1,29 +1,27 @@
 import React from 'react';
-import { Control } from 'react-hook-form';
 import { Field } from '../ReactHookForm';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Typography from '@mui/material/Typography';
-import { validation } from 'config';
 import { default as locale } from './locale';
 import { DecoratedField } from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller';
+import { FieldProps } from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Field';
 
-interface CommissionedResearchReportFieldProps {
-    name?: string;
-    control: Control;
+interface CommissionedResearchReportFieldProps extends Pick<FieldProps, 'control' | 'validate' | 'name'> {
     disabled?: boolean;
 }
 
 const CommissionedResearchReportField = ({
     control,
     disabled,
+    validate,
     name = 'commissionedResearchReport',
 }: CommissionedResearchReportFieldProps) => (
     <Field
         name={name}
         control={control}
         disabled={disabled}
-        validate={[validation.required]}
+        validate={validate}
         data-testid="commissioned-research-report"
         component={({ disabled, value, state, ...props }: DecoratedField) => (
             <FormControlLabel

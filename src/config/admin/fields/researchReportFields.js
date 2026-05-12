@@ -98,9 +98,15 @@ export default {
 };
 
 export const validateResearchReport = (
-    { bibliographicSection: bs, authorsSection: as },
+    { adminSection, bibliographicSection: bs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
+    adminSection: {
+        ...(adminSection?.hasOwnProperty?.('commissionedResearchReport') &&
+            !adminSection.commissionedResearchReport && {
+                commissionedResearchReport: summary.commissionedResearchReport,
+            }),
+    },
     bibliographicSection: {
         ...((!((bs || {}).fez_record_search_key_place_of_publication || {}).rek_place_of_publication && {
             fez_record_search_key_place_of_publication: {

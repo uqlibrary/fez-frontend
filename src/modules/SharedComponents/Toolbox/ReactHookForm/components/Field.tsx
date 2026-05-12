@@ -7,7 +7,7 @@ type Validator = (
     formValues: FieldValues,
 ) => Promise<string | null | undefined> | string | null | undefined;
 
-interface FieldProps {
+export interface FieldProps {
     name: string;
     control: Control;
     rules?: Record<string, unknown>;
