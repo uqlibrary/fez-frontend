@@ -201,6 +201,7 @@ export const AdminContainer = ({ createMode = false }) => {
                                                 : null,
                                         },
                                     },
+                                    // ntro: {..}, <--- see "authors" section above
                                     identifiers: {
                                         component: IdentifiersSection,
                                         activated: isActivated(),

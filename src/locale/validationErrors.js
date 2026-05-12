@@ -65,7 +65,7 @@ export default {
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
         keywords: 'Limited to [max] characters',
-        commissionedNtroResearchReport: 'Commissioned report confirmation is required',
+        commissionedResearchReport: 'Commissioned report confirmation is required',
     },
     validationErrorsSummary: {
         // appears in footer error block
@@ -127,7 +127,7 @@ export default {
         dateRange: 'Publication start/end dates are invalid',
         collectionDateRange: 'Collection start/end dates are invalid',
         pageRange: 'Please provide a valid start/end page range',
-        commissionedNtroResearchReport: 'Commissioned report confirmation is required',
+        commissionedResearchReport: 'Commissioned report confirmation is required',
         // Collection form validations
         communityID: 'You must select a community',
         collection_pid: 'You must select a collection',

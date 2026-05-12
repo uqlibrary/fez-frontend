@@ -73,6 +73,7 @@ export default {
             title: 'Additional information',
             groups: [
                 ['rek_subtype'],
+                ['commissionedResearchReport'],
                 [
                     'fez_record_search_key_herdc_code',
                     'fez_record_search_key_herdc_status',

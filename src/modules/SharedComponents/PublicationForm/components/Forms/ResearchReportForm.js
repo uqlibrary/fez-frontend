@@ -16,13 +16,12 @@ import {
     NTRO_SUBTYPE_RREB_INDUSTRY,
     NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
     NTRO_SUBTYPE_RREB_OTHER,
-    NTRO_COMMISSIONED_RESEARCH_REPORT_SUBTYPES,
+    NTRO_RESEARCH_REPORT_SUBTYPES,
 } from 'config/general';
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import CommissionedResearchReportField from '../../../Toolbox/NtroFields/components/CommissionedResearchReportField';
 
 export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, control, values }) => {
     const txt = formLocale.researchReport;
@@ -31,42 +30,14 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
         values.rek_subtype === NTRO_SUBTYPE_RREB_INDUSTRY ||
         values.rek_subtype === NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT ||
         values.rek_subtype === NTRO_SUBTYPE_RREB_OTHER;
-    const isCommissionedNtro = isNtro && NTRO_COMMISSIONED_RESEARCH_REPORT_SUBTYPES.includes(values.rek_subtype);
+    const isCommissionedNtro = isNtro && NTRO_RESEARCH_REPORT_SUBTYPES.includes(values.rek_subtype);
 
     return (
         <>
             {isCommissionedNtro && (
                 <Grid container spacing={3}>
                     <Grid item xs={12} sx={{ mx: 2, mt: -1, mb: 2 }}>
-                        <Field
-                            control={control}
-                            name="research_report_form_commissioned_ntro"
-                            data-testid="research-report-form-commissioned-ntro"
-                            disabled={isSubmitting}
-                            validate={[validation.required]}
-                            component={props => (
-                                <FormControlLabel
-                                    disabled={/* eslint-disable-line react/prop-types */ props?.disabled}
-                                    control={
-                                        <Checkbox
-                                            {...props}
-                                            checked={/* eslint-disable-line react/prop-types */ !!props?.value}
-                                        />
-                                    }
-                                    label={
-                                        <Typography
-                                            color={
-                                                /* eslint-disable-line react/prop-types */ (!!props?.state?.error &&
-                                                    'error') ||
-                                                'secondary'
-                                            }
-                                        >
-                                            This report was commissioned by an external client/organisation.
-                                        </Typography>
-                                    }
-                                />
-                            )}
-                        />
+                        <CommissionedResearchReportField control={control} disabled={isSubmitting} />
                     </Grid>
                 </Grid>
             )}
