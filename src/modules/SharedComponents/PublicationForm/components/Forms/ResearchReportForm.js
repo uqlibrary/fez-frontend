@@ -21,7 +21,7 @@ import {
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
-import CommissionedResearchReportField from '../../../Toolbox/NtroFields/components/CommissionedResearchReportField';
+import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
 
 export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, control, values }) => {
     const txt = formLocale.researchReport;

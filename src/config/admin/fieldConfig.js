@@ -88,7 +88,7 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import SensitiveHandlingNoteField from '../../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
-import CommissionedResearchReportField from '../../modules/SharedComponents/Toolbox/NtroFields/components/CommissionedResearchReportField';
+import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {

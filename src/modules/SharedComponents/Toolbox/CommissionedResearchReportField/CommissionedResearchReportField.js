@@ -1,10 +1,11 @@
 import React from 'react';
-import { Field } from '../../ReactHookForm';
+import { Field } from '../ReactHookForm';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Typography from '@mui/material/Typography';
 import { validation } from 'config';
 import PropTypes from 'prop-types';
+import { default as locale } from './locale';
 
 const CommissionedResearchReportField = ({ control, disabled, name = 'commissionedResearchReport' }) => (
     <Field
@@ -22,8 +23,9 @@ const CommissionedResearchReportField = ({ control, disabled, name = 'commission
                         color={
                             /* eslint-disable-line react/prop-types */ (!!props?.state?.error && 'error') || 'secondary'
                         }
+                        data-testid={`commissioned-research-report-${/* eslint-disable-line react/prop-types */ (props?.state?.error && 'error') || 'label'}`}
                     >
-                        This report was commissioned by an external client/organisation.
+                        {locale.label}
                     </Typography>
                 }
             />
