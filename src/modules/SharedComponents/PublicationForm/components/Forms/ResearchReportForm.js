@@ -30,11 +30,11 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
         values.rek_subtype === NTRO_SUBTYPE_RREB_INDUSTRY ||
         values.rek_subtype === NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT ||
         values.rek_subtype === NTRO_SUBTYPE_RREB_OTHER;
-    const isCommissionedNtro = isNtro && NTRO_RESEARCH_REPORT_SUBTYPES.includes(values.rek_subtype);
+    const showCommissionedConfirmation = !!(isNtro && NTRO_RESEARCH_REPORT_SUBTYPES.includes(values.rek_subtype));
 
     return (
         <>
-            {isCommissionedNtro && (
+            {showCommissionedConfirmation && (
                 <Grid container spacing={3}>
                     <Grid item xs={12} sx={{ mx: 2, mt: -1, mb: 2 }}>
                         <CommissionedResearchReportField control={control} disabled={isSubmitting} />

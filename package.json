@@ -31,6 +31,7 @@
     "test:e2e": "cross-env PW_IS_RUNNING=true playwright test",
     "test:e2e:show": "cross-env PW_HEADED=true npm run test:e2e -- --workers=1",
     "test:e2e:debug": "playwright show-trace",
+    "test:e2e:failed": "npm run test:e2e -- --last-failed",
     "test:e2e:cc": "cross-env NODE_ENV=cc npm run test:e2e",
     "posttest:e2e:cc": "rm -rf .nyc_output",
     "test:unit": "cross-env NODE_ENV=test APP_URL=http://localhost/ jest",
