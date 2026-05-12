@@ -98,10 +98,10 @@ const validatePages = data => {
 };
 
 const validateResearchReportForm = data => {
-    if (!NTRO_RESEARCH_REPORT_SUBTYPES.includes(data.rek_subtype) || data?.research_report_form_commissioned_ntro) {
+    if (!NTRO_RESEARCH_REPORT_SUBTYPES.includes(data.rek_subtype) || data?.commissionedResearchReport) {
         return {};
     }
-    return { commissionedNtroResearchReport: { message: locale.validationErrors.commissionedNtroResearchReport } };
+    return { commissionedResearchReport: { message: locale.validationErrors.commissionedResearchReport } };
 };
 
 const getFormLevelError = data => {
