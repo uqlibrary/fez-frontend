@@ -6,6 +6,7 @@ import {
     adminEditCountCards,
     adminEditNoAlerts,
     adminEditTabbedView,
+    adminEditVerifyAlerts,
     loadRecordForAdminEdit,
 } from '../helpers';
 
@@ -65,6 +66,16 @@ test.describe('Research Report admin edit', () => {
         const parentOfLicenseInput = licenseInput.locator('xpath=..');
         const licenseCombobox = parentOfLicenseInput.getByRole('combobox');
         await expect(licenseCombobox).toHaveText(record.fez_record_search_key_license.rek_license_lookup);
+        // validation
+        await page.getByTestId('commissioned-research-report-field-label').click();
+        await adminEditVerifyAlerts(page, 1, ['Commissioned report confirmation is required']);
+        await adminEditTabbedView(page, true);
+        await page.getByTestId('authors-tab').click();
+        await page.getByTestId('admin-tab').click();
+        await adminEditVerifyAlerts(page, 1, ['Commissioned report confirmation is required']);
+        await adminEditTabbedView(page, false);
+        await page.getByTestId('commissioned-research-report-field-error').click();
+        await adminEditNoAlerts(page);
 
         // ---------------------------------------- GRANT INFORMATION TAB --------------------------------------------
         await expect(page.getByTestId('grants-section-header')).toHaveText('Grants');

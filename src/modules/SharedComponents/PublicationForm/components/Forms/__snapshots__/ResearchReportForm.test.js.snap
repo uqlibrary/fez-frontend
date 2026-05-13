@@ -1065,7 +1065,7 @@ exports[`ResearchReportForm component with 5 input fields for NTRO 1`] = `
       >
         <span
           class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
-          data-testid="commissioned-research-report"
+          data-testid="commissioned-research-report-field"
         >
           <input
             class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -1087,7 +1087,7 @@ exports[`ResearchReportForm component with 5 input fields for NTRO 1`] = `
         </span>
         <p
           class="MuiTypography-root MuiTypography-body1 css-16evgi0-MuiTypography-root"
-          data-testid="commissioned-research-report-label"
+          data-testid="commissioned-research-report-field-label"
         >
           This report was commissioned by an external client/organisation.
         </p>

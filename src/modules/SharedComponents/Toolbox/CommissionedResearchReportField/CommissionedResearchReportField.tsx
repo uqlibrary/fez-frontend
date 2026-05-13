@@ -22,7 +22,7 @@ const CommissionedResearchReportField = ({
         control={control}
         disabled={disabled}
         validate={validate}
-        data-testid="commissioned-research-report"
+        data-testid="commissioned-research-report-field"
         component={({ disabled, value, state, ...props }: DecoratedField) => (
             <FormControlLabel
                 disabled={disabled}
@@ -30,7 +30,7 @@ const CommissionedResearchReportField = ({
                 label={
                     <Typography
                         color={(!!state?.error && 'error') || 'secondary'}
-                        data-testid={`commissioned-research-report-${(state?.error && 'error') || 'label'}`}
+                        data-testid={`commissioned-research-report-field-${(state?.error && 'error') || 'label'}`}
                     >
                         {locale.label}
                     </Typography>

@@ -321,6 +321,7 @@ export default {
             },
         },
         commissionedResearchReport: {
+            isComposed: true,
             component: CommissionedResearchReportField,
             componentProps: {
                 name: 'adminSection.commissionedResearchReport',

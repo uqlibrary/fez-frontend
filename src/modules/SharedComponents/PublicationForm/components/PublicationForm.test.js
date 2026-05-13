@@ -230,7 +230,7 @@ describe('PublicationForm', () => {
             await selectTypeCombo(NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, DOCUMENT_TYPE_RESEARCH_REPORT);
 
             await assertValidationErrorSummary([validationErrors.validationErrorsSummary.commissionedResearchReport]);
-            await userEvent.click(getByTestId('commissioned-research-report'));
+            await userEvent.click(getByTestId('commissioned-research-report-field'));
             await assertMissingValidationErrorSummary([
                 validationErrors.validationErrorsSummary.commissionedResearchReport,
             ]);

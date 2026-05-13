@@ -28,7 +28,7 @@
     "pretest:cc": "rm -rf coverage .nyc_output",
     "test:cc": "npm run test:unit:ci && npm run test:unit:ci:serial && npm run test:e2e:cc && npm run cc:reportAll",
     "test:cs": "echo \"Running code style checks...\" && FILES=$(npm run codestyles:files -s) && echo \"No code style issues found.\" || echo \"File(s) failed code style checks!:\" && echo $FILES",
-    "test:e2e": "cross-env PW_IS_RUNNING=true playwright test",
+    "test:e2e": "cross-env PORT=${PORT-3000} PW_IS_RUNNING=true playwright test",
     "test:e2e:show": "cross-env PW_HEADED=true npm run test:e2e -- --workers=1",
     "test:e2e:debug": "playwright show-trace",
     "test:e2e:failed": "npm run test:e2e -- --last-failed",

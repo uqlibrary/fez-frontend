@@ -36,7 +36,7 @@ describe('CommissionedResearchReportField', () => {
 
         const checkbox = getByRole('checkbox');
 
-        expect(queryByTestId('commissioned-research-report')).toBeInTheDocument();
+        expect(queryByTestId('commissioned-research-report-field')).toBeInTheDocument();
         expect(getByText(locale.label)).toBeInTheDocument();
         expect(checkbox).not.toBeChecked();
 
@@ -54,14 +54,14 @@ describe('CommissionedResearchReportField', () => {
 
         expect(checkbox).toBeDisabled();
         expect(checkbox).toHaveAttribute('name', 'customFieldName');
-        expect(queryByTestId('commissioned-research-report-label')).toBeInTheDocument();
-        expect(queryByTestId('commissioned-research-report-error')).not.toBeInTheDocument();
+        expect(queryByTestId('commissioned-research-report-field-label')).toBeInTheDocument();
+        expect(queryByTestId('commissioned-research-report-field-error')).not.toBeInTheDocument();
     });
 
     it('should render error color when field has error', () => {
         mockState = { error: 'The field is required' };
         const { queryByTestId } = setup();
-        expect(queryByTestId('commissioned-research-report-label')).not.toBeInTheDocument();
-        expect(queryByTestId('commissioned-research-report-error')).toBeInTheDocument();
+        expect(queryByTestId('commissioned-research-report-field-label')).not.toBeInTheDocument();
+        expect(queryByTestId('commissioned-research-report-field-error')).toBeInTheDocument();
     });
 });
