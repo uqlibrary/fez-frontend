@@ -226,14 +226,16 @@ describe('PublicationForm', () => {
         });
 
         it('should validated NTRO Research Report', async () => {
-            const { getByTestId } = setup();
+            const { queryByTestId } = setup();
             await selectTypeCombo(NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, DOCUMENT_TYPE_RESEARCH_REPORT);
 
             await assertValidationErrorSummary([validationErrors.validationErrorsSummary.commissionedResearchReport]);
-            await userEvent.click(getByTestId('commissioned-research-report-field'));
+            expect(queryByTestId('commissioned-research-report-field-error')).toBeInTheDocument();
+            await userEvent.click(queryByTestId('commissioned-research-report-field'));
             await assertMissingValidationErrorSummary([
                 validationErrors.validationErrorsSummary.commissionedResearchReport,
             ]);
+            expect(queryByTestId('commissioned-research-report-field-error')).not.toBeInTheDocument();
         });
     });
 

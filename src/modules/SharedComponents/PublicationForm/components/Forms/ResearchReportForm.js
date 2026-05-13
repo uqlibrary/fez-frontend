@@ -37,7 +37,11 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
             {showCommissionedConfirmation && (
                 <Grid container spacing={3}>
                     <Grid item xs={12} sx={{ mx: 2, mt: -1, mb: 2 }}>
-                        <CommissionedResearchReportField control={control} disabled={isSubmitting} />
+                        <CommissionedResearchReportField
+                            control={control}
+                            disabled={isSubmitting}
+                            validate={[validation.required]}
+                        />
                     </Grid>
                 </Grid>
             )}
