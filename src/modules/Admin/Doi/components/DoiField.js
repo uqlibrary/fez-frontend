@@ -63,6 +63,7 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         case 'fez_record_search_key_instrument_type':
         case 'fez_record_search_key_measured_variable':
         case 'fez_record_search_key_alternate_identifier':
+        case 'fez_record_search_key_keywords':
             if (!!data && data.length === 0) {
                 break;
             }
@@ -94,10 +95,17 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         case 'fez_record_search_key_resource_type':
         case 'fez_record_search_key_series':
         case 'fez_record_search_key_start_page':
+        case 'fez_record_search_key_total_pages':
         case 'fez_record_search_key_volume_number':
+        case 'fez_record_search_key_journal_name':
+        case 'fez_record_search_key_article_number':
+        case 'fez_record_search_key_notes':
             value = !!data && data[field.replace('fez_record_search_key', 'rek')];
             if (field === 'fez_record_search_key_series' && !!value) {
                 value = value.split(';')[0].split(': no')[0];
+            }
+            if (field === 'fez_record_search_key_notes' && !!value) {
+                value = parseHtmlToJSX(value);
             }
             break;
 
@@ -111,6 +119,9 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
         case 'rek_author-name':
         case 'rek_doi':
         case 'rek_genre_type':
+        case 'rek_subtype':
+        case 'rek_pages':
+        case 'rek_year':
             value = data;
             break;
 

@@ -12,11 +12,14 @@ import globalLocale from './global';
 
 import { pathConfig } from 'config/pathConfig';
 import {
+    DOCUMENT_TYPE_DESIGN,
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
     ESPACE_TEAM_CONTACT_US_URL,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -1039,7 +1042,13 @@ export default {
                 noDoi: 'DOI (Preview)',
             },
             doiTemplate: (pid, displayType) =>
-                displayType === PUBLICATION_TYPE_DATA_COLLECTION || displayType === PUBLICATION_TYPE_INSTRUMENT
+                [
+                    PUBLICATION_TYPE_DATA_COLLECTION,
+                    PUBLICATION_TYPE_INSTRUMENT,
+                    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+                    DOCUMENT_TYPE_DESIGN,
+                    PUBLICATION_TYPE_CREATIVE_WORK,
+                ].includes(displayType)
                     ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
                     : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',

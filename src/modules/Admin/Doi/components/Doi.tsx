@@ -210,13 +210,10 @@ export const getErrorMessage = (record: FezRecord) => {
     const alertTitle = txt.alertMessages.errorTitle;
     const alertType = 'error';
 
-    const displayType = !!record && (record.rek_display_type as number);
-    const displayTypeLookup = !!record && (record.rek_display_type_lookup as string);
-    const doi =
-        !!record &&
-        !!record.fez_record_search_key_doi &&
-        ((record?.fez_record_search_key_doi as OneToOneRelation)?.rek_doi as string);
-    const recordType = (!!record && (record?.rek_object_type_lookup as string)) || '';
+    const displayType = record?.rek_display_type as number;
+    const displayTypeLookup = record?.rek_display_type_lookup as string;
+    const doi = (record?.fez_record_search_key_doi as OneToOneRelation)?.rek_doi as string;
+    const recordType = (record?.rek_object_type_lookup as string) || '';
 
     const errorMessages: string[] = [];
     let unsupportedType = false;
@@ -236,10 +233,10 @@ export const getErrorMessage = (record: FezRecord) => {
         addBookChaptersParentErrorMessage(record, displayType, errorMessages);
 
         // Subtype restrictions
-        const supportedSubtypes = !!displayType && !!doiFields[displayType] && doiFields[displayType].subtypes;
+        const supportedSubtypes = doiFields[displayType]?.subtypes;
         if (supportedSubtypes) {
-            const subtype = !!record && (record.rek_subtype as string);
-            if (supportedSubtypes.indexOf(subtype) === -1) {
+            const subtype = record.rek_subtype as string;
+            if (subtype && supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(
                     txt.alertMessages.wrongSubtype
                         .replace('[TYPE]', displayTypeLookup)
@@ -265,7 +262,7 @@ export const getErrorMessage = (record: FezRecord) => {
         const invalidPreviewFields = !unsupportedDisplayType && getInvalidPreviewFields(record);
         if (invalidPreviewFields.length) {
             invalidPreviewFields.forEach(field => {
-                // @ts-ignore
+                // @ts-expect-error todo
                 const fieldName = txt.headings.default[field];
                 const errorTemplate = ['fez_record_search_key_org_name', 'fez_record_search_key_publisher'].includes(
                     field,
@@ -336,10 +333,7 @@ export const Doi: React.FC<Doi> = ({
     }, [showConfirmation, doiUpdated]);
 
     if (!!pidParam && loadingRecordToView) {
-        return (
-            // @ts-ignore
-            <InlineLoader message={txt.loadingMessage} />
-        );
+        return <InlineLoader message={txt.loadingMessage} />;
     }
 
     // Record not found
@@ -348,7 +342,7 @@ export const Doi: React.FC<Doi> = ({
         return <div className="empty" />;
     }
 
-    // Get subkeys where present
+    // Get subkeys when present
     const displayTypeLookup = !!record && (record.rek_display_type_lookup as string);
     const doi =
         !!record &&
@@ -380,7 +374,7 @@ export const Doi: React.FC<Doi> = ({
         confirmationTxt.confirmationMessage = `The DOI has been created/updated in ${DOI_DATACITE_NAME}`;
     }
 
-    // @ts-ignore
+    // @ts-expect-error todo
     const alertProps = validation.getErrorAlertProps({
         alertLocale: alertTxt,
         error: doiFailed,
@@ -389,36 +383,23 @@ export const Doi: React.FC<Doi> = ({
     });
 
     return (
-        // @ts-ignore
         <StandardPage>
             {!!pid && (
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         {renderTitle({ doi, displayTypeLookup, title, pid })}
-                        {/* @ts-ignore */}
+                        {/* @ts-expect-error todo */}
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
                     <Grid item xs={12}>
-                        {(!!errorMessage && (
-                            <Alert
-                                // @ts-ignore
-                                message={errorMessage}
-                                type="error"
-                                alertId="rek-doi-error"
-                            />
-                        )) ||
+                        {(!!errorMessage && <Alert message={errorMessage} type="error" alertId="rek-doi-error" />) ||
                             (!!warningMessage && (
-                                <Alert
-                                    // @ts-ignore
-                                    message={warningMessage}
-                                    type="warning"
-                                    alertId="rek-doi-warning"
-                                />
+                                <Alert message={warningMessage} type="warning" alertId="rek-doi-warning" />
                             ))}
                     </Grid>
                     <Grid item xs={12}>
                         <ConfirmationBox
-                            // @ts-ignore
+                            // @ts-expect-error todo
                             testId="rek-doi-confirmation-box"
                             confirmationBoxId="rek-doi"
                             hideCancelButton
@@ -431,12 +412,7 @@ export const Doi: React.FC<Doi> = ({
                     </Grid>
                     {alertProps && (
                         <Grid item xs={12}>
-                            <Alert
-                                // @ts-ignore
-                                alertId="rek-doi-submit-status"
-                                message=""
-                                {...alertProps}
-                            />
+                            <Alert alertId="rek-doi-submit-status" message="" {...alertProps} />
                         </Grid>
                     )}
                     <Grid item xs={12}>

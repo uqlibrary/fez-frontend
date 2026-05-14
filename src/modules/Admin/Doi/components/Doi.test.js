@@ -3,7 +3,6 @@ import React from 'react';
 import { Doi, getWarningMessage, isArrayValid } from './Doi';
 
 import publicationTypeListConferencePaper from 'mock/data/records/publicationTypeListConferencePaper';
-import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
 import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
 import collectionRecord from 'mock/data/records/collectionRecord';
 import publicationTypeListBookChapter from 'mock/data/records/publicationTypeListBookChapter';
@@ -26,7 +25,7 @@ const confPaperRecord = {
         rek_publisher: `Test Publisher, ${UQ_FULL_NAME}`,
     },
 };
-const journalArticleRecord = publicationTypeListJournalArticle.data[0];
+
 const mockRecord = {
     ...publicationTypeListResearchReport.data[0],
     fez_record_search_key_publisher: {
@@ -340,13 +339,6 @@ describe('DOI component', () => {
 
     it('should not generate unnecessary warnings', () => {
         expect(getWarningMessage(mockRecord)).toBe('');
-    });
-
-    it('should render error for unsupported types', () => {
-        const { getByTestId } = setup({
-            record: journalArticleRecord,
-        });
-        expect(getByTestId('alert')).toHaveTextContent('Error:Sorry, type Journal Article is not currently supported.');
     });
 
     it('should render error for unsupported types', () => {
