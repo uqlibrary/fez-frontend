@@ -172,7 +172,7 @@
     "@react-google-maps/api": "^2.20.6",
     "@sentry/react": "^10.28.0",
     "@types/lodash": "^4.17.16",
-    "axios": "^1.13.5",
+    "axios": "^1.16.1",
     "axios-cache-interceptor": "^1.11.4",
     "can-deparam": "^1.1.1",
     "can-param": "^1.0.4",
