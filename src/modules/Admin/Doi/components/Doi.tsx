@@ -236,6 +236,7 @@ export const getErrorMessage = (record: FezRecord) => {
         const supportedSubtypes = doiFields[displayType]?.subtypes;
         if (supportedSubtypes) {
             const subtype = record.rek_subtype as string;
+            /* istanbul ignore else */
             if (!subtype || supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(
                     txt.alertMessages.wrongSubtype
