@@ -1065,7 +1065,7 @@ export default {
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
                 uqIsNotPublisher: '[SUBJECT] does not appear to be have an UQ DOI',
                 warningTitle: 'Please note:',
-                wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
+                wrongSubtype: 'Sorry, only the following subtypes are supported for [TYPE]: [SUBTYPES]',
                 bookChapter: {
                     parent: {
                         missing: "Sorry, this book chapter doesn't seem to belong to a existing book",

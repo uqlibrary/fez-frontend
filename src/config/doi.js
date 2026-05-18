@@ -14,7 +14,6 @@ import {
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_WORKING_PAPER,
-    SUBTYPE_FULLY_PUBLISHED_PAPER,
 } from './general';
 
 // Field order values copied from locale/viewRecord.js:viewRecord.fields
@@ -23,7 +22,7 @@ import {
  */
 export const doiFields = {
     [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
-        subtype: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, ...CW_NTRO_SUBTYPES],
+        subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, ...CW_NTRO_SUBTYPES],
         fields: [
             {
                 field: 'fez_record_search_key_author',
@@ -94,7 +93,7 @@ export const doiFields = {
     },
 
     [PUBLICATION_TYPE_DESIGN]: {
-        subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+        subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK],
         fields: [
             {
                 field: 'fez_record_search_key_author',
@@ -304,7 +303,6 @@ export const doiFields = {
     },
 
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
-        subtypes: [SUBTYPE_FULLY_PUBLISHED_PAPER],
         fields: [
             {
                 field: 'fez_record_search_key_author',

@@ -11,10 +11,12 @@ import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_NAME,
     PUBLICATION_TYPE_DATA_COLLECTION,
+    SUBTYPE_NON_NTRO,
     UQ_FULL_NAME,
 } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
 import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
+import { design } from '../../../../mock/data/testing/records';
 
 const confPaperRecord = {
     ...publicationTypeListConferencePaper.data[0],
@@ -128,12 +130,30 @@ describe('DOI component', () => {
     it('should render error for unsupported subtype', () => {
         const { getByTestId } = setup({
             record: {
-                ...confPaperRecord,
-                rek_subtype: 'Published abstract',
+                ...design,
+                rek_subtype: SUBTYPE_NON_NTRO,
+                fez_record_search_key_publisher: {
+                    rek_publisher: UQ_FULL_NAME,
+                },
             },
         });
         expect(getByTestId('alert')).toHaveTextContent(
-            'Error:Sorry, only the following subytypes are supported for Conference Paper: Fully published paper',
+            'Error:Sorry, only the following subtypes are supported for Design: Creative Work - Design/Architectural',
+        );
+    });
+
+    it('should render error for missing subtype', () => {
+        const { getByTestId } = setup({
+            record: {
+                ...design,
+                rek_subtype: null,
+                fez_record_search_key_publisher: {
+                    rek_publisher: UQ_FULL_NAME,
+                },
+            },
+        });
+        expect(getByTestId('alert')).toHaveTextContent(
+            'Error:Sorry, only the following subtypes are supported for Design: Creative Work - Design/Architectural',
         );
     });
 
@@ -210,7 +230,7 @@ describe('DOI component', () => {
             },
         });
         expect(getByTestId('alert')).toHaveTextContent(
-            'Error:Sorry, only the following subytypes are supported for the parent Book: Edited book' +
+            'Error:Sorry, only the following subtypes are supported for the parent Book: Edited book' +
                 'The parent Book does not appear to be have an UQ DOI' +
                 `The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
         );

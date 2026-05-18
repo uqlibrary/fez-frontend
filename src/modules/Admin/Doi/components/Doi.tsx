@@ -113,8 +113,8 @@ export const isArrayValid = (
 };
 
 export const getInvalidPreviewFields = (record: FezRecord) => {
-    const displayType = !!record && (record.rek_display_type as number);
-    const previewFields = !!displayType && !!doiFields[displayType] && doiFields[displayType].fields;
+    const displayType = record?.rek_display_type as number;
+    const previewFields = doiFields[displayType]?.fields;
     const invalidPreviewFields: string[] = [];
 
     // istanbul ignore next
@@ -236,7 +236,7 @@ export const getErrorMessage = (record: FezRecord) => {
         const supportedSubtypes = doiFields[displayType]?.subtypes;
         if (supportedSubtypes) {
             const subtype = record.rek_subtype as string;
-            if (subtype && supportedSubtypes.indexOf(subtype) === -1) {
+            if (!subtype || supportedSubtypes.indexOf(subtype) === -1) {
                 errorMessages.push(
                     txt.alertMessages.wrongSubtype
                         .replace('[TYPE]', displayTypeLookup)
