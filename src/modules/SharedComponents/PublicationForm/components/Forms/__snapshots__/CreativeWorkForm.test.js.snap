@@ -2811,6 +2811,11 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                     />
                   </div>
                 </div>
+                <div
+                  class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+                >
+                  Accepts IDs or full URLs
+                </div>
               </div>
               <div
                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -4270,6 +4275,11 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                       value=""
                     />
                   </div>
+                </div>
+                <div
+                  class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+                >
+                  Accepts IDs or full URLs
                 </div>
               </div>
               <div
