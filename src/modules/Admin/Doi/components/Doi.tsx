@@ -21,6 +21,9 @@ import {
     PUBLICATION_TYPE_INSTRUMENT,
     SUBTYPE_EDITED_BOOK,
     UQ_FULL_NAME,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_DESIGN,
+    PUBLICATION_TYPE_CREATIVE_WORK,
 } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { doiFields as untypedDoiFields, rccDatasetCollection } from 'config/doi';
@@ -363,8 +366,13 @@ export const Doi: React.FC<Doi> = ({
     const alertTxt = JSON.parse(JSON.stringify(txt.alertProps));
     const confirmationTxt = JSON.parse(JSON.stringify(txt.successConfirmation));
     if (
-        record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION ||
-        record.rek_display_type === PUBLICATION_TYPE_INSTRUMENT
+        [
+            PUBLICATION_TYPE_CREATIVE_WORK,
+            PUBLICATION_TYPE_DATA_COLLECTION,
+            PUBLICATION_TYPE_DESIGN,
+            PUBLICATION_TYPE_INSTRUMENT,
+            PUBLICATION_TYPE_JOURNAL_ARTICLE,
+        ].includes(Number(record.rek_display_type))
     ) {
         alertTxt.progressAlert.message = alertTxt.progressAlert.message
             .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
