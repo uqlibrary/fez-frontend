@@ -13,6 +13,11 @@ global.dr = arg => {
 /* istanbul ignore next */
 global.dj = console.log.bind(console, '%O');
 
+/**
+ * @param {function} callback
+ * @param {*} _default
+ * @return {undefined|*}
+ */
 export const silentTryCatch = (callback, _default = undefined) => {
     try {
         return callback();
