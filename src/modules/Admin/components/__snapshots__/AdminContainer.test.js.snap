@@ -1812,6 +1812,75 @@ exports[`AdminContainer component should render default view 1`] = `
                               </div>
                             </div>
                           </div>
+                          <div
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+                          >
+                            <div
+                              class="undefined"
+                              data-testid="rek-raid-list-editor"
+                              id="rek-raid-list-editor"
+                            >
+                              <div
+                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                              >
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  style="flex-grow: 1;"
+                                >
+                                  <div
+                                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                                  >
+                                    <label
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      data-shrink="false"
+                                      for="rek-raid-input"
+                                      id="rek-raid-input-label"
+                                    >
+                                      RAiD value
+                                    </label>
+                                    <div
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                    >
+                                      <input
+                                        aria-invalid="false"
+                                        class="MuiInputBase-input MuiInput-input css-60swwn-MuiInputBase-input-MuiInput-input"
+                                        data-analyticsid="rek-raid-input"
+                                        data-testid="rek-raid-input"
+                                        id="rek-raid-input"
+                                        placeholder="Enter RAiD, e.g. {prefix}/{suffix}"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                                >
+                                  <button
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    data-analyticsid="rek-raid-add"
+                                    data-testid="rek-raid-add"
+                                    disabled=""
+                                    id="rek-raid-add"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <span>
+                                      Add RAiD
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div
+                                data-testid="rek-raid-list"
+                                id="rek-raid-list"
+                              />
+                              <p
+                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3851,6 +3920,11 @@ exports[`AdminContainer component should render default view 1`] = `
                                         value=""
                                       />
                                     </div>
+                                  </div>
+                                  <div
+                                    class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                  >
+                                    Accepts IDs or full URLs
                                   </div>
                                 </div>
                                 <div

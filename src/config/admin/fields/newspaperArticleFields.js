@@ -30,6 +30,7 @@ export default {
                 ['fez_record_search_key_newspaper'],
                 ['fez_record_search_key_section'],
                 ['fez_record_search_key_translated_newspaper'],
+                ['fez_record_search_key_raid'],
             ],
         },
         {

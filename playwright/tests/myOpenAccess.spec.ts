@@ -117,7 +117,7 @@ test.describe('My Open Access', () => {
             await page
                 .locator('.StandardCard', { hasText: oaFormLocale.comments.title })
                 .locator('input')
-                .fill('https://');
+                .fill('https://a.b');
             await expect(page.locator('button', { hasText: oaPagesLocale.submit })).not.toBeDisabled();
         });
 
