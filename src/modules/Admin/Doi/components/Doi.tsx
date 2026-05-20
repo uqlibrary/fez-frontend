@@ -10,7 +10,6 @@ import pagesLocale from 'locale/pages';
 import viewRecordLocale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import {
-    PUBLICATION_TYPE_DATA_COLLECTION,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_COMMUNITY,
     DOI_CROSSREF_PREFIX,
@@ -18,12 +17,8 @@ import {
     DOI_DATACITE_NAME,
     DOI_CROSSREF_NAME,
     PUBLICATION_TYPE_BOOK_CHAPTER,
-    PUBLICATION_TYPE_INSTRUMENT,
     SUBTYPE_EDITED_BOOK,
     UQ_FULL_NAME,
-    PUBLICATION_TYPE_JOURNAL_ARTICLE,
-    PUBLICATION_TYPE_DESIGN,
-    PUBLICATION_TYPE_CREATIVE_WORK,
 } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { doiFields as untypedDoiFields, rccDatasetCollection } from 'config/doi';
@@ -46,6 +41,7 @@ import {
     OneToManyRelation,
     OneToOneRelation,
 } from '../../../../@types/models/FezRecord';
+import { isDataCiteSupportedType } from '../../../../helpers/doi';
 
 const doiFields = untypedDoiFields as DoiFields<Attributes>;
 type DoiFieldNames = DoiField<Attributes>;
@@ -365,15 +361,7 @@ export const Doi: React.FC<Doi> = ({
     // deep clone
     const alertTxt = JSON.parse(JSON.stringify(txt.alertProps));
     const confirmationTxt = JSON.parse(JSON.stringify(txt.successConfirmation));
-    if (
-        [
-            PUBLICATION_TYPE_CREATIVE_WORK,
-            PUBLICATION_TYPE_DATA_COLLECTION,
-            PUBLICATION_TYPE_DESIGN,
-            PUBLICATION_TYPE_INSTRUMENT,
-            PUBLICATION_TYPE_JOURNAL_ARTICLE,
-        ].includes(Number(record.rek_display_type))
-    ) {
+    if (isDataCiteSupportedType(record.rek_display_type)) {
         alertTxt.progressAlert.message = alertTxt.progressAlert.message
             .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
             .replace('queued', 'submitted');
