@@ -1089,7 +1089,7 @@ exports[`ResearchReportForm component with 5 input fields for NTRO 1`] = `
           class="MuiTypography-root MuiTypography-body1 css-16evgi0-MuiTypography-root"
           data-testid="commissioned-research-report-field-label"
         >
-          This report was commissioned by an external client/organisation.
+          This report was commissioned by an external client/organisation. (If the report was not commissioned externally, please submit this work as a Research Report - Other or Citation only).
         </p>
       </label>
     </div>
