@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
 import { ExternalLink } from '../../SharedComponents/ExternalLink';
-import { md5 } from 'locutus/php/strings';
+import { md5 } from 'locutus/php/strings/md5';
 import { isURL } from '../../../helpers/general';
 
 const searchByOrder = (grantData, orderSubkey, order) => {
