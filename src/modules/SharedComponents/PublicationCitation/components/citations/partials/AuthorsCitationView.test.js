@@ -2,6 +2,8 @@ import React from 'react';
 import { AuthorsCitationView } from './AuthorsCitationView';
 import { pathConfig } from 'config/pathConfig';
 import { rtlRender, WithRouter } from 'test-utils';
+import { getOrcidURL } from 'helpers/general';
+import { locale } from '../../../../../../locale';
 
 function setup(testProps = {}) {
     const props = {
@@ -694,11 +696,6 @@ describe('AuthorsCitationView', () => {
                 subkey: 'rek_contributor',
                 order: 'rek_contributor_order',
             },
-            idSearchKey: {
-                idKey: 'fez_record_search_key_contributor_id',
-                idSubkey: 'rek_contributor_id',
-                idOrder: 'rek_contributor_id_order',
-            },
             showLink: true,
         });
         expect(container).toMatchSnapshot();
@@ -706,6 +703,73 @@ describe('AuthorsCitationView', () => {
         expect(getByRole('link', { name: 'Fitzgerald, Lisa' })).toBeInTheDocument(); // ('rek-contributor-0-link')).toBeInTheDocument();
         expect(getByRole('link', { name: 'Fitzgerald, Lisa' }).href).toContain(
             'rek_contributor_id%5D%5Blabel%5D=74066+(Fitzgerald%2C+Lisa)',
+        );
+    });
+
+    it('should display orcid link', () => {
+        const publication = {
+            fez_record_search_key_author: [
+                {
+                    rek_author: 'Pedroso, Marcelo Monteiro',
+                    rek_author_order: 3,
+                },
+                {
+                    rek_author: 'Smith, J',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author: 'Andersen, J',
+                    rek_author_order: 2,
+                },
+            ],
+            fez_record_search_key_author_id: [
+                {
+                    rek_author_id: 1,
+                    rek_author_id_order: 1,
+                    author: {
+                        aut_orcid_id: '0000-1111-1111-1111',
+                    },
+                },
+                {
+                    rek_author_id: 2,
+                    rek_author_id_order: 2,
+                },
+                {
+                    rek_author_id: 3,
+                    rek_author_id_order: 3,
+                    author: {
+                        aut_orcid_id: '0000-3333-3333-3333',
+                    },
+                },
+            ],
+        };
+        const { getByTestId, queryByTestId } = setup({ publication, showLink: true });
+
+        // 1st author's orcid link
+        expect(getByTestId('authors-cistation-view-orcid-link-1')).toHaveAttribute('target', '_blank');
+        expect(getByTestId('authors-cistation-view-orcid-link-1')).toHaveAttribute(
+            'href',
+            getOrcidURL(publication.fez_record_search_key_author_id[0].author.aut_orcid_id),
+        );
+        expect(getByTestId('authors-cistation-view-orcid-link-1')).toHaveAttribute(
+            'title',
+            locale.components.publicationCitation.citationAuthors.orcidLinkLabel(
+                publication.fez_record_search_key_author[1].rek_author,
+            ),
+        );
+        // 2nd author's orcid missing link
+        expect(queryByTestId('authors-cistation-view-orcid-link-2')).not.toBeInTheDocument();
+        // 3rd author's orcid link
+        expect(getByTestId('authors-cistation-view-orcid-link-3')).toHaveAttribute('target', '_blank');
+        expect(getByTestId('authors-cistation-view-orcid-link-3')).toHaveAttribute(
+            'href',
+            getOrcidURL(publication.fez_record_search_key_author_id[2].author.aut_orcid_id),
+        );
+        expect(getByTestId('authors-cistation-view-orcid-link-3')).toHaveAttribute(
+            'title',
+            locale.components.publicationCitation.citationAuthors.orcidLinkLabel(
+                publication.fez_record_search_key_author[0].rek_author,
+            ),
         );
     });
 });

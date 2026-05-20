@@ -18,10 +18,21 @@ import {
     numbersOnly,
     hasAtLeastOneItemSelected,
     sortByNumericField,
+    isURL,
+    getOrcidURL,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
+    it('isURL', () => {
+        expect(isURL('http://library.uq.edu.au')).toBeTruthy();
+        expect(isURL('https://library.uq.edu.au')).toBeTruthy();
+        expect(isURL('https://a')).toBeTruthy();
+        expect(isURL('https://')).toBeFalsy();
+        expect(isURL('library.uq.edu.au')).toBeFalsy();
+        expect(isURL('abc')).toBeFalsy();
+    });
+
     it('leftJoin', () => {
         const objArrA = [
             { nameA: 'test1', testA: 'testA1' },
@@ -601,5 +612,10 @@ describe('general helpers', () => {
                 },
             ]);
         });
+    });
+
+    it('getOrcidURL', () => {
+        expect(getOrcidURL()).toEqual('');
+        expect(getOrcidURL('0000-11111-2222-3333')).toEqual('https://orcid.org/0000-11111-2222-3333');
     });
 });

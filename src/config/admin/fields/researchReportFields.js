@@ -35,6 +35,7 @@ export default {
                 ['rek_description'],
                 ['fez_record_search_key_parent_publication'],
                 ['fez_record_search_key_report_number'],
+                ['fez_record_search_key_raid'],
             ],
         },
         {

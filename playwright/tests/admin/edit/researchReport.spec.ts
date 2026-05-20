@@ -18,7 +18,7 @@ test.describe('Research Report admin edit', () => {
     });
 
     test('should load with specified elements', async ({ page }) => {
-        await adminEditCountCards(page, 9);
+        await adminEditCountCards(page, 10);
         await adminEditNoAlerts(page);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');

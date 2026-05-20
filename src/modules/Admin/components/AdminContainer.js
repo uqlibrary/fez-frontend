@@ -10,7 +10,6 @@ import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
 import {
     NTRO_SUBTYPES,
-    PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_THESIS,
@@ -222,11 +221,7 @@ export const AdminContainer = ({ createMode = false }) => {
                                     },
                                     relatedServices: {
                                         component: RelatedServicesSection,
-                                        activated:
-                                            isActivated() &&
-                                            [PUBLICATION_TYPE_DATA_COLLECTION].includes(
-                                                recordToView && recordToView.rek_display_type,
-                                            ),
+                                        activated: isActivated(),
                                     },
                                     notes: {
                                         component: NotesSection,

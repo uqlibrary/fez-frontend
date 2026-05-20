@@ -15,6 +15,7 @@ import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
     ESPACE_TEAM_CONTACT_US_URL,
+    ORCID_BASE_URL,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
@@ -261,8 +262,6 @@ export default {
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
                     researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
-                    orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
-                    orcidLinkPrefix: ' orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
                         scopus: 'Scopus',
@@ -275,7 +274,7 @@ export default {
                             scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
                             researcher: 'https://www.webofscience.com/wos/author/rid/',
                             google_scholar: 'https://scholar.google.com.au/citations?user=',
-                            orcid: 'https://orcid.org/',
+                            orcid: `${ORCID_BASE_URL}/`,
                         },
                         notLinkedUrl: {
                             scopus: 'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
