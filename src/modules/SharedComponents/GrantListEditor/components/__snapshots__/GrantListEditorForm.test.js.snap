@@ -78,6 +78,11 @@ exports[`GrantListEditorForm should render with default props 1`] = `
           />
         </div>
       </div>
+      <div
+        class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+      >
+        Accepts IDs or full URLs
+      </div>
     </div>
     <div
       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"

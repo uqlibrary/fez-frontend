@@ -741,6 +741,7 @@ export default {
                         grantAgencyNameHint: 'Funder/sponsor name for this work',
                         grantIdLabel: 'Grant ID',
                         grantIdHint: 'Grant number for this work',
+                        grantIdHelperText: 'Accepts IDs or full URLs',
                         grantAgencyTypeLabel: 'Funder/Sponsor type',
                         grantAgencyTypeHint: 'Select Funder/Sponsor type',
                         addButton: 'Add grant',

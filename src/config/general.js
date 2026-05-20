@@ -1033,18 +1033,6 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
-export const GRANT_AGENCY_TYPES = [
-    'Library/Museum/Public Gallery',
-    'Commercial Gallery',
-    'Government',
-    'NGO',
-    'Foundation',
-    'Corporate/Industry',
-    'University',
-    'Other',
-    'Not set',
-];
-
 export const ORG_AFFILIATION_TYPES = [
     { value: '453983', text: 'Library/Museum/Public Gallery' },
     { value: '453984', text: 'Commercial Gallery' },

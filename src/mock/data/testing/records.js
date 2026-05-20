@@ -4085,7 +4085,7 @@ export const journalArticle = {
         "rek_grant_id_id": null,
         "rek_grant_id_pid": "UQ:676287",
         "rek_grant_id_order": 2,
-        "rek_grant_id": "1042819"
+        'rek_grant_id': 'https://doi.org/10.1007/s13596-023-00679-133333',
     }, {
         "rek_grant_id_id": null,
         "rek_grant_id_pid": "UQ:676287",
