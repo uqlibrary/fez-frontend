@@ -17,6 +17,7 @@ import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';
 import DashboardOrcidSyncPreferences from './DashboardOrcidSyncPreferences';
 import { debounce } from 'throttle-debounce';
 import { Settings } from '@mui/icons-material';
+import { getOrcidURL } from 'helpers/general';
 
 const updateSyncPreferences = debounce(3000, (dispatch, author, value) => {
     dispatch(
@@ -152,9 +153,7 @@ export const DashboardOrcidSync = props => {
         settingsButtonRef,
     } = props;
     const links = pagesLocale.pages.dashboard.header.dashboardResearcherIds.links;
-    const currentAuthorOrcidLink = !!author.aut_orcid_id
-        ? links.linkedUrl.orcid + author.aut_orcid_id
-        : links.notLinkedUrl.orcid;
+    const currentAuthorOrcidLink = !!author.aut_orcid_id ? getOrcidURL(author.aut_orcid_id) : links.notLinkedUrl.orcid;
     const messageTemplate = pagesLocale.pages.dashboard.header.dashboardOrcidSync.helpDrawer;
     const [syncJobStatus, tooltipText, detailedStatus] = getSyncStatus(
         accountAuthorSaving,

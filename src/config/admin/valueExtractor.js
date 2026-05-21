@@ -225,6 +225,9 @@ export default {
     rek_subtype: {
         getValue: record => getValueFromRekKey(record, 'rek_subtype'),
     },
+    commissionedResearchReport: {
+        getValue: record => !!record.rek_pid,
+    },
     languages: {
         getValue: record => getValueSearchKeyRekValueList(record, 'fez_record_search_key_language.rek_language'),
     },

@@ -11,7 +11,7 @@ import {
     EditorsCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
+import { getOrcidURL, parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router';
@@ -20,7 +20,6 @@ import {
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     PLACEHOLDER_ISO8601_ZULU_DATE,
     PUBLICATION_TYPE_INSTRUMENT,
-    ORCID_BASE_URL,
     RAID_BASE_URL,
     ROR_BASE_URL,
 } from 'config/general';
@@ -286,7 +285,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         let link = null;
 
         if (isValidOrcid(id)) {
-            link = `${ORCID_BASE_URL}/${id}`;
+            link = getOrcidURL(id);
         } else {
             /* istanbul ignore else */
             if (isValidROR(id)) {
