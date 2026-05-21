@@ -12,7 +12,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const url = process.env.URL || 'localhost';
 const useMock = !!process.env.USE_MOCK || false;
 const publicPath = '';

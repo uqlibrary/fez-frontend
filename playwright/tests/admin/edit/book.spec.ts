@@ -19,14 +19,14 @@ test.describe('Book admin edit', () => {
 
     test('should load expected tabs', async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
         await adminEditNoAlerts(page);
 
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');
 
         await adminEditTabbedView(page, false); // Pass page to adminEditTabbedView
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
     });
 
     test('should render the different sections as expected', async ({ page }) => {
