@@ -359,6 +359,12 @@ export default {
                 actionButtonLabel: 'View and Fix',
                 icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
             },
+            oacomplianceCreativeWorkRecordLure: {
+                title: 'Open Access Required',
+                message: 'Creative Works funded by the ARC are encouraged to be open access.',
+                type: 'info_outline',
+                actionButtonLabel: 'View and Fix',
+            },
         },
         myResearch: {
             pageTitle: 'My works',
