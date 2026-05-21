@@ -21,6 +21,7 @@ export const GrantListEditorForm = ({
         grantAgencyNameHint: 'Funder/sponsor name for this work',
         grantIdLabel: 'Grant ID',
         grantIdHint: 'Grant number for this work',
+        grantIdHelperText: 'Accepts IDs or full URLs',
         grantAgencyTypeLabel: 'Funder/Sponsor type',
         grantAgencyTypeHint: 'Funder/Sponsor type',
         addButton: 'Add grant',
@@ -95,6 +96,7 @@ export const GrantListEditorForm = ({
         grantAgencyNameHint,
         grantIdHint,
         grantIdLabel,
+        grantIdHelperText,
         grantAgencyTypeLabel,
         grantAgencyTypeHint,
     } = locale;
@@ -134,6 +136,7 @@ export const GrantListEditorForm = ({
                         disabled={disabled || !grantAgencyName || grantAgencyName.trim().length === 0}
                         required={required}
                     />
+                    <FormHelperText component="div">{grantIdHelperText}</FormHelperText>
                 </Grid>
                 {!hideType && (
                     <Grid item xs={12} sm={12} md={3}>

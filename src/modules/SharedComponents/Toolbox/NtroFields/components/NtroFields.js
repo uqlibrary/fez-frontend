@@ -238,9 +238,9 @@ export default class NtroFields extends React.PureComponent {
         const { contributionStatement, metadata, grantEditor } = this.props.locale;
         const control = this.props.control;
         return (
-            <React.Fragment>
+            <Grid size={12} sx={{ ml: 3 }}>
                 {(this.props.showContributionStatement || this.props.showSignificance) && (
-                    <Grid size={12}>
+                    <Grid size={12} sx={{ mt: 3 }}>
                         <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
                             <Grid container spacing={1}>
                                 {
@@ -304,7 +304,7 @@ export default class NtroFields extends React.PureComponent {
                     !this.props.hideSeries ||
                     !this.props.hideIsrc ||
                     !this.props.hideIsmn) && (
-                    <Grid size={12}>
+                    <Grid size={12} sx={{ mt: 3 }}>
                         <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
                             <Grid container spacing={2}>
                                 <Grid size={12}>
@@ -561,7 +561,7 @@ export default class NtroFields extends React.PureComponent {
                     </Grid>
                 )}
                 {!this.props.hideGrants && (
-                    <Grid size={12}>
+                    <Grid size={12} sx={{ mt: 3 }}>
                         <StandardCard title={grantEditor.title}>
                             <Field
                                 control={control}
@@ -575,7 +575,7 @@ export default class NtroFields extends React.PureComponent {
                         </StandardCard>
                     </Grid>
                 )}
-            </React.Fragment>
+            </Grid>
         );
     }
 }

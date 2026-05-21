@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
+import { ExternalLink } from '../../SharedComponents/ExternalLink';
+import { md5 } from 'locutus/php/strings/md5';
+import { isURL } from '../../../helpers/general';
 
 const searchByOrder = (grantData, orderSubkey, order) => {
     return grantData && grantData.filter(grantData => grantData[orderSubkey] === order)[0];
@@ -14,10 +17,17 @@ const searchByOrder = (grantData, orderSubkey, order) => {
 const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => {
     const txt = locale.viewRecord.headings.default.grantInformation;
 
-    const hasGrantId = !!grantId && !!grantId.rek_grant_id && grantId.rek_grant_id.trim().length > 0;
+    const hasGrantId = !!grantId?.rek_grant_id?.trim?.().length > 0;
     const grantIdTitle = hasGrantId ? txt.fez_record_search_key_grant_id : '';
-    const grantIdValue =
-        hasGrantId && grantId.rek_grant_id !== ORG_TYPES_LOOKUP[ORG_TYPE_NOT_SET] ? grantId.rek_grant_id : '';
+    let grantIdValue =
+        hasGrantId && grantId.rek_grant_id !== ORG_TYPES_LOOKUP[ORG_TYPE_NOT_SET] ? grantId.rek_grant_id.trim() : '';
+    if (isURL(grantIdValue)) {
+        grantIdValue = (
+            <ExternalLink id={`grant-id-${md5(grantIdValue)}`} href={grantIdValue}>
+                {grantIdValue}
+            </ExternalLink>
+        );
+    }
 
     return (
         <Box

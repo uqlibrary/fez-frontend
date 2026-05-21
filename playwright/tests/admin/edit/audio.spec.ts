@@ -22,7 +22,7 @@ test.describe('Audio admin edit', () => {
     });
 
     test('should load expected tabs', async ({ page }) => {
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
         await adminEditVerifyAlerts(page, 1, ['Publication date is required']);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');

@@ -66,11 +66,11 @@ describe('Field component', () => {
 
     describe('validateHandler', () => {
         it('should return null if passed in validators are not an array', () => {
-            expect(validateHandler('test', 'test')).resolves.toBeNull();
+            expect(validateHandler('test', 'test')).resolves.toBeUndefined();
         });
 
         it("should ignore validators that can't be invoked", () => {
-            expect(validateHandler('test', ['test'])).resolves.toBeNull();
+            expect(validateHandler('test', ['test'])).resolves.toBeUndefined();
         });
 
         it('should validate value using validator in "left to right" order', () => {
@@ -99,7 +99,7 @@ describe('Field component', () => {
                     value => (value !== 'test' ? 'fist validator executed' : null),
                     value => (value === 'test' ? ' ' : null),
                 ]),
-            ).resolves.toBe(null);
+            ).resolves.toBeUndefined();
         });
 
         it('should return null if all validators passes', () => {
@@ -108,7 +108,7 @@ describe('Field component', () => {
                     value => (value === 1 ? 'fist validator executed' : null),
                     value => (value === 2 ? 'second validator executed' : null),
                 ]),
-            ).resolves.toBe(null);
+            ).resolves.toBeUndefined();
         });
     });
 });

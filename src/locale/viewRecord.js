@@ -250,6 +250,7 @@ export default {
                 fez_record_search_key_herdc_status: 'HERDC status',
                 fez_record_search_key_institutional_status: 'Institutional status',
                 fez_record_search_key_notes: 'Additional notes',
+                fez_record_search_key_related_service: 'Related service(s)',
                 grantInformation: {
                     fez_record_search_key_grant_agency: 'Grant agency',
                     fez_record_search_key_grant_id: 'Grant ID',
@@ -318,7 +319,6 @@ export default {
                 fez_record_search_key_type_of_data: 'Type of data',
                 fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
-                fez_record_search_key_related_service: 'Related service(s)',
                 fez_record_search_key_related_publications: 'Additional related publication(s)',
                 fez_record_search_key_related_datasets: 'Additional related dataset(s)',
             },
@@ -657,10 +657,6 @@ export default {
                     field: 'fez_record_search_key_contributor',
                     order: 15,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 16
-                // },
                 {
                     field: 'fez_record_search_key_start_page',
                     order: 17,
@@ -823,10 +819,6 @@ export default {
                     field: 'fez_record_search_key_total_chapters',
                     order: 24,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 25
-                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 26,
@@ -1233,10 +1225,6 @@ export default {
                 },
             ],
             'Creative Work': [
-                // {
-                //     field: 'rek_genre',
-                //     order: 1,
-                // },
                 {
                     field: 'fez_record_search_key_translated_title',
                     order: 2,
@@ -1507,10 +1495,6 @@ export default {
                     field: 'fez_record_search_key_related_datasets',
                     order: 34,
                 },
-                {
-                    field: 'fez_record_search_key_related_service',
-                    order: 35,
-                },
             ],
             'Department Technical Report': [
                 {
@@ -1723,10 +1707,6 @@ export default {
                     field: 'fez_record_search_key_contributor',
                     order: 17,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 17
-                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 18,
@@ -2394,10 +2374,6 @@ export default {
                 {
                     field: 'fez_record_search_key_article_number',
                     order: 19,
-                },
-                {
-                    field: 'fez_record_search_key_contributor',
-                    order: 20,
                 },
                 {
                     field: 'fez_record_search_key_place_of_publication',
@@ -3545,6 +3521,10 @@ export default {
                 {
                     field: 'fez_record_search_key_institutional_status',
                     order: 52,
+                },
+                {
+                    field: 'fez_record_search_key_related_service',
+                    order: 53,
                 },
                 {
                     field: 'fez_record_search_key_notes',
