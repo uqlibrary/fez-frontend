@@ -61,6 +61,7 @@ export const ORCID_BASE_URL = process.env.ORCID_URL || `https://${ORCID_DOMAIN}`
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
+export const DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE = 'dashboard_hide_creative_work_oa_alert';
 
 export const ROR_BASE_URL = 'https://ror.org';
 

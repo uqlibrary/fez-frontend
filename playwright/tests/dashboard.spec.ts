@@ -57,9 +57,19 @@ test.describe('Dashboard with open accessible work', () => {
         await expect(
             page
                 .locator('[data-testid=alert]')
-                .getByText('We have found 3 work(s) that may not meet the funder(s) Open Access requirements.'),
+                .getByText('We have found 13 work(s) that may not meet the funder(s) Open Access requirements.'),
         ).toBeVisible();
-        await page.locator('[data-testid=alert]').getByRole('button', { name: 'View and Fix' }).click();
+        await page.locator('[data-testid=alert]').first().getByRole('button', { name: 'View and Fix' }).click();
+        await expect(page).toHaveURL(/records\/my-open-access/);
+    });
+
+    test('should show creative work alert at top of page', async ({ page }) => {
+        await expect(
+            page
+                .locator('[data-testid=alert]')
+                .getByText('Creative Works funded by the ARC are encouraged to be open access.'),
+        ).toBeVisible();
+        await page.locator('[data-testid=alert]').nth(2).getByRole('button', { name: 'View and Fix' }).click();
         await expect(page).toHaveURL(/records\/my-open-access/);
     });
     test('should show a "make open access" button that navs to the open-access work route', async ({ page }) => {
