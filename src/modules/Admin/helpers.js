@@ -121,7 +121,7 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
         return false;
     }
     return (adminInterfaceConfig[record.rek_display_type] || /* istanbul ignore next */ {})
-        [tab](tabParams(record))
+        [tab]?.(tabParams(record))
         ?.map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
