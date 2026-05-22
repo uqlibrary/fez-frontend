@@ -14,7 +14,7 @@ phases:
     runtime-versions:
       nodejs: 24
     commands:
-      - n 24
+      - n 24.15.0
   pre_build:
     commands:
       sysctl fs.inotify.max_user_watches &&
