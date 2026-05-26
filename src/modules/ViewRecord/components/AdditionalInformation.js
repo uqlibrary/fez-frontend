@@ -22,7 +22,7 @@ import {
     PUBLICATION_TYPE_INSTRUMENT,
     RAID_BASE_URL,
 } from 'config/general';
-import { isValidDOI, isValidOrcid, isValidROR } from 'config/validation';
+import { isValidDoi, isValidOrcid, isValidRor } from 'config/validation';
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -269,7 +269,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     const renderContributorIdentifier = (objects, subKey) => {
         const id = objects[0][subKey];
         const isOrcid = isValidOrcid(id);
-        if (!isOrcid && !isValidROR(id)) return id;
+        if (!isOrcid && !isValidRor(id)) return id;
 
         return <IdentifierIconLink id={id} type={isOrcid ? 'orcid' : 'ror'} iconSize={isOrcid ? 'large' : 'xlarge'} />;
     };
@@ -331,14 +331,14 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
     const renderRelatedServices = (objects, subkey, publication) => {
         return renderList(objects, subkey, (item, subkey, id) => {
-            const isDoi = isValidDOI(id);
+            const isDoi = isValidDoi(id);
             const description = getOneToManyRelationItemByOrder(
                 publication,
                 `${subkey}_description`,
                 item[`${subkey}_order`],
             )?.[`${subkey}_description`];
 
-            if (!isDoi && !isValidROR(id)) {
+            if (!isDoi && !isValidRor(id)) {
                 return `${id} - ${description}`;
             }
 

@@ -44,7 +44,7 @@ import { dateRange } from 'config/validation';
 
 const asyncValidate = async (data, setError) => {
     const doi = data.fez_record_search_key_doi?.rek_doi;
-    if (!validation.isValidDOI(doi) || !(await doesDOIExist(doi))?.total) return true;
+    if (!validation.isValidDoi(doi) || !(await doesDOIExist(doi))?.total) return true;
     setError('fez_record_search_key_doi.rek_doi', { message: validationErrors.validationErrors.doiExists });
     return false;
 };
