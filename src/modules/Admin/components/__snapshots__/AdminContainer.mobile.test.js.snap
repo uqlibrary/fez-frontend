@@ -5947,7 +5947,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                                 file names begin with a letter and are less than 45 characters long
                                               </li>
                                               <li>
-                                                file names contain only upper and lowercase alphanumeric characters, and underscores
+                                                file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                               </li>
                                               <li>
                                                 file names must not contain any spaces

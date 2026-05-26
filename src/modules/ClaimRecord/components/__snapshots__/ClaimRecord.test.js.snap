@@ -653,7 +653,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                     file names begin with a letter and are less than 45 characters long
                                   </li>
                                   <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                   </li>
                                   <li>
                                     file names must not contain any spaces
@@ -1353,7 +1353,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     file names begin with a letter and are less than 45 characters long
                                   </li>
                                   <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                   </li>
                                   <li>
                                     file names must not contain any spaces
@@ -2184,7 +2184,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     file names begin with a letter and are less than 45 characters long
                                   </li>
                                   <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                   </li>
                                   <li>
                                     file names must not contain any spaces
@@ -2778,7 +2778,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     file names begin with a letter and are less than 45 characters long
                                   </li>
                                   <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                   </li>
                                   <li>
                                     file names must not contain any spaces
@@ -4086,7 +4086,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     file names begin with a letter and are less than 45 characters long
                                   </li>
                                   <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                   </li>
                                   <li>
                                     file names must not contain any spaces
@@ -5408,7 +5408,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     file names begin with a letter and are less than 45 characters long
                                   </li>
                                   <li>
-                                    file names contain only upper and lowercase alphanumeric characters, and underscores
+                                    file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                   </li>
                                   <li>
                                     file names must not contain any spaces
