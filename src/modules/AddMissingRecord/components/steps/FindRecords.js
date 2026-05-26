@@ -18,7 +18,7 @@ import { Field } from '../../../SharedComponents/Toolbox/ReactHookForm';
 const validate = data => {
     const value = sanitizeDoi(data);
     if (
-        !validation.isValidDOIValue(value) &&
+        !validation.isValidDOI(value) &&
         !validation.isValidPubMedValue(value) &&
         (value.trim().length === 0 || !validation.isValidPublicationTitle(value))
     ) {

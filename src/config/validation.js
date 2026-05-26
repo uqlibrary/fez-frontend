@@ -92,7 +92,7 @@ export const getDoi = value => {
     return null;
 };
 
-export const isValidDOIValue = value => {
+export const isValidDOI = value => {
     if (!value?.trim?.()) return false;
     for (const regex of doiRegexps) {
         const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
@@ -138,7 +138,8 @@ export const isValidRaid = value => {
 };
 
 export const isValidROR = value => {
-    const isValid = /^0[a-z|0-9]{6}[0-9]{2}$/;
+    // https://ror.readme.io/docs/identifier
+    const isValid = /^0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}$/i;
     return isValid.test(value.toString().trim());
 };
 
@@ -161,7 +162,7 @@ export const email = value =>
     value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
     value && !isURL(value) ? locale.validationErrors.url : spacelessMaxLength2000Validator(value);
-export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
+export const doi = value => (!!value && !isValidDOI(value) ? locale.validationErrors.doi : undefined);
 export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
 export const orcid = value => (!!value && !isValidOrcid(value) ? locale.validationErrors.orcid : undefined);
 export const raid = value => (!!value && !isValidRaid(value) ? locale.validationErrors.raid : undefined);

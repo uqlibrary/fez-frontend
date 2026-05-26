@@ -23,6 +23,7 @@ import {
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Link } from 'react-router';
 import { Box } from '@mui/material';
+import { getDoiURL } from 'helpers/general';
 
 /*
 
@@ -673,10 +674,7 @@ export default {
                         record.fez_record_search_key_new_doi?.rek_new_doi ? (
                             <>
                                 This Data Collection has been deleted and substituted by{' '}
-                                <a
-                                    href={`https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}`}
-                                    target="_blank"
-                                >
+                                <a href={getDoiURL(record.fez_record_search_key_new_doi?.rek_new_doi)} target="_blank">
                                     another version
                                 </a>
                                 .

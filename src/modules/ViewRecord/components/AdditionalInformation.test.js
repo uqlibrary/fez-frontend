@@ -243,7 +243,7 @@ describe('Additional Information Component ', () => {
             },
         });
 
-        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+        expect(getByTestId('identifier-icon-link-0000_0000_0000_0001')).toHaveTextContent(id);
     });
 
     it('should render component with ror owner identifier', () => {
@@ -254,7 +254,7 @@ describe('Additional Information Component ', () => {
                 fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
             },
         });
-        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+        expect(getByTestId('identifier-icon-link-02_mhbdp_94')).toHaveTextContent(id);
     });
 
     it('should render component with unrecognised owner identifier', () => {

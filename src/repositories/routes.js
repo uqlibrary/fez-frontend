@@ -78,7 +78,7 @@ export const getOpenAccessSearchParams = ({ facets = {} }) => ({
 export const getSearchType = searchQuery => {
     if (!searchQuery) return {};
 
-    if (validation.isValidDOIValue(searchQuery)) {
+    if (validation.isValidDOI(searchQuery)) {
         return { doi: sanitizeDoi(searchQuery) };
     }
 
