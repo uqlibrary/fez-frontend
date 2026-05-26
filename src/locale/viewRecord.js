@@ -2376,10 +2376,6 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
-                    order: 20,
-                },
-                {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 21,
                 },
