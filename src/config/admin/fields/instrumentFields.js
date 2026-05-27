@@ -1,4 +1,7 @@
+import commonFields from './commonFields';
+
 export default {
+    ...commonFields,
     bibliographic: () => [
         {
             title: 'Title',
@@ -80,6 +83,7 @@ export default {
             groups: [['internalNotes']],
         },
     ],
+    grantInformation: () => [],
     ntro: () => [],
 };
 
