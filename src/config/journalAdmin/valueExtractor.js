@@ -161,19 +161,4 @@ export default {
             },
         }),
     },
-    doaj: {
-        getValue: journal => ({
-            openAccess:
-                getValueSearchKeyArray(journal, 'fez_journal_issn')?.[0]?.fez_ulrichs?.ulr_open_access === 1
-                    ? true
-                    : false,
-            ...getValueSearchKeyObject(journal, 'fez_journal_doaj'),
-        }),
-    },
-    listed: {
-        getValue: journal => ({
-            esi: getValueSearchKeyArray(journal, 'fez_journal_esi'),
-            pubmed: !!getValueFromKey(journal, 'fez_journal_pubmed'),
-        }),
-    },
 };

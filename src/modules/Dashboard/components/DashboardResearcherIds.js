@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import { OrcidSyncContext } from 'context';
 import DashboardOrcidSync from '../containers/DashboardOrcidSync';
@@ -11,6 +11,8 @@ import locale from 'locale/pages';
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
+import { getOrcidURL } from 'helpers/general';
+import { ORCID_DOMAIN } from 'config/general';
 
 const StyledResearchedLink = styled('div')({
     '&:hover': {
@@ -133,16 +135,14 @@ const DashboardResearcherIds = props => {
             {props.values.orcid && (
                 <Grid item>
                     <a
-                        href={`${txt.orcidUrlPrefix}${props.values.orcid}`}
+                        href={getOrcidURL(props.values.orcid)}
                         id={'orcid'}
                         target="_blank"
                         aria-label={txt.orcidlinkLabel}
                         title={txt.orcidlinkLabel}
                         tabIndex={0}
                     >
-                        <StyledOrcidLink
-                            variant={'caption'}
-                        >{`${txt.orcidLinkPrefix}${props.values.orcid}`}</StyledOrcidLink>
+                        <StyledOrcidLink variant={'caption'}>{`${ORCID_DOMAIN}/${props.values.orcid}`}</StyledOrcidLink>
                     </a>
                 </Grid>
             )}

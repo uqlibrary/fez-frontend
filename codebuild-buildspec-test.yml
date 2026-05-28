@@ -12,10 +12,9 @@ env:
 phases:
   install:
     runtime-versions:
-      java: corretto17
-      nodejs: 20
+      nodejs: 24
     commands:
-      - n 20
+      - n 24.15.0
   pre_build:
     commands:
       sysctl fs.inotify.max_user_watches &&
@@ -28,10 +27,6 @@ phases:
     commands:
       set &&
       bin/codebuild-test.sh
-  #post_build:
-    #commands:
-      # - command
-      # - command
 reports:
   coverage-report:
     files:
@@ -42,6 +37,3 @@ artifacts:
     - 'coverage/**/*'
     - 'playwright/.results/**/trace.zip'
   name: builds/$CODEBUILD_BUILD_NUMBER/coverage
-#cache:
-  #paths:
-    # - paths

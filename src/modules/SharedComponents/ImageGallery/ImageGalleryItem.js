@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import txt from 'locale/components';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import { handleKeyboardPressActivate } from 'helpers/general';
 

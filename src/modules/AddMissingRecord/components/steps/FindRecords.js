@@ -2,7 +2,7 @@ import React from 'react';
 
 import { pathConfig } from 'config/pathConfig';
 import { sanitizeDoi } from 'config/validation';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';

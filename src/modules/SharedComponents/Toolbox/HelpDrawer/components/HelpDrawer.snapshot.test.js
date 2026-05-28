@@ -67,4 +67,23 @@ describe('HelpDrawer snapshots tests', () => {
         );
         expect(baseElement).toMatchSnapshot();
     });
+
+    it('renders nested text', () => {
+        const { baseElement } = setup(
+            {},
+            {
+                title: 'HelpDrawer title',
+                text: (
+                    <>
+                        <p>Test text</p>
+                        <ul>
+                            <li>Test list</li>
+                        </ul>
+                    </>
+                ),
+                open: true,
+            },
+        );
+        expect(baseElement).toMatchSnapshot();
+    });
 });

@@ -6,6 +6,7 @@ import {
     transformExportReportRequest,
     transformDisplayReportRequest,
     transformDisplayReportExportData,
+    transformOaCategoriesToChartData,
 } from './transformers';
 
 import { SYSTEM_ALERT_ACTION } from './config';
@@ -291,6 +292,15 @@ describe('transformers', () => {
             ).toEqual({ report_type: 1, record_id: '123' });
         });
 
+        it('returns object with requestor id and pid when report is system logs', () => {
+            expect(
+                transformDisplayReportRequest({
+                    report: { value: 'systemalertlog' },
+                    filters: { requestor_id: '123', pid: 'uq:1' },
+                }),
+            ).toEqual({ report_type: 1, requestor_id: '123', pid: 'uq:1' });
+        });
+
         it('returns object with report type only when dates and record id provided but report is works history', () => {
             expect(
                 transformDisplayReportRequest({
@@ -315,6 +325,30 @@ describe('transformers', () => {
                 { field3: 'value 3', field2: 'value 2', field1: 'value 1' },
             ];
             expect(transformDisplayReportExportData(cols, originalData)).toEqual(expectedData);
+        });
+    });
+
+    describe('transformOaCategoriesToChartData', () => {
+        it('returns transformed data', () => {
+            const categories = {
+                publisher_open_access: { doc_count: 123 },
+                repository_open_access: { doc_count: 456 },
+                to_be_confirmed: { doc_count: 789 },
+            };
+
+            const expected = [
+                { id: 'publisher_open_access', label: 'Publisher open access (9.0%)', value: 123 },
+                { id: 'repository_open_access', label: 'Repository open access (33.3%)', value: 456 },
+                { id: 'to_be_confirmed', label: 'To be confirmed (57.7%)', value: 789 },
+            ];
+            expect(transformOaCategoriesToChartData(categories)).toEqual(expected);
+
+            const expectedZero = [
+                { id: 'publisher_open_access', label: 'Publisher open access (0.0%)', value: 0 },
+                { id: 'repository_open_access', label: 'Repository open access (0.0%)', value: 0 },
+                { id: 'to_be_confirmed', label: 'To be confirmed (0.0%)', value: 0 },
+            ];
+            expect(transformOaCategoriesToChartData({ published_open_access: { count: 123 } })).toEqual(expectedZero);
         });
     });
 });

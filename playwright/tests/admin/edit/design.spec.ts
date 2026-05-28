@@ -15,7 +15,7 @@ test.describe('Design admin edit', () => {
 
     test('should load expected tabs', async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
-        await adminEditCountCards(page, 9);
+        await adminEditCountCards(page, 10);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');
         await adminEditCheckTabErrorBadge(page, 'bibliographic', '2');

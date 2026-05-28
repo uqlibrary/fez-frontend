@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 
 import { parseHtmlToJSX } from 'helpers/general';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';

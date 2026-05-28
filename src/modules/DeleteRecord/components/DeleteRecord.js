@@ -26,7 +26,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import * as actions from 'actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useForm } from '../../../hooks';
 import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';

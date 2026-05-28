@@ -24,7 +24,7 @@ import { validation, publicationTypes } from 'config';
 import { pathConfig } from 'config/pathConfig';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Controller } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useValidatedForm } from '../../../hooks';
 

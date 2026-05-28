@@ -211,12 +211,12 @@ export default {
                 noRef: true,
             },
         },
-        doaj: {
+        openAccess: {
             component: InfoSection,
             componentProps: {
-                sectionKey: 'doaj',
-                name: 'doajSection',
-                sectionConfig: viewJournalConfig.doaj,
+                sectionKey: 'openAccess',
+                name: 'openAccessSection',
+                sectionConfig: viewJournalConfig.openAccess,
                 wrapped: false,
                 noRef: true,
             },

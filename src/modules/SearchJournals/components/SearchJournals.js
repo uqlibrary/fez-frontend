@@ -11,7 +11,7 @@ import { clearJournalSearchKeywords, searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;

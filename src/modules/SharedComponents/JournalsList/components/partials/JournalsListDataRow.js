@@ -17,7 +17,7 @@ import Tooltip from '@mui/material/Tooltip';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Link, useHref } from 'react-router-dom';
+import { Link, useHref } from 'react-router';
 
 const classesInternal = {
     iconClosed: {

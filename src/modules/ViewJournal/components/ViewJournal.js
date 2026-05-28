@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useParams, useHref } from 'react-router-dom';
+import { useLocation, useParams, useHref } from 'react-router';
 
 import Grid from '@mui/material/GridLegacy';
 import Box from '@mui/material/Box';
@@ -14,7 +14,7 @@ import * as actions from 'actions';
 
 import { JournalContext } from 'context';
 import Section from './Section';
-import { parseHtmlToJSX, tryCatch } from 'helpers/general';
+import { parseHtmlToJSX, silentTryCatch } from 'helpers/general';
 
 import { userIsAdmin } from 'hooks';
 import { default as globalLocale } from 'locale/global';
@@ -47,7 +47,7 @@ const isEmbargoDateMoreThanOnYearAway = data => {
     if (!['days', 'weeks', 'months', 'years'].includes(units) || !Number.isFinite(amount)) return false;
 
     const now = moment().utc();
-    const embargoDate = tryCatch(() => now.clone().add(amount, units), now.clone());
+    const embargoDate = silentTryCatch(() => now.clone().add(amount, units), now.clone());
     return embargoDate.isSameOrAfter(now.add(12, 'months'));
 };
 
@@ -57,7 +57,7 @@ const isEmbargoDateMoreThanOnYearAway = data => {
  * @return {boolean}
  */
 const shouldShowPublishAsOAButton = (location, data) =>
-    tryCatch(() => {
+    silentTryCatch(() => {
         const qsParams = Object.fromEntries(new URLSearchParams(location?.search));
         if (qsParams?.fromSearch !== 'true') return false;
 
@@ -76,7 +76,7 @@ const shouldShowPublishAsOAButton = (location, data) =>
  */
 const extractHighestQuartile = (data, prop) =>
     Math.min(
-        ...(data.map?.(item =>
+        ...(data?.map?.(item =>
             parseInt(String(item[prop]).toLowerCase().replace('q', ''), 10),
         ) || /* istanbul ignore next */ [0]),
     );
@@ -113,7 +113,7 @@ export const publishAsOASearchFacetDefaults = {
  * @return {object}
  */
 const buildPublishAsOASearch = data =>
-    tryCatch(() => {
+    silentTryCatch(() => {
         const scopusData = data?.fez_journal_cite_score?.fez_journal_cite_score_asjc_code;
         const wosData = data?.fez_journal_jcr_scie?.fez_journal_jcr_scie_category;
         const facets = {
@@ -310,7 +310,7 @@ export const ViewJournal = () => {
                                               ? journalDetails[key].length > 0
                                               : !!journalDetails[key],
                                       )
-                                    : !!journalDetails[sectionConfig.key];
+                                    : /* istanbul ignore next */ !!journalDetails[sectionConfig.key];
                             }
                             return true;
                         })

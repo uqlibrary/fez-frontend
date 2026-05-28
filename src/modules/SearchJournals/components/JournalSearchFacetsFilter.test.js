@@ -10,12 +10,12 @@ import JournalSearchFacetsFilter, {
 import { screen, fireEvent, render, userEvent, WithReduxStore, WithRouter } from 'test-utils';
 
 import * as hooks from '../hooks';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import param from 'can-param';
 import kebabCase from 'lodash/kebabCase';
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
 }));
 

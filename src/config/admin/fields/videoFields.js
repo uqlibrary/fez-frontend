@@ -30,6 +30,7 @@ export default {
                 ['fez_record_search_key_type_of_data'],
                 ['fez_record_search_key_original_format'],
                 ['fez_record_search_key_source'],
+                ['fez_record_search_key_raid'],
                 ['fez_record_search_key_rights'],
             ],
         },

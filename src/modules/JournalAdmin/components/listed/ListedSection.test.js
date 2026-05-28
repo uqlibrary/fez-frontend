@@ -30,12 +30,10 @@ describe('ListedSection component', () => {
 
         const { getByTestId } = setup();
 
-        expect(getByTestId('jnl-esi-subject-lookup-header')).toHaveTextContent(
-            'Essential Science Indicators Research Fields',
-        );
-        expect(getByTestId('jnl-esi-subject-lookup-0-value')).toHaveTextContent('Mathematics (2169-0375)');
+        expect(getByTestId('has-nature-index-header')).toHaveTextContent('Nature Index');
+        expect(getByTestId('has-nature-index-value')).toHaveTextContent('No');
 
-        expect(getByTestId('has-pubmed-header')).toHaveTextContent('Pubmed');
-        expect(getByTestId('has-pubmed-value')).toHaveTextContent('No');
+        expect(getByTestId('has-cwts-header')).toHaveTextContent('CWTS Leiden Ranking');
+        expect(getByTestId('has-cwts-value')).toHaveTextContent('Yes');
     });
 });

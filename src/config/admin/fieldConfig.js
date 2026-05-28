@@ -89,6 +89,7 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import SensitiveHandlingNoteField from '../../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
+import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -329,7 +330,6 @@ export default {
                 collectionFieldId: 'rek-ismemberof',
             },
         },
-
         rek_subtype: {
             component: PublicationSubtypeField,
             componentProps: {
@@ -337,6 +337,15 @@ export default {
                 label: 'Work sub-type',
                 required: true,
                 placeholder: '',
+                validate: [validation.required],
+            },
+        },
+        commissionedResearchReport: {
+            isComposed: true,
+            component: CommissionedResearchReportField,
+            componentProps: {
+                name: 'adminSection.commissionedResearchReport',
+                required: true,
                 validate: [validation.required],
             },
         },

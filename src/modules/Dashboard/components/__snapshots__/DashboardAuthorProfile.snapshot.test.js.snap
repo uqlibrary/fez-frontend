@@ -183,7 +183,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   <span
                     class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
                   >
-                     orcid.org/0000-0001-1111-1111
+                    orcid.org/0000-0001-1111-1111
                   </span>
                 </a>
               </div>

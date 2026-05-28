@@ -18,7 +18,7 @@ export const quickLinksActionReducer = (_, action) => {
 export const emptyReportActionState = {
     type: 'none',
     report: null,
-    filters: { date_from: null, date_to: null, record_id: '' },
+    filters: { date_from: null, date_to: null, record_id: '', requestor_id: '', pid: '' },
 };
 export const reportActionReducer = (state, action) => {
     switch (action.type) {
@@ -44,6 +44,16 @@ export const reportActionReducer = (state, action) => {
             return {
                 ...state,
                 filters: { ...state.filters, record_id: action.value },
+            };
+        case 'requestor_id':
+            return {
+                ...state,
+                filters: { ...state.filters, requestor_id: action.value },
+            };
+        case 'pid':
+            return {
+                ...state,
+                filters: { ...state.filters, pid: action.value },
             };
         default:
             return { ...emptyReportActionState };

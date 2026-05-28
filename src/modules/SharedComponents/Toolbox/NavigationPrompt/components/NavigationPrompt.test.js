@@ -3,10 +3,10 @@ import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 
 import { render, WithRouter } from 'test-utils';
 import NavigationPrompt from './NavigationPrompt';
-import { useBlocker, useNavigate } from 'react-router-dom';
+import { useBlocker, useNavigate } from 'react-router';
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: jest.fn(() => jest.fn()),
     useBlocker: jest.fn(() => jest.fn()),
 }));

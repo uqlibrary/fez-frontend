@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, WithReduxStore, WithRouter, createMatchMedia, waitFor, act, userEvent } from 'test-utils';
 import Cookies from 'js-cookie';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import * as JournalActions from 'actions/journals';
 import { accounts } from 'mock/data/account';
 import { journalDoaj } from 'mock/data';
@@ -26,8 +26,8 @@ jest.mock('react-redux', () => ({
     useDispatch: () => mockDispatch,
 }));
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useParams: jest.fn(),
 }));
 
@@ -86,7 +86,7 @@ describe('JournalAdminContainer component', () => {
 
             expect(getByTestId('jnl_issn_jid-list-row-2')).toHaveTextContent('1111-1111');
             expect(getByTestId('uq-espace-section-content')).toBeInTheDocument();
-            expect(getByTestId('open-access-(directory-of-open-access-journals---doaj)-section')).toBeInTheDocument();
+            expect(getByTestId('open-access-options-section')).toBeInTheDocument();
             expect(getByTestId('listed-in-section')).toBeInTheDocument();
 
             const switcher = document.querySelector('input.MuiSwitch-input');

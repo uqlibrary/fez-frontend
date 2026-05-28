@@ -14,12 +14,14 @@ import { pathConfig } from 'config/pathConfig';
 import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
+    ESPACE_TEAM_CONTACT_US_URL,
+    ORCID_BASE_URL,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Box } from '@mui/material';
 
 /*
@@ -193,8 +195,8 @@ export default {
                     <p>The work you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
-                            contact the eSpace team.
+                        <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                            contact the UQ eSpace team.
                         </a>
                     </p>
                 </div>
@@ -260,8 +262,6 @@ export default {
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
                     researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
-                    orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
-                    orcidLinkPrefix: ' orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
                         scopus: 'Scopus',
@@ -274,7 +274,7 @@ export default {
                             scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
                             researcher: 'https://www.webofscience.com/wos/author/rid/',
                             google_scholar: 'https://scholar.google.com.au/citations?user=',
-                            orcid: 'https://orcid.org/',
+                            orcid: `${ORCID_BASE_URL}/`,
                         },
                         notLinkedUrl: {
                             scopus: 'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
@@ -1138,8 +1138,8 @@ export default {
                 uqData: {
                     title: 'UQ eSpace',
                 },
-                doaj: {
-                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                openAccess: {
+                    title: 'Open Access Options',
                 },
                 listed: {
                     title: 'Listed in',

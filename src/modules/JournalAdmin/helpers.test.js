@@ -15,7 +15,7 @@ describe('Helpers', () => {
             const notUsed = 0;
             const fields = adminJournalFields;
             delete fields.uqData;
-            delete fields.doaj;
+            delete fields.openAccess;
             delete fields.listed;
 
             const config = { [ADMIN_JOURNAL]: fields };

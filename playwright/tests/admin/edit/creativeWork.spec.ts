@@ -18,7 +18,7 @@ test.describe('Creative Work admin edit, general', () => {
     test.beforeEach(async ({ page }) => await loadRecordForAdminEdit(page, record.rek_pid));
 
     test('tabs for Creative entry should also include NTRO', async ({ page }) => {
-        await adminEditCountCards(page, 9);
+        await adminEditCountCards(page, 10);
         await adminEditNoAlerts(page);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');

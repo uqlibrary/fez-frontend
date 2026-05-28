@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { useFormContext } from 'react-hook-form';
 
 import Grid from '@mui/material/GridLegacy';

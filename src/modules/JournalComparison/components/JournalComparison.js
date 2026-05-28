@@ -8,7 +8,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import locale from 'locale/components';
 import JournalComparisonList from './JournalComparisonList';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
 
 const StyledBackToSearchButton = styled(BackToSearchButton)(({ theme }) => ({

@@ -15,8 +15,8 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';
 
 import { default as locale } from 'locale/components';
-import pageLocale from 'locale/pages';
 import { validation } from 'config';
+import { getOrcidURL } from 'helpers/general';
 
 export const ResearcherIdentifierData = () => {
     const { control, setValue } = useFormContext();
@@ -34,8 +34,6 @@ export const ResearcherIdentifierData = () => {
             },
         },
     } = locale.components.manageAuthors;
-
-    const txt = pageLocale.pages.dashboard.header.dashboardResearcherIds;
 
     const [autScopusId, autOrcidId, autIsScopusIdAuthenticated, autIsOrcidSyncEnabled] = useWatch({
         control,
@@ -136,7 +134,7 @@ export const ResearcherIdentifierData = () => {
                                               <IconButton
                                                   aria-label={openOrcidProfileInNewWindow.label}
                                                   color="secondary"
-                                                  href={`${txt.orcidUrlPrefix}${autOrcidId}`}
+                                                  href={getOrcidURL(autOrcidId)}
                                                   target="_blank"
                                                   size="small"
                                               >

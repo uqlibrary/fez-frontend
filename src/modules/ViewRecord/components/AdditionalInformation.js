@@ -11,16 +11,16 @@ import {
     EditorsCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { parseHtmlToJSX } from 'helpers/general';
+import { getOrcidURL, parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import {
     CURRENT_LICENCES,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     PLACEHOLDER_ISO8601_ZULU_DATE,
     PUBLICATION_TYPE_INSTRUMENT,
-    ORCID_BASE_URL,
+    RAID_BASE_URL,
     ROR_BASE_URL,
 } from 'config/general';
 import { isValidOrcid, isValidROR } from 'config/validation';
@@ -136,24 +136,26 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         const testId = subkey.replace(/_/g, '-');
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                {list.map((item, index) => (
-                    <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
-                        {(() => {
-                            const data = getData(item, subkey);
-                            if (getLink) {
-                                const firstTwo = subkey.split('_').slice(0, 2).join('_');
-                                const icon = item[firstTwo + '_icon'] ?? '';
-                                const iconHint =
-                                    icon === 'openalex'
-                                        ? 'OpenAlex'
-                                        : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
-                                return renderLink(getLink(item[subkey], data), data, '', icon, iconHint);
-                            } else {
-                                return data;
-                            }
-                        })()}
-                    </li>
-                ))}
+                {list
+                    .sort((a, b) => silentTryCatch(() => sortByNumericField(a, b, `${subkey}_order`), 0))
+                    .map((item, index) => (
+                        <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
+                            {(() => {
+                                const data = getData(item, subkey);
+                                if (getLink) {
+                                    const firstTwo = subkey.split('_').slice(0, 2).join('_');
+                                    const icon = item[firstTwo + '_icon'] ?? '';
+                                    const iconHint =
+                                        icon === 'openalex'
+                                            ? 'OpenAlex'
+                                            : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
+                                    return renderLink(getLink(item[subkey], data), data, '', icon, iconHint);
+                                } else {
+                                    return data;
+                                }
+                            })()}
+                        </li>
+                    ))}
             </Box>
         );
     };
@@ -243,6 +245,30 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
     };
 
+    const renderRaid = (objects, subKey) => {
+        if (objects.filter(item => !!item[subKey]).length === 0) return null;
+        return (
+            <Box component={'ul'} key={'rek-raids'} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                {objects.map((item, index) => (
+                    <li key={`rek-raid-${index}`} data-testid={`rek-raid-${index}`}>
+                        {(() => {
+                            const id = item[subKey];
+                            return (
+                                <ExternalLink
+                                    id={`rek-raid-${index}`}
+                                    data-testid={`rek-raid-${index}`}
+                                    href={`${RAID_BASE_URL}/${id}`}
+                                >
+                                    {id}
+                                </ExternalLink>
+                            );
+                        })()}
+                    </li>
+                ))}
+            </Box>
+        );
+    };
+
     // TODO: display original contact email for admin users
     const renderContactEmail = (objects, subKey) => {
         const isInstrument = publication.rek_display_type === PUBLICATION_TYPE_INSTRUMENT;
@@ -259,7 +285,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         let link = null;
 
         if (isValidOrcid(id)) {
-            link = `${ORCID_BASE_URL}/${id}`;
+            link = getOrcidURL(id);
         } else {
             /* istanbul ignore else */
             if (isValidROR(id)) {
@@ -437,7 +463,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_geographic_area':
                 return renderMap(objects);
             case 'rek_raid':
-                return renderList(objects, subkey, pathConfig.list.raid);
+                return renderRaid(objects, subkey);
             case 'rek_subject':
                 return renderList(objects, subkey, pathConfig.list.subject);
             case 'rek_related_service':

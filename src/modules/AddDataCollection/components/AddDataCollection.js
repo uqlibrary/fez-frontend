@@ -39,7 +39,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { createNewRecord, doesDOIExist } from 'actions';
 import validationErrors from '../../../locale/validationErrors';
 

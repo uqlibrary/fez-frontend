@@ -77,6 +77,35 @@ describe('Additional Information Component ', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should not render raid link with empty raid data', () => {
+        initialize();
+        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_raid: [
+                    {
+                        rek_raid: '',
+                        rek_raid_order: 1,
+                    },
+                ],
+            },
+        });
+        expect(queryByTestId('rek-raid-0')).not.toBeInTheDocument();
+    });
+
+    it('should not render raid link with empty raid array', () => {
+        initialize();
+        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_raid: [],
+            },
+        });
+        expect(queryByTestId('rek-raid-0')).not.toBeInTheDocument();
+    });
+
     it('should render component with data collection with license link', () => {
         initialize();
         useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));

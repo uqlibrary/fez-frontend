@@ -3,14 +3,14 @@ import PageNotFound from './PageNotFound';
 import { pathConfig } from 'config/pathConfig';
 import { accounts } from 'mock/data/account';
 import { render, WithReduxStore, WithRouter, act } from 'test-utils';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import * as Context from 'context';
 import * as FavouriteSearchAction from 'actions/favouriteSearch';
 import * as repositories from 'repositories';
 import { waitForElementToBeRemoved, waitFor } from '@testing-library/dom';
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useNavigate: jest.fn(() => jest.fn()),
     useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
 }));

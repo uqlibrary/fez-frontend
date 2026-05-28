@@ -12,7 +12,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
 import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { AppState } from '../../../reducer';
 
 export const FavouriteJournals: React.FC = () => {

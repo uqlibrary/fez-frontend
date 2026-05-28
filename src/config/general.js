@@ -11,6 +11,8 @@ export const ULRICHS_URL_PREFIX =
 
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
+export const getDoajUrl = issn => prefixByUrlResolver(`https://doaj.org/toc/${issn}`);
+
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
@@ -43,6 +45,9 @@ export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_URL) || APP_URL.include
 export const IS_LOCAL_DEV = APP_URL.includes(LOCALHOST_DOMAIN) || APP_URL.includes(LOCALHOST_ALIAS_DOMAIN);
 export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
+export const ESPACE_TEAM_CONTACT_US_URL =
+    'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us';
+
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || `${APP_URL}login`;
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
@@ -50,12 +55,15 @@ export const FEZ_USER_SYSTEM_ID = 41783;
 export const FEZ_USER_SYSTEM_USERNAME = 'webcron';
 export const FEZ_USER_SYSTEM_LABEL = 'System';
 
-export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
+export const ORCID_DOMAIN = 'orcid.org';
+export const ORCID_BASE_URL = process.env.ORCID_URL || `https://${ORCID_DOMAIN}`;
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
 
 export const ROR_BASE_URL = 'https://ror.org';
+
+export const RAID_BASE_URL = 'https://raid.org';
 
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
@@ -1025,18 +1033,6 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
-export const GRANT_AGENCY_TYPES = [
-    'Library/Museum/Public Gallery',
-    'Commercial Gallery',
-    'Government',
-    'NGO',
-    'Foundation',
-    'Corporate/Industry',
-    'University',
-    'Other',
-    'Not set',
-];
-
 export const ORG_AFFILIATION_TYPES = [
     { value: '453983', text: 'Library/Museum/Public Gallery' },
     { value: '453984', text: 'Commercial Gallery' },
@@ -1726,6 +1722,12 @@ export const OA_STATUS = [
     { value: '453954', text: 'PMC' },
     { value: '454116', text: 'RDM open' },
     { value: '454118', text: 'Not yet assessed (OpenAlex)' },
+];
+
+export const OA_STATUS_CATEGORIES = [
+    { value: 'publisher_open_access', text: 'Publisher open access' },
+    { value: 'repository_open_access', text: 'Repository open access' },
+    { value: 'to_be_confirmed', text: 'To be confirmed' },
 ];
 
 export const OA_STATUS_TYPE = [

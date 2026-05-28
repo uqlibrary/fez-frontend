@@ -4,9 +4,9 @@ import { render, WithReduxStore, WithRouter, fireEvent, waitFor } from 'test-uti
 import * as Context from 'context';
 import * as FavouriteSearchActions from 'actions/favouriteSearch';
 
-import { useLocation } from 'react-router-dom';
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+import { useLocation } from 'react-router';
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useLocation: jest.fn(() => ({ pathname: '/', search: '' })),
 }));
 

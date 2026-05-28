@@ -20,6 +20,7 @@ export default {
                 ['fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['rek_genre'],
+                ['fez_record_search_key_raid'],
             ],
         },
         {

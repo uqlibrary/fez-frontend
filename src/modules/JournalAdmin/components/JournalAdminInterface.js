@@ -29,7 +29,7 @@ import { useJournalContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
 import { pathConfig, validation } from 'config';
 import { translateFormErrorsToText } from 'config/validation';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router';
 
 const AdminTab = styled(Tab)({
     minWidth: 84,

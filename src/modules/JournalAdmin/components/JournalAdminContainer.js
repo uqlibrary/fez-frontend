@@ -2,7 +2,7 @@ import React from 'react';
 import Cookies from 'js-cookie';
 
 import * as actions from 'actions';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 import locale from 'locale/pages';
@@ -23,7 +23,7 @@ import JournalAdminInterface from './JournalAdminInterface';
 import AdminSection from './admin/AdminSection';
 import BibliographicSection from './bibliographic/BibliographicSection';
 import UqDataSection from './uqData/UqDataSection';
-import DoajSection from './doaj/DoajSection';
+import OpenAccessSection from './openAccess/OpenAccessSection';
 import ListedSection from './listed/ListedSection';
 import { useJournal } from '../hooks';
 import ReadAndPublishSection from './readAndPublish/ReadAndPublishSection';
@@ -134,9 +134,9 @@ export const JournalAdminContainer = () => {
                                         component: UqDataSection,
                                         numberOfErrors: tabErrors.current.uqDataSection || null,
                                     },
-                                    doaj: {
-                                        component: DoajSection,
-                                        numberOfErrors: tabErrors.current.doajSection || null,
+                                    openAccess: {
+                                        component: OpenAccessSection,
+                                        numberOfErrors: tabErrors.current.openAccessSection || null,
                                     },
                                     listed: {
                                         component: ListedSection,

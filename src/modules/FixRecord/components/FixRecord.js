@@ -27,7 +27,7 @@ import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import * as actions from 'actions';
 import { useValidatedForm } from '../../../hooks';
 import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';

@@ -3,9 +3,6 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
-
-import HelpIcon from '@mui/icons-material/Help';
-import Tooltip from '@mui/material/Tooltip';
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
 
 function capitalizeFirstLetter(string) {
@@ -37,32 +34,47 @@ export default {
                         },
                     },
                     works: {
-                        unprocessed: 'Unprocessed Works',
-                        unprocessedSubText: 'view',
-                        processed: 'Processed Works',
-                        processedSubText: (dateFrom, dateTo) => {
-                            const from = getFormattedServerDate(dateFrom, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
-                            const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
-                            return (
-                                <>
-                                    this iteration{' '}
-                                    <Tooltip title={`${from} to ${to}`} describeChild arrow>
-                                        <HelpIcon fontSize="small" />
-                                    </Tooltip>
-                                </>
-                            );
+                        unprocessed: {
+                            title: 'Unprocessed Works',
+                            subText: 'view',
+                            tooltip: 'Works currently in unprocessed',
+                        },
+                        processed: {
+                            title: 'Processed Works',
+                            subTextAndTooltip: (dateFrom, dateTo) => {
+                                const from = getFormattedServerDate(
+                                    dateFrom,
+                                    DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
+                                );
+                                const to = getFormattedServerDate(dateTo, DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS);
+                                return {
+                                    text: 'this iteration',
+                                    tooltip: `Saves to processed works ${from} to ${to}`,
+                                };
+                            },
                         },
                     },
                     openaccess: {
                         researchOutput: {
                             title: 'OA Status',
-                            subText: 'of research output',
+                            subText: 'of research doc types',
+                            tooltip: 'OA record counts in the past 365 days',
                             chart: {
                                 text: (current, total) =>
                                     `${current}${total > 0 ? ` (${Math.round((current / total) * 100)}%)` : ''}`,
                                 subtext: total => `of ${total} records`,
                             },
                         },
+                    },
+                    openAccessCategories: {
+                        title: 'OA Status Categories',
+                        subText: 'of research subtypes',
+                        tooltip: 'OA status counts in the past 5 years',
+                    },
+                    doiPopulateDocTypes: {
+                        title: 'DOI by Doc Type',
+                        subText: 'In Last 12 Months',
+                        tooltip: 'Doc types record counts with UQ minted DOI populated in the past 12 months',
                     },
                     quicklinks: {
                         title: 'Quick Links ',
@@ -159,6 +171,8 @@ export default {
                     label: {
                         report: 'Report',
                         systemId: 'System alert ID',
+                        requestorId: 'Requestor username',
+                        pid: 'PID',
                         dateFrom: 'From',
                         dateTo: 'To',
                         runReport: 'Run report',
@@ -197,6 +211,7 @@ export default {
                         dateNotBefore: 'Must not be before "from" date',
                         dateNotAfter: 'Must not be after "to" date',
                         recordId: 'Must be a positive whole number',
+                        requestorId: 'Must be alphanumeric',
                     },
                     alert: {
                         noResults: reportName => ({
@@ -338,6 +353,7 @@ export default {
             linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',
             citationAuthors: {
                 maxAuthorDisplayNumber: 29,
+                orcidLinkLabel: v => `Open ${v}'s ORCID profile`,
             },
             defaultActions: [
                 { key: 'fixRecord', label: 'Request Correction', primary: false },
@@ -726,6 +742,7 @@ export default {
                         grantAgencyNameHint: 'Funder/sponsor name for this work',
                         grantIdLabel: 'Grant ID',
                         grantIdHint: 'Grant number for this work',
+                        grantIdHelperText: 'Accepts IDs or full URLs',
                         grantAgencyTypeLabel: 'Funder/Sponsor type',
                         grantAgencyTypeHint: 'Select Funder/Sponsor type',
                         addButton: 'Add grant',
@@ -4015,6 +4032,10 @@ export default {
                     lastName: {
                         label: 'Last name',
                     },
+                    isNameOverride: {
+                        label: 'Prevent automatic updates',
+                        helperText: 'Switch on to prevent automatic names updates from HR data.',
+                    },
                     email: {
                         label: 'Email',
                     },
@@ -4072,9 +4093,6 @@ export default {
                     },
                     openOrcidProfileInNewWindow: {
                         label: 'Open ORCID profile in new window',
-                    },
-                    isUsernameOverridden: {
-                        label: 'Is username overridden by an admin?',
                     },
                 },
                 validation: {

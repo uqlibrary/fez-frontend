@@ -34,9 +34,9 @@ export default {
             groups: [['uqData']],
         },
     ],
-    doaj: () => [
+    openAccess: () => [
         {
-            groups: [['doaj']],
+            groups: [['openAccess']],
         },
     ],
     listed: () => [

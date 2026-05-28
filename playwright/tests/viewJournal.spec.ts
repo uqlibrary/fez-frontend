@@ -2,8 +2,8 @@ import { expect, test, Page } from '../test';
 import { assertIsNotVisible, assertIsVisible } from '../lib/helpers';
 
 test.describe('view Journal', () => {
-    async function tabVisibleInWindow(page: Page, tabId: string, shouldBeVisible: boolean, buttonType = 'ssci') {
-        const selector = `button[data-testid="journal-details-tab-fez-journal-jcr-${buttonType}-category-${tabId}-heading"]`;
+    async function tabVisibleInWindow(page: Page, tabId: string, shouldBeVisible: boolean) {
+        const selector = `button[data-testid="journal-details-tab-categories-${tabId}-heading"]`;
         if (shouldBeVisible) {
             await assertIsVisible(page.locator(selector));
             return;
@@ -13,24 +13,22 @@ test.describe('view Journal', () => {
 
     test('should have appropriate scroll buttons', async ({ page }) => {
         await page.goto('/journal/view/8508?user=uqresearcher');
-        // Scroll to SCIE section
-        const scieSection = page.getByTestId('journal-details-jscie');
-        await scieSection.scrollIntoViewIfNeeded();
-        await tabVisibleInWindow(page, '0', true, 'scie');
-        await tabVisibleInWindow(page, '1', true, 'scie');
-        // Check that scroll buttons are not visible
-        await expect(scieSection.locator('div.MuiTabs-scrollButtons')).toHaveCount(0);
-        // Scroll to SSCI section
-        const ssciSection = page.getByTestId('journal-details-jssci');
-        await ssciSection.scrollIntoViewIfNeeded();
+        // Scroll to journal quality by ranking section
+        const rankingSection = page.getByTestId('journal-details-qualityByRanking');
+        await rankingSection.scrollIntoViewIfNeeded();
         await tabVisibleInWindow(page, '0', true);
-        await tabVisibleInWindow(page, '3', false);
-        await tabVisibleInWindow(page, '4', false);
+        await tabVisibleInWindow(page, '1', true);
+
+        await tabVisibleInWindow(page, '5', false);
+        await tabVisibleInWindow(page, '6', false);
+        // Check that scroll buttons are not visible
+        await expect(rankingSection.locator('div.MuiTabs-scrollButtons')).toHaveCount(2);
+
         // Click the right scroll button
-        await ssciSection.locator('div.MuiTabs-scrollButtons').nth(1).click();
+        await rankingSection.locator('div.MuiTabs-scrollButtons').nth(1).click();
         await tabVisibleInWindow(page, '0', false);
-        await tabVisibleInWindow(page, '3', true);
-        await tabVisibleInWindow(page, '4', true);
+        await tabVisibleInWindow(page, '5', true);
+        await tabVisibleInWindow(page, '6', true);
     });
 
     test('should have an advisory statement', async ({ page }) => {

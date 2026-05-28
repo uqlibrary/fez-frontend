@@ -47,15 +47,15 @@ This means that it's exactly like production, except for the git branch that use
    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    ```
-- With `nvm` installed and/or updated, install `node` version of at least 20.11.0:
+- With `nvm` installed and/or updated, install `node` version of at least 24.15.0:
 
    ```
-   nvm install 20.11.0 
+   nvm install 24.15.0 
    ```
 
 - Switch to the `node` version just installed and begin initial setup:
   ```
-  nvm use 20.11.0 && npm i -g npm@10.4.0 jest webpack-dev-server
+  nvm use 24.15.0 && npm i -g npm@11.12.1 jest webpack-dev-server
   ```
   See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
@@ -173,7 +173,7 @@ To keep initial load to a minimum, the following optimisations have been added t
 
 - Async (lazy) loading of non-essential (essential components are only those components user can see on public pages
   when not authenticated)
-- Splitting essential vendor libraries out ('react', 'react-dom', 'react-router-dom', 'redux', 'react-redux') - those
+- Splitting essential vendor libraries out ('react', 'react-dom', 'react-router', 'redux', 'react-redux') - those
   libraries do not change often and will be cached by the browser
 - Optimise rendering of the components (in ReactJs 15 use react-addon-perf) to minimize wasteful rendering of
   components, implement PureComponent or shouldComponentUpdate()

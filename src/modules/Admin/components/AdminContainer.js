@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import * as actions from 'actions';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { FormProvider } from 'react-hook-form';
 
 import locale from 'locale/pages';
 import {
     NTRO_SUBTYPES,
-    PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_THESIS,
@@ -201,6 +200,7 @@ export const AdminContainer = ({ createMode = false }) => {
                                                 : null,
                                         },
                                     },
+                                    // ntro: {..}, <--- see "authors" section above
                                     identifiers: {
                                         component: IdentifiersSection,
                                         activated: isActivated(),
@@ -221,11 +221,7 @@ export const AdminContainer = ({ createMode = false }) => {
                                     },
                                     relatedServices: {
                                         component: RelatedServicesSection,
-                                        activated:
-                                            isActivated() &&
-                                            [PUBLICATION_TYPE_DATA_COLLECTION].includes(
-                                                recordToView && recordToView.rek_display_type,
-                                            ),
+                                        activated: isActivated(),
                                     },
                                     notes: {
                                         component: NotesSection,

@@ -1087,6 +1087,20 @@ describe('Backend routes method', () => {
             }).apiUrl,
         ).toMatch('dashboard/reports?report_type=1');
 
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                requestor_id: 'abc',
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&requestor_id=abc');
+
+        expect(
+            routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({
+                report_type: 1,
+                pid: 'uq:abc',
+            }).apiUrl,
+        ).toMatch('dashboard/reports?report_type=1&pid=uq%3Aabc');
+
         expect(routes.ADMIN_DASHBOARD_DISPLAY_REPORT_API({}).apiUrl).toMatch('dashboard/reports?');
     });
 });
