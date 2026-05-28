@@ -114,15 +114,18 @@ const GrantListEditor = ({
 
     const handleFormChanges = useCallback(
         row => {
-            // if the form is not dirty, reset the field state
+            const isDirty = form?.getFieldState?.(name)?.isDirty;
+
             if (isEmptyAttributesObject(row)) {
+                if (!isDirty) return;
+
                 form?.resetField?.(name, { keepError: false, keepDirty: false });
                 return;
             }
-            // bail in case the field already has an error
-            if (state?.error) return;
 
-            // otherwise, append an invalid row to the existing values to force a field's dirty state
+            // bail if it's already dirty
+            if (isDirty) return;
+            // otherwise, append an empty item to the existing values to trigger a validation error
             form?.setValue?.(name, [{}, ...grants], { shouldValidate: true, shouldDirty: true });
         },
         [form, name, state, grants],
