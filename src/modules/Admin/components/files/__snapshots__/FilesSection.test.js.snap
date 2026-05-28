@@ -106,7 +106,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   file names begin with a letter and are less than 45 characters long
                                 </li>
                                 <li>
-                                  file names contain only upper and lowercase alphanumeric characters, and underscores
+                                  file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                 </li>
                                 <li>
                                   file names must not contain any spaces
@@ -551,7 +551,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   file names begin with a letter and are less than 45 characters long
                                 </li>
                                 <li>
-                                  file names contain only upper and lowercase alphanumeric characters, and underscores
+                                  file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                 </li>
                                 <li>
                                   file names must not contain any spaces
