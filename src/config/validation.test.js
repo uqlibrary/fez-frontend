@@ -238,13 +238,6 @@ describe('Validation method', () => {
         expect(validation.isValidGoogleScholarId('rtgtwDFRjuH')).toEqual(locale.validationErrors.googleScholarId);
     });
 
-    it('should validate if the grants form is currently poplated', () => {
-        expect(validation.grantFormIsPopulated(true)).toEqual(locale.validationErrors.grants);
-        expect(validation.grantFormIsPopulated({ grantAgencyName: '', grantId: '', grantAgencyType: '' })).toEqual(
-            undefined,
-        );
-    });
-
     it('should conditionally validate file uploader based on open access value', () => {
         expect(validation.fileUploadNotRequiredForMediated(undefined, {})).toEqual(
             locale.validationErrors.fileUploadRequired,

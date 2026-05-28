@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@mui/material/Grid';
@@ -18,6 +18,8 @@ import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
 import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'config/general';
 import { Field } from '../../ReactHookForm';
+import { isGrantFormDirty } from '../../../../../config/validation';
+import defaultLocale from './locale';
 
 export const normalizeIsrc = value => {
     const normalizedValue = value.replace(/([A-Z]{2})?-?(\w{3})?-?(\d{2})?-?(\d{5})?/g, (m, ...groups) => {
@@ -39,543 +41,359 @@ export const transformIsmn = (searchKey, item, index) => ({
     [searchKey.order]: index + 1,
 });
 
-export default class NtroFields extends React.PureComponent {
-    static propTypes = {
-        control: PropTypes.object,
-        canEdit: PropTypes.bool,
-        isSubmitting: PropTypes.bool,
-        locale: PropTypes.object,
-        hideIsmn: PropTypes.bool,
-        hideIsrc: PropTypes.bool,
-        hideVolume: PropTypes.bool,
-        hideIssue: PropTypes.bool,
-        hideStartPage: PropTypes.bool,
-        hideEndPage: PropTypes.bool,
-        hideExtent: PropTypes.bool,
-        hideOriginalFormat: PropTypes.bool,
-        hideAudienceSize: PropTypes.bool,
-        hidePeerReviewActivity: PropTypes.bool,
-        hideSeries: PropTypes.bool,
-        hideGrants: PropTypes.bool,
-        hideLanguage: PropTypes.bool,
-        showContributionStatement: PropTypes.bool,
-        showSignificance: PropTypes.bool,
-        hideAbstract: PropTypes.bool,
-        disableDeleteAllGrants: PropTypes.bool,
-    };
+const getWidth = fields => {
+    const numberOfFieldsToDisplay = fields.filter(field => field === false).length;
+    return (numberOfFieldsToDisplay > 0 && 12 / numberOfFieldsToDisplay) || 12;
+};
 
-    static defaultProps = {
-        control: {},
-        canEdit: false,
-        hideIsmn: false,
-        hideIsrc: false,
-        hideVolume: false,
-        hideIssue: false,
-        hideStartPage: true,
-        hideEndPage: true,
-        hideExtent: false,
-        hideOriginalFormat: false,
-        hideAudienceSize: false,
-        hidePeerReviewActivity: false,
-        hideSeries: false,
-        hideGrants: false,
-        hideLanguage: false,
-        showContributionStatement: false,
-        showSignificance: false,
-        hideAbstract: false,
-        disableDeleteAllGrants: false,
-        locale: {
-            contributionStatement: {
-                title: 'Author/Creator research statement',
-                fields: {
-                    scaleOfWork: {
-                        label: 'Scale/Significance of work',
-                        description: (
-                            <span>
-                                Select the option that best describes the significance of the work*
-                                <span style={{ fontWeight: 700 }}> (not for public view)</span>
-                            </span>
-                        ),
-                    },
-                    impactStatement: {
-                        label: (
-                            <span>
-                                Creator research statement*. Include Background, Contribution and Significance
-                                <span style={{ fontWeight: 700 }}> (not for public view)</span>
-                            </span>
-                        ),
-                        placeholder:
-                            'Remember to include substantiation of your major or minor scale/significance claim above.',
-                    },
-                },
-                help: {
-                    title: 'Author/Creator research statement',
-                    text: (
-                        <React.Fragment>
-                            <Typography component="h4" variant="h6">
-                                Creator research statement
-                            </Typography>
-                            <p>
-                                For more information about the research statement, click{' '}
-                                <a
-                                    style={{ fontWeight: 700 }}
-                                    target="_blank"
-                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/submission-data-requirements#s-lg-box-20836548"
-                                >
-                                    here
-                                </a>
-                            </p>
-                        </React.Fragment>
-                    ),
-                    buttonLabel: 'CLOSE',
-                },
-            },
-            metadata: {
-                title: 'NTRO data',
-                fields: {
-                    abstract: {
-                        label: (
-                            <span>
-                                Abstract/Description* <span style={{ fontWeight: 700 }}>(for public view)</span>
-                            </span>
-                        ),
-                        placeholder:
-                            'Enter a brief description of the work - 800 character limit is no longer applicable',
-                    },
-                    series: {
-                        floatingLabelText: 'Series',
-                        hintText: 'Enter the name of publication, performance, recording, or event series',
-                    },
-                    volume: {
-                        label: 'Volume',
-                    },
-                    issue: {
-                        label: 'Issue',
-                    },
-                    startPage: {
-                        label: 'Start page',
-                    },
-                    endPage: {
-                        label: 'End page',
-                    },
-                    extent: {
-                        label: 'Total pages/Extent',
-                        placeholder: 'Total pages, size, or duration',
-                    },
-                    physicalDescription: {
-                        label: 'Physical description',
-                        placeholder: 'e.g Building, Exhibit, Performance',
-                    },
-                    audienceSize: {
-                        label: 'Audience size',
-                    },
-                    peerReviewActivity: {
-                        label: 'Quality indicators',
-                    },
-                    notes: {
-                        label: 'Notes',
-                    },
-                    language: {
-                        label: 'Language',
-                        selectPrompt: 'Please select languages as required',
-                    },
-                },
-            },
-            grantEditor: {
-                title: 'Grant details',
-            },
-        },
-    };
+const NtroFields = ({
+    control = {},
+    canEdit = false,
+    isSubmitting,
+    locale = defaultLocale,
+    hideIsmn = false,
+    hideIsrc = false,
+    hideVolume = false,
+    hideIssue = false,
+    hideStartPage = true,
+    hideEndPage = true,
+    hideExtent = false,
+    hideOriginalFormat = false,
+    hideAudienceSize = false,
+    hidePeerReviewActivity = false,
+    hideSeries = false,
+    hideGrants = false,
+    hideLanguage = false,
+    showContributionStatement = false,
+    showSignificance = false,
+    hideAbstract = false,
+    disableDeleteAllGrants = false,
+}) => {
+    const row3Width = useMemo(
+        () => getWidth([hideVolume, hideIssue, hideStartPage, hideEndPage]),
+        [hideVolume, hideIssue, hideStartPage, hideEndPage],
+    );
 
-    constructor(props) {
-        super(props);
-        this.row3Width = this.getWidth([props.hideVolume, props.hideIssue, props.hideStartPage, props.hideEndPage]);
-        this.row4Width = this.getWidth([props.hideExtent, props.hideOriginalFormat]);
-        this.row5Width = this.getWidth([props.hideAudienceSize, props.hidePeerReviewActivity, props.hideLanguage]);
-    }
+    const row4Width = useMemo(() => getWidth([hideExtent, hideOriginalFormat]), [hideExtent, hideOriginalFormat]);
 
-    componentDidUpdate(prevProps) {
-        if (
-            prevProps.hideVolume !== this.props.hideVolume ||
-            prevProps.hideIssue !== this.props.hideIssue ||
-            prevProps.hideStartPage !== this.props.hideStartPage ||
-            prevProps.hideEndPage !== this.props.hideEndPage
-        ) {
-            this.row3Width = this.getWidth([
-                this.props.hideVolume,
-                this.props.hideIssue,
-                this.props.hideStartPage,
-                this.props.hideEndPage,
-            ]);
-        }
+    const row5Width = useMemo(
+        () => getWidth([hideAudienceSize, hidePeerReviewActivity, hideLanguage]),
+        [hideAudienceSize, hidePeerReviewActivity, hideLanguage],
+    );
 
-        if (
-            prevProps.hideExtent !== this.props.hideExtent ||
-            prevProps.hideOriginalFormat !== this.props.hideOriginalFormat
-        ) {
-            this.row4Width = this.getWidth([this.props.hideExtent, this.props.hideOriginalFormat]);
-        }
+    const { contributionStatement, metadata, grantEditor } = locale;
 
-        if (
-            prevProps.hideAudienceSize !== this.props.hideAudienceSize ||
-            prevProps.hidePeerReviewActivity !== this.props.hidePeerReviewActivity ||
-            prevProps.hideLanguage !== this.props.hideLanguage
-        ) {
-            this.row5Width = this.getWidth([
-                this.props.hideAudienceSize,
-                this.props.hidePeerReviewActivity,
-                this.props.hideLanguage,
-            ]);
-        }
-    }
-
-    getWidth = fields => {
-        const numberOfFieldsToDisplay = fields.filter(field => field === false).length;
-        return (numberOfFieldsToDisplay > 0 && 12 / numberOfFieldsToDisplay) || 12;
-    };
-
-    render() {
-        const { contributionStatement, metadata, grantEditor } = this.props.locale;
-        const control = this.props.control;
-        return (
-            <Grid size={12} sx={{ ml: 3 }}>
-                {(this.props.showContributionStatement || this.props.showSignificance) && (
-                    <Grid size={12} sx={{ mt: 3 }}>
-                        <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
-                            <Grid container spacing={1}>
-                                {
-                                    // In theory, we should show them separately.
-                                    // In practice, they are always incomplete together
-                                    (this.props.showContributionStatement || this.props.showSignificance) && (
-                                        <Grid size={12}>
-                                            <Typography>
-                                                {contributionStatement.fields.scaleOfWork.description}
-                                            </Typography>
-                                            <Field
-                                                control={control}
-                                                component={SelectField}
-                                                disabled={this.props.isSubmitting}
-                                                name="significance"
-                                                label={contributionStatement.fields.scaleOfWork.label}
-                                                required
-                                                validate={[validation.required]}
-                                                selectFieldId="rek-significance"
-                                            >
-                                                {SIGNIFICANCE.map(item => (
-                                                    <MenuItem key={item.value} value={item.value}>
-                                                        {item.text}
-                                                    </MenuItem>
-                                                ))}
-                                            </Field>
-                                        </Grid>
-                                    )
-                                }
-                                {this.props.showContributionStatement && (
-                                    <Grid style={{ marginTop: 24 }} size={12}>
-                                        <Field
-                                            control={control}
-                                            component={RichEditorField}
-                                            name="impactStatement"
-                                            fullWidth
-                                            title={contributionStatement.fields.impactStatement.label}
-                                            description={contributionStatement.fields.impactStatement.placeholder}
-                                            maxValue={2000}
-                                            required
-                                            disabled={this.props.isSubmitting}
-                                            validate={[validation.required, validation.maxListEditorTextLength2000]}
-                                            richEditorId="rek-creator-contribution-statement"
-                                        />
-                                    </Grid>
-                                )}
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-                )}
-                {(!this.props.hideAbstract ||
-                    !this.props.hidePeerReviewActivity ||
-                    !this.props.hideLanguage ||
-                    !this.props.hideAudienceSize ||
-                    !this.props.hideOriginalFormat ||
-                    !this.props.hideExtent ||
-                    !this.props.hideEndPage ||
-                    !this.props.hideStartPage ||
-                    !this.props.hideIssue ||
-                    !this.props.hideVolume ||
-                    !this.props.hideSeries ||
-                    !this.props.hideIsrc ||
-                    !this.props.hideIsmn) && (
-                    <Grid size={12} sx={{ mt: 3 }}>
-                        <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
-                            <Grid container spacing={2}>
+    return (
+        <Grid size={12} sx={{ ml: 3 }}>
+            {(showContributionStatement || showSignificance) && (
+                <Grid size={12} sx={{ mt: 3 }}>
+                    <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
+                        <Grid container spacing={1}>
+                            {(showContributionStatement || showSignificance) && (
                                 <Grid size={12}>
-                                    {!this.props.hideAbstract && (
-                                        <>
-                                            <Field
-                                                control={control}
-                                                component={RichEditorField}
-                                                name="ntroAbstract"
-                                                fullWidth
-                                                title={metadata.fields.abstract.label}
-                                                description={metadata.fields.abstract.placeholder}
-                                                disabled={this.props.isSubmitting}
-                                                validate={[validation.required, validation.maxListEditorTextLength65k]}
-                                                richEditorId="rek-description"
-                                            />
-                                        </>
-                                    )}
+                                    <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
+                                    <Field
+                                        control={control}
+                                        component={SelectField}
+                                        disabled={isSubmitting}
+                                        name="significance"
+                                        label={contributionStatement.fields.scaleOfWork.label}
+                                        required
+                                        validate={[validation.required]}
+                                        selectFieldId="rek-significance"
+                                    >
+                                        {SIGNIFICANCE.map(item => (
+                                            <MenuItem key={item.value} value={item.value}>
+                                                {item.text}
+                                            </MenuItem>
+                                        ))}
+                                    </Field>
                                 </Grid>
-                                {!this.props.hideIsmn && (
-                                    <Grid size={12}>
-                                        <Field
-                                            control={control}
-                                            component={ListEditorField}
-                                            remindToAdd
-                                            name="fez_record_search_key_ismn"
-                                            isValid={validation.isValidIsmn}
-                                            maxCount={5}
-                                            locale={{ ...componentLocale.components.ismnForm.field }}
-                                            listEditorId="ismn"
-                                            searchKey={{ value: 'rek_ismn', order: 'rek_ismn_order' }}
-                                            disabled={this.props.isSubmitting}
-                                            transformFunction={transformIsmn}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideIsrc && (
-                                    <Grid size={12}>
-                                        <Field
-                                            control={control}
-                                            component={ListEditorField}
-                                            remindToAdd
-                                            name="fez_record_search_key_isrc"
-                                            isValid={validation.isValidIsrc}
-                                            maxCount={5}
-                                            searchKey={{ value: 'rek_isrc', order: 'rek_isrc_order' }}
-                                            locale={{ ...componentLocale.components.isrcForm.field }}
-                                            listEditorId="isrc"
-                                            disabled={this.props.isSubmitting}
-                                            inputNormalizer={normalizeIsrc}
-                                            transformFunction={transformIsrc}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideSeries && (
-                                    <Grid size={12}>
-                                        <Field
-                                            control={control}
-                                            component={SeriesField}
-                                            disabled={this.props.isSubmitting}
-                                            name="fez_record_search_key_series.rek_series"
-                                            {...metadata.fields.series}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideVolume && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row3Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={TextField}
-                                            name="fez_record_search_key_volume_number.rek_volume_number"
-                                            textFieldId="rek-volume-number"
-                                            type="text"
-                                            fullWidth
-                                            disabled={this.props.isSubmitting}
-                                            label={metadata.fields.volume.label}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideIssue && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row3Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={TextField}
-                                            name="fez_record_search_key_issue_number.rek_issue_number"
-                                            textFieldId="rek-issue-number"
-                                            type="text"
-                                            fullWidth
-                                            disabled={this.props.isSubmitting}
-                                            label={metadata.fields.issue.label}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideStartPage && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row3Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={TextField}
-                                            name="fez_record_search_key_start_page.rek_start_page"
-                                            textFieldId="rek-start-page"
-                                            type="text"
-                                            fullWidth
-                                            disabled={this.props.isSubmitting}
-                                            label={metadata.fields.startPage.label}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideEndPage && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row3Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={TextField}
-                                            name="fez_record_search_key_end_page.rek_end_page"
-                                            textFieldId="rek-end-page"
-                                            type="text"
-                                            fullWidth
-                                            disabled={this.props.isSubmitting}
-                                            label={metadata.fields.endPage.label}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideExtent && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row4Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={TextField}
-                                            id="rek-total-pages"
-                                            name="fez_record_search_key_total_pages.rek_total_pages"
-                                            textFieldId="rek-total-pages"
-                                            type="text"
-                                            fullWidth
-                                            disabled={this.props.isSubmitting}
-                                            label={metadata.fields.extent.label}
-                                            placeholder={metadata.fields.extent.placeholder}
-                                            required
-                                            validate={[validation.required]}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideOriginalFormat && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row4Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={TextField}
-                                            name="fez_record_search_key_original_format.rek_original_format"
-                                            textFieldId="rek-original-format"
-                                            type="text"
-                                            fullWidth
-                                            disabled={this.props.isSubmitting}
-                                            {...metadata.fields.physicalDescription}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hideAudienceSize && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row5Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={SelectField}
-                                            name="fez_record_search_key_audience_size.rek_audience_size"
-                                            disabled={this.props.isSubmitting}
-                                            label={metadata.fields.audienceSize.label}
-                                            required
-                                            validate={[validation.required]}
-                                            selectFieldId="rek-audience-size"
-                                        >
-                                            {AUDIENCE_SIZE.map(item => (
-                                                <MenuItem key={item.value} value={item.value}>
-                                                    {item.text}
-                                                </MenuItem>
-                                            ))}
-                                        </Field>
-                                    </Grid>
-                                )}
-                                {!this.props.hideLanguage && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row5Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={NewGenericSelectField}
-                                            genericSelectFieldId="rek-language"
-                                            name="languages"
-                                            disabled={this.props.isSubmitting}
-                                            {...metadata.fields.language}
-                                            itemsList={LANGUAGE}
-                                            multiple
-                                            validate={[validation.requiredList]}
-                                        />
-                                    </Grid>
-                                )}
-                                {!this.props.hidePeerReviewActivity && (
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: this.row5Width,
-                                        }}
-                                    >
-                                        <Field
-                                            control={control}
-                                            component={NewGenericSelectField}
-                                            disabled={this.props.isSubmitting}
-                                            genericSelectFieldId="rek-quality-indicator"
-                                            id="quality-indicators"
-                                            name="qualityIndicators"
-                                            label={metadata.fields.peerReviewActivity.label}
-                                            placeholder={metadata.fields.peerReviewActivity.label}
-                                            required
-                                            multiple
-                                            itemsList={QUALITY_INDICATORS}
-                                            validate={[validation.requiredList]}
-                                        />
-                                    </Grid>
+                            )}
+                            {showContributionStatement && (
+                                <Grid style={{ marginTop: 24 }} size={12}>
+                                    <Field
+                                        control={control}
+                                        component={RichEditorField}
+                                        name="impactStatement"
+                                        fullWidth
+                                        title={contributionStatement.fields.impactStatement.label}
+                                        description={contributionStatement.fields.impactStatement.placeholder}
+                                        maxValue={2000}
+                                        required
+                                        disabled={isSubmitting}
+                                        validate={[validation.required, validation.maxListEditorTextLength2000]}
+                                        richEditorId="rek-creator-contribution-statement"
+                                    />
+                                </Grid>
+                            )}
+                        </Grid>
+                    </StandardCard>
+                </Grid>
+            )}
+            {(!hideAbstract ||
+                !hidePeerReviewActivity ||
+                !hideLanguage ||
+                !hideAudienceSize ||
+                !hideOriginalFormat ||
+                !hideExtent ||
+                !hideEndPage ||
+                !hideStartPage ||
+                !hideIssue ||
+                !hideVolume ||
+                !hideSeries ||
+                !hideIsrc ||
+                !hideIsmn) && (
+                <Grid size={12} sx={{ mt: 3 }}>
+                    <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
+                        <Grid container spacing={2}>
+                            <Grid size={12}>
+                                {!hideAbstract && (
+                                    <Field
+                                        control={control}
+                                        component={RichEditorField}
+                                        name="ntroAbstract"
+                                        fullWidth
+                                        title={metadata.fields.abstract.label}
+                                        description={metadata.fields.abstract.placeholder}
+                                        disabled={isSubmitting}
+                                        validate={[validation.required, validation.maxListEditorTextLength65k]}
+                                        richEditorId="rek-description"
+                                    />
                                 )}
                             </Grid>
-                        </StandardCard>
-                    </Grid>
-                )}
-                {!this.props.hideGrants && (
-                    <Grid size={12} sx={{ mt: 3 }}>
-                        <StandardCard title={grantEditor.title}>
-                            <Field
-                                control={control}
-                                component={GrantListEditorField}
-                                canEdit={this.props.canEdit}
-                                name="grants"
-                                disabled={this.props.isSubmitting}
-                                disableDeleteAllGrants={this.props.disableDeleteAllGrants}
-                                validate={[validation.grantFormIsPopulated]}
-                            />
-                        </StandardCard>
-                    </Grid>
-                )}
-            </Grid>
-        );
-    }
-}
+                            {!hideIsmn && (
+                                <Grid size={12}>
+                                    <Field
+                                        control={control}
+                                        component={ListEditorField}
+                                        remindToAdd
+                                        name="fez_record_search_key_ismn"
+                                        isValid={validation.isValidIsmn}
+                                        maxCount={5}
+                                        locale={{ ...componentLocale.components.ismnForm.field }}
+                                        listEditorId="ismn"
+                                        searchKey={{ value: 'rek_ismn', order: 'rek_ismn_order' }}
+                                        disabled={isSubmitting}
+                                        transformFunction={transformIsmn}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideIsrc && (
+                                <Grid size={12}>
+                                    <Field
+                                        control={control}
+                                        component={ListEditorField}
+                                        remindToAdd
+                                        name="fez_record_search_key_isrc"
+                                        isValid={validation.isValidIsrc}
+                                        maxCount={5}
+                                        searchKey={{ value: 'rek_isrc', order: 'rek_isrc_order' }}
+                                        locale={{ ...componentLocale.components.isrcForm.field }}
+                                        listEditorId="isrc"
+                                        disabled={isSubmitting}
+                                        inputNormalizer={normalizeIsrc}
+                                        transformFunction={transformIsrc}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideSeries && (
+                                <Grid size={12}>
+                                    <Field
+                                        control={control}
+                                        component={SeriesField}
+                                        disabled={isSubmitting}
+                                        name="fez_record_search_key_series.rek_series"
+                                        {...metadata.fields.series}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideVolume && (
+                                <Grid size={{ xs: 12, sm: row3Width }}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        name="fez_record_search_key_volume_number.rek_volume_number"
+                                        textFieldId="rek-volume-number"
+                                        type="text"
+                                        fullWidth
+                                        disabled={isSubmitting}
+                                        label={metadata.fields.volume.label}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideIssue && (
+                                <Grid size={{ xs: 12, sm: row3Width }}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        name="fez_record_search_key_issue_number.rek_issue_number"
+                                        textFieldId="rek-issue-number"
+                                        type="text"
+                                        fullWidth
+                                        disabled={isSubmitting}
+                                        label={metadata.fields.issue.label}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideStartPage && (
+                                <Grid size={{ xs: 12, sm: row3Width }}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        name="fez_record_search_key_start_page.rek_start_page"
+                                        textFieldId="rek-start-page"
+                                        type="text"
+                                        fullWidth
+                                        disabled={isSubmitting}
+                                        label={metadata.fields.startPage.label}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideEndPage && (
+                                <Grid size={{ xs: 12, sm: row3Width }}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        name="fez_record_search_key_end_page.rek_end_page"
+                                        textFieldId="rek-end-page"
+                                        type="text"
+                                        fullWidth
+                                        disabled={isSubmitting}
+                                        label={metadata.fields.endPage.label}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideExtent && (
+                                <Grid size={{ xs: 12, sm: row4Width }}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        id="rek-total-pages"
+                                        name="fez_record_search_key_total_pages.rek_total_pages"
+                                        textFieldId="rek-total-pages"
+                                        type="text"
+                                        fullWidth
+                                        disabled={isSubmitting}
+                                        label={metadata.fields.extent.label}
+                                        placeholder={metadata.fields.extent.placeholder}
+                                        required
+                                        validate={[validation.required]}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideOriginalFormat && (
+                                <Grid size={{ xs: 12, sm: row4Width }}>
+                                    <Field
+                                        control={control}
+                                        component={TextField}
+                                        name="fez_record_search_key_original_format.rek_original_format"
+                                        textFieldId="rek-original-format"
+                                        type="text"
+                                        fullWidth
+                                        disabled={isSubmitting}
+                                        {...metadata.fields.physicalDescription}
+                                    />
+                                </Grid>
+                            )}
+                            {!hideAudienceSize && (
+                                <Grid size={{ xs: 12, sm: row5Width }}>
+                                    <Field
+                                        control={control}
+                                        component={SelectField}
+                                        name="fez_record_search_key_audience_size.rek_audience_size"
+                                        disabled={isSubmitting}
+                                        label={metadata.fields.audienceSize.label}
+                                        required
+                                        validate={[validation.required]}
+                                        selectFieldId="rek-audience-size"
+                                    >
+                                        {AUDIENCE_SIZE.map(item => (
+                                            <MenuItem key={item.value} value={item.value}>
+                                                {item.text}
+                                            </MenuItem>
+                                        ))}
+                                    </Field>
+                                </Grid>
+                            )}
+                            {!hideLanguage && (
+                                <Grid size={{ xs: 12, sm: row5Width }}>
+                                    <Field
+                                        control={control}
+                                        component={NewGenericSelectField}
+                                        genericSelectFieldId="rek-language"
+                                        name="languages"
+                                        disabled={isSubmitting}
+                                        {...metadata.fields.language}
+                                        itemsList={LANGUAGE}
+                                        multiple
+                                        validate={[validation.requiredList]}
+                                    />
+                                </Grid>
+                            )}
+                            {!hidePeerReviewActivity && (
+                                <Grid size={{ xs: 12, sm: row5Width }}>
+                                    <Field
+                                        control={control}
+                                        component={NewGenericSelectField}
+                                        disabled={isSubmitting}
+                                        genericSelectFieldId="rek-quality-indicator"
+                                        id="quality-indicators"
+                                        name="qualityIndicators"
+                                        label={metadata.fields.peerReviewActivity.label}
+                                        placeholder={metadata.fields.peerReviewActivity.label}
+                                        required
+                                        multiple
+                                        itemsList={QUALITY_INDICATORS}
+                                        validate={[validation.requiredList]}
+                                    />
+                                </Grid>
+                            )}
+                        </Grid>
+                    </StandardCard>
+                </Grid>
+            )}
+            {!hideGrants && (
+                <Grid size={12} sx={{ mt: 3 }}>
+                    <StandardCard title={grantEditor.title}>
+                        <Field
+                            control={control}
+                            component={GrantListEditorField}
+                            canEdit={canEdit}
+                            name="grants"
+                            disabled={isSubmitting}
+                            disableDeleteAllGrants={disableDeleteAllGrants}
+                            validate={[() => isGrantFormDirty(control?.getFieldState('grants').isDirty)]}
+                        />
+                    </StandardCard>
+                </Grid>
+            )}
+        </Grid>
+    );
+};
+
+NtroFields.propTypes = {
+    control: PropTypes.object,
+    canEdit: PropTypes.bool,
+    isSubmitting: PropTypes.bool,
+    locale: PropTypes.object,
+    hideIsmn: PropTypes.bool,
+    hideIsrc: PropTypes.bool,
+    hideVolume: PropTypes.bool,
+    hideIssue: PropTypes.bool,
+    hideStartPage: PropTypes.bool,
+    hideEndPage: PropTypes.bool,
+    hideExtent: PropTypes.bool,
+    hideOriginalFormat: PropTypes.bool,
+    hideAudienceSize: PropTypes.bool,
+    hidePeerReviewActivity: PropTypes.bool,
+    hideSeries: PropTypes.bool,
+    hideGrants: PropTypes.bool,
+    hideLanguage: PropTypes.bool,
+    showContributionStatement: PropTypes.bool,
+    showSignificance: PropTypes.bool,
+    hideAbstract: PropTypes.bool,
+    disableDeleteAllGrants: PropTypes.bool,
+};
+
+export default NtroFields;

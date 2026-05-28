@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
 import GrantListEditorForm from './GrantListEditorForm';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
+import { isEmptyAttributesObject } from '../../../../helpers/general';
 
 const getGrantsFromProps = (name, value) => (name && value) || [];
+
+const filterOutInvalidRows = grants => grants?.filter?.(grant => !!grant?.grantAgencyName?.trim?.().length);
 
 const GrantListEditor = ({
     canEdit = false,
@@ -26,13 +28,11 @@ const GrantListEditor = ({
     const [grants, setGrants] = useState([]);
     const [grantSelectedToEdit, setGrantSelectedToEdit] = useState(null);
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
-    const [errorMessage, setErrorMessage] = useState('');
-    const [grantFormPopulated, setGrantFormPopulated] = useState(false);
     const form = useFormContext();
 
     const handleGrantsChange = useCallback(
         grants => {
-            form?.setValue?.(name, grants, { shouldValidate: true });
+            form?.setValue?.(name, filterOutInvalidRows(grants), { shouldValidate: false, shouldDirty: false });
         },
         [form, name],
     );
@@ -47,13 +47,6 @@ const GrantListEditor = ({
         setGrants(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(grants), value, hasPropagatedInputValueChanges.current]);
-
-    // propagate `grantFormPopulated` changes to input
-    useEffect(() => {
-        if (!grantFormPopulated) return;
-        form?.setValue?.(name, grantFormPopulated, { shouldValidate: true });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [grantFormPopulated]);
 
     const addGrant = useCallback(
         grant => {
@@ -70,7 +63,6 @@ const GrantListEditor = ({
             handleGrantsChange(newList);
             setGrantIndexSelectedToEdit(null);
             setGrantSelectedToEdit(null);
-            setErrorMessage('');
         },
         [grantIndexSelectedToEdit, grants, handleGrantsChange],
     );
@@ -118,14 +110,25 @@ const GrantListEditor = ({
     const deleteAllGrants = useCallback(() => {
         setGrants([]);
         handleGrantsChange([]);
-        setErrorMessage('');
     }, [handleGrantsChange]);
 
-    const isFormPopulated = useCallback(value => {
-        setGrantFormPopulated(!!value);
-    }, []);
+    const handleFormChanges = useCallback(
+        row => {
+            // if the form is not dirty, reset the field state
+            if (isEmptyAttributesObject(row)) {
+                form?.resetField?.(name, { keepError: false, keepDirty: false });
+                return;
+            }
+            // bail in case the field already has an error
+            if (state?.error) return;
 
-    const renderGrantsRows = grants?.map?.((grant, index) => (
+            // otherwise, append an invalid row to the existing values to force a field's dirty state
+            form?.setValue?.(name, [{}, ...grants], { shouldValidate: true, shouldDirty: true });
+        },
+        [form, name, state, grants],
+    );
+
+    const renderGrantsRows = filterOutInvalidRows(grants)?.map?.((grant, index) => (
         <GrantListEditorRow
             key={`GrantListRow_${index}`}
             index={index}
@@ -155,16 +158,9 @@ const GrantListEditor = ({
 
     return (
         <div>
-            {errorMessage && (
-                /* istanbul ignore next */ <Alert
-                    title={this.props.locale.errorTitle}
-                    message={errorMessage}
-                    type="warning"
-                />
-            )}
             <GrantListEditorForm
                 onAdd={addGrant}
-                isPopulated={isFormPopulated}
+                onChange={handleFormChanges}
                 required={required}
                 disabled={disabled}
                 hideType={hideType}

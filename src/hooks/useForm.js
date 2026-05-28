@@ -124,9 +124,9 @@ const getPropsForAlert =
             return props;
         }
 
-        // if `values` or `formState.defaultValues` props are set, its keys are used for ordering returned
-        // formErrors object.
-        // Note: when using theses props, they must include all forms fields in the desired order.
+        // if `values` or `formState.defaultValues` props are set, its keys are used for ordering
+        // the returned formErrors object.
+        // Note: when using these props, they must include all form's fields in the desired order.
         // Otherwise, the missing fields will not be present in the formErrors object. Unfortunately,
         // with the current RHF implementation, this is not possible to be solved programmatically.
         const formFields = flattenFormFieldKeys(

@@ -20,6 +20,7 @@ import {
     sortByNumericField,
     isURL,
     getOrcidURL,
+    isEmptyAttributesObject,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
@@ -312,6 +313,20 @@ describe('general helpers', () => {
             expect(isEmptyObject(null)).toEqual(false);
             expect(isEmptyObject(undefined)).toEqual(false);
             expect(isEmptyObject([])).toEqual(false);
+        });
+    });
+
+    describe('isEmptyAttributesObject', () => {
+        it('should return true for objects with empty attribute', () => {
+            expect(isEmptyAttributesObject({})).toBeTruthy();
+            expect(isEmptyAttributesObject({ a: null, b: '' })).toBeTruthy();
+            expect(isEmptyAttributesObject({ a: undefined, b: '' })).toBeTruthy();
+            expect(isEmptyAttributesObject({ a: '', b: '' })).toBeTruthy();
+        });
+
+        it('should return false for objects with non-empty attribute', () => {
+            expect(isEmptyAttributesObject({ a: ' ', b: '' })).toBeFalsy();
+            expect(isEmptyAttributesObject({ a: 'a', b: '' })).toBeFalsy();
         });
     });
 

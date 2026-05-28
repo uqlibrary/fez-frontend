@@ -326,12 +326,32 @@ describe('GrantListEditor', () => {
         const { getByRole } = setup({
             onChange: mockOnChange,
             name: inputName,
+            value: [
+                {
+                    grantAgencyName: 'Test 2',
+                    grantId: '456',
+                    grantAgencyType: 'Testing 2',
+                },
+            ],
         });
 
         fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
         expect(mockOnChange).not.toHaveBeenCalledWith(true);
         expect(mockOnChange).not.toHaveBeenCalledWith([]);
-        expect(mockSetValue).toHaveBeenCalledWith(inputName, true, { shouldValidate: true });
-        // expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
+        expect(mockSetValue).toHaveBeenLastCalledWith(
+            inputName,
+            [
+                {},
+                {
+                    grantAgencyName: 'Test 2',
+                    grantId: '456',
+                    grantAgencyType: 'Testing 2',
+                },
+            ],
+            {
+                shouldDirty: true,
+                shouldValidate: true,
+            },
+        );
     });
 });

@@ -15,7 +15,7 @@ export const GrantListEditorForm = ({
     disabled,
     grantSelectedToEdit,
     hideType = false,
-    isPopulated,
+    onChange,
     locale = {
         grantAgencyNameLabel: 'Funder/Sponsor name',
         grantAgencyNameHint: 'Funder/sponsor name for this work',
@@ -38,7 +38,6 @@ export const GrantListEditorForm = ({
     required,
 }) => {
     const [grant, setGrant] = React.useState({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
-    const [dirty, setDirty] = React.useState(null);
 
     React.useEffect(() => {
         if (!!grantSelectedToEdit) {
@@ -51,24 +50,15 @@ export const GrantListEditorForm = ({
         }
     }, [grantSelectedToEdit]);
 
-    React.useEffect(() => {
-        if (!!isPopulated && dirty) {
-            isPopulated(true);
-        } else {
-            isPopulated(false);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dirty]);
+    React.useEffect(() => onChange?.(grant), [onChange, grant]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleChange = React.useCallback(event => {
         const { name, value } = event.target;
-
         setGrant(grant => ({
             ...grant,
             [name]: value,
         }));
-        setDirty(true);
     });
 
     const _addGrant = event => {
@@ -84,7 +74,6 @@ export const GrantListEditorForm = ({
 
         // pass on the selected grant
         onAdd(grant);
-        setDirty(false);
         setGrant({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
     };
 
@@ -222,7 +211,7 @@ GrantListEditorForm.propTypes = {
     disabled: PropTypes.bool,
     grantSelectedToEdit: PropTypes.object,
     hideType: PropTypes.bool,
-    isPopulated: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
     locale: PropTypes.object,
     onAdd: PropTypes.func.isRequired,
     required: PropTypes.bool,
