@@ -49,7 +49,6 @@ block_prohibit_commits
 
 GIT_DIFF="git diff --cached --name-only --diff-filter=ACM"
 STAGED_FILES=$(eval "$GIT_DIFF" | grep ".jsx\{0,1\}$")
-PRETTIER="$(git rev-parse --show-toplevel)/node_modules/.bin/prettier"
 ESLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/eslint"
 
 if [[ "$STAGED_FILES" = "" ]]; then
@@ -64,12 +63,6 @@ if [ -f ~/.nvm/nvm.sh ]; then
   source ~/.nvm/nvm.sh
 fi
 
-# Check for prettier
-if [[ ! -x "$PRETTIER" ]]; then
-  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! (missing prettier)\e[0m\n"
-  exit 1
-fi
-
 # Check for eslint
 if [[ ! -x "$ESLINT" ]]; then
   printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! (missing eslint)\e[0m\n"
@@ -81,13 +74,6 @@ FILES_ONE_LINE=$(echo -e ${STAGED_FILES/'\n'/' '});
 SECONDS=0
 
 printf "${C_YELLOW}$FILE_COUNT${C_RESET} staged file(s) will be checked for code styles.\n\n\e[31m"
-
-# Run Prettier in check mode
-"$PRETTIER" --check $FILES_ONE_LINE
-if [[ "$?" != 0 ]]; then
-  PASS=false
-  printf "\nFile(s) above failed Prettier checks!"
-fi
 
 # Run ESLint using eslint.config.mjs
 "$ESLINT" $FILES_ONE_LINE
@@ -102,7 +88,7 @@ echo "Code style checks completed in $SECONDS seconds."
 
 if ! $PASS; then
   printf "\n\e[31m\e[1mCOMMIT REJECTED.\e[0m \e[31mYour commit contains files that should pass code style checks but do not.\e[0m\n"
-  printf "\nPlease fix code styles and try again. Running '\e[1mnpm run codestyles:fix:staged\e[0m' is a good start."
+  printf "\nPlease fix code styles and try again. Running '\e[1mnpm run eslint:fix:staged\e[0m' is a good start."
   printf "\nYou can run '\e[1mnpm run eslint\e[0m' to view ESLint code quality issues, if any.\n\n"
   exit 1
 fi
