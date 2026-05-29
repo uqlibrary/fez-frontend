@@ -1,7 +1,8 @@
 import React from 'react';
 import GrantListEditor from './GrantListEditor';
-import { rtlRender, fireEvent, within } from 'test-utils';
+import { rtlRender, fireEvent, within, withFakeTimers } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
+import { locale } from '../../../../locale';
 
 const mockSetValue = jest.fn();
 function setup(testProps = {}) {
@@ -317,41 +318,25 @@ describe('GrantListEditor', () => {
         expect(within(grantList[1]).getByText('Agency 2')).toBeInTheDocument();
     });
 
-    it('should call setValue on state change', () => {
+    it('should call setError on state change', async () => {
         const mockOnChange = jest.fn();
-        const mockSetValue = jest.fn();
-        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setValue: mockSetValue });
-
+        const mockSetError = jest.fn();
+        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setError: mockSetError });
         const inputName = 'my-input';
-        const { getByRole } = setup({
-            onChange: mockOnChange,
-            name: inputName,
-            value: [
-                {
-                    grantAgencyName: 'Test 2',
-                    grantId: '456',
-                    grantAgencyType: 'Testing 2',
-                },
-            ],
+
+        await withFakeTimers(async () => {
+            const { getByRole } = setup({
+                onChange: mockOnChange,
+                name: inputName,
+            });
+            fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
         });
 
-        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
         expect(mockOnChange).not.toHaveBeenCalledWith(true);
         expect(mockOnChange).not.toHaveBeenCalledWith([]);
-        expect(mockSetValue).toHaveBeenLastCalledWith(
-            inputName,
-            [
-                {},
-                {
-                    grantAgencyName: 'Test 2',
-                    grantId: '456',
-                    grantAgencyType: 'Testing 2',
-                },
-            ],
-            {
-                shouldDirty: true,
-                shouldValidate: true,
-            },
-        );
+        expect(mockSetError).toHaveBeenCalledWith(inputName, {
+            message: locale.validationErrors.grants,
+            type: 'manual',
+        });
     });
 });

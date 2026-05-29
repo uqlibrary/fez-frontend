@@ -317,14 +317,15 @@ describe('general helpers', () => {
     });
 
     describe('isEmptyAttributesObject', () => {
-        it('should return true for objects with empty attribute', () => {
+        it('should return true for objects with empty attributes', () => {
             expect(isEmptyAttributesObject({})).toBeTruthy();
-            expect(isEmptyAttributesObject({ a: null, b: '' })).toBeTruthy();
-            expect(isEmptyAttributesObject({ a: undefined, b: '' })).toBeTruthy();
+            expect(isEmptyAttributesObject({ a: '' })).toBeTruthy();
+            expect(isEmptyAttributesObject({ a: null })).toBeTruthy();
+            expect(isEmptyAttributesObject({ a: undefined })).toBeTruthy();
             expect(isEmptyAttributesObject({ a: '', b: '' })).toBeTruthy();
         });
 
-        it('should return false for objects with non-empty attribute', () => {
+        it('should return false for objects with non-empty attributes', () => {
             expect(isEmptyAttributesObject({ a: ' ', b: '' })).toBeFalsy();
             expect(isEmptyAttributesObject({ a: 'a', b: '' })).toBeFalsy();
         });

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
@@ -8,10 +8,10 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
 import { isEmptyAttributesObject } from '../../../../helpers/general';
+import { locale as globalLocale } from 'locale';
+import debounce from 'lodash/debounce';
 
 const getGrantsFromProps = (name, value) => (name && value) || [];
-
-const filterOutInvalidRows = grants => grants?.filter?.(grant => !!grant?.grantAgencyName?.trim?.().length);
 
 const GrantListEditor = ({
     canEdit = false,
@@ -32,7 +32,7 @@ const GrantListEditor = ({
 
     const handleGrantsChange = useCallback(
         grants => {
-            form?.setValue?.(name, filterOutInvalidRows(grants), { shouldValidate: false, shouldDirty: false });
+            form?.setValue?.(name, grants, { shouldValidate: true });
         },
         [form, name],
     );
@@ -112,26 +112,36 @@ const GrantListEditor = ({
         handleGrantsChange([]);
     }, [handleGrantsChange]);
 
-    const handleFormChanges = useCallback(
-        row => {
-            const isDirty = form?.getFieldState?.(name)?.isDirty;
+    const handleFormChanges = useMemo(
+        () =>
+            debounce(
+                row => {
+                    // can't use state.error, it's stale in here
+                    const hasError = form?.getFieldState?.(name).error;
 
-            if (isEmptyAttributesObject(row)) {
-                if (!isDirty) return;
+                    // in case form is on it's default state
+                    if (isEmptyAttributesObject(row)) {
+                        // bail if there is no error to be cleared
+                        if (!hasError) return;
 
-                form?.resetField?.(name, { keepError: false, keepDirty: false });
-                return;
-            }
+                        form?.clearErrors?.(name);
+                        return;
+                    }
 
-            // bail if it's already dirty
-            if (isDirty) return;
-            // otherwise, append an empty item to the existing values to trigger a validation error
-            form?.setValue?.(name, [{}, ...grants], { shouldValidate: true, shouldDirty: true });
-        },
-        [form, name, state, grants],
+                    // bail in case error has already been set
+                    if (hasError) return;
+                    form?.setError?.(name, { type: 'manual', message: globalLocale.validationErrors.grants });
+                },
+                150,
+                {
+                    leading: true,
+                    trailing: true,
+                },
+            ),
+        [form, name],
     );
 
-    const renderGrantsRows = filterOutInvalidRows(grants)?.map?.((grant, index) => (
+    const renderGrantsRows = grants?.map?.((grant, index) => (
         <GrantListEditorRow
             key={`GrantListRow_${index}`}
             index={index}
@@ -200,9 +210,13 @@ const GrantListEditor = ({
                 </Grid>
             )}
             {state?.error && (
-                <Typography color="error" variant="caption">
-                    {error || state.error}
-                </Typography>
+                <Grid container sx={{ mt: 2 }}>
+                    <Grid item xs={12}>
+                        <Typography color="error" variant="caption">
+                            {error || state.error}
+                        </Typography>
+                    </Grid>
+                </Grid>
             )}
         </div>
     );

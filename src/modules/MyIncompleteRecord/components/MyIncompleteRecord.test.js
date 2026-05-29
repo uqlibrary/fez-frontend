@@ -20,6 +20,7 @@ import {
     api,
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
+    withFakeTimers,
 } from 'test-utils';
 import { waitFor } from '@testing-library/dom';
 
@@ -231,10 +232,11 @@ describe('MyIncompleteRecord', () => {
         });
 
         it('should display grant editor field error in error summary', async () => {
+            const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
             const { getByTestId, getAllByText } = setup({ publication: mockRecordToFix });
             await assertValidationErrorSummary();
 
-            await userEvent.type(getByTestId('rek-grant-agency-input'), 'grant');
+            await withFakeTimers(async () => await user.type(getByTestId('rek-grant-agency-input'), 'grant'));
             await waitFor(() => getAllByText(validationErrors.validationErrorsSummary.grants)[0], waitForOptions);
         });
 

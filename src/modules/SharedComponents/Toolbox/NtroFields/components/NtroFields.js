@@ -18,7 +18,6 @@ import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
 import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'config/general';
 import { Field } from '../../ReactHookForm';
-import { isGrantFormDirty } from '../../../../../config/validation';
 import defaultLocale from './locale';
 
 export const normalizeIsrc = value => {
@@ -363,7 +362,6 @@ const NtroFields = ({
                             name="grants"
                             disabled={isSubmitting}
                             disableDeleteAllGrants={disableDeleteAllGrants}
-                            validate={[() => isGrantFormDirty(control?.getFieldState('grants').isDirty)]}
                         />
                     </StandardCard>
                 </Grid>
