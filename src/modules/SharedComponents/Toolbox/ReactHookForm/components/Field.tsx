@@ -31,7 +31,7 @@ export const validateHandler = async (
 
     for (const validator of validators) {
         if (typeof validator !== 'function') continue;
-        let result = await Promise.resolve(validator(value, formValues));
+        let result = await validator(value, formValues);
         if (typeof result !== 'string') continue;
         result = result.trim();
         if (result.length > 0) return result;
