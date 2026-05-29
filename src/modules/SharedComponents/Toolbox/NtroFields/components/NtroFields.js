@@ -46,19 +46,19 @@ const getWidth = fields => {
 };
 
 const NtroFields = ({
-    control = {},
+    control = /* istanbul ignore next */ {},
     canEdit = false,
     isSubmitting,
     locale = defaultLocale,
     hideIsmn = false,
     hideIsrc = false,
-    hideVolume = false,
+    hideVolume = /* istanbul ignore next */ false,
     hideIssue = false,
     hideStartPage = true,
     hideEndPage = true,
     hideExtent = false,
     hideOriginalFormat = false,
-    hideAudienceSize = false,
+    hideAudienceSize = /* istanbul ignore next */ false,
     hidePeerReviewActivity = false,
     hideSeries = false,
     hideGrants = false,
