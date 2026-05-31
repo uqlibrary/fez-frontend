@@ -69,6 +69,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                   null;
     };
 
+    const hasValue = data => data !== null && !(typeof data === 'string' && data.trim() === '');
+
     const renderRow = (heading, data, index, field) => {
         const labelTestId = `${field.replace(/_/g, '-')}-label`;
         return (
@@ -133,6 +135,11 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderList = (list, subkey, getLink) => {
+        const filteredList = list.filter(item => hasValue(getData(item, subkey)));
+        if (filteredList.length === 0) {
+            return null;
+        }
+
         const testId = subkey.replace(/_/g, '-');
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -242,7 +249,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderDoi = doi => {
-        return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
+        return <DoiCitationView key="additional-information-doi" doi={doi} />;
     };
 
     const renderRaid = (objects, subKey) => {
@@ -478,6 +485,10 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     // render a single object (without order field)
     const renderObject = (object, subkey) => {
         const data = getData(object, subkey);
+
+        if (!hasValue(data)) {
+            return null;
+        }
 
         // date fields
         if (viewRecordsConfig.dateFields.includes(subkey)) {
