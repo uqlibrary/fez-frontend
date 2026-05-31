@@ -238,7 +238,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderDoi = doi => {
-        return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
+        return <DoiCitationView key="additional-information-doi" doi={doi} />;
     };
 
     const renderRaid = (objects, subKey) => {
