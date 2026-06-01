@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
@@ -7,9 +7,7 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
-import { isEmptyAttributesObject } from '../../../../helpers/general';
 import { locale as globalLocale } from 'locale';
-import debounce from 'lodash/debounce';
 
 const getGrantsFromProps = (name, value) => (name && value) || [];
 
@@ -29,13 +27,20 @@ const GrantListEditor = ({
     const [grantSelectedToEdit, setGrantSelectedToEdit] = useState(null);
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
     const form = useFormContext();
+    const [isFormDirty, setIsFormDirty] = useState(false);
 
-    const handleGrantsChange = useCallback(
-        grants => {
-            form?.setValue?.(name, grants, { shouldValidate: true });
-        },
-        [form, name],
-    );
+    // console.log(`form.formState.errors[${name}].message = ${_.get(form.formState.errors, name)?.message}`);
+    // console.log(`state.error = ${state.error}`);
+    // console.log(`grants = ${JSON.stringify(grants)}`);
+    // propagate isFormDirty state
+    useEffect(() => {
+        if (!isFormDirty) {
+            form?.clearErrors?.(name);
+            return;
+        }
+        form?.setError?.(name, { type: 'validation', message: globalLocale.validationErrors.grants });
+    }, [isFormDirty]);
+
     // propagate input changes to `grants`
     useEffect(() => {
         const updated = getGrantsFromProps(name, value);
@@ -47,6 +52,13 @@ const GrantListEditor = ({
         setGrants(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(grants), value, hasPropagatedInputValueChanges.current]);
+
+    const handleGrantsChange = useCallback(
+        grants => {
+            form?.setValue?.(name, grants, { shouldValidate: true });
+        },
+        [form, name],
+    );
 
     const addGrant = useCallback(
         grant => {
@@ -112,35 +124,6 @@ const GrantListEditor = ({
         handleGrantsChange([]);
     }, [handleGrantsChange]);
 
-    const handleFormChanges = useMemo(
-        () =>
-            debounce(
-                row => {
-                    // can't use state.error, it's stale in here
-                    const hasError = form?.getFieldState?.(name).error;
-
-                    // in case form is on it's default state
-                    if (isEmptyAttributesObject(row)) {
-                        // bail if there is no error to be cleared
-                        if (!hasError) return;
-
-                        form?.clearErrors?.(name);
-                        return;
-                    }
-
-                    // bail in case error has already been set
-                    if (hasError) return;
-                    form?.setError?.(name, { type: 'manual', message: globalLocale.validationErrors.grants });
-                },
-                150,
-                {
-                    leading: true,
-                    trailing: true,
-                },
-            ),
-        [form, name],
-    );
-
     const renderGrantsRows = grants?.map?.((grant, index) => (
         <GrantListEditorRow
             key={`GrantListRow_${index}`}
@@ -157,23 +140,11 @@ const GrantListEditor = ({
         />
     ));
 
-    let error = null;
-    if (state?.error) {
-        error =
-            !!state.error.props &&
-            React.Children.map(state.error.props.children, (child, index) => {
-                if (child.type) {
-                    return React.cloneElement(child, { key: index });
-                }
-                return child;
-            });
-    }
-
     return (
         <div>
             <GrantListEditorForm
                 onAdd={addGrant}
-                onChange={handleFormChanges}
+                onDirty={setIsFormDirty}
                 required={required}
                 disabled={disabled}
                 hideType={hideType}
@@ -213,7 +184,7 @@ const GrantListEditor = ({
                 <Grid container sx={{ mt: 2 }}>
                     <Grid item xs={12}>
                         <Typography color="error" variant="caption">
-                            {error || state.error}
+                            {state.error}
                         </Typography>
                     </Grid>
                 </Grid>

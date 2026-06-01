@@ -7884,7 +7884,9 @@ exports[`GrantListEditor should render error from props 1`] = `
         <span
           class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
         >
-          Some error
+          <span>
+            Some error
+          </span>
         </span>
       </div>
     </div>
@@ -8082,12 +8084,14 @@ exports[`GrantListEditor should render error from props as children 1`] = `
         <span
           class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
         >
-          <span>
-            Test error 1
-          </span>
-          <span>
-            Test error 2
-          </span>
+          <p>
+            <span>
+              Test error 1
+            </span>
+            <span>
+              Test error 2
+            </span>
+          </p>
         </span>
       </div>
     </div>

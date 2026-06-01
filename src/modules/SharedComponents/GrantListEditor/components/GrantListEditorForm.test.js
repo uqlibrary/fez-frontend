@@ -45,32 +45,33 @@ describe('GrantListEditorForm', () => {
     });
 
     it('should add grant and pass onChange info', () => {
-        const onAddFn = jest.fn();
-        const onChange = jest.fn();
+        const onAdd = jest.fn();
+        const onDirty = jest.fn();
         const { getByTestId, getByText } = setup({
-            onAdd: onAddFn,
-            onChange: onChange,
+            onAdd,
+            onDirty,
         });
 
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: 't' } });
+        expect(onDirty).toHaveBeenLastCalledWith(true);
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: '' } });
+        expect(onDirty).toHaveBeenLastCalledWith(false);
         fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: 'test' } });
-        fireEvent.change(getByTestId('rek-grant-id-input'), { target: { name: 'grantId', value: '123' } });
+        expect(onDirty).toHaveBeenLastCalledWith(true);
 
-        expect(onChange).toHaveBeenCalledTimes(3);
-        expect(onChange).toHaveBeenNthCalledWith(1, { grantAgencyName: '', grantAgencyType: '', grantId: '' });
-        expect(onChange).toHaveBeenLastCalledWith({ grantAgencyName: 'test', grantAgencyType: '', grantId: '123' });
+        fireEvent.change(getByTestId('rek-grant-id-input'), { target: { name: 'grantId', value: '123' } });
 
         fireEvent.mouseDown(getByTestId('rek-grant-type-select'));
         fireEvent.click(getByText('Government'));
 
         fireEvent.click(getByTestId('rek-grant-add'));
 
-        expect(onAddFn).toHaveBeenCalledWith({
+        expect(onDirty).toHaveBeenLastCalledWith(false);
+        expect(onAdd).toHaveBeenCalledWith({
             grantAgencyName: 'test',
             grantId: '123',
             grantAgencyType: '453985',
         });
-
-        expect(onChange).toHaveBeenCalledWith({ grantAgencyName: '', grantAgencyType: '', grantId: '' });
     });
 
     it('should not add grant if form state is not valid or any other key is pressed', () => {

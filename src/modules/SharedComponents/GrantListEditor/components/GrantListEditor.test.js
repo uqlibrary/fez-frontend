@@ -318,7 +318,7 @@ describe('GrantListEditor', () => {
         expect(within(grantList[1]).getByText('Agency 2')).toBeInTheDocument();
     });
 
-    it('should call setError on state change', async () => {
+    it('should call setError on isFormDirty state changes', async () => {
         const mockOnChange = jest.fn();
         const mockSetError = jest.fn();
         jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setError: mockSetError });
@@ -335,8 +335,8 @@ describe('GrantListEditor', () => {
         expect(mockOnChange).not.toHaveBeenCalledWith(true);
         expect(mockOnChange).not.toHaveBeenCalledWith([]);
         expect(mockSetError).toHaveBeenCalledWith(inputName, {
+            type: 'validation',
             message: locale.validationErrors.grants,
-            type: 'manual',
         });
     });
 });

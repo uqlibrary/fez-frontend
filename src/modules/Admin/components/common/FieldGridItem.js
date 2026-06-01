@@ -9,10 +9,13 @@ import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'c
 import { useRecordContext } from 'context';
 
 import { default as Controller } from './AdminController';
+import { useValidatedFormField } from '../../../../hooks/useValidatedFormField';
 
 export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const { record } = useRecordContext();
     const form = useFormContext();
+    useValidatedFormField(fieldConfig?.default?.[field]?.componentProps?.name);
+
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';

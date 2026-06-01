@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Select from '@mui/material/Select';
@@ -11,11 +11,14 @@ import FormHelperText from '@mui/material/FormHelperText';
 import { ORG_AFFILIATION_TYPES, ORG_TYPE_NOT_SET } from 'config/general';
 import validationLocale from 'locale/validationErrors';
 
+const defaultRow = { grantAgencyName: '', grantId: '', grantAgencyType: '' };
+const defaultRowJson = JSON.stringify(defaultRow);
+
 export const GrantListEditorForm = ({
     disabled,
     grantSelectedToEdit,
     hideType = false,
-    onChange,
+    onDirty,
     locale = {
         grantAgencyNameLabel: 'Funder/Sponsor name',
         grantAgencyNameHint: 'Funder/sponsor name for this work',
@@ -37,9 +40,14 @@ export const GrantListEditorForm = ({
     onAdd,
     required,
 }) => {
-    const [grant, setGrant] = React.useState({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
+    const [grant, setGrant] = React.useState({ ...defaultRow });
+    const isDirty = JSON.stringify(grant) !== defaultRowJson;
 
-    React.useEffect(() => {
+    // propagate isDirty state
+    useEffect(() => onDirty?.(isDirty), [isDirty]);
+
+    // handle row editing
+    useEffect(() => {
         if (!!grantSelectedToEdit) {
             setGrant(grant => ({
                 ...grant,
@@ -49,8 +57,6 @@ export const GrantListEditorForm = ({
             }));
         }
     }, [grantSelectedToEdit]);
-
-    React.useEffect(() => onChange?.(grant), [onChange, grant]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleChange = React.useCallback(event => {
@@ -211,7 +217,7 @@ GrantListEditorForm.propTypes = {
     disabled: PropTypes.bool,
     grantSelectedToEdit: PropTypes.object,
     hideType: PropTypes.bool,
-    onChange: PropTypes.func.isRequired,
+    onDirty: PropTypes.func.isRequired,
     locale: PropTypes.object,
     onAdd: PropTypes.func.isRequired,
     required: PropTypes.bool,
