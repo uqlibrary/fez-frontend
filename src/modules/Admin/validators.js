@@ -5,7 +5,7 @@ import { merge } from 'lodash';
 export const useFormValidator = (formErrors, customErrors) => {
     const errors = useMemo(() => {
         return { errors: merge({}, formErrors, customErrors) };
-    }, [customErrors, formErrors]);
+    }, [JSON.stringify(customErrors), JSON.stringify(formErrors)]);
 
     return errors;
 };

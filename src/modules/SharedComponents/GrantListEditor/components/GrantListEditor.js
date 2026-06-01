@@ -28,18 +28,16 @@ const GrantListEditor = ({
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
     const form = useFormContext();
     const [isFormDirty, setIsFormDirty] = useState(false);
+    const isEditing = !!grantSelectedToEdit;
 
-    // console.log(`form.formState.errors[${name}].message = ${_.get(form.formState.errors, name)?.message}`);
-    // console.log(`state.error = ${state.error}`);
-    // console.log(`grants = ${JSON.stringify(grants)}`);
     // propagate isFormDirty state
     useEffect(() => {
-        if (!isFormDirty) {
+        if (!isFormDirty || isEditing) {
             form?.clearErrors?.(name);
             return;
         }
         form?.setError?.(name, { type: 'validation', message: globalLocale.validationErrors.grants });
-    }, [isFormDirty]);
+    }, [isFormDirty, isEditing]);
 
     // propagate input changes to `grants`
     useEffect(() => {
