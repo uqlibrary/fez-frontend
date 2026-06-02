@@ -6,7 +6,7 @@ import { pathConfig } from 'config/pathConfig';
 import { Link } from 'react-router';
 import { useTheme } from '@mui/material/styles';
 import { getOneToManyRelationItemByOrder } from 'helpers/record';
-import { getOrcidURL } from 'helpers/general';
+import { IdentifierIconLink } from '../../../../IdentifierIconLink';
 
 const classes = {
     authorIdLink: theme => ({
@@ -55,19 +55,6 @@ export const AuthorsCitationView = ({
                   })
                 : [],
     });
-
-    const renderOrcidLink = author =>
-        author?.orcid && (
-            <a
-                data-testid={`authors-cistation-view-orcid-link-${author.id}`}
-                title={locale.components.publicationCitation.citationAuthors.orcidLinkLabel(author.value)}
-                href={getOrcidURL(author.orcid)}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <span className={`fez-icon orcid large`} style={{ marginLeft: '0.3em', verticalAlign: 'top' }} />
-            </a>
-        );
 
     const renderAuthors = React.useCallback(() => {
         const _maxAuthorDisplayNumber = !!maxAuthorDisplayNumber
@@ -134,7 +121,7 @@ export const AuthorsCitationView = ({
                         >
                             {element}
                         </Link>
-                        {renderOrcidLink(author)}
+                        {author?.orcid && <IdentifierIconLink id={author.orcid} type="orcid" iconOnly />}
                     </>
                 );
             }
