@@ -3,7 +3,6 @@ import { AuthorsCitationView } from './AuthorsCitationView';
 import { pathConfig } from 'config/pathConfig';
 import { rtlRender, WithRouter } from 'test-utils';
 import { getOrcidURL } from 'helpers/general';
-import { locale } from '../../../../../../locale';
 
 function setup(testProps = {}) {
     const props = {
@@ -743,33 +742,21 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         };
-        const { getByTestId, queryByTestId } = setup({ publication, showLink: true });
+        const { getByTestId, container } = setup({ publication, showLink: true });
 
         // 1st author's orcid link
-        expect(getByTestId('authors-cistation-view-orcid-link-1')).toHaveAttribute('target', '_blank');
-        expect(getByTestId('authors-cistation-view-orcid-link-1')).toHaveAttribute(
+        expect(getByTestId('identifier-icon-link-0000_1111_1111_1111')).toHaveAttribute('target', '_blank');
+        expect(getByTestId('identifier-icon-link-0000_1111_1111_1111')).toHaveAttribute(
             'href',
             getOrcidURL(publication.fez_record_search_key_author_id[0].author.aut_orcid_id),
         );
-        expect(getByTestId('authors-cistation-view-orcid-link-1')).toHaveAttribute(
-            'title',
-            locale.components.publicationCitation.citationAuthors.orcidLinkLabel(
-                publication.fez_record_search_key_author[1].rek_author,
-            ),
-        );
         // 2nd author's orcid missing link
-        expect(queryByTestId('authors-cistation-view-orcid-link-2')).not.toBeInTheDocument();
+        expect(container.querySelectorAll('a[target="_blank"]')).toHaveLength(2);
         // 3rd author's orcid link
-        expect(getByTestId('authors-cistation-view-orcid-link-3')).toHaveAttribute('target', '_blank');
-        expect(getByTestId('authors-cistation-view-orcid-link-3')).toHaveAttribute(
+        expect(getByTestId('identifier-icon-link-0000_3333_3333_3333')).toHaveAttribute('target', '_blank');
+        expect(getByTestId('identifier-icon-link-0000_3333_3333_3333')).toHaveAttribute(
             'href',
             getOrcidURL(publication.fez_record_search_key_author_id[2].author.aut_orcid_id),
-        );
-        expect(getByTestId('authors-cistation-view-orcid-link-3')).toHaveAttribute(
-            'title',
-            locale.components.publicationCitation.citationAuthors.orcidLinkLabel(
-                publication.fez_record_search_key_author[0].rek_author,
-            ),
         );
     });
 });

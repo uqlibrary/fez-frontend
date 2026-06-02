@@ -20,7 +20,6 @@ export const onSubmit = (record, dispatch) => {
     }
 
     updatedRecord._source = API_REQUEST_SOURCE;
-
     return dispatch(actions.updateDoi(updatedRecord)).catch(error => {
         console.log(error);
     });

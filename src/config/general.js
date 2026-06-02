@@ -67,6 +67,8 @@ export const ROR_BASE_URL = 'https://ror.org';
 
 export const RAID_BASE_URL = 'https://raid.org';
 
+export const DOI_BASE_URL = 'https://doi.org';
+
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
 )}v=3.exp&libraries=geometry,drawing,places`;
@@ -165,10 +167,13 @@ export const PUBLICATION_TYPES_WITH_DOI = [
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_WORKING_PAPER,
@@ -248,6 +253,7 @@ export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Other or Citation On
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
 export const SUBTYPE_NON_NTRO = 'Non-NTRO';
 export const SUBTYPE_FULLY_PUBLISHED_PAPER = 'Fully published paper';
+export const SUBTYPE_PUBLISHED_ABSTRACT_PAPER = 'Published abstract';
 export const SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH = 'Research book (original research)';
 export const SUBTYPE_RESEARCH_BOOK_CHAPTER_ORIGINAL_RESEARCH = 'Research book chapter (original research)';
 export const SUBTYPE_CRITICAL_REVIEW = 'Critical review of research, literature review, critical commentary';
@@ -444,7 +450,13 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
         hasFormComponent: true,
-        subtypes: ['Fully published paper', 'Published abstract', 'Poster', 'Oral presentation', 'Other'],
+        subtypes: [
+            SUBTYPE_FULLY_PUBLISHED_PAPER,
+            SUBTYPE_PUBLISHED_ABSTRACT_PAPER,
+            'Poster',
+            'Oral presentation',
+            'Other',
+        ],
     },
     [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
@@ -1823,6 +1835,13 @@ export const DOI_CROSSREF_NAME = 'Crossref';
 export const DOI_CROSSREF_PREFIX = '10.14264';
 export const DOI_DATACITE_NAME = 'DataCite';
 export const DOI_DATACITE_PREFIX = IS_PRODUCTION ? '10.48610' : '10.23643';
+export const DOI_DATACITE_TYPES = [
+    PUBLICATION_TYPE_CREATIVE_WORK,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_DESIGN,
+    PUBLICATION_TYPE_INSTRUMENT,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+];
 
 export const PLACEHOLDER_ISO8601_ZULU_DATE = '1000-01-01T00:00:00Z';
 export const PLACEHOLDER_ISO8601_DATE = '1000-01-01 00:00:00';

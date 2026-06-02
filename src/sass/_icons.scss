@@ -29,6 +29,14 @@
   &.orcid::before {
     content: url(~/src/images/orcid_icon.svg);
   }
+
+  &.ror::before {
+    content: url(~/src/images/ror_icon.svg);
+  }
+
+  &.doi::before {
+    content: url(~/src/images/doi_icon.svg);
+  }
   &.altmetric::before {
     content: url(~/src/images/altmetric_icon.svg);
   }

@@ -243,7 +243,7 @@ describe('Additional Information Component ', () => {
             },
         });
 
-        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+        expect(getByTestId('identifier-icon-link-0000_0000_0000_0001')).toHaveTextContent(id);
     });
 
     it('should render component with ror owner identifier', () => {
@@ -254,7 +254,7 @@ describe('Additional Information Component ', () => {
                 fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
             },
         });
-        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+        expect(getByTestId('identifier-icon-link-02_mhbdp_94')).toHaveTextContent(id);
     });
 
     it('should render component with unrecognised owner identifier', () => {
@@ -267,6 +267,31 @@ describe('Additional Information Component ', () => {
         });
 
         expect(getByText(id)).toBeInTheDocument();
+    });
+
+    it('should render component with related service ror', () => {
+        const id = '02mhbdp94';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_related_service: [{ rek_related_service: id }],
+            },
+        });
+        expect(getByTestId('identifier-icon-link-02_mhbdp_94')).toHaveTextContent(id);
+    });
+
+    it('should render component with related service doi', () => {
+        const id = '10.1234/test';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_related_service: [{ rek_related_service: id }],
+                fez_record_search_key_related_service_description: [
+                    { rek_related_service_description: 'related service desc' },
+                ],
+            },
+        });
+        expect(getByTestId('identifier-icon-link-10_1234_test')).toHaveTextContent(id);
     });
 
     it('should render component with generic document', () => {
