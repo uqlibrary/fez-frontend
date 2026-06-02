@@ -26,9 +26,9 @@ const GrantListEditor = ({
     const [grants, setGrants] = useState([]);
     const [grantSelectedToEdit, setGrantSelectedToEdit] = useState(null);
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
-    const form = useFormContext();
     const [isFormDirty, setIsFormDirty] = useState(false);
     const isEditing = !!grantSelectedToEdit;
+    const form = useFormContext();
 
     // propagate isFormDirty state
     useEffect(() => {

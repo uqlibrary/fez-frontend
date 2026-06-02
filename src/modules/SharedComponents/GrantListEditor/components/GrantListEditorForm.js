@@ -80,7 +80,7 @@ export const GrantListEditorForm = ({
 
         // pass on the selected grant
         onAdd(grant);
-        setGrant({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
+        setGrant(defaultRow);
     };
 
     const {

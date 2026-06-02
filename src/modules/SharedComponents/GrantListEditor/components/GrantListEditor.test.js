@@ -1,6 +1,6 @@
 import React from 'react';
 import GrantListEditor from './GrantListEditor';
-import { rtlRender, fireEvent, within, withFakeTimers } from 'test-utils';
+import { rtlRender, fireEvent, within } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
 import { locale } from '../../../../locale';
 
@@ -322,15 +322,13 @@ describe('GrantListEditor', () => {
         const mockOnChange = jest.fn();
         const mockSetError = jest.fn();
         jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setError: mockSetError });
-        const inputName = 'my-input';
 
-        await withFakeTimers(async () => {
-            const { getByRole } = setup({
-                onChange: mockOnChange,
-                name: inputName,
-            });
-            fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
+        const inputName = 'my-input';
+        const { getByRole } = setup({
+            onChange: mockOnChange,
+            name: inputName,
         });
+        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
 
         expect(mockOnChange).not.toHaveBeenCalledWith(true);
         expect(mockOnChange).not.toHaveBeenCalledWith([]);

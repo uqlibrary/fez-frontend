@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import RelatedServiceListEditorHeader from './RelatedServiceListEditorHeader';
 import RelatedServiceListEditorRow from './RelatedServiceListEditorRow';
 import RelatedServiceListEditorForm from './RelatedServiceListEditorForm';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
+import { locale as globalLocale } from '../../../../locale';
 
 const getRelatedServicesFromProps = (name, value) => (name && value) || [];
 
@@ -25,16 +25,18 @@ const RelatedServiceListEditor = ({
     const [relatedServices, setRelatedServices] = useState([]);
     const [relatedServiceSelectedToEdit, setRelatedServiceSelectedToEdit] = useState(null);
     const [relatedServiceIndexSelectedToEdit, setRelatedServiceIndexSelectedToEdit] = useState(null);
-    const [errorMessage, setErrorMessage] = useState('');
-    const [relatedServiceFormPopulated, setRelatedServiceFormPopulated] = useState(false);
+    const [isFormDirty, setIsFormDirty] = useState(false);
+    const isEditing = !!relatedServiceSelectedToEdit;
     const form = useFormContext();
 
-    const handleRelatedServicesChange = useCallback(
-        list => {
-            form?.setValue?.(name, list, { shouldValidate: true });
-        },
-        [form, name],
-    );
+    // propagate isFormDirty state
+    useEffect(() => {
+        if (!isFormDirty || isEditing) {
+            form?.clearErrors?.(name);
+            return;
+        }
+        form?.setError?.(name, { type: 'validation', message: globalLocale.validationErrors.relatedServices });
+    }, [isFormDirty, isEditing]);
 
     // propagate input changes to `related services`
     useEffect(() => {
@@ -48,12 +50,12 @@ const RelatedServiceListEditor = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(relatedServices), value, hasPropagatedInputValueChanges.current]);
 
-    // propagate `relatedServiceFormPopulated` changes to input
-    useEffect(() => {
-        if (!relatedServiceFormPopulated) return;
-        form?.setValue?.(name, relatedServiceFormPopulated, { shouldValidate: true });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [relatedServiceFormPopulated]);
+    const handleRelatedServicesChange = useCallback(
+        list => {
+            form?.setValue?.(name, list, { shouldValidate: true });
+        },
+        [form, name],
+    );
 
     const addRelatedService = useCallback(
         relatedService => {
@@ -69,7 +71,6 @@ const RelatedServiceListEditor = ({
             handleRelatedServicesChange(newList);
             setRelatedServiceIndexSelectedToEdit(null);
             setRelatedServiceSelectedToEdit(null);
-            setErrorMessage('');
         },
         [relatedServiceIndexSelectedToEdit, relatedServices, handleRelatedServicesChange],
     );
@@ -128,12 +129,7 @@ const RelatedServiceListEditor = ({
     const deleteAllRelatedServices = useCallback(() => {
         setRelatedServices([]);
         handleRelatedServicesChange([]);
-        setErrorMessage('');
     }, [handleRelatedServicesChange]);
-
-    const isFormPopulated = useCallback(value => {
-        setRelatedServiceFormPopulated(!!value);
-    }, []);
 
     const renderRelatedServicesRows = relatedServices?.map?.((relatedService, index) => (
         <RelatedServiceListEditorRow
@@ -151,30 +147,11 @@ const RelatedServiceListEditor = ({
         />
     ));
 
-    let error = null;
-    if (state?.error) {
-        error =
-            !!state.error.props &&
-            React.Children.map(state.error.props.children, (child, index) => {
-                if (child.type) {
-                    return React.cloneElement(child, { key: index });
-                }
-                return child;
-            });
-    }
-
     return (
         <div>
-            {errorMessage && (
-                /* istanbul ignore next */ <Alert
-                    title={this.props.locale.errorTitle}
-                    message={errorMessage}
-                    type="warning"
-                />
-            )}
             <RelatedServiceListEditorForm
                 onAdd={addRelatedService}
-                isPopulated={isFormPopulated}
+                onDirty={setIsFormDirty}
                 required={required}
                 disabled={disabled}
                 {...(locale?.form || {})}
@@ -209,9 +186,13 @@ const RelatedServiceListEditor = ({
                 </Grid>
             )}
             {state?.error && (
-                <Typography color="error" variant="caption">
-                    {error || state.error}
-                </Typography>
+                <Grid container sx={{ mt: 2 }}>
+                    <Grid item xs={12}>
+                        <Typography color="error" variant="caption">
+                            {state.error}
+                        </Typography>
+                    </Grid>
+                </Grid>
             )}
         </div>
     );

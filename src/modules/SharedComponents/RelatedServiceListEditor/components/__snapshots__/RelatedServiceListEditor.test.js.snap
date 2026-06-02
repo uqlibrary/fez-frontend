@@ -6430,11 +6430,21 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
         </button>
       </div>
     </div>
-    <span
-      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-container css-11cp5kt-MuiGridLegacy-root"
     >
-      Some error
-    </span>
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+        >
+          <span>
+            Some error
+          </span>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -6555,16 +6565,26 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
         </button>
       </div>
     </div>
-    <span
-      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-container css-11cp5kt-MuiGridLegacy-root"
     >
-      <span>
-        Test error 1
-      </span>
-      <span>
-        Test error 2
-      </span>
-    </span>
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+        >
+          <p>
+            <span>
+              Test error 1
+            </span>
+            <span>
+              Test error 2
+            </span>
+          </p>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -7550,11 +7570,19 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
         </button>
       </div>
     </div>
-    <span
-      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+    <div
+      class="MuiGridLegacy-root MuiGridLegacy-container css-11cp5kt-MuiGridLegacy-root"
     >
-      Test error
-    </span>
+      <div
+        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+        >
+          Test error
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 `;

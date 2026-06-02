@@ -52,27 +52,28 @@ describe('RelatedServiceListEditorForm', () => {
     });
 
     it('should add related service and pass isPopulated info', () => {
-        const onAddFn = jest.fn();
-        const isPopulated = jest.fn();
+        const onAdd = jest.fn();
+        const onDirty = jest.fn();
         const { getByTestId } = setup({
-            onAdd: onAddFn,
-            isPopulated: isPopulated,
+            onAdd,
+            onDirty,
         });
 
+        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '1' } });
+        expect(onDirty).toHaveBeenLastCalledWith(true);
+        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '' } });
+        expect(onDirty).toHaveBeenLastCalledWith(false);
         fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '123' } });
+        expect(onDirty).toHaveBeenLastCalledWith(true);
         fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'desc' } });
-
-        expect(isPopulated).toHaveBeenCalledTimes(2);
-        expect(isPopulated).toHaveBeenCalledWith(true);
 
         fireEvent.click(getByTestId('rek-related-service-add'));
 
-        expect(onAddFn).toHaveBeenCalledWith({
+        expect(onDirty).toHaveBeenLastCalledWith(false);
+        expect(onAdd).toHaveBeenCalledWith({
             relatedServiceId: '123',
             relatedServiceDesc: 'desc',
         });
-
-        expect(isPopulated).toHaveBeenCalledWith(false);
     });
 
     it('should add related service when Enter key is pressed on desc field', () => {

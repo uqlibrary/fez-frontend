@@ -2,6 +2,7 @@ import React from 'react';
 import RelatedServiceListEditor from './RelatedServiceListEditor';
 import { render, fireEvent, within, WithReduxStore } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
+import { locale } from '../../../../locale';
 
 const mockSetValue = jest.fn();
 function setup(testProps = {}, renderer = render) {
@@ -286,8 +287,8 @@ describe('RelatedServiceListEditor', () => {
 
     it('should call setValue on state change', () => {
         const mockOnChange = jest.fn();
-        const mockSetValue = jest.fn();
-        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setValue: mockSetValue });
+        const mockSetError = jest.fn();
+        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setError: mockSetError });
 
         const inputName = 'my-input';
         const { getByRole } = setup({
@@ -298,7 +299,9 @@ describe('RelatedServiceListEditor', () => {
         fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: 'Test{enter}' } });
         expect(mockOnChange).not.toHaveBeenCalledWith(true);
         expect(mockOnChange).not.toHaveBeenCalledWith([]);
-        expect(mockSetValue).toHaveBeenCalledWith(inputName, true, { shouldValidate: true });
-        // expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
+        expect(mockSetError).toHaveBeenCalledWith(inputName, {
+            type: 'validation',
+            message: locale.validationErrors.relatedServices,
+        });
     });
 });
