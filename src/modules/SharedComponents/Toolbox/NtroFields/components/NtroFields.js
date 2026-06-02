@@ -45,29 +45,31 @@ const getWidth = fields => {
     return (numberOfFieldsToDisplay > 0 && 12 / numberOfFieldsToDisplay) || 12;
 };
 
-const NtroFields = ({
-    control = /* istanbul ignore next */ {},
-    canEdit = false,
-    isSubmitting,
-    locale = defaultLocale,
-    hideIsmn = false,
-    hideIsrc = false,
-    hideVolume = /* istanbul ignore next */ false,
-    hideIssue = false,
-    hideStartPage = true,
-    hideEndPage = true,
-    hideExtent = false,
-    hideOriginalFormat = false,
-    hideAudienceSize = /* istanbul ignore next */ false,
-    hidePeerReviewActivity = false,
-    hideSeries = false,
-    hideGrants = false,
-    hideLanguage = false,
-    showContributionStatement = false,
-    showSignificance = false,
-    hideAbstract = false,
-    disableDeleteAllGrants = false,
-}) => {
+const NtroFields = props => {
+    /* istanbul ignore next */
+    const {
+        control = {},
+        canEdit = false,
+        isSubmitting,
+        locale = defaultLocale,
+        hideIsmn = false,
+        hideIsrc = false,
+        hideVolume = false,
+        hideIssue = false,
+        hideStartPage = true,
+        hideEndPage = true,
+        hideExtent = false,
+        hideOriginalFormat = false,
+        hideAudienceSize = false,
+        hidePeerReviewActivity = false,
+        hideSeries = false,
+        hideGrants = false,
+        hideLanguage = false,
+        showContributionStatement = false,
+        showSignificance = false,
+        hideAbstract = false,
+        disableDeleteAllGrants = false,
+    } = props;
     const row3Width = useMemo(
         () => getWidth([hideVolume, hideIssue, hideStartPage, hideEndPage]),
         [hideVolume, hideIssue, hideStartPage, hideEndPage],
