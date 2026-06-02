@@ -5,8 +5,9 @@ import { useFormContext } from 'react-hook-form';
  * @param {string} fieldPath. .e.g. 'grants', 'bibliographicSection.rek_title'
  */
 export const useValidatedFormField = (fieldPath: string) => {
-    const { trigger, getFieldState } = useFormContext();
-    const hasError = !!getFieldState(fieldPath)?.error?.message?.trim?.();
+    const { trigger, getFieldState, formState } = useFormContext();
+    // https://react-hook-form.com/docs/useform/getfieldstate
+    const hasError = !!getFieldState(fieldPath, formState)?.error?.message?.trim?.();
 
     useEffect(() => {
         // bail if there is already an error
@@ -15,4 +16,6 @@ export const useValidatedFormField = (fieldPath: string) => {
         // otherwise, invoke validation
         (async () => await trigger(fieldPath))();
     }, [trigger, hasError]);
+
+    return { hasError };
 };
