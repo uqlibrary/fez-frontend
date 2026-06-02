@@ -411,6 +411,45 @@ describe('Additional Information Component ', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should not render empty rights', () => {
+        initialize();
+        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_rights: { rek_rights: '' },
+            },
+        });
+        expect(queryByTestId('rek-rights-label')).not.toBeInTheDocument();
+        expect(queryByTestId('rek-rights')).not.toBeInTheDocument();
+    });
+
+    it('should not render null rights', () => {
+        initialize();
+        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_rights: { rek_rights: null },
+            },
+        });
+        expect(queryByTestId('rek-rights-label')).not.toBeInTheDocument();
+        expect(queryByTestId('rek-rights')).not.toBeInTheDocument();
+    });
+
+    it('should not render empty keyword', () => {
+        initialize();
+        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_keywords: [{ rek_keywords: '', rek_keywords_order: 1 }],
+            },
+        });
+        expect(queryByTestId('rek-keywords-label')).not.toBeInTheDocument();
+        expect(queryByTestId('rek-keywords')).not.toBeInTheDocument();
+    });
+
     it('renderLicense()', () => {
         const publication = {
             rek_date: PLACEHOLDER_ISO8601_ZULU_DATE,
