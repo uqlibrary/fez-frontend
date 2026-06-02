@@ -20,6 +20,8 @@ import {
     sortByNumericField,
     isURL,
     getOrcidURL,
+    getRorURL,
+    getDoiURL,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
@@ -617,5 +619,15 @@ describe('general helpers', () => {
     it('getOrcidURL', () => {
         expect(getOrcidURL()).toEqual('');
         expect(getOrcidURL('0000-11111-2222-3333')).toEqual('https://orcid.org/0000-11111-2222-3333');
+    });
+
+    it('getRorURL', () => {
+        expect(getRorURL()).toEqual('');
+        expect(getRorURL('02mhbdp94')).toEqual('https://ror.org/02mhbdp94');
+    });
+
+    it('getDoiURL', () => {
+        expect(getDoiURL()).toEqual('');
+        expect(getDoiURL('10.000/abc-def.10')).toEqual('https://doi.org/10.000/abc-def.10');
     });
 });

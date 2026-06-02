@@ -194,8 +194,6 @@ export default {
         },
         doiCitationLink: {
             ariaLabel: 'Open this DOI in an new window',
-            prefix: 'https://doi.org/',
-            externalUrl: 'https://doi.org/[id]',
         },
         pubmedCentralLink: {
             ariaLabel: 'Full text via Pubmed Central (open access)',

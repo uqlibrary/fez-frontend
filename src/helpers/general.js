@@ -1,6 +1,6 @@
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
-import { ORCID_BASE_URL } from '../config/general';
+import { DOI_BASE_URL, ORCID_BASE_URL, ROR_BASE_URL } from '../config/general';
 
 /* istanbul ignore next */
 global.dd = console.dir.bind(console);
@@ -14,6 +14,11 @@ global.dr = arg => {
 /* istanbul ignore next */
 global.dj = console.log.bind(console, '%O');
 
+/**
+ * @param {function} callback
+ * @param {*} _default
+ * @return {undefined|*}
+ */
 export const silentTryCatch = (callback, _default = undefined) => {
     try {
         return callback();
@@ -589,3 +594,15 @@ export const isURL = value => silentTryCatch(() => !!String(new URL(value).proto
  * @return {string}
  */
 export const getOrcidURL = id => (id?.trim?.() && `${ORCID_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getRorURL = id => (id?.trim?.() && `${ROR_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) || '';
