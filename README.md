@@ -490,7 +490,7 @@ We use [Playwright](https://playwright.dev/docs/writing-tests) for our E2E testi
 To run tests, simply use `npm run test:e2e`.
 
 To run all tests, including unit tests, use `npm run test:all`.\
-Then, to generate a combined code coverage report, use `npm run cc:reportAll`.\
+Then, to generate a combined code coverage report, use `npm run cc:merge:local`.\
 This workflow is useful for confidently pushing changes upstream.
 
 #### Parallelism

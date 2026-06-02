@@ -24,10 +24,3 @@ mkdir all temp
 cp "$PLAYWRIGHT_REPORT" all/playwright.json
 cp "$JEST_REPORT" all/jest.json
 cp "$JEST_SERIAL_REPORT" all/jest-serial.json
-
-# Combine reports into single json file
-npm run cc:merge:all
-
-# Report
-cd ..
-npm run cc:report:html
