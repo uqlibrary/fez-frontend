@@ -26,8 +26,8 @@ cp "$JEST_REPORT" all/jest.json
 cp "$JEST_SERIAL_REPORT" all/jest-serial.json
 
 # Combine reports into single json file
-npx nyc merge all temp/combined.json
+npm run cc:merge:all
 
 # Report
 cd ..
-npx nyc report --reporter html --reporter text --reporter text-summary --report-dir coverage
+npm run cc:report:html
