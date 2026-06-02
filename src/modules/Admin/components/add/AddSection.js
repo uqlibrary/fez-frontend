@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { ValidatedField } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import { useNavigate } from 'react-router';
 import { useFormContext } from 'react-hook-form';
@@ -78,7 +78,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                         <StandardCard title={locale.pages.adminAdd.step1} help={locale.pages.adminAdd.help}>
                             <Grid container spacing={3}>
                                 <Grid item xs={12}>
-                                    <Field
+                                    <ValidatedField
                                         name="adminSection.collections"
                                         collectionFieldId="rek-ismemberof"
                                         control={form.control}
@@ -101,7 +101,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Field
+                                    <ValidatedField
                                         name="rek_display_type"
                                         selectFieldId="rek-display-type"
                                         control={form.control}
@@ -120,12 +120,12 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                             : {})}
                                     >
                                         {publicationTypeItems}
-                                    </Field>
+                                    </ValidatedField>
                                 </Grid>
                                 <Grid item xs={12}>
                                     {(hasSubtypes || hasDefaultDocTypeSubType) && (
                                         <Grid item xs={12}>
-                                            <Field
+                                            <ValidatedField
                                                 id="rek-subtype"
                                                 name="adminSection.rek_subtype"
                                                 selectFieldId="rek-subtype"
@@ -146,7 +146,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                                     : {})}
                                             >
                                                 {publicationSubtypeItems}
-                                            </Field>
+                                            </ValidatedField>
                                         </Grid>
                                     )}
                                 </Grid>
