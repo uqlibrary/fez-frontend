@@ -1,6 +1,6 @@
 import React from 'react';
 import NtroFields, { normalizeIsrc, transformIsmn, transformIsrc } from './NtroFields';
-import { render, WithReduxStore } from 'test-utils';
+import { FormProviderWrapper, render, WithReduxStore } from 'test-utils';
 import { useForm } from 'react-hook-form';
 
 const ControlledFieldWithReduxStore = props => {
@@ -11,7 +11,9 @@ const ControlledFieldWithReduxStore = props => {
 
     return (
         <WithReduxStore>
-            <NtroFields {...{ control, isSubmitting, ...props }} />
+            <FormProviderWrapper>
+                <NtroFields {...{ control, isSubmitting, ...props }} />
+            </FormProviderWrapper>
         </WithReduxStore>
     );
 };
@@ -49,7 +51,7 @@ describe('Component NtroFields', () => {
     });
 
     it('should render all fields as disabled', () => {
-        const { container } = setup({ showContributionStatement: true, isSubmitting: true });
+        const { container } = setup({ showContributionStatement: true, isSubmitting: true, legacyCompatible: true });
         expect(container).toMatchSnapshot();
     });
 

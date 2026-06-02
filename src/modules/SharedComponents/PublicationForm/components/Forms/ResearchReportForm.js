@@ -216,6 +216,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                         hideExtent={!isNtro}
                         hideOriginalFormat
                         hideAudienceSize
+                        legacyCompatible
                     />
                 )}
                 <Grid item xs={12}>

@@ -69,6 +69,7 @@ const NtroFields = props => {
         showSignificance = false,
         hideAbstract = false,
         disableDeleteAllGrants = false,
+        legacyCompatible = false,
     } = props;
     const row3Width = useMemo(
         () => getWidth([hideVolume, hideIssue, hideStartPage, hideEndPage]),
@@ -85,9 +86,9 @@ const NtroFields = props => {
     const { contributionStatement, metadata, grantEditor } = locale;
 
     return (
-        <Grid size={12} sx={{ ml: 3 }}>
+        <Grid size={12}>
             {(showContributionStatement || showSignificance) && (
-                <Grid size={12} sx={{ mt: 3 }}>
+                <Grid size={12}>
                     <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
                         <Grid container spacing={1}>
                             {(showContributionStatement || showSignificance) && (
@@ -145,7 +146,7 @@ const NtroFields = props => {
                 !hideSeries ||
                 !hideIsrc ||
                 !hideIsmn) && (
-                <Grid size={12} sx={{ mt: 3 }}>
+                <Grid size={12}>
                     <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
                         <Grid container spacing={2}>
                             <Grid size={12}>
@@ -355,7 +356,13 @@ const NtroFields = props => {
                 </Grid>
             )}
             {!hideGrants && (
-                <Grid size={12} sx={{ mt: 3 }}>
+                <Grid
+                    size={12}
+                    {
+                        // todo remove upon refactoring parent comps to use new grid system
+                        ...((legacyCompatible && { sx: { mt: 3 } }) || {})
+                    }
+                >
                     <StandardCard title={grantEditor.title}>
                         <Field
                             control={control}
@@ -394,6 +401,8 @@ NtroFields.propTypes = {
     showSignificance: PropTypes.bool,
     hideAbstract: PropTypes.bool,
     disableDeleteAllGrants: PropTypes.bool,
+    // todo remove upon refactoring parent comps to use new grid system
+    legacyCompatible: PropTypes.bool,
 };
 
 export default NtroFields;
