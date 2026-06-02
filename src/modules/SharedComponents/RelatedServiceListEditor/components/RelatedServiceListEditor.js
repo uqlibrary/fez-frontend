@@ -20,6 +20,7 @@ const RelatedServiceListEditor = ({
     value,
     required,
     disableDeleteAllRelatedServices = false,
+    ignoreFormDirtyStateChanges = true,
 }) => {
     const hasPropagatedInputValueChanges = useRef(null);
     const [relatedServices, setRelatedServices] = useState([]);
@@ -50,7 +51,7 @@ const RelatedServiceListEditor = ({
 
     // propagate `relatedServiceFormPopulated` changes to input
     useEffect(() => {
-        if (!relatedServiceFormPopulated) return;
+        if (!ignoreFormDirtyStateChanges || !relatedServiceFormPopulated) return;
         form?.setValue?.(name, relatedServiceFormPopulated, { shouldValidate: true });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [relatedServiceFormPopulated]);
@@ -226,6 +227,7 @@ RelatedServiceListEditor.propTypes = {
     value: PropTypes.any,
     required: PropTypes.bool,
     disableDeleteAllRelatedServices: PropTypes.bool,
+    ignoreFormDirtyStateChanges: PropTypes.bool,
 };
 
 export default React.memo(RelatedServiceListEditor);

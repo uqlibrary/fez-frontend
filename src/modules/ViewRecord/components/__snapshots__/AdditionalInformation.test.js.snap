@@ -434,6 +434,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -847,6 +848,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -857,6 +859,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -867,6 +870,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -907,6 +911,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -917,6 +922,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -927,6 +933,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -937,6 +944,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -947,6 +955,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -957,6 +966,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -967,6 +977,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -1335,6 +1346,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -1419,6 +1431,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                 >
                   <li
                     data-testid="rek-alternate-genre-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -1459,6 +1472,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -1469,6 +1483,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -1479,6 +1494,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2012,6 +2028,7 @@ exports[`Additional Information Component  should render component with Attribut
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -2524,6 +2541,7 @@ exports[`Additional Information Component  should render component with Attribut
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2534,6 +2552,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2544,6 +2563,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2584,6 +2604,7 @@ exports[`Additional Information Component  should render component with Attribut
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2594,6 +2615,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2604,6 +2626,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2614,6 +2637,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2624,6 +2648,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2634,6 +2659,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2644,6 +2670,7 @@ exports[`Additional Information Component  should render component with Attribut
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2753,6 +2780,7 @@ exports[`Additional Information Component  should render component with a collec
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2763,6 +2791,7 @@ exports[`Additional Information Component  should render component with a collec
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -2841,6 +2870,7 @@ exports[`Additional Information Component  should render component with a commun
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -3182,6 +3212,7 @@ exports[`Additional Information Component  should render component with audio do
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -3266,6 +3297,7 @@ exports[`Additional Information Component  should render component with audio do
                 >
                   <li
                     data-testid="rek-alternate-genre-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -3306,6 +3338,7 @@ exports[`Additional Information Component  should render component with audio do
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -3316,6 +3349,7 @@ exports[`Additional Information Component  should render component with audio do
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -3326,6 +3360,7 @@ exports[`Additional Information Component  should render component with audio do
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -3902,16 +3937,19 @@ exports[`Additional Information Component  should render component with book 1`]
                 >
                   <li
                     data-testid="rek-isbn-0"
+                    style="margin-top: 2px;"
                   >
                     9780415583008
                   </li>
                   <li
                     data-testid="rek-isbn-1"
+                    style="margin-top: 2px;"
                   >
                     9780415582995
                   </li>
                   <li
                     data-testid="rek-isbn-2"
+                    style="margin-top: 2px;"
                   >
                     0415583004
                   </li>
@@ -4630,6 +4668,7 @@ exports[`Additional Information Component  should render component with book cha
                 >
                   <li
                     data-testid="rek-isbn-0"
+                    style="margin-top: 2px;"
                   >
                     9789401774154
                   </li>
@@ -4665,6 +4704,7 @@ exports[`Additional Information Component  should render component with book cha
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     2214-8019
                   </li>
@@ -4958,6 +4998,7 @@ exports[`Additional Information Component  should render component with book cha
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -4968,6 +5009,7 @@ exports[`Additional Information Component  should render component with book cha
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -5008,6 +5050,7 @@ exports[`Additional Information Component  should render component with book cha
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -5018,6 +5061,7 @@ exports[`Additional Information Component  should render component with book cha
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -5028,6 +5072,7 @@ exports[`Additional Information Component  should render component with book cha
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -5038,6 +5083,7 @@ exports[`Additional Information Component  should render component with book cha
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -5048,6 +5094,7 @@ exports[`Additional Information Component  should render component with book cha
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -5058,6 +5105,7 @@ exports[`Additional Information Component  should render component with book cha
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -5839,11 +5887,13 @@ exports[`Additional Information Component  should render component with conferen
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
                   <li
                     data-testid="rek-issn-1"
+                    style="margin-top: 2px;"
                   >
                     0021-9533
                   </li>
@@ -6034,6 +6084,7 @@ exports[`Additional Information Component  should render component with conferen
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -6479,6 +6530,7 @@ exports[`Additional Information Component  should render component with conferen
                 >
                   <li
                     data-testid="rek-isbn-0"
+                    style="margin-top: 2px;"
                   >
                     9781864999280
                   </li>
@@ -6737,6 +6789,7 @@ exports[`Additional Information Component  should render component with conferen
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -6772,6 +6825,7 @@ exports[`Additional Information Component  should render component with conferen
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6782,6 +6836,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6792,6 +6847,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6802,6 +6858,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-subject-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6842,6 +6899,7 @@ exports[`Additional Information Component  should render component with conferen
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6852,6 +6910,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6862,6 +6921,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6872,6 +6932,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6882,6 +6943,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6892,6 +6954,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6902,6 +6965,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6912,6 +6976,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-7"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6922,6 +6987,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-8"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6932,6 +6998,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-9"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6942,6 +7009,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-10"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -6952,6 +7020,7 @@ exports[`Additional Information Component  should render component with conferen
                   </li>
                   <li
                     data-testid="rek-keywords-11"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -7291,6 +7360,7 @@ exports[`Additional Information Component  should render component with creative
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -7301,6 +7371,7 @@ exports[`Additional Information Component  should render component with creative
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -7341,6 +7412,7 @@ exports[`Additional Information Component  should render component with creative
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -7653,6 +7725,7 @@ exports[`Additional Information Component  should render component with creative
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -7663,6 +7736,7 @@ exports[`Additional Information Component  should render component with creative
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -7703,6 +7777,7 @@ exports[`Additional Information Component  should render component with creative
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -8034,6 +8109,7 @@ exports[`Additional Information Component  should render component with creative
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -8044,6 +8120,7 @@ exports[`Additional Information Component  should render component with creative
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -8084,6 +8161,7 @@ exports[`Additional Information Component  should render component with creative
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -8405,26 +8483,31 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-author-role-0"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-1"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-2"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-3"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-4"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
@@ -8866,6 +8949,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -8876,6 +8960,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -8972,21 +9057,25 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-type-of-data-0"
+                    style="margin-top: 2px;"
                   >
                     Text
                   </li>
                   <li
                     data-testid="rek-type-of-data-1"
+                    style="margin-top: 2px;"
                   >
                     Figures
                   </li>
                   <li
                     data-testid="rek-type-of-data-2"
+                    style="margin-top: 2px;"
                   >
                     Spreadsheets
                   </li>
                   <li
                     data-testid="rek-type-of-data-3"
+                    style="margin-top: 2px;"
                   >
                     Python files
                   </li>
@@ -9022,6 +9111,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-software-required-0"
+                    style="margin-top: 2px;"
                   >
                     CheckM v0.9.4
                   </li>
@@ -9057,6 +9147,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -9216,6 +9307,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -9226,6 +9318,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -9236,6 +9329,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -9246,6 +9340,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -9256,6 +9351,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -9330,6 +9426,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-seo-code-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -9500,13 +9597,15 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-related-service-0"
+                    style="margin-top: 2px;"
                   >
                     related service 1 - related service desc 1
                   </li>
                   <li
                     data-testid="rek-related-service-1"
+                    style="margin-top: 2px;"
                   >
-                    related service 2
+                    related service 2 - null
                   </li>
                 </ul>
               </span>
@@ -9817,6 +9916,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-author-role-0"
+                    style="margin-top: 2px;"
                   >
                     Principal Investigator
                   </li>
@@ -9995,6 +10095,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -10011,6 +10112,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -10027,6 +10129,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -10123,6 +10226,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-type-of-data-0"
+                    style="margin-top: 2px;"
                   >
                     ArcMap shapefile
                   </li>
@@ -10158,6 +10262,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -10255,6 +10360,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -10265,6 +10371,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -10275,6 +10382,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -10285,6 +10393,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -10801,26 +10910,31 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-author-role-0"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-1"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-2"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-3"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-4"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
@@ -11265,6 +11379,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11275,6 +11390,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11371,21 +11487,25 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-type-of-data-0"
+                    style="margin-top: 2px;"
                   >
                     Text
                   </li>
                   <li
                     data-testid="rek-type-of-data-1"
+                    style="margin-top: 2px;"
                   >
                     Figures
                   </li>
                   <li
                     data-testid="rek-type-of-data-2"
+                    style="margin-top: 2px;"
                   >
                     Spreadsheets
                   </li>
                   <li
                     data-testid="rek-type-of-data-3"
+                    style="margin-top: 2px;"
                   >
                     Python files
                   </li>
@@ -11421,6 +11541,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-software-required-0"
+                    style="margin-top: 2px;"
                   >
                     CheckM v0.9.4
                   </li>
@@ -11456,6 +11577,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -11615,6 +11737,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11625,6 +11748,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11635,6 +11759,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11645,6 +11770,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11655,6 +11781,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11729,6 +11856,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-seo-code-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -11899,13 +12027,15 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-related-service-0"
+                    style="margin-top: 2px;"
                   >
                     related service 1 - related service desc 1
                   </li>
                   <li
                     data-testid="rek-related-service-1"
+                    style="margin-top: 2px;"
                   >
-                    related service 2
+                    related service 2 - null
                   </li>
                 </ul>
               </span>
@@ -12220,26 +12350,31 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-author-role-0"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-1"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-2"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-3"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
                   <li
                     data-testid="rek-author-role-4"
+                    style="margin-top: 2px;"
                   >
                     Investigator
                   </li>
@@ -12681,6 +12816,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -12691,6 +12827,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -12787,21 +12924,25 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-type-of-data-0"
+                    style="margin-top: 2px;"
                   >
                     Text
                   </li>
                   <li
                     data-testid="rek-type-of-data-1"
+                    style="margin-top: 2px;"
                   >
                     Figures
                   </li>
                   <li
                     data-testid="rek-type-of-data-2"
+                    style="margin-top: 2px;"
                   >
                     Spreadsheets
                   </li>
                   <li
                     data-testid="rek-type-of-data-3"
+                    style="margin-top: 2px;"
                   >
                     Python files
                   </li>
@@ -12837,6 +12978,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-software-required-0"
+                    style="margin-top: 2px;"
                   >
                     CheckM v0.9.4
                   </li>
@@ -12872,6 +13014,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -13031,6 +13174,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -13041,6 +13185,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -13051,6 +13196,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -13061,6 +13207,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -13071,6 +13218,7 @@ exports[`Additional Information Component  should render component with data col
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -13145,6 +13293,7 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-seo-code-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -13374,13 +13523,15 @@ exports[`Additional Information Component  should render component with data col
                 >
                   <li
                     data-testid="rek-related-service-0"
+                    style="margin-top: 2px;"
                   >
                     related service 1 - related service desc 1
                   </li>
                   <li
                     data-testid="rek-related-service-1"
+                    style="margin-top: 2px;"
                   >
-                    related service 2
+                    related service 2 - null
                   </li>
                 </ul>
               </span>
@@ -13793,6 +13944,7 @@ exports[`Additional Information Component  should render component with design d
                 >
                   <li
                     data-testid="rek-location-0"
+                    style="margin-top: 2px;"
                   >
                     Meshaparks, Riga, Latvia
                   </li>
@@ -13984,6 +14136,7 @@ exports[`Additional Information Component  should render component with design d
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -13994,6 +14147,7 @@ exports[`Additional Information Component  should render component with design d
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14004,6 +14158,7 @@ exports[`Additional Information Component  should render component with design d
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14014,6 +14169,7 @@ exports[`Additional Information Component  should render component with design d
                   </li>
                   <li
                     data-testid="rek-subject-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14054,6 +14210,7 @@ exports[`Additional Information Component  should render component with design d
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14064,6 +14221,7 @@ exports[`Additional Information Component  should render component with design d
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14074,6 +14232,7 @@ exports[`Additional Information Component  should render component with design d
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14084,6 +14243,7 @@ exports[`Additional Information Component  should render component with design d
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14094,6 +14254,7 @@ exports[`Additional Information Component  should render component with design d
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14500,11 +14661,13 @@ exports[`Additional Information Component  should render component with digilib 
                 >
                   <li
                     data-testid="rek-location-0"
+                    style="margin-top: 2px;"
                   >
                     Mount Morgan, Queensland
                   </li>
                   <li
                     data-testid="rek-location-1"
+                    style="margin-top: 2px;"
                   >
                     Australia
                   </li>
@@ -14569,11 +14732,13 @@ exports[`Additional Information Component  should render component with digilib 
                 >
                   <li
                     data-testid="rek-category-0"
+                    style="margin-top: 2px;"
                   >
                     Mines
                   </li>
                   <li
                     data-testid="rek-category-1"
+                    style="margin-top: 2px;"
                   >
                     Machinery
                   </li>
@@ -14609,11 +14774,13 @@ exports[`Additional Information Component  should render component with digilib 
                 >
                   <li
                     data-testid="rek-subcategory-0"
+                    style="margin-top: 2px;"
                   >
                     Mines
                   </li>
                   <li
                     data-testid="rek-subcategory-1"
+                    style="margin-top: 2px;"
                   >
                     Mining equipment
                   </li>
@@ -14649,6 +14816,7 @@ exports[`Additional Information Component  should render component with digilib 
                 >
                   <li
                     data-testid="rek-condition-0"
+                    style="margin-top: 2px;"
                   >
                     Abandoned buildings
                   </li>
@@ -14684,6 +14852,7 @@ exports[`Additional Information Component  should render component with digilib 
                 >
                   <li
                     data-testid="rek-structural-systems-0"
+                    style="margin-top: 2px;"
                   >
                     Timber construction
                   </li>
@@ -14719,11 +14888,13 @@ exports[`Additional Information Component  should render component with digilib 
                 >
                   <li
                     data-testid="rek-building-materials-0"
+                    style="margin-top: 2px;"
                   >
                     Timber
                   </li>
                   <li
                     data-testid="rek-building-materials-1"
+                    style="margin-top: 2px;"
                   >
                     Corrugated iron
                   </li>
@@ -14759,11 +14930,13 @@ exports[`Additional Information Component  should render component with digilib 
                 >
                   <li
                     data-testid="rek-architectural-features-0"
+                    style="margin-top: 2px;"
                   >
                     Two-storey
                   </li>
                   <li
                     data-testid="rek-architectural-features-1"
+                    style="margin-top: 2px;"
                   >
                     Gable roofs
                   </li>
@@ -14899,6 +15072,7 @@ exports[`Additional Information Component  should render component with generic 
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14909,6 +15083,7 @@ exports[`Additional Information Component  should render component with generic 
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14919,6 +15094,7 @@ exports[`Additional Information Component  should render component with generic 
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14929,6 +15105,7 @@ exports[`Additional Information Component  should render component with generic 
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14939,6 +15116,7 @@ exports[`Additional Information Component  should render component with generic 
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14949,6 +15127,7 @@ exports[`Additional Information Component  should render component with generic 
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14959,6 +15138,7 @@ exports[`Additional Information Component  should render component with generic 
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -14969,6 +15149,7 @@ exports[`Additional Information Component  should render component with generic 
                   </li>
                   <li
                     data-testid="rek-keywords-7"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -15044,6 +15225,7 @@ exports[`Additional Information Component  should render component with generic 
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -15631,6 +15813,7 @@ exports[`Additional Information Component  should render component with instrume
                 >
                   <li
                     data-testid="rek-model-0"
+                    style="margin-top: 2px;"
                   >
                     model
                   </li>
@@ -15666,6 +15849,7 @@ exports[`Additional Information Component  should render component with instrume
                 >
                   <li
                     data-testid="rek-measured-variable-0"
+                    style="margin-top: 2px;"
                   >
                     variable
                   </li>
@@ -15701,6 +15885,7 @@ exports[`Additional Information Component  should render component with instrume
                 >
                   <li
                     data-testid="rek-instrument-type-0"
+                    style="margin-top: 2px;"
                   >
                     instrument type
                   </li>
@@ -16020,11 +16205,13 @@ exports[`Additional Information Component  should render component with journal 
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     0025-181X
                   </li>
                   <li
                     data-testid="rek-issn-1"
+                    style="margin-top: 2px;"
                   >
                     0938-8249
                   </li>
@@ -16153,6 +16340,7 @@ exports[`Additional Information Component  should render component with journal 
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -16188,6 +16376,7 @@ exports[`Additional Information Component  should render component with journal 
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -16228,6 +16417,7 @@ exports[`Additional Information Component  should render component with journal 
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -16238,6 +16428,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -16742,6 +16933,7 @@ exports[`Additional Information Component  should render component with journal 
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -17211,6 +17403,7 @@ exports[`Additional Information Component  should render component with journal 
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17221,6 +17414,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17231,6 +17425,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17271,6 +17466,7 @@ exports[`Additional Information Component  should render component with journal 
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17281,6 +17477,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17291,6 +17488,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17301,6 +17499,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17311,6 +17510,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17321,6 +17521,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17331,6 +17532,7 @@ exports[`Additional Information Component  should render component with journal 
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17765,6 +17967,7 @@ exports[`Additional Information Component  should render component with manuscri
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -17831,6 +18034,7 @@ exports[`Additional Information Component  should render component with manuscri
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17841,6 +18045,7 @@ exports[`Additional Information Component  should render component with manuscri
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17851,6 +18056,7 @@ exports[`Additional Information Component  should render component with manuscri
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17861,6 +18067,7 @@ exports[`Additional Information Component  should render component with manuscri
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -17871,6 +18078,7 @@ exports[`Additional Information Component  should render component with manuscri
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18357,11 +18565,13 @@ exports[`Additional Information Component  should render component with newspape
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
                   <li
                     data-testid="rek-language-1"
+                    style="margin-top: 2px;"
                   >
                     chi
                   </li>
@@ -18397,6 +18607,7 @@ exports[`Additional Information Component  should render component with newspape
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18407,6 +18618,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18447,6 +18659,7 @@ exports[`Additional Information Component  should render component with newspape
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18457,6 +18670,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18467,6 +18681,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18477,6 +18692,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18487,6 +18703,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18497,6 +18714,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18507,6 +18725,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18517,6 +18736,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-7"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18527,6 +18747,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-8"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -18537,6 +18758,7 @@ exports[`Additional Information Component  should render component with newspape
                   </li>
                   <li
                     data-testid="rek-keywords-9"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19051,6 +19273,7 @@ exports[`Additional Information Component  should render component with patent 1
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -19086,6 +19309,7 @@ exports[`Additional Information Component  should render component with patent 1
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19096,6 +19320,7 @@ exports[`Additional Information Component  should render component with patent 1
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19106,6 +19331,7 @@ exports[`Additional Information Component  should render component with patent 1
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19372,6 +19598,7 @@ exports[`Additional Information Component  should render component with preprint
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19382,6 +19609,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19392,6 +19620,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19402,6 +19631,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19412,6 +19642,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19422,6 +19653,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19432,6 +19664,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19442,6 +19675,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-7"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19452,6 +19686,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-8"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19462,6 +19697,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-9"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19472,6 +19708,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-10"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19547,6 +19784,7 @@ exports[`Additional Information Component  should render component with preprint
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19557,6 +19795,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19567,6 +19806,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19711,6 +19951,7 @@ exports[`Additional Information Component  should render component with preprint
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19721,6 +19962,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19731,6 +19973,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19741,6 +19984,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19751,6 +19995,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19761,6 +20006,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19771,6 +20017,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19781,6 +20028,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-7"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19791,6 +20039,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-8"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19801,6 +20050,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-9"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -19811,6 +20061,7 @@ exports[`Additional Information Component  should render component with preprint
                   </li>
                   <li
                     data-testid="rek-keywords-10"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -20409,11 +20660,13 @@ exports[`Additional Information Component  should render component with proceedi
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     0041-0101
                   </li>
                   <li
                     data-testid="rek-issn-1"
+                    style="margin-top: 2px;"
                   >
                     1879-3150
                   </li>
@@ -20604,6 +20857,7 @@ exports[`Additional Information Component  should render component with proceedi
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -20639,6 +20893,7 @@ exports[`Additional Information Component  should render component with proceedi
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -20649,6 +20904,7 @@ exports[`Additional Information Component  should render component with proceedi
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -20659,6 +20915,7 @@ exports[`Additional Information Component  should render component with proceedi
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21000,11 +21257,13 @@ exports[`Additional Information Component  should render component with referenc
                 >
                   <li
                     data-testid="rek-isbn-0"
+                    style="margin-top: 2px;"
                   >
                     0415143446
                   </li>
                   <li
                     data-testid="rek-isbn-1"
+                    style="margin-top: 2px;"
                   >
                     978-0-415-14344-8
                   </li>
@@ -21133,6 +21392,7 @@ exports[`Additional Information Component  should render component with referenc
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -21168,6 +21428,7 @@ exports[`Additional Information Component  should render component with referenc
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21178,6 +21439,7 @@ exports[`Additional Information Component  should render component with referenc
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21188,6 +21450,7 @@ exports[`Additional Information Component  should render component with referenc
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21198,6 +21461,7 @@ exports[`Additional Information Component  should render component with referenc
                   </li>
                   <li
                     data-testid="rek-subject-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21238,6 +21502,7 @@ exports[`Additional Information Component  should render component with referenc
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21248,6 +21513,7 @@ exports[`Additional Information Component  should render component with referenc
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21258,6 +21524,7 @@ exports[`Additional Information Component  should render component with referenc
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -21636,6 +21903,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -22105,6 +22373,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22115,6 +22384,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22125,6 +22395,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22165,6 +22436,7 @@ exports[`Additional Information Component  should render component with rek_herd
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22175,6 +22447,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22185,6 +22458,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22195,6 +22469,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22205,6 +22480,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22215,6 +22491,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22225,6 +22502,7 @@ exports[`Additional Information Component  should render component with rek_herd
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22717,6 +22995,7 @@ exports[`Additional Information Component  should render component with rek_star
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22727,6 +23006,7 @@ exports[`Additional Information Component  should render component with rek_star
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -22767,6 +23047,7 @@ exports[`Additional Information Component  should render component with rek_star
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -23042,11 +23323,13 @@ exports[`Additional Information Component  should render component with research
                 >
                   <li
                     data-testid="rek-isbn-0"
+                    style="margin-top: 2px;"
                   >
                     9781921412141
                   </li>
                   <li
                     data-testid="rek-isbn-1"
+                    style="margin-top: 2px;"
                   >
                     9781921412143
                   </li>
@@ -23633,16 +23916,19 @@ exports[`Additional Information Component  should render component with thesis 1
                 >
                   <li
                     data-testid="rek-supervisor-0"
+                    style="margin-top: 2px;"
                   >
                     Professor Helen Ross
                   </li>
                   <li
                     data-testid="rek-supervisor-1"
+                    style="margin-top: 2px;"
                   >
                     Professor Geoffrey Lawrence
                   </li>
                   <li
                     data-testid="rek-supervisor-2"
+                    style="margin-top: 2px;"
                   >
                     Professor John Taylor
                   </li>
@@ -23678,6 +23964,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -23718,6 +24005,7 @@ exports[`Additional Information Component  should render component with thesis 1
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -24027,6 +24315,7 @@ exports[`Additional Information Component  should render component with video do
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -24093,6 +24382,7 @@ exports[`Additional Information Component  should render component with video do
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -24791,6 +25081,7 @@ exports[`Additional Information Component  should render component with working 
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -24826,6 +25117,7 @@ exports[`Additional Information Component  should render component with working 
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -24836,6 +25128,7 @@ exports[`Additional Information Component  should render component with working 
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -24876,6 +25169,7 @@ exports[`Additional Information Component  should render component with working 
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -24886,6 +25180,7 @@ exports[`Additional Information Component  should render component with working 
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -24896,6 +25191,7 @@ exports[`Additional Information Component  should render component with working 
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -24906,6 +25202,7 @@ exports[`Additional Information Component  should render component with working 
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25311,6 +25608,7 @@ exports[`Additional Information Component  should render component without Attri
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -25780,6 +26078,7 @@ exports[`Additional Information Component  should render component without Attri
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25790,6 +26089,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25800,6 +26100,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25840,6 +26141,7 @@ exports[`Additional Information Component  should render component without Attri
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25850,6 +26152,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25860,6 +26163,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25870,6 +26174,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25880,6 +26185,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25890,6 +26196,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -25900,6 +26207,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26278,6 +26586,7 @@ exports[`Additional Information Component  should render component without Attri
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -26747,6 +27056,7 @@ exports[`Additional Information Component  should render component without Attri
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26757,6 +27067,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26767,6 +27078,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26807,6 +27119,7 @@ exports[`Additional Information Component  should render component without Attri
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26817,6 +27130,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26827,6 +27141,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26837,6 +27152,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26847,6 +27163,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26857,6 +27174,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -26867,6 +27185,7 @@ exports[`Additional Information Component  should render component without Attri
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -27242,6 +27561,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                 >
                   <li
                     data-testid="rek-language-0"
+                    style="margin-top: 2px;"
                   >
                     eng
                   </li>
@@ -27326,6 +27646,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                 >
                   <li
                     data-testid="rek-alternate-genre-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -27366,6 +27687,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -27376,6 +27698,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -27386,6 +27709,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -27886,16 +28210,19 @@ exports[`Additional Information Component  should render oa status value link in
                 >
                   <li
                     data-testid="rek-supervisor-0"
+                    style="margin-top: 2px;"
                   >
                     Professor Helen Ross
                   </li>
                   <li
                     data-testid="rek-supervisor-1"
+                    style="margin-top: 2px;"
                   >
                     Professor Geoffrey Lawrence
                   </li>
                   <li
                     data-testid="rek-supervisor-2"
+                    style="margin-top: 2px;"
                   >
                     Professor John Taylor
                   </li>
@@ -27931,6 +28258,7 @@ exports[`Additional Information Component  should render oa status value link in
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -27971,6 +28299,7 @@ exports[`Additional Information Component  should render oa status value link in
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28376,6 +28705,7 @@ exports[`Additional Information Component  should render with description only 1
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -28845,6 +29175,7 @@ exports[`Additional Information Component  should render with description only 1
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28855,6 +29186,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28865,6 +29197,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28905,6 +29238,7 @@ exports[`Additional Information Component  should render with description only 1
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28915,6 +29249,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28925,6 +29260,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28935,6 +29271,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28945,6 +29282,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28955,6 +29293,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -28965,6 +29304,7 @@ exports[`Additional Information Component  should render with description only 1
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29312,6 +29652,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -29781,6 +30122,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29791,6 +30133,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29801,6 +30144,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29841,6 +30185,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29851,6 +30196,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29861,6 +30207,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29871,6 +30218,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29881,6 +30229,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29891,6 +30240,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -29901,6 +30251,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30279,6 +30630,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 >
                   <li
                     data-testid="rek-issn-0"
+                    style="margin-top: 2px;"
                   >
                     1477-9137
                   </li>
@@ -30748,6 +31100,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 >
                   <li
                     data-testid="rek-subject-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30758,6 +31111,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-subject-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30768,6 +31122,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-subject-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30808,6 +31163,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                 >
                   <li
                     data-testid="rek-keywords-0"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30818,6 +31174,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-1"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30828,6 +31185,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-2"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30838,6 +31196,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-3"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30848,6 +31207,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-4"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30858,6 +31218,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-5"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"
@@ -30868,6 +31229,7 @@ exports[`Additional Information Component  should render with no formatted abstr
                   </li>
                   <li
                     data-testid="rek-keywords-6"
+                    style="margin-top: 2px;"
                   >
                     <a
                       data-discover="true"

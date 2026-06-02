@@ -36,8 +36,8 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
     /**
      * Handles importing external deps required for creating widget on the fly.
      * There are at least two important scenarios that are handled:
-     * - deps are imported for the first time and the widget gets automatically .
-     * - deps has been previously imported and the widget initialization need to be invoked.
+     * - deps are imported for the first time, and the widget gets automatically.
+     * - deps have been previously imported, and the widget initialization needs to be invoked.
      */
     useEffect(() => {
         // initialize widget if deps have already been imported
@@ -45,7 +45,7 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
             // istanbul ignore next
             if (!createWidgetFunction || isCreatingWidget.current) return cleanUpWidgetCreationDeps; // onunmount
             isCreatingWidget.current = true;
-            // when external deps is already present, widget creation needs to run in the Macrotask queue
+            // when external deps are already present, widget creation needs to run in the Macrotask queue
             setTimeout(() => createWidgetFunction?.(`#${widgetContainerId}`));
             return cleanUpWidgetCreationDeps; // onunmount
         }
