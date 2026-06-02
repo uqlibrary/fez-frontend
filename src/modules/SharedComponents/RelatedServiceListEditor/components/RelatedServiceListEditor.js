@@ -27,16 +27,18 @@ const RelatedServiceListEditor = ({
     const [relatedServiceIndexSelectedToEdit, setRelatedServiceIndexSelectedToEdit] = useState(null);
     const [isFormDirty, setIsFormDirty] = useState(false);
     const isEditing = !!relatedServiceSelectedToEdit;
-    const form = useFormContext();
+    const hasError = !!state?.error;
+    const { clearErrors, setError, setValue } = useFormContext();
 
-    // propagate isFormDirty state
+    // handles validation
     useEffect(() => {
+        if (hasError) return;
         if (!isFormDirty || isEditing) {
-            form?.clearErrors?.(name);
+            clearErrors?.(name);
             return;
         }
-        form?.setError?.(name, { type: 'validation', message: globalLocale.validationErrors.relatedServices });
-    }, [isFormDirty, isEditing]);
+        setError?.(name, { type: 'validation', message: globalLocale.validationErrors.relatedServices });
+    }, [clearErrors, setError, hasError, isFormDirty, isEditing, name]);
 
     // propagate input changes to `related services`
     useEffect(() => {
@@ -52,9 +54,9 @@ const RelatedServiceListEditor = ({
 
     const handleRelatedServicesChange = useCallback(
         list => {
-            form?.setValue?.(name, list, { shouldValidate: true });
+            setValue?.(name, list, { shouldValidate: true });
         },
-        [form, name],
+        [setValue, name],
     );
 
     const addRelatedService = useCallback(
@@ -185,7 +187,7 @@ const RelatedServiceListEditor = ({
                     </Grid>
                 </Grid>
             )}
-            {state?.error && (
+            {hasError && (
                 <Grid container sx={{ mt: 2 }}>
                     <Grid item xs={12}>
                         <Typography color="error" variant="caption">

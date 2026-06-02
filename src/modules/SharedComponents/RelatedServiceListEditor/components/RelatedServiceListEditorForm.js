@@ -118,8 +118,12 @@ export const RelatedServiceListEditorForm = ({
                         onChange={handleSelect}
                         disabled={disabled}
                         required={required}
-                        error={required && !relatedServiceId}
-                        errorText={required && !relatedServiceId && validationLocale.validationErrors.required}
+                        error={(required || isDirty) && !relatedServiceId?.trim?.().length}
+                        errorText={
+                            (required || isDirty) &&
+                            !relatedServiceId?.trim?.().length &&
+                            validationLocale.validationErrors.required
+                        }
                     />
                 </Grid>
                 <Grid item xs={12} sm={12} md={4}>

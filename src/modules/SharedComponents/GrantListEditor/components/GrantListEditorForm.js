@@ -114,8 +114,10 @@ export const GrantListEditorForm = ({
                         disabled={disabled}
                         required={required}
                         autoComplete="off"
-                        error={required && !grantAgencyName}
-                        errorText={required && !grantAgencyName && validationLocale.validationErrors.required}
+                        error={(required || isDirty) && !grantAgencyName}
+                        errorText={
+                            (required || isDirty) && !grantAgencyName && validationLocale.validationErrors.required
+                        }
                     />
                 </Grid>
                 <Grid item xs={12} sm={12} md={!hideType ? 3 : 4}>
@@ -138,8 +140,8 @@ export const GrantListEditorForm = ({
                         <FormControl
                             variant="standard"
                             fullWidth
-                            required={required || (!!grantAgencyName && grantAgencyName.trim().length > 0)}
-                            error={!!grantAgencyName && grantAgencyName.trim().length > 0 && !grantAgencyType}
+                            required={required || !!grantAgencyName?.trim?.().length}
+                            error={!!grantAgencyName?.trim?.().length && !grantAgencyType}
                         >
                             <Typography variant="caption" color="secondary" style={{ marginBottom: -3 }}>
                                 {!!grantAgencyType ? grantAgencyTypeLabel : ' '}&nbsp;

@@ -28,16 +28,18 @@ const GrantListEditor = ({
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
     const [isFormDirty, setIsFormDirty] = useState(false);
     const isEditing = !!grantSelectedToEdit;
-    const form = useFormContext();
+    const hasError = !!state?.error;
+    const { clearErrors, setError, setValue } = useFormContext();
 
-    // propagate isFormDirty state
+    // handles validation
     useEffect(() => {
+        if (hasError) return;
         if (!isFormDirty || isEditing) {
-            form?.clearErrors?.(name);
+            clearErrors?.(name);
             return;
         }
-        form?.setError?.(name, { type: 'validation', message: globalLocale.validationErrors.grants });
-    }, [isFormDirty, isEditing]);
+        setError?.(name, { type: 'validation', message: globalLocale.validationErrors.grants });
+    }, [clearErrors, setError, hasError, isFormDirty, isEditing, name]);
 
     // propagate input changes to `grants`
     useEffect(() => {
@@ -53,9 +55,9 @@ const GrantListEditor = ({
 
     const handleGrantsChange = useCallback(
         grants => {
-            form?.setValue?.(name, grants, { shouldValidate: true });
+            setValue?.(name, grants, { shouldValidate: true });
         },
-        [form, name],
+        [setValue, name],
     );
 
     const addGrant = useCallback(
@@ -178,7 +180,7 @@ const GrantListEditor = ({
                     </Grid>
                 </Grid>
             )}
-            {state?.error && (
+            {hasError && (
                 <Grid container sx={{ mt: 2 }}>
                     <Grid item xs={12}>
                         <Typography color="error" variant="caption">
