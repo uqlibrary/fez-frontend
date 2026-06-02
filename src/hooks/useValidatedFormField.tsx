@@ -15,7 +15,7 @@ export const useValidatedFormField = (fieldPath: string) => {
 
         // otherwise, invoke validation
         (async () => await trigger(fieldPath))();
-    }, [trigger, hasError]);
+    }, [trigger, fieldPath, hasError]);
 
     return { hasError };
 };
