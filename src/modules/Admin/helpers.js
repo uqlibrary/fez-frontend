@@ -36,7 +36,6 @@ import {
     PUBLICATION_TYPE_REFERENCE_ENTRY,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
-    PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
 
 export const identifiersParams = record => ({
@@ -177,10 +176,7 @@ export const getInitialFormValues = (recordToView, recordType) => {
                 {},
             ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(_recordToView, 'ntro')) || {},
             grantInformationSection:
-                (recordType === RECORD_TYPE_RECORD &&
-                    _recordToView.rek_display_type !== PUBLICATION_TYPE_INSTRUMENT &&
-                    getInitialValues(_recordToView, 'grantInformation')) ||
-                {},
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(_recordToView, 'grantInformation')) || {},
             filesSection:
                 (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
             notesSection:
@@ -194,10 +190,7 @@ export const getInitialFormValues = (recordToView, recordType) => {
                     getInitialValues(_recordToView, 'reason')) ||
                 {},
             relatedServicesSection:
-                (recordType === RECORD_TYPE_RECORD &&
-                    _recordToView.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION &&
-                    getInitialValues(_recordToView, 'relatedServices')) ||
-                {},
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(_recordToView, 'relatedServices')) || {},
         },
     };
 };

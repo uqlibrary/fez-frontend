@@ -20,7 +20,7 @@ export async function adminEditNoAlerts(page: Page) {
     await expect(page.locator('#admin-work-submit')).toBeEnabled();
 }
 
-export async function adminEditVerifyAlerts(page: Page, count: number, messages: string[]) {
+export async function adminEditVerifyAlerts(page: Page, count: number, messages: string[] = []) {
     const alert = page.getByTestId('alert-warning');
     await expect(alert.locator('.alert-text')).toContainText('Validation -');
     const alertMessages = alert.getByTestId('alert-message').locator('li');

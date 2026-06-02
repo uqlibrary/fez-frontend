@@ -11,7 +11,7 @@ import {
     EditorsCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
+import { getOrcidURL, parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router';
@@ -20,7 +20,6 @@ import {
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     PLACEHOLDER_ISO8601_ZULU_DATE,
     PUBLICATION_TYPE_INSTRUMENT,
-    ORCID_BASE_URL,
     RAID_BASE_URL,
     ROR_BASE_URL,
 } from 'config/general';
@@ -69,6 +68,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                   (publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ')) ||
                   null;
     };
+
+    const hasValue = data => data !== null && !(typeof data === 'string' && data.trim() === '');
 
     const renderRow = (heading, data, index, field) => {
         const labelTestId = `${field.replace(/_/g, '-')}-label`;
@@ -129,6 +130,11 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderList = (list, subkey, getLink) => {
+        const filteredList = list.filter(item => hasValue(getData(item, subkey)));
+        if (filteredList.length === 0) {
+            return null;
+        }
+
         const testId = subkey.replace(/_/g, '-');
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -232,7 +238,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderDoi = doi => {
-        return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
+        return <DoiCitationView key="additional-information-doi" doi={doi} />;
     };
 
     const renderRaid = (objects, subKey) => {
@@ -275,7 +281,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         let link = null;
 
         if (isValidOrcid(id)) {
-            link = `${ORCID_BASE_URL}/${id}`;
+            link = getOrcidURL(id);
         } else {
             /* istanbul ignore else */
             if (isValidROR(id)) {
@@ -468,6 +474,10 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     // render a single object (without order field)
     const renderObject = (object, subkey) => {
         const data = getData(object, subkey);
+
+        if (!hasValue(data)) {
+            return null;
+        }
 
         // date fields
         if (viewRecordsConfig.dateFields.includes(subkey)) {

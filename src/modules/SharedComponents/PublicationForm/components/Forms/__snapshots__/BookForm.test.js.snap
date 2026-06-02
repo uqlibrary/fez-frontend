@@ -2519,337 +2519,137 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yq79k0-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-        data-testid="standard-card-ntro-data"
-        id="standard-card-ntro-data"
-        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-v2j61i-MuiGrid-root"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          data-testid="standard-card-ntro-data"
+          id="standard-card-ntro-data"
+          style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-          >
-            <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-              data-testid="standard-card-ntro-data-header"
-              id="standard-card-ntro-data-header"
-            >
-              NTRO data
-            </h3>
-          </div>
-          <div
-            class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
-          >
-            <button
-              aria-label="Click for more information"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="help-icon"
-              data-mui-internal-clone-element="true"
-              data-testid="help-icon"
-              id="help-icon"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
-                data-testid="HelpOutlineIcon"
-                focusable="false"
-                role="img"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
-                />
-                <title>
-                  Click for more information
-                </title>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-          data-analyticsid="standard-card-ntro-data-content"
-          data-testid="standard-card-ntro-data-content"
-          id="standard-card-ntro-data-content"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                data-testid="standard-card-ntro-data-header"
+                id="standard-card-ntro-data-header"
+              >
+                NTRO data
+              </h3>
+            </div>
+            <div
+              class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
+            >
+              <button
+                aria-label="Click for more information"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="help-icon"
+                data-mui-internal-clone-element="true"
+                data-testid="help-icon"
+                id="help-icon"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                  data-testid="HelpOutlineIcon"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                  />
+                  <title>
+                    Click for more information
+                  </title>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+            data-analyticsid="standard-card-ntro-data-content"
+            data-testid="standard-card-ntro-data-content"
+            id="standard-card-ntro-data-content"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
             >
               <div
-                data-analyticsid="rek-description"
-                data-testid="rek-description"
-                id="rek-description"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
-                <span>
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
-                  >
-                    <span>
-                      Abstract/Description* 
-                      <span
-                        style="font-weight: 700;"
-                      >
-                        (for public view)
+                <div
+                  data-analyticsid="rek-description"
+                  data-testid="rek-description"
+                  id="rek-description"
+                >
+                  <span>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+                    >
+                      <span>
+                        Abstract/Description* 
+                        <span
+                          style="font-weight: 700;"
+                        >
+                          (for public view)
+                        </span>
                       </span>
-                    </span>
-                  </p>
-                  <span
-                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
-                  >
-                    Enter a brief description of the work - 800 character limit is no longer applicable
-                  </span>
-                </span>
-                <div />
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
-            >
-              <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                data-testid="rek-total-pages"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="false"
-                  data-testid="rek-total-pages-label"
-                  for="rek-total-pages-input"
-                  id="rek-total-pages-label"
-                >
-                  Total pages/Extent
-                  <span
-                    aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
-                  >
-                     
-                    *
-                  </span>
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-                >
-                  <input
-                    aria-invalid="false"
-                    aria-label="Total pages/Extent"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                    data-analyticsid="rek-total-pages-input"
-                    data-testid="rek-total-pages-input"
-                    id="rek-total-pages-input"
-                    label="Total pages/Extent"
-                    name="fez_record_search_key_total_pages.rek_total_pages"
-                    placeholder="Total pages, size, or duration"
-                    required=""
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
-            >
-              <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="false"
-                  data-testid="rek-language-label"
-                  id="rek-language-label"
-                >
-                  Language
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                    data-testid="rek-language-select"
-                    id="rek-language-select"
-                    role="combobox"
-                    tabindex="0"
-                  >
+                    </p>
                     <span
-                      aria-hidden="true"
-                      class="notranslate"
+                      class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
                     >
-                      ​
+                      Enter a brief description of the work - 800 character limit is no longer applicable
                     </span>
-                  </div>
-                  <input
-                    aria-hidden="true"
-                    aria-invalid="false"
-                    aria-labelledby="rek-language-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                    data-analyticsid="rek-language-input"
-                    data-testid="rek-language-input"
-                    id="rek-language-input"
-                    tabindex="-1"
-                    value=""
-                  />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                    data-testid="ArrowDropDownIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7 10l5 5 5-5z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
-            >
-              <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="false"
-                  data-testid="rek-quality-indicator-label"
-                  id="rek-quality-indicator-label"
-                >
-                  Quality indicators
-                  <span
-                    aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
-                  >
-                     
-                    *
                   </span>
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
-                    aria-required="true"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                    data-testid="rek-quality-indicator-select"
-                    id="rek-quality-indicator-select"
-                    role="combobox"
-                    tabindex="0"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="notranslate"
-                    >
-                      ​
-                    </span>
-                  </div>
-                  <input
-                    aria-hidden="true"
-                    aria-invalid="false"
-                    aria-labelledby="rek-quality-indicator-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                    data-analyticsid="rek-quality-indicator-input"
-                    data-testid="rek-quality-indicator-input"
-                    id="rek-quality-indicator-input"
-                    required=""
-                    tabindex="-1"
-                    value=""
-                  />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                    data-testid="ArrowDropDownIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7 10l5 5 5-5z"
-                    />
-                  </svg>
+                  <div />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
-    >
-      <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-        data-testid="standard-card-grant-details"
-        id="standard-card-grant-details"
-        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
-      >
-        <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
-        >
-          <div
-            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-          >
-            <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-              data-testid="standard-card-grant-details-header"
-              id="standard-card-grant-details-header"
-            >
-              Grant details
-            </h3>
-          </div>
-        </div>
-        <div
-          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-          data-analyticsid="standard-card-grant-details-content"
-          data-testid="standard-card-grant-details-content"
-          id="standard-card-grant-details-content"
-        >
-          <div>
-            Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
-              style="margin-top: 8px;"
-            >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                  data-testid="rek-grant-agency"
+                  data-testid="rek-total-pages"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
-                    data-testid="rek-grant-agency-label"
-                    for="rek-grant-agency-input"
-                    id="rek-grant-agency-label"
+                    data-testid="rek-total-pages-label"
+                    for="rek-total-pages-input"
+                    id="rek-total-pages-label"
                   >
-                    Funder/Sponsor name
+                    Total pages/Extent
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
                   </label>
                   <div
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      aria-label="Funder/Sponsor name"
-                      autocomplete="off"
+                      aria-label="Total pages/Extent"
                       class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                      data-analyticsid="rek-grant-agency-input"
-                      data-testid="rek-grant-agency-input"
-                      id="rek-grant-agency-input"
-                      label="Funder/Sponsor name"
-                      name="grantAgencyName"
-                      placeholder="Funder/sponsor name for this work"
+                      data-analyticsid="rek-total-pages-input"
+                      data-testid="rek-total-pages-input"
+                      id="rek-total-pages-input"
+                      label="Total pages/Extent"
+                      name="fez_record_search_key_total_pages.rek_total_pages"
+                      placeholder="Total pages, size, or duration"
+                      required=""
                       type="text"
                       value=""
                     />
@@ -2857,84 +2657,53 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
-              >
-                <div
-                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                  data-testid="rek-grant-id"
-                >
-                  <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="false"
-                    data-testid="rek-grant-id-label"
-                    for="rek-grant-id-input"
-                    id="rek-grant-id-label"
-                  >
-                    Grant ID
-                  </label>
-                  <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-                  >
-                    <input
-                      aria-invalid="false"
-                      aria-label="Grant ID"
-                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                      data-analyticsid="rek-grant-id-input"
-                      data-testid="rek-grant-id-input"
-                      disabled=""
-                      id="rek-grant-id-input"
-                      label="Grant ID"
-                      name="grantId"
-                      placeholder="Grant number for this work"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                 >
-                  <span
-                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
-                    style="margin-bottom: -3px;"
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    data-testid="rek-language-label"
+                    id="rek-language-label"
                   >
-                     
-                     
-                  </span>
+                    Language
+                  </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="rek-grant-type-select"
-                      class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                      data-testid="rek-grant-type-select"
-                      id="rek-grant-type-select"
+                      aria-labelledby="rek-language-select"
+                      class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      data-testid="rek-language-select"
+                      id="rek-language-select"
                       role="combobox"
+                      tabindex="0"
                     >
-                      Funder/Sponsor type
+                      <span
+                        aria-hidden="true"
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
                     </div>
                     <input
                       aria-hidden="true"
                       aria-invalid="false"
+                      aria-labelledby="rek-language-label"
                       class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                      data-testid="rek-grant-type-input"
-                      disabled=""
-                      id="rek-grant-type-input"
-                      name="grantAgencyType"
-                      placeholder="Funder/Sponsor type"
+                      data-analyticsid="rek-language-input"
+                      data-testid="rek-language-input"
+                      id="rek-language-input"
                       tabindex="-1"
                       value=""
                     />
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                       data-testid="ArrowDropDownIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -2947,19 +2716,259 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
               >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
-                  data-analyticsid="rek-grant-add"
-                  data-testid="rek-grant-add"
-                  disabled=""
-                  id="rek-grant-add"
-                  tabindex="-1"
-                  type="button"
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                 >
-                  Add grant
-                </button>
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    data-testid="rek-quality-indicator-label"
+                    id="rek-quality-indicator-label"
+                  >
+                    Quality indicators
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="rek-quality-indicator-select"
+                      aria-required="true"
+                      class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      data-testid="rek-quality-indicator-select"
+                      id="rek-quality-indicator-select"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      aria-invalid="false"
+                      aria-labelledby="rek-quality-indicator-label"
+                      class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                      data-analyticsid="rek-quality-indicator-input"
+                      data-testid="rek-quality-indicator-input"
+                      id="rek-quality-indicator-input"
+                      required=""
+                      tabindex="-1"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                      data-testid="ArrowDropDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-v2j61i-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          data-testid="standard-card-grant-details"
+          id="standard-card-grant-details"
+          style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+        >
+          <div
+            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          >
+            <div
+              class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                data-testid="standard-card-grant-details-header"
+                id="standard-card-grant-details-header"
+              >
+                Grant details
+              </h3>
+            </div>
+          </div>
+          <div
+            class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+            data-analyticsid="standard-card-grant-details-content"
+            data-testid="standard-card-grant-details-content"
+            id="standard-card-grant-details-content"
+          >
+            <div>
+              Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                style="margin-top: 8px;"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    data-testid="rek-grant-agency"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                      data-shrink="false"
+                      data-testid="rek-grant-agency-label"
+                      for="rek-grant-agency-input"
+                      id="rek-grant-agency-label"
+                    >
+                      Funder/Sponsor name
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-invalid="false"
+                        aria-label="Funder/Sponsor name"
+                        autocomplete="off"
+                        class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        data-analyticsid="rek-grant-agency-input"
+                        data-testid="rek-grant-agency-input"
+                        id="rek-grant-agency-input"
+                        label="Funder/Sponsor name"
+                        name="grantAgencyName"
+                        placeholder="Funder/sponsor name for this work"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    data-testid="rek-grant-id"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                      data-shrink="false"
+                      data-testid="rek-grant-id-label"
+                      for="rek-grant-id-input"
+                      id="rek-grant-id-label"
+                    >
+                      Grant ID
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-invalid="false"
+                        aria-label="Grant ID"
+                        class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        data-analyticsid="rek-grant-id-input"
+                        data-testid="rek-grant-id-input"
+                        disabled=""
+                        id="rek-grant-id-input"
+                        label="Grant ID"
+                        name="grantId"
+                        placeholder="Grant number for this work"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+                  >
+                    Accepts IDs or full URLs
+                  </div>
+                </div>
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                      style="margin-bottom: -3px;"
+                    >
+                       
+                       
+                    </span>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    >
+                      <div
+                        aria-disabled="true"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="rek-grant-type-select"
+                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        data-testid="rek-grant-type-select"
+                        id="rek-grant-type-select"
+                        role="combobox"
+                      >
+                        Funder/Sponsor type
+                      </div>
+                      <input
+                        aria-hidden="true"
+                        aria-invalid="false"
+                        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                        data-testid="rek-grant-type-input"
+                        disabled=""
+                        id="rek-grant-type-input"
+                        name="grantAgencyType"
+                        placeholder="Funder/Sponsor type"
+                        tabindex="-1"
+                        value=""
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                        data-testid="ArrowDropDownIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7 10l5 5 5-5z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="rek-grant-add"
+                    data-testid="rek-grant-add"
+                    disabled=""
+                    id="rek-grant-add"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    Add grant
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -4073,406 +4082,206 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yq79k0-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-        data-testid="standard-card-ntro-data"
-        id="standard-card-ntro-data"
-        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-v2j61i-MuiGrid-root"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          data-testid="standard-card-ntro-data"
+          id="standard-card-ntro-data"
+          style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-          >
-            <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-              data-testid="standard-card-ntro-data-header"
-              id="standard-card-ntro-data-header"
-            >
-              NTRO data
-            </h3>
-          </div>
-          <div
-            class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
-          >
-            <button
-              aria-label="Click for more information"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
-              data-analyticsid="help-icon"
-              data-mui-internal-clone-element="true"
-              data-testid="help-icon"
-              id="help-icon"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
-                data-testid="HelpOutlineIcon"
-                focusable="false"
-                role="img"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
-                />
-                <title>
-                  Click for more information
-                </title>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-          data-analyticsid="standard-card-ntro-data-content"
-          data-testid="standard-card-ntro-data-content"
-          id="standard-card-ntro-data-content"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
-              <div
-                data-analyticsid="rek-description"
-                data-testid="rek-description"
-                id="rek-description"
+              <h3
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                data-testid="standard-card-ntro-data-header"
+                id="standard-card-ntro-data-header"
               >
-                <span>
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
-                  >
-                    <span>
-                      Abstract/Description* 
-                      <span
-                        style="font-weight: 700;"
-                      >
-                        (for public view)
-                      </span>
-                    </span>
-                  </p>
-                  <span
-                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
-                  >
-                    Enter a brief description of the work - 800 character limit is no longer applicable
-                  </span>
-                </span>
-                <div />
-              </div>
+                NTRO data
+              </h3>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
+            >
+              <button
+                aria-label="Click for more information"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                data-analyticsid="help-icon"
+                data-mui-internal-clone-element="true"
+                data-testid="help-icon"
+                id="help-icon"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                  data-testid="HelpOutlineIcon"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
+                  />
+                  <title>
+                    Click for more information
+                  </title>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+            data-analyticsid="standard-card-ntro-data-content"
+            data-testid="standard-card-ntro-data-content"
+            id="standard-card-ntro-data-content"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
             >
               <div
-                class="undefined"
-                data-testid="ismn-list-editor"
-                id="ismn-list-editor"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                  data-analyticsid="rek-description"
+                  data-testid="rek-description"
+                  id="rek-description"
+                >
+                  <span>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+                    >
+                      <span>
+                        Abstract/Description* 
+                        <span
+                          style="font-weight: 700;"
+                        >
+                          (for public view)
+                        </span>
+                      </span>
+                    </p>
+                    <span
+                      class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                    >
+                      Enter a brief description of the work - 800 character limit is no longer applicable
+                    </span>
+                  </span>
+                  <div />
+                </div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              >
+                <div
+                  class="undefined"
+                  data-testid="ismn-list-editor"
+                  id="ismn-list-editor"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                    style="flex-grow: 1;"
+                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      style="flex-grow: 1;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        for="ismn-input"
-                        id="ismn-input-label"
-                      >
-                        ISMN value
-                      </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
-                        <input
-                          aria-invalid="false"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                          data-analyticsid="ismn-input"
-                          data-testid="ismn-input"
-                          id="ismn-input"
-                          placeholder="Enter ISMN, e.g. 9790720208015"
-                          type="text"
-                          value=""
-                        />
+                        <label
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          for="ismn-input"
+                          id="ismn-input-label"
+                        >
+                          ISMN value
+                        </label>
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                        >
+                          <input
+                            aria-invalid="false"
+                            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            data-analyticsid="ismn-input"
+                            data-testid="ismn-input"
+                            id="ismn-input"
+                            placeholder="Enter ISMN, e.g. 9790720208015"
+                            type="text"
+                            value=""
+                          />
+                        </div>
                       </div>
+                    </div>
+                    <div
+                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                    >
+                      <button
+                        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+                        data-analyticsid="ismn-add"
+                        data-testid="ismn-add"
+                        disabled=""
+                        id="ismn-add"
+                        tabindex="-1"
+                        type="button"
+                      >
+                        <span>
+                          Add ISMN
+                        </span>
+                      </button>
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
-                  >
-                    <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
-                      data-analyticsid="ismn-add"
-                      data-testid="ismn-add"
-                      disabled=""
-                      id="ismn-add"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <span>
-                        Add ISMN
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div
-                  data-testid="ismn-list"
-                  id="ismn-list"
-                />
-                <p
-                  class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
-                />
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
-            >
-              <div
-                class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                data-testid="rek-total-pages"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="false"
-                  data-testid="rek-total-pages-label"
-                  for="rek-total-pages-input"
-                  id="rek-total-pages-label"
-                >
-                  Total pages/Extent
-                  <span
-                    aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
-                  >
-                     
-                    *
-                  </span>
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-                >
-                  <input
-                    aria-invalid="false"
-                    aria-label="Total pages/Extent"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                    data-analyticsid="rek-total-pages-input"
-                    data-testid="rek-total-pages-input"
-                    id="rek-total-pages-input"
-                    label="Total pages/Extent"
-                    name="fez_record_search_key_total_pages.rek_total_pages"
-                    placeholder="Total pages, size, or duration"
-                    required=""
-                    type="text"
-                    value=""
+                    data-testid="ismn-list"
+                    id="ismn-list"
+                  />
+                  <p
+                    class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
                   />
                 </div>
               </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
-            >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="false"
-                  data-testid="rek-language-label"
-                  id="rek-language-label"
-                >
-                  Language
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                    data-testid="rek-language-select"
-                    id="rek-language-select"
-                    role="combobox"
-                    tabindex="0"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="notranslate"
-                    >
-                      ​
-                    </span>
-                  </div>
-                  <input
-                    aria-hidden="true"
-                    aria-invalid="false"
-                    aria-labelledby="rek-language-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                    data-analyticsid="rek-language-input"
-                    data-testid="rek-language-input"
-                    id="rek-language-input"
-                    tabindex="-1"
-                    value=""
-                  />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                    data-testid="ArrowDropDownIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7 10l5 5 5-5z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
-            >
-              <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="false"
-                  data-testid="rek-quality-indicator-label"
-                  id="rek-quality-indicator-label"
-                >
-                  Quality indicators
-                  <span
-                    aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
-                  >
-                     
-                    *
-                  </span>
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
-                >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
-                    aria-required="true"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                    data-testid="rek-quality-indicator-select"
-                    id="rek-quality-indicator-select"
-                    role="combobox"
-                    tabindex="0"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="notranslate"
-                    >
-                      ​
-                    </span>
-                  </div>
-                  <input
-                    aria-hidden="true"
-                    aria-invalid="false"
-                    aria-labelledby="rek-quality-indicator-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                    data-analyticsid="rek-quality-indicator-input"
-                    data-testid="rek-quality-indicator-input"
-                    id="rek-quality-indicator-input"
-                    required=""
-                    tabindex="-1"
-                    value=""
-                  />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
-                    data-testid="ArrowDropDownIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7 10l5 5 5-5z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
-    >
-      <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
-        data-testid="standard-card-grant-details"
-        id="standard-card-grant-details"
-        style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
-      >
-        <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
-        >
-          <div
-            class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
-          >
-            <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-              data-testid="standard-card-grant-details-header"
-              id="standard-card-grant-details-header"
-            >
-              Grant details
-            </h3>
-          </div>
-        </div>
-        <div
-          class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-          data-analyticsid="standard-card-grant-details-content"
-          data-testid="standard-card-grant-details-content"
-          id="standard-card-grant-details-content"
-        >
-          <div>
-            Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
-            <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
-              style="margin-top: 8px;"
-            >
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 css-xvszvy-MuiGrid-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                  data-testid="rek-grant-agency"
+                  data-testid="rek-total-pages"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
-                    data-testid="rek-grant-agency-label"
-                    for="rek-grant-agency-input"
-                    id="rek-grant-agency-label"
+                    data-testid="rek-total-pages-label"
+                    for="rek-total-pages-input"
+                    id="rek-total-pages-label"
                   >
-                    Funder/Sponsor name
+                    Total pages/Extent
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
                   </label>
                   <div
                     class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      aria-label="Funder/Sponsor name"
-                      autocomplete="off"
+                      aria-label="Total pages/Extent"
                       class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                      data-analyticsid="rek-grant-agency-input"
-                      data-testid="rek-grant-agency-input"
-                      id="rek-grant-agency-input"
-                      label="Funder/Sponsor name"
-                      name="grantAgencyName"
-                      placeholder="Funder/sponsor name for this work"
+                      data-analyticsid="rek-total-pages-input"
+                      data-testid="rek-total-pages-input"
+                      id="rek-total-pages-input"
+                      label="Total pages/Extent"
+                      name="fez_record_search_key_total_pages.rek_total_pages"
+                      placeholder="Total pages, size, or duration"
+                      required=""
                       type="text"
                       value=""
                     />
@@ -4480,84 +4289,53 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
-              >
-                <div
-                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
-                  data-testid="rek-grant-id"
-                >
-                  <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="false"
-                    data-testid="rek-grant-id-label"
-                    for="rek-grant-id-input"
-                    id="rek-grant-id-label"
-                  >
-                    Grant ID
-                  </label>
-                  <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
-                  >
-                    <input
-                      aria-invalid="false"
-                      aria-label="Grant ID"
-                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
-                      data-analyticsid="rek-grant-id-input"
-                      data-testid="rek-grant-id-input"
-                      disabled=""
-                      id="rek-grant-id-input"
-                      label="Grant ID"
-                      name="grantId"
-                      placeholder="Grant number for this work"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                 >
-                  <span
-                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
-                    style="margin-bottom: -3px;"
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    data-testid="rek-language-label"
+                    id="rek-language-label"
                   >
-                     
-                     
-                  </span>
+                    Language
+                  </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   >
                     <div
-                      aria-disabled="true"
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="rek-grant-type-select"
-                      class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
-                      data-testid="rek-grant-type-select"
-                      id="rek-grant-type-select"
+                      aria-labelledby="rek-language-select"
+                      class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      data-testid="rek-language-select"
+                      id="rek-language-select"
                       role="combobox"
+                      tabindex="0"
                     >
-                      Funder/Sponsor type
+                      <span
+                        aria-hidden="true"
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
                     </div>
                     <input
                       aria-hidden="true"
                       aria-invalid="false"
+                      aria-labelledby="rek-language-label"
                       class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-                      data-testid="rek-grant-type-input"
-                      disabled=""
-                      id="rek-grant-type-input"
-                      name="grantAgencyType"
-                      placeholder="Funder/Sponsor type"
+                      data-analyticsid="rek-language-input"
+                      data-testid="rek-language-input"
+                      id="rek-language-input"
                       tabindex="-1"
                       value=""
                     />
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                       data-testid="ArrowDropDownIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -4570,19 +4348,259 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
               >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
-                  data-analyticsid="rek-grant-add"
-                  data-testid="rek-grant-add"
-                  disabled=""
-                  id="rek-grant-add"
-                  tabindex="-1"
-                  type="button"
+                <div
+                  class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                 >
-                  Add grant
-                </button>
+                  <label
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    data-testid="rek-quality-indicator-label"
+                    id="rek-quality-indicator-label"
+                  >
+                    Quality indicators
+                    <span
+                      aria-hidden="true"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                    >
+                       
+                      *
+                    </span>
+                  </label>
+                  <div
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  >
+                    <div
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-labelledby="rek-quality-indicator-select"
+                      aria-required="true"
+                      class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                      data-testid="rek-quality-indicator-select"
+                      id="rek-quality-indicator-select"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </div>
+                    <input
+                      aria-hidden="true"
+                      aria-invalid="false"
+                      aria-labelledby="rek-quality-indicator-label"
+                      class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                      data-analyticsid="rek-quality-indicator-input"
+                      data-testid="rek-quality-indicator-input"
+                      id="rek-quality-indicator-input"
+                      required=""
+                      tabindex="-1"
+                      value=""
+                    />
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                      data-testid="ArrowDropDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M7 10l5 5 5-5z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-v2j61i-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          data-testid="standard-card-grant-details"
+          id="standard-card-grant-details"
+          style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+        >
+          <div
+            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          >
+            <div
+              class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+            >
+              <h3
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                data-testid="standard-card-grant-details-header"
+                id="standard-card-grant-details-header"
+              >
+                Grant details
+              </h3>
+            </div>
+          </div>
+          <div
+            class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+            data-analyticsid="standard-card-grant-details-content"
+            data-testid="standard-card-grant-details-content"
+            id="standard-card-grant-details-content"
+          >
+            <div>
+              Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                style="margin-top: 8px;"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    data-testid="rek-grant-agency"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                      data-shrink="false"
+                      data-testid="rek-grant-agency-label"
+                      for="rek-grant-agency-input"
+                      id="rek-grant-agency-label"
+                    >
+                      Funder/Sponsor name
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-invalid="false"
+                        aria-label="Funder/Sponsor name"
+                        autocomplete="off"
+                        class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        data-analyticsid="rek-grant-agency-input"
+                        data-testid="rek-grant-agency-input"
+                        id="rek-grant-agency-input"
+                        label="Funder/Sponsor name"
+                        name="grantAgencyName"
+                        placeholder="Funder/sponsor name for this work"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    data-testid="rek-grant-id"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                      data-shrink="false"
+                      data-testid="rek-grant-id-label"
+                      for="rek-grant-id-input"
+                      id="rek-grant-id-label"
+                    >
+                      Grant ID
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                    >
+                      <input
+                        aria-invalid="false"
+                        aria-label="Grant ID"
+                        class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        data-analyticsid="rek-grant-id-input"
+                        data-testid="rek-grant-id-input"
+                        disabled=""
+                        id="rek-grant-id-input"
+                        label="Grant ID"
+                        name="grantId"
+                        placeholder="Grant number for this work"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+                  >
+                    Accepts IDs or full URLs
+                  </div>
+                </div>
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                  >
+                    <span
+                      class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                      style="margin-bottom: -3px;"
+                    >
+                       
+                       
+                    </span>
+                    <div
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    >
+                      <div
+                        aria-disabled="true"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-labelledby="rek-grant-type-select"
+                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        data-testid="rek-grant-type-select"
+                        id="rek-grant-type-select"
+                        role="combobox"
+                      >
+                        Funder/Sponsor type
+                      </div>
+                      <input
+                        aria-hidden="true"
+                        aria-invalid="false"
+                        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                        data-testid="rek-grant-type-input"
+                        disabled=""
+                        id="rek-grant-type-input"
+                        name="grantAgencyType"
+                        placeholder="Funder/Sponsor type"
+                        tabindex="-1"
+                        value=""
+                      />
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                        data-testid="ArrowDropDownIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M7 10l5 5 5-5z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+                    data-analyticsid="rek-grant-add"
+                    data-testid="rek-grant-add"
+                    disabled=""
+                    id="rek-grant-add"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    Add grant
+                  </button>
+                </div>
               </div>
             </div>
           </div>

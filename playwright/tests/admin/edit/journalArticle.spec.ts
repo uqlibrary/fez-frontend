@@ -31,7 +31,7 @@ test.describe('Journal Article admin edit', () => {
             `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
         );
         await expect(page.locator('button[aria-label="Learn about keyboard shortcuts"]')).toBeVisible();
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
         await adminEditNoAlerts(page);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');

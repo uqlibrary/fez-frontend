@@ -82,6 +82,12 @@ export default {
               ]
             : []),
     ],
+    relatedServices: () => [
+        {
+            title: 'Related Services',
+            groups: [['relatedServices']],
+        },
+    ],
     notes: () => [
         {
             title: 'Additional notes',
