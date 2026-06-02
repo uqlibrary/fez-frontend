@@ -1,7 +1,6 @@
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
 import { ORCID_BASE_URL } from '../config/general';
-import _ from 'lodash';
 
 /* istanbul ignore next */
 global.dd = console.dir.bind(console);
@@ -434,17 +433,11 @@ export const reorderObjectKeys = (object, keys) =>
     }, {});
 
 /**
- * @param {*} object
+ * @param object
  * @return {boolean}
  */
-export const isEmptyObject = object => (_.isPlainObject(object) ? Object.keys(object)?.length === 0 : false);
-
-/**
- * @param {*}  object
- * @return {boolean}
- */
-export const isEmptyAttributesObject = object =>
-    _.isPlainObject(object) && _.every(object, value => value === undefined || value === null || value === '');
+export const isEmptyObject = object =>
+    object && typeof object === 'object' && !(object instanceof Array) ? Object.keys(object)?.length === 0 : false;
 
 /**
  * Get a subset of an object for a given set of keys

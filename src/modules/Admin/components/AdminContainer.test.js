@@ -128,22 +128,24 @@ describe('AdminContainer component', () => {
         expect(container).toMatchSnapshot();
     });
 
-    // it('should render when form errors are present', async () => {
-    //     useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-    //     const { container } = setup({
-    //         state: {
-    //             recordToView: { ...recordWithDatastreams, rek_title: null, rek_date: null },
-    //         },
-    //     });
-    //
-    //     await waitFor(
-    //         () =>
-    //             expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toHaveTextContent(
-    //                 '2',
-    //             ),
-    //         { timeout: 5000 },
-    //     );
-    // });
+    it('should render when form errors are present', async () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        const actualHook = jest.requireActual('../../../hooks');
+        jest.spyOn(require('../../../hooks'), 'useForm').mockImplementation(() => ({
+            ...actualHook.useValidatedForm(),
+            formState: {
+                errors: {
+                    bibliographicSection: {
+                        rek_date: 'Publication date is required',
+                        rek_title: 'Title is required',
+                    },
+                },
+            },
+        }));
+
+        const { container } = setup({});
+        expect(container.querySelector('[role=tab][aria-selected=true] .MuiBadge-badge')).toHaveTextContent('2');
+    });
 
     it('should render with an empty record', () => {
         useParams.mockImplementation(() => ({ pid: 'UQ:123456' }));

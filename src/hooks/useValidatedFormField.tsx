@@ -12,7 +12,7 @@ export const useValidatedFormField = (fieldPath: string) => {
         // bail if there is already an error
         if (!fieldPath || hasError) return;
 
-        // invoke validation
+        // otherwise, invoke validation
         (async () => await trigger(fieldPath))();
     }, [trigger, hasError]);
 };

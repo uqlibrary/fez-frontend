@@ -44,7 +44,7 @@ export const GrantListEditorForm = ({
     const isDirty = JSON.stringify(grant) !== defaultRowJson;
 
     // propagate isDirty state
-    useEffect(() => onDirty?.(isDirty), [isDirty]);
+    useEffect(() => onDirty?.(isDirty), [onDirty, isDirty]);
 
     // handle row editing
     useEffect(() => {
