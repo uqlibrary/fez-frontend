@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
-import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { ValidatedField } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/GridLegacy';
 import { fieldConfig } from 'config/admin';
@@ -9,13 +9,10 @@ import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'c
 import { useRecordContext } from 'context';
 
 import { default as Controller } from './AdminController';
-import { useValidatedFormField } from '../../../../hooks/useValidatedFormField';
 
 export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const { record } = useRecordContext();
     const form = useFormContext();
-    useValidatedFormField(fieldConfig?.default?.[field]?.componentProps?.name);
-
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';
@@ -47,7 +44,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
 
     return (
         <Grid item xs={12} md={12 / group.length}>
-            <Field
+            <ValidatedField
                 name={componentProps.name}
                 control={form.control}
                 controller={Controller}

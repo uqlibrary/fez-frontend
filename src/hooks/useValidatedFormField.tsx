@@ -2,17 +2,17 @@ import { useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 /**
- * @param {string} fieldPath
+ * @param {string} fieldPath. .e.g. 'grants', 'bibliographicSection.rek_title'
  */
-export const useValidatedFormField = fieldPath => {
+export const useValidatedFormField = (fieldPath: string) => {
     const { trigger, getFieldState } = useFormContext();
     const hasError = !!getFieldState(fieldPath)?.error?.message?.trim?.();
 
     useEffect(() => {
-        // bail if there are already errors
+        // bail if there is already an error
         if (!fieldPath || hasError) return;
 
-        // invoke validation on field render
+        // invoke validation
         (async () => await trigger(fieldPath))();
     }, [trigger, hasError]);
 };
