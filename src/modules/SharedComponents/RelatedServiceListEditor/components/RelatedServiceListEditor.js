@@ -28,7 +28,12 @@ const RelatedServiceListEditor = ({
     const [isFormDirty, setIsFormDirty] = useState(false);
     const isEditing = !!relatedServiceSelectedToEdit;
     const hasError = !!state?.error;
-    const { clearErrors, setError, setValue } = useFormContext();
+    const { clearErrors, setError, setValue } = {
+        clearErrors: null,
+        setError: null,
+        setValue: null,
+        ...useFormContext(),
+    };
 
     // clear error onUnmount
     useEffect(() => () => clearErrors?.(name), []);
@@ -39,7 +44,7 @@ const RelatedServiceListEditor = ({
             setError?.(name, { type: 'validation', message: globalLocale.validationErrors.relatedServices });
             return;
         }
-        clearErrors?.(name);
+        if (hasError) clearErrors?.(name);
     }, [clearErrors, setError, hasError, isFormDirty, isEditing, name]);
 
     // propagate input changes to `related services`

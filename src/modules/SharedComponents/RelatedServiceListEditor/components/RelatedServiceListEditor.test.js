@@ -1,22 +1,29 @@
 import React from 'react';
 import RelatedServiceListEditor from './RelatedServiceListEditor';
-import { render, fireEvent, within, WithReduxStore } from 'test-utils';
+import { render as defaultRender, fireEvent, within, WithReduxStore } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
 import { locale } from '../../../../locale';
 
 const mockSetValue = jest.fn();
-function setup(testProps = {}, renderer = render) {
+const mockSetError = jest.fn();
+const mockClearErrors = jest.fn();
+
+const services = [
+    { relatedServiceId: '1111', relatedServiceDesc: 'desc 1' },
+    { relatedServiceId: '2222', relatedServiceDesc: 'desc 2' },
+];
+
+function setup(testProps = {}, render = defaultRender) {
     const props = {
         disabled: false,
         state: {},
         locale: {},
         required: true,
-        hideType: false,
         ...testProps,
     };
-    return renderer(
+    return render(
         <WithReduxStore>
-            <FormProvider setValue={mockSetValue}>
+            <FormProvider setValue={mockSetValue} setError={mockSetError} clearErrors={mockClearErrors}>
                 <RelatedServiceListEditor {...props} />
             </FormProvider>
         </WithReduxStore>,
@@ -24,284 +31,154 @@ function setup(testProps = {}, renderer = render) {
 }
 
 describe('RelatedServiceListEditor', () => {
-    beforeEach(() => {
-        jest.resetAllMocks();
+    beforeEach(() => jest.resetAllMocks());
+
+    it('should render with default state', () => {
+        const { getByTestId, queryByTestId } = setup();
+        expect(getByTestId('rek-related-service-id-input')).toBeInTheDocument();
+        expect(getByTestId('rek-related-service-desc-input')).toBeInTheDocument();
+        expect(queryByTestId('rek-related-service-list')).not.toBeInTheDocument();
     });
 
-    it('should render default view', () => {
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
+    it('should render given list', () => {
+        const { getByTestId } = setup({ name: 'test', value: services });
+        const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(list).toHaveLength(2);
     });
 
-    it('should render with default given value', () => {
-        const { container } = setup({
-            name: 'TestField',
-            value: [
-                {
-                    relatedServiceId: '1234',
-                    relatedServiceDesc: 'desc',
-                },
-            ],
-            locale: {
-                form: {},
-            },
-        });
-        expect(container).toMatchSnapshot();
+    it('should render error from state', () => {
+        const { getByText } = setup({ state: { error: 'Test error' } });
+        expect(getByText('Test error')).toBeInTheDocument();
     });
 
-    it('should render error from props', () => {
-        const { container } = setup({
-            state: {
-                error: <span>Some error</span>,
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render error from props as children', () => {
-        const { container } = setup({
-            state: {
-                error: (
-                    <p>
-                        <span>Test error 1</span>
-                        <span>Test error 2</span>
-                    </p>
-                ),
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render string error from props', () => {
-        const { container } = setup({
-            state: {
-                error: 'Test error',
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should add related service to the list', () => {
-        const { getByRole, container } = setup();
+    it('should add a related service to an empty list', () => {
+        const { getByTestId, getByRole } = setup({ name: 'test' });
 
         fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: '123' } });
-        fireEvent.change(getByRole('textbox', { name: 'Related Service Description' }), { target: { value: 'desc' } });
+        fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'desc' } });
         fireEvent.click(getByRole('button', { name: 'Add related service' }));
 
-        expect(container).toMatchSnapshot();
+        const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(list).toHaveLength(1);
+        expect(mockSetValue).toHaveBeenCalledWith('test', [{ relatedServiceId: '123', relatedServiceDesc: 'desc' }], {
+            shouldValidate: true,
+        });
     });
 
-    it('should render scroll class if grants are more than 3', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-        };
+    it('should add a related service to an empty list', () => {
+        const { getByTestId, getByRole } = setup({ name: 'test', value: services });
 
-        const service2 = {
-            relatedServiceId: '2222',
-            relatedServiceDesc: 'desc',
-        };
+        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: '123' } });
+        fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'desc' } });
+        fireEvent.click(getByRole('button', { name: 'Add related service' }));
 
-        const service3 = {
-            relatedServiceId: '3333',
-            relatedServiceDesc: 'desc',
-        };
-
-        const service4 = {
-            relatedServiceId: '4444',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { container } = setup({
-            name: 'test',
-            value: [service1, service2, service3, service4],
-            classes: {
-                scroll: 'scroll-class',
+        const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(list).toHaveLength(3);
+        expect(mockSetValue).toHaveBeenCalledWith(
+            'test',
+            [...services, { relatedServiceId: '123', relatedServiceDesc: 'desc' }],
+            {
+                shouldValidate: true,
             },
-        });
-        expect(container).toMatchSnapshot();
+        );
     });
 
-    it('should move the grant up', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-        };
+    it('should call setError when form is dirty without adding, and clearErrors when clean', () => {
+        const { getByRole, rerender } = setup({ name: 'my-input' });
 
-        const service2 = {
-            relatedServiceId: '2222',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [service1, service2],
-        });
-        expect(container).toMatchSnapshot();
-
-        let serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        expect(serviceList.length).toEqual(2);
-        fireEvent.click(within(serviceList[1]).getByRole('button', { name: 'Move entry up the order' }));
-        serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        fireEvent.click(within(serviceList[1]).getByRole('button', { name: 'Move entry up the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not move the grant up at index 0', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [service1],
-        });
-        expect(container).toMatchSnapshot();
-
-        const serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        fireEvent.click(within(serviceList[0]).getByRole('button', { name: 'Move entry up the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not move the service up the disabled grant', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-            disabled: true,
-        };
-
-        const service2 = {
-            relatedServiceId: '2222',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [service1, service2],
-        });
-        expect(container).toMatchSnapshot();
-
-        const serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        fireEvent.click(within(serviceList[1]).getByRole('button', { name: 'Move entry up the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should move the service down', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-        };
-
-        const service2 = {
-            relatedServiceId: '2222',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [service1, service2],
-        });
-        expect(container).toMatchSnapshot();
-
-        const serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        fireEvent.click(within(serviceList[0]).getByRole('button', { name: 'Move entry down the order' }));
-        fireEvent.click(within(serviceList[1]).getByRole('button', { name: 'Move entry down the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should delete grant', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-        };
-
-        const service2 = {
-            relatedServiceId: '2222',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [service1, service2],
-        });
-        expect(container).toMatchSnapshot();
-
-        const serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        fireEvent.click(within(serviceList[0]).getByRole('button', { name: 'Remove this entry' }));
-        fireEvent.click(getByTestId('confirm-dialog-box'));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should delete all services', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-        };
-
-        const service2 = {
-            relatedServiceId: '2222',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { getByRole, getByTestId, container } = setup({
-            name: 'test',
-            value: [service1, service2],
-        });
-        expect(container).toMatchSnapshot();
-        fireEvent.click(getByRole('button', { name: 'Remove all entries' }));
-        fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should edit selected service correctly', () => {
-        const service1 = {
-            relatedServiceId: '1111',
-            relatedServiceDesc: 'desc',
-        };
-
-        const service2 = {
-            relatedServiceId: '2222',
-            relatedServiceDesc: 'desc',
-        };
-
-        const { getByTestId, getByRole } = setup({
-            canEdit: true,
-            name: 'test',
-            value: [service1, service2],
-        });
-
-        let serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        fireEvent.click(within(serviceList[1]).getByRole('button', { name: 'Edit this entry' }));
-        fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'updated desc' } });
-        fireEvent.click(getByRole('button', { name: 'Edit related service' }));
-
-        serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        expect(within(serviceList[1]).getByText('updated desc')).toBeInTheDocument();
-    });
-
-    it('should call setValue on state change', () => {
-        const mockOnChange = jest.fn();
-        const mockSetError = jest.fn();
-        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setError: mockSetError });
-
-        const inputName = 'my-input';
-        const { getByRole } = setup({
-            onChange: mockOnChange,
-            name: inputName,
-        });
-
-        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: 'Test{enter}' } });
-        expect(mockOnChange).not.toHaveBeenCalledWith(true);
-        expect(mockOnChange).not.toHaveBeenCalledWith([]);
-        expect(mockSetError).toHaveBeenCalledWith(inputName, {
+        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: 'test' } });
+        expect(mockSetError).toHaveBeenCalledWith('my-input', {
             type: 'validation',
             message: locale.validationErrors.relatedServices,
         });
+
+        setup({ name: 'my-input', state: { error: locale.validationErrors.relatedServices } }, rerender);
+        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: '' } });
+        expect(mockClearErrors).toHaveBeenCalledWith('my-input');
+    });
+
+    it('should not call setError when editing an existing entry', () => {
+        const { getByTestId } = setup({ canEdit: true, name: 'test', value: services });
+
+        const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[0]).getByRole('button', { name: 'Edit this entry' }));
+
+        expect(mockSetError).not.toHaveBeenCalled();
+    });
+
+    it('should edit a selected service and update the list', () => {
+        const { getByTestId, getByRole } = setup({ canEdit: true, name: 'test', value: services });
+
+        let list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[1]).getByRole('button', { name: 'Edit this entry' }));
+        fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'updated desc' } });
+        fireEvent.click(getByRole('button', { name: 'Edit related service' }));
+
+        list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(within(list[1]).getByText('updated desc')).toBeInTheDocument();
+    });
+
+    it('should move a service up and down', () => {
+        const { getByTestId } = setup({ name: 'test', value: services });
+
+        let list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(within(list[0]).getByText('1111')).toBeInTheDocument();
+
+        fireEvent.click(within(list[1]).getByRole('button', { name: 'Move entry up the order' }));
+        list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(within(list[0]).getByText('2222')).toBeInTheDocument();
+
+        fireEvent.click(within(list[0]).getByRole('button', { name: 'Move entry down the order' }));
+        list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(within(list[0]).getByText('1111')).toBeInTheDocument();
+    });
+
+    it('should not move up when previous entry is disabled', () => {
+        const services = [
+            { relatedServiceId: '1111', relatedServiceDesc: 'desc 1', disabled: true },
+            { relatedServiceId: '2222', relatedServiceDesc: 'desc 2' },
+        ];
+        const { getByTestId } = setup({ name: 'test', value: services });
+
+        const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[1]).getByRole('button', { name: 'Move entry up the order' }));
+
+        const updatedList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        expect(within(updatedList[0]).getByText('1111')).toBeInTheDocument();
+        expect(within(updatedList[1]).getByText('2222')).toBeInTheDocument();
+    });
+
+    it('should delete a service', () => {
+        const { getByTestId, queryByText } = setup({ name: 'test', value: services });
+
+        const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[0]).getByRole('button', { name: 'Remove this entry' }));
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+
+        expect(queryByText('desc 1')).not.toBeInTheDocument();
+        expect(queryByText('desc 2')).toBeInTheDocument();
+    });
+
+    it('should delete all services', () => {
+        const { getByTestId, getByRole, queryByTestId } = setup({ name: 'test', value: services });
+
+        fireEvent.click(getByRole('button', { name: 'Remove all entries' }));
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+
+        expect(queryByTestId('rek-related-service-list')).not.toBeInTheDocument();
+        expect(mockSetValue).toHaveBeenCalledWith('test', [], { shouldValidate: true });
+    });
+
+    it('should apply scroll style when more than 3 services', () => {
+        const { getByTestId } = setup({
+            name: 'test',
+            value: [
+                { relatedServiceId: '1111', relatedServiceDesc: 'desc' },
+                { relatedServiceId: '2222', relatedServiceDesc: 'desc' },
+                { relatedServiceId: '3333', relatedServiceDesc: 'desc' },
+                { relatedServiceId: '4444', relatedServiceDesc: 'desc' },
+            ],
+        });
+        expect(getByTestId('rek-related-service-list')).toHaveStyle({ overflowY: 'scroll' });
     });
 });

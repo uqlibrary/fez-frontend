@@ -1,340 +1,188 @@
 import React from 'react';
 import GrantListEditor from './GrantListEditor';
-import { rtlRender, fireEvent, within } from 'test-utils';
+import { render as defaultRender, fireEvent, within } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
 import { locale } from '../../../../locale';
 
 const mockSetValue = jest.fn();
-function setup(testProps = {}) {
+const mockSetError = jest.fn();
+const mockClearErrors = jest.fn();
+
+function setup(testProps = {}, render = defaultRender) {
     const props = {
         disabled: false,
         state: {},
-        onChange: jest.fn(),
         locale: {},
         required: true,
-        hideType: false,
         ...testProps,
     };
-    return rtlRender(
-        <FormProvider setValue={mockSetValue}>
+    return render(
+        <FormProvider setValue={mockSetValue} setError={mockSetError} clearErrors={mockClearErrors}>
             <GrantListEditor {...props} />
         </FormProvider>,
     );
 }
 
 describe('GrantListEditor', () => {
-    beforeEach(() => {
-        jest.resetAllMocks();
+    const grants = [
+        { grantAgencyName: 'Test 1', grantId: '123', grantAgencyType: 'Testing 1' },
+        { grantAgencyName: 'Test 2', grantId: '456', grantAgencyType: 'Testing 2' },
+    ];
+
+    beforeEach(() => jest.resetAllMocks());
+
+    it('should render with default state', () => {
+        const { getByTestId, queryByTestId } = setup();
+        expect(getByTestId('rek-grant-agency-input')).toBeInTheDocument();
+        expect(getByTestId('rek-grant-id-input')).toBeInTheDocument();
+        expect(queryByTestId('rek-grant-list')).not.toBeInTheDocument();
     });
 
-    it('should render default view', () => {
-        const { container } = setup();
-        expect(container).toMatchSnapshot();
+    it('should render given list', () => {
+        const { getByTestId } = setup({ name: 'test', value: grants });
+        const list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(list).toHaveLength(2);
     });
 
-    it('should render with default given value', () => {
-        const { container } = setup({
-            name: 'TestField',
-            value: [
-                {
-                    grantAgencyName: 'Testing',
-                    grantId: '1234',
-                    grantAgencyType: 'Test',
-                },
-            ],
-            locale: {
-                form: {},
-            },
-        });
-        expect(container).toMatchSnapshot();
+    it('should render error from state', () => {
+        const { getByText } = setup({ state: { error: 'Test error' } });
+        expect(getByText('Test error')).toBeInTheDocument();
     });
 
-    it('should render error from props', () => {
-        const { container } = setup({
-            state: {
-                error: <span>Some error</span>,
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
+    it('should add a grant to an empty list', () => {
+        const { getByTestId, getByRole, getByLabelText } = setup({ name: 'test' });
 
-    it('should render error from props as children', () => {
-        const { container } = setup({
-            state: {
-                error: (
-                    <p>
-                        <span>Test error 1</span>
-                        <span>Test error 2</span>
-                    </p>
-                ),
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render string error from props', () => {
-        const { container } = setup({
-            state: {
-                error: 'Test error',
-            },
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render with default given value is List', () => {
-        const { container } = setup({
-            name: 'TestField',
-            value: [
-                {
-                    grantAgencyName: 'Testing',
-                    grantId: '1234',
-                    grantAgencyType: 'Test',
-                },
-            ],
-        });
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should add grant to the list', () => {
-        const { getByRole, getByLabelText, container } = setup();
-
-        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
-        fireEvent.change(getByRole('textbox', { name: 'Grant ID' }), { target: { value: '123' } });
+        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Agency' } });
+        fireEvent.change(getByRole('textbox', { name: 'Grant ID' }), { target: { value: 'G-001' } });
         fireEvent.mouseDown(getByLabelText('Funder/Sponsor type'));
         fireEvent.click(getByRole('option', { name: 'Government' }));
         fireEvent.click(getByRole('button', { name: 'Add grant' }));
 
-        expect(container).toMatchSnapshot();
+        const list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(list).toHaveLength(1);
+        expect(mockSetValue).toHaveBeenCalledWith(
+            'test',
+            [{ grantAgencyName: 'Agency', grantId: 'G-001', grantAgencyType: '453985' }],
+            { shouldValidate: true },
+        );
     });
 
-    it('should render scroll class if grants are more than 3', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-        };
+    it('should add a grant to the list', () => {
+        const { getByTestId, getByRole, getByLabelText } = setup({ name: 'test', value: grants });
 
-        const grant2 = {
-            grantAgencyName: 'Test 2',
-            grantId: '456',
-            grantAgencyType: 'Testing 2',
-        };
+        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Agency' } });
+        fireEvent.change(getByRole('textbox', { name: 'Grant ID' }), { target: { value: 'G-001' } });
+        fireEvent.mouseDown(getByLabelText('Funder/Sponsor type'));
+        fireEvent.click(getByRole('option', { name: 'Government' }));
+        fireEvent.click(getByRole('button', { name: 'Add grant' }));
 
-        const grant3 = {
-            grantAgencyName: 'Test 3',
-            grantId: '456',
-            grantAgencyType: 'Testing 3',
-        };
-
-        const grant4 = {
-            grantAgencyName: 'Test 4',
-            grantId: '456',
-            grantAgencyType: 'Testing 4',
-        };
-
-        const { container } = setup({
-            name: 'test',
-            value: [grant1, grant2, grant3, grant4],
-            classes: {
-                scroll: 'scroll-class',
-            },
-        });
-        expect(container).toMatchSnapshot();
+        const list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(list).toHaveLength(3);
+        expect(mockSetValue).toHaveBeenCalledWith(
+            'test',
+            [...grants, { grantAgencyName: 'Agency', grantId: 'G-001', grantAgencyType: '453985' }],
+            { shouldValidate: true },
+        );
     });
 
-    it('should move the grant up', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-        };
+    it('should call setError when form is dirty without adding, and clearErrors when clean', () => {
+        const { getByRole, rerender } = setup({ name: 'my-input' });
 
-        const grant2 = {
-            grantAgencyName: 'Test 2',
-            grantId: '456',
-            grantAgencyType: 'Testing 2',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
-        });
-        expect(container).toMatchSnapshot();
-
-        let grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        expect(grantList.length).toEqual(2);
-        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry up the order' }));
-        grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry up the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not move the grant up at index 0', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1],
-        });
-        expect(container).toMatchSnapshot();
-
-        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        fireEvent.click(within(grantList[0]).getByRole('button', { name: 'Move entry up the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should not move the grant up the disabled grant', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-            disabled: true,
-        };
-
-        const grant2 = {
-            grantAgencyName: 'Test 2',
-            grantId: '456',
-            grantAgencyType: 'Testing 2',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
-        });
-        expect(container).toMatchSnapshot();
-
-        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry up the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should move the grant down', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-        };
-
-        const grant2 = {
-            grantAgencyName: 'Test 2',
-            grantId: '456',
-            grantAgencyType: 'Testing 2',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
-        });
-        expect(container).toMatchSnapshot();
-
-        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        fireEvent.click(within(grantList[0]).getByRole('button', { name: 'Move entry down the order' }));
-        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Move entry down the order' }));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should delete grant', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-        };
-
-        const grant2 = {
-            grantAgencyName: 'Test 2',
-            grantId: '456',
-            grantAgencyType: 'Testing 2',
-        };
-
-        const { getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
-        });
-        expect(container).toMatchSnapshot();
-
-        const grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        fireEvent.click(within(grantList[0]).getByRole('button', { name: 'Remove this entry' }));
-        fireEvent.click(getByTestId('confirm-dialog-box'));
-
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should delete all grants', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-        };
-
-        const grant2 = {
-            grantAgencyName: 'Test 2',
-            grantId: '456',
-            grantAgencyType: 'Testing 2',
-        };
-
-        const { getByRole, getByTestId, container } = setup({
-            name: 'test',
-            value: [grant1, grant2],
-        });
-        expect(container).toMatchSnapshot();
-        fireEvent.click(getByRole('button', { name: 'Remove all entries' }));
-        fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should edit selected grant correctly', () => {
-        const grant1 = {
-            grantAgencyName: 'Test 1',
-            grantId: '123',
-            grantAgencyType: 'Testing 1',
-        };
-
-        const grant2 = {
-            grantAgencyName: 'Test 2',
-            grantId: '456',
-            grantAgencyType: 'Testing 2',
-        };
-
-        const { getByTestId, getByRole } = setup({
-            canEdit: true,
-            name: 'test',
-            value: [grant1, grant2],
-        });
-
-        let grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        fireEvent.click(within(grantList[1]).getByRole('button', { name: 'Edit this entry' }));
-        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { value: 'Agency 2' } });
-        fireEvent.click(getByRole('button', { name: 'Edit grant' }));
-
-        grantList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        expect(within(grantList[1]).getByText('Agency 2')).toBeInTheDocument();
-    });
-
-    it('should call setError on isFormDirty state changes', async () => {
-        const mockOnChange = jest.fn();
-        const mockSetError = jest.fn();
-        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setError: mockSetError });
-
-        const inputName = 'my-input';
-        const { getByRole } = setup({
-            onChange: mockOnChange,
-            name: inputName,
-        });
         fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
-
-        expect(mockOnChange).not.toHaveBeenCalledWith(true);
-        expect(mockOnChange).not.toHaveBeenCalledWith([]);
-        expect(mockSetError).toHaveBeenCalledWith(inputName, {
+        expect(mockSetError).toHaveBeenCalledWith('my-input', {
             type: 'validation',
             message: locale.validationErrors.grants,
         });
+
+        setup({ name: 'my-input', state: { error: locale.validationErrors.grants } }, rerender);
+        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: '' } });
+        expect(mockClearErrors).toHaveBeenCalledWith('my-input');
+    });
+
+    it('should not call setError when editing an existing entry', () => {
+        const { getByTestId } = setup({ canEdit: true, name: 'test', value: grants });
+
+        const list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[0]).getByRole('button', { name: 'Edit this entry' }));
+
+        expect(mockSetError).not.toHaveBeenCalled();
+    });
+
+    it('should edit a selected grant and update the list', () => {
+        const { getByTestId, getByRole } = setup({ canEdit: true, name: 'test', value: grants });
+
+        let list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[1]).getByRole('button', { name: 'Edit this entry' }));
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { value: 'Updated Agency' } });
+        fireEvent.click(getByRole('button', { name: 'Edit grant' }));
+
+        list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(within(list[1]).getByText('Updated Agency')).toBeInTheDocument();
+    });
+
+    it('should move a grant up and down', () => {
+        const { getByTestId } = setup({ name: 'test', value: grants });
+
+        let list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(within(list[0]).getByText('Test 1')).toBeInTheDocument();
+
+        fireEvent.click(within(list[1]).getByRole('button', { name: 'Move entry up the order' }));
+        list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(within(list[0]).getByText('Test 2')).toBeInTheDocument();
+
+        fireEvent.click(within(list[0]).getByRole('button', { name: 'Move entry down the order' }));
+        list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(within(list[0]).getByText('Test 1')).toBeInTheDocument();
+    });
+
+    it('should not move up when previous entry is disabled', () => {
+        const { getByTestId } = setup({
+            name: 'test',
+            value: [
+                { grantAgencyName: 'Test 1', grantId: '123', grantAgencyType: 'Testing 1', disabled: true },
+                { grantAgencyName: 'Test 2', grantId: '456', grantAgencyType: 'Testing 2' },
+            ],
+        });
+
+        const list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[1]).getByRole('button', { name: 'Move entry up the order' }));
+
+        const updatedList = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        expect(within(updatedList[0]).getByText('Test 1')).toBeInTheDocument();
+        expect(within(updatedList[1]).getByText('Test 2')).toBeInTheDocument();
+    });
+
+    it('should delete a grant', () => {
+        const { getByTestId, queryByText } = setup({ name: 'test', value: grants });
+
+        const list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
+        fireEvent.click(within(list[0]).getByRole('button', { name: 'Remove this entry' }));
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+
+        expect(queryByText('Test 1')).not.toBeInTheDocument();
+        expect(queryByText('Test 2')).toBeInTheDocument();
+    });
+
+    it('should delete all grants', () => {
+        const { getByTestId, getByRole, queryByTestId } = setup({ name: 'test', value: grants });
+
+        fireEvent.click(getByRole('button', { name: 'Remove all entries' }));
+        fireEvent.click(getByTestId('confirm-dialog-box'));
+
+        expect(queryByTestId('rek-grant-list')).not.toBeInTheDocument();
+        expect(mockSetValue).toHaveBeenCalledWith('test', [], { shouldValidate: true });
+    });
+
+    it('should apply scroll style when more than 3 grants', () => {
+        const { getByTestId } = setup({
+            name: 'test',
+            value: [
+                { grantAgencyName: 'Test 1', grantId: '123', grantAgencyType: 'Testing 1' },
+                { grantAgencyName: 'Test 2', grantId: '456', grantAgencyType: 'Testing 2' },
+                { grantAgencyName: 'Test 3', grantId: '789', grantAgencyType: 'Testing 3' },
+                { grantAgencyName: 'Test 4', grantId: '000', grantAgencyType: 'Testing 4' },
+            ],
+        });
+        expect(getByTestId('rek-grant-list')).toHaveStyle({ overflowY: 'scroll' });
     });
 });

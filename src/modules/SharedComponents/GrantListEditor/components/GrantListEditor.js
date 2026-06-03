@@ -29,7 +29,12 @@ const GrantListEditor = ({
     const [isFormDirty, setIsFormDirty] = useState(false);
     const isEditing = !!grantSelectedToEdit;
     const hasError = !!state?.error;
-    const { clearErrors, setError, setValue } = useFormContext();
+    const { clearErrors, setError, setValue } = {
+        clearErrors: null,
+        setError: null,
+        setValue: null,
+        ...useFormContext(),
+    };
 
     // clear error onUnmount
     useEffect(() => () => clearErrors?.(name), []);
@@ -40,7 +45,7 @@ const GrantListEditor = ({
             setError?.(name, { type: 'validation', message: globalLocale.validationErrors.grants });
             return;
         }
-        clearErrors?.(name);
+        if (hasError) clearErrors?.(name);
     }, [clearErrors, setError, hasError, isFormDirty, isEditing, name]);
 
     // propagate input changes to `grants`

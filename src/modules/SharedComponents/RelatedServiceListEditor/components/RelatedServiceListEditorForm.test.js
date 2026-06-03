@@ -4,12 +4,10 @@ import { render, fireEvent, WithReduxStore } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
-        onAdd: testProps.onAdd || jest.fn(),
-        errorText: null,
+        onAdd: jest.fn(),
+        onDirty: jest.fn(),
         disabled: false,
         required: true,
-        hideType: false,
-        isPopulated: testProps.isPopulated || jest.fn(),
         ...testProps,
     };
     return render(
@@ -20,86 +18,123 @@ function setup(testProps = {}) {
 }
 
 describe('RelatedServiceListEditorForm', () => {
-    it('should render with default props', () => {
-        const { container, getByTestId, getByText } = setup();
+    beforeEach(() => jest.resetAllMocks());
+
+    it('should render default state', () => {
+        const { getByTestId, getByText } = setup();
         expect(
             getByText(
                 "Add the Related Service's ID and description - then click the ADD RELATED SERVICE button to add to the list",
             ),
         ).toBeInTheDocument();
-
         expect(getByTestId('rek-related-service-id-input')).toBeInTheDocument();
         expect(getByTestId('rek-related-service-desc-input')).toBeInTheDocument();
-        expect(getByTestId('rek-related-service-id-helper-text')).toBeInTheDocument();
-        expect(getByText('This field is required')).toBeInTheDocument();
-        expect(container).toMatchSnapshot();
     });
 
-    it('should set related service id as a non required input', () => {
-        const { queryByTestId, queryByText } = setup({ required: false });
+    it('should show required error on service id when required and empty, or when dirty with empty id', () => {
+        const { queryByTestId, queryByText, unmount } = setup({ required: true });
+        expect(queryByTestId('rek-related-service-id-helper-text')).toBeInTheDocument();
+        expect(queryByText('This field is required')).toBeInTheDocument();
+        unmount();
+
+        setup({ required: false });
         expect(queryByTestId('rek-related-service-id-helper-text')).not.toBeInTheDocument();
         expect(queryByText('This field is required')).not.toBeInTheDocument();
+
+        fireEvent.change(queryByTestId('rek-related-service-desc-input'), {
+            target: { name: 'relatedServiceDesc', value: 'desc' },
+        });
+        expect(queryByTestId('rek-related-service-id-helper-text')).toBeInTheDocument();
     });
 
-    it('should disable add related service button when id is empty', () => {
-        const { getByTestId, getByRole } = setup({ required: false });
+    it('should call onDirty(true) when form is changed and onDirty(false) when reset to default', () => {
+        const onDirty = jest.fn();
+        const { getByTestId } = setup({ onDirty, required: false });
 
-        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '123' } });
-        expect(getByRole('button', { name: 'Add related service' })).not.toHaveAttribute('disabled', '');
+        expect(onDirty).toHaveBeenCalledWith(false);
 
-        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '' } });
-        expect(getByRole('button', { name: 'Add related service' })).toHaveAttribute('disabled', '');
+        fireEvent.change(getByTestId('rek-related-service-desc-input'), {
+            target: { name: 'relatedServiceDesc', value: 'desc' },
+        });
+        expect(onDirty).toHaveBeenLastCalledWith(true);
+
+        fireEvent.change(getByTestId('rek-related-service-desc-input'), {
+            target: { name: 'relatedServiceDesc', value: '' },
+        });
+        expect(onDirty).toHaveBeenLastCalledWith(false);
     });
 
-    it('should add related service and pass isPopulated info', () => {
+    it('should not throw when onDirty is not provided', () => {
+        expect(() => {
+            const { getByTestId } = setup({ onDirty: undefined });
+            fireEvent.change(getByTestId('rek-related-service-desc-input'), {
+                target: { name: 'relatedServiceDesc', value: 'desc' },
+            });
+        }).not.toThrow();
+    });
+
+    it('should call onAdd and reset the form when Add related service is clicked', () => {
         const onAdd = jest.fn();
         const onDirty = jest.fn();
-        const { getByTestId } = setup({
-            onAdd,
-            onDirty,
+        const { getByTestId, getByRole } = setup({ onAdd, onDirty });
+
+        fireEvent.change(getByTestId('rek-related-service-id-input'), {
+            target: { name: 'relatedServiceId', value: '123' },
         });
-
-        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '1' } });
-        expect(onDirty).toHaveBeenLastCalledWith(true);
-        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '' } });
-        expect(onDirty).toHaveBeenLastCalledWith(false);
-        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '123' } });
-        expect(onDirty).toHaveBeenLastCalledWith(true);
-        fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'desc' } });
-
-        fireEvent.click(getByTestId('rek-related-service-add'));
-
-        expect(onDirty).toHaveBeenLastCalledWith(false);
-        expect(onAdd).toHaveBeenCalledWith({
-            relatedServiceId: '123',
-            relatedServiceDesc: 'desc',
+        fireEvent.change(getByTestId('rek-related-service-desc-input'), {
+            target: { name: 'relatedServiceDesc', value: 'desc' },
         });
+        fireEvent.click(getByRole('button', { name: 'Add related service' }));
+
+        expect(onAdd).toHaveBeenCalledWith({ relatedServiceId: '123', relatedServiceDesc: 'desc' });
+        expect(onDirty).toHaveBeenLastCalledWith(false);
+        expect(getByTestId('rek-related-service-id-input')).toHaveAttribute('value', '');
+        expect(getByTestId('rek-related-service-desc-input')).toHaveAttribute('value', '');
     });
 
-    it('should add related service when Enter key is pressed on desc field', () => {
-        const onAddFn = jest.fn();
-        const { getByTestId } = setup({ onAdd: onAddFn });
-        // no id
-        fireEvent.keyDown(getByTestId('rek-related-service-id-input'), { key: 'Enter', code: 13 });
-        expect(onAddFn).not.toHaveBeenCalled();
-
-        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: 'id' } });
-        fireEvent.keyDown(getByTestId('rek-related-service-desc-input'), { key: 'Esc', code: 27 });
-        expect(onAddFn).not.toHaveBeenCalled();
-
-        fireEvent.keyDown(getByTestId('rek-related-service-desc-input'), { key: 'Enter', code: 13 });
-        expect(onAddFn).toHaveBeenCalledWith({ relatedServiceId: 'id', relatedServiceDesc: '' });
-    });
-
-    it('should load form with selected related service information', () => {
-        const { getByTestId } = setup({
-            relatedServiceSelectedToEdit: {
-                relatedServiceId: '123',
-                relatedServiceDesc: 'desc',
-            },
+    it('should load selected service for editing and show Edit related service button', () => {
+        const { getByTestId, getByRole } = setup({
+            relatedServiceSelectedToEdit: { relatedServiceId: '123', relatedServiceDesc: 'desc' },
         });
-
         expect(getByTestId('rek-related-service-id-input')).toHaveAttribute('value', '123');
         expect(getByTestId('rek-related-service-desc-input')).toHaveAttribute('value', 'desc');
+        expect(getByRole('button', { name: 'Edit related service' })).toBeInTheDocument();
+    });
+
+    it('should disable Add button when id is empty and enable it when set', () => {
+        const { getByTestId, getByRole } = setup({ required: false });
+
+        expect(getByRole('button', { name: 'Add related service' })).toBeDisabled();
+
+        fireEvent.change(getByTestId('rek-related-service-id-input'), {
+            target: { name: 'relatedServiceId', value: '123' },
+        });
+        expect(getByRole('button', { name: 'Add related service' })).not.toBeDisabled();
+
+        fireEvent.change(getByTestId('rek-related-service-id-input'), {
+            target: { name: 'relatedServiceId', value: '' },
+        });
+        expect(getByRole('button', { name: 'Add related service' })).toBeDisabled();
+    });
+
+    it('should add on Enter key with id set, and not add without id or on other keys', () => {
+        const onAdd = jest.fn();
+        const { getByTestId } = setup({ onAdd });
+
+        // Enter with no id -> no add
+        fireEvent.keyDown(getByTestId('rek-related-service-desc-input'), { key: 'Enter', code: 13 });
+        expect(onAdd).not.toHaveBeenCalled();
+
+        fireEvent.change(getByTestId('rek-related-service-id-input'), {
+            target: { name: 'relatedServiceId', value: '123' },
+        });
+
+        // non-Enter key -> no add
+        fireEvent.keyDown(getByTestId('rek-related-service-desc-input'), { key: 'Esc', code: 27 });
+        expect(onAdd).not.toHaveBeenCalled();
+
+        // Enter with id -> add
+        fireEvent.keyDown(getByTestId('rek-related-service-desc-input'), { key: 'Enter', code: 13 });
+        expect(onAdd).toHaveBeenCalledWith({ relatedServiceId: '123', relatedServiceDesc: '' });
     });
 });
