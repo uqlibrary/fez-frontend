@@ -1,5 +1,8 @@
 import React from 'react';
 
+const getEditorDirtyStateErrorMessage = name =>
+    `You must click ADD ${name.toUpperCase()} to enter the value to the ${name.toLowerCase()}s list`;
+
 export default {
     validationErrors: {
         publicationSearch:
@@ -63,8 +66,8 @@ export default {
         requireChecked: 'Please accept deposit agreement',
         authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
-        grants: 'You must click ADD GRANT to enter the value to the grants list',
-        relatedServices: 'You must click ADD RELATED SERVICE to enter the value to the related services list',
+        grants: getEditorDirtyStateErrorMessage('grant'),
+        relatedServices: getEditorDirtyStateErrorMessage('related service'),
         keywords: 'Limited to [max] characters',
         commissionedResearchReport: 'Commissioned report confirmation is required',
     },
@@ -139,8 +142,8 @@ export default {
         title: 'Title is required',
         authorsAffiliation: 'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',
-        grants: 'You must click ADD GRANT to enter the value to the grants list',
-        relatedServices: 'You must click ADD RELATED SERVICE to enter the value to the related services list',
+        grants: getEditorDirtyStateErrorMessage('grant'),
+        relatedServices: getEditorDirtyStateErrorMessage('related service'),
         subjects: 'Subjects are required',
         rek_rights: 'Rights is required',
         rek_ands_collection_type: 'Dataset collection type is required',
