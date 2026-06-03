@@ -31,17 +31,27 @@ import Tooltip from '@mui/material/Tooltip';
 import { IdentifierIconLink } from 'modules/SharedComponents/IdentifierIconLink';
 import { getOneToManyRelationItemByOrder } from 'helpers/record';
 
-const renderLink = (link, value, testId = '') => {
+const renderLink = (link, value, testId = '', icon = '', iconHint = '') => {
     return (
         <Link to={link} {...{ ['data-testid']: testId || undefined }}>
             {value}
+            {icon && (
+                <Tooltip title={iconHint}>
+                    <span className={`fez-icon ${icon} medium`} style={{ margin: '0 4px' }} />
+                </Tooltip>
+            )}
         </Link>
     );
 };
 
 const renderKeywordLink = (item, subkey, data) => renderLink(pathConfig.list.keyword(item[subkey], data), data);
 
-const renderSubjectLink = (item, subkey, data) => renderLink(pathConfig.list.subject(item[subkey], data), data);
+const renderSubjectLink = (item, subkey, data) => {
+    const firstTwo = subkey.split('_').slice(0, 2).join('_');
+    const icon = item[firstTwo + '_icon'] ?? '';
+    const iconHint = icon === 'openalex' ? 'OpenAlex' : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
+    return renderLink(pathConfig.list.subject(item[subkey], data), data, '', icon, iconHint);
+};
 
 export const formatDate = (date, format = 'YYYY-MM-DD') => {
     return <DateCitationView format={format} date={date} prefix={''} suffix={''} data-testid="rek-date" />;
@@ -126,14 +136,6 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                     </Grid>
                 </Grid>
             </Box>
-        );
-    };
-
-    const renderLink = (link, value, testId = '') => {
-        return (
-            <Link to={link} {...{ ['data-testid']: testId || undefined }}>
-                {value}
-            </Link>
         );
     };
 
