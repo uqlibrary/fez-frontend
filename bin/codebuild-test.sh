@@ -44,17 +44,12 @@ printf "(Build of branch \"$CI_BRANCH\")\n"
 
 function check_code_style() {
     printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-    FILES=$(npm run codestyles:files -s)
-    if [[ "$?" == 0 ]]; then
+
+    if npm run eslint; then
         printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
     else
-        printf "\n\e[91mThese files should pass code style checks but do not:\e[0m\n\n"
-        for FILE in $FILES
-        do
-            printf "\t\e[31m$FILE\e[0m\n"
-        done
-        printf "\n* Please fix code styles and try again. Running '\e[1m npm run codestyles:fix:all \e[0m' is a good start."
-        printf "\n* You can run '\e[1m npm run eslint \e[0m' to view ESLint code quality issues, if any.\n\n"
+        printf "\n* Please fix the issues and try again."
+        printf "\n* Running '\e[1m npm run eslint:fix \e[0m' is a good start.\n\n"
         exit 1
     fi
 }

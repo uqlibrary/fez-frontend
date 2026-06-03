@@ -27,7 +27,7 @@ export const initialState = {
     },
 };
 
-const handlers: Record<string, (state: typeof initialState, action: any) => typeof initialState> = {
+const handlers: Record<string, (state: typeof initialState, action: unknown) => typeof initialState> = {
     [actions.JOURNAL_LOOKUP_LOADING]: state => ({
         ...state,
         itemsList: [],
