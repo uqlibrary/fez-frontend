@@ -131,7 +131,7 @@ describe('AdminContainer component', () => {
     it('should render when form errors are present', async () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
         const actualHook = jest.requireActual('../../../hooks');
-        jest.spyOn(require('../../../hooks'), 'useForm').mockImplementation(() => ({
+        jest.spyOn(require('../../../hooks'), 'useValidatedForm').mockImplementation(() => ({
             ...actualHook.useValidatedForm(),
             formState: {
                 errors: {

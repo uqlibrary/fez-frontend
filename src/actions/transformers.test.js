@@ -253,12 +253,14 @@ describe('transformers', () => {
     describe('getRecordRelatedServiceSearchKeys test', () => {
         it('should return request object structure with related service and related service description', () => {
             const data = {
-                relatedServices: [
-                    {
-                        relatedServiceId: 'id',
-                        relatedServiceDesc: 'desc',
-                    },
-                ],
+                relatedServices: {
+                    items: [
+                        {
+                            relatedServiceId: 'id',
+                            relatedServiceDesc: 'desc',
+                        },
+                    ],
+                },
             };
             const expected = {
                 fez_record_search_key_related_service: [
@@ -280,12 +282,14 @@ describe('transformers', () => {
 
         it('should return request object structure with related service and empty related service description', () => {
             const data = {
-                relatedServices: [
-                    {
-                        relatedServiceId: 'id',
-                        relatedServiceDesc: '',
-                    },
-                ],
+                relatedServices: {
+                    items: [
+                        {
+                            relatedServiceId: 'id',
+                            relatedServiceDesc: '',
+                        },
+                    ],
+                },
             };
             const expected = {
                 fez_record_search_key_related_service: [
@@ -301,7 +305,7 @@ describe('transformers', () => {
         });
 
         it('should handle empty related service', () => {
-            const data = { relatedServices: [] };
+            const data = { relatedServices: { items: [] } };
             const expected = {
                 fez_record_search_key_related_service: [],
                 fez_record_search_key_related_service_description: [],
@@ -2198,13 +2202,15 @@ describe('transformers', () => {
         });
 
         it('should return search key with data', () => {
-            const input = [
-                {
-                    grantAgencyName: 'test',
-                    grantId: 'test123',
-                    grantAgencyType: '12345',
-                },
-            ];
+            const input = {
+                items: [
+                    {
+                        grantAgencyName: 'test',
+                        grantId: 'test123',
+                        grantAgencyType: '12345',
+                    },
+                ],
+            };
 
             const expected = {
                 fez_record_search_key_grant_agency: [
@@ -2233,24 +2239,26 @@ describe('transformers', () => {
             expected.fez_record_search_key_grant_agency[0].rek_grant_agency = 'Not set';
             expected.fez_record_search_key_grant_id[0].rek_grant_id = 'Not set';
             expected.fez_record_search_key_grant_agency_type[0].rek_grant_agency_type = 454045;
-            expect(transformers.getGrantsListSearchKey([{}])).toEqual(expected);
+            expect(transformers.getGrantsListSearchKey({ items: [{}] })).toEqual(expected);
         });
 
         it('should return search key with data filtered empty values', () => {
-            const input = [
-                {
-                    grantAgencyName: 'test',
-                    grantId: 'test123',
-                },
-                {
-                    grantId: 'testing123',
-                    grantAgencyType: '12345',
-                },
-                {
-                    grantAgencyName: 'tested',
-                    grantAgencyType: '56465',
-                },
-            ];
+            const input = {
+                items: [
+                    {
+                        grantAgencyName: 'test',
+                        grantId: 'test123',
+                    },
+                    {
+                        grantId: 'testing123',
+                        grantAgencyType: '12345',
+                    },
+                    {
+                        grantAgencyName: 'tested',
+                        grantAgencyType: '56465',
+                    },
+                ],
+            };
 
             const expected = {
                 fez_record_search_key_grant_agency: [
@@ -5123,13 +5131,15 @@ describe('transformers', () => {
         it('should get grant information search keys', () => {
             expect(
                 transformers.getGrantInformationSectionSearchKeys({
-                    grants: [
-                        {
-                            grantAgencyName: 'Test',
-                            grantAgencyType: 123,
-                            grantId: '1234',
-                        },
-                    ],
+                    grants: {
+                        items: [
+                            {
+                                grantAgencyName: 'Test',
+                                grantAgencyType: 123,
+                                grantId: '1234',
+                            },
+                        ],
+                    },
                 }),
             ).toEqual({
                 fez_record_search_key_grant_agency: [

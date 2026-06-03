@@ -238,6 +238,16 @@ describe('Validation method', () => {
         expect(validation.isValidGoogleScholarId('rtgtwDFRjuH')).toEqual(locale.validationErrors.googleScholarId);
     });
 
+    it('isDirty', () => {
+        const error = 'my error';
+        expect(validation.isDirty({ isDirty: true }, error)).toEqual(error);
+        expect(validation.isDirty('', error)).toEqual(undefined);
+        expect(validation.isDirty(null, error)).toEqual(undefined);
+        expect(validation.isDirty(undefined, error)).toEqual(undefined);
+        expect(validation.isDirty({ items: [] }, error)).toEqual(undefined);
+        expect(validation.isDirty({ isDirty: false }, error)).toEqual(undefined);
+    });
+
     it('should conditionally validate file uploader based on open access value', () => {
         expect(validation.fileUploadNotRequiredForMediated(undefined, {})).toEqual(
             locale.validationErrors.fileUploadRequired,

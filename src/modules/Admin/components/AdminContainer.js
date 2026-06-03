@@ -25,7 +25,7 @@ import { adminTheme } from 'config';
 import { onSubmit } from '../submitHandler';
 import { useRecord, useRecordToView, useFormOnChangeHook } from '../hooks';
 import { RecordContext, TabbedContext } from 'context';
-import { useForm, useIsMobileView } from '../../../hooks';
+import { useIsMobileView, useValidatedForm } from '../../../hooks';
 import { useFormValidator } from '../validators';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -63,7 +63,7 @@ export const AdminContainer = ({ createMode = false }) => {
         error: apiUpdateError,
     } = useRecord(createMode);
 
-    const form = useForm({
+    const form = useValidatedForm({
         values: { ...initialValues },
         shouldUnregister: false,
         criteriaMode: 'all',

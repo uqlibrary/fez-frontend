@@ -2,11 +2,8 @@ import React from 'react';
 import RelatedServiceListEditor from './RelatedServiceListEditor';
 import { render as defaultRender, fireEvent, within, WithReduxStore } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
-import { locale } from '../../../../locale';
 
 const mockSetValue = jest.fn();
-const mockSetError = jest.fn();
-const mockClearErrors = jest.fn();
 
 const services = [
     { relatedServiceId: '1111', relatedServiceDesc: 'desc 1' },
@@ -20,10 +17,11 @@ function setup(testProps = {}, render = defaultRender) {
         locale: {},
         required: true,
         ...testProps,
+        value: { items: testProps.value },
     };
     return render(
         <WithReduxStore>
-            <FormProvider setValue={mockSetValue} setError={mockSetError} clearErrors={mockClearErrors}>
+            <FormProvider setValue={mockSetValue}>
                 <RelatedServiceListEditor {...props} />
             </FormProvider>
         </WithReduxStore>,
@@ -60,9 +58,13 @@ describe('RelatedServiceListEditor', () => {
 
         const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
         expect(list).toHaveLength(1);
-        expect(mockSetValue).toHaveBeenCalledWith('test', [{ relatedServiceId: '123', relatedServiceDesc: 'desc' }], {
-            shouldValidate: true,
-        });
+        expect(mockSetValue).toHaveBeenCalledWith(
+            'test',
+            { items: [{ relatedServiceId: '123', relatedServiceDesc: 'desc' }] },
+            {
+                shouldValidate: true,
+            },
+        );
     });
 
     it('should add a related service to an empty list', () => {
@@ -76,34 +78,11 @@ describe('RelatedServiceListEditor', () => {
         expect(list).toHaveLength(3);
         expect(mockSetValue).toHaveBeenCalledWith(
             'test',
-            [...services, { relatedServiceId: '123', relatedServiceDesc: 'desc' }],
+            { items: [...services, { relatedServiceId: '123', relatedServiceDesc: 'desc' }] },
             {
                 shouldValidate: true,
             },
         );
-    });
-
-    it('should call setError when form is dirty without adding, and clearErrors when clean', () => {
-        const { getByRole, rerender } = setup({ name: 'my-input' });
-
-        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: 'test' } });
-        expect(mockSetError).toHaveBeenCalledWith('my-input', {
-            type: 'validation',
-            message: locale.validationErrors.relatedServices,
-        });
-
-        setup({ name: 'my-input', state: { error: locale.validationErrors.relatedServices } }, rerender);
-        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: '' } });
-        expect(mockClearErrors).toHaveBeenCalledWith('my-input');
-    });
-
-    it('should not call setError when editing an existing entry', () => {
-        const { getByTestId } = setup({ canEdit: true, name: 'test', value: services });
-
-        const list = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
-        fireEvent.click(within(list[0]).getByRole('button', { name: 'Edit this entry' }));
-
-        expect(mockSetError).not.toHaveBeenCalled();
     });
 
     it('should edit a selected service and update the list', () => {
@@ -166,7 +145,7 @@ describe('RelatedServiceListEditor', () => {
         fireEvent.click(getByTestId('confirm-dialog-box'));
 
         expect(queryByTestId('rek-related-service-list')).not.toBeInTheDocument();
-        expect(mockSetValue).toHaveBeenCalledWith('test', [], { shouldValidate: true });
+        expect(mockSetValue).toHaveBeenCalledWith('test', { items: [] }, { shouldValidate: true });
     });
 
     it('should apply scroll style when more than 3 services', () => {

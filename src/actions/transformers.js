@@ -761,8 +761,9 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
     };
 };
 
-export const getGrantsListSearchKey = grants => {
-    if (!grants || grants.length === 0) return {};
+export const getGrantsListSearchKey = value => {
+    const grants = value?.items;
+    if (!grants) return {};
 
     return {
         fez_record_search_key_grant_agency: [
@@ -1705,13 +1706,14 @@ export const getReasonSectionSearchKeys = (data = {}) => {
 };
 
 export const getRelatedServiceSectionSearchKeys = (data = {}) => {
-    if (!data.relatedServices) {
+    const items = data?.relatedServices?.items;
+    if (!items) {
         return {};
     }
 
     const ids = [];
     const descs = [];
-    data.relatedServices.forEach((service, index) => {
+    items.forEach((service, index) => {
         ids.push({ rek_related_service: service.relatedServiceId, rek_related_service_order: index + 1 });
         if (service.relatedServiceDesc) {
             descs.push({

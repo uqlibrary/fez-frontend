@@ -666,7 +666,7 @@ export default {
             delete record.fez_record_search_key_grant_id;
             delete record.fez_record_search_key_grant_agency_type;
 
-            return returnValue;
+            return { items: returnValue };
         },
     },
     relatedServices: {
@@ -699,7 +699,7 @@ export default {
             delete record.fez_record_search_key_related_service;
             delete record.fez_record_search_key_related_service_description;
 
-            return returnValue;
+            return { items: returnValue };
         },
     },
     files: {

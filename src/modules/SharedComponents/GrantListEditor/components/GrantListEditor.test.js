@@ -2,11 +2,8 @@ import React from 'react';
 import GrantListEditor from './GrantListEditor';
 import { render as defaultRender, fireEvent, within } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
-import { locale } from '../../../../locale';
 
 const mockSetValue = jest.fn();
-const mockSetError = jest.fn();
-const mockClearErrors = jest.fn();
 
 function setup(testProps = {}, render = defaultRender) {
     const props = {
@@ -15,9 +12,10 @@ function setup(testProps = {}, render = defaultRender) {
         locale: {},
         required: true,
         ...testProps,
+        value: { items: testProps.value },
     };
     return render(
-        <FormProvider setValue={mockSetValue} setError={mockSetError} clearErrors={mockClearErrors}>
+        <FormProvider setValue={mockSetValue}>
             <GrantListEditor {...props} />
         </FormProvider>,
     );
@@ -62,7 +60,7 @@ describe('GrantListEditor', () => {
         expect(list).toHaveLength(1);
         expect(mockSetValue).toHaveBeenCalledWith(
             'test',
-            [{ grantAgencyName: 'Agency', grantId: 'G-001', grantAgencyType: '453985' }],
+            { items: [{ grantAgencyName: 'Agency', grantId: 'G-001', grantAgencyType: '453985' }] },
             { shouldValidate: true },
         );
     });
@@ -80,32 +78,9 @@ describe('GrantListEditor', () => {
         expect(list).toHaveLength(3);
         expect(mockSetValue).toHaveBeenCalledWith(
             'test',
-            [...grants, { grantAgencyName: 'Agency', grantId: 'G-001', grantAgencyType: '453985' }],
+            { items: [...grants, { grantAgencyName: 'Agency', grantId: 'G-001', grantAgencyType: '453985' }] },
             { shouldValidate: true },
         );
-    });
-
-    it('should call setError when form is dirty without adding, and clearErrors when clean', () => {
-        const { getByRole, rerender } = setup({ name: 'my-input' });
-
-        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: 'Test' } });
-        expect(mockSetError).toHaveBeenCalledWith('my-input', {
-            type: 'validation',
-            message: locale.validationErrors.grants,
-        });
-
-        setup({ name: 'my-input', state: { error: locale.validationErrors.grants } }, rerender);
-        fireEvent.change(getByRole('textbox', { name: 'Funder/Sponsor name' }), { target: { value: '' } });
-        expect(mockClearErrors).toHaveBeenCalledWith('my-input');
-    });
-
-    it('should not call setError when editing an existing entry', () => {
-        const { getByTestId } = setup({ canEdit: true, name: 'test', value: grants });
-
-        const list = within(getByTestId('rek-grant-list')).getAllByRole('listitem');
-        fireEvent.click(within(list[0]).getByRole('button', { name: 'Edit this entry' }));
-
-        expect(mockSetError).not.toHaveBeenCalled();
     });
 
     it('should edit a selected grant and update the list', () => {
@@ -170,7 +145,7 @@ describe('GrantListEditor', () => {
         fireEvent.click(getByTestId('confirm-dialog-box'));
 
         expect(queryByTestId('rek-grant-list')).not.toBeInTheDocument();
-        expect(mockSetValue).toHaveBeenCalledWith('test', [], { shouldValidate: true });
+        expect(mockSetValue).toHaveBeenCalledWith('test', { items: [] }, { shouldValidate: true });
     });
 
     it('should apply scroll style when more than 3 grants', () => {

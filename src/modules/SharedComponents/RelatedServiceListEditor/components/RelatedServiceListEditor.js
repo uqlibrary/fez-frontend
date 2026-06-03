@@ -7,9 +7,8 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
-import { locale as globalLocale } from '../../../../locale';
 
-const getRelatedServicesFromProps = (name, value) => (name && value) || [];
+const getItemsFromProps = (name, value) => (name && value?.items) || [];
 
 const RelatedServiceListEditor = ({
     canEdit = false,
@@ -28,28 +27,25 @@ const RelatedServiceListEditor = ({
     const [isFormDirty, setIsFormDirty] = useState(false);
     const isEditing = !!relatedServiceSelectedToEdit;
     const hasError = !!state?.error;
-    const { clearErrors, setError, setValue } = {
-        clearErrors: null,
-        setError: null,
-        setValue: null,
-        ...useFormContext(),
-    };
+    const form = useFormContext();
 
-    // clear error onUnmount
-    useEffect(() => () => clearErrors?.(name), []);
+    const handleChange = useCallback(
+        (items, isDirty) => {
+            form?.setValue?.(name, { items, ...(isDirty ? { isDirty: true } : {}) }, { shouldValidate: true });
+        },
+        [form, name],
+    );
 
-    // handles validation
+    // propagate dirty state
     useEffect(() => {
-        if (isFormDirty && !isEditing) {
-            setError?.(name, { type: 'validation', message: globalLocale.validationErrors.relatedServices });
-            return;
-        }
-        if (hasError) clearErrors?.(name);
-    }, [clearErrors, setError, hasError, isFormDirty, isEditing, name]);
+        handleChange(relatedServices, isFormDirty && !isEditing);
+        // clear dirty state onUnmount
+        return () => handleChange(relatedServices, false);
+    }, [isFormDirty, isEditing]);
 
     // propagate input changes to `related services`
     useEffect(() => {
-        const updated = getRelatedServicesFromProps(name, value);
+        const updated = getItemsFromProps(name, value);
         // only update `related services` once, when value has been updated
         if (!!relatedServices.length || !updated.length || hasPropagatedInputValueChanges.current) {
             return;
@@ -58,13 +54,6 @@ const RelatedServiceListEditor = ({
         setRelatedServices(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(relatedServices), value, hasPropagatedInputValueChanges.current]);
-
-    const handleRelatedServicesChange = useCallback(
-        list => {
-            setValue?.(name, list, { shouldValidate: true });
-        },
-        [setValue, name],
-    );
 
     const addRelatedService = useCallback(
         relatedService => {
@@ -77,11 +66,11 @@ const RelatedServiceListEditor = ({
                       ]
                     : [...relatedServices, relatedService];
             setRelatedServices(newList);
-            handleRelatedServicesChange(newList);
+            handleChange(newList);
             setRelatedServiceIndexSelectedToEdit(null);
             setRelatedServiceSelectedToEdit(null);
         },
-        [relatedServiceIndexSelectedToEdit, relatedServices, handleRelatedServicesChange],
+        [relatedServiceIndexSelectedToEdit, relatedServices, handleChange],
     );
 
     const editRelatedService = useCallback((relatedService, index) => {
@@ -104,9 +93,9 @@ const RelatedServiceListEditor = ({
                 ...relatedServices.slice(index + 1),
             ];
             setRelatedServices(newList);
-            handleRelatedServicesChange(newList);
+            handleChange(newList);
         },
-        [handleRelatedServicesChange, relatedServices],
+        [handleChange, relatedServices],
     );
 
     const moveDownRelatedService = useCallback(
@@ -121,24 +110,24 @@ const RelatedServiceListEditor = ({
                 ...relatedServices.slice(index + 2),
             ];
             setRelatedServices(newList);
-            handleRelatedServicesChange(newList);
+            handleChange(newList);
         },
-        [handleRelatedServicesChange, relatedServices],
+        [handleChange, relatedServices],
     );
 
     const deleteRelatedService = useCallback(
         (_, index) => {
             const newList = relatedServices.filter((__, i) => i !== index);
-            handleRelatedServicesChange(newList);
+            handleChange(newList);
             setRelatedServices(newList);
         },
-        [handleRelatedServicesChange, relatedServices],
+        [handleChange, relatedServices],
     );
 
     const deleteAllRelatedServices = useCallback(() => {
         setRelatedServices([]);
-        handleRelatedServicesChange([]);
-    }, [handleRelatedServicesChange]);
+        handleChange([]);
+    }, [handleChange]);
 
     const renderRelatedServicesRows = relatedServices?.map?.((relatedService, index) => (
         <RelatedServiceListEditorRow

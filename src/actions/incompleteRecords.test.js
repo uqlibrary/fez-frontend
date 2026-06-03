@@ -130,7 +130,7 @@ describe('updateIncompleteRecord actions', () => {
             },
             authorsAffiliation: [],
             ntroAbstract: {},
-            grants: [],
+            grants: {},
             languages: [],
             qualityIndicators: [],
         };

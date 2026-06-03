@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
-import { ValidatedField } from 'modules/SharedComponents/Toolbox/ReactHookForm';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
 import Grid from '@mui/material/GridLegacy';
 import { fieldConfig } from 'config/admin';
@@ -44,7 +44,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
 
     return (
         <Grid item xs={12} md={12 / group.length}>
-            <ValidatedField
+            <Field
                 name={componentProps.name}
                 control={form.control}
                 controller={Controller}

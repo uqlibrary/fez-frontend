@@ -7,9 +7,8 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/GridLegacy';
 import { useFormContext } from 'react-hook-form';
-import { locale as globalLocale } from 'locale';
 
-const getGrantsFromProps = (name, value) => (name && value) || [];
+const getItemsFromProps = (name, value) => (name && value?.items) || [];
 
 const GrantListEditor = ({
     canEdit = false,
@@ -29,28 +28,25 @@ const GrantListEditor = ({
     const [isFormDirty, setIsFormDirty] = useState(false);
     const isEditing = !!grantSelectedToEdit;
     const hasError = !!state?.error;
-    const { clearErrors, setError, setValue } = {
-        clearErrors: null,
-        setError: null,
-        setValue: null,
-        ...useFormContext(),
-    };
+    const form = useFormContext();
 
-    // clear error onUnmount
-    useEffect(() => () => clearErrors?.(name), []);
+    const handleChange = useCallback(
+        (items, isDirty) => {
+            form?.setValue?.(name, { items, ...(isDirty ? { isDirty: true } : {}) }, { shouldValidate: true });
+        },
+        [form, name],
+    );
 
-    // handles validation
+    // propagate dirty state
     useEffect(() => {
-        if (isFormDirty && !isEditing) {
-            setError?.(name, { type: 'validation', message: globalLocale.validationErrors.grants });
-            return;
-        }
-        if (hasError) clearErrors?.(name);
-    }, [clearErrors, setError, hasError, isFormDirty, isEditing, name]);
+        handleChange(grants, isFormDirty && !isEditing);
+        // clear dirty state onUnmount
+        return () => handleChange(grants, false);
+    }, [isFormDirty, isEditing]);
 
     // propagate input changes to `grants`
     useEffect(() => {
-        const updated = getGrantsFromProps(name, value);
+        const updated = getItemsFromProps(name, value);
         // only update `grants` once, when value has been updated
         if (!!grants.length || !updated.length || hasPropagatedInputValueChanges.current) {
             return;
@@ -58,14 +54,7 @@ const GrantListEditor = ({
         hasPropagatedInputValueChanges.current = true;
         setGrants(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(grants), value, hasPropagatedInputValueChanges.current]);
-
-    const handleGrantsChange = useCallback(
-        grants => {
-            setValue?.(name, grants, { shouldValidate: true });
-        },
-        [setValue, name],
-    );
+    }, [JSON.stringify(grants), JSON.stringify(value), hasPropagatedInputValueChanges.current]);
 
     const addGrant = useCallback(
         grant => {
@@ -79,11 +68,11 @@ const GrantListEditor = ({
                     : [...grants, grant];
 
             setGrants(newList);
-            handleGrantsChange(newList);
+            handleChange(newList);
             setGrantIndexSelectedToEdit(null);
             setGrantSelectedToEdit(null);
         },
-        [grantIndexSelectedToEdit, grants, handleGrantsChange],
+        [grantIndexSelectedToEdit, grants, handleChange],
     );
 
     const editGrant = useCallback((grant, index) => {
@@ -99,9 +88,9 @@ const GrantListEditor = ({
             if (previousGrant.hasOwnProperty('disabled') && previousGrant.disabled) return;
             const newList = [...grants.slice(0, index - 1), grant, previousGrant, ...grants.slice(index + 1)];
             setGrants(newList);
-            handleGrantsChange(newList);
+            handleChange(newList);
         },
-        [grants, handleGrantsChange],
+        [grants, handleChange],
     );
 
     const moveDownGrant = useCallback(
@@ -112,24 +101,24 @@ const GrantListEditor = ({
 
             const newList = [...grants.slice(0, index), nextGrant, grant, ...grants.slice(index + 2)];
             setGrants(newList);
-            handleGrantsChange(newList);
+            handleChange(newList);
         },
-        [grants, handleGrantsChange],
+        [grants, handleChange],
     );
 
     const deleteGrant = useCallback(
         (_, index) => {
             const newList = grants.filter((__, i) => i !== index);
             setGrants(newList);
-            handleGrantsChange(newList);
+            handleChange(newList);
         },
-        [grants, handleGrantsChange],
+        [grants, handleChange],
     );
 
     const deleteAllGrants = useCallback(() => {
         setGrants([]);
-        handleGrantsChange([]);
-    }, [handleGrantsChange]);
+        handleChange([]);
+    }, [handleChange]);
 
     const renderGrantsRows = grants?.map?.((grant, index) => (
         <GrantListEditorRow

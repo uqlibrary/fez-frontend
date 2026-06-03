@@ -314,6 +314,12 @@ export const isDateInBetween = (date, from, to) => isDateSameOrAfter(date, from)
 export const dateRange = (start, end, message = locale.validationErrors.dateRange) =>
     !!start && !!end && !isDateSameOrBefore(start, end) ? message : undefined;
 
+export const isDirty = (props, error) => (props?.isDirty === true ? error : undefined);
+
+export const grants = props => isDirty(props, locale.validationErrors.grants);
+
+export const relatedServices = props => isDirty(props, locale.validationErrors.relatedServices);
+
 export const translateFormErrorsToText = formErrors => {
     if (!formErrors) return null;
 

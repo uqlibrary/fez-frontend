@@ -90,6 +90,7 @@ import SensitiveHandlingNoteField from '../../modules/SharedComponents/Sensitive
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
 import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
+import { grants, relatedServices } from '../validation';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -1082,20 +1083,20 @@ export default {
                 ...selectFields.qualityIndicators,
             },
         },
-        relatedServices: {
-            component: RelatedServiceListEditorField,
-            componentProps: {
-                name: 'relatedServicesSection.relatedServices',
-                canEdit: true,
-                ignoreFormDirtyStateChanges: false,
-            },
-        },
         grants: {
             component: GrantListEditorField,
             componentProps: {
                 name: 'grantInformationSection.grants',
                 canEdit: true,
-                ignoreFormDirtyStateChanges: false,
+                validate: [grants],
+            },
+        },
+        relatedServices: {
+            component: RelatedServiceListEditorField,
+            componentProps: {
+                name: 'relatedServicesSection.relatedServices',
+                canEdit: true,
+                validate: [relatedServices],
             },
         },
         fez_datastream_info: {
