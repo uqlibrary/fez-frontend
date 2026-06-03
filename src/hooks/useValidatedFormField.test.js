@@ -29,12 +29,6 @@ describe('useValidatedFormField', () => {
             await waitFor(() => {
                 expect(mockTrigger).toHaveBeenCalledWith('bibliographicSection.rek_title');
             });
-        });
-
-        it('should trigger validation only once on stable inputs', async () => {
-            mockGetFieldState.mockReturnValue({});
-            setup('bibliographicSection.rek_title');
-
             await waitFor(() => expect(mockTrigger).toHaveBeenCalledTimes(1));
         });
 
@@ -82,36 +76,6 @@ describe('useValidatedFormField', () => {
             setup('bibliographicSection.rek_title');
 
             expect(mockGetFieldState).toHaveBeenCalledWith('bibliographicSection.rek_title', mockFormState);
-        });
-    });
-
-    describe('return value', () => {
-        it('should return hasError false when there is no error', () => {
-            mockGetFieldState.mockReturnValue({});
-            const { result } = setup('bibliographicSection.rek_title');
-
-            expect(result.current.hasError).toBe(false);
-        });
-
-        it('should return hasError true when there is an error message', () => {
-            mockGetFieldState.mockReturnValue({ error: { message: 'Required field' } });
-            const { result } = setup('bibliographicSection.rek_title');
-
-            expect(result.current.hasError).toBe(true);
-        });
-
-        it('should return hasError false when error message is whitespace only', () => {
-            mockGetFieldState.mockReturnValue({ error: { message: '   ' } });
-            const { result } = setup('bibliographicSection.rek_title');
-
-            expect(result.current.hasError).toBe(false);
-        });
-
-        it('should return hasError false when error object is missing message', () => {
-            mockGetFieldState.mockReturnValue({ error: {} });
-            const { result } = setup('bibliographicSection.rek_title');
-
-            expect(result.current.hasError).toBe(false);
         });
     });
 });
