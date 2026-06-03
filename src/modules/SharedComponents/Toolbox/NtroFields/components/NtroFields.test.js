@@ -1,6 +1,6 @@
 import React from 'react';
 import NtroFields, { normalizeIsrc, transformIsmn, transformIsrc } from './NtroFields';
-import { FormProviderWrapper, render, WithReduxStore } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
 import { useForm } from 'react-hook-form';
 
 const ControlledFieldWithReduxStore = props => {
@@ -11,9 +11,7 @@ const ControlledFieldWithReduxStore = props => {
 
     return (
         <WithReduxStore>
-            <FormProviderWrapper>
-                <NtroFields {...{ control, isSubmitting, ...props }} />
-            </FormProviderWrapper>
+            <NtroFields {...{ control, isSubmitting, ...props }} />
         </WithReduxStore>
     );
 };
