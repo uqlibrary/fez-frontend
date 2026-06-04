@@ -44,7 +44,7 @@ export const ForCodeAutocompleteField = React.forwardRef<ForCodeAutocompleteFiel
 
         return (
             <AutoCompleteAsynchronousField
-                // @ts-expect-error
+                // @ts-expect-error TODO remove upon converting to TS
                 id="for-code-autocomplete-field"
                 autoCompleteAsynchronousFieldId="for-code-autocomplete-field"
                 itemsList={filter(keyValueLists)}

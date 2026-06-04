@@ -5,7 +5,7 @@ import { default as JournalsListLegacy } from './JournalsListLegacy';
 import JournalFieldsMap from './partials/JournalFieldsMap';
 import { sanitiseId } from 'helpers/general';
 import locale from 'locale/components';
-import { types, status, getIndicatorProps } from './partials/utils';
+import { types, getIndicatorProps } from './partials/utils';
 
 const testData = {
     journals: mockData.data,

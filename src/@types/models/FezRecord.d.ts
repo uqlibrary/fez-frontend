@@ -20,9 +20,7 @@ interface IRelations<T> {
 }
 
 type IAttributes<T> = keyof CoreAttributes & keyof IRelations<T>;
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-export interface FezRecord extends Optional<CoreAttributes & IRelations<FezRecord>> {}
+export type FezRecord = Optional<CoreAttributes & IRelations<FezRecord>>;
 
 export type Relations = IRelations<FezRecord>;
 export type Attributes = IAttributes<FezRecord>;
