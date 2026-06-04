@@ -21,9 +21,10 @@ const GrantListEditor = ({
     required,
     hideType = false,
     disableDeleteAllGrants = false,
-    ignoreFormDirtyStateChanges = true,
+    ignoreFormDirtyStateChanges = false,
 }) => {
     const hasPropagatedInputValueChanges = useRef(null);
+    const prevGrants = useRef(null);
     const [grants, setGrants] = useState([]);
     const [grantSelectedToEdit, setGrantSelectedToEdit] = useState(null);
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
@@ -51,10 +52,20 @@ const GrantListEditor = ({
 
     // propagate `grantFormPopulated` changes to input
     useEffect(() => {
-        if (!ignoreFormDirtyStateChanges) return;
-        handleGrantsChange(grantFormPopulated || grants);
+        if (ignoreFormDirtyStateChanges || (!grantFormPopulated && !prevGrants.current)) return;
+
+        let newValue;
+        if (grantFormPopulated) {
+            newValue = grantFormPopulated;
+            prevGrants.current = grants;
+        } else {
+            newValue = prevGrants.current;
+            prevGrants.current = null;
+        }
+
+        handleGrantsChange(newValue);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ignoreFormDirtyStateChanges, grantFormPopulated, grants]);
+    }, [ignoreFormDirtyStateChanges, grantFormPopulated, value]);
 
     const addGrant = useCallback(
         grant => {

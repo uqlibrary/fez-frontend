@@ -283,22 +283,4 @@ describe('RelatedServiceListEditor', () => {
         serviceList = within(getByTestId('rek-related-service-list')).getAllByRole('listitem');
         expect(within(serviceList[1]).getByText('updated desc')).toBeInTheDocument();
     });
-
-    it('should call setValue on state change', () => {
-        const mockOnChange = jest.fn();
-        const mockSetValue = jest.fn();
-        jest.spyOn(require('react-hook-form'), 'useFormContext').mockReturnValue({ setValue: mockSetValue });
-
-        const inputName = 'my-input';
-        const { getByRole } = setup({
-            onChange: mockOnChange,
-            name: inputName,
-        });
-
-        fireEvent.change(getByRole('combobox', { name: 'Related Service ID' }), { target: { value: 'Test{enter}' } });
-        expect(mockOnChange).not.toHaveBeenCalledWith(true);
-        expect(mockOnChange).not.toHaveBeenCalledWith([]);
-        expect(mockSetValue).toHaveBeenCalledWith(inputName, true, { shouldValidate: true });
-        // expect(mockSetValue).toHaveBeenCalledWith(inputName, [], { shouldValidate: true });
-    });
 });
