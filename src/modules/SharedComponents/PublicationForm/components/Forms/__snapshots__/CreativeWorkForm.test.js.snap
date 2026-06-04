@@ -2374,7 +2374,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
                       >
                         <span>
-                          Abstract/Description*
+                          Abstract/Description* 
                           <span
                             style="font-weight: 700;"
                           >
@@ -2833,7 +2833,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
                         style="margin-bottom: -3px;"
                       >
-
+                         
                          
                       </span>
                       <div
@@ -3802,7 +3802,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yq79k0-MuiGrid-root"
+      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
     >
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
@@ -3882,7 +3882,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
                       >
                         <span>
-                          Abstract/Description*
+                          Abstract/Description* 
                           <span
                             style="font-weight: 700;"
                           >
@@ -4306,7 +4306,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
                         style="margin-bottom: -3px;"
                       >
-
+                         
                          
                       </span>
                       <div

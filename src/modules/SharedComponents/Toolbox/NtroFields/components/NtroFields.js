@@ -19,7 +19,7 @@ import { default as componentLocale } from 'locale/components';
 import { AUDIENCE_SIZE, SIGNIFICANCE, LANGUAGE, QUALITY_INDICATORS } from 'config/general';
 import { Field } from '../../ReactHookForm';
 import defaultLocale from './locale';
-import { grants } from '../../../../../config/validation';
+import { grantFormIsPopulated } from '../../../../../config/validation';
 
 export const normalizeIsrc = value => {
     const normalizedValue = value.replace(/([A-Z]{2})?-?(\w{3})?-?(\d{2})?-?(\d{5})?/g, (m, ...groups) => {
@@ -372,7 +372,7 @@ const NtroFields = props => {
                             name="grants"
                             disabled={isSubmitting}
                             disableDeleteAllGrants={disableDeleteAllGrants}
-                            validate={[grants]}
+                            validate={[grantFormIsPopulated]}
                         />
                     </StandardCard>
                 </Grid>

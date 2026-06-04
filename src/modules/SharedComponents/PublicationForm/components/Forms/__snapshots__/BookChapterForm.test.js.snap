@@ -2069,7 +2069,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
                       >
                         <span>
-                          Abstract/Description*
+                          Abstract/Description* 
                           <span
                             style="font-weight: 700;"
                           >
@@ -2380,7 +2380,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
                         style="margin-bottom: -3px;"
                       >
-
+                         
                          
                       </span>
                       <div
@@ -3798,7 +3798,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
                       >
                         <span>
-                          Abstract/Description*
+                          Abstract/Description* 
                           <span
                             style="font-weight: 700;"
                           >
@@ -4178,7 +4178,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
                         style="margin-bottom: -3px;"
                       >
-
+                         
                          
                       </span>
                       <div
