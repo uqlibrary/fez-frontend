@@ -51,10 +51,10 @@ const RelatedServiceListEditor = ({
 
     // propagate `relatedServiceFormPopulated` changes to input
     useEffect(() => {
-        if (!ignoreFormDirtyStateChanges || !relatedServiceFormPopulated) return;
-        form?.setValue?.(name, relatedServiceFormPopulated, { shouldValidate: true });
+        if (!ignoreFormDirtyStateChanges) return;
+        handleRelatedServicesChange(relatedServiceFormPopulated || relatedServices);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [relatedServiceFormPopulated]);
+    }, [ignoreFormDirtyStateChanges, relatedServiceFormPopulated, relatedServices]);
 
     const addRelatedService = useCallback(
         relatedService => {
@@ -175,7 +175,7 @@ const RelatedServiceListEditor = ({
             )}
             <RelatedServiceListEditorForm
                 onAdd={addRelatedService}
-                isPopulated={isFormPopulated}
+                onDirty={isFormPopulated}
                 required={required}
                 disabled={disabled}
                 {...(locale?.form || {})}

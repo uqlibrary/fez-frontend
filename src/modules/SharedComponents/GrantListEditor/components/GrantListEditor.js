@@ -51,10 +51,10 @@ const GrantListEditor = ({
 
     // propagate `grantFormPopulated` changes to input
     useEffect(() => {
-        if (!ignoreFormDirtyStateChanges || !grantFormPopulated) return;
-        form?.setValue?.(name, grantFormPopulated, { shouldValidate: true });
+        if (!ignoreFormDirtyStateChanges) return;
+        handleGrantsChange(grantFormPopulated || grants);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [ignoreFormDirtyStateChanges, grantFormPopulated]);
+    }, [ignoreFormDirtyStateChanges, grantFormPopulated, grants]);
 
     const addGrant = useCallback(
         grant => {
@@ -165,7 +165,7 @@ const GrantListEditor = ({
             )}
             <GrantListEditorForm
                 onAdd={addGrant}
-                isPopulated={isFormPopulated}
+                onDirty={isFormPopulated}
                 required={required}
                 disabled={disabled}
                 hideType={hideType}
