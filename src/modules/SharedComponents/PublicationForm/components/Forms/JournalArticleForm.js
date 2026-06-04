@@ -110,21 +110,24 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                 </StandardCard>
             </Grid>
             {isNtro && (
-                <NtroFields
-                    control={control}
-                    canEdit
-                    isSubmitting={isSubmitting}
-                    showContributionStatement={isAuthorSelected}
-                    hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
-                    hideIsrc
-                    hideVolume
-                    hideIssue
-                    hideStartPage
-                    hideEndPage
-                    hideExtent
-                    hideOriginalFormat
-                    hideAudienceSize
-                />
+                <Grid item xs={12}>
+                    <NtroFields
+                        control={control}
+                        canEdit
+                        isSubmitting={isSubmitting}
+                        showContributionStatement={isAuthorSelected}
+                        hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideExtent
+                        hideOriginalFormat
+                        hideAudienceSize
+                        legacyCompatible
+                    />
+                </Grid>
             )}
             <Grid item xs={12}>
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>

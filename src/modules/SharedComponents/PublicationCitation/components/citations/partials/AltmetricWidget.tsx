@@ -28,7 +28,8 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
 }) => {
     const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
     const [isOpen, setIsOpen] = useState<boolean>(!!anchorEl);
-    const createWidgetFunction = (window as any)?._altmetric_embed_init as (id: string) => void;
+    const createWidgetFunction = (window as Window & typeof globalThis & Record<string, unknown>)
+        ?._altmetric_embed_init as (id: string) => void;
     const isInjectingExternalDependencies = useRef<boolean>(false);
     const isCreatingWidget = useRef<boolean>(false);
     const widgetContainerId = `altmetric-widget-${id}`;

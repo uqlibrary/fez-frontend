@@ -2,18 +2,6 @@ import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
 import { DOI_BASE_URL, ORCID_BASE_URL, ROR_BASE_URL } from '../config/general';
 
-/* istanbul ignore next */
-global.dd = console.dir.bind(console);
-/* istanbul ignore next */
-global.dc = console.log;
-/* istanbul ignore next */
-global.dr = arg => {
-    console.dir.apply(console, [arg, { depth: null }]);
-    return arg;
-};
-/* istanbul ignore next */
-global.dj = console.log.bind(console, '%O');
-
 /**
  * @param {function} callback
  * @param {*} _default

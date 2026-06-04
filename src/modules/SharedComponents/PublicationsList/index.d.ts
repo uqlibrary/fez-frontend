@@ -17,7 +17,7 @@ export interface SortingDefaults {
 export interface PublicationsListSortingProps {
     bulkExportSize?: number;
     canUseExport?: boolean;
-    exportData?: Record<string, any>;
+    exportData?: Record<string, unknown>;
     disabled?: boolean;
     initPageLength?: number;
     onExportPublications?: (args: { exportPublicationsFormat: string | number }) => void;
@@ -25,7 +25,7 @@ export interface PublicationsListSortingProps {
     onSortByChanged?: (sortBy: string, sortDirection: string) => void;
     pageSize?: number;
     showDisplayAs?: boolean;
-    sortingData?: Record<string, any>;
+    sortingData?: Record<string, unknown>;
     pagingData?: PagingData;
     sortingDefaults?: SortingDefaults;
     sortBy?: string;
@@ -39,13 +39,13 @@ export interface PublicationsListProps {
     publicationsLoading?: boolean;
 
     // data
-    publicationsList?: any[];
-    publicationsListSubset?: any[];
+    publicationsList?: unknown[];
+    publicationsListSubset?: unknown[];
 
     // actions
     customActions?: Array<{
         label: string;
-        handleAction: (item: any) => void;
+        handleAction: (item: unknown) => void;
         primary?: boolean;
     }>;
     subsetCustomActions?: Array<{
@@ -57,7 +57,7 @@ export interface PublicationsListProps {
     // optional extras (keep loose to match component flexibility)
     disabled?: boolean;
     pagingData?: PagingData;
-    sortingData?: Record<string, any>;
+    sortingData?: Record<string, unknown>;
     sortingDefaults?: SortingDefaults;
     pageSize?: number;
     sortBy?: string;
@@ -65,7 +65,7 @@ export interface PublicationsListProps {
     displayRecordsAs?: string;
     canUseExport?: boolean;
     bulkExportSize?: number;
-    exportData?: Record<string, any>;
+    exportData?: Record<string, unknown>;
     onExportPublications?: (args: { exportPublicationsFormat: string | number }) => void;
     onPageSizeChanged?: (pageSize: number) => void;
     onSortByChanged?: (sortBy: string, sortDirection: string) => void;
@@ -84,7 +84,7 @@ export interface PublicationsListPagingProps {
 
 export interface FacetsFilterProps {
     disabled?: boolean;
-    facetsData?: Record<string, any> | any[];
+    facetsData?: Record<string, unknown> | unknown[];
     activeFacets?: {
         filters?: Record<string, string | number | boolean>;
         ranges?: Record<string, string | number>;
@@ -102,7 +102,7 @@ export interface PublicationListLoadingProgressProps {
     message?: string;
 }
 
-export declare const filterCollectionViewTypes: () => any[];
+export declare const filterCollectionViewTypes: () => unknown[];
 
 export declare const PublicationsList: React.FC<PublicationsListProps>;
 export declare const PublicationsListPaging: React.FC<PublicationsListPagingProps>;
