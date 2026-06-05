@@ -81,7 +81,19 @@ export const AdminContainer = ({ createMode = false }) => {
 
     const handleSubmit = async data => {
         try {
-            await onSubmit(data, dispatch, { setServerError: form.setServerError, params: { pid } });
+            await onSubmit(
+                {
+                    ...data,
+                    ...(recordToView?.fez_record_search_key_geographic_area
+                        ? { fez_record_search_key_geographic_area: recordToView.fez_record_search_key_geographic_area }
+                        : {}),
+                },
+                dispatch,
+                {
+                    setServerError: form.setServerError,
+                    params: { pid },
+                },
+            );
         } catch (e) {
             /* istanbul ignore next */
             console.log(e);
