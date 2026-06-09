@@ -32,13 +32,9 @@ describe('DrawingManager', () => {
         expect(setMode).not.toHaveBeenCalled();
     });
 
-    it('should initialize in select mode', async () => {
-        setup();
-        expect(setMode).toHaveBeenCalledWith('select');
-    });
-
     it('should allow switching mode', async () => {
         const { getByLabelText } = setup();
+        expect(setMode).toHaveBeenCalledWith('select'); // default mode
 
         await userEvent.click(getByLabelText('marker'));
         expect(setMode).toHaveBeenLastCalledWith('marker');
