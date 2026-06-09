@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { useTerraDraw } from './useTerraDraw';
+import { useTerraDraw, UseTerraDrawOptions } from './useTerraDraw';
 
-type TerraDrawLayerProps = {
+type TerraDrawLayerProps = UseTerraDrawOptions & {
     children: (draw: ReturnType<typeof useTerraDraw>) => React.ReactNode;
 };
 
-const TerraDrawLayer = ({ children }: TerraDrawLayerProps) => {
-    const draw = useTerraDraw();
+const TerraDrawLayer = ({ children, ...props }: TerraDrawLayerProps) => {
+    const draw = useTerraDraw(props);
 
     return <>{children(draw)}</>;
 };

@@ -12,7 +12,7 @@ import { TerraDrawGoogleMapsAdapter } from 'terra-draw-google-maps-adapter';
 const color = '#FF0066' as `#${string}`;
 const elementStyle = { fillColor: color, outlineColor: color };
 
-// note: the maps `edit` mode can break depending on the flags below. Make sure to test changes manually.
+// note: the map's `edit` mode can break depending on the flags below, make sure to test changes manually.
 const selectionFlags = {
     feature: {
         draggable: true,
@@ -25,33 +25,56 @@ const selectionFlags = {
     },
 };
 
-const createTerraDrawModes = () => [
-    new TerraDrawSelectMode({
-        flags: {
-            polygon: selectionFlags,
-            rectangle: selectionFlags,
-            marker: selectionFlags,
-        },
+const getTerraDrawConfig = (map: google.maps.Map) => ({
+    adapter: new TerraDrawGoogleMapsAdapter({
+        map,
+        lib: google.maps,
+        coordinatePrecision: 9,
     }),
-    new TerraDrawMarkerMode({
-        editable: true,
-    }),
-    new TerraDrawPolygonMode({
-        editable: true,
-        styles: elementStyle,
-    }),
-    new TerraDrawRectangleMode({
-        styles: elementStyle,
-    }),
-];
+    modes: [
+        new TerraDrawSelectMode({
+            flags: {
+                polygon: selectionFlags,
+                rectangle: selectionFlags,
+                marker: selectionFlags,
+            },
+        }),
+        new TerraDrawMarkerMode({
+            editable: true,
+        }),
+        new TerraDrawPolygonMode({
+            editable: true,
+            styles: elementStyle,
+        }),
+        new TerraDrawRectangleMode({
+            styles: elementStyle,
+        }),
+    ],
+});
 
-export const useTerraDraw = () => {
+type CreatedFeature = {
+    id: string | number;
+    geometry: unknown;
+    properties: unknown;
+};
+
+export type UseTerraDrawOptions = {
+    readOnly?: boolean;
+    onFeatureCreated?: (feature: CreatedFeature, draw: TerraDraw) => void;
+};
+
+export const useTerraDraw = ({ readOnly = false, onFeatureCreated }: UseTerraDrawOptions = {}) => {
     const map = useMap();
     const drawRef = useRef<TerraDraw | null>(null);
     const [draw, setDraw] = useState<TerraDraw | null>(null);
+    const onFeatureCreatedRef = useRef(onFeatureCreated);
 
     useEffect(() => {
-        if (!map || drawRef.current) return;
+        onFeatureCreatedRef.current = onFeatureCreated;
+    }, [onFeatureCreated]);
+
+    useEffect(() => {
+        if (readOnly || !map || drawRef.current) return;
         let inUnmounting = false;
         let listener: google.maps.MapsEventListener | null = null;
 
@@ -59,18 +82,19 @@ export const useTerraDraw = () => {
             // istanbul ignore if
             if (drawRef.current || inUnmounting) return;
 
-            const instance = new TerraDraw({
-                adapter: new TerraDrawGoogleMapsAdapter({
-                    map,
-                    lib: google.maps,
-                    coordinatePrecision: 9,
-                }),
-                modes: createTerraDrawModes(),
-            });
+            const instance = new TerraDraw(getTerraDrawConfig(map));
+            // triggered when a feature is created
+            instance.on('finish', id => {
+                const feature = instance.getSnapshot().find(f => f.id === id);
+                /* istanbul ignore if */
+                if (!feature) return;
 
-            instance.start();
+                // call given onFeatureCreated with the created feature and the Terra Draw instance
+                onFeatureCreatedRef.current?.(feature, instance);
+            });
+            // triggered when manipulating features (dragging, resizing, etc)
             instance.on('change', (_, type) => {
-                // disable gmaps gesture handling when updating (dragging, etc) an element to avoid conflicts
+                // disable gmaps gesture handling when updating an element to avoid conflicts
                 if (type === 'update') {
                     map.setOptions({ gestureHandling: 'none' });
                     return;
@@ -78,10 +102,12 @@ export const useTerraDraw = () => {
                 map.setOptions({ gestureHandling: 'greedy' });
             });
 
+            instance.start();
             drawRef.current = instance;
             setDraw(instance);
         };
 
+        // inject Terra Draw into the map
         if (map.getProjection()) {
             initialize();
         } else {
@@ -95,14 +121,15 @@ export const useTerraDraw = () => {
 
         // eslint-disable-next-line consistent-return
         return () => {
+            // clean up
             inUnmounting = true;
             listener?.remove();
             if (drawRef.current) {
                 map.setOptions({ gestureHandling: 'greedy' });
                 drawRef.current.stop();
                 drawRef.current = null;
+                setDraw(null);
             }
-            setDraw(null);
         };
     }, [map]);
 

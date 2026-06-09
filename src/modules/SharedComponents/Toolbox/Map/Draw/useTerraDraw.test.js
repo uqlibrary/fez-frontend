@@ -15,12 +15,14 @@ jest.mock('terra-draw', () => {
     const start = jest.fn();
     const stop = jest.fn();
     const on = jest.fn();
+    const getSnapshot = jest.fn();
 
     return {
         TerraDraw: jest.fn().mockImplementation(() => ({
             start,
             stop,
             on,
+            getSnapshot,
         })),
         TerraDrawMarkerMode: jest.fn(),
         TerraDrawPolygonMode: jest.fn(),
@@ -84,6 +86,24 @@ describe('useTerraDraw', () => {
         });
         expect(TerraDraw).toHaveBeenCalledTimes(1);
         expect(removeListener).toHaveBeenCalled();
+    });
+
+    it('should call given onFeatureCreated on feature creation', () => {
+        map.getProjection.mockReturnValue({});
+        const onFeatureCreatedMock = jest.fn();
+        renderHook(() => useTerraDraw({ onFeatureCreated: onFeatureCreatedMock }));
+
+        const instance = TerraDraw.mock.results[0].value;
+
+        const mockFeature = { id: 'mockId', geometry: {}, properties: {} };
+        instance.getSnapshot.mockReturnValue([mockFeature]);
+
+        const finishHandler = instance.on.mock.calls.find(([event]) => event === 'finish')[1];
+        act(() => {
+            finishHandler('mockId');
+        });
+
+        expect(onFeatureCreatedMock).toHaveBeenCalledWith(mockFeature, instance);
     });
 
     it('should disable gesture handling during updates', () => {
