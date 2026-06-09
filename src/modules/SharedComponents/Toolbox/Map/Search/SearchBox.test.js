@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from 'test-utils';
+import { render, waitFor } from 'utils/test-utils';
 import userEvent from '@testing-library/user-event';
 import SearchBox from './SearchBox';
 

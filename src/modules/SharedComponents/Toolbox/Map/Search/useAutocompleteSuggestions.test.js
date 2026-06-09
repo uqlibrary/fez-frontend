@@ -1,4 +1,4 @@
-import { renderHook, act } from 'test-utils';
+import { renderHook, act } from 'utils/test-utils';
 import { useAutocompleteSuggestions } from './useAutocompleteSuggestions';
 
 const mockFetchAutocompleteSuggestions = jest.fn();
