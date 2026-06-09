@@ -2,32 +2,36 @@ import React, { useCallback, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
-import { useMapsLibrary } from '@vis.gl/react-google-maps';
+import { useMap, useMapsLibrary } from '@vis.gl/react-google-maps';
 import { useAutocompleteSuggestions } from './useAutocompleteSuggestions';
 import { Box } from '@mui/material';
 
 type SearchBoxProps = { onPlaceSelect: (place: google.maps.places.Place) => void };
 
 const SearchBox: React.FC<SearchBoxProps> = ({ onPlaceSelect, ...containerProps }) => {
+    const map = useMap();
+    const places = useMapsLibrary('places');
     const [open, setOpen] = useState(false);
     const [inputValue, setInputValue] = useState('');
-    const places = useMapsLibrary('places');
     const { suggestions, isLoading, resetSession } = useAutocompleteSuggestions(inputValue);
 
-    const handleSuggestionClick = useCallback(
+    const onSelectSuggestion = useCallback(
         async (suggestion: google.maps.places.AutocompleteSuggestion | null) => {
-            if (!places || !suggestion || !suggestion?.placePrediction) return;
+            if (!map || !places || !suggestion || !suggestion?.placePrediction) return;
 
             const place = suggestion.placePrediction.toPlace();
             await place.fetchFields({
                 fields: ['viewport', 'location', 'svgIconMaskURI', 'iconBackgroundColor'],
             });
+            // center map on selected place
+            /* istanbul ignore else */
+            if (place.viewport) map.fitBounds(place.viewport);
 
             setInputValue('');
             resetSession();
             onPlaceSelect(place);
         },
-        [places, resetSession, onPlaceSelect],
+        [map, places, resetSession, onPlaceSelect],
     );
 
     return (
@@ -46,7 +50,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onPlaceSelect, ...containerProps 
                 onChange={async (_, suggestion) => {
                     // istanbul ignore next
                     if (suggestion === null) return;
-                    await handleSuggestionClick(suggestion);
+                    await onSelectSuggestion(suggestion);
                 }}
                 getOptionKey={suggestion => String(suggestion?.placePrediction?.placeId)}
                 getOptionLabel={suggestion => String(suggestion?.placePrediction?.text?.text)}

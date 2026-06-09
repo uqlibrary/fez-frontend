@@ -1,14 +1,16 @@
 import React from 'react';
-import { render, waitFor } from 'utils/test-utils';
+import { render, waitFor } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 import SearchBox from './SearchBox';
 
+const mockUseMapFitBounds = jest.fn();
 const mockFetchFields = jest.fn();
 const mockSessionToken = {};
 const MockAutocompleteSessionToken = jest.fn(() => mockSessionToken);
 
 jest.mock('@vis.gl/react-google-maps', () => ({
     useMapsLibrary: jest.fn(),
+    useMap: () => ({ fitBounds: mockUseMapFitBounds }),
 }));
 
 jest.mock('./useAutocompleteSuggestions', () => ({
@@ -98,6 +100,7 @@ describe('SearchBox', () => {
             isLoading: false,
             resetSession: mockResetSession,
         });
+        mockToPlace.mockReturnValue({ fetchFields: mockFetchFields, viewport: 'mockViewport' });
         const { getByPlaceholderText, getByText } = setup();
 
         await userEvent.type(getByPlaceholderText('Search...'), 'Syd');
@@ -108,6 +111,8 @@ describe('SearchBox', () => {
             fields: ['viewport', 'location', 'svgIconMaskURI', 'iconBackgroundColor'],
         });
         await waitFor(() => expect(mockOnPlaceSelect).toHaveBeenCalled());
+        expect(mockUseMapFitBounds).toHaveBeenCalledWith('mockViewport');
+        expect(mockOnPlaceSelect).toHaveBeenCalledWith({ fetchFields: mockFetchFields, viewport: 'mockViewport' });
         expect(mockResetSession).toHaveBeenCalled();
     });
 
