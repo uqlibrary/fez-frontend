@@ -13,12 +13,12 @@ jest.mock('@vis.gl/react-google-maps', () => ({
     useMap: () => ({ fitBounds: mockUseMapFitBounds }),
 }));
 
-jest.mock('./useAutocompleteSuggestions', () => ({
+jest.mock('./hooks/useAutocompleteSuggestions', () => ({
     useAutocompleteSuggestions: jest.fn(),
 }));
 
 const { useMapsLibrary } = require('@vis.gl/react-google-maps');
-const { useAutocompleteSuggestions } = require('./useAutocompleteSuggestions');
+const { useAutocompleteSuggestions } = require('./hooks/useAutocompleteSuggestions');
 
 const mockResetSession = jest.fn();
 const mockOnPlaceSelect = jest.fn();

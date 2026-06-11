@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useMap, useMapsLibrary } from '@vis.gl/react-google-maps';
-import { useAutocompleteSuggestions } from './useAutocompleteSuggestions';
+import { useAutocompleteSuggestions } from './hooks/useAutocompleteSuggestions';
 import { Box } from '@mui/material';
 
 type SearchBoxProps = { onPlaceSelect: (place: google.maps.places.Place) => void };

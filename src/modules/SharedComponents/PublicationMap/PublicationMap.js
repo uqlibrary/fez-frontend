@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { ControlPosition, MapControl, APIProvider, Map, Marker, Polygon } from '@vis.gl/react-google-maps';
-import SearchBox from 'modules/SharedComponents/Toolbox/Map/Search/SearchBox';
-import DrawingManager from 'modules/SharedComponents/Toolbox/Map/Draw/DrawingManager';
-import TerraDrawLayer from 'modules/SharedComponents/Toolbox/Map/Draw/TerraDrawLayer';
+import SearchBox from 'modules/SharedComponents/Toolbox/Map/SearchBox';
+import DrawingManager from 'modules/SharedComponents/Toolbox/Map/DrawingManager';
+import TerraDrawLayer from 'modules/SharedComponents/Toolbox/Map/TerraDrawLayer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CenterMapToCoordinates } from 'modules/SharedComponents/Toolbox/Map/CenterMapToCoordinates';
 

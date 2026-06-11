@@ -36,17 +36,17 @@ jest.mock('@vis.gl/react-google-maps', () => ({
     ControlPosition: { TOP_CENTER: 'TOP_CENTER', TOP_RIGHT: 'TOP_RIGHT' },
 }));
 
-jest.mock('modules/SharedComponents/Toolbox/Map/Search/SearchBox', () => ({
+jest.mock('modules/SharedComponents/Toolbox/Map/SearchBox', () => ({
     __esModule: true,
     default: props => mockSearchBox(props),
 }));
 
-jest.mock('modules/SharedComponents/Toolbox/Map/Draw/DrawingManager', () => ({
+jest.mock('modules/SharedComponents/Toolbox/Map/DrawingManager', () => ({
     __esModule: true,
     default: () => <button data-testid="drawing-manager">Draw</button>,
 }));
 
-jest.mock('modules/SharedComponents/Toolbox/Map/Draw/TerraDrawLayer', () => ({
+jest.mock('modules/SharedComponents/Toolbox/Map/TerraDrawLayer', () => ({
     __esModule: true,
     default: props => mockTerraDrawLayer(props),
 }));
