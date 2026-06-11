@@ -41,6 +41,11 @@ const getTerraDrawConfig = (map: google.maps.Map) => ({
         }),
         new TerraDrawMarkerMode({
             editable: true,
+            styles: {
+                markerUrl: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi3.png',
+                markerWidth: 26,
+                markerHeight: 37,
+            },
         }),
         new TerraDrawPolygonMode({
             editable: true,
