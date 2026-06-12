@@ -41,7 +41,7 @@ jest.mock('modules/SharedComponents/Toolbox/Map/SearchBox', () => ({
     default: props => mockSearchBox(props),
 }));
 
-jest.mock('modules/SharedComponents/Toolbox/Map/DrawingManager', () => ({
+jest.mock('modules/SharedComponents/Toolbox/Map/DrawingControls', () => ({
     __esModule: true,
     default: () => <button data-testid="drawing-manager">Draw</button>,
 }));

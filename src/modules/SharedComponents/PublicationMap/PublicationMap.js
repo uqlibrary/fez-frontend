@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { ControlPosition, MapControl, APIProvider, Map, Marker, Polygon } from '@vis.gl/react-google-maps';
 import SearchBox from 'modules/SharedComponents/Toolbox/Map/SearchBox';
-import DrawingManager from 'modules/SharedComponents/Toolbox/Map/DrawingManager';
+import DrawingControls from 'modules/SharedComponents/Toolbox/Map/DrawingControls';
 import TerraDrawLayer from 'modules/SharedComponents/Toolbox/Map/TerraDrawLayer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CenterMapToCoordinates } from 'modules/SharedComponents/Toolbox/Map/CenterMapToCoordinates';
@@ -105,7 +105,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                                 {!readOnly && (
                                     <>
                                         <MapControl position={ControlPosition.TOP_CENTER}>
-                                            <DrawingManager draw={draw} sx={{ mt: 1.2 }} />
+                                            <DrawingControls draw={draw} sx={{ mt: 1.2 }} />
                                         </MapControl>
                                         <MapControl position={ControlPosition.TOP_RIGHT}>
                                             <SearchBox

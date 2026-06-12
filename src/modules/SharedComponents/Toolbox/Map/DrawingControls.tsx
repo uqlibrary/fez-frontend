@@ -10,7 +10,7 @@ type DrawingControlsProps = {
 
 export type TerraDrawModeId = 'select' | 'marker' | 'polygon' | 'rectangle' | 'static';
 
-const DrawingManager = ({ draw, ...props }: DrawingControlsProps) => {
+const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
     const [activeMode, setActiveMode] = React.useState<TerraDrawModeId>('static');
     const map = useMap();
 
@@ -58,4 +58,4 @@ const DrawingManager = ({ draw, ...props }: DrawingControlsProps) => {
     );
 };
 
-export default React.memo(DrawingManager);
+export default React.memo(DrawingControls);

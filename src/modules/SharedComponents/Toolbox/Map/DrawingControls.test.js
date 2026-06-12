@@ -1,5 +1,5 @@
 import React from 'react';
-import DrawingManager from './DrawingManager';
+import DrawingControls from './DrawingControls';
 import { useMap } from '@vis.gl/react-google-maps';
 import { render, userEvent } from 'test-utils';
 
@@ -16,10 +16,10 @@ const setup = (testProps = {}) => {
         },
         ...testProps,
     };
-    return render(<DrawingManager {...props} />);
+    return render(<DrawingControls {...props} />);
 };
 
-describe('DrawingManager', () => {
+describe('DrawingControls', () => {
     beforeEach(() => {
         jest.clearAllMocks();
         useMap.mockReturnValue({
