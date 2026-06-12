@@ -60,6 +60,7 @@ export const ORCID_BASE_URL = process.env.ORCID_URL || `https://${ORCID_DOMAIN}`
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
+export const DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE = 'dashboard_hide_creative_work_oa_alert';
 
 export const ROR_BASE_URL = 'https://ror.org';
 
@@ -1937,3 +1938,13 @@ const READONLY_VOCABS_IDS = [
     454139, 453617, 453614, 456851, 456849, 456850, 453662,
 ];
 export const isReadonlyVocab = id => READONLY_VOCABS_IDS.includes(id);
+
+/** MAP */
+export const MAP_DEFAULT_ZOOM_MARKER = 7;
+
+export const MAP_DEFAULT_ZOOM_POLYGON = 13;
+
+export const MAP_DEFAULT_CENTER = {
+    lng: 153.013346,
+    lat: -27.499412,
+};

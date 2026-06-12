@@ -4,21 +4,13 @@ import AdditionalInformation, { formatDate } from './AdditionalInformation';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
-import { useJsApiLoader } from '@react-google-maps/api';
 
 /* eslint-disable react/prop-types */
-jest.mock('@react-google-maps/api', () => ({
-    useJsApiLoader: jest.fn(),
-    Polygon: () => <div id="mock-polygon" />,
-    Marker: () => <div id="mock-marker" />,
-    GoogleMap: props => (
-        <div>
-            <div id="mock-google-maps" />
-            {props.children}
-        </div>
+jest.mock('modules/SharedComponents/PublicationMap/PublicationMap', () => ({
+    __esModule: true,
+    default: ({ coordinates, readOnly }) => (
+        <div data-testid="mock-publication-map" data-coordinates={coordinates} data-readonly={readOnly} />
     ),
-    StandaloneSearchBox: () => <div id="mock-search-box" />,
-    DrawingManager: () => <div id="mock-drawing-manager" />,
 }));
 
 function setup(testProps = {}) {
@@ -55,14 +47,12 @@ describe('Additional Information Component ', () => {
 
     it('should render component with data collection', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({ publication: records.dataCollection });
         expect(container).toMatchSnapshot();
     });
 
     it('should render component with data collection with raid', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({
             publication: {
                 ...records.dataCollection,
@@ -79,7 +69,6 @@ describe('Additional Information Component ', () => {
 
     it('should not render raid link with empty raid data', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { queryByTestId } = setup({
             publication: {
                 ...records.dataCollection,
@@ -96,7 +85,6 @@ describe('Additional Information Component ', () => {
 
     it('should not render raid link with empty raid array', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { queryByTestId } = setup({
             publication: {
                 ...records.dataCollection,
@@ -108,7 +96,6 @@ describe('Additional Information Component ', () => {
 
     it('should render component with data collection with license link', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({
             publication: {
                 ...records.dataCollection,
@@ -352,7 +339,6 @@ describe('Additional Information Component ', () => {
 
     it('should render component with data collection with FoR codes', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({ publication: records.dataCollectionWithFoRCodes });
         expect(container).toMatchSnapshot();
     });
@@ -413,7 +399,6 @@ describe('Additional Information Component ', () => {
 
     it('should not render empty rights', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { queryByTestId } = setup({
             publication: {
                 ...records.dataCollection,
@@ -426,7 +411,6 @@ describe('Additional Information Component ', () => {
 
     it('should not render null rights', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { queryByTestId } = setup({
             publication: {
                 ...records.dataCollection,
@@ -439,7 +423,6 @@ describe('Additional Information Component ', () => {
 
     it('should not render empty keyword', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { queryByTestId } = setup({
             publication: {
                 ...records.dataCollection,
@@ -499,7 +482,6 @@ describe('Additional Information Component ', () => {
 
     it('should render map with geo coordinates', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({
             publication: {
                 ...records.audioDocument,

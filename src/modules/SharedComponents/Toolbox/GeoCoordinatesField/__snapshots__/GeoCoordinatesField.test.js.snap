@@ -2,42 +2,28 @@
 
 exports[`GeoCoordinatesField component should render default view 1`] = `
 <div>
-  <div>
-    <div
-      id="mock-google-maps"
-    />
-    <div
-      id="mock-drawing-manager"
-    />
-    <div
-      id="mock-search-box"
-    />
-  </div>
+  <div
+    data-coordinates=""
+    data-testid="mock-publication-map"
+  />
 </div>
 `;
 
 exports[`GeoCoordinatesField component should render default view with readOnly 1`] = `
 <div>
-  <div>
-    <div
-      id="mock-google-maps"
-    />
-  </div>
+  <div
+    data-coordinates=""
+    data-readonly="true"
+    data-testid="mock-publication-map"
+  />
 </div>
 `;
 
 exports[`GeoCoordinatesField component should render with given coordinates 1`] = `
 <div>
-  <div>
-    <div
-      id="mock-google-maps"
-    />
-    <div
-      id="mock-drawing-manager"
-    />
-    <div
-      id="mock-search-box"
-    />
-  </div>
+  <div
+    data-coordinates="100,100"
+    data-testid="mock-publication-map"
+  />
 </div>
 `;

@@ -1,7 +1,7 @@
 import { hydrateMockSearchList } from '../../../helpers/general';
 
 const myRecordsList = {
-    "total": 3,
+    "total": 18,
     "took": 1337,
     "per_page": 20,
     "current_page": 1,
@@ -876,7 +876,7 @@ const myRecordsList = {
             "Display type": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": 179, "doc_count": 55}, {"key": 130, "doc_count": 13}]
+                "buckets": [{"key": 313, "doc_count": 5}, {"key": 130, "doc_count": 13}]
             },
             "Keywords": {
                 "doc_count_error_upper_bound": 0,
