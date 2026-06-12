@@ -3,6 +3,7 @@ import React from 'react';
 import { render as defaultRender, act } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 import { PublicationMap } from './PublicationMap';
+import { MAP_DEFAULT_CENTER } from '../../../config/general';
 
 const mockOnFeatureCreated = jest.fn();
 const mockRemoveFeatures = jest.fn();
@@ -29,7 +30,11 @@ const mockSearchBox = jest.fn(({ onPlaceSelect }) => (
 
 jest.mock('@vis.gl/react-google-maps', () => ({
     APIProvider: ({ children }) => <div>{children}</div>,
-    Map: ({ children }) => <div data-testid="map">{children}</div>,
+    Map: ({ children, defaultCenter }) => (
+        <div data-testid="map" data-default-center={JSON.stringify(defaultCenter)}>
+            {children}
+        </div>
+    ),
     MapControl: ({ children }) => <div>{children}</div>,
     Marker: ({ position }) => <div data-testid="marker" data-position={JSON.stringify(position)} />,
     Polygon: ({ paths }) => <div data-testid="polygon" data-paths={JSON.stringify(paths)} />,
@@ -79,6 +84,7 @@ describe('PublicationMap', () => {
         expect(getByTestId('map')).toBeInTheDocument();
         expect(getByTestId('search-box')).toBeInTheDocument();
         expect(getByTestId('drawing-manager')).toBeInTheDocument();
+        expect(getByTestId('map').dataset.defaultCenter).toBe(JSON.stringify(MAP_DEFAULT_CENTER));
     });
 
     it('should not render search box and drawing manager when readOnly', () => {
