@@ -1,6 +1,7 @@
 import React from 'react';
 import { render as defaultRender } from 'test-utils';
 import { CenterMapToCoordinates } from './CenterMapToCoordinates';
+import { MAP_DEFAULT_ZOOM_MARKER, MAP_DEFAULT_ZOOM_POLYGON } from '../../../../config/general';
 
 jest.mock('@vis.gl/react-google-maps', () => ({
     useMap: jest.fn(),
@@ -65,21 +66,21 @@ describe('CenterMapToCoordinates', () => {
         expect(mockSetZoom).not.toHaveBeenCalled();
     });
 
-    it('should panTo and setZoom(7) for a single coordinate', () => {
+    it('should panTo and zoom settings for a single coordinate', () => {
         setup(singleCoordinate);
         expect(mockPanTo).toHaveBeenCalledWith(singleCoordinate[0]);
-        expect(mockSetZoom).toHaveBeenCalledWith(7);
+        expect(mockSetZoom).toHaveBeenCalledWith(MAP_DEFAULT_ZOOM_MARKER);
         expect(mockFitBounds).not.toHaveBeenCalled();
     });
 
-    it('should fitBounds and setZoom(13) for multiple coordinates', () => {
+    it('should fitBounds and zoom settings for multiple coordinates', () => {
         setup(multipleCoordinates);
         expect(mockLatLngBounds).toHaveBeenCalledTimes(1);
         expect(mockExtend).toHaveBeenCalledTimes(multipleCoordinates.length);
         expect(mockExtend).toHaveBeenCalledWith(multipleCoordinates[0]);
         expect(mockExtend).toHaveBeenCalledWith(multipleCoordinates[1]);
         expect(mockFitBounds).toHaveBeenCalledWith({ extend: mockExtend });
-        expect(mockSetZoom).toHaveBeenCalledWith(13);
+        expect(mockSetZoom).toHaveBeenCalledWith(MAP_DEFAULT_ZOOM_POLYGON);
         expect(mockPanTo).not.toHaveBeenCalled();
     });
 

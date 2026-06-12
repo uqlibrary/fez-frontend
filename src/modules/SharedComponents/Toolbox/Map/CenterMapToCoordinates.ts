@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useMap } from '@vis.gl/react-google-maps';
+import { MAP_DEFAULT_ZOOM_MARKER, MAP_DEFAULT_ZOOM_POLYGON } from 'config/general';
 
 export type usePanMapToCoordinatesOptions = {
     coordinates: google.maps.LatLngLiteral[];
@@ -14,10 +15,10 @@ export const CenterMapToCoordinates = ({ coordinates }: usePanMapToCoordinatesOp
         // center map once only
         isCentered.current = true;
 
-        // handles markers/pins
+        // handles markers
         if (coordinates.length === 1) {
             map.panTo(coordinates[0]);
-            map.setZoom(7);
+            map.setZoom(MAP_DEFAULT_ZOOM_MARKER);
             return;
         }
 
@@ -25,7 +26,7 @@ export const CenterMapToCoordinates = ({ coordinates }: usePanMapToCoordinatesOp
         const bounds = new google.maps.LatLngBounds();
         coordinates.forEach(coordinate => bounds.extend(coordinate));
         map.fitBounds(bounds);
-        map.setZoom(13);
+        map.setZoom(MAP_DEFAULT_ZOOM_POLYGON);
     }, [map, coordinates]);
 
     return null;

@@ -6,6 +6,7 @@ import DrawingManager from 'modules/SharedComponents/Toolbox/Map/DrawingManager'
 import TerraDrawLayer from 'modules/SharedComponents/Toolbox/Map/TerraDrawLayer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CenterMapToCoordinates } from 'modules/SharedComponents/Toolbox/Map/CenterMapToCoordinates';
+import { MAP_DEFAULT_CENTER, MAP_DEFAULT_ZOOM_MARKER, MAP_DEFAULT_ZOOM_POLYGON } from 'config/general';
 
 const localTheme = createTheme({
     palette: {
@@ -14,13 +15,6 @@ const localTheme = createTheme({
         },
     },
 });
-
-const pointZoom = 7;
-const polygonZoom = 13;
-const defaultCenter = {
-    lng: 153.013346,
-    lat: -27.499412,
-};
 
 const coordinatesToString = coordinates => coordinates.map(item => `${item[0]},${item[1]}`).join(' ');
 
@@ -83,9 +77,11 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                     {draw => (
                         <>
                             <Map
-                                defaultZoom={hasInitialCoordinates.current ? pointZoom : polygonZoom}
+                                defaultZoom={
+                                    hasInitialCoordinates.current ? MAP_DEFAULT_ZOOM_MARKER : MAP_DEFAULT_ZOOM_POLYGON
+                                }
                                 mapId={'publication-map'}
-                                defaultCenter={defaultCenter}
+                                defaultCenter={MAP_DEFAULT_CENTER}
                                 gestureHandling={'greedy'}
                                 style={{ height: '400px' }}
                             >
