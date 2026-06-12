@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { ControlPosition, MapControl, APIProvider, Map, Marker, Polygon } from '@vis.gl/react-google-maps';
+import { ControlPosition, MapControl, APIProvider, Map, Polygon, AdvancedMarker } from '@vis.gl/react-google-maps';
 import SearchBox from 'modules/SharedComponents/Toolbox/Map/SearchBox';
 import DrawingControls from 'modules/SharedComponents/Toolbox/Map/DrawingControls';
 import TerraDrawLayer from 'modules/SharedComponents/Toolbox/Map/TerraDrawLayer';
@@ -71,7 +71,7 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     };
 
     return (
-        <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY}>
+        <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY} region="au" libraries={['maps', 'places']}>
             <ThemeProvider theme={localTheme}>
                 <TerraDrawLayer readOnly={readOnly} onFeatureCreated={onFeatureCreated}>
                     {draw => (
@@ -100,7 +100,7 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                                             }}
                                         />
                                     ) : (
-                                        <Marker position={initialCoordinates.current[0]} />
+                                        <AdvancedMarker position={initialCoordinates.current[0]} />
                                     ))}
                                 {!readOnly && (
                                     <>
