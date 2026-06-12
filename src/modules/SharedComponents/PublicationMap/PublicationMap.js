@@ -71,7 +71,7 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     };
 
     return (
-        <APIProvider apiKey={process?.env?.GOOGLE_MAPS_API_KEY}>
+        <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY}>
             <ThemeProvider theme={localTheme}>
                 <TerraDrawLayer readOnly={readOnly} onFeatureCreated={onFeatureCreated}>
                     {draw => (
