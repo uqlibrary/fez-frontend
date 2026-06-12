@@ -2,10 +2,6 @@ import React from 'react';
 import { render } from 'test-utils';
 import TryCatch from './TryCatch';
 
-jest.mock('config/general', () => ({
-    IS_PRODUCTION: false,
-}));
-
 const callback = jest.fn();
 
 const ThrowError = ({ message = 'boom' }) => {
@@ -21,8 +17,8 @@ const setup = (props = {}) =>
 
 describe('TryCatch', () => {
     beforeEach(() => {
+        jest.resetModules();
         jest.clearAllMocks();
-
         jest.spyOn(console, 'error').mockImplementation(() => {});
     });
 
@@ -36,34 +32,34 @@ describe('TryCatch', () => {
         expect(getByText('content')).toBeInTheDocument();
     });
 
-    it('should render fallback when child throws', () => {
+    it('should display and log error to console, and call callback', () => {
         const { getByText } = render(
-            <TryCatch>
-                <ThrowError />
-            </TryCatch>,
-        );
-
-        expect(getByText('Failed to render component: boom')).toBeInTheDocument();
-    });
-
-    it('should call callback with the error', () => {
-        render(
             <TryCatch callback={callback}>
                 <ThrowError />
             </TryCatch>,
         );
 
+        expect(console.error).toHaveBeenCalled();
         expect(callback).toHaveBeenCalledTimes(1);
         expect(callback).toHaveBeenCalledWith(expect.objectContaining({ message: 'boom' }));
+        expect(getByText('Failed to render component: boom')).toBeInTheDocument();
     });
 
-    it('should log error to console', () => {
-        render(
-            <TryCatch>
+    it('should not display error for non-prod envs', () => {
+        jest.doMock('config/general', () => ({
+            IS_PRODUCTION: true,
+        }));
+
+        const TryCatch = require('./TryCatch').default;
+        const { queryByText } = render(
+            <TryCatch callback={callback}>
                 <ThrowError />
             </TryCatch>,
         );
 
         expect(console.error).toHaveBeenCalled();
+        expect(callback).toHaveBeenCalledTimes(1);
+        expect(callback).toHaveBeenCalledWith(expect.objectContaining({ message: 'boom' }));
+        expect(queryByText('Failed to render component: boom')).not.toBeInTheDocument();
     });
 });
