@@ -75,7 +75,7 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
             <ThemeProvider theme={localTheme}>
                 <TerraDrawLayer readOnly={readOnly} onFeatureCreated={onFeatureCreated}>
                     {draw => (
-                        <>
+                        <div data-testid="rek-geographic-area" data-analyticsid="rek-geographic-area">
                             <Map
                                 defaultZoom={
                                     hasInitialCoordinates.current ? MAP_DEFAULT_ZOOM_MARKER : MAP_DEFAULT_ZOOM_POLYGON
@@ -116,7 +116,7 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                                     </>
                                 )}
                             </Map>
-                        </>
+                        </div>
                     )}
                 </TerraDrawLayer>
             </ThemeProvider>

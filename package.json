@@ -206,6 +206,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-dropzone": "^14.2.3",
+    "react-error-boundary": "^6.1.2",
     "react-hook-form": "^7.63.0",
     "react-image": "^4.1.0",
     "react-jss": "^8.6.1",
