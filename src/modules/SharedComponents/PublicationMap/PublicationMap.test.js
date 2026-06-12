@@ -36,7 +36,7 @@ jest.mock('@vis.gl/react-google-maps', () => ({
         </div>
     ),
     MapControl: ({ children }) => <div>{children}</div>,
-    Marker: ({ position }) => <div data-testid="marker" data-position={JSON.stringify(position)} />,
+    AdvancedMarker: ({ position }) => <div data-testid="marker" data-position={JSON.stringify(position)} />,
     Polygon: ({ paths }) => <div data-testid="polygon" data-paths={JSON.stringify(paths)} />,
     ControlPosition: { TOP_CENTER: 'TOP_CENTER', TOP_RIGHT: 'TOP_RIGHT' },
 }));
