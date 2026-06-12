@@ -19,12 +19,16 @@ export function useAutocompleteSuggestions(query: string): UseAutocompleteSugges
     };
 
     const debouncedFetchAutocompleteSuggestions = useRef(
-        _.debounce(async (input, sessionToken, api) => {
-            setIsLoading(true);
-            const result = await silentTryCatch(() => api.fetchAutocompleteSuggestions({ input, sessionToken }));
-            setSuggestions(result?.suggestions ?? []);
-            setIsLoading(false);
-        }, 300),
+        _.debounce(
+            async (input, sessionToken, api) => {
+                setIsLoading(true);
+                const result = await silentTryCatch(() => api.fetchAutocompleteSuggestions({ input, sessionToken }));
+                setSuggestions(result?.suggestions ?? []);
+                setIsLoading(false);
+            },
+            300,
+            { trailing: true },
+        ),
     ).current;
 
     useEffect(() => {
