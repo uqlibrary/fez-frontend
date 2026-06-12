@@ -12,7 +12,7 @@ import {
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
-import PublicationMap from '../../SharedComponents/PublicationMap/PublicationMap';
+import PublicationMap from 'modules/SharedComponents/PublicationMap/PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router';
 import {

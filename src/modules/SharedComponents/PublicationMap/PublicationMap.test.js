@@ -2,7 +2,7 @@
 import React from 'react';
 import { render as defaultRender, act } from 'test-utils';
 import userEvent from '@testing-library/user-event';
-import { PublicationMap } from './PublicationMap';
+import PublicationMap from './PublicationMap';
 import { MAP_DEFAULT_CENTER } from '../../../config/general';
 
 const mockOnFeatureCreated = jest.fn();

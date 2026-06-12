@@ -18,7 +18,7 @@ const localTheme = createTheme({
 
 const coordinatesToString = coordinates => coordinates.map(item => `${item[0]},${item[1]}`).join(' ');
 
-export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
+const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     const hasInitialCoordinates = useRef(null);
     const initialCoordinates = useRef(null);
     const isDirtyRef = useRef(false);
@@ -71,7 +71,7 @@ export const PublicationMap = ({ coordinates, onChange, readOnly }) => {
     };
 
     return (
-        <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY}>
+        <APIProvider apiKey={process?.env?.GOOGLE_MAPS_API_KEY}>
             <ThemeProvider theme={localTheme}>
                 <TerraDrawLayer readOnly={readOnly} onFeatureCreated={onFeatureCreated}>
                     {draw => (
