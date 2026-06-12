@@ -1,6 +1,8 @@
+import React from 'react';
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
 import { DOI_BASE_URL, ORCID_BASE_URL, ROR_BASE_URL } from '../config/general';
+import TryCatch from 'modules/SharedComponents/Toolbox/TryCatch/TryCatch';
 
 /* istanbul ignore next */
 global.dd = console.dir.bind(console);
@@ -606,3 +608,5 @@ export const getRorURL = id => (id?.trim?.() && `${ROR_BASE_URL}/${id.trim()}`) 
  * @return {string}
  */
 export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) || '';
+
+export const withErrorBoundary = (children, callback) => <TryCatch children={children} callback={callback} />;
