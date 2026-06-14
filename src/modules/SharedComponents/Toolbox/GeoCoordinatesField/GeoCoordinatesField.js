@@ -1,6 +1,5 @@
 import React from 'react';
-import PublicationMap from 'modules/ViewRecord/components/PublicationMap';
+import PublicationMap from '../../PublicationMap/PublicationMap';
+import { withErrorBoundary } from '../../../../helpers/general';
 
-export default function GeoCoordinatesField(fieldProps) {
-    return <PublicationMap coordinates={fieldProps.value || ''} {...fieldProps} />;
-}
+export default fieldProps => withErrorBoundary(<PublicationMap coordinates={fieldProps.value || ''} {...fieldProps} />);
