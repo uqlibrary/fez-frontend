@@ -220,8 +220,8 @@
     "regenerator-runtime": "^0.13.9",
     "reselect": "^5.1.1",
     "save": "^2.9.0",
-    "terra-draw": "^1.31.0",
-    "terra-draw-google-maps-adapter": "^1.6.0",
+    "terra-draw": "^1.31.1",
+    "terra-draw-google-maps-adapter": "^1.6.1",
     "throttle-debounce": "^5.0.0",
     "timezones.json": "^1.2.1",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"

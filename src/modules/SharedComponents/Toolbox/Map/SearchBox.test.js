@@ -21,7 +21,6 @@ const { useMapsLibrary } = require('@vis.gl/react-google-maps');
 const { useAutocompleteSuggestions } = require('./hooks/useAutocompleteSuggestions');
 
 const mockResetSession = jest.fn();
-const mockOnPlaceSelect = jest.fn();
 
 const mockToPlace = jest.fn(() => ({ fetchFields: mockFetchFields }));
 
@@ -31,7 +30,7 @@ const mockSuggestions = [
 ];
 
 function setup(props = {}) {
-    return render(<SearchBox onPlaceSelect={mockOnPlaceSelect} {...props} />);
+    return render(<SearchBox {...props} />);
 }
 
 describe('SearchBox', () => {
@@ -94,7 +93,7 @@ describe('SearchBox', () => {
         expect(queryByRole('listbox')).not.toBeInTheDocument();
     });
 
-    it('should call onPlaceSelect and resetSession when a suggestion is clicked', async () => {
+    it('should call resetSession when a suggestion is clicked', async () => {
         useAutocompleteSuggestions.mockReturnValue({
             suggestions: mockSuggestions,
             isLoading: false,
@@ -110,9 +109,8 @@ describe('SearchBox', () => {
         expect(mockFetchFields).toHaveBeenCalledWith({
             fields: ['viewport', 'location', 'svgIconMaskURI', 'iconBackgroundColor'],
         });
-        await waitFor(() => expect(mockOnPlaceSelect).toHaveBeenCalled());
+        await waitFor(() => expect(mockResetSession).toHaveBeenCalled());
         expect(mockUseMapFitBounds).toHaveBeenCalledWith('mockViewport');
-        expect(mockOnPlaceSelect).toHaveBeenCalledWith({ fetchFields: mockFetchFields, viewport: 'mockViewport' });
         expect(mockResetSession).toHaveBeenCalled();
     });
 
@@ -162,7 +160,7 @@ describe('SearchBox', () => {
         await waitFor(() => expect(input.value).toBe('Syd'));
     });
 
-    it('should not call onPlaceSelect when places library is not loaded', async () => {
+    it('should do nothing when places library is not loaded', async () => {
         useMapsLibrary.mockReturnValue(null);
         useAutocompleteSuggestions.mockReturnValue({
             suggestions: mockSuggestions,
@@ -174,6 +172,7 @@ describe('SearchBox', () => {
         await userEvent.type(getByPlaceholderText('Search...'), 'Syd');
         await userEvent.click(getByText('Sydney, NSW'));
 
-        expect(mockOnPlaceSelect).not.toHaveBeenCalled();
+        expect(mockUseMapFitBounds).not.toHaveBeenCalled();
+        expect(mockResetSession).not.toHaveBeenCalled();
     });
 });

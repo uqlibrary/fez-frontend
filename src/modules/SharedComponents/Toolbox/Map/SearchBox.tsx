@@ -8,7 +8,7 @@ import { Box } from '@mui/material';
 
 type SearchBoxProps = { onPlaceSelect: (place: google.maps.places.Place) => void };
 
-const SearchBox: React.FC<SearchBoxProps> = ({ onPlaceSelect, ...containerProps }) => {
+const SearchBox: React.FC<SearchBoxProps> = ({ ...containerProps }) => {
     const map = useMap();
     const places = useMapsLibrary('places');
     const [open, setOpen] = useState(false);
@@ -29,15 +29,15 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onPlaceSelect, ...containerProps 
 
             setInputValue('');
             resetSession();
-            onPlaceSelect(place);
         },
-        [map, places, resetSession, onPlaceSelect],
+        [map, places, resetSession],
     );
 
     return (
         <Box {...containerProps}>
             <Autocomplete
                 id="map-search-box"
+                data-testid="map-search-box"
                 fullWidth
                 loading={isLoading}
                 inputValue={inputValue}

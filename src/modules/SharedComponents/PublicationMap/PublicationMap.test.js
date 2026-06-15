@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { render as defaultRender, act } from 'test-utils';
-import userEvent from '@testing-library/user-event';
 import PublicationMap from './PublicationMap';
 import { MAP_DEFAULT_CENTER } from '../../../config/general';
 
@@ -19,14 +18,7 @@ const mockTerraDrawLayer = jest.fn(({ children, onFeatureCreated }) => {
     return <div data-testid="terra-draw-layer">{children(mockDraw)}</div>;
 });
 
-const mockSearchBox = jest.fn(({ onPlaceSelect }) => (
-    <button
-        data-testid="search-box"
-        onClick={() => onPlaceSelect({ location: { toJSON: () => ({ lat: -33.8688, lng: 151.2093 }) } })}
-    >
-        Search
-    </button>
-));
+const mockSearchBox = jest.fn(() => <button data-testid="search-box">Search</button>);
 
 jest.mock('@vis.gl/react-google-maps', () => ({
     APIProvider: ({ children }) => <div>{children}</div>,
@@ -63,7 +55,7 @@ jest.mock('modules/SharedComponents/Toolbox/Map/CenterMapToCoordinates', () => (
 }));
 
 const defaultProps = {
-    coordinates: '',
+    value: '',
     onChange: jest.fn(),
     readOnly: false,
 };
@@ -96,7 +88,7 @@ describe('PublicationMap', () => {
     });
 
     it('should render a marker for a single coordinate', () => {
-        const { getByTestId, queryByTestId } = setup({ coordinates: '151.2093,-33.8688' });
+        const { getByTestId, queryByTestId } = setup({ value: '151.2093,-33.8688' });
 
         expect(getByTestId('marker')).toBeInTheDocument();
         expect(queryByTestId('polygon')).not.toBeInTheDocument();
@@ -104,7 +96,7 @@ describe('PublicationMap', () => {
 
     it('should render a polygon for multiple coordinates', () => {
         const { getByTestId, queryByTestId } = setup({
-            coordinates: '151.2093,-33.8688 144.9631,-37.8136 130.9631,-25.8136',
+            value: '151.2093,-33.8688 144.9631,-37.8136 130.9631,-25.8136',
         });
 
         expect(getByTestId('polygon')).toBeInTheDocument();
@@ -112,43 +104,21 @@ describe('PublicationMap', () => {
     });
 
     it('should not render marker or polygon when coordinates are empty', () => {
-        const { queryByTestId } = setup({ coordinates: '' });
+        const { queryByTestId } = setup({ value: '' });
 
         expect(queryByTestId('marker')).not.toBeInTheDocument();
         expect(queryByTestId('polygon')).not.toBeInTheDocument();
     });
 
     it('should not render marker or polygon when coordinates are whitespace only', () => {
-        const { queryByTestId } = setup({ coordinates: '   ' });
+        const { queryByTestId } = setup({ value: '   ' });
 
         expect(queryByTestId('marker')).not.toBeInTheDocument();
         expect(queryByTestId('polygon')).not.toBeInTheDocument();
     });
 
-    it('should call onChange with formatted coordinates when a place is selected', async () => {
-        const mockOnChange = jest.fn();
-        const { getByTestId } = setup({ onChange: mockOnChange });
-        await userEvent.click(getByTestId('search-box'));
-
-        expect(mockOnChange).toHaveBeenCalledWith('151.2093,-33.8688');
-    });
-
-    it('should not call onChange when selected place has no location', async () => {
-        const mockOnChange = jest.fn();
-        mockSearchBox.mockImplementationOnce(({ onPlaceSelect }) => (
-            <button data-testid="search-box" onClick={() => onPlaceSelect({})}>
-                Search
-            </button>
-        ));
-
-        const { getByTestId } = setup({ onChange: mockOnChange });
-        await userEvent.click(getByTestId('search-box'));
-
-        expect(mockOnChange).not.toHaveBeenCalled();
-    });
-
     it('should pass parsed coordinates to CenterMapToCoordinates', () => {
-        const { getByTestId } = setup({ coordinates: '151.2093,-33.8688' });
+        const { getByTestId } = setup({ value: '151.2093,-33.8688' });
         const coords = JSON.parse(getByTestId('center-map').dataset.coordinates);
 
         expect(coords).toEqual([{ lng: 151.2093, lat: -33.8688 }]);
@@ -216,7 +186,7 @@ describe('PublicationMap', () => {
     it('should hide initial marker after a new feature is drawn', () => {
         const mockOnChange = jest.fn();
         const { queryByTestId, rerender } = setup({
-            coordinates: '151.2093,-33.8688',
+            value: '151.2093,-33.8688',
             onChange: mockOnChange,
         });
 
@@ -226,7 +196,7 @@ describe('PublicationMap', () => {
         });
 
         // isDirtyRef.current is now true — rerender with new coords (simulating parent update)
-        setup({ coordinates: '144.9631,-37.8136', onChange: mockOnChange, readOnly: false }, rerender);
+        setup({ value: '144.9631,-37.8136', onChange: mockOnChange, readOnly: false }, rerender);
         // marker hidden because isDirtyRef.current === true
         expect(queryByTestId('marker')).not.toBeInTheDocument();
     });
