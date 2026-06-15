@@ -73,17 +73,8 @@ export const useTerraDraw = ({ readOnly = false, onCreate, onClear }: UseTerraDr
     const map = useMap();
     const drawRef = useRef<TerraDraw | null>(null);
     const [draw, setDraw] = useState<TerraDraw | null>(null);
-    const onCreateRef = useRef(onCreate);
-    const onClearRef = useRef(onClear);
 
-    useEffect(() => {
-        onCreateRef.current = onCreate;
-    }, [onCreate]);
-
-    useEffect(() => {
-        onClearRef.current = onClear;
-    }, [onClear]);
-
+    // handles map initialization
     useEffect(() => {
         if (readOnly || !map || drawRef.current) return;
         let inUnmounting = false;
@@ -102,12 +93,12 @@ export const useTerraDraw = ({ readOnly = false, onCreate, onClear }: UseTerraDr
 
                 instance.clear();
                 // call given onCreate with the created feature and the Terra Draw instance
-                onCreateRef.current?.(feature);
+                onCreate?.(feature);
             });
             instance.on('change', (ids, type) => {
                 /* istanbul ignore else */
                 if (!ids?.length && type === 'delete') {
-                    onClearRef.current?.();
+                    onClear?.();
                 }
             });
 
@@ -139,7 +130,7 @@ export const useTerraDraw = ({ readOnly = false, onCreate, onClear }: UseTerraDr
                 setDraw(null);
             }
         };
-    }, [map]);
+    }, [map, readOnly, onCreate, onClear]);
 
     return draw;
 };
