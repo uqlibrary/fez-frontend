@@ -16,6 +16,7 @@ jest.mock('terra-draw', () => {
     const stop = jest.fn();
     const on = jest.fn();
     const getSnapshot = jest.fn();
+    const clear = jest.fn();
 
     return {
         TerraDraw: jest.fn().mockImplementation(() => ({
@@ -23,6 +24,7 @@ jest.mock('terra-draw', () => {
             stop,
             on,
             getSnapshot,
+            clear,
         })),
         TerraDrawMarkerMode: jest.fn(),
         TerraDrawPolygonMode: jest.fn(),
@@ -88,50 +90,36 @@ describe('useTerraDraw', () => {
         expect(removeListener).toHaveBeenCalled();
     });
 
-    it('should call given onFeatureCreated on feature creation', () => {
+    it('should call given onCreate on feature creation', () => {
         map.getProjection.mockReturnValue({});
-        const onFeatureCreatedMock = jest.fn();
-        renderHook(() => useTerraDraw({ onFeatureCreated: onFeatureCreatedMock }));
+        const onCreateMock = jest.fn();
+        renderHook(() => useTerraDraw({ onCreate: onCreateMock }));
 
         const instance = TerraDraw.mock.results[0].value;
 
         const mockFeature = { id: 'mockId', geometry: {}, properties: {} };
         instance.getSnapshot.mockReturnValue([mockFeature]);
 
-        const finishHandler = instance.on.mock.calls.find(([event]) => event === 'finish')[1];
-        act(() => {
-            finishHandler('mockId');
-        });
+        const handler = instance.on.mock.calls.find(([event]) => event === 'finish')[1];
+        act(() => handler('mockId'));
 
-        expect(onFeatureCreatedMock).toHaveBeenCalledWith(mockFeature, instance);
+        expect(onCreateMock).toHaveBeenCalledWith(mockFeature);
     });
 
-    it('should disable gesture handling during updates', () => {
+    it('should call given onClear on clear', () => {
         map.getProjection.mockReturnValue({});
-        renderHook(() => useTerraDraw());
+        const onClearMock = jest.fn();
+        renderHook(() => useTerraDraw({ onClear: onClearMock }));
+
         const instance = TerraDraw.mock.results[0].value;
-        const changeHandler = instance.on.mock.calls.find(([event]) => event === 'change')[1];
 
-        act(() => {
-            changeHandler({}, 'update');
-        });
-        expect(map.setOptions).toHaveBeenCalledWith({
-            gestureHandling: 'none',
-        });
-    });
+        const mockFeature = { id: 'mockId', geometry: {}, properties: {} };
+        instance.getSnapshot.mockReturnValue([mockFeature]);
 
-    it('should restore gesture handling for non-update events', () => {
-        map.getProjection.mockReturnValue({});
-        renderHook(() => useTerraDraw());
-        const instance = TerraDraw.mock.results[0].value;
-        const changeHandler = instance.on.mock.calls.find(([event]) => event === 'change')[1];
+        const handler = instance.on.mock.calls.find(([event]) => event === 'change')[1];
+        act(() => handler([], 'delete'));
 
-        act(() => {
-            changeHandler({}, 'create');
-        });
-        expect(map.setOptions).toHaveBeenCalledWith({
-            gestureHandling: 'greedy',
-        });
+        expect(onClearMock).toHaveBeenCalled();
     });
 
     it('should cleanup on unmount', () => {
@@ -140,9 +128,6 @@ describe('useTerraDraw', () => {
         const instance = TerraDraw.mock.results[0].value;
 
         unmount();
-        expect(map.setOptions).toHaveBeenCalledWith({
-            gestureHandling: 'greedy',
-        });
         expect(instance.stop).toHaveBeenCalled();
     });
 

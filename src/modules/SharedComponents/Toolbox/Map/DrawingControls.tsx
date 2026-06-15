@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { TerraDraw } from 'terra-draw';
-import { PanToolOutlined, PentagonTwoTone, RectangleTwoTone, Room } from '@mui/icons-material';
+import { PanToolOutlined, PentagonTwoTone, RectangleTwoTone, Room, DeleteForever } from '@mui/icons-material';
 import { ButtonGroup, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { useMap } from '@vis.gl/react-google-maps';
 
@@ -8,26 +8,22 @@ type DrawingControlsProps = {
     draw: TerraDraw | null;
 } & React.ComponentPropsWithoutRef<typeof ButtonGroup>;
 
-export type TerraDrawModeId = 'select' | 'marker' | 'polygon' | 'rectangle' | 'static';
+export type ModeId = 'marker' | 'polygon' | 'rectangle' | 'static' | 'clear';
 
 const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
-    const [activeMode, setActiveMode] = React.useState<TerraDrawModeId>('static');
+    const [activeMode, setActiveMode] = React.useState<ModeId>('static');
     const map = useMap();
 
-    React.useEffect(() => {
-        if (!draw || activeMode !== 'static') return;
-
-        // default to `select` mode
-        draw.setMode('select');
-        setActiveMode('select');
-    }, [draw, activeMode]);
-
-    const handleModeChange = (modeId: TerraDrawModeId) => {
+    const handleModeChange = (modeId: ModeId) => {
         if (!draw || !map) return;
 
+        if (modeId === 'clear') {
+            draw.clear();
+            setActiveMode(modeId);
+            return;
+        }
+
         draw.setMode(modeId);
-        // restore gesture handling when switching modes
-        map.setOptions({ gestureHandling: 'greedy' });
         setActiveMode(modeId);
     };
 
@@ -43,7 +39,7 @@ const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
                 ...(props?.sx || {}),
             }}
         >
-            <ToggleButton value="select" aria-label="select" data-testid="select-button">
+            <ToggleButton value="static" aria-label="static" data-testid="static-button">
                 <PanToolOutlined fontSize="small" />
             </ToggleButton>
             <ToggleButton value="marker" aria-label="marker" data-testid="marker-button">
@@ -54,6 +50,9 @@ const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
             </ToggleButton>
             <ToggleButton value="rectangle" aria-label="rectangle" data-testid="rectangle-button">
                 <RectangleTwoTone fontSize="small" />
+            </ToggleButton>
+            <ToggleButton value="clear" aria-label="clear" data-testid="clear-button">
+                <DeleteForever fontSize="small" />
             </ToggleButton>
         </ToggleButtonGroup>
     );

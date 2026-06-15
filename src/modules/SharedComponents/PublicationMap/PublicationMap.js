@@ -39,23 +39,16 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
     );
 
     // workaround: forms might initiate the field with an empty value to later populate it
-    if (!coordinatesRef.current && !!parsedCoordinates.length) {
+    if (!!parsedCoordinates.length) {
         hasCoordinates.current = true;
         coordinatesRef.current = parsedCoordinates;
     }
 
     const updateFieldValue = coordinates => onChange(coordinatesToString(coordinates));
 
-    const onFeatureCreated = (feature, draw) => {
+    const onCreate = feature => {
         if (!feature?.geometry?.coordinates?.length) return;
         isDirtyRef.current = true;
-
-        // clear all features, except the one just created
-        const toRemove = draw
-            .getSnapshot()
-            .filter(f => f.id !== feature.id)
-            .map(f => f.id);
-        if (toRemove.length > 0) draw.removeFeatures(toRemove);
 
         if (String(feature.geometry.type) === 'Point') {
             updateFieldValue([[feature.geometry.coordinates[0], feature.geometry.coordinates[1]]]);
@@ -65,10 +58,16 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
         updateFieldValue(feature.geometry.coordinates[0]);
     };
 
+    const onClear = () => {
+        hasCoordinates.current = false;
+        coordinatesRef.current = null;
+        onChange(null);
+    };
+
     return (
         <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY} region="au" libraries={['maps', 'places']}>
             <ThemeProvider theme={localTheme}>
-                <TerraDrawLayer readOnly={readOnly} onFeatureCreated={onFeatureCreated}>
+                <TerraDrawLayer readOnly={readOnly} onCreate={onCreate} onClear={onClear}>
                     {draw => (
                         <div data-testid="rek-geographic-area" data-analyticsid="rek-geographic-area">
                             <Map
@@ -81,8 +80,7 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
                                 style={{ height: '400px' }}
                             >
                                 {!isDirtyRef.current && <CenterMapToCoordinates coordinates={coordinatesRef.current} />}
-                                {(readOnly || !isDirtyRef.current) &&
-                                    hasCoordinates.current &&
+                                {hasCoordinates.current &&
                                     (coordinatesRef.current.length > 1 ? (
                                         <Polygon
                                             paths={coordinatesRef.current}
