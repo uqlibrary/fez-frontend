@@ -8,6 +8,15 @@
   &.scopus::before {
     content: url(~/src/images/scopus_icon.svg);
   }
+  &.openalex::before {
+    content: url(~/src/images/openalex_icon.svg);
+  }
+  &.for2008::before {
+    content: url(~/src/images/for2008_icon.svg);
+  }
+  &.for2020::before {
+    content: url(~/src/images/for2020_icon.svg);
+  }
   &.pubmed::before {
     content: url(~/src/images/pubmed_icon.svg);
   }
@@ -19,6 +28,14 @@
   }
   &.orcid::before {
     content: url(~/src/images/orcid_icon.svg);
+  }
+
+  &.ror::before {
+    content: url(~/src/images/ror_icon.svg);
+  }
+
+  &.doi::before {
+    content: url(~/src/images/doi_icon.svg);
   }
   &.altmetric::before {
     content: url(~/src/images/altmetric_icon.svg);

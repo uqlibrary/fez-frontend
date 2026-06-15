@@ -3554,6 +3554,9 @@ export default {
             wosId: 'fez_record_search_key_isi_loc.rek_isi_loc',
             wosDocType: 'rek_wok_doc_type',
             wosDocTypeLookup: 'rek_wok_doc_type_lookup',
+            openalexId: 'fez_record_search_key_openalex_id.rek_openalex_id',
+            openalexDocType: 'rek_openalex_doc_type',
+            // openalexDocTypeLookup: 'rek_wok_doc_type_lookup',
             scopusId: 'fez_record_search_key_scopus_id.rek_scopus_id',
             scopusDocType: 'rek_scopus_doc_type',
             scopusDocTypeLookup: 'rek_scopus_doc_type_lookup',
@@ -3575,6 +3578,7 @@ export default {
                 wos: 4,
                 scopus: 6,
                 pubmed: 8,
+                openalex: 10,
             },
             object: {
                 sections: [
@@ -3675,6 +3679,28 @@ export default {
                         },
                         {
                             type: 'header', // pubmed doc type
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header', // scopus id
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header', // scopus doc type
                             value: undefined,
                         },
                         {

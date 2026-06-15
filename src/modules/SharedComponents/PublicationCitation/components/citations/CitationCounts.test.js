@@ -46,6 +46,7 @@ describe('CitationCounts', () => {
             rek_dimensions_citation_count: 33,
             rek_thomson_citation_count: 0,
             rek_scopus_citation_count: 1,
+            rek_openalex_citation_count: 1,
             rek_gs_citation_count: 1,
             rek_altmetric_score: 1,
             fez_record_search_key_dimensions_id: {
@@ -59,6 +60,9 @@ describe('CitationCounts', () => {
             },
             fez_record_search_key_scopus_id: {
                 rek_scopus_id: 12345,
+            },
+            fez_record_search_key_openalex_id: {
+                rek_openalex_id: 12345,
             },
             rek_altmetric_id: 12345,
         };

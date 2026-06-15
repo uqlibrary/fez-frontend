@@ -767,6 +767,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     component={GeoCoordinatesField}
                                     disabled={isSubmitting}
                                     name="geographicArea"
+                                    readOnly
                                 />
                             </StandardCard>
                         </Grid>

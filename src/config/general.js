@@ -66,6 +66,8 @@ export const ROR_BASE_URL = 'https://ror.org';
 
 export const RAID_BASE_URL = 'https://raid.org';
 
+export const DOI_BASE_URL = 'https://doi.org';
+
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
 )}v=3.exp&libraries=geometry,drawing,places`;
@@ -164,10 +166,13 @@ export const PUBLICATION_TYPES_WITH_DOI = [
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_WORKING_PAPER,
@@ -247,6 +252,7 @@ export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Other or Citation On
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
 export const SUBTYPE_NON_NTRO = 'Non-NTRO';
 export const SUBTYPE_FULLY_PUBLISHED_PAPER = 'Fully published paper';
+export const SUBTYPE_PUBLISHED_ABSTRACT_PAPER = 'Published abstract';
 export const SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH = 'Research book (original research)';
 export const SUBTYPE_RESEARCH_BOOK_CHAPTER_ORIGINAL_RESEARCH = 'Research book chapter (original research)';
 export const SUBTYPE_CRITICAL_REVIEW = 'Critical review of research, literature review, critical commentary';
@@ -443,7 +449,13 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
         hasFormComponent: true,
-        subtypes: ['Fully published paper', 'Published abstract', 'Poster', 'Oral presentation', 'Other'],
+        subtypes: [
+            SUBTYPE_FULLY_PUBLISHED_PAPER,
+            SUBTYPE_PUBLISHED_ABSTRACT_PAPER,
+            'Poster',
+            'Oral presentation',
+            'Other',
+        ],
     },
     [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
@@ -1544,6 +1556,34 @@ export const SCOPUS_DOC_TYPES = [
     { value: 're', text: 're - Review' },
     { value: 'sh', text: 'sh - Short Survey' },
 ];
+
+export const OPENALEX_DOC_TYPES = [
+    { value: 'None', text: 'None' },
+    { value: 'article', text: 'article' },
+    { value: 'book-chapter', text: 'book-chapter' },
+    { value: 'dataset', text: 'dataset' },
+    { value: 'preprint', text: 'preprint' },
+    { value: 'dissertation', text: 'dissertation' },
+    { value: 'book', text: 'book' },
+    { value: 'review', text: 'review' },
+    { value: 'paratext', text: 'paratext' },
+    { value: 'other', text: 'other' },
+    { value: 'libguides', text: 'libguides' },
+    { value: 'reference-entry', text: 'reference-entry' },
+    { value: 'report', text: 'report' },
+    { value: 'peer-review', text: 'peer-review' },
+    { value: 'editorial', text: 'editorial' },
+    { value: 'erratum', text: 'erratum' },
+    { value: 'standard', text: 'standard' },
+    { value: 'grant', text: 'grant' },
+    { value: 'supplementary-materials', text: 'supplementary-materials' },
+    { value: 'retraction', text: 'retraction' },
+    { value: 'book-section', text: 'book-section' },
+    { value: 'software', text: 'software' },
+    { value: 'database', text: 'database' },
+    { value: 'report-component', text: 'report-component' },
+];
+
 export const PUBMED_DOC_TYPES = [
     { value: 'None', text: 'None' },
     { value: 'Addresses', text: 'Addresses' },
@@ -1687,14 +1727,14 @@ export const OA_STATUS = [
     { value: '453693', text: 'DOI' },
     { value: '453694', text: 'Link (no DOI)' },
     { value: '453695', text: 'File (Publisher version)' },
-    { value: '453696', text: 'File (Author Post-print)' },
+    { value: '453696', text: 'File (Author Accepted Manuscript)' },
     { value: '454127', text: 'Preprint' },
     { value: '453697', text: 'Other' },
     { value: '453698', text: 'Not Open Access' },
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
     { value: '454116', text: 'RDM open' },
-    { value: '454118', text: 'Not yet assessed (Unpaywall)' },
+    { value: '454118', text: 'Not yet assessed (OpenAlex)' },
 ];
 
 export const OA_STATUS_CATEGORIES = [
@@ -1708,6 +1748,7 @@ export const OA_STATUS_TYPE = [
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
     { value: 454123, text: 'Bronze' },
+    { value: 454124, text: 'Diamond' },
 ];
 
 export const ALTERNATE_IDENTIFIER_TYPE = [
@@ -1793,6 +1834,13 @@ export const DOI_CROSSREF_NAME = 'Crossref';
 export const DOI_CROSSREF_PREFIX = '10.14264';
 export const DOI_DATACITE_NAME = 'DataCite';
 export const DOI_DATACITE_PREFIX = IS_PRODUCTION ? '10.48610' : '10.23643';
+export const DOI_DATACITE_TYPES = [
+    PUBLICATION_TYPE_CREATIVE_WORK,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_DESIGN,
+    PUBLICATION_TYPE_INSTRUMENT,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+];
 
 export const PLACEHOLDER_ISO8601_ZULU_DATE = '1000-01-01T00:00:00Z';
 export const PLACEHOLDER_ISO8601_DATE = '1000-01-01 00:00:00';
