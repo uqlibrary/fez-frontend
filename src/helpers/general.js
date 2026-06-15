@@ -23,7 +23,10 @@ global.dj = console.log.bind(console, '%O');
  */
 export const silentTryCatch = (callback, _default = undefined) => {
     try {
-        return callback();
+        const result = callback();
+        if (result instanceof Promise) return result.catch(() => _default);
+
+        return result;
     } catch (e) {
         /* istanbul ignore next */
         return _default;

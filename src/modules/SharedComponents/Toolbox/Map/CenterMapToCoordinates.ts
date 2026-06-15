@@ -8,12 +8,12 @@ export type usePanMapToCoordinatesOptions = {
 
 export const CenterMapToCoordinates = ({ coordinates }: usePanMapToCoordinatesOptions) => {
     const map = useMap();
-    const isCentered = useRef(false);
+    const isCenteredRef = useRef(false);
 
     useEffect(() => {
-        if (!map || !coordinates?.length || isCentered.current) return;
+        if (!map || !coordinates?.length || isCenteredRef.current) return;
         // center map once only
-        isCentered.current = true;
+        isCenteredRef.current = true;
 
         // handles markers
         if (coordinates.length === 1) {

@@ -94,6 +94,27 @@ describe('useAutocompleteSuggestions', () => {
         expect(mockFetchAutocompleteSuggestions).toHaveBeenCalledTimes(1);
     });
 
+    it('should set isLoading to true while fetching', async () => {
+        let resolvePromise;
+        mockFetchAutocompleteSuggestions.mockReturnValue(
+            new Promise(res => {
+                resolvePromise = res;
+            }),
+        );
+        const { result } = setup('Sydney');
+
+        await act(async () => jest.runAllTimers());
+        expect(result.current.isLoading).toBe(true);
+
+        // note: ignore redundant await warning
+        await act(async () => {
+            resolvePromise({ suggestions: mockSuggestions });
+            await Promise.resolve();
+        });
+
+        expect(result.current.isLoading).toBe(false);
+    });
+
     it('should set isLoading to false after fetching', async () => {
         const { result } = setup('Sydney');
         await runTimersAndFlush();
@@ -109,11 +130,12 @@ describe('useAutocompleteSuggestions', () => {
     });
 
     it('should handle fetch failure', async () => {
-        mockFetchAutocompleteSuggestions.mockImplementation(() => new Error('Network error'));
+        mockFetchAutocompleteSuggestions.mockRejectedValue(new Error('Network error'));
         const { result } = setup('Sydney');
         await runTimersAndFlush();
 
         expect(result.current.suggestions).toEqual([]);
+        expect(result.current.isLoading).toBe(false);
     });
 
     it('should pass trimmed input to fetch', async () => {

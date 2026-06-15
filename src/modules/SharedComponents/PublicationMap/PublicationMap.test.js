@@ -109,11 +109,32 @@ describe('PublicationMap', () => {
         expect(queryByTestId('polygon')).not.toBeInTheDocument();
     });
 
+    it('should update marker when value changes', () => {
+        const { queryByTestId, rerender } = setup({ value: '' });
+        expect(queryByTestId('marker')).not.toBeInTheDocument();
+
+        setup({ value: '151.2093,-33.8688' }, rerender);
+
+        expect(queryByTestId('marker')).toBeInTheDocument();
+    });
+
     it('should pass parsed coordinates to CenterMapToCoordinates', () => {
         const { getByTestId } = setup({ value: '151.2093,-33.8688' });
         const coords = JSON.parse(getByTestId('center-map').dataset.coordinates);
 
         expect(coords).toEqual([{ lng: 151.2093, lat: -33.8688 }]);
+    });
+
+    it('should not render CenterMapToCoordinates after a feature is created', () => {
+        const mockOnChange = jest.fn();
+        const { queryByTestId, rerender } = setup({ onChange: mockOnChange });
+
+        act(() => {
+            mockOnCreate({ id: '1', geometry: { type: 'Point', coordinates: [151.2093, -33.8688] } });
+        });
+        setup({ onChange: mockOnChange, value: mockOnChange.mock.calls[0][0] }, rerender);
+
+        expect(queryByTestId('center-map')).not.toBeInTheDocument();
     });
 
     it('should call onChange when a point feature is created', () => {
@@ -161,13 +182,16 @@ describe('PublicationMap', () => {
         expect(mockOnChange).not.toHaveBeenCalled();
     });
 
-    it('should call onChange with null when onClear is called', () => {
+    it('should call onChange with null when onClear is called and remove maker', () => {
         const mockOnChange = jest.fn();
-        setup({ value: '151.2093,-33.8688', onChange: mockOnChange });
+        const { queryByTestId, rerender } = setup({ value: '151.2093,-33.8688', onChange: mockOnChange });
+        expect(queryByTestId('marker')).toBeInTheDocument();
 
         const { onClear } = mockTerraDrawLayer.mock.calls[0][0];
         act(() => onClear());
+        setup({ value: '', onChange: mockOnChange }, rerender);
 
+        expect(queryByTestId('marker')).not.toBeInTheDocument();
         expect(mockOnChange).toHaveBeenCalledWith(null);
     });
 });
