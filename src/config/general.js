@@ -1940,9 +1940,9 @@ const READONLY_VOCABS_IDS = [
 export const isReadonlyVocab = id => READONLY_VOCABS_IDS.includes(id);
 
 /** MAP */
-export const MAP_DEFAULT_ZOOM_MARKER = 7;
+export const MAP_DEFAULT_ZOOM_MARKER = 9;
 
-export const MAP_DEFAULT_ZOOM_POLYGON = 13;
+export const MAP_DEFAULT_ZOOM_POLYGON = 12;
 
 export const MAP_DEFAULT_CENTER = {
     lng: 153.013346,

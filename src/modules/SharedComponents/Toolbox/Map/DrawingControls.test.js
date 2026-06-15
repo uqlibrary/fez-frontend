@@ -33,19 +33,19 @@ describe('DrawingControls', () => {
     });
 
     it('should allow switching mode', async () => {
-        const { getByLabelText } = setup();
+        const { getByTestId } = setup();
         expect(setMode).toHaveBeenCalledWith('select'); // default mode
 
-        await userEvent.click(getByLabelText('marker'));
+        await userEvent.click(getByTestId('marker-button'));
         expect(setMode).toHaveBeenLastCalledWith('marker');
 
-        await userEvent.click(getByLabelText('polygon'));
+        await userEvent.click(getByTestId('polygon-button'));
         expect(setMode).toHaveBeenLastCalledWith('polygon');
 
-        await userEvent.click(getByLabelText('rectangle'));
+        await userEvent.click(getByTestId('rectangle-button'));
         expect(setMode).toHaveBeenLastCalledWith('rectangle');
 
-        await userEvent.click(getByLabelText('select'));
+        await userEvent.click(getByTestId('select-button'));
         expect(setMode).toHaveBeenLastCalledWith('select');
 
         expect(setOptions).toHaveBeenLastCalledWith({
@@ -55,8 +55,8 @@ describe('DrawingControls', () => {
 
     it('should not switch modes when map is unavailable', async () => {
         useMap.mockReturnValue(null);
-        const { getByLabelText } = setup();
-        await userEvent.click(getByLabelText('marker'));
+        const { getByTestId } = setup();
+        await userEvent.click(getByTestId('marker-button'));
 
         expect(setMode).toHaveBeenCalledTimes(1); // initial select only
         expect(setOptions).not.toHaveBeenCalled();

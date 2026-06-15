@@ -9388,7 +9388,6 @@ exports[`Additional Information Component  should render component with data col
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
                 <div
-                  data-coordinates="153.050537,-27.352253"
                   data-readonly="true"
                   data-testid="mock-publication-map"
                 />
@@ -10427,7 +10426,6 @@ exports[`Additional Information Component  should render component with data col
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
                 <div
-                  data-coordinates="178.849182,-16.826275 179.129333,-16.826275 179.129333,-17.251690 178.849182,-17.251690 178.849182,-16.826275"
                   data-readonly="true"
                   data-testid="mock-publication-map"
                 />
@@ -11812,7 +11810,6 @@ exports[`Additional Information Component  should render component with data col
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
                 <div
-                  data-coordinates="153.050537,-27.352253"
                   data-readonly="true"
                   data-testid="mock-publication-map"
                 />
@@ -13246,7 +13243,6 @@ exports[`Additional Information Component  should render component with data col
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
                 <div
-                  data-coordinates="153.050537,-27.352253"
                   data-readonly="true"
                   data-testid="mock-publication-map"
                 />
@@ -27480,7 +27476,6 @@ exports[`Additional Information Component  should render map with geo coordinate
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
                 <div
-                  data-coordinates="test"
                   data-readonly="true"
                   data-testid="mock-publication-map"
                 />

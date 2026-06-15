@@ -609,4 +609,9 @@ export const getRorURL = id => (id?.trim?.() && `${ROR_BASE_URL}/${id.trim()}`) 
  */
 export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) || '';
 
+/**
+ * @param children
+ * @param {Function} callback
+ * @return {React.JSX.Element}
+ */
 export const withErrorBoundary = (children, callback) => <TryCatch children={children} callback={callback} />;

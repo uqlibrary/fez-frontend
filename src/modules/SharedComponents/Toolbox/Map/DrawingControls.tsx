@@ -33,6 +33,7 @@ const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
 
     return (
         <ToggleButtonGroup
+            data-testid="map-drawing-controls"
             exclusive
             value={activeMode}
             onChange={(_, value) => value && handleModeChange(value)}
@@ -42,16 +43,16 @@ const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
                 ...(props?.sx || {}),
             }}
         >
-            <ToggleButton value="select" aria-label="select">
+            <ToggleButton value="select" aria-label="select" data-testid="select-button">
                 <PanToolOutlined fontSize="small" />
             </ToggleButton>
-            <ToggleButton value="marker" aria-label="marker">
+            <ToggleButton value="marker" aria-label="marker" data-testid="marker-button">
                 <Room fontSize="small" />
             </ToggleButton>
-            <ToggleButton value="polygon" aria-label="polygon">
+            <ToggleButton value="polygon" aria-label="polygon" data-testid="polygon-button">
                 <PentagonTwoTone fontSize="small" />
             </ToggleButton>
-            <ToggleButton value="rectangle" aria-label="rectangle">
+            <ToggleButton value="rectangle" aria-label="rectangle" data-testid="rectangle-button">
                 <RectangleTwoTone fontSize="small" />
             </ToggleButton>
         </ToggleButtonGroup>

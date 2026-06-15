@@ -7,6 +7,7 @@ import TerraDrawLayer from 'modules/SharedComponents/Toolbox/Map/TerraDrawLayer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CenterMapToCoordinates } from 'modules/SharedComponents/Toolbox/Map/CenterMapToCoordinates';
 import { MAP_DEFAULT_CENTER, MAP_DEFAULT_ZOOM_MARKER, MAP_DEFAULT_ZOOM_POLYGON } from 'config/general';
+import { withErrorBoundary } from 'helpers/general';
 
 const localTheme = createTheme({
     palette: {
@@ -18,15 +19,15 @@ const localTheme = createTheme({
 
 const coordinatesToString = coordinates => coordinates.map(item => `${item[0]},${item[1]}`).join(' ');
 
-const PublicationMap = ({ coordinates, onChange, readOnly }) => {
-    const hasInitialCoordinates = useRef(null);
-    const initialCoordinates = useRef(null);
+const PublicationMap = ({ value, onChange, readOnly }) => {
+    const hasCoordinates = useRef(false);
+    const coordinatesRef = useRef(null);
     const isDirtyRef = useRef(false);
 
     const parsedCoordinates = React.useMemo(
         () =>
-            (!!coordinates.trim() &&
-                coordinates
+            (!!value.trim() &&
+                value
                     .trim()
                     .split(/\s/)
                     .map(item => ({
@@ -34,22 +35,16 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                         lat: Number(item.split(',')[1]),
                     }))) ||
             [],
-        [coordinates],
+        [value],
     );
 
-    if (!!parsedCoordinates.length) {
-        hasInitialCoordinates.current = true;
-        initialCoordinates.current = parsedCoordinates;
+    // workaround: forms might initiate the field with an empty value to later populate it
+    if (!coordinatesRef.current && !!parsedCoordinates.length) {
+        hasCoordinates.current = true;
+        coordinatesRef.current = parsedCoordinates;
     }
 
     const updateFieldValue = coordinates => onChange(coordinatesToString(coordinates));
-
-    const onPlaceSelection = place => {
-        const location = place?.location?.toJSON?.();
-        if (!location) return;
-
-        updateFieldValue([[location.lng, location.lat]]);
-    };
 
     const onFeatureCreated = (feature, draw) => {
         if (!feature?.geometry?.coordinates?.length) return;
@@ -78,19 +73,19 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                         <div data-testid="rek-geographic-area" data-analyticsid="rek-geographic-area">
                             <Map
                                 defaultZoom={
-                                    hasInitialCoordinates.current ? MAP_DEFAULT_ZOOM_MARKER : MAP_DEFAULT_ZOOM_POLYGON
+                                    hasCoordinates.current ? MAP_DEFAULT_ZOOM_MARKER : MAP_DEFAULT_ZOOM_POLYGON
                                 }
                                 mapId={'publication-map'}
                                 defaultCenter={MAP_DEFAULT_CENTER}
                                 gestureHandling={'greedy'}
                                 style={{ height: '400px' }}
                             >
-                                <CenterMapToCoordinates coordinates={initialCoordinates.current} />
+                                {!isDirtyRef.current && <CenterMapToCoordinates coordinates={coordinatesRef.current} />}
                                 {(readOnly || !isDirtyRef.current) &&
-                                    hasInitialCoordinates.current &&
-                                    (initialCoordinates.current.length > 1 ? (
+                                    hasCoordinates.current &&
+                                    (coordinatesRef.current.length > 1 ? (
                                         <Polygon
-                                            paths={initialCoordinates.current}
+                                            paths={coordinatesRef.current}
                                             options={{
                                                 strokeColor: '#FF0000',
                                                 strokeOpacity: 0.8,
@@ -100,7 +95,7 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                                             }}
                                         />
                                     ) : (
-                                        <AdvancedMarker position={initialCoordinates.current[0]} />
+                                        <AdvancedMarker position={coordinatesRef.current[0]} />
                                     ))}
                                 {!readOnly && (
                                     <>
@@ -108,10 +103,7 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
                                             <DrawingControls draw={draw} sx={{ mt: 1.2 }} />
                                         </MapControl>
                                         <MapControl position={ControlPosition.TOP_RIGHT}>
-                                            <SearchBox
-                                                onPlaceSelect={onPlaceSelection}
-                                                sx={{ width: 220, mt: 1.2, mr: 1.2 }}
-                                            />
+                                            <SearchBox sx={{ width: 220, mt: 1.2, mr: 1.2 }} />
                                         </MapControl>
                                     </>
                                 )}
@@ -125,9 +117,9 @@ const PublicationMap = ({ coordinates, onChange, readOnly }) => {
 };
 
 PublicationMap.propTypes = {
-    coordinates: PropTypes.string,
+    value: PropTypes.string,
     onChange: PropTypes.func,
     readOnly: PropTypes.bool,
 };
 
-export default React.memo(PublicationMap);
+export default React.memo(props => withErrorBoundary(<PublicationMap {...props} />));
