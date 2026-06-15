@@ -614,4 +614,13 @@ export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) 
  * @param {Function} callback
  * @return {React.JSX.Element}
  */
-export const withErrorBoundary = (children, callback) => <TryCatch children={children} callback={callback} />;
+export const withErrorBoundary = (Component, callback) => {
+    const WrappedComponent = props => (
+        <TryCatch callback={callback}>
+            <Component {...props} />
+        </TryCatch>
+    );
+
+    WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+    return WrappedComponent;
+};

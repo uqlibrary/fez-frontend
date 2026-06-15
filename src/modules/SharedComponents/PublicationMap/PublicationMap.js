@@ -122,4 +122,4 @@ PublicationMap.propTypes = {
     readOnly: PropTypes.bool,
 };
 
-export default React.memo(props => withErrorBoundary(<PublicationMap {...props} />));
+export default withErrorBoundary(React.memo(PublicationMap));
