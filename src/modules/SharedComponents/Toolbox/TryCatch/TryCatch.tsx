@@ -10,7 +10,7 @@ const TryCatch: React.FC<{ callback?: (error: Error) => unknown; children: React
     <ErrorBoundary
         onError={error => {
             callback?.(error as Error);
-            console.error(error);
+            console?.error(error);
         }}
         fallbackRender={({ error }) =>
             !IS_PRODUCTION && (

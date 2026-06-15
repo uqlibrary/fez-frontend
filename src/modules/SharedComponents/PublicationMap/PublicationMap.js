@@ -26,7 +26,7 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
 
     const parsedCoordinates = React.useMemo(
         () =>
-            (!!value.trim() &&
+            (!!value?.trim?.() &&
                 value
                     .trim()
                     .split(/\s/)
