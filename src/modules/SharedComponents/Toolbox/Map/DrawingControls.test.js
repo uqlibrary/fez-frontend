@@ -8,11 +8,13 @@ jest.mock('@vis.gl/react-google-maps', () => ({
 }));
 
 const setMode = jest.fn();
+const clear = jest.fn();
 const setOptions = jest.fn();
 const setup = (testProps = {}) => {
     const props = {
         draw: {
             setMode,
+            clear,
         },
         ...testProps,
     };
@@ -34,23 +36,26 @@ describe('DrawingControls', () => {
 
     it('should allow switching mode', async () => {
         const { getByTestId } = setup();
-        expect(setMode).toHaveBeenCalledWith('select'); // default mode
 
         await userEvent.click(getByTestId('marker-button'));
         expect(setMode).toHaveBeenLastCalledWith('marker');
+        expect(clear).not.toHaveBeenCalled();
 
         await userEvent.click(getByTestId('polygon-button'));
         expect(setMode).toHaveBeenLastCalledWith('polygon');
+        expect(clear).not.toHaveBeenCalled();
 
         await userEvent.click(getByTestId('rectangle-button'));
         expect(setMode).toHaveBeenLastCalledWith('rectangle');
+        expect(clear).not.toHaveBeenCalled();
 
-        await userEvent.click(getByTestId('select-button'));
-        expect(setMode).toHaveBeenLastCalledWith('select');
+        await userEvent.click(getByTestId('static-button'));
+        expect(setMode).toHaveBeenLastCalledWith('static');
+        expect(clear).not.toHaveBeenCalled();
 
-        expect(setOptions).toHaveBeenLastCalledWith({
-            gestureHandling: 'greedy',
-        });
+        await userEvent.click(getByTestId('clear-button'));
+        expect(clear).toHaveBeenCalled();
+        expect(setMode).not.toHaveBeenLastCalledWith('clear');
     });
 
     it('should not switch modes when map is unavailable', async () => {
@@ -58,7 +63,6 @@ describe('DrawingControls', () => {
         const { getByTestId } = setup();
         await userEvent.click(getByTestId('marker-button'));
 
-        expect(setMode).toHaveBeenCalledTimes(1); // initial select only
         expect(setOptions).not.toHaveBeenCalled();
     });
 });

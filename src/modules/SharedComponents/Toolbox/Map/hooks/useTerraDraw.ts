@@ -15,12 +15,12 @@ const elementStyle = { fillColor: color, outlineColor: color };
 // note: the map's `edit` mode can break depending on the flags below, make sure to test changes manually.
 const selectionFlags = {
     feature: {
-        draggable: true,
+        draggable: false,
         coordinates: {
             snappable: false,
             midpoints: false,
-            draggable: true,
-            deletable: true,
+            draggable: false,
+            deletable: false,
         },
     },
 };
@@ -40,7 +40,7 @@ const getTerraDrawConfig = (map: google.maps.Map) => ({
             },
         }),
         new TerraDrawMarkerMode({
-            editable: true,
+            editable: false,
             styles: {
                 markerUrl: 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi3.png',
                 markerWidth: 26,
@@ -48,7 +48,7 @@ const getTerraDrawConfig = (map: google.maps.Map) => ({
             },
         }),
         new TerraDrawPolygonMode({
-            editable: true,
+            editable: false,
             styles: elementStyle,
         }),
         new TerraDrawRectangleMode({
@@ -65,18 +65,24 @@ type CreatedFeature = {
 
 export type UseTerraDrawOptions = {
     readOnly?: boolean;
-    onFeatureCreated?: (feature: CreatedFeature, draw: TerraDraw) => void;
+    onCreate?: (feature: CreatedFeature | null) => void;
+    onClear?: () => void;
 };
 
-export const useTerraDraw = ({ readOnly = false, onFeatureCreated }: UseTerraDrawOptions = {}) => {
+export const useTerraDraw = ({ readOnly = false, onCreate, onClear }: UseTerraDrawOptions = {}) => {
     const map = useMap();
     const drawRef = useRef<TerraDraw | null>(null);
     const [draw, setDraw] = useState<TerraDraw | null>(null);
-    const onFeatureCreatedRef = useRef(onFeatureCreated);
+    const onCreateRef = useRef(onCreate);
+    const onClearRef = useRef(onClear);
 
     useEffect(() => {
-        onFeatureCreatedRef.current = onFeatureCreated;
-    }, [onFeatureCreated]);
+        onCreateRef.current = onCreate;
+    }, [onCreate]);
+
+    useEffect(() => {
+        onClearRef.current = onClear;
+    }, [onClear]);
 
     useEffect(() => {
         if (readOnly || !map || drawRef.current) return;
@@ -94,17 +100,15 @@ export const useTerraDraw = ({ readOnly = false, onFeatureCreated }: UseTerraDra
                 /* istanbul ignore if */
                 if (!feature) return;
 
-                // call given onFeatureCreated with the created feature and the Terra Draw instance
-                onFeatureCreatedRef.current?.(feature, instance);
+                instance.clear();
+                // call given onCreate with the created feature and the Terra Draw instance
+                onCreateRef.current?.(feature);
             });
-            // triggered when manipulating features (dragging, resizing, etc)
-            instance.on('change', (_, type) => {
-                // disable gmaps gesture handling when updating an element to avoid conflicts
-                if (type === 'update') {
-                    map.setOptions({ gestureHandling: 'none' });
-                    return;
+            instance.on('change', (ids, type) => {
+                /* istanbul ignore else */
+                if (!ids?.length && type === 'delete') {
+                    onClearRef.current?.();
                 }
-                map.setOptions({ gestureHandling: 'greedy' });
             });
 
             instance.start();
@@ -130,7 +134,6 @@ export const useTerraDraw = ({ readOnly = false, onFeatureCreated }: UseTerraDra
             inUnmounting = true;
             listener?.remove();
             if (drawRef.current) {
-                map.setOptions({ gestureHandling: 'greedy' });
                 drawRef.current.stop();
                 drawRef.current = null;
                 setDraw(null);

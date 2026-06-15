@@ -4,18 +4,11 @@ import { render as defaultRender, act } from 'test-utils';
 import PublicationMap from './PublicationMap';
 import { MAP_DEFAULT_CENTER } from '../../../config/general';
 
-const mockOnFeatureCreated = jest.fn();
-const mockRemoveFeatures = jest.fn();
-const mockGetSnapshot = jest.fn(() => []);
+const mockOnCreate = jest.fn();
 
-const mockDraw = {
-    getSnapshot: mockGetSnapshot,
-    removeFeatures: mockRemoveFeatures,
-};
-
-const mockTerraDrawLayer = jest.fn(({ children, onFeatureCreated }) => {
-    mockOnFeatureCreated.mockImplementation(onFeatureCreated);
-    return <div data-testid="terra-draw-layer">{children(mockDraw)}</div>;
+const mockTerraDrawLayer = jest.fn(({ children, onCreate }) => {
+    mockOnCreate.mockImplementation(onCreate);
+    return <div data-testid="terra-draw-layer">{children(null)}</div>;
 });
 
 const mockSearchBox = jest.fn(() => <button data-testid="search-box">Search</button>);
@@ -67,7 +60,6 @@ function setup(props = {}, render = defaultRender) {
 describe('PublicationMap', () => {
     beforeEach(() => {
         jest.clearAllMocks();
-        mockGetSnapshot.mockReturnValue([]);
     });
 
     it('should render search box and drawing manager when not readOnly', () => {
@@ -129,7 +121,7 @@ describe('PublicationMap', () => {
         setup({ onChange: mockOnChange });
 
         act(() => {
-            mockOnFeatureCreated({ id: '1', geometry: { type: 'Point', coordinates: [151.2093, -33.8688] } }, mockDraw);
+            mockOnCreate({ id: '1', geometry: { type: 'Point', coordinates: [151.2093, -33.8688] } });
         });
 
         expect(mockOnChange).toHaveBeenCalledWith('151.2093,-33.8688');
@@ -140,36 +132,22 @@ describe('PublicationMap', () => {
         setup({ onChange: mockOnChange });
 
         act(() => {
-            mockOnFeatureCreated(
-                {
-                    id: '1',
-                    geometry: {
-                        type: 'Polygon',
-                        coordinates: [
-                            [
-                                [151.2093, -33.8688],
-                                [144.9631, -37.8136],
-                                [130.9631, -25.8136],
-                            ],
+            mockOnCreate({
+                id: '1',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [
+                        [
+                            [151.2093, -33.8688],
+                            [144.9631, -37.8136],
+                            [130.9631, -25.8136],
                         ],
-                    },
+                    ],
                 },
-                mockDraw,
-            );
+            });
         });
 
         expect(mockOnChange).toHaveBeenCalledWith('151.2093,-33.8688 144.9631,-37.8136 130.9631,-25.8136');
-    });
-
-    it('should remove existing features when a new feature is created', () => {
-        setup({ onChange: jest.fn() });
-        mockGetSnapshot.mockReturnValue([{ id: '1' }, { id: '2' }, { id: '3' }]);
-
-        act(() => {
-            mockOnFeatureCreated({ id: '3', geometry: { type: 'Point', coordinates: [151.2093, -33.8688] } }, mockDraw);
-        });
-
-        expect(mockRemoveFeatures).toHaveBeenCalledWith(['1', '2']);
     });
 
     it('should not call onChange when feature has no coordinates', () => {
@@ -177,27 +155,19 @@ describe('PublicationMap', () => {
         setup({ onChange: mockOnChange });
 
         act(() => {
-            mockOnFeatureCreated({ id: '1', geometry: { type: 'Point', coordinates: [] } }, mockDraw);
+            mockOnCreate({ id: '1', geometry: { type: 'Point', coordinates: [] } });
         });
 
         expect(mockOnChange).not.toHaveBeenCalled();
     });
 
-    it('should hide initial marker after a new feature is drawn', () => {
+    it('should call onChange with null when onClear is called', () => {
         const mockOnChange = jest.fn();
-        const { queryByTestId, rerender } = setup({
-            value: '151.2093,-33.8688',
-            onChange: mockOnChange,
-        });
+        setup({ value: '151.2093,-33.8688', onChange: mockOnChange });
 
-        expect(queryByTestId('marker')).toBeInTheDocument();
-        act(() => {
-            mockOnFeatureCreated({ id: '1', geometry: { type: 'Point', coordinates: [144.9631, -37.8136] } }, mockDraw);
-        });
+        const { onClear } = mockTerraDrawLayer.mock.calls[0][0];
+        act(() => onClear());
 
-        // isDirtyRef.current is now true — rerender with new coords (simulating parent update)
-        setup({ value: '144.9631,-37.8136', onChange: mockOnChange, readOnly: false }, rerender);
-        // marker hidden because isDirtyRef.current === true
-        expect(queryByTestId('marker')).not.toBeInTheDocument();
+        expect(mockOnChange).toHaveBeenCalledWith(null);
     });
 });
