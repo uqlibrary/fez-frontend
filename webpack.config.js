@@ -40,9 +40,11 @@ module.exports = {
         headers: { 'X-Custom-Header': 'yes' },
         historyApiFallback: true,
         host: url,
-        https: false,
         open: false,
         port: port,
+        server: {
+            type: 'http',
+        },
         client: {
             logging: 'info',
         },
