@@ -77,7 +77,7 @@ describe('Field component', () => {
             expect(
                 validateHandler('test', { fieldA: 'test', fieldB: 'test2' }, [
                     value => (value !== 'test' ? 'fist validator executed' : null),
-                    (value, formValues) =>
+                    async (value, formValues) =>
                         value === 'test' && formValues.fieldA === 'test' ? ' second validator executed ' : null,
                 ]),
             ).resolves.toBe('second validator executed');

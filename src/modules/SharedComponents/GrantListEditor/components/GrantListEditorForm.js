@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Select from '@mui/material/Select';
@@ -11,11 +11,14 @@ import FormHelperText from '@mui/material/FormHelperText';
 import { ORG_AFFILIATION_TYPES, ORG_TYPE_NOT_SET } from 'config/general';
 import validationLocale from 'locale/validationErrors';
 
+const defaultRow = { grantAgencyName: '', grantId: '', grantAgencyType: '' };
+const defaultRowJson = JSON.stringify(defaultRow);
+
 export const GrantListEditorForm = ({
     disabled,
     grantSelectedToEdit,
     hideType = false,
-    isPopulated,
+    onDirty,
     locale = {
         grantAgencyNameLabel: 'Funder/Sponsor name',
         grantAgencyNameHint: 'Funder/sponsor name for this work',
@@ -37,10 +40,14 @@ export const GrantListEditorForm = ({
     onAdd,
     required,
 }) => {
-    const [grant, setGrant] = React.useState({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
-    const [dirty, setDirty] = React.useState(null);
+    const [grant, setGrant] = React.useState({ ...defaultRow });
+    const isDirty = JSON.stringify(grant) !== defaultRowJson;
 
-    React.useEffect(() => {
+    // propagate isDirty state
+    useEffect(() => onDirty?.(isDirty), [onDirty, isDirty]);
+
+    // handle row editing
+    useEffect(() => {
         if (!!grantSelectedToEdit) {
             setGrant(grant => ({
                 ...grant,
@@ -51,24 +58,13 @@ export const GrantListEditorForm = ({
         }
     }, [grantSelectedToEdit]);
 
-    React.useEffect(() => {
-        if (!!isPopulated && dirty) {
-            isPopulated(true);
-        } else {
-            isPopulated(false);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dirty]);
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleChange = React.useCallback(event => {
         const { name, value } = event.target;
-
         setGrant(grant => ({
             ...grant,
             [name]: value,
         }));
-        setDirty(true);
     });
 
     const _addGrant = event => {
@@ -84,8 +80,7 @@ export const GrantListEditorForm = ({
 
         // pass on the selected grant
         onAdd(grant);
-        setDirty(false);
-        setGrant({ grantAgencyName: '', grantId: '', grantAgencyType: '' });
+        setGrant(defaultRow);
     };
 
     const {
@@ -119,8 +114,10 @@ export const GrantListEditorForm = ({
                         disabled={disabled}
                         required={required}
                         autoComplete="off"
-                        error={required && !grantAgencyName}
-                        errorText={required && !grantAgencyName && validationLocale.validationErrors.required}
+                        error={(required || isDirty) && !grantAgencyName}
+                        errorText={
+                            (required || isDirty) && !grantAgencyName && validationLocale.validationErrors.required
+                        }
                     />
                 </Grid>
                 <Grid item xs={12} sm={12} md={!hideType ? 3 : 4}>
@@ -143,8 +140,8 @@ export const GrantListEditorForm = ({
                         <FormControl
                             variant="standard"
                             fullWidth
-                            required={required || (!!grantAgencyName && grantAgencyName.trim().length > 0)}
-                            error={!!grantAgencyName && grantAgencyName.trim().length > 0 && !grantAgencyType}
+                            required={required || !!grantAgencyName?.trim?.().length}
+                            error={!!grantAgencyName?.trim?.().length && !grantAgencyType}
                         >
                             <Typography variant="caption" color="secondary" style={{ marginBottom: -3 }}>
                                 {!!grantAgencyType ? grantAgencyTypeLabel : ' '}&nbsp;
@@ -222,7 +219,7 @@ GrantListEditorForm.propTypes = {
     disabled: PropTypes.bool,
     grantSelectedToEdit: PropTypes.object,
     hideType: PropTypes.bool,
-    isPopulated: PropTypes.func.isRequired,
+    onDirty: PropTypes.func.isRequired,
     locale: PropTypes.object,
     onAdd: PropTypes.func.isRequired,
     required: PropTypes.bool,
