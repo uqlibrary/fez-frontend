@@ -9,7 +9,7 @@ function setup(testProps = {}) {
         disabled: false,
         required: true,
         hideType: false,
-        isPopulated: testProps.isPopulated || jest.fn(),
+        onDirty: testProps.onDirty || jest.fn(),
         ...testProps,
     };
     return render(
@@ -51,19 +51,22 @@ describe('RelatedServiceListEditorForm', () => {
         expect(getByRole('button', { name: 'Add related service' })).toHaveAttribute('disabled', '');
     });
 
-    it('should add related service and pass isPopulated info', () => {
+    it('should add related service and pass onDirty info', () => {
         const onAddFn = jest.fn();
-        const isPopulated = jest.fn();
+        const onDirty = jest.fn();
         const { getByTestId } = setup({
             onAdd: onAddFn,
-            isPopulated: isPopulated,
+            onDirty,
         });
 
+        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '1' } });
+        expect(onDirty).toHaveBeenCalledWith(true);
+        fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '' } });
+        expect(onDirty).toHaveBeenCalledWith(false);
         fireEvent.change(getByTestId('rek-related-service-id-input'), { target: { value: '123' } });
-        fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'desc' } });
+        expect(onDirty).toHaveBeenCalledWith(true);
 
-        expect(isPopulated).toHaveBeenCalledTimes(2);
-        expect(isPopulated).toHaveBeenCalledWith(true);
+        fireEvent.change(getByTestId('rek-related-service-desc-input'), { target: { value: 'desc' } });
 
         fireEvent.click(getByTestId('rek-related-service-add'));
 
@@ -72,7 +75,7 @@ describe('RelatedServiceListEditorForm', () => {
             relatedServiceDesc: 'desc',
         });
 
-        expect(isPopulated).toHaveBeenCalledWith(false);
+        expect(onDirty).toHaveBeenCalledWith(false);
     });
 
     it('should add related service when Enter key is pressed on desc field', () => {
