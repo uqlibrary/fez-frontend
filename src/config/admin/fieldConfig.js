@@ -1293,6 +1293,7 @@ export default {
                 fullWidth: true,
                 label: 'Geographic area',
                 isSearch: true,
+                readOnly: true,
             },
         },
         fez_record_search_key_access_conditions: {
