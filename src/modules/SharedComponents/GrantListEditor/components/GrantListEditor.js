@@ -213,7 +213,7 @@ const GrantListEditor = ({
                 </Grid>
             )}
             {state?.error && (
-                <Typography color="error" variant="caption">
+                <Typography color="error" variant="caption" data-testid="grant-list-editor-error">
                     {error || state.error}
                 </Typography>
             )}

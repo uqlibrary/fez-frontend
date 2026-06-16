@@ -1094,6 +1094,7 @@ export default {
             componentProps: {
                 name: 'grantInformationSection.grants',
                 canEdit: true,
+                ignoreFormDirtyStateChanges: true,
             },
         },
         fez_datastream_info: {
