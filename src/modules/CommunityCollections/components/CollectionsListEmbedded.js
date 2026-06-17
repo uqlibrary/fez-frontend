@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import * as actions from 'actions';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config';
 import { parseHtmlToJSX } from 'helpers/general';

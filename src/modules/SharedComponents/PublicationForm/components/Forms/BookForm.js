@@ -169,21 +169,24 @@ export const BookForm = ({
                 </Grid>
             )}
             {isNtro && (
-                <NtroFields
-                    control={control}
-                    canEdit
-                    isSubmitting={isSubmitting}
-                    showContributionStatement={showContributionStatement}
-                    hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
-                    hideIsrc
-                    hideVolume
-                    hideIssue
-                    hideSeries
-                    hideStartPage
-                    hideEndPage
-                    hideOriginalFormat
-                    hideAudienceSize
-                />
+                <Grid item xs={12}>
+                    <NtroFields
+                        control={control}
+                        canEdit
+                        isSubmitting={isSubmitting}
+                        showContributionStatement={showContributionStatement}
+                        hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideSeries
+                        hideStartPage
+                        hideEndPage
+                        hideOriginalFormat
+                        hideAudienceSize
+                        legacyCompatible
+                    />
+                </Grid>
             )}
             <Grid item xs={12}>
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 import { OrcidSyncContext } from 'context';
 
@@ -29,7 +29,11 @@ import locale from 'locale/pages';
 import { mui1theme as theme } from 'config';
 import { useIsMobileView } from 'hooks';
 import Cookies from 'js-cookie';
-import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
+import {
+    DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE,
+    DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE,
+    PUBLICATION_TYPE_CREATIVE_WORK,
+} from 'config/general';
 
 const StyledTabs = styled(Tabs)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -123,6 +127,10 @@ const Dashboard = ({
     const [hideTurnOnOrcidSyncReminder, setHideTurnOnOrcidSyncReminder] = useState(
         String(Cookies.get(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE)) === 'true',
     );
+    const [hideCreativeWorkOaAlert, setHideCreativeWorkOaAlert] = useState(
+        String(Cookies.get(DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE)) === 'true',
+        { expires: 7 }, // days
+    );
     const lastOrcidSyncStatusRequestRef = useRef(null);
     const orcidSyncSettingsButtonRef = useRef(null);
 
@@ -169,6 +177,11 @@ const Dashboard = ({
     const dismissEnableOrcidSyncDialog = () => {
         Cookies.set(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, 'true');
         setHideTurnOnOrcidSyncReminder(true);
+    };
+
+    const dismissCreativeWorkOaAlert = () => {
+        Cookies.set(DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE, 'true');
+        setHideCreativeWorkOaAlert(true);
     };
 
     const _claimYourPublications = () => {
@@ -314,6 +327,27 @@ const Dashboard = ({
     const isAdmin =
         authorDetails && (authorDetails.is_administrator === 1 || authorDetails.is_super_administrator === 1);
 
+    const oaComplianceTotal = noncompliantoa?.publicationsListPagingData?.total || 0;
+
+    const creativeWorkCount =
+        noncompliantoa?.publicationsListFacets?.['Display type']?.buckets?.find(
+            bucket => bucket.key === PUBLICATION_TYPE_CREATIVE_WORK,
+        )?.doc_count || 0;
+
+    const actionableOaComplianceCount = oaComplianceTotal - creativeWorkCount;
+
+    const showOaComplianceAlert =
+        !!txt.oacomplianceRecordLure &&
+        !!noncompliantoa &&
+        !noncompliantoa.loadingPublicationsList &&
+        actionableOaComplianceCount > 0;
+
+    const showCreativeWorkOaAlert =
+        !!noncompliantoa &&
+        !noncompliantoa.loadingPublicationsList &&
+        creativeWorkCount > 0 &&
+        !hideCreativeWorkOaAlert;
+
     useEffect(() => {
         if (account && account.id && author?.aut_id) {
             // don't call the api for non author users since the api call requires an author
@@ -343,27 +377,23 @@ const Dashboard = ({
                 )}
                 {!loading && authorDetails && (
                     <React.Fragment>
-                        {!!txt.oacomplianceRecordLure &&
-                            !!noncompliantoa &&
-                            !noncompliantoa.loadingPublicationsList &&
-                            noncompliantoa.publicationsListPagingData &&
-                            noncompliantoa.publicationsListPagingData.total > 0 && (
-                                <Grid item xs={12} style={{ marginTop: -27 }}>
-                                    <Alert
-                                        title={txt.oacomplianceRecordLure.title}
-                                        message={txt.oacomplianceRecordLure.message
-                                            .replace('[count]', noncompliantoa.publicationsListPagingData.total)
-                                            .replace('[plural]', pluralTextReplacement)
-                                            .replace('[verbEnding]', verbEndingTextReplacement)}
-                                        actionButtonLabel={txt.oacomplianceRecordLure.actionButtonLabel}
-                                        action={redirectToOaComplianceRecordlist}
-                                        type="custom"
-                                        customType={txt.oacomplianceRecordLure.type}
-                                        customIcon={txt.oacomplianceRecordLure.icon}
-                                        wiggle
-                                    />
-                                </Grid>
-                            )}
+                        {showOaComplianceAlert && (
+                            <Grid item xs={12} style={{ marginTop: -27 }}>
+                                <Alert
+                                    title={txt.oacomplianceRecordLure.title}
+                                    message={txt.oacomplianceRecordLure.message.replace(
+                                        '[count]',
+                                        actionableOaComplianceCount,
+                                    )}
+                                    actionButtonLabel={txt.oacomplianceRecordLure.actionButtonLabel}
+                                    action={redirectToOaComplianceRecordlist}
+                                    type="custom"
+                                    customType={txt.oacomplianceRecordLure.type}
+                                    customIcon={txt.oacomplianceRecordLure.icon}
+                                    wiggle
+                                />
+                            </Grid>
+                        )}
                         {!!txt.incompleteRecordLure &&
                             !!incomplete &&
                             !incomplete.loadingPublicationsList &&
@@ -383,6 +413,19 @@ const Dashboard = ({
                                 </Grid>
                             )}
                         {renderAuthorProfile()}
+                        {showCreativeWorkOaAlert && (
+                            <Grid item xs={12} style={{ marginTop: -27 }}>
+                                <Alert
+                                    title={txt.oacomplianceCreativeWorkRecordLure.title}
+                                    message={txt.oacomplianceCreativeWorkRecordLure.message}
+                                    actionButtonLabel={txt.oacomplianceCreativeWorkRecordLure.actionButtonLabel}
+                                    action={redirectToOaComplianceRecordlist}
+                                    type={txt.oacomplianceCreativeWorkRecordLure.type}
+                                    allowDismiss
+                                    dismissAction={dismissCreativeWorkOaAlert}
+                                />
+                            </Grid>
+                        )}
                         {!hidePossiblyYourPublicationsLure &&
                         !possiblyYourPublicationsCountLoading &&
                         possiblyYourPublicationsCount > 0 ? (

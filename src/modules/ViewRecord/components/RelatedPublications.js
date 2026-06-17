@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import { pathConfig } from 'config/pathConfig';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';

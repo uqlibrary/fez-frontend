@@ -11,6 +11,8 @@ export const ULRICHS_URL_PREFIX =
 
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
+export const getDoajUrl = issn => prefixByUrlResolver(`https://doaj.org/toc/${issn}`);
+
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
@@ -43,6 +45,9 @@ export const IS_PRODUCTION = APP_URL.includes(PRODUCTION_URL) || APP_URL.include
 export const IS_LOCAL_DEV = APP_URL.includes(LOCALHOST_DOMAIN) || APP_URL.includes(LOCALHOST_ALIAS_DOMAIN);
 export const IS_DEVELOPMENT_BRANCH = APP_URL.includes(DEVELOPMENT_BRANCH_URL);
 
+export const ESPACE_TEAM_CONTACT_US_URL =
+    'https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us';
+
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || `${APP_URL}login`;
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
 
@@ -50,12 +55,18 @@ export const FEZ_USER_SYSTEM_ID = 41783;
 export const FEZ_USER_SYSTEM_USERNAME = 'webcron';
 export const FEZ_USER_SYSTEM_LABEL = 'System';
 
-export const ORCID_BASE_URL = process.env.ORCID_URL || 'https://orcid.org';
+export const ORCID_DOMAIN = 'orcid.org';
+export const ORCID_BASE_URL = process.env.ORCID_URL || `https://${ORCID_DOMAIN}`;
 export const ORCID_CLIENT_ID = process.env.ORCID_CLIENT_ID || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 export const DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE = 'dashboard-hide-orcid-sync-dialog';
+export const DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE = 'dashboard_hide_creative_work_oa_alert';
 
 export const ROR_BASE_URL = 'https://ror.org';
+
+export const RAID_BASE_URL = 'https://raid.org';
+
+export const DOI_BASE_URL = 'https://doi.org';
 
 export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
@@ -155,10 +166,13 @@ export const PUBLICATION_TYPES_WITH_DOI = [
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_WORKING_PAPER,
@@ -238,6 +252,7 @@ export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Other or Citation On
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
 export const SUBTYPE_NON_NTRO = 'Non-NTRO';
 export const SUBTYPE_FULLY_PUBLISHED_PAPER = 'Fully published paper';
+export const SUBTYPE_PUBLISHED_ABSTRACT_PAPER = 'Published abstract';
 export const SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH = 'Research book (original research)';
 export const SUBTYPE_RESEARCH_BOOK_CHAPTER_ORIGINAL_RESEARCH = 'Research book chapter (original research)';
 export const SUBTYPE_CRITICAL_REVIEW = 'Critical review of research, literature review, critical commentary';
@@ -433,7 +448,13 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
         hasFormComponent: true,
-        subtypes: ['Fully published paper', 'Published abstract', 'Poster', 'Oral presentation', 'Other'],
+        subtypes: [
+            SUBTYPE_FULLY_PUBLISHED_PAPER,
+            SUBTYPE_PUBLISHED_ABSTRACT_PAPER,
+            'Poster',
+            'Oral presentation',
+            'Other',
+        ],
     },
     [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
@@ -1024,18 +1045,6 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
-export const GRANT_AGENCY_TYPES = [
-    'Library/Museum/Public Gallery',
-    'Commercial Gallery',
-    'Government',
-    'NGO',
-    'Foundation',
-    'Corporate/Industry',
-    'University',
-    'Other',
-    'Not set',
-];
-
 export const ORG_AFFILIATION_TYPES = [
     { value: '453983', text: 'Library/Museum/Public Gallery' },
     { value: '453984', text: 'Commercial Gallery' },
@@ -1546,6 +1555,34 @@ export const SCOPUS_DOC_TYPES = [
     { value: 're', text: 're - Review' },
     { value: 'sh', text: 'sh - Short Survey' },
 ];
+
+export const OPENALEX_DOC_TYPES = [
+    { value: 'None', text: 'None' },
+    { value: 'article', text: 'article' },
+    { value: 'book-chapter', text: 'book-chapter' },
+    { value: 'dataset', text: 'dataset' },
+    { value: 'preprint', text: 'preprint' },
+    { value: 'dissertation', text: 'dissertation' },
+    { value: 'book', text: 'book' },
+    { value: 'review', text: 'review' },
+    { value: 'paratext', text: 'paratext' },
+    { value: 'other', text: 'other' },
+    { value: 'libguides', text: 'libguides' },
+    { value: 'reference-entry', text: 'reference-entry' },
+    { value: 'report', text: 'report' },
+    { value: 'peer-review', text: 'peer-review' },
+    { value: 'editorial', text: 'editorial' },
+    { value: 'erratum', text: 'erratum' },
+    { value: 'standard', text: 'standard' },
+    { value: 'grant', text: 'grant' },
+    { value: 'supplementary-materials', text: 'supplementary-materials' },
+    { value: 'retraction', text: 'retraction' },
+    { value: 'book-section', text: 'book-section' },
+    { value: 'software', text: 'software' },
+    { value: 'database', text: 'database' },
+    { value: 'report-component', text: 'report-component' },
+];
+
 export const PUBMED_DOC_TYPES = [
     { value: 'None', text: 'None' },
     { value: 'Addresses', text: 'Addresses' },
@@ -1689,14 +1726,20 @@ export const OA_STATUS = [
     { value: '453693', text: 'DOI' },
     { value: '453694', text: 'Link (no DOI)' },
     { value: '453695', text: 'File (Publisher version)' },
-    { value: '453696', text: 'File (Author Post-print)' },
+    { value: '453696', text: 'File (Author Accepted Manuscript)' },
     { value: '454127', text: 'Preprint' },
     { value: '453697', text: 'Other' },
     { value: '453698', text: 'Not Open Access' },
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
     { value: '454116', text: 'RDM open' },
-    { value: '454118', text: 'Not yet assessed (Unpaywall)' },
+    { value: '454118', text: 'Not yet assessed (OpenAlex)' },
+];
+
+export const OA_STATUS_CATEGORIES = [
+    { value: 'publisher_open_access', text: 'Publisher open access' },
+    { value: 'repository_open_access', text: 'Repository open access' },
+    { value: 'to_be_confirmed', text: 'To be confirmed' },
 ];
 
 export const OA_STATUS_TYPE = [
@@ -1704,6 +1747,7 @@ export const OA_STATUS_TYPE = [
     { value: 454121, text: 'Gold' },
     { value: 454122, text: 'Hybrid' },
     { value: 454123, text: 'Bronze' },
+    { value: 454124, text: 'Diamond' },
 ];
 
 export const ALTERNATE_IDENTIFIER_TYPE = [
@@ -1763,6 +1807,25 @@ export const ANDS_COLLECTION_TYPE_OPTIONS = [
     },
 ];
 
+export const CAPPED_OPTIONS = [
+    { value: 'Y', text: 'Y' },
+    { value: 'Approaching', text: 'Approaching' },
+    { value: 'Exceeded', text: 'Exceeded' },
+    { value: 'Nodeal', text: 'No deal' },
+    { value: 'N', text: 'N' },
+];
+
+export const S2O_OPTIONS = [
+    { value: 'Y', text: 'Y' },
+    { value: 'S2O', text: 'S2O' },
+    { value: 'N', text: 'N' },
+];
+
+export const BOOLEAN_OPTIONS = [
+    { value: true, text: 'Y' },
+    { value: false, text: 'N' },
+];
+
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
 
@@ -1770,6 +1833,13 @@ export const DOI_CROSSREF_NAME = 'Crossref';
 export const DOI_CROSSREF_PREFIX = '10.14264';
 export const DOI_DATACITE_NAME = 'DataCite';
 export const DOI_DATACITE_PREFIX = IS_PRODUCTION ? '10.48610' : '10.23643';
+export const DOI_DATACITE_TYPES = [
+    PUBLICATION_TYPE_CREATIVE_WORK,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_DESIGN,
+    PUBLICATION_TYPE_INSTRUMENT,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+];
 
 export const PLACEHOLDER_ISO8601_ZULU_DATE = '1000-01-01T00:00:00Z';
 export const PLACEHOLDER_ISO8601_DATE = '1000-01-01 00:00:00';
@@ -1854,6 +1924,9 @@ export const COLLECTION_VIEW_TYPE = [
 
 /** journalAdmin  */
 export const ADMIN_JOURNAL = 'adminjournal';
+
+/** journalSearch  */
+export const JOURNAL_SEARCH_OPERANDS = ['OR', 'AND', 'NOT'];
 
 /** Links */
 export const dataTeamCollections = ['UQ:06510ce'];

@@ -46,11 +46,10 @@ export const ForCodeSource = ({ source, index }) => {
                 padding: '3px',
                 fontSize: '10px',
                 marginLeft: '5px',
-                ...codeStyles[source],
+                ...(codeStyles[source.replace?.(/\s+/g, '').toLowerCase()] || /* istanbul ignore next */ {}),
             }}
             id={id}
             data-testid={id}
-            noWrap
         >
             {source}
         </Typography>

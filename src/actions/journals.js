@@ -13,6 +13,7 @@ import { store } from '../config/store';
 import { dismissAppAlert } from './app';
 import { apiLastRequest, api } from '../config/axios';
 import * as transformers from './journalTransformers';
+import { keywordOnlySuffix } from '../reducers/journals';
 
 /**
  * @param data
@@ -26,6 +27,48 @@ export const sanitiseJnlData = (data, replacer) => JSON.parse(JSON.stringify(dat
  * @return {function(*, *): undefined|*}
  */
 const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
+
+export const mergeJcrData = journalData => {
+    if (typeof journalData !== 'object' || journalData === null) return journalData;
+
+    const indexes = ['ahci', 'esci', 'scie', 'ssci'];
+    const data = { impact_factor: null, category_map: new Map() };
+
+    const result = indexes.reduce((data, index) => {
+        const jcr = journalData[`fez_journal_jcr_${index}`];
+        if (!jcr) return data;
+
+        // Capture impact factor once (prefer first found)
+        if (!data.impact_factor) {
+            data.impact_factor = jcr[`jnl_jcr_${index}_impact_factor`];
+        }
+
+        const categories = jcr[`fez_journal_jcr_${index}_category`];
+        Array.isArray(categories) &&
+            categories.forEach(category => {
+                const subject = category[`jnl_jcr_${index}_category_description_lookup`];
+                if (!data.category_map.has(subject)) {
+                    data.category_map.set(subject, {
+                        category: category[`jnl_jcr_${index}_category_description_lookup`],
+                        ranking: category[`jnl_jcr_${index}_category_ranking`]?.replace('\\/', '/'),
+                        quartile: category[`jnl_jcr_${index}_category_quartile`],
+                    });
+                }
+            });
+
+        return data;
+    }, data);
+
+    return {
+        fez_journal_jcr_merged:
+            data.category_map.size > 0
+                ? {
+                      impact_factor: result.impact_factor,
+                      categories: Array.from(result.category_map.values()),
+                  }
+                : null,
+    };
+};
 
 // The below could potentially be applied on a broader scope
 // However, judging on how dismissAppAlert is used across the app,
@@ -46,7 +89,7 @@ export const loadJournalLookup = searchText => dispatch => {
     return (
         searchText &&
         searchText.trim().length > 0 &&
-        get(JOURNAL_LOOKUP_API({ query: searchText })).then(
+        get(JOURNAL_LOOKUP_API({ query: searchText.trim().toLowerCase() })).then(
             response => {
                 dispatch({
                     type: actions.JOURNAL_LOOKUP_LOADED,
@@ -96,11 +139,12 @@ export const loadJournal =
             !isNaN(id) &&
             get(JOURNAL_API({ id, isEdit })).then(
                 response => {
+                    const data = { ...response.data, ...mergeJcrData(response.data) };
                     dispatch({
                         type: actions.VIEW_JOURNAL_LOADED,
-                        payload: response.data,
+                        payload: data,
                     });
-                    return Promise.resolve(response.data);
+                    return Promise.resolve(data);
                 },
                 error => {
                     dispatch({
@@ -112,15 +156,27 @@ export const loadJournal =
         );
     };
 
-export const loadJournalSearchKeywords = searchQuery => async dispatch => {
-    dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
-    try {
-        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
-        dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data, query: searchQuery });
-    } catch (e) {
-        dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });
-    }
-};
+/**
+ * @param query
+ * @param keywordsOnly
+ * @return {(function(*): Promise<AnyAction>)|*}
+ */
+export const loadJournalSearchKeywords =
+    (query, keywordsOnly = false) =>
+    async dispatch => {
+        const actionSuffix = (keywordsOnly && `${keywordOnlySuffix}`) || '';
+        dispatch({ type: `${actions.JOURNAL_SEARCH_KEYWORDS_LOADING}${actionSuffix}` });
+        try {
+            const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query, keywordsOnly }));
+            dispatch({
+                type: `${actions.JOURNAL_SEARCH_KEYWORDS_LOADED}${actionSuffix}`,
+                payload: keywordsResponse.data,
+                query,
+            });
+        } catch (e) {
+            dispatch({ type: `${actions.JOURNAL_SEARCH_KEYWORDS_FAILED}${actionSuffix}`, payload: e });
+        }
+    };
 
 export const clearJournalSearchKeywords = () => ({
     type: actions.CLEAR_JOURNAL_SEARCH_KEYWORDS,
@@ -247,6 +303,7 @@ const getAdminJournalRequest = data => {
         'journal',
         'adminSection',
         'bibliographicSection',
+        'readAndPublishSection',
         'uqDataSection',
         'doajSection',
         'indexedSection',
@@ -258,6 +315,7 @@ const getAdminJournalRequest = data => {
             ...sanitiseJnlData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
+            ...transformers.getReadAndPublishSectionSearchKeys(data),
         },
     ];
 };

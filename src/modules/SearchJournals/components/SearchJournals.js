@@ -11,7 +11,7 @@ import { clearJournalSearchKeywords, searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
@@ -30,9 +30,15 @@ export const SearchJournals = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     const { journalSearchQueryParams, handleSearch } = useJournalSearch();
-    const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords || {}));
-    const { selectedKeywords, setSelectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } =
-        useSelectedKeywords(journalSearchQueryParams?.keywords);
+    const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords));
+    const {
+        selectedKeywords,
+        setSelectedKeywords,
+        handleKeywordAdd,
+        handleKeywordUpdate,
+        handleKeywordDelete,
+        hasAnySelectedKeywords,
+    } = useSelectedKeywords(journalSearchQueryParams?.keywords);
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
     const fromHandleKeywordDelete = React.useRef(false);
     const fromHandleKeywordClear = React.useRef(false);
@@ -228,6 +234,7 @@ export const SearchJournals = () => {
                         {...{
                             selectedKeywords,
                             handleKeywordAdd,
+                            handleKeywordUpdate,
                             hasAnySelectedKeywords,
                             showInputControls,
                         }}

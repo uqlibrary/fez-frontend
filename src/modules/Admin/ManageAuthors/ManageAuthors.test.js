@@ -8,6 +8,7 @@ import {
     selectDropDownOptionByElement,
     fireEvent,
     userEvent,
+    expectApiRequestToMatchSnapshot,
 } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
@@ -700,9 +701,7 @@ describe('ManageAuthors', () => {
 
         expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
-        await waitFor(() => getByTestId('aut-name-overridden'));
-
-        fireEvent.click(getByTestId('aut-name-overridden'));
+        await waitFor(() => getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('aut-is-scopus-id-authenticated'));
         fireEvent.click(getByTestId('authors-add-this-author-save'));
 
@@ -746,47 +745,47 @@ describe('ManageAuthors', () => {
     });
 
     it('should validate inputs and render updated info after editing', async () => {
+        const data = {
+            aut_created_date: '2021-03-18T04:47:06Z',
+            aut_description: 'Added position. Updated name',
+            aut_display_name: null,
+            aut_email: null,
+            aut_external_id: null,
+            aut_fname: 'Vishal',
+            aut_google_scholar_id: null,
+            aut_homepage_link: null,
+            aut_id: 2000003832,
+            aut_is_orcid_sync_enabled: null,
+            aut_is_scopus_id_authenticated: 0,
+            aut_lname: 'Desai',
+            aut_mname: null,
+            aut_mypub_url: null,
+            aut_name_overridden: 0,
+            aut_orcid_bio: null,
+            aut_orcid_id: '0000-0001-1111-2222',
+            aut_orcid_works_last_modified: null,
+            aut_orcid_works_last_sync: null,
+            aut_org_staff_id: null,
+            aut_org_student_id: null,
+            aut_org_username: '',
+            aut_people_australia_id: null,
+            aut_position: 'Sr. Web Developer',
+            aut_publons_id: null,
+            aut_ref_num: null,
+            aut_researcher_id: null,
+            aut_review_orcid_scopus_id_integration: null,
+            aut_rid_last_updated: null,
+            aut_rid_password: null,
+            aut_scopus_id: null,
+            aut_student_username: null,
+            aut_title: 'Mr.',
+            aut_twitter_username: null,
+            aut_update_date: '2021-03-18T22:53:34Z',
+        };
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
             .reply(200, {
-                data: [
-                    {
-                        aut_created_date: '2021-03-18T04:47:06Z',
-                        aut_description: 'Added position. Updated name',
-                        aut_display_name: null,
-                        aut_email: null,
-                        aut_external_id: null,
-                        aut_fname: 'Vishal',
-                        aut_google_scholar_id: null,
-                        aut_homepage_link: null,
-                        aut_id: 2000003832,
-                        aut_is_orcid_sync_enabled: null,
-                        aut_is_scopus_id_authenticated: 0,
-                        aut_lname: 'Desai',
-                        aut_mname: null,
-                        aut_mypub_url: null,
-                        aut_orcid_bio: null,
-                        aut_orcid_id: '0000-0001-1111-2222',
-                        aut_orcid_works_last_modified: null,
-                        aut_orcid_works_last_sync: null,
-                        aut_org_staff_id: null,
-                        aut_org_student_id: null,
-                        aut_org_username: '',
-                        aut_people_australia_id: null,
-                        aut_position: 'Sr. Web Developer',
-                        aut_publons_id: null,
-                        aut_ref_num: null,
-                        aut_researcher_id: null,
-                        aut_review_orcid_scopus_id_integration: null,
-                        aut_rid_last_updated: null,
-                        aut_rid_password: null,
-                        aut_scopus_id: null,
-                        aut_student_username: null,
-                        aut_title: 'Mr.',
-                        aut_twitter_username: null,
-                        aut_update_date: '2021-03-18T22:53:34Z',
-                    },
-                ],
+                data: [data],
                 total: 1,
             })
             .onPut(new RegExp(repository.routes.AUTHOR_API({}).apiUrl))
@@ -823,6 +822,7 @@ describe('ManageAuthors', () => {
 
         await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
         await userEvent.type(getByTestId('aut-org-username-input'), 'uqtname');
+        await userEvent.click(getByTestId('aut-name-overridden'));
 
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
 
@@ -836,6 +836,7 @@ describe('ManageAuthors', () => {
 
         expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Test, Name');
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqtname');
+        expectApiRequestToMatchSnapshot('put', repository.routes.AUTHOR_API({ authorId: data.aut_id }).apiUrl);
     });
 
     it('should validate inputs and render same info after unsuccessful editing operation', async () => {

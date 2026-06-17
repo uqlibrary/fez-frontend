@@ -1,7 +1,16 @@
 import { test, expect } from '../test';
+import errors from 'locale/validationErrors';
+import {
+    assertHasText,
+    assertMissingText,
+    assertMissingValidationSummaryError,
+    assertValidationSummaryError,
+} from '../lib/helpers';
 import { addContributorUsingPopoverNamesForm } from '../lib/helpers';
 
 test.describe('Add missing record', () => {
+    const validationSummarySelector = '[data-testid=alert] li';
+
     test.describe('add new', () => {
         test.beforeEach(async ({ page }) => {
             await page.goto('/records/add/new');
@@ -121,8 +130,8 @@ test.describe('Add missing record', () => {
                 'Publisher',
                 'Publication date',
             ];
-            const validationErrors = page.locator('[data-testid=alert] li');
-            await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
+            const validationErrors = page.locator(validationSummarySelector);
+            await expect(page.locator(validationSummarySelector)).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
                 await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
@@ -171,8 +180,8 @@ test.describe('Add missing record', () => {
                 'Publisher',
                 'Publication date',
             ];
-            const validationErrors = page.locator('[data-testid=alert] li');
-            await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
+            const validationErrors = page.locator(validationSummarySelector);
+            await expect(page.locator(validationSummarySelector)).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
                 await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
@@ -245,8 +254,8 @@ test.describe('Add missing record', () => {
                 'Publisher',
                 'Publication date',
             ];
-            const validationErrors = page.locator('[data-testid=alert] li');
-            await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
+            const validationErrors = page.locator(validationSummarySelector);
+            await expect(page.locator(validationSummarySelector)).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
                 await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
@@ -316,7 +325,11 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-date-year-input').fill('2020');
 
             // Grant information.
+            await assertMissingValidationSummaryError(page, errors.validationErrors.grants);
+            await assertMissingText(page.getByTestId('grant-list-editor-error'), errors.validationErrors.grants);
             await page.getByTestId('rek-grant-agency-input').fill('First Grant');
+            await assertValidationSummaryError(page, errors.validationErrors.grants);
+            await assertHasText(page.getByTestId('grant-list-editor-error'), errors.validationErrors.grants);
             await page.getByTestId('rek-grant-id-input').fill('12345');
             await page.getByTestId('rek-grant-type-select').click();
             await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
@@ -326,6 +339,7 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-grant-type-select').click();
             await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
             await page.getByTestId('rek-grant-add').click();
+            await assertMissingValidationSummaryError(page, errors.validationErrors.grants);
             await expect(page.getByTestId('grant-list-move-up=0')).toHaveAttribute('disabled', /.*/);
             await expect(page.getByTestId('grant-list-move-down=1')).toHaveAttribute('disabled', /.*/);
             await expect(page.getByTestId('grant-list-row-0')).toHaveText(/First Grant/);

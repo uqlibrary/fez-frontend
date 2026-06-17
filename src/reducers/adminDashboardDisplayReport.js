@@ -26,6 +26,18 @@ const handlers = {
         adminDashboardDisplayReportFailed: action.payload,
     }),
     [actions.ADMIN_DASHBOARD_DISPLAY_REPORT_CLEAR]: () => ({ ...initialState }),
+    [actions.ADMIN_DASHBOARD_SYSTEM_ALERT_UPDATE_SUCCESS]: (state, action) => {
+        if (!state.adminDashboardDisplayReportData) {
+            return state;
+        }
+
+        return {
+            ...state,
+            adminDashboardDisplayReportData: state.adminDashboardDisplayReportData.map(row =>
+                row.sat_id === action.payload?.data.sat_id ? { ...action.payload.data } : row,
+            ),
+        };
+    },
 };
 
 export default function adminDashboardDisplayReportReducer(state = { ...initialState }, action) {

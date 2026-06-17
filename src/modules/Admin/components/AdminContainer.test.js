@@ -6,7 +6,7 @@ import AdminContainer from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import { useIsMobileView } from '../../../hooks';
 import { useRecordContext, useTabbedContext } from 'context';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 class ResizeObserver {
     observe() {}
@@ -40,8 +40,8 @@ jest.mock('react-redux', () => ({
     useDispatch: () => mockDispatch,
 }));
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useParams: jest.fn(() => ({ pid: 'UQ:111111' })),
 }));
 

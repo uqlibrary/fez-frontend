@@ -14,8 +14,8 @@ describe('Helpers', () => {
         it('expected non-typical output', () => {
             const fields = adminJournalFields;
             delete fields.uqData;
-            delete fields.doaj;
-            delete fields.indexed;
+            delete fields.openAccess;
+            delete fields.listed;
 
             const config = { [ADMIN_JOURNAL]: fields };
             expect(getInitialFormValues(journalDoaj.data, config)).toEqual(helpersNonTypicalExpected);

@@ -11,24 +11,47 @@ import {
     EditorsCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { parseHtmlToJSX } from 'helpers/general';
+import { parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import {
     CURRENT_LICENCES,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     PLACEHOLDER_ISO8601_ZULU_DATE,
     PUBLICATION_TYPE_INSTRUMENT,
-    ORCID_BASE_URL,
-    ROR_BASE_URL,
+    RAID_BASE_URL,
 } from 'config/general';
-import { isValidOrcid, isValidROR } from 'config/validation';
+import { isValidDoi, isValidOrcid, isValidRor } from 'config/validation';
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
+import { IdentifierIconLink } from 'modules/SharedComponents/IdentifierIconLink';
+import { getOneToManyRelationItemByOrder } from 'helpers/record';
+
+const renderLink = (link, value, testId = '', icon = '', iconHint = '') => {
+    return (
+        <Link to={link} {...{ ['data-testid']: testId || undefined }}>
+            {value}
+            {icon && (
+                <Tooltip title={iconHint}>
+                    <span className={`fez-icon ${icon} medium`} style={{ margin: '0 4px' }} />
+                </Tooltip>
+            )}
+        </Link>
+    );
+};
+
+const renderKeywordLink = (item, subkey, data) => renderLink(pathConfig.list.keyword(item[subkey], data), data);
+
+const renderSubjectLink = (item, subkey, data) => {
+    const firstTwo = subkey.split('_').slice(0, 2).join('_');
+    const icon = item[firstTwo + '_icon'] ?? '';
+    const iconHint = icon === 'openalex' ? 'OpenAlex' : icon.charAt(0).toUpperCase() + icon.slice(1).toLowerCase();
+    return renderLink(pathConfig.list.subject(item[subkey], data), data, '', icon, iconHint);
+};
 
 export const formatDate = (date, format = 'YYYY-MM-DD') => {
     return <DateCitationView format={format} date={date} prefix={''} suffix={''} data-testid="rek-date" />;
@@ -68,6 +91,8 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                   (publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ')) ||
                   null;
     };
+
+    const hasValue = data => data !== null && !(typeof data === 'string' && data.trim() === '');
 
     const renderRow = (heading, data, index, field) => {
         const labelTestId = `${field.replace(/_/g, '-')}-label`;
@@ -114,42 +139,33 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         );
     };
 
-    // title/description/abstract have been sanitized in middleware
-    const renderHTML = data => {
-        return parseHtmlToJSX(data);
-    };
+    const renderList = (list, subkey, transform) => {
+        const filteredList = list.filter(item => hasValue(getData(item, subkey)));
+        if (filteredList.length === 0) {
+            return null;
+        }
 
-    const renderLink = (link, value, testId = '') => {
-        return (
-            <Link to={link} {...{ ['data-testid']: testId || undefined }}>
-                {value}
-            </Link>
-        );
-    };
-
-    const renderList = (list, subkey, getLink) => {
         const testId = subkey.replace(/_/g, '-');
         return (
             <Box component={'ul'} key={subkey} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                {list.map((item, index) => (
-                    <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`}>
-                        {(() => {
-                            const data = getData(item, subkey);
-                            if (getLink) {
-                                return renderLink(getLink(item[subkey], data), data);
-                            } else {
+                {list
+                    .sort((a, b) => silentTryCatch(() => sortByNumericField(a, b, `${subkey}_order`), 0))
+                    .map((item, index) => (
+                        <li key={`${testId}-${index}`} data-testid={`${testId}-${index}`} style={{ marginTop: 2 }}>
+                            {(() => {
+                                const data = getData(item, subkey);
+                                if (transform) return transform(item, subkey, data);
+
                                 return data;
-                            }
-                        })()}
-                    </li>
-                ))}
+                            })()}
+                        </li>
+                    ))}
             </Box>
         );
     };
 
-    const renderTitle = () => {
-        return renderHTML(publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title);
-    };
+    const renderTitle = () =>
+        parseHtmlToJSX(publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title);
 
     const renderLicense = (cvoId, lookup) => {
         const licenseLookup = renderLink(pathConfig.list.license(lookup), lookup, 'rek-license-lookup');
@@ -229,7 +245,31 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderDoi = doi => {
-        return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
+        return <DoiCitationView key="additional-information-doi" doi={doi} />;
+    };
+
+    const renderRaid = (objects, subKey) => {
+        if (objects.filter(item => !!item[subKey]).length === 0) return null;
+        return (
+            <Box component={'ul'} key={'rek-raids'} sx={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                {objects.map((item, index) => (
+                    <li key={`rek-raid-${index}`} data-testid={`rek-raid-${index}`}>
+                        {(() => {
+                            const id = item[subKey];
+                            return (
+                                <ExternalLink
+                                    id={`rek-raid-${index}`}
+                                    data-testid={`rek-raid-${index}`}
+                                    href={`${RAID_BASE_URL}/${id}`}
+                                >
+                                    {id}
+                                </ExternalLink>
+                            );
+                        })()}
+                    </li>
+                ))}
+            </Box>
+        );
     };
 
     // TODO: display original contact email for admin users
@@ -245,24 +285,10 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
 
     const renderContributorIdentifier = (objects, subKey) => {
         const id = objects[0][subKey];
-        let link = null;
+        const isOrcid = isValidOrcid(id);
+        if (!isOrcid && !isValidRor(id)) return id;
 
-        if (isValidOrcid(id)) {
-            link = `${ORCID_BASE_URL}/${id}`;
-        } else {
-            /* istanbul ignore else */
-            if (isValidROR(id)) {
-                link = `${ROR_BASE_URL}/${id}`;
-            }
-        }
-
-        return link ? (
-            <ExternalLink id={'rek-contributor-identifier'} data-testid={'rek-contributor-identifier'} href={link}>
-                {id}
-            </ExternalLink>
-        ) : (
-            id
-        );
+        return <IdentifierIconLink id={id} type={isOrcid ? 'orcid' : 'ror'} iconSize={isOrcid ? 'large' : 'xlarge'} />;
     };
 
     const renderAlternateIdentifier = publication => {
@@ -321,21 +347,25 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     };
 
     const renderRelatedServices = (objects, subkey, publication) => {
-        const descriptions = publication?.fez_record_search_key_related_service_description;
-        const enhanced = objects.map(item => {
-            const order = item?.rek_related_service_order;
-            /* istanbul ignore next */
-            if (!order || !descriptions) return item;
-            const description = descriptions
-                .find(item => parseInt(item.rek_related_service_description_order, 10) === parseInt(order, 10))
-                ?.rek_related_service_description?.trim?.();
-            if (!description?.length) return item;
-            return {
-                ...item,
-                rek_related_service: `${item.rek_related_service} - ${description}`,
-            };
+        return renderList(objects, subkey, (item, subkey, id) => {
+            const isDoi = isValidDoi(id);
+            const description = getOneToManyRelationItemByOrder(
+                publication,
+                `${subkey}_description`,
+                item[`${subkey}_order`],
+            )?.[`${subkey}_description`];
+
+            if (!isDoi && !isValidRor(id)) {
+                return `${id} - ${description}`;
+            }
+
+            return (
+                <>
+                    <IdentifierIconLink id={id} type={isDoi ? 'doi' : 'ror'} iconSize={isDoi ? 'large' : 'xlarge'} />
+                    {description && <span> - {description}</span>}
+                </>
+            );
         });
-        return renderList(enhanced, subkey);
     };
 
     const renderSDG = publication => {
@@ -414,11 +444,11 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_contributor':
                 return renderContributors(publication);
             case 'rek_keywords':
-                return renderList(objects, subkey, pathConfig.list.keyword);
+                return renderList(objects, subkey, renderKeywordLink);
             case 'rek_seo_code':
-                return renderList(objects, subkey, pathConfig.list.subject);
+                return renderList(objects, subkey, renderSubjectLink);
             case 'rek_alternate_genre':
-                return renderList(objects, subkey, pathConfig.list.subject);
+                return renderList(objects, subkey, renderSubjectLink);
             case 'rek_contact_details_email':
                 return renderContactEmail(objects, subkey);
             case 'rek_contributor_identifier':
@@ -426,9 +456,9 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             case 'rek_geographic_area':
                 return renderMap(objects);
             case 'rek_raid':
-                return renderList(objects, subkey, pathConfig.list.raid);
+                return renderRaid(objects, subkey);
             case 'rek_subject':
-                return renderList(objects, subkey, pathConfig.list.subject);
+                return renderList(objects, subkey, renderSubjectLink);
             case 'rek_related_service':
                 return renderRelatedServices(objects, subkey, publication);
             case 'rek_sdg_source':
@@ -442,19 +472,18 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
     const renderObject = (object, subkey) => {
         const data = getData(object, subkey);
 
+        if (!hasValue(data)) {
+            return null;
+        }
+
         // date fields
         if (viewRecordsConfig.dateFields.includes(subkey)) {
             return formatDate(data, viewRecordsConfig.dateFieldFormat[subkey]);
         }
 
-        // title/description/abstract have been sanitized in middleware
-        const renderHTML = data => {
-            return parseHtmlToJSX(data);
-        };
-
         // html fields
         if (viewRecordsConfig.htmlFields.includes(subkey)) {
-            return renderHTML(data);
+            return parseHtmlToJSX(data);
         }
 
         const testId = subkey.replace(/_/g, '-');
@@ -506,7 +535,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                 renderedValue = formatPublicationDate(value, publication.rek_display_type_lookup);
                 break;
             case 'rek_description':
-                renderedValue = renderHTML(value);
+                renderedValue = parseHtmlToJSX(value);
                 break;
             case 'rek_ci_notice_attribution_incomplete':
                 renderedValue = renderCulturalInstitutionNotice();

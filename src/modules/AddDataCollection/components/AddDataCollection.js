@@ -39,7 +39,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { createNewRecord, doesDOIExist } from 'actions';
 import validationErrors from '../../../locale/validationErrors';
 
@@ -71,6 +71,16 @@ export const licenseText = licenses => {
             return licenseTitle.concat(flattenedDescripton);
         })
         .join('');
+};
+
+export const validateDOI = async data => {
+    if (!data?.fez_record_search_key_doi?.rek_doi) return null;
+    try {
+        const response = await doesDOIExist(data.fez_record_search_key_doi.rek_doi);
+        return response?.total ? validationErrors.validationErrors.doiExists : null;
+    } catch (error) {
+        return locale.validationErrors.doi;
+    }
 };
 
 export const AddDataCollection = ({ disableSubmit, ...props }) => {
@@ -124,16 +134,6 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
         !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
             ? validationErrors.validationErrors.collectionDateRange
             : '';
-
-    const validateDOI = async doi => {
-        if (!!!doi) return null;
-        try {
-            const response = await doesDOIExist(doi);
-            return response?.total ? validationErrors.validationErrors.doiExists : null;
-        } catch (error) {
-            return locale.validationErrors.doi;
-        }
-    };
 
     // customise error for data collection submission
     const alertProps = validation.getErrorAlertProps({
@@ -190,7 +190,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
 
     const dispatch = useDispatch();
     const onSubmit = async data => {
-        const errorDoi = await validateDOI(data.fez_record_search_key_doi.rek_doi);
+        const errorDoi = await validateDOI(data);
         if (errorDoi) {
             setApiError(errorDoi);
             return;
@@ -767,6 +767,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                     component={GeoCoordinatesField}
                                     disabled={isSubmitting}
                                     name="geographicArea"
+                                    readOnly
                                 />
                             </StandardCard>
                         </Grid>

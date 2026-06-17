@@ -11,6 +11,8 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { isEmptyStr } from './utils';
+import { GridFilterInputSingleSelect } from '@mui/x-data-grid';
+import { isURL } from '../../helpers/general';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 
@@ -52,6 +54,11 @@ export const SYSTEM_ALERT_ACTION = {
     RESOLVE: 'RESOLVE',
 };
 
+export const FILTER_VALUES = {
+    MINE: '__MINE__',
+    UNASSIGNED: '__UNASSIGNED__',
+};
+
 export const REPORT_TYPE = {
     systemalertlog: 1,
     workshistory: 2,
@@ -69,15 +76,6 @@ export const EXPORT_REPORT_JOBS = {
 
 export const maxDefaultDateRange = 52;
 export const defaultDateRangeUnit = 'weeks'; // must match expected date units e.g. Moment.js https://momentjs.com/docs/#/manipulating/subtract/
-
-export const isUrl = str => {
-    try {
-        const newUrl = new URL(str);
-        return newUrl.protocol === 'http:' || newUrl.protocol === 'https:';
-    } catch (err) {
-        return false;
-    }
-};
 
 export const defaultLegacyReportOption = { sel_id: 0, sel_title: '', sel_description: '' };
 
@@ -145,41 +143,108 @@ export const getDefaultSorting = reportType => DEFAULT_SORTING?.[reportType] || 
 export const getFormattedServerDate = (dateStr, format = DEFAULT_DATE_FORMAT) =>
     (dateStr && moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(format)) || '';
 
-export const getSystemAlertColumns = (locale, users) => {
+export const sortUsersByName = (users = []) =>
+    [...users].sort((a, b) =>
+        a.preferred_name.localeCompare(b.preferred_name, undefined, {
+            sensitivity: 'base',
+        }),
+    );
+
+export const buildAdminUserOptions = (users = [], currentUser, unassignedLabel) => {
+    const sorted = sortUsersByName(users);
+    const activeUser = sorted.find(user => user.id === currentUser?.id);
+    const others = sorted.filter(user => user.id !== currentUser?.id);
+
+    const options = [activeUser, ...others].filter(Boolean);
+
+    if (!unassignedLabel) return options;
+
+    return [{ id: 0, preferred_name: unassignedLabel }, ...options];
+};
+
+export const buildStatusFilterOptions = (users = [], currentUser, locale) => {
+    const sorted = sortUsersByName(users);
+
+    return [
+        {
+            value: FILTER_VALUES.MINE,
+            label: 'Mine',
+        },
+        {
+            value: FILTER_VALUES.UNASSIGNED,
+            label: locale.alertStatus.UNASSIGNED,
+        },
+        ...sorted.map(user => ({
+            value: user.id,
+            label: user.preferred_name,
+        })),
+    ];
+};
+
+export const getSystemAlertColumns = (locale, users, currentUser, statusOptions) => {
     const alertStatus = locale.alertStatus;
     const alertStatusOption = Object.values(alertStatus);
+    const userMap = new Map(users.map(u => [u.id, u.preferred_name]));
+
     return [
         {
             field: 'sat_created_date',
             headerName: locale.columns.createdDate,
+            disableColumnMenu: true,
+            filterable: false,
             width: 200,
             type: 'date',
             valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
             valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME_24H),
         },
-        { field: 'sat_title', headerName: locale.columns.topic, flex: 1 },
+        { field: 'sat_title', headerName: locale.columns.topic, flex: 1, disableColumnMenu: true, filterable: false },
         {
-            field: 'status',
+            field: 'sat_assigned_to',
             headerName: locale.columns.status,
             width: 160,
-            valueGetter: (_, row) =>
-                !!row.sat_assigned_to
-                    ? (users.find(user => user.id === row.sat_assigned_to)?.preferred_name ?? alertStatus.UNKNOWN)
-                    : alertStatus.UNASSIGNED,
+            valueOptions: statusOptions,
+            valueFormatter: value => {
+                if (!value) return alertStatus.UNASSIGNED;
+                return userMap.get(value) || alertStatus.UNKNOWN;
+            },
             renderCell: params => (
                 <Chip
                     data-testid={`alert-status-${params.id}`}
-                    label={params.value}
+                    label={params.formattedValue}
                     variant="filled"
                     size="small"
-                    color={alertStatusOption.includes(params.value) ? 'default' : 'primary'}
+                    color={alertStatusOption.includes(params.formattedValue) ? 'default' : 'primary'}
                 />
             ),
+            filterable: true,
+            type: 'singleSelect',
+            filterOperators: [
+                {
+                    value: 'equals',
+
+                    getApplyFilterFn: filterItem => {
+                        if (!filterItem.value) return null;
+
+                        return (_, row) => {
+                            if (filterItem.value === FILTER_VALUES.MINE) {
+                                return row.sat_assigned_to === currentUser?.id;
+                            }
+
+                            if (filterItem.value === FILTER_VALUES.UNASSIGNED) {
+                                return !row.sat_assigned_to;
+                            }
+
+                            return row.sat_assigned_to === filterItem.value;
+                        };
+                    },
+                    InputComponent: GridFilterInputSingleSelect,
+                },
+            ],
         },
     ];
 };
 
-export const getDisplayReportColumns = ({ locale, actionState, params }) => {
+export const getDisplayReportColumns = ({ locale, actionState, params, ReportRowActions }) => {
     const report = actionState?.report?.value || getReportTypeFromValue(params.report_type);
 
     const txt = locale.columns[report];
@@ -294,7 +359,7 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     minWidth: 400,
                     flex: 1,
                     renderCell: row =>
-                        isUrl(row.value) ? (
+                        isURL(row.value) ? (
                             <ExternalLink id={`link_${row.id}`} href={row.value} inline>
                                 {row.value}
                             </ExternalLink>
@@ -314,6 +379,19 @@ export const getDisplayReportColumns = ({ locale, actionState, params }) => {
                     flex: 1,
                     order: 7,
                     exportOrder: 10,
+                });
+            }
+
+            if (report === 'systemalertlog') {
+                cols.push({
+                    field: 'actions',
+                    headerName: 'Actions',
+                    width: 140,
+                    sortable: false,
+                    filterable: false,
+                    order: 999,
+                    exportOnly: false,
+                    renderCell: params => <ReportRowActions row={params.row} gridApi={params.api} />,
                 });
             }
             return cols;

@@ -21,8 +21,10 @@ const GrantListEditor = ({
     required,
     hideType = false,
     disableDeleteAllGrants = false,
+    ignoreFormDirtyStateChanges = false,
 }) => {
     const hasPropagatedInputValueChanges = useRef(null);
+    const prevGrants = useRef(null);
     const [grants, setGrants] = useState([]);
     const [grantSelectedToEdit, setGrantSelectedToEdit] = useState(null);
     const [grantIndexSelectedToEdit, setGrantIndexSelectedToEdit] = useState(null);
@@ -30,6 +32,12 @@ const GrantListEditor = ({
     const [grantFormPopulated, setGrantFormPopulated] = useState(false);
     const form = useFormContext();
 
+    const handleGrantsChange = useCallback(
+        grants => {
+            form?.setValue?.(name, grants, { shouldValidate: true });
+        },
+        [form, name],
+    );
     // propagate input changes to `grants`
     useEffect(() => {
         const updated = getGrantsFromProps(name, value);
@@ -44,34 +52,39 @@ const GrantListEditor = ({
 
     // propagate `grantFormPopulated` changes to input
     useEffect(() => {
-        if (!grantFormPopulated) return;
-        form?.setValue?.(name, grantFormPopulated, { shouldValidate: true });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [grantFormPopulated]);
+        if (ignoreFormDirtyStateChanges || (!grantFormPopulated && !prevGrants.current)) return;
 
-    // propagate `grants` changes to input
-    useEffect(() => {
-        form?.setValue?.(name, grants, { shouldValidate: true });
+        let newValue;
+        if (grantFormPopulated) {
+            newValue = grantFormPopulated;
+            prevGrants.current = grants;
+        } else {
+            newValue = prevGrants.current;
+            prevGrants.current = null;
+        }
+
+        handleGrantsChange(newValue);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [JSON.stringify(grants)]);
+    }, [ignoreFormDirtyStateChanges, grantFormPopulated, value]);
 
     const addGrant = useCallback(
         grant => {
-            setGrants(prevGrants => {
-                if (grantIndexSelectedToEdit !== null && grantIndexSelectedToEdit > -1) {
-                    return [
-                        ...prevGrants.slice(0, grantIndexSelectedToEdit),
-                        grant,
-                        ...prevGrants.slice(grantIndexSelectedToEdit + 1),
-                    ];
-                }
-                return [...prevGrants, grant];
-            });
+            const newList =
+                grantIndexSelectedToEdit !== null && grantIndexSelectedToEdit > -1
+                    ? [
+                          ...grants.slice(0, grantIndexSelectedToEdit),
+                          grant,
+                          ...grants.slice(grantIndexSelectedToEdit + 1),
+                      ]
+                    : [...grants, grant];
+
+            setGrants(newList);
+            handleGrantsChange(newList);
             setGrantIndexSelectedToEdit(null);
             setGrantSelectedToEdit(null);
             setErrorMessage('');
         },
-        [grantIndexSelectedToEdit],
+        [grantIndexSelectedToEdit, grants, handleGrantsChange],
     );
 
     const editGrant = useCallback((grant, index) => {
@@ -79,35 +92,46 @@ const GrantListEditor = ({
         setGrantIndexSelectedToEdit(index);
     }, []);
 
-    const moveUpGrant = useCallback((grant, index) => {
-        /* istanbul ignore next */
-        if (index === 0) return;
-
-        setGrants(prevGrants => {
-            const previousGrant = prevGrants[index - 1];
-            if (previousGrant.hasOwnProperty('disabled') && previousGrant.disabled) return prevGrants;
-
-            return [...prevGrants.slice(0, index - 1), grant, previousGrant, ...prevGrants.slice(index + 1)];
-        });
-    }, []);
-
-    const moveDownGrant = useCallback((grant, index) => {
-        setGrants(prevGrants => {
+    const moveUpGrant = useCallback(
+        (grant, index) => {
             /* istanbul ignore next */
-            if (index === prevGrants.length - 1) return prevGrants;
-            const nextGrant = prevGrants[index + 1];
-            return [...prevGrants.slice(0, index), nextGrant, grant, ...prevGrants.slice(index + 2)];
-        });
-    }, []);
+            if (index === 0) return;
+            const previousGrant = grants[index - 1];
+            if (previousGrant.hasOwnProperty('disabled') && previousGrant.disabled) return;
+            const newList = [...grants.slice(0, index - 1), grant, previousGrant, ...grants.slice(index + 1)];
+            setGrants(newList);
+            handleGrantsChange(newList);
+        },
+        [grants, handleGrantsChange],
+    );
 
-    const deleteGrant = useCallback((_, index) => {
-        setGrants(prevGrants => prevGrants.filter((__, i) => i !== index));
-    }, []);
+    const moveDownGrant = useCallback(
+        (grant, index) => {
+            /* istanbul ignore next */
+            if (index === grants.length - 1) return;
+            const nextGrant = grants[index + 1];
+
+            const newList = [...grants.slice(0, index), nextGrant, grant, ...grants.slice(index + 2)];
+            setGrants(newList);
+            handleGrantsChange(newList);
+        },
+        [grants, handleGrantsChange],
+    );
+
+    const deleteGrant = useCallback(
+        (_, index) => {
+            const newList = grants.filter((__, i) => i !== index);
+            setGrants(newList);
+            handleGrantsChange(newList);
+        },
+        [grants, handleGrantsChange],
+    );
 
     const deleteAllGrants = useCallback(() => {
         setGrants([]);
+        handleGrantsChange([]);
         setErrorMessage('');
-    }, []);
+    }, [handleGrantsChange]);
 
     const isFormPopulated = useCallback(value => {
         setGrantFormPopulated(!!value);
@@ -152,7 +176,7 @@ const GrantListEditor = ({
             )}
             <GrantListEditorForm
                 onAdd={addGrant}
-                isPopulated={isFormPopulated}
+                onDirty={isFormPopulated}
                 required={required}
                 disabled={disabled}
                 hideType={hideType}
@@ -189,7 +213,7 @@ const GrantListEditor = ({
                 </Grid>
             )}
             {state?.error && (
-                <Typography color="error" variant="caption">
+                <Typography color="error" variant="caption" data-testid="grant-list-editor-error">
                     {error || state.error}
                 </Typography>
             )}
@@ -207,6 +231,7 @@ GrantListEditor.propTypes = {
     required: PropTypes.bool,
     hideType: PropTypes.bool,
     disableDeleteAllGrants: PropTypes.bool,
+    ignoreFormDirtyStateChanges: PropTypes.bool,
 };
 
 export default React.memo(GrantListEditor);

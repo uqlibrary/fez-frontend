@@ -1812,6 +1812,75 @@ exports[`AdminContainer component should render default view 1`] = `
                               </div>
                             </div>
                           </div>
+                          <div
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+                          >
+                            <div
+                              class="undefined"
+                              data-testid="rek-raid-list-editor"
+                              id="rek-raid-list-editor"
+                            >
+                              <div
+                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                              >
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  style="flex-grow: 1;"
+                                >
+                                  <div
+                                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                                  >
+                                    <label
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      data-shrink="false"
+                                      for="rek-raid-input"
+                                      id="rek-raid-input-label"
+                                    >
+                                      RAiD value
+                                    </label>
+                                    <div
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                    >
+                                      <input
+                                        aria-invalid="false"
+                                        class="MuiInputBase-input MuiInput-input css-60swwn-MuiInputBase-input-MuiInput-input"
+                                        data-analyticsid="rek-raid-input"
+                                        data-testid="rek-raid-input"
+                                        id="rek-raid-input"
+                                        placeholder="Enter RAiD, e.g. {prefix}/{suffix}"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                                >
+                                  <button
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    data-analyticsid="rek-raid-add"
+                                    data-testid="rek-raid-add"
+                                    disabled=""
+                                    id="rek-raid-add"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    <span>
+                                      Add RAiD
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+                              <div
+                                data-testid="rek-raid-list"
+                                id="rek-raid-list"
+                              />
+                              <p
+                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3852,6 +3921,11 @@ exports[`AdminContainer component should render default view 1`] = `
                                       />
                                     </div>
                                   </div>
+                                  <div
+                                    class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                  >
+                                    Accepts IDs or full URLs
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
@@ -3921,6 +3995,500 @@ exports[`AdminContainer component should render default view 1`] = `
                                   >
                                     Add grant
                                   </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              data-testid="related-services-section"
+              id="related-services-section"
+              style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+            >
+              <div
+                class="MuiCardHeader-root css-19ut0jd-MuiCardHeader-root"
+              >
+                <div
+                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                >
+                  <h3
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1fggkh9-MuiTypography-root"
+                    data-testid="related-services-section-header"
+                    id="related-services-section-header"
+                  >
+                    Related Services
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                data-analyticsid="related-services-section-content"
+                data-testid="related-services-section-content"
+                id="related-services-section-content"
+              >
+                <div
+                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                >
+                  <div
+                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  >
+                    <div
+                      class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+                    >
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                      >
+                        <div
+                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                        >
+                          <div
+                            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                          >
+                            <div
+                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                            >
+                              <hr
+                                class="MuiBox-root css-1a7sacs"
+                              />
+                            </div>
+                            <div
+                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                            >
+                              <h4
+                                class="MuiTypography-root MuiTypography-body1 css-10e6ebc-MuiTypography-root"
+                              >
+                                 
+                                Related Services
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                      >
+                        <div
+                          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                        >
+                          <div
+                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+                          >
+                            <div>
+                              Add the Related Service's ID and description - then click the ADD RELATED SERVICE button to add to the list
+                              <div
+                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                                style="margin-top: 8px;"
+                              >
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                                >
+                                  <div
+                                    class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-1w98mmc-MuiAutocomplete-root"
+                                  >
+                                    <div
+                                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                                    >
+                                      <label
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                        data-shrink="false"
+                                        for="rek-related-service-id"
+                                        id="rek-related-service-id-label"
+                                      >
+                                        Related Service ID
+                                      </label>
+                                      <div
+                                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      >
+                                        <input
+                                          aria-autocomplete="list"
+                                          aria-expanded="false"
+                                          aria-invalid="false"
+                                          autocapitalize="none"
+                                          autocomplete="off"
+                                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-60swwn-MuiInputBase-input-MuiInput-input"
+                                          data-analyticsid="rek-related-service-id-input"
+                                          data-testid="rek-related-service-id-input"
+                                          id="rek-related-service-id"
+                                          name="relatedServiceId"
+                                          placeholder="Enter related service's ROR or DOI"
+                                          role="combobox"
+                                          spellcheck="false"
+                                          type="text"
+                                          value=""
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                                >
+                                  <div
+                                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                                    data-testid="rek-related-service-desc"
+                                  >
+                                    <label
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      data-shrink="false"
+                                      data-testid="rek-related-service-desc-label"
+                                      for="rek-related-service-desc-input"
+                                      id="rek-related-service-desc-label"
+                                    >
+                                      Related Service Description
+                                    </label>
+                                    <div
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                    >
+                                      <input
+                                        aria-invalid="false"
+                                        aria-label="Related Service Description"
+                                        class="MuiInputBase-input MuiInput-input css-60swwn-MuiInputBase-input-MuiInput-input"
+                                        data-analyticsid="rek-related-service-desc-input"
+                                        data-testid="rek-related-service-desc-input"
+                                        id="rek-related-service-desc-input"
+                                        label="Related Service Description"
+                                        name="relatedServiceDesc"
+                                        placeholder="Description for this related service"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                >
+                                  <button
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    data-analyticsid="rek-related-service-add"
+                                    data-testid="rek-related-service-add"
+                                    disabled=""
+                                    id="rek-related-service-add"
+                                    tabindex="-1"
+                                    type="button"
+                                  >
+                                    Add related service
+                                  </button>
+                                </div>
+                              </div>
+                              <div
+                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                              >
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                >
+                                  <ul
+                                    class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+                                  >
+                                    <span
+                                      class="MuiBox-root css-0"
+                                      data-testid="confirmDialogBox"
+                                    />
+                                    <li
+                                      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
+                                    >
+                                      <div
+                                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                      >
+                                        <div
+                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 MuiGridLegacy-grid-md-9 css-1m59ukm-MuiGridLegacy-root"
+                                        >
+                                          <div
+                                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                          >
+                                            <div
+                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
+                                            >
+                                              <div
+                                                class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+                                                style="padding: 0px;"
+                                              >
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1jkzbat-MuiTypography-root"
+                                                >
+                                                  Related Service ID
+                                                </span>
+                                              </div>
+                                            </div>
+                                            <div
+                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                                            >
+                                              <div
+                                                class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+                                                style="padding: 0px;"
+                                              >
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1jkzbat-MuiTypography-root"
+                                                >
+                                                  Related Service Description
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div
+                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 MuiGridLegacy-grid-md-3 css-yuldl1-MuiGridLegacy-root"
+                                        >
+                                          <div
+                                            class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+                                            style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+                                          >
+                                            <div
+                                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                            >
+                                              <div
+                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-8 css-tuaig4-MuiGridLegacy-root"
+                                              >
+                                                <div
+                                                  class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
+                                                  style="padding: 0px;"
+                                                >
+                                                  <span
+                                                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1jkzbat-MuiTypography-root"
+                                                  >
+                                                    Reorder entries
+                                                  </span>
+                                                </div>
+                                              </div>
+                                              <div
+                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                                style="text-align: right;"
+                                              >
+                                                <div
+                                                  aria-label="Remove all entries"
+                                                  class=""
+                                                  data-mui-internal-clone-element="true"
+                                                  style="display: inline;"
+                                                >
+                                                  <button
+                                                    aria-label="Remove all entries"
+                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    tabindex="0"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                      data-testid="DeleteForeverIcon"
+                                                      focusable="false"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <path
+                                                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div
+                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                  style="margin-top: -8px;"
+                                >
+                                  <ul
+                                    class="MuiList-root MuiList-padding css-1wpqnf1-MuiList-root"
+                                    data-testid="rek-related-service-list"
+                                  >
+                                    <span
+                                      class="MuiBox-root css-0"
+                                      data-testid="confirmDialogBox"
+                                    />
+                                    <li
+                                      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wa6ns3-MuiListItem-root"
+                                      style="padding: 8px 0px 8px 0px;"
+                                    >
+                                      <div
+                                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                        data-testid="related-service-list-row-0"
+                                      >
+                                        <div
+                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 MuiGridLegacy-grid-md-9 css-1m59ukm-MuiGridLegacy-root"
+                                        >
+                                          <div
+                                            class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
+                                          >
+                                            <div
+                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
+                                            >
+                                              <div
+                                                class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
+                                                style="padding: 0px;"
+                                              >
+                                                <p
+                                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1xtoji5-MuiTypography-root"
+                                                >
+                                                  ror123
+                                                </p>
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1lsv4bv-MuiTypography-root"
+                                                />
+                                              </div>
+                                            </div>
+                                            <div
+                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                                            >
+                                              <div
+                                                class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
+                                                style="padding: 0px;"
+                                              >
+                                                <p
+                                                  class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1kxtfhp-MuiTypography-root"
+                                                >
+                                                  ror123 description
+                                                </p>
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1lsv4bv-MuiTypography-root"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div
+                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 MuiGridLegacy-grid-md-3 css-yuldl1-MuiGridLegacy-root"
+                                        >
+                                          <div
+                                            class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+                                            style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
+                                          >
+                                            <div
+                                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                            >
+                                              <div
+                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-8 css-gh8ekv-MuiGridLegacy-root"
+                                              >
+                                                <div
+                                                  aria-label="Move entry up the order"
+                                                  class=""
+                                                  data-mui-internal-clone-element="true"
+                                                  style="display: inline;"
+                                                >
+                                                  <button
+                                                    aria-label="Move entry up the order"
+                                                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    data-testid="related-service-list-move-up=0"
+                                                    disabled=""
+                                                    tabindex="-1"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                      data-testid="KeyboardArrowUpIcon"
+                                                      focusable="false"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <path
+                                                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  aria-label="Move entry down the order"
+                                                  class=""
+                                                  data-mui-internal-clone-element="true"
+                                                  style="display: inline;"
+                                                >
+                                                  <button
+                                                    aria-label="Move entry down the order"
+                                                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    data-testid="related-service-list-move-down=0"
+                                                    disabled=""
+                                                    tabindex="-1"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                      data-testid="KeyboardArrowDownIcon"
+                                                      focusable="false"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <path
+                                                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                </div>
+                                                <span
+                                                  aria-label="Edit this entry"
+                                                  class=""
+                                                  data-mui-internal-clone-element="true"
+                                                >
+                                                  <button
+                                                    aria-label="Edit this entry"
+                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    data-analyticsid="edit-related-service-0"
+                                                    id="edit-related-service-0"
+                                                    tabindex="0"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                      data-testid="EditIcon"
+                                                      focusable="false"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <path
+                                                        d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                </span>
+                                              </div>
+                                              <div
+                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-5mkhff-MuiGridLegacy-root"
+                                              >
+                                                <div
+                                                  aria-label="Remove this entry"
+                                                  class=""
+                                                  data-mui-internal-clone-element="true"
+                                                  style="display: inline;"
+                                                >
+                                                  <button
+                                                    aria-label="Remove this entry"
+                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    tabindex="0"
+                                                    type="button"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                      data-testid="DeleteIcon"
+                                                      focusable="false"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <path
+                                                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                                                      />
+                                                    </svg>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul>
                                 </div>
                               </div>
                             </div>
@@ -5379,7 +5947,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 file names begin with a letter and are less than 45 characters long
                                               </li>
                                               <li>
-                                                file names contain only upper and lowercase alphanumeric characters, and underscores
+                                                file names contain only upper and lowercase alphanumeric characters, hyphens and underscores
                                               </li>
                                               <li>
                                                 file names must not contain any spaces
@@ -6857,8 +7425,9 @@ exports[`AdminContainer component should render record not found view 1`] = `
                
               <a
                 href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+                target="_blank"
               >
-                contact the eSpace team.
+                contact the UQ eSpace team.
               </a>
             </p>
           </div>
@@ -6916,8 +7485,9 @@ exports[`AdminContainer component should render work not found if record is not 
                
               <a
                 href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+                target="_blank"
               >
-                contact the eSpace team.
+                contact the UQ eSpace team.
               </a>
             </p>
           </div>

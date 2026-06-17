@@ -5,13 +5,11 @@ import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
 import BooleanTemplate from './BooleanTemplate';
-import DateTimeTemplate from './DateTimeTemplate';
 import DefaultTemplate from './DefaultTemplate';
 import LinkTemplate from './LinkTemplate';
 import EnclosedLinkTemplate from './EnclosedLinkTemplate';
 import MultiLinkTemplate from './MultiLinkTemplate';
 import MultiValueTemplate from './MultiValueTemplate';
-import WosCategoriesTemplate from './WosCategoriesTemplate';
 import { useJournalContext } from 'context';
 import CreativeCommonsLicenceTemplate from './CreativeCommonsLicenceTemplate';
 
@@ -69,10 +67,6 @@ export const useTemplate = (template, props) => {
             return [BooleanTemplate, {}];
         case 'CreativeCommonsLicenceTemplate':
             return [CreativeCommonsLicenceTemplate, {}];
-        case 'DateTimeTemplate':
-            return [DateTimeTemplate, props];
-        case 'WosCategoriesTemplate':
-            return [WosCategoriesTemplate, props];
         default:
             return [DefaultTemplate, props];
     }

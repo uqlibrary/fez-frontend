@@ -5,6 +5,7 @@ import locale from 'locale/validationErrors';
 import { MEDIATED_ACCESS_ID, ORG_TYPE_NOT_SET } from 'config/general';
 
 import { isAdded } from 'helpers/datastreams';
+import { isURL } from '../helpers/general';
 
 export const isEmpty = value => !value?.length;
 export const hasLengthGreaterThan = (value, maxlength) => !isEmpty(value) && value?.length > maxlength;
@@ -91,7 +92,7 @@ export const getDoi = value => {
     return null;
 };
 
-export const isValidDOIValue = value => {
+export const isValidDoi = value => {
     if (!value?.trim?.()) return false;
     for (const regex of doiRegexps) {
         const anchoredRegex = new RegExp(`^${regex.source}`, regex.flags);
@@ -111,11 +112,6 @@ export const isValidPubMedValue = value => {
     return isValid.test(value.trim());
 };
 
-export const isValidPartialDOIValue = value => {
-    const isValid = /^10\..*/;
-    return isValid.test(value.trim());
-};
-
 export const isValidPid = value => {
     const isValid = /^uq:[a-z0-9]+$/i;
     return isValid.test(value.toString().trim());
@@ -132,12 +128,18 @@ export const isValidOrcid = value => {
 };
 
 export const isValidRaid = value => {
-    const isValid = /[^\/]+\/[^\/]+/;
+    const isValid = /^10\d*(?:\.\d+)+\/[a-z0-9]+$/;
     return isValid.test(value.toString().trim());
 };
 
-export const isValidROR = value => {
-    const isValid = /^0[a-z|0-9]{6}[0-9]{2}$/;
+export const isValidRor = value => {
+    // https://ror.readme.io/docs/identifier
+    const isValid = /^0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}$/;
+    return isValid.test(value.toString().trim());
+};
+
+export const isValidAlphanumeric = value => {
+    const isValid = /^[a-z0-9]+$/i;
     return isValid.test(value.toString().trim());
 };
 
@@ -154,14 +156,12 @@ export const requiredList = value => {
 export const email = value =>
     value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
-    value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value)
-        ? locale.validationErrors.url
-        : spacelessMaxLength2000Validator(value);
-export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
+    value && !isURL(value) ? locale.validationErrors.url : spacelessMaxLength2000Validator(value);
+export const doi = value => (!!value && !isValidDoi(value) ? locale.validationErrors.doi : undefined);
 export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
 export const orcid = value => (!!value && !isValidOrcid(value) ? locale.validationErrors.orcid : undefined);
 export const raid = value => (!!value && !isValidRaid(value) ? locale.validationErrors.raid : undefined);
-export const ror = value => (!!value && !isValidROR(value) ? locale.validationErrors.ror : undefined);
+export const ror = value => (!!value && !isValidRor(value) ? locale.validationErrors.ror : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 

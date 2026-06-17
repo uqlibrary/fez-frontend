@@ -71,7 +71,7 @@ export const setup = () => {
         }
         return [404, {}];
     });
-    
+
     mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config => {
         const headers = {
             excel: {
@@ -631,8 +631,8 @@ export const setup = () => {
                     'Exported',
                     { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
                 ];
-            } else if (config.params.title?.includes('biological')) {
-                let maxCount = config.params.title?.includes('glycobiology') ? 4 : 8;
+            } else if (config.params.query?.includes('biological')) {
+                let maxCount = config.params.query?.includes('glycobiology') ? 4 : 8;
                 if (config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
                 const data = mockData.journalList.data.filter((element, index) => index < maxCount);
                 return [200, { ...mockData.journalList, ...{ data }, ...{ total: maxCount } }];
@@ -670,7 +670,10 @@ export const setup = () => {
 
         .onGet(new RegExp(routes.CHILD_VOCAB_LIST_API('\\d+.*', false).apiUrl))
         .reply(config => {
-            const id = config.url.split('/').pop().split('?')[0];
+            const id = config.url
+                .split('/')
+                .pop()
+                .split('?')[0];
             return [200, { ...mockData.childVocabList[id] }];
         })
         .onGet(new RegExp(escapeRegExp(routes.VOCAB_LIST_API(false).apiUrl + '.*')))
@@ -701,6 +704,8 @@ export const setup = () => {
         .reply(200, { data: [...mockData.adminDashboardQuickLinks] })
         .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
         .reply(200, { data: [...mockData.adminDashboardSystemAlerts] })
+        .onPatch(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API().apiUrl)))
+        .reply(200, { data: { updated: 1, not_found: 0 } })
         .onGet(
             new RegExp(
                 escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 5, date_from: '.*' }).apiUrl),
@@ -823,8 +828,8 @@ export const setup = () => {
         .onPost('fez-users/delete-list')
         .reply(200, {
             data: {
-                1000000293: 'User deleted',
-                9999999999: 'User not found',
+                '1000000293': 'User deleted',
+                '9999999999': 'User not found',
             },
         })
         .onPost('fez-users')
@@ -887,8 +892,8 @@ export const setup = () => {
         .onPost('fez-authors/delete-list')
         .reply(200, {
             data: {
-                410: 'Author deleted',
-                9999999999: 'Author not found',
+                '410': 'Author deleted',
+                '9999999999': 'Author not found',
             },
         })
         .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))
@@ -960,9 +965,23 @@ export const setup = () => {
         // .reply(422, { message: 'failed to save quicklink update' })
         .reply(201, {})
 
-        .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
-        .reply(201, {})
+        // test unresolve
+        .onPut(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: 1 }).apiUrl))
+        .reply(200, {
+            data: {
+                ...mockData.adminDashboardReportSystemAlertsData[0],
+                resolved_by_full_name: null,
+                sat_resolved_date: null,
+            },
+        })
 
+        .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: '*' }).apiUrl)))
+        .reply(config => {
+            const id = Number(config.url.split('/').pop());
+            const payload = JSON.parse(config.data);
+            const alert = mockData.adminDashboardSystemAlerts.find(a => a.sat_id === id);
+            return [200, { data: { ...Object.assign(alert, payload) } }];
+        })
         .onAny()
         .reply(config => {
             console.log('url not found...', config);

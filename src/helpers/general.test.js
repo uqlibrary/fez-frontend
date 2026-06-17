@@ -17,24 +17,38 @@ import {
     filterObject,
     numbersOnly,
     hasAtLeastOneItemSelected,
-    tryCatch,
+    sortByNumericField,
+    isURL,
+    getOrcidURL,
+    getRorURL,
+    getDoiURL,
+    silentTryCatch,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
-    describe('tryCatch', () => {
+    describe('silentTryCatch', () => {
         it('it should call and return given closure return value', () => {
             const returnValue = 'abc';
             const mock = jest.fn().mockReturnValue('abc');
-            expect(tryCatch(mock)).toEqual(returnValue);
+            expect(silentTryCatch(mock)).toEqual(returnValue);
         });
         it('it should call and return default value in case of failures', () => {
             const defaultValue = 'abc';
             const mock = jest.fn().mockImplementation(() => {
                 throw new Error('test');
             });
-            expect(tryCatch(mock, defaultValue)).toEqual(defaultValue);
+            expect(silentTryCatch(mock, defaultValue)).toEqual(defaultValue);
         });
+    });
+
+    it('isURL', () => {
+        expect(isURL('http://library.uq.edu.au')).toBeTruthy();
+        expect(isURL('https://library.uq.edu.au')).toBeTruthy();
+        expect(isURL('https://a')).toBeTruthy();
+        expect(isURL('https://')).toBeFalsy();
+        expect(isURL('library.uq.edu.au')).toBeFalsy();
+        expect(isURL('abc')).toBeFalsy();
     });
 
     it('leftJoin', () => {
@@ -572,5 +586,64 @@ describe('general helpers', () => {
             expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, selected: true }])).toBeTruthy();
             expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, custom: true }], 'custom')).toBeTruthy();
         });
+    });
+
+    describe('sortByNumericField', () => {
+        test('should sort correctly', () => {
+            const items = [
+                { anotherField: 'b', order: 2 },
+                { anotherField: 'd' },
+                { anotherField: 'a', order: '1' },
+                { anotherField: 'c', order: 3 },
+            ];
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order'))).toEqual([
+                {
+                    anotherField: 'a',
+                    order: '1',
+                },
+                {
+                    anotherField: 'b',
+                    order: 2,
+                },
+                {
+                    anotherField: 'c',
+                    order: 3,
+                },
+                { anotherField: 'd' },
+            ]);
+            // desc
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order', 'desc'))).toEqual([
+                {
+                    anotherField: 'd',
+                },
+                {
+                    anotherField: 'c',
+                    order: 3,
+                },
+                {
+                    anotherField: 'b',
+                    order: 2,
+                },
+                {
+                    anotherField: 'a',
+                    order: '1',
+                },
+            ]);
+        });
+    });
+
+    it('getOrcidURL', () => {
+        expect(getOrcidURL()).toEqual('');
+        expect(getOrcidURL('0000-11111-2222-3333')).toEqual('https://orcid.org/0000-11111-2222-3333');
+    });
+
+    it('getRorURL', () => {
+        expect(getRorURL()).toEqual('');
+        expect(getRorURL('02mhbdp94')).toEqual('https://ror.org/02mhbdp94');
+    });
+
+    it('getDoiURL', () => {
+        expect(getDoiURL()).toEqual('');
+        expect(getDoiURL('10.000/abc-def.10')).toEqual('https://doi.org/10.000/abc-def.10');
     });
 });

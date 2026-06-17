@@ -1,7 +1,6 @@
 export const helpersTypicalExpected = {
     initialValues: {
         adminSection: {
-            abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
                 text: {
                     htmlText: 'This is an advisory statement',
@@ -9,14 +8,15 @@ export const helpersTypicalExpected = {
                 },
                 type: 1234
             },
-            description:
+            jnl_description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
+            jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
-            publicationFormats: 'Print',
-            publicationFrequency: 'Bi-monthly',
-            publicationYear: '1968',
-            refereed: '1',
+            jnl_formats: 'Print',
+            jnl_frequency: 'Bi-monthly',
+            jnl_start_year: '1968',
+            jnl_is_refereed: true,
         },
         bibliographicSection: {
             issns: [
@@ -106,51 +106,14 @@ export const helpersTypicalExpected = {
                 },
             ],
         },
-        doajSection: {
-            jnl_doaj_apc_average_price: '1000',
-            jnl_doaj_apc_currency: 'EUR',
-            jnl_doaj_by: true,
-            jnl_doaj_has_doi: true,
-            jnl_doaj_homepage_url: 'https://www.degruyter.com/journal/key/ans/html',
-            jnl_doaj_issn: '2169-0375',
-            jnl_doaj_last_updated: '2022-08-22 09:57:12',
-            jnl_doaj_nc: true,
-            jnl_doaj_nd: true,
-            jnl_doaj_sa: false,
-            jnl_doaj_seal: false,
-            jnl_doaj_source_id: '340ee43c4c9d4b73ad3f24bb26d98c37',
-            jnl_doaj_title: 'Advanced Nonlinear Studies',
-            openAccess: false,
+        readAndPublishSection: {
+            capped: 'N',
+            discounted: true,
+            readAndPublishLastUpdated: '2023-07-19',
+            readAndPublishPublisher: 'De Gruyter',
+            s2o: undefined,
         },
         id: 12,
-        indexedSection: {
-            ahci: {},
-            esci: {},
-            esi: [
-                {
-                    jnl_esi_issn: '2169-0375',
-                    jnl_esi_source_date: '2023-01-01',
-                    jnl_esi_subject: 456440,
-                    jnl_esi_subject_lookup: 'Mathematics',
-                    jnl_esi_title: 'ADVANCED NONLINEAR STUDIES',
-                },
-            ],
-            pubmed: false,
-            scie: {
-                fez_journal_cwts: {
-                    jnl_cwts_source_year: 2023,
-                    jnl_cwts_title: 'ADVANCED NONLINEAR STUDIES',
-                },
-                jnl_wos_category: '456599|456598',
-                jnl_wos_category_index: 'SCIE',
-                jnl_wos_category_issn: '2169-0375',
-                jnl_wos_category_lookup: 'Mathematics, Applied | Mathematics',
-                jnl_wos_category_source_date: '2023-01-01',
-                jnl_wos_category_title: 'ADVANCED NONLINEAR STUDIES',
-            },
-            scopus: true,
-            ssci: {},
-        },
         journal: {
             fez_journal_abdc: null,
             fez_journal_cite_score: {
@@ -443,6 +406,7 @@ export const helpersTypicalExpected = {
                 },
             ],
             is_favourite: false,
+            jnl_abbrev_title: null,
             jnl_advisory_statement: 'This is an advisory statement',
             jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
@@ -460,12 +424,6 @@ export const helpersTypicalExpected = {
                 count: 0,
                 id: 12,
             },
-            jnl_read_and_publish_is_capped: 'N',
-            jnl_read_and_publish_is_discounted: true,
-            jnl_read_and_publish_issn: '2169-0375',
-            jnl_read_and_publish_publisher: 'De Gruyter',
-            jnl_read_and_publish_source_date: '2023-07-19',
-            jnl_read_and_publish_title: 'Advanced Nonlinear Studies',
         },
     },
 };
@@ -473,7 +431,6 @@ export const helpersTypicalExpected = {
 export const helpersNonTypicalExpected = {
     initialValues: {
         adminSection: {
-            abbreviatedTitle: 'ADV NONLINEAR STUD',
             advisoryStatement: {
                 text: {
                     htmlText: 'This is an advisory statement',
@@ -481,14 +438,15 @@ export const helpersNonTypicalExpected = {
                 },
                 type: 1234,
             },
-            description:
+            jnl_description:
                 'Emphasizes the investigation of language from extralinguistic perspectives in a broad sense, reflecting interest in language among scholars in a variety of fields.',
+            jnl_abbrev_title: null,
             jnl_publisher: 'Walter de Gruyter GmbH',
             jnl_title: 'Advanced Nonlinear Studies',
-            publicationFormats: 'Print',
-            publicationFrequency: 'Bi-monthly',
-            publicationYear: '1968',
-            refereed: '1',
+            jnl_formats: 'Print',
+            jnl_frequency: 'Bi-monthly',
+            jnl_start_year: '1968',
+            jnl_is_refereed: true,
         },
         bibliographicSection: {
             issns: [
@@ -577,6 +535,13 @@ export const helpersNonTypicalExpected = {
                     },
                 },
             ],
+        },
+        readAndPublishSection: {
+            capped: 'N',
+            discounted: true,
+            readAndPublishLastUpdated: '2023-07-19',
+            readAndPublishPublisher: 'De Gruyter',
+            s2o: undefined,
         },
         id: 12,
         journal: {
@@ -871,6 +836,7 @@ export const helpersNonTypicalExpected = {
                 },
             ],
             is_favourite: false,
+            jnl_abbrev_title: null,
             jnl_advisory_statement: 'This is an advisory statement',
             jnl_advisory_statement_type: 1234,
             jnl_created_date: '2021-02-22 00:56:49',
@@ -883,8 +849,6 @@ export const helpersNonTypicalExpected = {
             jnl_updated_date: '2022-09-08 04:56:28',
             uq_author_id_count: 0,
         },
-        doajSection: {},
-        indexedSection: {},
         uqDataSection: {},
     },
 };

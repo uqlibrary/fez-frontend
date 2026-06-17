@@ -7,7 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
-import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router-dom';
+import { useLocation, useNavigationType, createRoutesFromChildren, matchRoutes } from 'react-router';
 import { setup } from 'mock';
 
 // pick utils
@@ -42,6 +42,8 @@ if (!IS_TEST && process.env.ENABLE_LOG) {
         ],
         environment: process.env.BRANCH,
         release: process.env.GIT_SHA,
+        sendDefaultPii: false,
+        enableMetrics: false,
         allowUrls: [/library\.uq\.edu\.au/],
         ignoreErrors: [
             // Ignore browser extension errors
@@ -67,8 +69,14 @@ if (!IS_TEST && process.env.ENABLE_LOG) {
     });
 }
 
+const onReactError = process.env.ENABLE_LOG && typeof Sentry !== 'undefined' ? Sentry.reactErrorHandler() : () => {};
+
 const render = () => {
-    const root = createRoot(document.getElementById('react-root'));
+    const root = createRoot(document.getElementById('react-root'), {
+        onUncaughtError: onReactError, // errors uncaught by react router error boundary nor AppErrorBoundary component
+        onCaughtError: onReactError, // includes errors caught by react router error boundary, remove if it gets too noisy
+    });
+
     root.render(
         <React.StrictMode>
             <AppErrorBoundary>

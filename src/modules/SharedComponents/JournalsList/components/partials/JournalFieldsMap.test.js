@@ -73,6 +73,16 @@ describe('Journal Fields Map', () => {
         expect(testFieldMap.translateFn(testData)).toEqual(1);
     });
 
+    it('should return no highest quartile information if quartile is not available', () => {
+        const testData = { ...mockData.data[0] };
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'highest_quartile')[0];
+        // removal of data used to calculate quartile information
+        testData.fez_journal_jcr_ssci = { fez_journal_jcr_ssci_category: [{ jnl_jcr_ssci_category_quartile: null }] };
+        testData.fez_journal_jcr_scie = undefined;
+        testData.fez_journal_cite_score = undefined;
+        expect(testFieldMap.translateFn(testData)).toEqual(null);
+    });
+
     it('should return no highest quartile information if none is available', () => {
         const testData = { ...mockData.data[0] };
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'highest_quartile')[0];

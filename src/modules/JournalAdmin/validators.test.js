@@ -14,6 +14,9 @@ describe('validateResolver', () => {
                 adminSection: {
                     jnl_title: 'Journal title is required',
                 },
+                bibliographicSection: {
+                    issns: 'ISSN is required',
+                },
             },
             values: {},
         });
@@ -28,6 +31,9 @@ describe('validateResolver', () => {
             errors: {
                 adminSection: {
                     jnl_publisher: 'Journal publisher is required',
+                },
+                bibliographicSection: {
+                    issns: 'ISSN is required',
                 },
             },
             values: {},
@@ -45,6 +51,9 @@ describe('validateResolver', () => {
                     jnl_publisher: 'Journal publisher is required',
                     jnl_title: 'Journal title is required',
                 },
+                bibliographicSection: {
+                    issns: 'ISSN is required',
+                },
             },
             values: {},
         });
@@ -54,6 +63,9 @@ describe('validateResolver', () => {
                     jnl_publisher: 'American Public Health Association',
                     jnl_title: 'A title',
                 },
+                bibliographicSection: {
+                    issns: [{ rek_value: '1111-1111', rek_order: 1 }],
+                },
             }),
         ).resolves.toStrictEqual({
             errors: {},
@@ -61,6 +73,9 @@ describe('validateResolver', () => {
                 adminSection: {
                     jnl_publisher: 'American Public Health Association',
                     jnl_title: 'A title',
+                },
+                bibliographicSection: {
+                    issns: [{ rek_value: '1111-1111', rek_order: 1 }],
                 },
             },
         });

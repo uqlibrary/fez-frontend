@@ -2,12 +2,12 @@ import React from 'react';
 import Orcid from './Orcid';
 import { accounts, currentAuthor } from 'mock/data/account';
 import { rtlRender, WithReduxStore, fireEvent, WithRouter } from 'test-utils';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import * as AuthorAction from 'actions/authors';
 
 let mockUseLocation = { pathname: '/' };
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
     useLocation: () => mockUseLocation,
     useNavigate: jest.fn(() => jest.fn()),
 }));

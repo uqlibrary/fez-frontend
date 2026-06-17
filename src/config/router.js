@@ -1,4 +1,4 @@
-import { createBrowserRouter, createHashRouter } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter } from 'react-router';
 import * as Sentry from '@sentry/react';
 
 const router =

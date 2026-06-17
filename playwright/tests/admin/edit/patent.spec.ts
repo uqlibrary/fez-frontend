@@ -18,7 +18,7 @@ test.describe('Patent admin edit', () => {
     });
 
     test('should load expected tabs', async ({ page }) => {
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
         await adminEditNoAlerts(page);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');

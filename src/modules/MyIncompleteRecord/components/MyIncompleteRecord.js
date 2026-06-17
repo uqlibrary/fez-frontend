@@ -24,7 +24,7 @@ import { default as pagesLocale } from '../locale';
 import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router';
 import { authorAffiliationRequired } from '../../../config/validation';
 import { locale } from '../../../locale';
 import {
@@ -471,13 +471,15 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                     </StandardCard>
                                 </Grid>
                             )}
-                            {alertProps && (
+                        </Grid>
+                        {alertProps && (
+                            <Grid container sx={{ mt: 2 }}>
                                 <Grid size={12}>
                                     <Alert pushToTop {...alertProps} />
                                 </Grid>
-                            )}
-                        </Grid>
-                        <Grid container spacing={3}>
+                            </Grid>
+                        )}
+                        <Grid container spacing={3} sx={{ mt: 2 }}>
                             <Grid sx={{ display: { xs: 'none', md: 'block' } }} size="grow" />
 
                             <Grid

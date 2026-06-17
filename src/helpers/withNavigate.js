@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useNavigate, useNavigationType, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useNavigationType, useParams } from 'react-router';
 
 /* istanbul ignore next */
 export const withNavigate = () => Component => props => {

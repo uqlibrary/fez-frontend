@@ -142,4 +142,20 @@ export const checkPartialDateFromRecordValue = async (page: Page, id: string, da
 };
 
 export const setFileInput = async (container: Page | Locator, fileName: string) =>
+    // @ts-expect-error TODO double-check setInputFiles usage
     await container.setInputFiles(path.join(__dirname, `../tests/fixtures/${fileName}`));
+
+export const assertHasText = async (container: Locator, text: string) =>
+    await expect(container.getByText(text, { exact: true })).toBeVisible();
+
+export const assertMissingText = async (container: Locator, text: string) =>
+    await expect(container.getByText(text, { exact: true })).toHaveCount(0);
+
+// expect the validation summary container is the last element with data-testid="alert-message" on the page
+export const validationSummary = (page: Page) => page.getByTestId('alert-message').last();
+
+export const assertValidationSummaryError = async (page: Page, text: string) =>
+    await assertHasText(validationSummary(page), text);
+
+export const assertMissingValidationSummaryError = async (page: Page, text: string) =>
+    await assertMissingText(validationSummary(page), text);

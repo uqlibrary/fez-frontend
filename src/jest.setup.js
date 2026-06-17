@@ -1,6 +1,11 @@
 import '@testing-library/jest-dom';
 import { toMatchDiffSnapshot } from 'snapshot-diff';
 import { configure } from '@testing-library/react';
+import { jestPreviewConfigure } from 'jest-preview';
+
+if (process.env.JEST_PREVIEW_ON_FAILURE) {
+    jestPreviewConfigure({ autoPreview: true });
+}
 
 const extensions = {
     toHaveDispatchedActions: (actions, expectedActions) => {

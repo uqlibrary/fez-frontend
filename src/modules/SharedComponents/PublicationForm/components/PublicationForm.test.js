@@ -24,6 +24,7 @@ import { screen } from '@testing-library/react';
 import publicationForm from '../../../../locale/publicationForm';
 import { SEARCH_KEY_LOOKUP_API } from '../../../../repositories/routes';
 import validationErrors from '../../../../locale/validationErrors';
+import { DOCUMENT_TYPE_RESEARCH_REPORT, NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../../config/general';
 
 function setup(props = {}, renderMethod = render) {
     return renderMethod(
@@ -222,6 +223,19 @@ describe('PublicationForm', () => {
             await assertMissingValidationErrorSummary(expectedError);
             await addAndSelectContributorUsingPopoverNamesForm('authors');
             await assertValidationErrorSummary(expectedError);
+        });
+
+        it('should validated NTRO Research Report', async () => {
+            const { queryByTestId } = setup();
+            await selectTypeCombo(NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, DOCUMENT_TYPE_RESEARCH_REPORT);
+
+            await assertValidationErrorSummary([validationErrors.validationErrorsSummary.commissionedResearchReport]);
+            expect(queryByTestId('commissioned-research-report-field-error')).toBeInTheDocument();
+            await userEvent.click(queryByTestId('commissioned-research-report-field'));
+            await assertMissingValidationErrorSummary([
+                validationErrors.validationErrorsSummary.commissionedResearchReport,
+            ]);
+            expect(queryByTestId('commissioned-research-report-field-error')).not.toBeInTheDocument();
         });
     });
 

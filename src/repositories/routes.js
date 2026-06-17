@@ -78,7 +78,7 @@ export const getOpenAccessSearchParams = ({ facets = {} }) => ({
 export const getSearchType = searchQuery => {
     if (!searchQuery) return {};
 
-    if (validation.isValidDOIValue(searchQuery)) {
+    if (validation.isValidDoi(searchQuery)) {
         return { doi: sanitizeDoi(searchQuery) };
     }
 
@@ -541,8 +541,8 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
     return { apiUrl: 'fez-users' };
 };
 
-export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
-    apiUrl: `journals/search?query=${encodeURIComponent(query)}`,
+export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query, keywordsOnly = false }) => ({
+    apiUrl: `journals/search?query=${encodeURIComponent(query)}${keywordsOnly ? '&rule=subject' : ''}`,
 });
 
 /**
@@ -553,28 +553,19 @@ export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
  */
 export const getKeywordsParams = keywords => {
     if (!!keywords && Object.values(keywords).length > 0) {
-        const title = [];
-        const description = [];
-        const subject = [];
-        Object.keys(keywords).map(item => {
-            switch (keywords[item].type) {
-                case 'Title':
-                    title.push(keywords[item].text);
-                    break;
-                case 'Keyword':
-                    description.push(keywords[item].text);
-                    break;
-                case 'Subject':
-                    subject.push(keywords[item].cvoId);
-                    break;
-                default:
-                    break;
-            }
+        let query = '';
+        const keys = Object.keys(keywords);
+        keys.map((item, index) => {
+            const addOperand = index + 1 !== keys.length;
+            const type = keywords[item].type.toLowerCase();
+
+            const field = type === 'keyword' ? 'description' : type;
+            const value = type === 'subject' ? keywords[item].cvoId : keywords[item].text;
+            const operand = addOperand ? ` ${keywords[keys[index + 1]].operand} ` : '';
+            query += `${field}:${value}${operand}`;
         });
         return {
-            title: [...title],
-            description: [...description],
-            subject: [...subject],
+            query: query,
         };
     } else {
         return {};
@@ -650,8 +641,12 @@ export const ADMIN_DASHBOARD_QUICKLINKS_API = () => ({
     apiUrl: 'dashboard/quicklinks',
 });
 
-export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = () => ({
-    apiUrl: 'dashboard/alerts',
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = ({ id } = { id: null }) => ({
+    apiUrl: `dashboard/alerts${id ? `/${id}` : ''}`,
+});
+
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API = () => ({
+    apiUrl: 'dashboard/alerts/assign',
 });
 
 export const simpleQueryEncode = request =>
@@ -660,9 +655,8 @@ export const simpleQueryEncode = request =>
         .map(key => key + '=' + encodeURIComponent(request[key]))
         .join('&');
 
-// eslint-disable-next-line camelcase
+/* eslint-disable camelcase */
 export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date_to }) => {
-    // eslint-disable-next-line camelcase
     const request = { sel_id: report_type, date_from, date_to };
     const query = simpleQueryEncode(request);
 
@@ -671,13 +665,19 @@ export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date
     };
 };
 
-// eslint-disable-next-line camelcase
-export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ report_type, date_from, date_to, record_id }) => {
-    // eslint-disable-next-line camelcase
-    const request = { report_type, date_from, date_to, record_id };
+export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({
+    report_type,
+    date_from,
+    date_to,
+    record_id,
+    requestor_id,
+    pid,
+}) => {
+    const request = { report_type, date_from, date_to, record_id, requestor_id, pid };
     const query = simpleQueryEncode(request);
 
     return {
         apiUrl: `dashboard/reports?${query}`,
     };
 };
+/* eslint-enable camelcase */

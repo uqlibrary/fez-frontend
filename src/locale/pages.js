@@ -14,13 +14,16 @@ import { pathConfig } from 'config/pathConfig';
 import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
+    ESPACE_TEAM_CONTACT_US_URL,
+    ORCID_BASE_URL,
     PUBLICATION_TYPE_DATA_COLLECTION,
-    PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Box } from '@mui/material';
+import { getDoiURL } from 'helpers/general';
+import { isDataCiteSupportedType } from '../helpers/doi';
 
 /*
 
@@ -193,8 +196,8 @@ export default {
                     <p>The work you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
-                            contact the eSpace team.
+                        <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                            contact the UQ eSpace team.
                         </a>
                     </p>
                 </div>
@@ -260,8 +263,6 @@ export default {
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
                     researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
-                    orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
-                    orcidLinkPrefix: ' orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
                         scopus: 'Scopus',
@@ -274,7 +275,7 @@ export default {
                             scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
                             researcher: 'https://www.webofscience.com/wos/author/rid/',
                             google_scholar: 'https://scholar.google.com.au/citations?user=',
-                            orcid: 'https://orcid.org/',
+                            orcid: `${ORCID_BASE_URL}/`,
                         },
                         notLinkedUrl: {
                             scopus: 'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
@@ -358,6 +359,12 @@ export default {
                 type: 'warning',
                 actionButtonLabel: 'View and Fix',
                 icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
+            },
+            oacomplianceCreativeWorkRecordLure: {
+                title: 'Open Access Required',
+                message: 'Creative Works funded by the ARC are encouraged to be open access.',
+                type: 'info_outline',
+                actionButtonLabel: 'View and Fix',
             },
         },
         myResearch: {
@@ -544,6 +551,10 @@ export default {
                                 id: 'crossref',
                                 title: 'Crossref',
                             },
+                            {
+                                id: 'openalex',
+                                title: 'OpenAlex',
+                            },
                         ],
                     },
                 },
@@ -673,10 +684,7 @@ export default {
                         record.fez_record_search_key_new_doi?.rek_new_doi ? (
                             <>
                                 This Data Collection has been deleted and substituted by{' '}
-                                <a
-                                    href={`https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}`}
-                                    target="_blank"
-                                >
+                                <a href={getDoiURL(record.fez_record_search_key_new_doi?.rek_new_doi)} target="_blank">
                                     another version
                                 </a>
                                 .
@@ -727,6 +735,8 @@ export default {
                         authorAffiliations: 'Author Affiliations',
                         wosId: 'WoS ID',
                         wosDocType: 'WoS Doc Type',
+                        openalexId: 'OpenAlex ID',
+                        openalexDocType: 'OpenAlex Doc Type',
                         scopusId: 'Scopus ID',
                         scopusDocType: 'Scopus Doc Type',
                         pubmedId: 'Pubmed ID',
@@ -1038,7 +1048,7 @@ export default {
                 noDoi: 'DOI (Preview)',
             },
             doiTemplate: (pid, displayType) =>
-                displayType === PUBLICATION_TYPE_DATA_COLLECTION || displayType === PUBLICATION_TYPE_INSTRUMENT
+                isDataCiteSupportedType(displayType)
                     ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
                     : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
@@ -1055,7 +1065,7 @@ export default {
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
                 uqIsNotPublisher: '[SUBJECT] does not appear to be have an UQ DOI',
                 warningTitle: 'Please note:',
-                wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
+                wrongSubtype: 'Sorry, only the following subtypes are supported for [TYPE]: [SUBTYPES]',
                 bookChapter: {
                     parent: {
                         missing: "Sorry, this book chapter doesn't seem to belong to a existing book",
@@ -1132,11 +1142,11 @@ export default {
                 uqData: {
                     title: 'UQ eSpace',
                 },
-                doaj: {
-                    title: 'Open Access (Directory of Open Access Journals - DOAJ)',
+                openAccess: {
+                    title: 'Open Access Options',
                 },
-                indexed: {
-                    title: 'Indexed in',
+                listed: {
+                    title: 'Listed in',
                 },
                 readAndPublish: {
                     title: 'Publisher Agreements',
@@ -1338,6 +1348,10 @@ export default {
                 },
                 advisoryStatement: {
                     title: 'Advisory statement',
+                },
+                publishAsOAButton: {
+                    tooltip: 'Avoid fees and meet mandates by viewing similar journals with open access.',
+                    text: "I'd like to publish open access",
                 },
             },
         },

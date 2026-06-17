@@ -65,6 +65,7 @@ export default {
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
         keywords: 'Limited to [max] characters',
+        commissionedResearchReport: 'Commissioned report confirmation is required',
     },
     validationErrorsSummary: {
         // appears in footer error block
@@ -126,6 +127,7 @@ export default {
         dateRange: 'Publication start/end dates are invalid',
         collectionDateRange: 'Collection start/end dates are invalid',
         pageRange: 'Please provide a valid start/end page range',
+        commissionedResearchReport: 'Commissioned report confirmation is required',
         // Collection form validations
         communityID: 'You must select a community',
         collection_pid: 'You must select a collection',
@@ -145,5 +147,6 @@ export default {
         rek_security_policy: 'Security policy is required',
         jnl_title: 'Journal title is required',
         jnl_publisher: 'Journal publisher is required',
+        issns: 'ISSN is required',
     },
 };

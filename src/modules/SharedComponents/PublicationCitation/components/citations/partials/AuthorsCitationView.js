@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import CitationView from './CitationView';
 import { locale } from 'locale';
 import { pathConfig } from 'config/pathConfig';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { useTheme } from '@mui/material/styles';
+import { getOneToManyRelationItemByOrder } from 'helpers/record';
+import { IdentifierIconLink } from '../../../../IdentifierIconLink';
 
 const classes = {
     authorIdLink: theme => ({
@@ -20,11 +22,6 @@ export const AuthorsCitationView = ({
         order: 'rek_author_order',
         totalCountKey: 'fez_record_search_key_author_id',
     },
-    idSearchKey = {
-        idKey: 'fez_record_search_key_author_id',
-        idSubkey: 'rek_author_id',
-        idOrder: 'rek_author_id_order',
-    },
     className = 'citationAuthors',
     prefix,
     suffix = ' ',
@@ -35,27 +32,9 @@ export const AuthorsCitationView = ({
     citationStyle,
 }) => {
     const { key, totalCountKey, order, subkey } = searchKey;
-    const { idKey, idOrder, idSubkey } = idSearchKey;
 
     // copy authors to separate variable so sorting doesn't change original record
     const publicationAuthors = publication && publication[key] && [...publication[key]];
-    const getAuthorId = order => {
-        let id = 0;
-
-        if (showLink) {
-            const authorIds = publication && publication[idKey] && [...publication[idKey]];
-            if (!!authorIds) {
-                for (const authorId of authorIds) {
-                    if (authorId[idOrder] === order) {
-                        id = authorId[idSubkey];
-                        break;
-                    }
-                }
-            }
-        }
-
-        return id;
-    };
     const theme = useTheme();
     const [state] = React.useState({
         authorsTotal:
@@ -64,11 +43,16 @@ export const AuthorsCitationView = ({
             (publication?.[totalCountKey]?.length ?? publication[key].length),
         authors:
             publicationAuthors && Array.isArray(publicationAuthors)
-                ? publicationAuthors.map(author => ({
-                      id: getAuthorId(author[order]),
-                      value: author[subkey],
-                      order: author[order],
-                  }))
+                ? publicationAuthors.map(author => {
+                      const attribute = `${subkey}_id`;
+                      const authorId = getOneToManyRelationItemByOrder(publication, attribute, author[order]);
+                      return {
+                          id: authorId?.[attribute] || 0,
+                          value: author[subkey],
+                          order: author[order],
+                          orcid: authorId?.author?.aut_orcid_id?.trim?.(),
+                      };
+                  })
                 : [],
     });
 
@@ -127,15 +111,18 @@ export const AuthorsCitationView = ({
             if (showLink) {
                 const href = getLink(author.value, author.id);
                 element = (
-                    <Link
-                        style={{ ...(!!author.id ? classes.authorIdLink(theme) : {}) }}
-                        className={!!!author.id ? 'authorNameLink' : ''}
-                        to={href}
-                        key={key}
-                        data-testid={`${testId}-${index}-link`}
-                    >
-                        {element}
-                    </Link>
+                    <>
+                        <Link
+                            style={{ ...(!!author.id ? classes.authorIdLink(theme) : {}) }}
+                            className={!!!author.id ? 'authorNameLink' : ''}
+                            to={href}
+                            key={key}
+                            data-testid={`${testId}-${index}-link`}
+                        >
+                            {element}
+                        </Link>
+                        {author?.orcid && <IdentifierIconLink id={author.orcid} type="orcid" iconOnly />}
+                    </>
                 );
             }
             return (
@@ -180,7 +167,6 @@ export const AuthorsCitationView = ({
 AuthorsCitationView.propTypes = {
     publication: PropTypes.object.isRequired,
     searchKey: PropTypes.object,
-    idSearchKey: PropTypes.object,
     className: PropTypes.string,
     prefix: PropTypes.string,
     suffix: PropTypes.string,

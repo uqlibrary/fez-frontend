@@ -8,7 +8,7 @@ import {
     CLEAR_JOURNAL_SEARCH_KEYWORDS,
 } from 'actions/actionTypes';
 
-import journalReducer, { initialJournalSearchKeywords } from './journals';
+import journalReducer, { initialJournalSearchKeywords, keywordOnlySuffix } from './journals';
 
 const initialState = {
     itemsList: [],
@@ -75,76 +75,149 @@ describe('journalReducer reducer', () => {
         expect(test).toEqual(expected);
     });
 
-    it('sets search keywords loading state', () => {
-        const previousState = {
-            ...initialState,
-        };
-        const expected = {
-            ...previousState,
-            journalSearchKeywordsLoading: true,
-        };
-        const test = journalReducer(previousState, { type: JOURNAL_SEARCH_KEYWORDS_LOADING, payload: 'test1' });
-        expect(test).toEqual(expected);
-    });
+    describe('keywords', () => {
+        it('sets search keywords loading state', () => {
+            const previousState = {
+                ...initialState,
+            };
+            const expected = {
+                ...previousState,
+                journalSearchKeywordsLoading: true,
+            };
+            const test = journalReducer(previousState, { type: JOURNAL_SEARCH_KEYWORDS_LOADING, payload: 'test1' });
+            expect(test).toEqual(expected);
+        });
 
-    it('sets search keywords loaded state', () => {
-        const previousState = {
-            ...initialState,
-            journalSearchKeywordsLoading: true,
-        };
-        const expected = {
-            journalSearchKeywordsLoading: false,
-            journalSearchKeywords: [
-                {
-                    exactMatch: ['test1'],
+        it('sets search keywords loaded state', () => {
+            const previousState = {
+                ...initialState,
+                journalSearchKeywordsLoading: true,
+            };
+            const expected = {
+                ...previousState,
+                journalSearchKeywordsLoading: false,
+                journalSearchKeywords: [
+                    {
+                        exactMatch: ['test1'],
+                    },
+                ],
+                journalSearchKeywordsError: null,
+                isInitialValues: false,
+            };
+            const test = journalReducer(previousState, {
+                type: JOURNAL_SEARCH_KEYWORDS_LOADED,
+                payload: [
+                    {
+                        exactMatch: ['test1'],
+                    },
+                ],
+            });
+            expect(test).toEqual(expected);
+        });
+
+        it('sets search keywords failed state', () => {
+            const previousState = {
+                ...initialState,
+                journalSearchKeywordsLoading: true,
+            };
+            const expected = {
+                ...previousState,
+                journalSearchKeywordsLoading: false,
+                journalSearchKeywordsError: true,
+                journalSearchKeywords: { ...initialJournalSearchKeywords },
+            };
+            const test = journalReducer(previousState, {
+                type: JOURNAL_SEARCH_KEYWORDS_FAILED,
+                payload: true,
+            });
+            expect(test).toEqual(expected);
+        });
+
+        it('sets search keywords clear state', () => {
+            const previousState = {
+                journalSearchKeywords: {
+                    exact: ['test1'],
                 },
-            ],
-            journalSearchKeywordsError: null,
-            isInitialValues: false,
-        };
-        const test = journalReducer(previousState, {
-            type: JOURNAL_SEARCH_KEYWORDS_LOADED,
-            payload: [
-                {
-                    exactMatch: ['test1'],
-                },
-            ],
+                isInitialValues: false,
+            };
+            const expected = {
+                ...previousState,
+                journalSearchKeywords: { ...initialJournalSearchKeywords },
+                isInitialValues: true,
+            };
+            const test = journalReducer(previousState, {
+                type: CLEAR_JOURNAL_SEARCH_KEYWORDS,
+            });
+            expect(test).toEqual(expected);
         });
-        expect(test).toEqual(expected);
-    });
 
-    it('sets search keywords failed state', () => {
-        const previousState = {
-            ...initialState,
-            journalSearchKeywordsLoading: true,
-        };
-        const expected = {
-            journalSearchKeywordsLoading: false,
-            journalSearchKeywordsError: true,
-            journalSearchKeywords: { ...initialJournalSearchKeywords },
-        };
-        const test = journalReducer(previousState, {
-            type: JOURNAL_SEARCH_KEYWORDS_FAILED,
-            payload: true,
-        });
-        expect(test).toEqual(expected);
-    });
+        describe('keywordsOnly', () => {
+            it('sets search keywords loading state', () => {
+                const expected = {
+                    ...initialState,
+                    [keywordOnlySuffix]: {
+                        journalSearchKeywordsError: null,
+                        journalSearchKeywordsLoading: true,
+                    },
+                };
+                const test = journalReducer(
+                    { ...initialState },
+                    {
+                        type: `${JOURNAL_SEARCH_KEYWORDS_LOADING}${keywordOnlySuffix}`,
+                        payload: 'test1',
+                    },
+                );
+                expect(test).toEqual(expected);
+            });
 
-    it('sets search keywords clear state', () => {
-        const previousState = {
-            journalSearchKeywords: {
-                exact: ['test1'],
-            },
-            isInitialValues: false,
-        };
-        const expected = {
-            ...previousState,
-            journalSearchKeywords: { ...initialJournalSearchKeywords },
-            isInitialValues: true,
-        };
-        const test = journalReducer(previousState, {
-            type: CLEAR_JOURNAL_SEARCH_KEYWORDS,
+            it('sets search keywords loaded state', () => {
+                const previousState = {
+                    ...initialState,
+                    journalSearchKeywordsLoading: true,
+                };
+                const expected = {
+                    ...previousState,
+                    [keywordOnlySuffix]: {
+                        isInitialValues: false,
+                        journalSearchKeywordsLoading: false,
+                        journalSearchKeywords: [
+                            {
+                                exactMatch: ['test1'],
+                            },
+                        ],
+                        journalSearchKeywordsError: null,
+                    },
+                };
+                const test = journalReducer(previousState, {
+                    type: `${JOURNAL_SEARCH_KEYWORDS_LOADED}${keywordOnlySuffix}`,
+                    payload: [
+                        {
+                            exactMatch: ['test1'],
+                        },
+                    ],
+                });
+                expect(test).toEqual(expected);
+            });
+
+            it('sets search keywords failed state', () => {
+                const previousState = {
+                    ...initialState,
+                    journalSearchKeywordsLoading: true,
+                };
+                const expected = {
+                    ...previousState,
+                    [keywordOnlySuffix]: {
+                        journalSearchKeywordsLoading: false,
+                        journalSearchKeywordsError: true,
+                        journalSearchKeywords: { ...initialJournalSearchKeywords },
+                    },
+                };
+                const test = journalReducer(previousState, {
+                    type: `${JOURNAL_SEARCH_KEYWORDS_FAILED}${keywordOnlySuffix}`,
+                    payload: true,
+                });
+                expect(test).toEqual(expected);
+            });
         });
-        expect(test).toEqual(expected);
     });
 });

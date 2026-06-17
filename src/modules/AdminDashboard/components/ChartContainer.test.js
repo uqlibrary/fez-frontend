@@ -2,16 +2,15 @@ import React from 'react';
 
 import { render } from 'test-utils';
 
-import GaugeChartContainer from './GaugeChartContainer';
+import ChartContainer from './ChartContainer';
 
 const setup = (props = {}, renderer = render) => {
-    return renderer(<GaugeChartContainer id="test" {...props} />);
+    return renderer(<ChartContainer id="test" {...props} />);
 };
 
-describe('GaugeChartContainer', () => {
+describe('ChartContainer', () => {
     const label = 'Test label';
     const subtext = 'Test subtext';
-
     const children = <div data-testid="test-child">Test child</div>;
 
     it('should render title and child only', () => {

@@ -3,6 +3,7 @@ import * as repositories from 'repositories';
 import * as journalActions from './journals';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 import * as ExportPublicationsTransformers from './exportPublicationsDataTransformers';
+import { keywordOnlySuffix } from '../reducers/journals';
 
 describe('Search action creators', () => {
     beforeEach(() => {
@@ -133,6 +134,38 @@ describe('Search action creators', () => {
             const expectedActions = [actions.CLEAR_JOURNAL_SEARCH_KEYWORDS];
             await mockActionsStore.dispatch(journalActions.clearJournalSearchKeywords());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        describe('keywordsOnly', () => {
+            it('should dispatch action for successful journal search keywords', async () => {
+                const { apiUrl } = repositories.routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: 'a', keywordsOnly: true });
+                mockApi.onGet(apiUrl).reply(200, { data: [] });
+
+                const expectedActions = [
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_LOADING}${keywordOnlySuffix}`,
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_LOADED}${keywordOnlySuffix}`,
+                ];
+
+                await mockActionsStore.dispatch(journalActions.loadJournalSearchKeywords('a', true));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
+
+            it('should dispatch action for failed journal search keywords', async () => {
+                const { apiUrl } = repositories.routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: 'a', keywordsOnly: true });
+                mockApi.onGet(apiUrl).reply(500);
+
+                const expectedActions = [
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_LOADING}${keywordOnlySuffix}`,
+                    actions.APP_ALERT_SHOW,
+                    `${actions.JOURNAL_SEARCH_KEYWORDS_FAILED}${keywordOnlySuffix}`,
+                ];
+
+                try {
+                    await mockActionsStore.dispatch(journalActions.loadJournalSearchKeywords('a', true));
+                } catch {
+                    expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                }
+            });
         });
     });
 
@@ -350,6 +383,78 @@ describe('Search action creators', () => {
             } catch {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
+        });
+    });
+    describe('mergeJcrData', () => {
+        it('should return empty object if no jcr data', () => {
+            expect(journalActions.mergeJcrData(undefined)).toEqual(undefined);
+            expect(journalActions.mergeJcrData(null)).toEqual(null);
+            expect(journalActions.mergeJcrData({})).toEqual({ fez_journal_jcr_merged: null });
+            expect(journalActions.mergeJcrData({ fez_journal_jcr_ahci: null })).toEqual({
+                fez_journal_jcr_merged: null,
+            });
+            expect(
+                journalActions.mergeJcrData({ fez_journal_jcr_ahci: { jnl_jcr_ahci_impact_factor: '1.0' } }),
+            ).toEqual({ fez_journal_jcr_merged: null });
+        });
+
+        it('should merge jcr data', () => {
+            const jcrData = {
+                fez_journal_jcr_ahci: {
+                    jnl_jcr_ahci_impact_factor: '1.0',
+                    fez_journal_jcr_ahci_category: [
+                        {
+                            jnl_jcr_ahci_category_description_lookup: 'math',
+                            jnl_jcr_ahci_category_quartile: 'Q1',
+                            jnl_jcr_ahci_category_ranking: '10/100',
+                        },
+                        {
+                            jnl_jcr_ahci_category_description_lookup: 'science',
+                            jnl_jcr_ahci_category_quartile: 'Q2',
+                            jnl_jcr_ahci_category_ranking: '20/100',
+                        },
+                    ],
+                },
+                fez_journal_jcr_scie: {
+                    jnl_jcr_scie_impact_factor: '1.0',
+                    fez_journal_jcr_scie_category: [
+                        {
+                            jnl_jcr_scie_category_description_lookup: 'math',
+                            jnl_jcr_scie_category_quartile: 'Q1',
+                            jnl_jcr_scie_category_ranking: '10/100',
+                        },
+                        {
+                            jnl_jcr_scie_category_description_lookup: 'bio',
+                            jnl_jcr_scie_category_quartile: 'Q1',
+                            jnl_jcr_scie_category_ranking: '10/100',
+                        },
+                    ],
+                },
+            };
+            const expected = {
+                fez_journal_jcr_merged: {
+                    impact_factor: '1.0',
+                    categories: [
+                        {
+                            category: 'math',
+                            quartile: 'Q1',
+                            ranking: '10/100',
+                        },
+                        {
+                            category: 'science',
+                            quartile: 'Q2',
+                            ranking: '20/100',
+                        },
+                        {
+                            category: 'bio',
+                            quartile: 'Q1',
+                            ranking: '10/100',
+                        },
+                    ],
+                },
+            };
+
+            expect(journalActions.mergeJcrData(jcrData)).toEqual(expected);
         });
     });
 });
