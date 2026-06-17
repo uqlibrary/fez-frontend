@@ -23,7 +23,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ ...containerProps }) => {
             await place.fetchFields({
                 fields: ['viewport', 'location', 'svgIconMaskURI', 'iconBackgroundColor'],
             });
-            // center map on selected place
+            // center map to selected place
             /* istanbul ignore else */
             if (place.viewport) map.fitBounds(place.viewport);
 

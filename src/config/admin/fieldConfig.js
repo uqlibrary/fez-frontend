@@ -1290,9 +1290,7 @@ export default {
             component: PublicationMap,
             componentProps: {
                 name: 'bibliographicSection.geoCoordinates',
-                fullWidth: true,
                 label: 'Geographic area',
-                isSearch: true,
             },
         },
         fez_record_search_key_access_conditions: {
