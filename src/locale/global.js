@@ -191,11 +191,16 @@ export default {
                 externalUrl: RESOLVER_URL_PREFIX + encodeURIComponent('https://doi.org/') + '[id]',
                 idKey: 'fez_record_search_key_doi.rek_doi',
             },
+            openalex: {
+                id: 'openAlex',
+                title: 'OpenAlex',
+                priority: 5,
+                externalUrl: 'https://openalex.org/works?page=1&filter=cites:' + '[id]',
+                idKey: 'fez_record_search_key_openalex_id.rek_openalex_id',
+            },
         },
         doiCitationLink: {
             ariaLabel: 'Open this DOI in an new window',
-            prefix: 'https://doi.org/',
-            externalUrl: 'https://doi.org/[id]',
         },
         pubmedCentralLink: {
             ariaLabel: 'Full text via Pubmed Central (open access)',

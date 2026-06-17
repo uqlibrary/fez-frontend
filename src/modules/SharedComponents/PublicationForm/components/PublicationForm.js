@@ -37,14 +37,14 @@ import { useDispatch } from 'react-redux';
 import { Field } from '../../Toolbox/ReactHookForm';
 import { useForm } from '../../../../hooks';
 import { useNavigate } from 'react-router';
-import { useWatch } from 'react-hook-form';
+import { FormProvider, useWatch } from 'react-hook-form';
 import { flattenFormFieldKeys } from '../../../../hooks/useForm';
 import { filterObject, hasAtLeastOneItemSelected, isEmptyObject } from 'helpers/general';
 import { dateRange } from 'config/validation';
 
 const asyncValidate = async (data, setError) => {
     const doi = data.fez_record_search_key_doi?.rek_doi;
-    if (!validation.isValidDOIValue(doi) || !(await doesDOIExist(doi))?.total) return true;
+    if (!validation.isValidDoi(doi) || !(await doesDOIExist(doi))?.total) return true;
     setError('fez_record_search_key_doi.rek_doi', { message: validationErrors.validationErrors.doiExists });
     return false;
 };
@@ -175,6 +175,9 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
     const queuedFormValidationId = useRef(0);
 
     // form
+    const form = useForm({
+        // shouldUnregister: true, // causes multiple re-renders - handled by useEffect bellow
+    });
     const {
         trigger,
         control,
@@ -185,9 +188,7 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
         getPropsForAlert,
         safelyHandleSubmit,
         formState: { isDirty, isSubmitting, isSubmitSuccessful, hasValidationError },
-    } = useForm({
-        // shouldUnregister: true, // causes multiple re-renders - handled by useEffect bellow
-    });
+    } = form;
     const values = useWatch({ control });
     let displayType = values.rek_display_type;
     let subtype = values.rek_subtype;
@@ -288,167 +289,175 @@ const PublicationForm = ({ initialValues = {}, onFormSubmitSuccess, onFormCancel
     const alertProps = validation.getErrorAlertProps({ alertLocale: txt, ...getPropsForAlert(formLevelError) });
     return (
         <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
-            <form onSubmit={handleDefaultSubmit}>
-                <Grid container spacing={3}>
-                    <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
-                    <Grid size={12}>
-                        <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
-                            <Grid
-                                container
-                                spacing={1}
-                                sx={{
-                                    padding: 0,
-                                }}
-                            >
-                                <Grid size={12}>
-                                    <Field
-                                        control={control}
-                                        component={SelectField}
-                                        disabled={isSubmitting}
-                                        name="rek_display_type"
-                                        id="rek-display-type"
-                                        value={displayType}
-                                        label={txt.publicationType.inputLabelText}
-                                        required
-                                        placeholder={txt.publicationType.hintText}
-                                        selectFieldId="rek-display-type"
-                                    >
-                                        {publicationTypeItems}
-                                    </Field>
-                                </Grid>
-                                {hasSubtype && (!subtype || subtypes.includes(subtype)) && (
+            <FormProvider {...form}>
+                <form onSubmit={handleDefaultSubmit}>
+                    <Grid container spacing={3}>
+                        <NavigationDialogBox
+                            when={isDirty && !isSubmitSuccessful}
+                            txt={txt.cancelWorkflowConfirmation}
+                        />
+                        <Grid size={12}>
+                            <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
+                                <Grid
+                                    container
+                                    spacing={1}
+                                    sx={{
+                                        padding: 0,
+                                    }}
+                                >
                                     <Grid size={12}>
                                         <Field
-                                            key={`${displayType}${subtype}`}
                                             control={control}
                                             component={SelectField}
                                             disabled={isSubmitting}
-                                            id="rek-subtype"
-                                            name="rek_subtype"
-                                            value={subtype}
-                                            label={txt.publicationSubtype.inputLabelText}
+                                            name="rek_display_type"
+                                            id="rek-display-type"
+                                            value={displayType}
+                                            label={txt.publicationType.inputLabelText}
                                             required
-                                            placeholder={txt.publicationSubtype.hintText}
-                                            selectFieldId="rek-subtype"
+                                            placeholder={txt.publicationType.hintText}
+                                            selectFieldId="rek-display-type"
                                         >
-                                            {subtypes?.map((item, index) => (
-                                                <MenuItem value={item} key={`${displayType}-${index}`}>
-                                                    {item}
-                                                </MenuItem>
-                                            ))}
+                                            {publicationTypeItems}
                                         </Field>
                                     </Grid>
-                                )}
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-                    {!!control && !!FormComponent && (
-                        <React.Fragment>
-                            {!!isNtro && <NtroHeader />}
-                            <Grid size={12}>
-                                <FormComponent
-                                    control={control}
-                                    values={values}
-                                    subtype={subtype}
-                                    isNtro={isNtro}
-                                    isAuthorSelected={isAuthorSelected}
-                                    isSubmitting={isSubmitting}
-                                    navigate={navigate}
-                                />
-                            </Grid>
-                            {showContentIndicatorsField(values) && (
-                                <Grid size={12}>
-                                    <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help}>
-                                        <Grid
-                                            container
-                                            spacing={3}
-                                            sx={{
-                                                padding: 0,
-                                            }}
-                                        >
-                                            <Grid size={12}>
-                                                <Typography>{txt.contentIndicators.description}</Typography>
-                                                <Field
-                                                    control={control}
-                                                    component={ContentIndicatorsField}
-                                                    displayType={displayType}
-                                                    disabled={isSubmitting}
-                                                    id="content-indicators"
-                                                    name="contentIndicators"
-                                                    label={txt.contentIndicators.fieldLabels.label}
-                                                    multiple
-                                                    fullWidth
-                                                />
-                                            </Grid>
+                                    {hasSubtype && (!subtype || subtypes.includes(subtype)) && (
+                                        <Grid size={12}>
+                                            <Field
+                                                key={`${displayType}${subtype}`}
+                                                control={control}
+                                                component={SelectField}
+                                                disabled={isSubmitting}
+                                                id="rek-subtype"
+                                                name="rek_subtype"
+                                                value={subtype}
+                                                label={txt.publicationSubtype.inputLabelText}
+                                                required
+                                                placeholder={txt.publicationSubtype.hintText}
+                                                selectFieldId="rek-subtype"
+                                            >
+                                                {subtypes?.map((item, index) => (
+                                                    <MenuItem value={item} key={`${displayType}-${index}`}>
+                                                        {item}
+                                                    </MenuItem>
+                                                ))}
+                                            </Field>
                                         </Grid>
+                                    )}
+                                </Grid>
+                            </StandardCard>
+                        </Grid>
+                        {!!control && !!FormComponent && (
+                            <React.Fragment>
+                                {!!isNtro && <NtroHeader />}
+                                <Grid size={12}>
+                                    <FormComponent
+                                        control={control}
+                                        values={values}
+                                        subtype={subtype}
+                                        isNtro={isNtro}
+                                        isAuthorSelected={isAuthorSelected}
+                                        isSubmitting={isSubmitting}
+                                        navigate={navigate}
+                                    />
+                                </Grid>
+                                {showContentIndicatorsField(values) && (
+                                    <Grid size={12}>
+                                        <StandardCard
+                                            title={txt.contentIndicators.title}
+                                            help={txt.contentIndicators.help}
+                                        >
+                                            <Grid
+                                                container
+                                                spacing={3}
+                                                sx={{
+                                                    padding: 0,
+                                                }}
+                                            >
+                                                <Grid size={12}>
+                                                    <Typography>{txt.contentIndicators.description}</Typography>
+                                                    <Field
+                                                        control={control}
+                                                        component={ContentIndicatorsField}
+                                                        displayType={displayType}
+                                                        disabled={isSubmitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txt.contentIndicators.fieldLabels.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                )}
+                                <Grid size={12}>
+                                    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                        <Field
+                                            control={control}
+                                            name="files"
+                                            component={FileUploadField}
+                                            disabled={isSubmitting}
+                                            requireOpenAccessStatus
+                                            validate={
+                                                isNtro
+                                                    ? [validation.fileUploadRequired, validation.validFileUpload]
+                                                    : [validation.validFileUpload]
+                                            }
+                                            isNtro={isNtro}
+                                        />
                                     </StandardCard>
                                 </Grid>
-                            )}
+                            </React.Fragment>
+                        )}
+                        {!!FormComponent && alertProps && (
                             <Grid size={12}>
-                                <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                    <Field
-                                        control={control}
-                                        name="files"
-                                        component={FileUploadField}
-                                        disabled={isSubmitting}
-                                        requireOpenAccessStatus
-                                        validate={
-                                            isNtro
-                                                ? [validation.fileUploadRequired, validation.validFileUpload]
-                                                : [validation.validFileUpload]
-                                        }
-                                        isNtro={isNtro}
-                                    />
-                                </StandardCard>
+                                <Alert pushToTop {...alertProps} />
                             </Grid>
-                        </React.Fragment>
-                    )}
-                    {!!FormComponent && alertProps && (
-                        <Grid size={12}>
-                            <Alert pushToTop {...alertProps} />
-                        </Grid>
-                    )}
-                </Grid>
-                <Grid
-                    container
-                    spacing={2}
-                    padding={2}
-                    sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
-                >
-                    <Grid size={{ xs: 12, sm: 'auto' }}>
-                        <Button
-                            color="secondary"
-                            fullWidth
-                            children={txt.cancel}
-                            disabled={isSubmitting}
-                            onClick={onFormCancel}
-                            sx={{ sm: { width: 'auto' } }}
-                        />
+                        )}
                     </Grid>
-                    {!!displayType && (!hasSubtype || subtype) && (
-                        <Grid
-                            size={{
-                                xs: 12,
-                                sm: 'auto',
-                            }}
-                        >
+                    <Grid
+                        container
+                        spacing={2}
+                        padding={2}
+                        sx={{ justifyContent: 'flex-end', pr: 0, pl: { xs: 0, sm: 'auto' } }}
+                    >
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
-                                onClick={handleSubmit}
-                                style={{ whiteSpace: 'nowrap' }}
-                                id="submit-work"
-                                data-analyticsid="submit-work"
-                                data-testid="submit-work"
-                                variant="contained"
-                                color="primary"
+                                color="secondary"
                                 fullWidth
-                                children={txt.submit}
-                                disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
+                                children={txt.cancel}
+                                disabled={isSubmitting}
+                                onClick={onFormCancel}
                                 sx={{ sm: { width: 'auto' } }}
                             />
                         </Grid>
-                    )}
-                </Grid>
-            </form>
+                        {!!displayType && (!hasSubtype || subtype) && (
+                            <Grid
+                                size={{
+                                    xs: 12,
+                                    sm: 'auto',
+                                }}
+                            >
+                                <Button
+                                    onClick={handleSubmit}
+                                    style={{ whiteSpace: 'nowrap' }}
+                                    id="submit-work"
+                                    data-analyticsid="submit-work"
+                                    data-testid="submit-work"
+                                    variant="contained"
+                                    color="primary"
+                                    fullWidth
+                                    children={txt.submit}
+                                    disabled={isSubmitting || !isEmptyObject(formLevelError) || hasValidationError}
+                                    sx={{ sm: { width: 'auto' } }}
+                                />
+                            </Grid>
+                        )}
+                    </Grid>
+                </form>
+            </FormProvider>
         </ConfirmDiscardFormChanges>
     );
 };

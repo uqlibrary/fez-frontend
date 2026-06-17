@@ -7877,6 +7877,7 @@ exports[`GrantListEditor should render error from props 1`] = `
     </div>
     <span
       class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+      data-testid="grant-list-editor-error"
     >
       Some error
     </span>
@@ -8067,6 +8068,7 @@ exports[`GrantListEditor should render error from props as children 1`] = `
     </div>
     <span
       class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+      data-testid="grant-list-editor-error"
     >
       <span>
         Test error 1
@@ -9266,6 +9268,7 @@ exports[`GrantListEditor should render string error from props 1`] = `
     </div>
     <span
       class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+      data-testid="grant-list-editor-error"
     >
       Test error
     </span>

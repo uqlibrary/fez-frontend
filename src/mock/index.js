@@ -670,7 +670,10 @@ export const setup = () => {
 
         .onGet(new RegExp(routes.CHILD_VOCAB_LIST_API('\\d+.*', false).apiUrl))
         .reply(config => {
-            const id = config.url.split('/').pop().split('?')[0];
+            const id = config.url
+                .split('/')
+                .pop()
+                .split('?')[0];
             return [200, { ...mockData.childVocabList[id] }];
         })
         .onGet(new RegExp(escapeRegExp(routes.VOCAB_LIST_API(false).apiUrl + '.*')))
@@ -825,8 +828,8 @@ export const setup = () => {
         .onPost('fez-users/delete-list')
         .reply(200, {
             data: {
-                1000000293: 'User deleted',
-                9999999999: 'User not found',
+                '1000000293': 'User deleted',
+                '9999999999': 'User not found',
             },
         })
         .onPost('fez-users')
@@ -889,8 +892,8 @@ export const setup = () => {
         .onPost('fez-authors/delete-list')
         .reply(200, {
             data: {
-                410: 'Author deleted',
-                9999999999: 'Author not found',
+                '410': 'Author deleted',
+                '9999999999': 'Author not found',
             },
         })
         .onPost(new RegExp(escapeRegExp(routes.AUTHOR_API().apiUrl)))

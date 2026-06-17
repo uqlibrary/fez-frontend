@@ -4,21 +4,13 @@ import AdditionalInformation, { formatDate } from './AdditionalInformation';
 import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
-import { useJsApiLoader } from '@react-google-maps/api';
 
 /* eslint-disable react/prop-types */
-jest.mock('@react-google-maps/api', () => ({
-    useJsApiLoader: jest.fn(),
-    Polygon: () => <div id="mock-polygon" />,
-    Marker: () => <div id="mock-marker" />,
-    GoogleMap: props => (
-        <div>
-            <div id="mock-google-maps" />
-            {props.children}
-        </div>
+jest.mock('modules/SharedComponents/PublicationMap/PublicationMap', () => ({
+    __esModule: true,
+    default: ({ coordinates, readOnly }) => (
+        <div data-testid="mock-publication-map" data-coordinates={coordinates} data-readonly={readOnly} />
     ),
-    StandaloneSearchBox: () => <div id="mock-search-box" />,
-    DrawingManager: () => <div id="mock-drawing-manager" />,
 }));
 
 function setup(testProps = {}) {
@@ -55,14 +47,12 @@ describe('Additional Information Component ', () => {
 
     it('should render component with data collection', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({ publication: records.dataCollection });
         expect(container).toMatchSnapshot();
     });
 
     it('should render component with data collection with raid', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({
             publication: {
                 ...records.dataCollection,
@@ -79,7 +69,6 @@ describe('Additional Information Component ', () => {
 
     it('should not render raid link with empty raid data', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { queryByTestId } = setup({
             publication: {
                 ...records.dataCollection,
@@ -96,7 +85,6 @@ describe('Additional Information Component ', () => {
 
     it('should not render raid link with empty raid array', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { queryByTestId } = setup({
             publication: {
                 ...records.dataCollection,
@@ -108,7 +96,6 @@ describe('Additional Information Component ', () => {
 
     it('should render component with data collection with license link', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({
             publication: {
                 ...records.dataCollection,
@@ -243,7 +230,7 @@ describe('Additional Information Component ', () => {
             },
         });
 
-        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+        expect(getByTestId('identifier-icon-link-0000_0000_0000_0001')).toHaveTextContent(id);
     });
 
     it('should render component with ror owner identifier', () => {
@@ -254,7 +241,7 @@ describe('Additional Information Component ', () => {
                 fez_record_search_key_contributor_identifier: [{ rek_contributor_identifier: id }],
             },
         });
-        expect(getByTestId('rek-contributor-identifier-link')).toHaveTextContent(id);
+        expect(getByTestId('identifier-icon-link-02_mhbdp_94')).toHaveTextContent(id);
     });
 
     it('should render component with unrecognised owner identifier', () => {
@@ -267,6 +254,31 @@ describe('Additional Information Component ', () => {
         });
 
         expect(getByText(id)).toBeInTheDocument();
+    });
+
+    it('should render component with related service ror', () => {
+        const id = '02mhbdp94';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_related_service: [{ rek_related_service: id }],
+            },
+        });
+        expect(getByTestId('identifier-icon-link-02_mhbdp_94')).toHaveTextContent(id);
+    });
+
+    it('should render component with related service doi', () => {
+        const id = '10.1234/test';
+        const { getByTestId } = setup({
+            publication: {
+                ...records.instrument,
+                fez_record_search_key_related_service: [{ rek_related_service: id }],
+                fez_record_search_key_related_service_description: [
+                    { rek_related_service_description: 'related service desc' },
+                ],
+            },
+        });
+        expect(getByTestId('identifier-icon-link-10_1234_test')).toHaveTextContent(id);
     });
 
     it('should render component with generic document', () => {
@@ -320,14 +332,13 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render oa status value link in the component with thesis', () => {
-        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Post-print)';
+        records.thesis.fez_record_search_key_oa_status.rek_oa_status_lookup = 'File (Author Accepted Manuscript)';
         const { container } = setup({ publication: records.thesis });
         expect(container).toMatchSnapshot();
     });
 
     it('should render component with data collection with FoR codes', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({ publication: records.dataCollectionWithFoRCodes });
         expect(container).toMatchSnapshot();
     });
@@ -386,6 +397,42 @@ describe('Additional Information Component ', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should not render empty rights', () => {
+        initialize();
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_rights: { rek_rights: '' },
+            },
+        });
+        expect(queryByTestId('rek-rights-label')).not.toBeInTheDocument();
+        expect(queryByTestId('rek-rights')).not.toBeInTheDocument();
+    });
+
+    it('should not render null rights', () => {
+        initialize();
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_rights: { rek_rights: null },
+            },
+        });
+        expect(queryByTestId('rek-rights-label')).not.toBeInTheDocument();
+        expect(queryByTestId('rek-rights')).not.toBeInTheDocument();
+    });
+
+    it('should not render empty keyword', () => {
+        initialize();
+        const { queryByTestId } = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_keywords: [{ rek_keywords: '', rek_keywords_order: 1 }],
+            },
+        });
+        expect(queryByTestId('rek-keywords-label')).not.toBeInTheDocument();
+        expect(queryByTestId('rek-keywords')).not.toBeInTheDocument();
+    });
+
     it('renderLicense()', () => {
         const publication = {
             rek_date: PLACEHOLDER_ISO8601_ZULU_DATE,
@@ -435,7 +482,6 @@ describe('Additional Information Component ', () => {
 
     it('should render map with geo coordinates', () => {
         initialize();
-        useJsApiLoader.mockImplementation(() => ({ isLoaded: true }));
         const { container } = setup({
             publication: {
                 ...records.audioDocument,

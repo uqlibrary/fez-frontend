@@ -17,12 +17,13 @@ import {
     ESPACE_TEAM_CONTACT_US_URL,
     ORCID_BASE_URL,
     PUBLICATION_TYPE_DATA_COLLECTION,
-    PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Link } from 'react-router';
 import { Box } from '@mui/material';
+import { getDoiURL } from 'helpers/general';
+import { isDataCiteSupportedType } from '../helpers/doi';
 
 /*
 
@@ -359,6 +360,12 @@ export default {
                 actionButtonLabel: 'View and Fix',
                 icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
             },
+            oacomplianceCreativeWorkRecordLure: {
+                title: 'Open Access Required',
+                message: 'Creative Works funded by the ARC are encouraged to be open access.',
+                type: 'info_outline',
+                actionButtonLabel: 'View and Fix',
+            },
         },
         myResearch: {
             pageTitle: 'My works',
@@ -544,6 +551,10 @@ export default {
                                 id: 'crossref',
                                 title: 'Crossref',
                             },
+                            {
+                                id: 'openalex',
+                                title: 'OpenAlex',
+                            },
                         ],
                     },
                 },
@@ -673,10 +684,7 @@ export default {
                         record.fez_record_search_key_new_doi?.rek_new_doi ? (
                             <>
                                 This Data Collection has been deleted and substituted by{' '}
-                                <a
-                                    href={`https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}`}
-                                    target="_blank"
-                                >
+                                <a href={getDoiURL(record.fez_record_search_key_new_doi?.rek_new_doi)} target="_blank">
                                     another version
                                 </a>
                                 .
@@ -727,6 +735,8 @@ export default {
                         authorAffiliations: 'Author Affiliations',
                         wosId: 'WoS ID',
                         wosDocType: 'WoS Doc Type',
+                        openalexId: 'OpenAlex ID',
+                        openalexDocType: 'OpenAlex Doc Type',
                         scopusId: 'Scopus ID',
                         scopusDocType: 'Scopus Doc Type',
                         pubmedId: 'Pubmed ID',
@@ -1038,7 +1048,7 @@ export default {
                 noDoi: 'DOI (Preview)',
             },
             doiTemplate: (pid, displayType) =>
-                displayType === PUBLICATION_TYPE_DATA_COLLECTION || displayType === PUBLICATION_TYPE_INSTRUMENT
+                isDataCiteSupportedType(displayType)
                     ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
                     : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
@@ -1055,7 +1065,7 @@ export default {
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
                 uqIsNotPublisher: '[SUBJECT] does not appear to be have an UQ DOI',
                 warningTitle: 'Please note:',
-                wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
+                wrongSubtype: 'Sorry, only the following subtypes are supported for [TYPE]: [SUBTYPES]',
                 bookChapter: {
                     parent: {
                         missing: "Sorry, this book chapter doesn't seem to belong to a existing book",

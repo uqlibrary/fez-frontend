@@ -564,6 +564,17 @@ const assertRichTextEditorValue = async (testId, value) => {
 const getTableBodyRows = element =>
     element.querySelectorAll('tr.MuiTableRow-root:not(.Mui-TableBodyCell-DetailPanel):not(.MuiTableRow-head)');
 
+/**
+ * @param callback
+ * @return {Promise<void>}
+ */
+const withFakeTimers = async callback => {
+    jest.useFakeTimers();
+    await callback();
+    jest.runAllTimers();
+    jest.useRealTimers();
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -620,4 +631,5 @@ module.exports = {
     sortObjectProps,
     getTableBodyRows,
     api,
+    withFakeTimers,
 };

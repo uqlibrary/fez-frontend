@@ -1,22 +1,20 @@
+import React from 'react';
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
-import { ORCID_BASE_URL } from '../config/general';
+import { DOI_BASE_URL, ORCID_BASE_URL, ROR_BASE_URL } from '../config/general';
+import TryCatch from 'modules/SharedComponents/Toolbox/TryCatch/TryCatch';
 
-/* istanbul ignore next */
-global.dd = console.dir.bind(console);
-/* istanbul ignore next */
-global.dc = console.log;
-/* istanbul ignore next */
-global.dr = arg => {
-    console.dir.apply(console, [arg, { depth: null }]);
-    return arg;
-};
-/* istanbul ignore next */
-global.dj = console.log.bind(console, '%O');
-
+/**
+ * @param {function} callback
+ * @param {*} _default
+ * @return {undefined|*}
+ */
 export const silentTryCatch = (callback, _default = undefined) => {
     try {
-        return callback();
+        const result = callback();
+        if (result instanceof Promise) return result.catch(() => _default);
+
+        return result;
     } catch (e) {
         /* istanbul ignore next */
         return _default;
@@ -589,3 +587,31 @@ export const isURL = value => silentTryCatch(() => !!String(new URL(value).proto
  * @return {string}
  */
 export const getOrcidURL = id => (id?.trim?.() && `${ORCID_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getRorURL = id => (id?.trim?.() && `${ROR_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param children
+ * @param {Function} callback
+ * @return {(): React.JSX.Element}
+ */
+export const withErrorBoundary = (Component, callback) => {
+    const WrappedComponent = props => (
+        <TryCatch callback={callback}>
+            <Component {...props} />
+        </TryCatch>
+    );
+
+    WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+    return WrappedComponent;
+};

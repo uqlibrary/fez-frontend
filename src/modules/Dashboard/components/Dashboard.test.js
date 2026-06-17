@@ -4,7 +4,7 @@ import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 import { render, WithReduxStore, WithRouter, fireEvent } from 'test-utils';
 import { within } from '@testing-library/react';
-import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE } from '../../../config/general';
+import { DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE, DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE } from 'config/general';
 import Cookies from 'js-cookie';
 import * as DashboardAuthorProfileModule from './DashboardAuthorProfile';
 import { OrcidSyncContext } from '../../../context';
@@ -80,6 +80,7 @@ function setup(testProps = {}, renderMethod = render) {
 describe('Dashboard test', () => {
     afterEach(() => {
         Cookies.remove(DASHBOARD_HIDE_ORCID_SYNC_DIALOG_COOKIE);
+        Cookies.remove(DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE);
         jest.clearAllMocks();
     });
 
@@ -361,6 +362,116 @@ describe('Dashboard test', () => {
                     requestOrcidSync: expect.any(Function),
                 });
             });
+        });
+    });
+
+    describe('Creative Work OA alert', () => {
+        const creativeWorkFacet = {
+            'Display type': {
+                buckets: [
+                    {
+                        key: 313,
+                        doc_count: 1,
+                    },
+                ],
+            },
+        };
+
+        const creativeWorkBannerTxt = 'Creative Works funded by the ARC are encouraged to be open access.';
+
+        it('should display creative work alert when display type 313 exists', () => {
+            const { getByText, queryByText } = setup({
+                noncompliantoa: {
+                    publicationsList: [],
+                    loadingPublicationsList: false,
+                    publicationsListPagingData: { total: 1 },
+                    publicationsListFacets: creativeWorkFacet,
+                },
+            });
+
+            expect(
+                queryByText('We have found 1 work(s) that may not meet the funder(s) Open Access requirements.'),
+            ).not.toBeInTheDocument();
+            expect(getByText(creativeWorkBannerTxt)).toBeInTheDocument();
+        });
+
+        it('should not display creative work alert when display type 313 does not exist', () => {
+            const { queryByText } = setup({
+                noncompliantoa: {
+                    publicationsList: [],
+                    loadingPublicationsList: false,
+                    publicationsListPagingData: { total: 0 },
+                    publicationsListFacets: {
+                        'Display type': {
+                            buckets: [],
+                        },
+                    },
+                },
+            });
+
+            expect(queryByText(creativeWorkBannerTxt)).not.toBeInTheDocument();
+        });
+
+        it('should allow dismissing the creative work alert', () => {
+            expect(Cookies.get(DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE)).toBeUndefined();
+
+            const { getByText, queryByText, getByTestId } = setup({
+                noncompliantoa: {
+                    publicationsList: [],
+                    loadingPublicationsList: false,
+                    publicationsListPagingData: { total: 1 },
+                    publicationsListFacets: creativeWorkFacet,
+                },
+            });
+
+            expect(getByText(creativeWorkBannerTxt)).toBeInTheDocument();
+
+            fireEvent.click(getByTestId('dismiss'));
+
+            expect(queryByText(creativeWorkBannerTxt)).not.toBeInTheDocument();
+
+            expect(Cookies.get(DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE)).toBe('true');
+        });
+
+        it('should not display creative work alert if dismissed previously', () => {
+            Cookies.set(DASHBOARD_HIDE_CREATIVE_WORK_OA_ALERT_COOKIE, 'true');
+
+            const { queryByText } = setup({
+                noncompliantoa: {
+                    publicationsList: [],
+                    loadingPublicationsList: false,
+                    publicationsListPagingData: { total: 1 },
+                    publicationsListFacets: creativeWorkFacet,
+                },
+            });
+
+            expect(queryByText(creativeWorkBannerTxt)).not.toBeInTheDocument();
+        });
+
+        it('should still display OA compliance lure when non creative work records exist', () => {
+            const { getByText, queryByText } = setup({
+                noncompliantoa: {
+                    publicationsList: [],
+                    loadingPublicationsList: false,
+                    publicationsListPagingData: { total: 3 },
+                    publicationsListFacets: {
+                        'Display type': {
+                            buckets: [
+                                {
+                                    key: 275,
+                                    doc_count: 1,
+                                },
+                            ],
+                        },
+                    },
+                },
+                authorDetails: mock.authorDetails.uqresearcher,
+            });
+
+            expect(
+                getByText('We have found 3 work(s) that may not meet the funder(s) Open Access requirements.'),
+            ).toBeInTheDocument();
+            expect(queryByText(creativeWorkBannerTxt)).not.toBeInTheDocument();
         });
     });
 });

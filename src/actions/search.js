@@ -10,7 +10,7 @@ import {
     SEARCH_KEY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
-import { isValidROR } from 'config/validation';
+import { isValidRor } from 'config/validation';
 
 function getSearch(source, searchQuery) {
     if (source === locale.global.sources.espace.id) {
@@ -322,7 +322,7 @@ export function loadPublicationList(searchKey, searchQuery) {
 }
 
 export function loadRelatedServiceList(id) {
-    const api = isValidROR(id)
+    const api = isValidRor(id)
         ? ROR_LOOKUP_API({ id: id })
         : SEARCH_INTERNAL_RECORDS_API({
               searchQueryParams: {

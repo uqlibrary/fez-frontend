@@ -13,6 +13,7 @@ import {
     QUALITY_INDICATORS,
     REFEREED_SOURCES,
     SCOPUS_DOC_TYPES,
+    OPENALEX_DOC_TYPES,
     WOS_DOC_TYPES,
     COLLECTION_VIEW_TYPE,
     AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
@@ -66,7 +67,6 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
@@ -89,6 +89,7 @@ import SensitiveHandlingNoteField from '../../modules/SharedComponents/Sensitive
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
 import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
+import PublicationMap from '../../modules/SharedComponents/PublicationMap/PublicationMap';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -153,6 +154,16 @@ export default {
                 placeholder: '',
             },
         },
+        fez_record_search_key_openalex_id: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'rek-openalex-id',
+                name: 'identifiersSection.fez_record_search_key_openalex_id.rek_openalex_id',
+                fullWidth: true,
+                label: 'OpenAlex ID',
+                placeholder: '',
+            },
+        },
         fez_record_search_key_pubmed_id: {
             component: GenericTextField,
             componentProps: {
@@ -189,6 +200,15 @@ export default {
                 genericSelectFieldId: 'rek-scopus-doc-type',
                 itemsList: SCOPUS_DOC_TYPES,
                 ...selectFields.scopusDocType,
+            },
+        },
+        rek_openalex_doc_type: {
+            component: NewGenericSelectField,
+            componentProps: {
+                name: 'identifiersSection.rek_openalex_doc_type',
+                genericSelectFieldId: 'rek-openalex-doc-type',
+                itemsList: OPENALEX_DOC_TYPES,
+                ...selectFields.openalexDocType,
             },
         },
         rek_pubmed_doc_type: {
@@ -1074,6 +1094,7 @@ export default {
             componentProps: {
                 name: 'grantInformationSection.grants',
                 canEdit: true,
+                ignoreFormDirtyStateChanges: true,
             },
         },
         fez_datastream_info: {
@@ -1266,12 +1287,10 @@ export default {
             },
         },
         geoCoordinates: {
-            component: GeoCoordinatesField,
+            component: PublicationMap,
             componentProps: {
                 name: 'bibliographicSection.geoCoordinates',
-                fullWidth: true,
                 label: 'Geographic area',
-                isSearch: true,
             },
         },
         fez_record_search_key_access_conditions: {

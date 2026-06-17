@@ -28,7 +28,8 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
 }) => {
     const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
     const [isOpen, setIsOpen] = useState<boolean>(!!anchorEl);
-    const createWidgetFunction = (window as any)?._altmetric_embed_init as (id: string) => void;
+    const createWidgetFunction = (window as Window & typeof globalThis & Record<string, unknown>)
+        ?._altmetric_embed_init as (id: string) => void;
     const isInjectingExternalDependencies = useRef<boolean>(false);
     const isCreatingWidget = useRef<boolean>(false);
     const widgetContainerId = `altmetric-widget-${id}`;
@@ -36,8 +37,8 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
     /**
      * Handles importing external deps required for creating widget on the fly.
      * There are at least two important scenarios that are handled:
-     * - deps are imported for the first time and the widget gets automatically .
-     * - deps has been previously imported and the widget initialization need to be invoked.
+     * - deps are imported for the first time, and the widget gets automatically.
+     * - deps have been previously imported, and the widget initialization needs to be invoked.
      */
     useEffect(() => {
         // initialize widget if deps have already been imported
@@ -45,7 +46,7 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
             // istanbul ignore next
             if (!createWidgetFunction || isCreatingWidget.current) return cleanUpWidgetCreationDeps; // onunmount
             isCreatingWidget.current = true;
-            // when external deps is already present, widget creation needs to run in the Macrotask queue
+            // when external deps are already present, widget creation needs to run in the Macrotask queue
             setTimeout(() => createWidgetFunction?.(`#${widgetContainerId}`));
             return cleanUpWidgetCreationDeps; // onunmount
         }

@@ -353,7 +353,6 @@ export default {
             linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',
             citationAuthors: {
                 maxAuthorDisplayNumber: 29,
-                orcidLinkLabel: v => `Open ${v}'s ORCID profile`,
             },
             defaultActions: [
                 { key: 'fixRecord', label: 'Request Correction', primary: false },

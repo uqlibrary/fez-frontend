@@ -40,9 +40,9 @@
         "noEmit": true,
         "forceConsistentCasingInFileNames": true,
         "noImplicitAny": true,
-        "types": ["node"],
+        "types": ["node", "google.maps"],
         // for MUI types
-        "lib": ["es6", "dom"]
+        "lib": ["es2016", "dom"]
     },
     "include": ["src/**/*.tsx", "src/**/*.ts", "utils/**/*.ts"],
     "exclude": ["node_modules", "custom_modules", "/src/mocks/", "dist"]

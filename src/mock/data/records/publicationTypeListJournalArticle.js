@@ -351,7 +351,7 @@ const publicationTypeListJournalArticle = {
             'fez_record_search_key_notes': 'Published online before print: 28 December 2012.',
             'fez_record_search_key_oa_status': {
                 'rek_oa_status': 453696,
-                'rek_oa_status_lookup': 'File (Author Post-print)',
+                'rek_oa_status_lookup': 'File (Author Accepted Manuscript)',
             },
             'fez_record_search_key_oa_status_type': {
                 'rek_oa_status_type': 454120,
@@ -819,7 +819,7 @@ const publicationTypeListJournalArticle = {
             },
             'fez_record_search_key_oa_status': {
                 'rek_oa_status': 453696,
-                'rek_oa_status_lookup': 'File (Author Post-print)',
+                'rek_oa_status_lookup': 'File (Author Accepted Manuscript)',
             },
             'fez_record_search_key_place_of_publication': 'Muenchen, Germany',
             'fez_record_search_key_publisher': 'Elsevier',
@@ -1301,7 +1301,7 @@ const publicationTypeListJournalArticle = {
             },
             'fez_record_search_key_oa_status': {
                 'rek_oa_status': 453696,
-                'rek_oa_status_lookup': 'File (Author Post-print)',
+                'rek_oa_status_lookup': 'File (Author Accepted Manuscript)',
             },
             'fez_record_search_key_place_of_publication': 'Muenchen, Germany',
             'fez_record_search_key_publisher': 'Elsevier',
