@@ -1033,6 +1033,16 @@ exports[`ConferencePaperForm component 1`] = `
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+              >
+                Please add any other notes for the UQ eSpace team. If there is a 
+                <b>
+                  preprint version
+                </b>
+                 
+                of this work, please include its details and link.
+              </p>
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                 data-testid="comments"
@@ -2162,6 +2172,16 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
             <div
               class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
             >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+              >
+                Please add any other notes for the UQ eSpace team. If there is a 
+                <b>
+                  preprint version
+                </b>
+                 
+                of this work, please include its details and link.
+              </p>
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                 data-testid="comments"

@@ -646,4 +646,43 @@ describe('general helpers', () => {
         expect(getDoiURL()).toEqual('');
         expect(getDoiURL('10.000/abc-def.10')).toEqual('https://doi.org/10.000/abc-def.10');
     });
+
+    describe('silentTryCatch', () => {
+        it('should return the result of a sync callback', () => {
+            expect(silentTryCatch(() => 42)).toBe(42);
+        });
+
+        it('should return undefined by default when sync callback throws', () => {
+            expect(
+                silentTryCatch(() => {
+                    throw new Error('fail');
+                }),
+            ).toBeUndefined();
+        });
+
+        it('should return _default when sync callback throws', () => {
+            expect(
+                silentTryCatch(() => {
+                    throw new Error('fail');
+                }, 'fallback'),
+            ).toBe('fallback');
+        });
+
+        it('should return a resolved promise value for async callback', async () => {
+            await expect(silentTryCatch(() => Promise.resolve(42))).resolves.toBe(42);
+        });
+
+        it('should return undefined by default when async callback rejects', async () => {
+            await expect(silentTryCatch(() => Promise.reject(new Error('fail')))).resolves.toBeUndefined();
+        });
+
+        it('should return _default when async callback rejects', async () => {
+            await expect(silentTryCatch(() => Promise.reject(new Error('fail')), 'fallback')).resolves.toBe('fallback');
+        });
+
+        it('should return sync value directly, not wrapped in a promise', () => {
+            const result = silentTryCatch(() => 42);
+            expect(result instanceof Promise).toBe(false);
+        });
+    });
 });
