@@ -40,7 +40,7 @@
         "noEmit": true,
         "forceConsistentCasingInFileNames": true,
         "noImplicitAny": true,
-        "types": ["node"],
+        "types": ["node", "google.maps"],
         // for MUI types
         "lib": ["es2016", "dom"]
     },
