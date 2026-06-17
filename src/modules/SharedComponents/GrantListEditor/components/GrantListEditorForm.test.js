@@ -9,7 +9,7 @@ function setup(testProps = {}) {
         disabled: false,
         required: true,
         hideType: false,
-        isPopulated: testProps.isPopulated || jest.fn(),
+        onDirty: testProps.onDirty || jest.fn(),
         ...testProps,
     };
     return render(<GrantListEditorForm {...props} />);
@@ -17,7 +17,7 @@ function setup(testProps = {}) {
 
 describe('GrantListEditorForm', () => {
     it('should render with default props', () => {
-        const { container } = rtlRender(<GrantListEditorForm onAdd={jest.fn()} isPopulated={jest.fn()} />);
+        const { container } = rtlRender(<GrantListEditorForm onAdd={jest.fn()} onDirty={jest.fn()} />);
         expect(container).toMatchSnapshot();
     });
 
@@ -44,19 +44,22 @@ describe('GrantListEditorForm', () => {
         expect(getByText('This field is required')).toBeInTheDocument();
     });
 
-    it('should add grant and pass isPopulated info', () => {
+    it('should add grant and pass onDirty info', () => {
         const onAddFn = jest.fn();
-        const isPopulated = jest.fn();
+        const onDirty = jest.fn();
         const { getByTestId, getByText } = setup({
             onAdd: onAddFn,
-            isPopulated: isPopulated,
+            onDirty,
         });
 
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: 't' } });
+        expect(onDirty).toHaveBeenCalledWith(true);
+        fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: '' } });
+        expect(onDirty).toHaveBeenCalledWith(false);
         fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: 'test' } });
-        fireEvent.change(getByTestId('rek-grant-id-input'), { target: { name: 'grantId', value: '123' } });
+        expect(onDirty).toHaveBeenCalledWith(true);
 
-        expect(isPopulated).toHaveBeenCalledTimes(2);
-        expect(isPopulated).toHaveBeenCalledWith(true);
+        fireEvent.change(getByTestId('rek-grant-id-input'), { target: { name: 'grantId', value: '123' } });
 
         fireEvent.mouseDown(getByTestId('rek-grant-type-select'));
         fireEvent.click(getByText('Government'));
@@ -69,7 +72,7 @@ describe('GrantListEditorForm', () => {
             grantAgencyType: '453985',
         });
 
-        expect(isPopulated).toHaveBeenCalledWith(false);
+        expect(onDirty).toHaveBeenCalledWith(false);
     });
 
     it('should not add grant if form state is not valid or any other key is pressed', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, rtlRender, waitFor, within, screen } from 'test-utils';
+import { fireEvent, rtlRender, within } from 'test-utils';
 import OperandChip from './OperandChip';
 
 function setup(props = {}, render = rtlRender) {

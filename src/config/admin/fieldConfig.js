@@ -1087,7 +1087,6 @@ export default {
             componentProps: {
                 name: 'relatedServicesSection.relatedServices',
                 canEdit: true,
-                ignoreFormDirtyStateChanges: false,
             },
         },
         grants: {
@@ -1095,7 +1094,7 @@ export default {
             componentProps: {
                 name: 'grantInformationSection.grants',
                 canEdit: true,
-                ignoreFormDirtyStateChanges: false,
+                ignoreFormDirtyStateChanges: true,
             },
         },
         fez_datastream_info: {
