@@ -122,6 +122,41 @@ describe('useTerraDraw', () => {
         expect(onClearMock).toHaveBeenCalled();
     });
 
+    it('should not initialize when readOnly is true', () => {
+        map.getProjection.mockReturnValue({});
+        const { result } = renderHook(() => useTerraDraw({ readOnly: true }));
+
+        expect(TerraDraw).not.toHaveBeenCalled();
+        expect(result.current).toBeNull();
+    });
+
+    it('should not call onClear when change type is not delete', () => {
+        map.getProjection.mockReturnValue({});
+        const onClearMock = jest.fn();
+        renderHook(() => useTerraDraw({ onClear: onClearMock }));
+
+        const instance = TerraDraw.mock.results[0].value;
+        const handler = instance.on.mock.calls.find(([event]) => event === 'change')[1];
+
+        act(() => handler(['someId'], 'create'));
+        act(() => handler(['someId'], 'update'));
+
+        expect(onClearMock).not.toHaveBeenCalled();
+    });
+
+    it('should not call onClear when ids is non-empty on delete', () => {
+        map.getProjection.mockReturnValue({});
+        const onClearMock = jest.fn();
+        renderHook(() => useTerraDraw({ onClear: onClearMock }));
+
+        const instance = TerraDraw.mock.results[0].value;
+        const handler = instance.on.mock.calls.find(([event]) => event === 'change')[1];
+
+        act(() => handler(['someId'], 'delete'));
+
+        expect(onClearMock).not.toHaveBeenCalled();
+    });
+
     it('should cleanup on unmount', () => {
         map.getProjection.mockReturnValue({});
         const { unmount } = renderHook(() => useTerraDraw());

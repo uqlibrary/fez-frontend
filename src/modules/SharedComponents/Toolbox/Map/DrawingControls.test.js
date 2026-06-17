@@ -29,9 +29,11 @@ describe('DrawingControls', () => {
         });
     });
 
-    it('should do nothing when draw is null', () => {
-        setup({ draw: null });
+    it('should do nothing when draw is null', async () => {
+        const { getByTestId } = setup({ draw: null });
+        await userEvent.click(getByTestId('marker-button'));
         expect(setMode).not.toHaveBeenCalled();
+        expect(clear).not.toHaveBeenCalled();
     });
 
     it('should allow switching mode', async () => {
@@ -64,5 +66,14 @@ describe('DrawingControls', () => {
         await userEvent.click(getByTestId('marker-button'));
 
         expect(setOptions).not.toHaveBeenCalled();
+    });
+
+    it('should not change mode when clicking the active mode again', async () => {
+        const { getByTestId } = setup();
+        await userEvent.click(getByTestId('marker-button'));
+        expect(setMode).toHaveBeenCalledTimes(1);
+
+        await userEvent.click(getByTestId('marker-button'));
+        expect(setMode).toHaveBeenCalledTimes(1);
     });
 });

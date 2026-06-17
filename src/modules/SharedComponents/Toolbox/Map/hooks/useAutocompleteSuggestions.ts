@@ -40,14 +40,9 @@ export function useAutocompleteSuggestions(query: string): UseAutocompleteSugges
             return;
         }
 
-        if (!sessionTokenRef.current) {
-            // see https://developers.google.com/maps/documentation/javascript/place-autocomplete-data#session-tokens
-            sessionTokenRef.current = new AutocompleteSessionToken();
-        }
-
+        // see https://developers.google.com/maps/documentation/javascript/place-autocomplete-data#session-tokens
+        if (!sessionTokenRef.current) sessionTokenRef.current = new AutocompleteSessionToken();
         debouncedFetchAutocompleteSuggestions(input, sessionTokenRef.current, AutocompleteSuggestion);
-        // eslint-disable-next-line consistent-return
-        return () => debouncedFetchAutocompleteSuggestions.cancel();
     }, [AutocompleteSessionToken, AutocompleteSuggestion, query]);
 
     return {

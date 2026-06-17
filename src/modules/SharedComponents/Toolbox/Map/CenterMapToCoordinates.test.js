@@ -92,4 +92,16 @@ describe('CenterMapToCoordinates', () => {
         expect(mockPanTo).toHaveBeenCalledTimes(1);
         expect(mockFitBounds).not.toHaveBeenCalled();
     });
+
+    it('should center when map becomes available after initial render', () => {
+        useMap.mockReturnValue(null);
+        const { rerender } = setup(singleCoordinate);
+        expect(mockPanTo).not.toHaveBeenCalled();
+
+        useMap.mockReturnValue(mockMap);
+        setup(singleCoordinate, rerender);
+
+        expect(mockPanTo).toHaveBeenCalledWith(singleCoordinate[0]);
+        expect(mockSetZoom).toHaveBeenCalledWith(MAP_DEFAULT_ZOOM_MARKER);
+    });
 });

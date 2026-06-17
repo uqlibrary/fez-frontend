@@ -20,11 +20,8 @@ const localTheme = createTheme({
 const coordinatesToString = coordinates => coordinates.map(item => `${item[0]},${item[1]}`).join(' ');
 
 const PublicationMap = ({ value, onChange, readOnly }) => {
-    const hasCoordinates = useRef(false);
-    const coordinatesRef = useRef(null);
     const isDirtyRef = useRef(false);
-
-    const parsedCoordinates = React.useMemo(
+    const coordinates = React.useMemo(
         () =>
             (!!value?.trim?.() &&
                 value
@@ -37,12 +34,7 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
             [],
         [value],
     );
-
-    // workaround: forms might initiate the field with an empty value to later populate it
-    if (!!parsedCoordinates.length) {
-        hasCoordinates.current = true;
-        coordinatesRef.current = parsedCoordinates;
-    }
+    const hasCoordinates = !!coordinates?.length;
 
     const updateFieldValue = coordinates => onChange(coordinatesToString(coordinates));
 
@@ -58,11 +50,7 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
         updateFieldValue(feature.geometry.coordinates[0]);
     };
 
-    const onClear = () => {
-        hasCoordinates.current = false;
-        coordinatesRef.current = null;
-        onChange(null);
-    };
+    const onClear = () => onChange(null);
 
     return (
         <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY} region="au" libraries={['maps', 'places']}>
@@ -71,19 +59,17 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
                     {draw => (
                         <div data-testid="rek-geographic-area" data-analyticsid="rek-geographic-area">
                             <Map
-                                defaultZoom={
-                                    hasCoordinates.current ? MAP_DEFAULT_ZOOM_MARKER : MAP_DEFAULT_ZOOM_POLYGON
-                                }
+                                defaultZoom={hasCoordinates ? MAP_DEFAULT_ZOOM_MARKER : MAP_DEFAULT_ZOOM_POLYGON}
                                 mapId={'publication-map'}
                                 defaultCenter={MAP_DEFAULT_CENTER}
                                 gestureHandling={'greedy'}
                                 style={{ height: '400px' }}
                             >
-                                {!isDirtyRef.current && <CenterMapToCoordinates coordinates={coordinatesRef.current} />}
-                                {hasCoordinates.current &&
-                                    (coordinatesRef.current.length > 1 ? (
+                                {!isDirtyRef.current && <CenterMapToCoordinates coordinates={coordinates} />}
+                                {hasCoordinates &&
+                                    (coordinates.length > 1 ? (
                                         <Polygon
-                                            paths={coordinatesRef.current}
+                                            paths={coordinates}
                                             options={{
                                                 strokeColor: '#FF0000',
                                                 strokeOpacity: 0.8,
@@ -93,7 +79,7 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
                                             }}
                                         />
                                     ) : (
-                                        <AdvancedMarker position={coordinatesRef.current[0]} />
+                                        <AdvancedMarker position={coordinates[0]} />
                                     ))}
                                 {!readOnly && (
                                     <>
