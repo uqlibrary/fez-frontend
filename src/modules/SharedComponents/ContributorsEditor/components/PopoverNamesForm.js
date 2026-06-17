@@ -7,7 +7,7 @@ import { useForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { validation } from 'config';
 import PropTypes from 'prop-types';
-import { tryCatch } from 'helpers/general';
+import { silentTryCatch } from 'helpers/general';
 
 export const MODE_FAMILY_NAME_FIRST = 1;
 export const MODE_GIVEN_NAME_FIRST = 2;
@@ -48,14 +48,14 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
     const close = () => setAnchor(null);
 
     const onSubmit = handleSubmit(data => {
-        onClose(tryCatch(() => formFields.map(field => data[field.name].trim()).join(separator), ''));
+        onClose(silentTryCatch(() => formFields.map(field => data[field.name].trim()).join(separator), ''));
         close();
     });
 
     useImperativeHandle(ref, () => {
         return {
             open(event, value) {
-                tryCatch(() => {
+                silentTryCatch(() => {
                     const values = value
                         .trim?.()
                         .replace?.(/\s+/, ' ')

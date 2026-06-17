@@ -41,6 +41,7 @@ const getDecoratedField = (
         error: fieldState.error?.message,
         defaultValue: get(formState?.defaultValues, field.name),
     };
+    decorated.inputRef = field.ref;
     decorated.ref = null;
     return decorated;
 };
