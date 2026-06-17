@@ -13,19 +13,16 @@ const VisualisationWorks = ({ text, data, id, showTooltips = false }) => {
     const [parentSize, setParentSize] = React.useState({ width: 0, height: 0 });
     const _parentRef = React.useRef();
 
-    const handleResize = debounce(() => {
-        setParentSize(_parentRef?.current?.getBoundingClientRect() ?? { width: 0, height: 0 });
-    }, 200);
-
     React.useEffect(() => {
+        const handleResize = debounce(() => {
+            setParentSize(_parentRef?.current?.getBoundingClientRect() ?? { width: 0, height: 0 });
+        }, 200);
+
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, [handleResize]);
-
-    React.useEffect(() => {
-        handleResize();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
     return (
         <Box
             data-testid={`chart-container-${id}`}

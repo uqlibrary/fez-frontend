@@ -64,6 +64,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
+                        configFile: true,
                         presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
                         plugins: [
                             '@babel/plugin-proposal-export-default-from',
@@ -76,6 +77,7 @@ module.exports = {
                     },
                 },
             },
+
             {
                 test: /\.json$/,
                 exclude: [/node_modules/, /custom_modules/],
@@ -164,6 +166,24 @@ module.exports = {
         }),
         process.env.NODE_ENV === 'cc' && new ESLintPlugin({ quiet: true }),
         new Dotenv(),
+        {
+            apply(compiler) {
+                compiler.hooks.done.tap('ReactCompilerSummaryPlugin', () => {
+                    const counts = global.reactCompilerCounts;
+                    if (!counts) return;
+                    const total = counts.success + counts.fail;
+                    if (total === 0) return;
+                    console.log(`\n── React Compiler summary ──────────────────────────`);
+                    console.log(`  ✅ Succeeded : ${counts.success}`);
+                    console.log(`  ❌ Failed    : ${counts.fail}`);
+                    console.log(`  📦 Total     : ${total}`);
+                    console.log(`────────────────────────────────────────────────────\n`);
+                    // reset for next incremental build
+                    counts.success = 0;
+                    counts.fail = 0;
+                });
+            },
+        },
     ].filter(Boolean),
     resolve: {
         descriptionFiles: ['package.json'],

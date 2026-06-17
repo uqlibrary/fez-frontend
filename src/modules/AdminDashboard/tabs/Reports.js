@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -30,6 +30,7 @@ import ReportRowActions from '../components/ReportRowActions';
 
 const reportLegacyId = 'report-export-only';
 const reportDisplayExportId = 'report-display-export';
+const dataGridCellClass = `& .${gridClasses.cell}`;
 
 const Reports = () => {
     const txt = locale.components.adminDashboard.tabs.reports;
@@ -39,6 +40,12 @@ const Reports = () => {
     const {
         adminDashboardConfigData: { export_reports: exportReports },
     } = useSelector(state => state.get('adminDashboardConfigReducer'));
+
+    const handleRender = (id, phase, actualDuration, baseDuration, startTime, commitTime) => {
+        if (phase === 'mount') {
+            console.log(`[${id}] Initial mount took ${actualDuration.toFixed(2)} ms`);
+        }
+    };
 
     const {
         adminDashboardDisplayReportData,
@@ -105,8 +112,7 @@ const Reports = () => {
                     },
                 );
         },
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [dispatch, showExportReportAlert],
+        [dispatch, hideExportReportAlert, showExportReportAlert, txt.alert],
     );
 
     const handleExportDisplayReportClick = actionState => {
@@ -135,47 +141,12 @@ const Reports = () => {
     };
 
     return (
-        <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
-            <StandardCard noHeader>
-                <SectionTitle mb={2}>{txt.exportTitle}</SectionTitle>
-                <Grid container spacing={2} mb={2}>
-                    {exportAlertIsVisible && (
-                        <Grid item xs={12}>
-                            <Alert
-                                type="error_outline"
-                                title={txt.error.title}
-                                message={txt.error.general}
-                                allowDismiss
-                                dismissAction={() => {
-                                    hideExportAlert();
-                                }}
-                                alertId={`alert-${reportLegacyId}`}
-                            />
-                        </Grid>
-                    )}
-                    {exportReportAlertIsVisible && !!exportReportAlertProps?.message && (
-                        <Grid item xs={12}>
-                            <Alert {...exportReportAlertProps} />
-                        </Grid>
-                    )}
-                </Grid>
-                <LegacyReportInterface
-                    id={reportLegacyId}
-                    loading={adminDashboardExportReportLoading}
-                    disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
-                    items={exportReports || /* istanbul ignore next */ []}
-                    onExportClick={handleExportReportClick}
-                />
-            </StandardCard>
-            <Box
-                sx={{
-                    mt: 2,
-                }}
-            >
+        <Profiler id="Reports" onRender={handleRender}>
+            <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-au">
                 <StandardCard noHeader>
-                    <SectionTitle mb={2}>{txt.displayTitle}</SectionTitle>
+                    <SectionTitle mb={2}>{txt.exportTitle}</SectionTitle>
                     <Grid container spacing={2} mb={2}>
-                        {displayAlertIsVisible && (
+                        {exportAlertIsVisible && (
                             <Grid item xs={12}>
                                 <Alert
                                     type="error_outline"
@@ -183,74 +154,111 @@ const Reports = () => {
                                     message={txt.error.general}
                                     allowDismiss
                                     dismissAction={() => {
-                                        hideDisplayAlert();
+                                        hideExportAlert();
                                     }}
-                                    alertId={`alert-${reportDisplayExportId}`}
+                                    alertId={`alert-${reportLegacyId}`}
                                 />
                             </Grid>
                         )}
-                    </Grid>
-                    <DisplayReportInterface
-                        id={reportDisplayExportId}
-                        disabled={adminDashboardDisplayReportLoading || adminDashboardExportReportLoading}
-                        exportDisabled={!!!adminDashboardDisplayReportData}
-                        loading={adminDashboardDisplayReportLoading}
-                        onReportClick={handleDisplayReportClick}
-                        onExportClick={handleExportDisplayReportClick}
-                    />
-
-                    {!!adminDashboardDisplayReportData && (
-                        <Grid container mt={2}>
+                        {exportReportAlertIsVisible && !!exportReportAlertProps?.message && (
                             <Grid item xs={12}>
-                                <DataGrid
-                                    getRowId={row => row.pre_id || row.sat_id || /* istanbul ignore next */ ''}
-                                    rows={adminDashboardDisplayReportData}
-                                    columns={
-                                        columns
-                                            .filter(column => !!!column.exportOnly)
-                                            .sort((a, b) => a.order > b.order) ?? /* istanbul ignore next */ []
-                                    }
-                                    sortingOrder={['asc', 'desc']}
-                                    initialState={{
-                                        pagination: {
-                                            paginationModel: { page: 0, pageSize: 10 },
-                                        },
-                                        columns: {
-                                            columnVisibilityModel: {
-                                                id: false,
-                                            },
-                                        },
-                                        sorting: {
-                                            sortModel: getDefaultSorting(
-                                                getReportTypeFromValue(
-                                                    adminDashboardDisplayReportDataParams?.report_type,
-                                                ),
-                                            ),
-                                        },
-                                    }}
-                                    pageSizeOptions={[10, 25, 50, 100]}
-                                    autoHeight
-                                    loading={adminDashboardDisplayReportLoading}
-                                    autosizeOptions={{
-                                        columns: ['title', 'content', 'link'],
-                                        includeOutliers: true,
-                                        includeHeaders: true,
-                                    }}
-                                    disableColumnMenu
-                                    getRowHeight={() => 'auto'}
-                                    sx={{
-                                        [`& .${gridClasses.cell}`]: {
-                                            py: 1,
-                                        },
-                                    }}
-                                    forwardedProps={{ 'data-testid': 'report-display-data-grid' }}
-                                />
+                                <Alert {...exportReportAlertProps} />
                             </Grid>
-                        </Grid>
-                    )}
+                        )}
+                    </Grid>
+                    <LegacyReportInterface
+                        id={reportLegacyId}
+                        loading={adminDashboardExportReportLoading}
+                        disabled={adminDashboardExportReportLoading || adminDashboardDisplayReportLoading}
+                        items={exportReports || /* istanbul ignore next */ []}
+                        onExportClick={handleExportReportClick}
+                    />
                 </StandardCard>
-            </Box>
-        </LocalizationProvider>
+                <Box
+                    sx={{
+                        mt: 2,
+                    }}
+                >
+                    <StandardCard noHeader>
+                        <SectionTitle mb={2}>{txt.displayTitle}</SectionTitle>
+                        <Grid container spacing={2} mb={2}>
+                            {displayAlertIsVisible && (
+                                <Grid item xs={12}>
+                                    <Alert
+                                        type="error_outline"
+                                        title={txt.error.title}
+                                        message={txt.error.general}
+                                        allowDismiss
+                                        dismissAction={() => {
+                                            hideDisplayAlert();
+                                        }}
+                                        alertId={`alert-${reportDisplayExportId}`}
+                                    />
+                                </Grid>
+                            )}
+                        </Grid>
+                        <DisplayReportInterface
+                            id={reportDisplayExportId}
+                            disabled={adminDashboardDisplayReportLoading || adminDashboardExportReportLoading}
+                            exportDisabled={!!!adminDashboardDisplayReportData}
+                            loading={adminDashboardDisplayReportLoading}
+                            onReportClick={handleDisplayReportClick}
+                            onExportClick={handleExportDisplayReportClick}
+                        />
+
+                        {!!adminDashboardDisplayReportData && (
+                            <Grid container mt={2}>
+                                <Grid item xs={12}>
+                                    <DataGrid
+                                        getRowId={row => row.pre_id || row.sat_id || /* istanbul ignore next */ ''}
+                                        rows={adminDashboardDisplayReportData}
+                                        columns={
+                                            columns
+                                                .filter(column => !!!column.exportOnly)
+                                                .sort((a, b) => a.order > b.order) ?? /* istanbul ignore next */ []
+                                        }
+                                        sortingOrder={['asc', 'desc']}
+                                        initialState={{
+                                            pagination: {
+                                                paginationModel: { page: 0, pageSize: 10 },
+                                            },
+                                            columns: {
+                                                columnVisibilityModel: {
+                                                    id: false,
+                                                },
+                                            },
+                                            sorting: {
+                                                sortModel: getDefaultSorting(
+                                                    getReportTypeFromValue(
+                                                        adminDashboardDisplayReportDataParams?.report_type,
+                                                    ),
+                                                ),
+                                            },
+                                        }}
+                                        pageSizeOptions={[10, 25, 50, 100]}
+                                        autoHeight
+                                        loading={adminDashboardDisplayReportLoading}
+                                        autosizeOptions={{
+                                            columns: ['title', 'content', 'link'],
+                                            includeOutliers: true,
+                                            includeHeaders: true,
+                                        }}
+                                        disableColumnMenu
+                                        getRowHeight={() => 'auto'}
+                                        sx={{
+                                            [dataGridCellClass]: {
+                                                py: 1,
+                                            },
+                                        }}
+                                        forwardedProps={{ 'data-testid': 'report-display-data-grid' }}
+                                    />
+                                </Grid>
+                            </Grid>
+                        )}
+                    </StandardCard>
+                </Box>
+            </LocalizationProvider>
+        </Profiler>
     );
 };
 

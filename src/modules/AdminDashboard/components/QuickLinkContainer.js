@@ -22,7 +22,6 @@ import QuickLinkAdmin from './QuickLinkAdmin';
 
 const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
     const dispatch = useDispatch();
-    const [data, setData] = React.useState([]);
     const [actionState, actionDispatch] = useReducer(actionReducer, { ...emptyActionState });
 
     const {
@@ -32,14 +31,26 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
         adminDashboardQuickLinksUpdating,
     } = useSelector(state => state.get('adminDashboardQuickLinksReducer'));
 
+    const [localDataState, setLocalDataState] = React.useState({
+        prevReduxData: adminDashboardQuickLinksData,
+        data: adminDashboardQuickLinksData ?? [],
+    });
+    const data = localDataState.data;
+
+    // Sync local `data` when Redux value changes. Using state avoids accessing refs during render
+    // (which the compiler flags) while following React's recommended pattern for derived state.
+    if (adminDashboardQuickLinksData !== localDataState.prevReduxData) {
+        setLocalDataState({
+            prevReduxData: adminDashboardQuickLinksData,
+            data: adminDashboardQuickLinksData ?? [],
+        });
+    }
+
     useEffect(() => {
         if (!adminDashboardQuickLinksSuccess && (adminDashboardQuickLinksData?.length ?? 0) === 0) {
             dispatch(actions.loadAdminDashboardQuickLinks());
-        } else {
-            setData(adminDashboardQuickLinksData);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [adminDashboardQuickLinksData, adminDashboardQuickLinksSuccess]);
+    }, [adminDashboardQuickLinksData, adminDashboardQuickLinksSuccess, dispatch]);
 
     const clear = () => {
         actionDispatch({
@@ -76,22 +87,22 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                 break;
             case MENUACTIONS.TOP:
                 const dataTop = reorderArray(data, index, 0);
-                setData(dataTop);
+                setLocalDataState(prev => ({ ...prev, data: dataTop }));
                 handleReordering(dataTop);
                 break;
             case MENUACTIONS.UP:
                 const dataUp = reorderArray(data, index, index - 1);
-                setData(dataUp);
+                setLocalDataState(prev => ({ ...prev, data: dataUp }));
                 handleReordering(dataUp);
                 break;
             case MENUACTIONS.BOTTOM:
                 const dataBottom = reorderArray(data, index, data.length);
-                setData(dataBottom);
+                setLocalDataState(prev => ({ ...prev, data: dataBottom }));
                 handleReordering(dataBottom);
                 break;
             case MENUACTIONS.DOWN:
                 const dataDown = reorderArray(data, index, index + 1);
-                setData(dataDown);
+                setLocalDataState(prev => ({ ...prev, data: dataDown }));
                 handleReordering(dataDown);
                 break;
             /* istanbul ignore next */ default:

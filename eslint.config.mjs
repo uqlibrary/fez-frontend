@@ -11,6 +11,7 @@ import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
 
 export default defineConfig([
+    reactHooks.configs.flat.recommended,
     globalIgnores([
         '**/__mocks__',
         '**/.idea',

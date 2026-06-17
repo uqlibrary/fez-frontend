@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -34,6 +34,12 @@ const SystemAlerts = () => {
     const txt = locale.components.adminDashboard.tabs.systemalerts;
 
     const adminDashboardConfigData = useAdminDashboardConfig();
+
+    const handleRender = (id, phase, actualDuration, baseDuration, startTime, commitTime) => {
+        if (phase === 'mount') {
+            console.log(`[${id}] Initial mount took ${actualDuration.toFixed(2)} ms`);
+        }
+    };
 
     const {
         adminDashboardSystemAlertsData,
@@ -77,8 +83,7 @@ const SystemAlerts = () => {
     React.useEffect(() => {
         dispatch(actions.loadAdminDashboardSystemAlerts());
         dispatch(actions.adminDashboardSystemAlertsBatchAssignClear());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [dispatch]);
 
     const columns = useSystemAlertColumns(txt);
 
@@ -137,105 +142,113 @@ const SystemAlerts = () => {
     const defaultSorting = getDefaultSorting('alerts');
 
     return (
-        <StandardCard noHeader>
-            <Typography
-                sx={{
-                    fontSize: '1.25rem',
-                    fontWeight: '300',
-                }}
-            >
-                {txt.title(adminDashboardSystemAlertsData?.length ?? /* istanbul ignore next */ '')}
-                {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
-                    <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
-                )}
-            </Typography>
-            {alertIsVisible && (
-                <Grid item xs={12} sx={{ mb: 1 }}>
-                    <Alert
-                        type="error_outline"
-                        title={txt.error.title}
-                        message={!!adminDashboardSystemAlertsUpdateFailed ? txt.error.updateFailed : txt.error.general}
-                        {...(!!adminDashboardSystemAlertsUpdateFailed
-                            ? {
-                                  allowDismiss: true,
-                                  dismissAction: () => {
-                                      hideAlert();
-                                  },
-                              }
-                            : {})}
-                    />
-                </Grid>
-            )}
-            {!!!adminDashboardSystemAlertsData && adminDashboardSystemAlertsLoading && (
-                <Skeleton
-                    animation="wave"
-                    height={50}
-                    width={'100%'}
-                    id={'admin-dashboard-systemalerts-skeleton'}
-                    data-testid={'admin-dashboard-systemalerts-skeleton'}
-                />
-            )}
-            <Grid container>
-                <Grid item xs={12}>
-                    {!!adminDashboardSystemAlertsData && (
-                        <>
-                            {selectionModel.length > 0 && (
-                                <Box sx={{ mb: 1, display: 'flex', gap: 1, alignItems: 'center' }}>
-                                    <Typography>{selectionModel.length} selected</Typography>
-
-                                    <Autocomplete
-                                        size="small"
-                                        sx={{ minWidth: 180 }}
-                                        options={assignOptions}
-                                        value={assignValue}
-                                        getOptionLabel={option => option.preferred_name}
-                                        onChange={(_, selectedUser) => {
-                                            /* istanbul ignore next */
-                                            if (!selectedUser) return;
-
-                                            handleBatchAssign(selectedUser.id);
-                                            setAssignValue(null); // reset after action
-                                        }}
-                                        renderInput={params => <TextField {...params} label="Assign" size="small" />}
-                                        disabled={!canAssign || adminDashboardSystemAlertsBatchAssignUpdating}
-                                    />
-                                    {adminDashboardSystemAlertsBatchAssignUpdating && <CircularProgress size={16} />}
-                                </Box>
-                            )}
-                            <DataGrid
-                                rows={adminDashboardSystemAlertsData ?? /* istanbul ignore next */ []}
-                                columns={columns}
-                                sortingOrder={['asc', 'desc']}
-                                initialState={{
-                                    pagination: {
-                                        paginationModel: { page: 0, pageSize: 25 },
-                                    },
-                                    sorting: {
-                                        sortModel: defaultSorting,
-                                    },
-                                }}
-                                pageSizeOptions={[10, 25, 50, 100]}
-                                onRowClick={handleRowClick}
-                                autoHeight
-                                getRowId={row => row.sat_id}
-                                disableColumnSelector
-                                checkboxSelection
-                                disableRowSelectionOnClick
-                                rowSelectionModel={selectionModel}
-                                onRowSelectionModelChange={setSelectionModel}
-                            />
-                            <SystemAlertsDrawer
-                                open={open}
-                                row={row}
-                                onCloseDrawer={handleCloseDrawer}
-                                onSystemAlertUpdate={handleSystemAlertUpdate}
-                                locale={txt}
-                            />
-                        </>
+        <Profiler id="SystemAlerts" onRender={handleRender}>
+            <StandardCard noHeader>
+                <Typography
+                    sx={{
+                        fontSize: '1.25rem',
+                        fontWeight: '300',
+                    }}
+                >
+                    {txt.title(adminDashboardSystemAlertsData?.length ?? /* istanbul ignore next */ '')}
+                    {!!adminDashboardSystemAlertsData && !!adminDashboardSystemAlertsLoading && (
+                        <CircularProgress color="inherit" size={20} sx={{ marginInlineStart: 1 }} />
                     )}
+                </Typography>
+                {alertIsVisible && (
+                    <Grid item xs={12} sx={{ mb: 1 }}>
+                        <Alert
+                            type="error_outline"
+                            title={txt.error.title}
+                            message={
+                                !!adminDashboardSystemAlertsUpdateFailed ? txt.error.updateFailed : txt.error.general
+                            }
+                            {...(!!adminDashboardSystemAlertsUpdateFailed
+                                ? {
+                                      allowDismiss: true,
+                                      dismissAction: () => {
+                                          hideAlert();
+                                      },
+                                  }
+                                : {})}
+                        />
+                    </Grid>
+                )}
+                {!!!adminDashboardSystemAlertsData && adminDashboardSystemAlertsLoading && (
+                    <Skeleton
+                        animation="wave"
+                        height={50}
+                        width={'100%'}
+                        id={'admin-dashboard-systemalerts-skeleton'}
+                        data-testid={'admin-dashboard-systemalerts-skeleton'}
+                    />
+                )}
+                <Grid container>
+                    <Grid item xs={12}>
+                        {!!adminDashboardSystemAlertsData && (
+                            <>
+                                {selectionModel.length > 0 && (
+                                    <Box sx={{ mb: 1, display: 'flex', gap: 1, alignItems: 'center' }}>
+                                        <Typography>{selectionModel.length} selected</Typography>
+
+                                        <Autocomplete
+                                            size="small"
+                                            sx={{ minWidth: 180 }}
+                                            options={assignOptions}
+                                            value={assignValue}
+                                            getOptionLabel={option => option.preferred_name}
+                                            onChange={(_, selectedUser) => {
+                                                /* istanbul ignore next */
+                                                if (!selectedUser) return;
+
+                                                handleBatchAssign(selectedUser.id);
+                                                setAssignValue(null); // reset after action
+                                            }}
+                                            renderInput={params => (
+                                                <TextField {...params} label="Assign" size="small" />
+                                            )}
+                                            disabled={!canAssign || adminDashboardSystemAlertsBatchAssignUpdating}
+                                        />
+                                        {adminDashboardSystemAlertsBatchAssignUpdating && (
+                                            <CircularProgress size={16} />
+                                        )}
+                                    </Box>
+                                )}
+                                <DataGrid
+                                    rows={adminDashboardSystemAlertsData ?? /* istanbul ignore next */ []}
+                                    columns={columns}
+                                    sortingOrder={['asc', 'desc']}
+                                    initialState={{
+                                        pagination: {
+                                            paginationModel: { page: 0, pageSize: 25 },
+                                        },
+                                        sorting: {
+                                            sortModel: defaultSorting,
+                                        },
+                                    }}
+                                    pageSizeOptions={[10, 25, 50, 100]}
+                                    onRowClick={handleRowClick}
+                                    autoHeight
+                                    getRowId={row => row.sat_id}
+                                    disableColumnSelector
+                                    checkboxSelection
+                                    disableRowSelectionOnClick
+                                    rowSelectionModel={selectionModel}
+                                    onRowSelectionModelChange={setSelectionModel}
+                                />
+                                <SystemAlertsDrawer
+                                    open={open}
+                                    row={row}
+                                    onCloseDrawer={handleCloseDrawer}
+                                    onSystemAlertUpdate={handleSystemAlertUpdate}
+                                    locale={txt}
+                                />
+                            </>
+                        )}
+                    </Grid>
                 </Grid>
-            </Grid>
-        </StandardCard>
+            </StandardCard>
+        </Profiler>
     );
 };
 

@@ -15,8 +15,7 @@ export const useSystemAlertDrawer = data => {
         if (_open) {
             _setRow(data?.find(item => item.sat_id === _row.sat_id) || /* istanbul ignore next */ {});
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data]);
+    }, [_open, _row.sat_id, data]);
 
     const openDrawer = row => {
         _setRow(row);
@@ -54,8 +53,7 @@ export const useAlertStatus = ({ message, hideAction }) => {
         if (!alertIsVisible) {
             if (!isEmptyStr(message)) _showAlert();
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [alertIsVisible, message]);
+    }, [_showAlert, alertIsVisible, message]);
 
     return [alertIsVisible, hideAlert, showAlert, _message];
 };
