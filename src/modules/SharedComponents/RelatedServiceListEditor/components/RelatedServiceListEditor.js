@@ -20,14 +20,12 @@ const RelatedServiceListEditor = ({
     value,
     required,
     disableDeleteAllRelatedServices = false,
-    ignoreFormDirtyStateChanges = true,
 }) => {
     const hasPropagatedInputValueChanges = useRef(null);
     const [relatedServices, setRelatedServices] = useState([]);
     const [relatedServiceSelectedToEdit, setRelatedServiceSelectedToEdit] = useState(null);
     const [relatedServiceIndexSelectedToEdit, setRelatedServiceIndexSelectedToEdit] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
-    const [relatedServiceFormPopulated, setRelatedServiceFormPopulated] = useState(false);
     const form = useFormContext();
 
     const handleRelatedServicesChange = useCallback(
@@ -48,13 +46,6 @@ const RelatedServiceListEditor = ({
         setRelatedServices(updated);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [JSON.stringify(relatedServices), value, hasPropagatedInputValueChanges.current]);
-
-    // propagate `relatedServiceFormPopulated` changes to input
-    useEffect(() => {
-        if (!ignoreFormDirtyStateChanges || !relatedServiceFormPopulated) return;
-        form?.setValue?.(name, relatedServiceFormPopulated, { shouldValidate: true });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [relatedServiceFormPopulated]);
 
     const addRelatedService = useCallback(
         relatedService => {
@@ -132,10 +123,6 @@ const RelatedServiceListEditor = ({
         setErrorMessage('');
     }, [handleRelatedServicesChange]);
 
-    const isFormPopulated = useCallback(value => {
-        setRelatedServiceFormPopulated(!!value);
-    }, []);
-
     const renderRelatedServicesRows = relatedServices?.map?.((relatedService, index) => (
         <RelatedServiceListEditorRow
             key={`RelatedServiceListRow_${index}`}
@@ -175,7 +162,6 @@ const RelatedServiceListEditor = ({
             )}
             <RelatedServiceListEditorForm
                 onAdd={addRelatedService}
-                isPopulated={isFormPopulated}
                 required={required}
                 disabled={disabled}
                 {...(locale?.form || {})}
@@ -227,7 +213,6 @@ RelatedServiceListEditor.propTypes = {
     value: PropTypes.any,
     required: PropTypes.bool,
     disableDeleteAllRelatedServices: PropTypes.bool,
-    ignoreFormDirtyStateChanges: PropTypes.bool,
 };
 
 export default React.memo(RelatedServiceListEditor);

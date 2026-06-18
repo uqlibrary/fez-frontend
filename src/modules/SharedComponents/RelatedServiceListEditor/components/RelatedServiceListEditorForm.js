@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Grid from '@mui/material/GridLegacy';
@@ -6,10 +6,13 @@ import Button from '@mui/material/Button';
 import validationLocale from 'locale/validationErrors';
 import { RelatedServiceIdField } from 'modules/SharedComponents/LookupFields/containers/RelatedServiceIdField';
 
+const defaultRow = { relatedServiceId: '', relatedServiceDesc: '' };
+const defaultRowJson = JSON.stringify(defaultRow);
+
 export const RelatedServiceListEditorForm = ({
     disabled,
     relatedServiceSelectedToEdit,
-    isPopulated,
+    onDirty,
     locale = {
         relatedServiceIdLabel: 'Related Service ID',
         relatedServiceIdHint: "Enter related service's ROR or DOI",
@@ -29,14 +32,15 @@ export const RelatedServiceListEditorForm = ({
     onAdd,
     required,
 }) => {
-    const [relatedService, setRelatedService] = React.useState({
-        relatedServiceId: '',
-        relatedServiceDesc: '',
-    });
-    const [dirty, setDirty] = React.useState(null);
+    const [relatedService, setRelatedService] = React.useState({ ...defaultRow });
     const [key, setKey] = useState(0);
+    const isDirty = JSON.stringify(relatedService) !== defaultRowJson;
 
-    React.useEffect(() => {
+    // propagate isDirty state
+    useEffect(() => onDirty?.(isDirty), [onDirty, isDirty]);
+
+    // handle row editing
+    useEffect(() => {
         if (!!relatedServiceSelectedToEdit) {
             setRelatedService(relatedService => ({
                 ...relatedService,
@@ -47,15 +51,6 @@ export const RelatedServiceListEditorForm = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [relatedServiceSelectedToEdit]);
 
-    React.useEffect(() => {
-        if (!!isPopulated && dirty) {
-            isPopulated(true);
-        } else {
-            isPopulated(false);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dirty]);
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleChange = React.useCallback(event => {
         const { name, value } = event.target;
@@ -63,7 +58,6 @@ export const RelatedServiceListEditorForm = ({
             ...relatedService,
             [name]: value,
         }));
-        setDirty(true);
     });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -73,7 +67,6 @@ export const RelatedServiceListEditorForm = ({
                 relatedServiceId: item.value,
                 relatedServiceDesc: item.title || relatedService.relatedServiceDesc,
             });
-            setDirty(true);
         } else {
             setRelatedService({
                 ...relatedService,
@@ -92,9 +85,8 @@ export const RelatedServiceListEditorForm = ({
 
         // pass on the selected related service
         onAdd(relatedService);
-        setDirty(false);
         setKey(key + 1);
-        setRelatedService({ relatedServiceId: null, relatedServiceDesc: '' });
+        setRelatedService(defaultRow);
     };
 
     const {
@@ -126,8 +118,12 @@ export const RelatedServiceListEditorForm = ({
                         onChange={handleSelect}
                         disabled={disabled}
                         required={required}
-                        error={required && !relatedServiceId}
-                        errorText={required && !relatedServiceId && validationLocale.validationErrors.required}
+                        error={(required || isDirty) && !relatedServiceId?.trim?.().length}
+                        errorText={
+                            (required || isDirty) &&
+                            !relatedServiceId?.trim?.().length &&
+                            validationLocale.validationErrors.required
+                        }
                     />
                 </Grid>
                 <Grid item xs={12} sm={12} md={4}>
@@ -174,7 +170,7 @@ export const RelatedServiceListEditorForm = ({
 RelatedServiceListEditorForm.propTypes = {
     disabled: PropTypes.bool,
     relatedServiceSelectedToEdit: PropTypes.object,
-    isPopulated: PropTypes.func.isRequired,
+    onDirty: PropTypes.func.isRequired,
     locale: PropTypes.object,
     onAdd: PropTypes.func.isRequired,
     required: PropTypes.bool,

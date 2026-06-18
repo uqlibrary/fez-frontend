@@ -1,18 +1,8 @@
+import React from 'react';
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
 import { DOI_BASE_URL, ORCID_BASE_URL, ROR_BASE_URL } from '../config/general';
-
-/* istanbul ignore next */
-global.dd = console.dir.bind(console);
-/* istanbul ignore next */
-global.dc = console.log;
-/* istanbul ignore next */
-global.dr = arg => {
-    console.dir.apply(console, [arg, { depth: null }]);
-    return arg;
-};
-/* istanbul ignore next */
-global.dj = console.log.bind(console, '%O');
+import TryCatch from 'modules/SharedComponents/Toolbox/TryCatch/TryCatch';
 
 /**
  * @param {function} callback
@@ -21,7 +11,10 @@ global.dj = console.log.bind(console, '%O');
  */
 export const silentTryCatch = (callback, _default = undefined) => {
     try {
-        return callback();
+        const result = callback();
+        if (result instanceof Promise) return result.catch(() => _default);
+
+        return result;
     } catch (e) {
         /* istanbul ignore next */
         return _default;
@@ -606,3 +599,19 @@ export const getRorURL = id => (id?.trim?.() && `${ROR_BASE_URL}/${id.trim()}`) 
  * @return {string}
  */
 export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param children
+ * @param {Function} callback
+ * @return {(): React.JSX.Element}
+ */
+export const withErrorBoundary = (Component, callback) => {
+    const WrappedComponent = props => (
+        <TryCatch callback={callback}>
+            <Component {...props} />
+        </TryCatch>
+    );
+
+    WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+    return WrappedComponent;
+};
