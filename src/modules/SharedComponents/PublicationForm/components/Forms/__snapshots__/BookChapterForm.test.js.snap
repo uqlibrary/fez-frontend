@@ -476,7 +476,7 @@ exports[`BookChapterForm component 1`] = `
                   <b>
                     add to a list of authors below
                   </b>
-                  , in the format and order that they are published.
+                  , in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -1642,7 +1642,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                   <b>
                     add to a list of authors below
                   </b>
-                  , in the format and order that they are published.
+                  , in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -3377,7 +3377,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                   <b>
                     add to a list of authors below
                   </b>
-                  , in the format and order that they are published.
+                  , in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -5189,7 +5189,7 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                   <b>
                     add to a list of authors below
                   </b>
-                  , in the format and order that they are published.
+                  , in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -6364,7 +6364,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                   <b>
                     add to a list of authors below
                   </b>
-                  , in the format and order that they are published.
+                  , in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"

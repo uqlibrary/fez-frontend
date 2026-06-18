@@ -586,7 +586,7 @@ exports[`WorkingPaperForm component 1`] = `
                   <b>
                     add to a list of authors below
                   </b>
-                  , in the format and order that they are published.
+                  , in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -1418,7 +1418,7 @@ exports[`WorkingPaperForm component with all fields disabled 1`] = `
                   <b>
                     add to a list of authors below
                   </b>
-                  , in the format and order that they are published.
+                  , in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"

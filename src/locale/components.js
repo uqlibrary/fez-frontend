@@ -1432,7 +1432,7 @@ export default {
                     <>
                         <div>
                             <p>
-                                Add all author names (in format Last name, First name) in the order they appear on the
+                                Add all author names (in format family name, given name) in the order they appear on the
                                 work.
                                 <br />
                                 <br />
@@ -1474,14 +1474,12 @@ export default {
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
                                 </span>{' '}
-                                - Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
+                                - Please <b>add to a list of authors below</b>, in the order that they are published.
                             </div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>
-                                Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
+                                Please <b>add to a list of authors below</b>, in the order that they are published.
                             </div>
                         ),
                         nameAsPublishedLabel: "Author's name as published",
@@ -1848,11 +1846,6 @@ export default {
         },
         supervisors: {
             title: 'Supervisors',
-            // help: {
-            //     title: 'Supervisors help',
-            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'CLOSE'
-            // },
             description: 'Please provide a list of supervisors and then select your name from the list.',
             field: {
                 form: {
@@ -1924,12 +1917,6 @@ export default {
         },
         designCreators: {
             title: 'Creators',
-            // help: {
-            //     title: 'Creators help',
-            //     text: 'Enter creator names e.g. first name, last name. ' +
-            // 'Additional boxes will appear for more creators.',
-            //     buttonLabel: 'CLOSE'
-            // },
             description: 'Please provide a list of creators and then select your name from the list.',
             field: {
                 form: {
@@ -2051,7 +2038,7 @@ export default {
             title: 'Contributors',
             help: {
                 title: 'Contributors',
-                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -3420,7 +3407,7 @@ export default {
             title: 'Architects',
             help: {
                 title: 'Architects',
-                text: 'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
+                text: 'Type architects in the order they appear on the work or associated material. Additional boxes will appear for more architects.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -4008,13 +3995,13 @@ export default {
                         label: 'Title',
                     },
                     firstName: {
-                        label: 'First name',
+                        label: 'Given name',
                     },
                     middleName: {
                         label: 'Middle name',
                     },
                     lastName: {
-                        label: 'Last name',
+                        label: 'Family name',
                     },
                     isNameOverride: {
                         label: 'Prevent automatic updates',
