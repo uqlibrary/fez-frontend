@@ -12,7 +12,7 @@ import {
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { parseHtmlToJSX, silentTryCatch, sortByNumericField } from 'helpers/general';
-import PublicationMap from './PublicationMap';
+import PublicationMap from 'modules/SharedComponents/PublicationMap/PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router';
 import {
@@ -238,10 +238,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
         if (coordinatesList.length === 0 || !coordinatesList[0].rek_geographic_area) {
             return <span />;
         }
-        /*
-         *  New map doesn't support the dynamic google URLs. e.g. GOOGLE_MAPS_API_CHINA_URL
-         */
-        return <PublicationMap coordinates={coordinatesList[0].rek_geographic_area} readOnly />;
+        return <PublicationMap value={coordinatesList[0].rek_geographic_area} readOnly />;
     };
 
     const renderDoi = doi => {

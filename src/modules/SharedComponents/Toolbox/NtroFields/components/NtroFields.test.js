@@ -49,7 +49,7 @@ describe('Component NtroFields', () => {
     });
 
     it('should render all fields as disabled', () => {
-        const { container } = setup({ showContributionStatement: true, isSubmitting: true });
+        const { container } = setup({ showContributionStatement: true, isSubmitting: true, legacyCompatible: true });
         expect(container).toMatchSnapshot();
     });
 

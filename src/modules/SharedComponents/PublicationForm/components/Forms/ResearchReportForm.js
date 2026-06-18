@@ -202,21 +202,24 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                     </StandardCard>
                 </Grid>
                 {isNtro && (
-                    <NtroFields
-                        control={control}
-                        canEdit
-                        isSubmitting={isSubmitting}
-                        showContributionStatement={isAuthorSelected}
-                        hideIsmn
-                        hideIsrc
-                        hideVolume
-                        hideIssue
-                        hideStartPage
-                        hideEndPage
-                        hideExtent={!isNtro}
-                        hideOriginalFormat
-                        hideAudienceSize
-                    />
+                    <Grid item xs={12}>
+                        <NtroFields
+                            control={control}
+                            canEdit
+                            isSubmitting={isSubmitting}
+                            showContributionStatement={isAuthorSelected}
+                            hideIsmn
+                            hideIsrc
+                            hideVolume
+                            hideIssue
+                            hideStartPage
+                            hideEndPage
+                            hideExtent={!isNtro}
+                            hideOriginalFormat
+                            hideAudienceSize
+                            legacyCompatible
+                        />
+                    </Grid>
                 )}
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>

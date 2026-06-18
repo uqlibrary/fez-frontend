@@ -67,7 +67,6 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
@@ -90,6 +89,7 @@ import SensitiveHandlingNoteField from '../../modules/SharedComponents/Sensitive
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
 import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
+import PublicationMap from '../../modules/SharedComponents/PublicationMap/PublicationMap';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -1087,7 +1087,6 @@ export default {
             componentProps: {
                 name: 'relatedServicesSection.relatedServices',
                 canEdit: true,
-                ignoreFormDirtyStateChanges: false,
             },
         },
         grants: {
@@ -1095,7 +1094,7 @@ export default {
             componentProps: {
                 name: 'grantInformationSection.grants',
                 canEdit: true,
-                ignoreFormDirtyStateChanges: false,
+                ignoreFormDirtyStateChanges: true,
             },
         },
         fez_datastream_info: {
@@ -1288,13 +1287,10 @@ export default {
             },
         },
         geoCoordinates: {
-            component: GeoCoordinatesField,
+            component: PublicationMap,
             componentProps: {
                 name: 'bibliographicSection.geoCoordinates',
-                fullWidth: true,
                 label: 'Geographic area',
-                isSearch: true,
-                readOnly: true,
             },
         },
         fez_record_search_key_access_conditions: {

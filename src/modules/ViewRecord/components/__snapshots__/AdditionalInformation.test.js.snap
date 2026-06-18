@@ -9387,14 +9387,10 @@ exports[`Additional Information Component  should render component with data col
               <span
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
-                <div>
-                  <div
-                    id="mock-google-maps"
-                  />
-                  <div
-                    id="mock-marker"
-                  />
-                </div>
+                <div
+                  data-readonly="true"
+                  data-testid="mock-publication-map"
+                />
               </span>
             </div>
           </div>
@@ -10429,14 +10425,10 @@ exports[`Additional Information Component  should render component with data col
               <span
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
-                <div>
-                  <div
-                    id="mock-google-maps"
-                  />
-                  <div
-                    id="mock-polygon"
-                  />
-                </div>
+                <div
+                  data-readonly="true"
+                  data-testid="mock-publication-map"
+                />
               </span>
             </div>
           </div>
@@ -11817,14 +11809,10 @@ exports[`Additional Information Component  should render component with data col
               <span
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
-                <div>
-                  <div
-                    id="mock-google-maps"
-                  />
-                  <div
-                    id="mock-marker"
-                  />
-                </div>
+                <div
+                  data-readonly="true"
+                  data-testid="mock-publication-map"
+                />
               </span>
             </div>
           </div>
@@ -13254,14 +13242,10 @@ exports[`Additional Information Component  should render component with data col
               <span
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
-                <div>
-                  <div
-                    id="mock-google-maps"
-                  />
-                  <div
-                    id="mock-marker"
-                  />
-                </div>
+                <div
+                  data-readonly="true"
+                  data-testid="mock-publication-map"
+                />
               </span>
             </div>
           </div>
@@ -27491,14 +27475,10 @@ exports[`Additional Information Component  should render map with geo coordinate
               <span
                 class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
               >
-                <div>
-                  <div
-                    id="mock-google-maps"
-                  />
-                  <div
-                    id="mock-marker"
-                  />
-                </div>
+                <div
+                  data-readonly="true"
+                  data-testid="mock-publication-map"
+                />
               </span>
             </div>
           </div>

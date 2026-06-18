@@ -1938,3 +1938,13 @@ const READONLY_VOCABS_IDS = [
     454139, 453617, 453614, 456851, 456849, 456850, 453662,
 ];
 export const isReadonlyVocab = id => READONLY_VOCABS_IDS.includes(id);
+
+/** MAP */
+export const MAP_DEFAULT_ZOOM_MARKER = 9;
+
+export const MAP_DEFAULT_ZOOM_POLYGON = 12;
+
+export const MAP_DEFAULT_CENTER = {
+    lng: 153.013346,
+    lat: -27.499412,
+};
