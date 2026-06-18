@@ -48,7 +48,16 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
     const close = () => setAnchor(null);
 
     const onSubmit = handleSubmit(data => {
-        onClose(silentTryCatch(() => formFields.map(field => data[field.name].trim()).join(separator), ''));
+        onClose(
+            silentTryCatch(
+                () =>
+                    formFields
+                        .map(field => data[field.name].trim())
+                        .filter(value => !!value?.length)
+                        .join(separator),
+                '',
+            ),
+        );
         close();
     });
 
@@ -67,7 +76,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                 open(event);
             },
         };
-    }, []);
+    }, [formFields, separator, setValue]);
 
     return (
         <Popover
@@ -98,7 +107,17 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                                 component={TextField}
                                 placeholder={field.label}
                                 name={field.name}
-                                validate={[validation.required, validation.minLengthValidator(2), validateNames]}
+                                validate={[
+                                    // family name is mandatory
+                                    ...(field.name === 'family-name'
+                                        ? [validation.required, validation.minLengthValidator(2)]
+                                        : []),
+                                    // given name is optional, min length validation only applies when present
+                                    ...(field.name === 'given-name'
+                                        ? [v => v.trim() && validation.minLengthValidator(2)(v)]
+                                        : []),
+                                    validateNames,
+                                ]}
                                 textFieldId={`${id}-popover-names-form-${field.name}`}
                                 fullWidth
                             />

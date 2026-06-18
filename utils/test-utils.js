@@ -24,7 +24,6 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
-import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
 import { api } from './MockApiWrapper';
 import { isEmptyObject } from '../src/helpers/general';
@@ -476,7 +475,8 @@ const selectDropDownOptionByElement = async (el, option, index = 0) => {
 const addContributorUsingPopoverNamesForm = async (fieldName, ...names) => {
     await userEvent.click(screen.getByTestId(`${fieldName}-input`));
     await waitFor(() => expect(screen.getByTestId(`${fieldName}-popover-names-form-family-name`)).toBeInTheDocument());
-    await userEvent.type(screen.getByTestId(`${fieldName}-popover-names-form-given-name-input`), names[0]);
+    names[0] &&
+        (await userEvent.type(screen.getByTestId(`${fieldName}-popover-names-form-given-name-input`), names[0]));
     await userEvent.type(screen.getByTestId(`${fieldName}-popover-names-form-family-name-input`), names[1]);
     await waitToBeEnabled(`${fieldName}-popover-names-form-submit-button`);
     await userEvent.click(screen.getByTestId(`${fieldName}-popover-names-form-submit-button`));

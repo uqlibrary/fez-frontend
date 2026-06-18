@@ -108,10 +108,12 @@ describe('PopoverNamesForm', () => {
 
             for (const item of defaultFormFields) {
                 // non-empty values
-                expect(await findByTestId(`test-popover-names-form-${item.name}-helper-text`)).toHaveTextContent(
-                    'This field is required',
-                );
-                assertDisabled(getByTestId(`test-popover-names-form-submit-button`));
+                if (item.name === 'family-name') {
+                    expect(await findByTestId(`test-popover-names-form-${item.name}-helper-text`)).toHaveTextContent(
+                        'This field is required',
+                    );
+                    assertDisabled(getByTestId(`test-popover-names-form-submit-button`));
+                }
 
                 // min chars
                 await user.type(await getByTestId(`test-popover-names-form-${item.name}-input`), 'd');
@@ -135,7 +137,7 @@ describe('PopoverNamesForm', () => {
     });
 
     describe('submission', () => {
-        it('should allow typing and submit form', async () => {
+        it('should allow typing full name and submit the form', async () => {
             const onClose = jest.fn();
             const { getByTestId, findByTestId } = setup({ onClose });
             await user.click(getByTestId('trigger'));
@@ -148,7 +150,19 @@ describe('PopoverNamesForm', () => {
             expect(onClose).toHaveBeenCalledWith('Doe, John');
         });
 
-        it('should allow typing and submit form for `given name first` mode', async () => {
+        it('should allow typing last name only and submit the form', async () => {
+            const onClose = jest.fn();
+            const { getByTestId, findByTestId } = setup({ onClose });
+            await user.click(getByTestId('trigger'));
+
+            await user.type(await findByTestId('test-popover-names-form-family-name-input'), '  Doe  ');
+            await user.click(getByTestId('test-popover-names-form-submit-button'));
+
+            expect(onClose).toHaveBeenCalledTimes(1);
+            expect(onClose).toHaveBeenCalledWith('Doe');
+        });
+
+        it('should allow typing full name and the submit form while on `given name first` mode', async () => {
             const onClose = jest.fn();
             const { getByTestId, findByTestId } = setup({ onClose, mode: MODE_GIVEN_NAME_FIRST });
             await user.click(getByTestId('trigger'));
@@ -159,6 +173,18 @@ describe('PopoverNamesForm', () => {
 
             expect(onClose).toHaveBeenCalledTimes(1);
             expect(onClose).toHaveBeenCalledWith('John Doe');
+        });
+
+        it('should allow typing last name only and submit the form while on `given name first` mode', async () => {
+            const onClose = jest.fn();
+            const { getByTestId, findByTestId } = setup({ onClose, mode: MODE_GIVEN_NAME_FIRST });
+            await user.click(getByTestId('trigger'));
+
+            await user.type(await findByTestId('test-popover-names-form-family-name-input'), '  Doe  ');
+            await user.click(getByTestId('test-popover-names-form-submit-button'));
+
+            expect(onClose).toHaveBeenCalledTimes(1);
+            expect(onClose).toHaveBeenCalledWith('Doe');
         });
 
         it('should submit form on enter', async () => {
