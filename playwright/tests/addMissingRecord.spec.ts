@@ -264,8 +264,8 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-publisher-input').fill('test publisher');
             await page.getByTestId('rek-date-year-input').fill('2020');
             await expect(validationErrors).toHaveCount(2);
-            await addContributorUsingPopoverNamesForm(page, 'rek-author', 'First', 'Author');
-            await addContributorUsingPopoverNamesForm(page, 'rek-author', 'Second', 'Author');
+            await addContributorUsingPopoverNamesForm(page, 'rek-author', 'Author', 'First');
+            await addContributorUsingPopoverNamesForm(page, 'rek-author', 'Author', 'Second');
             // Check the movement arrows
             await expect(page.getByTestId('rek-author-list-row-0-move-down')).toBeVisible();
             await expect(page.getByTestId('rek-author-list-row-0-move-up')).not.toBeVisible();
@@ -280,7 +280,7 @@ test.describe('Add missing record', () => {
             await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second/);
             // Edit the data.
             await page.getByTestId('rek-author-list-row-0-edit').click();
-            await expect(page.getByTestId('rek-author-input')).toHaveValue('Author, Second');
+            await expect(page.getByTestId('rek-author-input')).toHaveValue('Second, Author');
             await addContributorUsingPopoverNamesForm(page, 'rek-author', 'Second (edit1)', 'Author (edit2)');
             // Change reflected in the list.
             await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second \(edit1\)/);

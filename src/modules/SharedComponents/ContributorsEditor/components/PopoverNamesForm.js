@@ -52,7 +52,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
             silentTryCatch(
                 () =>
                     formFields
-                        .map(field => data[field.name].trim())
+                        .map(field => data[field.name]?.trim?.())
                         .filter(value => !!value?.length)
                         .join(separator),
                 '',
@@ -114,7 +114,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                                         : []),
                                     // given name is optional, min length validation only applies when present
                                     ...(field.name === 'given-name'
-                                        ? [v => v.trim() && validation.minLengthValidator(2)(v)]
+                                        ? [v => v?.trim?.() && validation.minLengthValidator(2)(v)]
                                         : []),
                                     validateNames,
                                 ]}
