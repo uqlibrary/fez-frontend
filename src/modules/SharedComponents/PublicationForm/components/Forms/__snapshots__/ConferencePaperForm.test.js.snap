@@ -608,9 +608,9 @@ exports[`ConferencePaperForm component 1`] = `
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add one name at a time in the field below
                   </b>
-                  , in the order that they are published.
+                  . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -1742,9 +1742,9 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add one name at a time in the field below
                   </b>
-                  , in the order that they are published.
+                  . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"

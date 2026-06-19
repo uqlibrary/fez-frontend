@@ -1474,12 +1474,14 @@ export default {
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
                                 </span>{' '}
-                                - Please <b>add to a list of authors below</b>, in the order that they are published.
+                                - Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
+                                order that they are published. Do not enter multiple names in one field.
                             </div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>
-                                Please <b>add to a list of authors below</b>, in the order that they are published.
+                                Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
+                                order that they are published. Do not enter multiple names in one field.
                             </div>
                         ),
                         nameAsPublishedLabel: "Author's name as published",
