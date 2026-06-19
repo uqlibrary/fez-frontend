@@ -4060,6 +4060,10 @@ export default {
                         helperText:
                             "This is an 8 characters string: remove last digit from student ID and add prefix 's'.",
                     },
+                    isRhdStudent: {
+                        label: 'Allow Thesis submission',
+                        helperText: 'Switch on if the student is a Research Higher Degree (RHD) student.',
+                    },
                     refNum: {
                         label: 'Ref num',
                     },

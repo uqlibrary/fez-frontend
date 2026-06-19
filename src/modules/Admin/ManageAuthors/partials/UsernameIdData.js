@@ -6,6 +6,7 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import Grid from '@mui/material/GridLegacy';
 
 import AuthorFieldData from './AuthorFieldData';
+import DataSwitch from './DataSwitch';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
@@ -14,7 +15,7 @@ import { validation } from 'config';
 export const UsernameIdColumnData = () => {
     const {
         editRow: {
-            fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum },
+            fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, isRhdStudent, refNum },
         },
     } = locale.components.manageAuthors;
     const { control } = useFormContext();
@@ -53,6 +54,13 @@ export const UsernameIdColumnData = () => {
                     authorFieldDataId="aut-student-username"
                     name="aut_student_username"
                     validate={[validation.spacelessMaxLength30Validator]}
+                />
+                <Field
+                    {...isRhdStudent}
+                    control={control}
+                    component={DataSwitch}
+                    data-testid="aut-rhd-student"
+                    name="aut_rhd_student"
                 />
                 <Field
                     {...refNum}
