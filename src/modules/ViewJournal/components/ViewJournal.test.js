@@ -1083,7 +1083,7 @@ describe('ViewJournal', () => {
             });
 
             describe("should display button for search workflows when OA status = `fee` and it's not embargoed", () => {
-                it('With HQ', async () => {
+                it('With HQ=1 based on both Scopus and wos data', async () => {
                     window.open = jest.fn();
                     api.mock.journals.get({ id: '.*', data: { ...data } });
                     const { getByTestId } = setup();
@@ -1115,7 +1115,99 @@ describe('ViewJournal', () => {
                         activeFacets: {
                             filters: {
                                 ...publishAsOASearchFacetDefaults,
-                                'Highest quartile': ['1'],
+                                'Highest quartile': ['1', '2', '3', '4'],
+                            },
+                        },
+                    };
+                    expect(window.open).toHaveBeenCalledWith(
+                        `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                        '_blank',
+                        'noopener,noreferrer',
+                    );
+                });
+
+                it('With HQ=2 based on Scopus data', async () => {
+                    window.open = jest.fn();
+                    api.mock.journals.get({
+                        data: {
+                            ...data,
+                            fez_journal_read_and_publish: null,
+                            fez_journal_jcr_scie: null,
+                            fez_journal_cite_score: {
+                                ...data.fez_journal_cite_score,
+                                fez_journal_cite_score_asjc_code: [
+                                    {
+                                        ...data.fez_journal_cite_score.fez_journal_cite_score_asjc_code[0],
+                                        jnl_cite_score_asjc_code_quartile: '2',
+                                    },
+                                ],
+                            },
+                        },
+                    });
+                    const { getByTestId } = setup();
+
+                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await userEvent.click(getByTestId('publish-as-oa-button'));
+
+                    const expectedSearchParams = {
+                        keywords: {
+                            'Subject-453458': {
+                                cvoId: '453458',
+                                text: '2739 Public Health, Environmental and Occupational Health',
+                                type: 'Subject',
+                                id: 'Subject-453458',
+                            },
+                        },
+                        activeFacets: {
+                            filters: {
+                                ...publishAsOASearchFacetDefaults,
+                                'Highest quartile': ['2', '3', '4'],
+                            },
+                        },
+                    };
+                    expect(window.open).toHaveBeenCalledWith(
+                        `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                        '_blank',
+                        'noopener,noreferrer',
+                    );
+                });
+
+                it('With HQ=3 based on WOS data', async () => {
+                    window.open = jest.fn();
+                    api.mock.journals.get({
+                        data: {
+                            ...data,
+                            fez_journal_read_and_publish: null,
+                            fez_journal_jcr_scie: {
+                                ...data.fez_journal_jcr_scie,
+                                fez_journal_jcr_scie_category: [
+                                    {
+                                        ...data.fez_journal_jcr_scie.fez_journal_jcr_scie_category[0],
+                                        jnl_jcr_scie_category_quartile: 'Q3',
+                                    },
+                                ],
+                            },
+                            fez_journal_cite_score: null,
+                        },
+                    });
+                    const { getByTestId } = setup();
+
+                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await userEvent.click(getByTestId('publish-as-oa-button'));
+
+                    const expectedSearchParams = {
+                        keywords: {
+                            'Subject-456676': {
+                                cvoId: '456676',
+                                text: 'Public, Environmental & Occupational Health',
+                                type: 'Subject',
+                                id: 'Subject-456676',
+                            },
+                        },
+                        activeFacets: {
+                            filters: {
+                                ...publishAsOASearchFacetDefaults,
+                                'Highest quartile': ['3', '4'],
                             },
                         },
                     };
@@ -1133,6 +1225,15 @@ describe('ViewJournal', () => {
                         data: {
                             ...data,
                             fez_journal_jcr_scie: null,
+                            fez_journal_cite_score: {
+                                ...data.fez_journal_cite_score,
+                                fez_journal_cite_score_asjc_code: [
+                                    {
+                                        ...data.fez_journal_cite_score.fez_journal_cite_score_asjc_code[0],
+                                        jnl_cite_score_asjc_code_quartile: null,
+                                    },
+                                ],
+                            },
                         },
                     });
                     const { getByTestId } = setup();

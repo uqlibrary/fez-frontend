@@ -70,7 +70,7 @@ const shouldShowPublishAsOAButton = (location, data) =>
     }, false);
 
 /**
- * Note: lowest is greatest
+ * Note: lower is greater
  * @param data
  * @return {number}
  */
@@ -78,7 +78,7 @@ const extractHighestQuartile = (data, prop) =>
     Math.min(
         ...(data?.map?.(item =>
             parseInt(String(item[prop]).toLowerCase().replace('q', ''), 10),
-        ) || /* istanbul ignore next */ [0]),
+        ) || /* istanbul ignore next */ [5]),
     );
 
 /**
@@ -124,9 +124,8 @@ const buildPublishAsOASearch = data =>
             extractHighestQuartile(scopusData, 'jnl_cite_score_asjc_code_quartile'),
             extractHighestQuartile(wosData, 'jnl_jcr_scie_category_quartile'),
         );
-        /* istanbul ignore else */
-        if (highestQuartile > 0) {
-            facets['Highest quartile'] = [highestQuartile];
+        if (highestQuartile < 5) {
+            facets['Highest quartile'] = [1, 2, 3, 4].slice(highestQuartile - 1);
         }
 
         const scopusSubjects = extractSubjects(
