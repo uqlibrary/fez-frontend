@@ -97,7 +97,7 @@ const webpackConfig = {
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
         filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
-        publicPath: config.basePath ? `/${config.basePath}/${config.publicPath}` : config.publicPath,
+        publicPath: config.basePath ? `/${config.basePath}${config.publicPath}` : config.publicPath,
     },
     devServer: {
         compress: true,
