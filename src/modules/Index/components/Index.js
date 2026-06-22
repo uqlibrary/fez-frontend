@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useEffect } from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { redirectUserToPassiveLogin } from 'helpers/redirectUserToPassiveLogin';
 import { TopCitedPublications } from 'modules/TopCitedPublications';
 import { CulturalAdvice, CulturalNotice } from 'modules/SharedComponents/CulturalAdvice';
 import Grid from '@mui/material/GridLegacy';
@@ -36,5 +37,11 @@ class IndexComponent extends PureComponent {
     }
 }
 
-const Index = props => <IndexComponent {...props} />;
+const Index = props => {
+    // Homepage only: attempt a one-shot passive (silent) SSO login for logged-out visitors
+    useEffect(() => {
+        redirectUserToPassiveLogin();
+    }, []);
+    return <IndexComponent {...props} />;
+};
 export default Index;
