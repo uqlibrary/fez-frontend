@@ -11,7 +11,7 @@ const deployment = {
         titleSuffix: 'Development',
         environment: 'development',
         basePath: 'espace/', // updated in webpack
-        publicPath: '',
+        publicPath: '/',
         orcidUrl: 'https://sandbox.orcid.org',
         orcidClientId: 'APP-OXX6M6MBQ77GUVWX',
         reusablejs: 'https://assets.library.uq.edu.au/reusable-webcomponents/uq-lib-reusable.min.js',
