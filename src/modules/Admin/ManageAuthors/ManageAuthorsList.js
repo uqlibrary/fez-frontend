@@ -32,12 +32,39 @@ import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
 
 import { useMrtTable, useServerData } from 'hooks';
+import Grid from '@mui/material/Grid';
+import { isEmptyString, silentTryCatch } from '../../../helpers/general';
 
-export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest }) => {
+/**
+ * @param {*} data
+ * @param {Array<number|string>} selection
+ * @return {boolean}
+ */
+const canAuthorsBeMerged = (data, selection) => {
+    if (selection.length !== 2 || data?.length < parseInt(selection?.[1], 10)) return false;
+
+    const firstSelectedAuthor = data[selection?.[0]];
+    const secondSelectedAuthor = data[selection?.[1]];
+    return (
+        // first author is a student, second a staff
+        (!isEmptyString(firstSelectedAuthor?.aut_student_username) &&
+            isEmptyString(firstSelectedAuthor?.aut_org_username) &&
+            isEmptyString(secondSelectedAuthor?.aut_student_username) &&
+            !isEmptyString(secondSelectedAuthor?.aut_org_username)) ||
+        // first author is a staff, second a student
+        (isEmptyString(firstSelectedAuthor?.aut_student_username) &&
+            !isEmptyString(firstSelectedAuthor?.aut_org_username) &&
+            !isEmptyString(secondSelectedAuthor?.aut_student_username) &&
+            isEmptyString(secondSelectedAuthor?.aut_org_username))
+    );
+};
+
+export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest, onMerge }) => {
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
     const [searchTerm, setSearchTerm] = useState('');
     const [isScopusIngestOpen, showScopusIngestConfirmation, hideScopusIngestConfirmation] = useConfirmationState();
+    const [isMergeConfirmationOpen, showMergeConfirmation, hideMergeConfirmation] = useConfirmationState();
 
     const scopusIngestAuthor = React.useRef();
 
@@ -60,6 +87,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             deleteConfirmationLocale,
             bulkDeleteConfirmationLocale,
             scopusIngestConfirmationLocale,
+            mergeConfirmationLocale,
         },
     } = locale.components.manageAuthors;
 
@@ -102,6 +130,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         showConfirmation,
         hideConfirmation,
     } = useMrtTable(list);
+
+    const selection = Object.keys(selectedRows);
+    const canMergeAuthors = silentTryCatch(() => canAuthorsBeMerged(data, selection), false);
 
     const columns = useMemo(
         () => [
@@ -175,6 +206,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 });
         }
     };
+
     const handleDelete = () => {
         const row = data[pendingDeleteRowIndex];
         setBusy();
@@ -227,6 +259,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     };
 
     const handleHideScopusIngestConfirmation = () => hideScopusIngestConfirmation();
+
+    const handleMergeConfirmation = () => canMergeAuthors && onMerge(data, selection);
+
+    const handleHideMergeConfirmation = () => hideMergeConfirmation();
 
     const handleScopusIngest = () => {
         const autId = scopusIngestAuthor.current;
@@ -421,19 +457,32 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         },
                     }}
                 />
-                <Button
-                    id={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
-                        .toLowerCase()
-                        .replace(/ /g, '-')}`}
-                    data-testid={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
-                        .toLowerCase()
-                        .replace(/ /g, '-')}`}
-                    disabled={table.getState().creatingRow !== null}
-                    variant="contained"
-                    color="primary"
-                    children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}
-                    onClick={hasSelectedRows ? showConfirmation : onCreateRecord(table)}
-                />
+                <Grid spacing={2} container>
+                    {hasSelectedRows && (
+                        <Button
+                            data-testid={`authors-merge`}
+                            variant="contained"
+                            color="primary"
+                            disabled={!canMergeAuthors}
+                            onClick={showMergeConfirmation}
+                        >
+                            Merge Selected Authors
+                        </Button>
+                    )}
+                    <Button
+                        id={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                            .toLowerCase()
+                            .replace(/ /g, '-')}`}
+                        data-testid={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                            .toLowerCase()
+                            .replace(/ /g, '-')}`}
+                        disabled={table.getState().creatingRow !== null}
+                        variant="contained"
+                        color="primary"
+                        children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}
+                        onClick={hasSelectedRows ? showConfirmation : onCreateRecord(table)}
+                    />
+                </Grid>
             </Box>
         ),
         renderRowActions: ({ row }) => {
@@ -517,6 +566,31 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 isOpen={isScopusIngestOpen}
                 locale={scopusIngestConfirmationLocale}
             />
+            {canMergeAuthors &&
+                (() =>
+                    silentTryCatch(() => {
+                        const firstAuthor = data[selection[0]];
+                        const secondAuthor = data[selection[1]];
+                        const studentAuthor = !isEmptyString(firstAuthor?.aut_student_username)
+                            ? firstAuthor
+                            : secondAuthor;
+                        const staffAuthor = studentAuthor.aut_id === firstAuthor.aut_id ? secondAuthor : firstAuthor;
+                        return (
+                            <ConfirmationBox
+                                confirmationBoxId="authors-merge-confirmation"
+                                onAction={handleMergeConfirmation}
+                                onClose={handleHideMergeConfirmation}
+                                isOpen={isMergeConfirmationOpen}
+                                locale={{
+                                    ...mergeConfirmationLocale,
+                                    confirmationMessage: mergeConfirmationLocale.confirmationMessage(
+                                        studentAuthor,
+                                        staffAuthor,
+                                    ),
+                                }}
+                            />
+                        );
+                    }))()}
             <MaterialReactTable table={table} />
         </Box>
     );
@@ -528,6 +602,7 @@ ManageAuthorsList.propTypes = {
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,
     onSelectionChange: PropTypes.func,
+    onMerge: PropTypes.func,
 };
 
 export default React.memo(ManageAuthorsList);

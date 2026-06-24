@@ -14,7 +14,9 @@ import {
     deleteAuthorListItem,
     ingestFromScopus,
     updateAuthorListItem,
+    mergeAuthors,
 } from 'actions';
+import { silentTryCatch } from '../../../helpers/general';
 
 export const ManageAuthors = () => {
     const dispatch = useDispatch();
@@ -37,6 +39,9 @@ export const ManageAuthors = () => {
 
     const handleAuthorScopusIngest = autId => dispatch(ingestFromScopus(autId));
 
+    const handleAuthorsMerge = (data, selection) =>
+        silentTryCatch(() => dispatch(mergeAuthors([{ ...data[selection[0]] }, { ...data[selection[1]] }])));
+
     return (
         <StandardPage title={locale.pages.authors.title}>
             <Grid container spacing={2}>
@@ -49,6 +54,7 @@ export const ManageAuthors = () => {
                             onRowUpdate={handleRowUpdate}
                             onRowDelete={handleRowDelete}
                             onScopusIngest={handleAuthorScopusIngest}
+                            onMerge={handleAuthorsMerge}
                         />
                     </StandardCard>
                 </Grid>

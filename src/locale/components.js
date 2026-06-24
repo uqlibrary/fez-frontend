@@ -4124,6 +4124,20 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                mergeConfirmationLocale: {
+                    confirmationTitle: 'Confirm author merging',
+                    confirmationMessage: (source, target) => (
+                        <>
+                            <p>
+                                Do you wish to merge <b>{source.aut_id}</b> ({source.aut_student_username}) into{' '}
+                                <b>{target.aut_id}</b> ({target.aut_org_username})?
+                            </p>
+                            <p>Please ensure all publications are moved across to author ID you wish to retain.</p>
+                        </>
+                    ),
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     bulkDeleteButtonTooltip: 'Delete selected authors',

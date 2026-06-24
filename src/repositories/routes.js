@@ -173,6 +173,10 @@ export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
     options: { params: { ...params } },
 });
 
+export const AUTHORS_MERGE_API = () => ({
+    apiUrl: `authors/merge`,
+});
+
 // academic stats apis
 
 export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: `academic/${userId}/hindex` });

@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import { get, patch } from 'repositories/generic';
-import { AUTHOR_API, AUTHOR_ORCID_DETAILS_API, SEARCH_AUTHOR_LOOKUP_API } from 'repositories/routes';
+import { get, patch, post } from 'repositories/generic';
+import { AUTHOR_API, AUTHOR_ORCID_DETAILS_API, AUTHORS_MERGE_API, SEARCH_AUTHOR_LOOKUP_API } from 'repositories/routes';
 import { pathConfig } from 'config/pathConfig';
 import { getAuthorIdentifierOrcidPatchRequest } from './transformers';
 
@@ -128,3 +128,30 @@ export function resetSavingAuthorState() {
 export const clearAuthorsSuggestions = () => ({
     type: actions.CLEAR_AUTHORS_LIST,
 });
+
+export const mergeAuthors = authors => dispatch => {
+    const authorIds = authors.map(author => author.aut_id);
+    if (authorIds?.length !== 2) {
+        return Promise.reject(new Error('At least two authors are required to merge.')).catch(error => {
+            dispatch({
+                type: actions.AUTHORS_MERGE_FAILED,
+                payload: error.message,
+            });
+        });
+    }
+
+    dispatch({ type: actions.AUTHORS_MERGE_LOADING });
+    return post(AUTHORS_MERGE_API(), { authorIds })
+        .then(response => {
+            dispatch({
+                type: actions.AUTHORS_MERGE_SUCCESS,
+                payload: response.data,
+            });
+        })
+        .catch(error => {
+            dispatch({
+                type: actions.AUTHORS_MERGE_FAILED,
+                payload: error.message,
+            });
+        });
+};
