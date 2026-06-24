@@ -2,8 +2,8 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useConfirmationState } from 'hooks';
-import { isEmptyStr } from './utils';
 import { getSystemAlertColumns, buildStatusFilterOptions, buildAdminUserOptions } from './config';
+import { isEmptyString } from '../../helpers/general';
 
 const EMPTY_ARRAY = [];
 
@@ -52,7 +52,7 @@ export const useAlertStatus = ({ message, hideAction }) => {
 
     React.useEffect(() => {
         if (!alertIsVisible) {
-            if (!isEmptyStr(message)) _showAlert();
+            if (!isEmptyString(message)) _showAlert();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [alertIsVisible, message]);

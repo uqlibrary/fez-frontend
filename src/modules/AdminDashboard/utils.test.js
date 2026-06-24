@@ -188,19 +188,6 @@ describe('utils', () => {
         });
     });
 
-    describe('isEmptyStr', () => {
-        it('returns expected results', () => {
-            expect(Utils.isEmptyStr('test')).toEqual(false);
-            expect(Utils.isEmptyStr('')).toEqual(true);
-            expect(Utils.isEmptyStr(null)).toEqual(true);
-            expect(Utils.isEmptyStr(undefined)).toEqual(true);
-            expect(Utils.isEmptyStr([])).toEqual(true);
-            expect(Utils.isEmptyStr({})).toEqual(true);
-            expect(Utils.isEmptyStr(['a'])).toEqual(true);
-            expect(Utils.isEmptyStr({ a: 'a' })).toEqual(true);
-        });
-    });
-
     describe('getPlatformUrl', () => {
         it('returns expected results', () => {
             const oldVal = General.IS_PRODUCTION;

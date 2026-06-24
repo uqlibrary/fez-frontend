@@ -438,6 +438,12 @@ export const isEmptyObject = object =>
     object && typeof object === 'object' && !(object instanceof Array) ? Object.keys(object)?.length === 0 : false;
 
 /**
+ * @param string
+ * @return {boolean}
+ */
+export const isEmptyString = string => typeof string !== 'string' || !string.trim();
+
+/**
  * Get a subset of an object for a given set of keys
  * Returns a new object without given keys. Use inclusive=true for the opposite.
  * @param object
