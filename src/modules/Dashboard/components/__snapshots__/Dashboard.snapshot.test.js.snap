@@ -3892,7 +3892,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -3985,7 +3985,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
