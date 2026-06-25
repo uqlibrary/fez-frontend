@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
@@ -37,7 +37,6 @@ import { isEmptyString, silentTryCatch } from '../../../helpers/general';
 import { canSelectedAuthorsBeMerged } from './helpers';
 
 export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest, onMerge }) => {
-    const dispatch = useDispatch();
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
     const [searchTerm, setSearchTerm] = useState('');
@@ -81,6 +80,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         data: list,
         pagination,
         request,
+        refresh,
         onPaginationChange,
     } = useServerData({
         actions,
@@ -185,8 +185,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     };
 
     const handleDelete = () => {
-        const row = data[pendingDeleteRowIndex];
         setBusy();
+        const row = data[pendingDeleteRowIndex];
         onRowDelete(row)
             .then(() => {
                 return new Promise(resolve => {
@@ -239,12 +239,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
 
     const handleMergeConfirmation = () => {
         setBusy();
-
         onMerge(data, selection)
-            .then(() => {
-                resetSelectedRows();
-                dispatch(loadAuthorList({ page: 1, pageSize: 10, search: '' }));
-            })
+            .then(refresh)
             .catch(console.error)
             .finally(() => setBusy(false));
     };
@@ -252,6 +248,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const handleHideMergeConfirmation = () => hideMergeConfirmation();
 
     const handleScopusIngest = () => {
+        setBusy();
         const autId = scopusIngestAuthor.current;
         onScopusIngest(autId)
             .then(() => {
@@ -259,6 +256,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             })
             .catch(() => {})
             .finally(() => {
+                setBusy(false);
                 scopusIngestAuthor.current = null;
             });
     };
@@ -331,11 +329,13 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         state: {
             showAlertBanner: false,
             isSaving: isBusy,
-            isLoading: isLoading,
+            isLoading: authorListLoading,
             showLoadingOverlay: isLoading,
             pagination,
             rowSelection: selectedRows,
         },
+        // work around the inability to disable 'clear selection' button
+        positionToolbarAlertBanner: isLoading ? 'none' : 'top',
         muiPaginationProps: {
             rowsPerPageOptions: tablePageSizeOptions,
         },
@@ -379,7 +379,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         }),
         onRowSelectionChange: setSelectedRows,
         onPaginationChange: onPaginationChange,
-        positionToolbarAlertBanner: isLoading ? 'none' : 'top',
         renderCreateRowDialogContent: ({ table, row }) => (
             <FullAuthorDetails
                 data={row.original}
@@ -423,7 +422,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
-                    disabled={table.getState().creatingRow !== null || isLoading}
+                    disabled={!!table.getState().isLoading}
                     slotProps={{
                         input: {
                             startAdornment: (
@@ -453,8 +452,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             data-testid={`authors-merge`}
                             variant="contained"
                             color="primary"
-                            disabled={!canMergeAuthors || isLoading}
                             onClick={showMergeConfirmation}
+                            disabled={!canMergeAuthors || !!table.getState().isLoading}
                         >
                             Merge Selected Authors
                         </Button>
@@ -466,7 +465,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         data-testid={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
                             .toLowerCase()
                             .replace(/ /g, '-')}`}
-                        disabled={table.getState().creatingRow !== null || isLoading}
+                        disabled={!!table.getState().isLoading}
                         variant="contained"
                         color="primary"
                         children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}

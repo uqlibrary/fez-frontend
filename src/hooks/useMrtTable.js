@@ -197,6 +197,7 @@ export const useServerData = ({ actions, pageSize = 10, pageIndex = 0 }) => {
         pagination: { pageIndex: state.pageIndex, pageSize: state.pageSize, resultCount: state.resultCount },
         data: state.data,
         request: _get,
+        refresh: () => _get({ pageIndex: 0, pageSize: 10 }),
         onPaginationChange,
         onSetPageSize,
     };

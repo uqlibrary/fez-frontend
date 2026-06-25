@@ -9,6 +9,7 @@ import {
     fireEvent,
     userEvent,
     expectApiRequestToMatchSnapshot,
+    waitToBeEnabled,
 } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
@@ -683,6 +684,7 @@ describe('ManageAuthors', () => {
         const { getByTestId } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         fireEvent.click(getByTestId('authors-add-new-author'));
         await waitFor(() => expect(getByTestId('aut-fname-input')).toBeInTheDocument());
@@ -726,6 +728,7 @@ describe('ManageAuthors', () => {
 
         const { getByTestId, queryByTestId } = setup({});
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -1396,6 +1399,7 @@ describe('ManageAuthors', () => {
         const { getByTestId } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-search-input');
 
         await userEvent.type(getByTestId('authors-search-input'), 'test search');
 

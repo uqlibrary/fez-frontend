@@ -1,6 +1,6 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
-import { render, userEvent, fireEvent, waitFor, WithReduxStore } from 'test-utils';
+import { render, userEvent, fireEvent, waitFor, WithReduxStore, waitToBeEnabled } from 'test-utils';
 import * as repository from 'repositories';
 
 import * as ManageAuthorsActions from 'actions/manageAuthors';
@@ -62,6 +62,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -119,6 +120,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -176,6 +178,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -235,6 +238,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -392,6 +396,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText, findByTestId } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
