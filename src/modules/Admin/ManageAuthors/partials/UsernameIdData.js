@@ -60,7 +60,7 @@ export const UsernameIdColumnData = () => {
                     control={control}
                     component={DataSwitch}
                     data-testid="aut-rhd-student"
-                    name="aut_rhd_student"
+                    name="aut_rhd_cohort"
                 />
                 <Field
                     {...refNum}

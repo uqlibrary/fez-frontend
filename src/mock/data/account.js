@@ -333,7 +333,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 61940,
@@ -363,7 +363,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 553,
@@ -393,7 +393,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 608,
@@ -423,7 +423,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 639,
@@ -453,7 +453,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 102,
@@ -483,7 +483,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 485,
@@ -513,7 +513,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 241,
@@ -543,7 +543,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 1015,
@@ -573,7 +573,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": "1975-12-15",
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 1086,
@@ -603,7 +603,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 906,
@@ -633,7 +633,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": "2017-02-24",
         "aut_publons_id": "1",
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 20288,
@@ -663,7 +663,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": "2016-01-08",
         "aut_publons_id": null,
         "aut_student_username": null,
-        "aut_rhd_student": 0,
+        "aut_rhd_cohort": 0,
     },
     {
         pol_id: 4,
@@ -694,7 +694,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": "s1111111",
-        "aut_rhd_student": 1,
+        "aut_rhd_cohort": 1,
     },
 ],
 };
