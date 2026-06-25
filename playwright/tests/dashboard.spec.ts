@@ -12,7 +12,7 @@ test.describe('Dashboard', () => {
 
         test('should display graphs', async ({ page }) => {
             await expect(page.locator('text=Professor J Researcher')).toBeVisible();
-            await expect(page.getByTestId('standard-card-espace-works-per-year')).toBeVisible();
+            await expect(page.getByTestId('standard-card-uq-espace-works-per-year')).toBeVisible();
             await expect(page.getByTestId('standard-card-work-types-overview-content')).toBeVisible();
         });
 
@@ -30,7 +30,7 @@ test.describe('Dashboard', () => {
 
         test("shouldn't display graphs", async ({ page }) => {
             await expect(page.locator('text=Professor J Researcher')).toBeVisible();
-            await expect(page.getByTestId('standard-card-espace-works-per-year')).toHaveCount(0);
+            await expect(page.getByTestId('standard-card-uq-espace-works-per-year')).toHaveCount(0);
             await expect(page.getByTestId('standard-card-work-types-overview-content')).toHaveCount(0);
         });
     });
@@ -42,7 +42,7 @@ test.describe('Dashboard with no OrcID', () => {
         await expect(page.getByTestId('orcid-required')).toBeVisible();
         await expect(page.getByTestId('standard-card-i-already-have-an-orcid-id')).toBeVisible();
         await expect(page.getByTestId('standard-card-i-need-an-orcid-id-content')).toBeVisible();
-        await expect(page.getByTestId('standard-card-espace-works-per-year')).toHaveCount(0);
+        await expect(page.getByTestId('standard-card-uq-espace-works-per-year')).toHaveCount(0);
         await expect(page.getByTestId('standard-card-work-types-overview-content')).toHaveCount(0);
     });
 });
