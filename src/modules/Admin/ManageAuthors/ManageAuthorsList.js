@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { MaterialReactTable, useMaterialReactTable } from 'material-react-table';
 
@@ -34,38 +34,15 @@ import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/gene
 import { useMrtTable, useServerData } from 'hooks';
 import Grid from '@mui/material/Grid';
 import { isEmptyString, silentTryCatch } from '../../../helpers/general';
-
-/**
- * @param {*} data
- * @param {Array<number|string>} selection
- * @return {boolean}
- */
-const canAuthorsBeMerged = (data, selection) => {
-    if (selection.length !== 2 || data?.length < parseInt(selection?.[1], 10)) return false;
-
-    const firstSelectedAuthor = data[selection?.[0]];
-    const secondSelectedAuthor = data[selection?.[1]];
-    return (
-        // first author is a student, second a staff
-        (!isEmptyString(firstSelectedAuthor?.aut_student_username) &&
-            isEmptyString(firstSelectedAuthor?.aut_org_username) &&
-            isEmptyString(secondSelectedAuthor?.aut_student_username) &&
-            !isEmptyString(secondSelectedAuthor?.aut_org_username)) ||
-        // first author is a staff, second a student
-        (isEmptyString(firstSelectedAuthor?.aut_student_username) &&
-            !isEmptyString(firstSelectedAuthor?.aut_org_username) &&
-            !isEmptyString(secondSelectedAuthor?.aut_student_username) &&
-            isEmptyString(secondSelectedAuthor?.aut_org_username))
-    );
-};
+import { canSelectedAuthorsBeMerged } from './helpers';
 
 export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest, onMerge }) => {
+    const dispatch = useDispatch();
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
     const [searchTerm, setSearchTerm] = useState('');
     const [isScopusIngestOpen, showScopusIngestConfirmation, hideScopusIngestConfirmation] = useConfirmationState();
     const [isMergeConfirmationOpen, showMergeConfirmation, hideMergeConfirmation] = useConfirmationState();
-
     const scopusIngestAuthor = React.useRef();
 
     const {
@@ -132,7 +109,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     } = useMrtTable(list);
 
     const selection = Object.keys(selectedRows);
-    const canMergeAuthors = silentTryCatch(() => canAuthorsBeMerged(data, selection), false);
+    const canMergeAuthors = silentTryCatch(() => canSelectedAuthorsBeMerged(data, selection), false);
 
     const columns = useMemo(
         () => [
@@ -260,7 +237,17 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
 
     const handleHideScopusIngestConfirmation = () => hideScopusIngestConfirmation();
 
-    const handleMergeConfirmation = () => canMergeAuthors && onMerge(data, selection);
+    const handleMergeConfirmation = () => {
+        setBusy(true);
+
+        onMerge(data, selection)
+            .then(() => {
+                resetSelectedRows();
+                dispatch(loadAuthorList({ page: 1, pageSize: 10, search: '' }));
+            })
+            .catch(console.error)
+            .finally(() => setBusy(false));
+    };
 
     const handleHideMergeConfirmation = () => hideMergeConfirmation();
 
@@ -315,6 +302,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    const isLoading = authorListLoading || authorListItemDeleting || isBusy;
     const table = useMaterialReactTable({
         columns,
         data,
@@ -343,7 +331,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         state: {
             showAlertBanner: false,
             isLoading: authorListLoading,
-            showLoadingOverlay: authorListLoading || authorListItemDeleting || isBusy,
+            showLoadingOverlay: isLoading,
             pagination,
             rowSelection: selectedRows,
         },
@@ -433,7 +421,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
-                    disabled={table.getState().creatingRow !== null}
+                    disabled={table.getState().creatingRow !== null || isLoading}
                     slotProps={{
                         input: {
                             startAdornment: (
@@ -463,7 +451,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             data-testid={`authors-merge`}
                             variant="contained"
                             color="primary"
-                            disabled={!canMergeAuthors}
+                            disabled={!canMergeAuthors || isLoading}
                             onClick={showMergeConfirmation}
                         >
                             Merge Selected Authors
@@ -476,7 +464,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         data-testid={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
                             .toLowerCase()
                             .replace(/ /g, '-')}`}
-                        disabled={table.getState().creatingRow !== null}
+                        disabled={table.getState().creatingRow !== null || isLoading}
                         variant="contained"
                         color="primary"
                         children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}

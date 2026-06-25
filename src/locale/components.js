@@ -4128,11 +4128,11 @@ export default {
                     confirmationTitle: 'Confirm author merging',
                     confirmationMessage: (source, target) => (
                         <>
-                            <p>
-                                Do you wish to merge <b>{source.aut_id}</b> ({source.aut_student_username}) into{' '}
-                                <b>{target.aut_id}</b> ({target.aut_org_username})?
-                            </p>
-                            <p>Please ensure all publications are moved across to author ID you wish to retain.</p>
+                            Do you wish to merge <b>{source.aut_id}</b> ({source.aut_student_username}) into{' '}
+                            <b>{target.aut_id}</b> ({target.aut_org_username})?
+                            <br />
+                            <br />
+                            Please ensure all publications are moved across to author ID you wish to retain.
                         </>
                     ),
                     cancelButtonLabel: 'No',
@@ -4166,6 +4166,12 @@ export default {
                 allowDismiss: true,
                 type: 'done',
                 message: 'An author has been successfully added.',
+            },
+            authorMergingSuccessAlert: {
+                alertId: 'alert-done-author-merging',
+                allowDismiss: true,
+                type: 'done',
+                message: 'The authors were successfully merged.',
             },
             updateAuthorSuccessAlert: {
                 alertId: 'alert-done-author-update',
@@ -4202,6 +4208,12 @@ export default {
                 allowDismiss: true,
                 type: 'error',
                 message: 'An author could not be added.',
+            },
+            authorMergingErrorAlert: {
+                alertId: 'alert-error-authors-merging',
+                allowDismiss: true,
+                type: 'error',
+                message: 'An error occurred while merging the selected authors.',
             },
             updateAuthorErrorAlert: {
                 alertId: 'alert-error-author-update',

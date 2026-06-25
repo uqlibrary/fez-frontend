@@ -23,10 +23,20 @@ import {
     SCOPUS_INGEST_REQUEST_FAILED,
     SCOPUS_INGEST_REQUEST_SUCCESS,
     SCOPUS_INGEST_REQUESTING,
+    AUTHOR_MERGING,
+    AUTHOR_MERGING_FAILED,
+    AUTHOR_MERGING_SUCCESS,
 } from './actionTypes';
 import { destroy, get, post, put } from 'repositories/generic';
-import { AUTHOR_API, AUTHORS_SEARCH_API, INGEST_WORKS_API, MANAGE_AUTHORS_LIST_API } from 'repositories/routes';
+import {
+    AUTHOR_API,
+    AUTHORS_MERGE_API,
+    AUTHORS_SEARCH_API,
+    INGEST_WORKS_API,
+    MANAGE_AUTHORS_LIST_API,
+} from 'repositories/routes';
 import { createSentryFriendlyError } from '../config/axios';
+import { canAuthorsBeMerged } from '../modules/Admin/ManageAuthors/helpers';
 
 export function loadAuthorList({ page, pageSize, search }) {
     return async dispatch => {
@@ -225,3 +235,32 @@ export function clearAuthorAlerts() {
         dispatch({ type: APP_ALERT_HIDE });
     };
 }
+
+export const mergeAuthors = authors => async dispatch => {
+    if (!canAuthorsBeMerged(...authors)) {
+        const error = 'authors cannot be merged';
+        dispatch({
+            type: AUTHOR_MERGING_FAILED,
+            payload: error,
+        });
+        return Promise.reject(error);
+    }
+
+    dispatch({ type: AUTHOR_MERGING });
+
+    const authorIds = authors.map(author => author.aut_id);
+    return post(AUTHORS_MERGE_API(), { authorIds })
+        .then(response => {
+            dispatch({
+                type: AUTHOR_MERGING_SUCCESS,
+                payload: response.data,
+            });
+        })
+        .catch(e => {
+            dispatch({
+                type: AUTHOR_MERGING_FAILED,
+                payload: e.message,
+            });
+            return Promise.reject(e.message);
+        });
+};
