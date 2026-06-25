@@ -35,7 +35,7 @@ jest.mock('react-router', () => ({
     useNavigate: () => mockUseNavigate,
 }));
 
-const defaultAuthor = { aut_display_name: 'Brown, James', aut_org_student_id: 's2222222' };
+const defaultAuthor = { aut_display_name: 'Brown, James', aut_org_student_id: 's2222222', aut_rhd_cohort: 1 };
 
 function setup(props = {}) {
     props.author = props.author || defaultAuthor;
