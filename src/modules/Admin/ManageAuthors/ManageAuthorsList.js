@@ -75,7 +75,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         [],
     );
 
-    const { authorListLoading, authorListItemDeleting } = useSelector(state => state?.get('manageAuthorsReducer'));
+    const { authorListLoading } = useSelector(state => state?.get('manageAuthorsReducer'));
 
     const {
         data: list,
@@ -238,7 +238,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const handleHideScopusIngestConfirmation = () => hideScopusIngestConfirmation();
 
     const handleMergeConfirmation = () => {
-        setBusy(true);
+        setBusy();
 
         onMerge(data, selection)
             .then(() => {
@@ -302,7 +302,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const isLoading = authorListLoading || authorListItemDeleting || isBusy;
+    const isLoading = authorListLoading || isBusy;
     const table = useMaterialReactTable({
         columns,
         data,
@@ -330,7 +330,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         },
         state: {
             showAlertBanner: false,
-            isLoading: authorListLoading,
+            isSaving: isBusy,
+            isLoading: isLoading,
             showLoadingOverlay: isLoading,
             pagination,
             rowSelection: selectedRows,
@@ -378,6 +379,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         }),
         onRowSelectionChange: setSelectedRows,
         onPaginationChange: onPaginationChange,
+        positionToolbarAlertBanner: isLoading ? 'none' : 'top',
         renderCreateRowDialogContent: ({ table, row }) => (
             <FullAuthorDetails
                 data={row.original}
