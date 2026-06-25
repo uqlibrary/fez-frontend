@@ -170,8 +170,8 @@ export const useServerData = ({ actions, pageSize = 10, pageIndex = 0 }) => {
                         _setState(prev => ({
                             ...prev,
                             data: response.data,
-                            pageIndex: response.page,
-                            pageSize: response.size,
+                            pageIndex: response.page || pageIndex,
+                            pageSize: response.size || pageSize,
                             resultCount: response.totalCount ?? (response.data?.length + 1 || 0),
                         }));
                     })

@@ -329,7 +329,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         state: {
             showAlertBanner: false,
             isSaving: isBusy,
-            isLoading: authorListLoading,
+            isLoading: isLoading,
             showLoadingOverlay: isLoading,
             pagination,
             rowSelection: selectedRows,
