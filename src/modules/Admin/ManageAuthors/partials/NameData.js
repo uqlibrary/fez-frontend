@@ -11,7 +11,7 @@ import AuthorFieldData from './AuthorFieldData';
 import { validation } from 'config';
 import { default as locale } from 'locale/components';
 import Divider from '@mui/material/Divider';
-import { NameOverride } from './NameOverride';
+import DataSwitch from './DataSwitch';
 
 export const NameData = () => {
     const {
@@ -71,7 +71,7 @@ export const NameData = () => {
                 <Field
                     {...isNameOverride}
                     control={control}
-                    component={NameOverride}
+                    component={DataSwitch}
                     data-testid="aut-name-overridden"
                     name="aut_name_overridden"
                 />
