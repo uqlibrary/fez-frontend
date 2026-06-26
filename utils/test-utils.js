@@ -204,24 +204,20 @@ const addFilesToFileUploader = async (files, timeout = 500) => {
     }
 };
 const assertEnabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeEnabled();
 const assertDisabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeDisabled();
 const waitToBeEnabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
-    );
+    await waitFor(() => expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeEnabled());
 const waitToBeDisabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
-    );
+    await waitFor(() => expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeDisabled());
 
 /**
  * @param {string|function} dataTestId
  * @param {object?} options
  * @return {Promise<HTMLElement>}
  */
-const waitElementToBeInDocument = async (dataTestId, options) =>
+const waitElementToBeInTheDocument = async (dataTestId, options) =>
     await waitFor(() => {
         const element = typeof dataTestId === 'string' ? screen.getByTestId(dataTestId) : dataTestId();
         expect(element).toBeInTheDocument();
@@ -230,10 +226,16 @@ const waitElementToBeInDocument = async (dataTestId, options) =>
 
 /**
  * @param {string|function} testId
- * @return {HTMLElement}
+ * @return {void}
  */
-const assertMissingElement = testId =>
-    expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
+const assertIsInTheDocument = testId =>
+    expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).toBeInTheDocument();
+
+/**
+ * @param {string|function} testId
+ */
+const assertNotInTheDocument = testId =>
+    testId && expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
 
 /**
  * note: it will match visible texts in DOM or input's values
@@ -248,7 +250,7 @@ const waitForText = async (text, options) => {
 
     return await waitFor(
         async () =>
-            await waitElementToBeInDocument(
+            await waitElementToBeInTheDocument(
                 () =>
                     (!options?.within && (screen.queryByText(text) || screen.queryByDisplayValue(text))) ||
                     (options?.within &&
@@ -269,6 +271,14 @@ const waitForTextToBeRemoved = async (text, options) => {
     if (typeof text === 'string' && !text.trim().length) throw new Error('empty text');
     screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 };
+
+/**
+ * @param {object} mock
+ * @param {*[]} params
+ * @return {Promise<void>}
+ */
+const waitToHaveBeenLastCalledWith = async (mock, ...params) =>
+    await waitFor(() => expect(mock).toHaveBeenLastCalledWith(...params));
 
 const expectRequiredFieldError = async field =>
     await waitFor(() => {
@@ -596,8 +606,9 @@ module.exports = {
     assertDisabled,
     waitToBeEnabled,
     waitToBeDisabled,
-    waitElementToBeInDocument,
-    assertMissingElement,
+    waitElementToBeInTheDocument,
+    assertIsInTheDocument,
+    assertNotInTheDocument,
     waitForText,
     waitForTextToBeRemoved,
     expectRequiredFieldError,
@@ -632,4 +643,5 @@ module.exports = {
     getTableBodyRows,
     api,
     withFakeTimers,
+    waitToHaveBeenLastCalledWith,
 };

@@ -1,4 +1,4 @@
-import { render, waitElementToBeInDocument, WithReduxStore, WithRouter } from 'test-utils';
+import { render, waitElementToBeInTheDocument, WithReduxStore, WithRouter } from 'test-utils';
 import DashboardOrcidSyncContainer, {
     openUrl,
     DashboardOrcidSync,
@@ -137,17 +137,17 @@ describe('DashboardOrcidSync', () => {
         it('should display confirmation dialog when route state variable `showOrcidLinkingConfirmation` is set to true', async () => {
             // `showOrcidLinkingConfirmation` is set to true upon the Orcid linking - see Orcid component
             setup({}, '/', [{ path: pathConfig.dashboard, state: { showOrcidLinkingConfirmation: true } }]);
-            await waitElementToBeInDocument('orcid-sync-confirmation-message');
+            await waitElementToBeInTheDocument('orcid-sync-confirmation-message');
         });
 
         it('should display display progress icon next to orcid badge upon saving orcid sync preferences', async () => {
             setup({ accountAuthorSaving: true });
-            await waitElementToBeInDocument('dashboard-orcid-sync-progress-icon');
+            await waitElementToBeInTheDocument('dashboard-orcid-sync-progress-icon');
         });
 
         it('should display display error icon next to orcid badge upon failing to save orcid sync preferences', async () => {
             setup({ accountAuthorError: true });
-            await waitElementToBeInDocument('dashboard-orcid-sync-error-icon');
+            await waitElementToBeInTheDocument('dashboard-orcid-sync-error-icon');
         });
 
         describe('openUrl', () => {

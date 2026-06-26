@@ -7,7 +7,7 @@ import {
     waitFor,
     waitForText,
     WithReduxStore,
-    waitElementToBeInDocument,
+    waitElementToBeInTheDocument,
 } from 'test-utils';
 import { AddToSelectedSubjects } from './AddToSelectedSubjects';
 import { initialState, keywordOnlySuffix } from '../../../../reducers/journals';
@@ -82,7 +82,7 @@ describe('AddToSelectedSubjects', () => {
             }
             await userEvent.clear(getByTestId('for-code-autocomplete-field-input'));
             await userEvent.type(getByTestId('for-code-autocomplete-field-input'), '100');
-            await userEvent.click(await waitElementToBeInDocument('journal-search-item-subject-source-era-0'));
+            await userEvent.click(await waitElementToBeInTheDocument('journal-search-item-subject-source-era-0'));
             expect(onAdd).toHaveBeenCalledTimes(1);
         });
 

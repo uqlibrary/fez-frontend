@@ -4125,7 +4125,7 @@ export default {
                     confirmButtonLabel: 'Yes',
                 },
                 mergeConfirmationLocale: {
-                    confirmationTitle: 'Confirm author merging',
+                    confirmationTitle: 'Confirm authors merge',
                     confirmationMessage: (source, target) => (
                         <>
                             Do you wish to merge <b>{source.aut_id}</b> ({source.aut_student_username}) into{' '}
@@ -4213,7 +4213,7 @@ export default {
                 alertId: 'alert-error-authors-merging',
                 allowDismiss: true,
                 type: 'error',
-                message: 'An error occurred while merging the selected authors.',
+                message: error => `Error while merging authors: ${error}`,
             },
             updateAuthorErrorAlert: {
                 alertId: 'alert-error-author-update',

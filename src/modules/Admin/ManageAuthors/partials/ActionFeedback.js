@@ -61,7 +61,10 @@ export const ActionFeedback = () => {
             (!!authorAddSuccess && addAuthorSuccessAlert) ||
             (!!authorAddError && addAuthorErrorAlert) ||
             (!!authorMergingSuccess && authorMergingSuccessAlert) ||
-            (!!authorMergingError && authorMergingErrorAlert) ||
+            (!!authorMergingError && {
+                ...authorMergingErrorAlert,
+                message: authorMergingErrorAlert.message(authorMergingError),
+            }) ||
             (!!authorListItemDeleteSuccess && deleteAuthorSuccessAlert) ||
             (!!authorListItemDeleteError && { ...deleteAuthorErrorAlert, message: authorListItemDeleteError }) ||
             (!!authorListItemUpdateSuccess && updateAuthorSuccessAlert) ||

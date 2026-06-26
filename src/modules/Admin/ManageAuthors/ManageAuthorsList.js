@@ -33,7 +33,7 @@ import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/gene
 
 import { useMrtTable, useServerData } from 'hooks';
 import Grid from '@mui/material/Grid';
-import { isEmptyString, silentTryCatch } from '../../../helpers/general';
+import { isEmptyString, silentTryCatch, withErrorBoundary } from '../../../helpers/general';
 import { canSelectedAuthorsBeMerged } from './helpers';
 
 export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest, onMerge }) => {
@@ -449,7 +449,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 <Grid spacing={2} container>
                     {hasSelectedRows && (
                         <Button
-                            data-testid={`authors-merge`}
+                            data-testid={`authors-merge-button`}
                             variant="contained"
                             color="primary"
                             onClick={showMergeConfirmation}
@@ -479,52 +479,59 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             return (
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={scopusIngestButtonTooltip}>
-                        <IconButton
-                            onClick={handleShowScopusIngestConfirmation(row.original.aut_id)}
-                            disabled={
-                                isCookieSet ||
-                                !(
-                                    !!row.original.aut_orcid_id ||
-                                    (!!row.original.aut_scopus_id && row.original.aut_is_scopus_id_authenticated === 1)
-                                )
-                            }
-                            id={`authors-list-row-${row.index}-${scopusIngestButtonTooltip
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                            data-testid={`authors-list-row-${
-                                row.index
-                            }-${scopusIngestButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                        >
-                            <tableIcons.Download />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={handleShowScopusIngestConfirmation(row.original.aut_id)}
+                                disabled={
+                                    isCookieSet ||
+                                    !(
+                                        !!row.original.aut_orcid_id ||
+                                        (!!row.original.aut_scopus_id &&
+                                            row.original.aut_is_scopus_id_authenticated === 1)
+                                    )
+                                }
+                                id={`authors-list-row-${row.index}-${scopusIngestButtonTooltip
+                                    .toLowerCase()
+                                    .replace(/ /g, '-')}`}
+                                data-testid={`authors-list-row-${
+                                    row.index
+                                }-${scopusIngestButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            >
+                                <tableIcons.Download />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                     <Tooltip title={editButtonTooltip}>
-                        <IconButton
-                            onClick={() => {
-                                setEditRow(row);
-                                table.setCreatingRow(null);
-                                table.setEditingRow(row);
-                            }}
-                            disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`authors-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`authors-list-row-${row.index}-${editButtonTooltip
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                        >
-                            <tableIcons.Edit />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    setEditRow(row);
+                                    table.setCreatingRow(null);
+                                    table.setEditingRow(row);
+                                }}
+                                disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                id={`authors-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`authors-list-row-${row.index}-${editButtonTooltip
+                                    .toLowerCase()
+                                    .replace(/ /g, '-')}`}
+                            >
+                                <tableIcons.Edit />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                     <Tooltip title={deleteButtonTooltip}>
-                        <IconButton
-                            onClick={openDeleteConfirmModal(row.index)}
-                            disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                        >
-                            <tableIcons.Delete />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={openDeleteConfirmModal(row.index)}
+                                disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
+                                    .toLowerCase()
+                                    .replace(/ /g, '-')}`}
+                            >
+                                <tableIcons.Delete />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 </Box>
             );
@@ -556,30 +563,30 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 locale={scopusIngestConfirmationLocale}
             />
             {canMergeAuthors &&
-                (() =>
-                    silentTryCatch(() => {
-                        const firstAuthor = data[selection[0]];
-                        const secondAuthor = data[selection[1]];
-                        const studentAuthor = !isEmptyString(firstAuthor?.aut_student_username)
-                            ? firstAuthor
-                            : secondAuthor;
-                        const staffAuthor = studentAuthor.aut_id === firstAuthor.aut_id ? secondAuthor : firstAuthor;
-                        return (
-                            <ConfirmationBox
-                                confirmationBoxId="authors-merge-confirmation"
-                                onAction={handleMergeConfirmation}
-                                onClose={handleHideMergeConfirmation}
-                                isOpen={isMergeConfirmationOpen}
-                                locale={{
-                                    ...mergeConfirmationLocale,
-                                    confirmationMessage: mergeConfirmationLocale.confirmationMessage(
-                                        studentAuthor,
-                                        staffAuthor,
-                                    ),
-                                }}
-                            />
-                        );
-                    }))()}
+                isMergeConfirmationOpen &&
+                withErrorBoundary(() => {
+                    const firstAuthor = data[selection[0]];
+                    const secondAuthor = data[selection[1]];
+                    const studentAuthor = !isEmptyString(firstAuthor?.aut_student_username)
+                        ? firstAuthor
+                        : secondAuthor;
+                    const staffAuthor = studentAuthor.aut_id === firstAuthor.aut_id ? secondAuthor : firstAuthor;
+                    return (
+                        <ConfirmationBox
+                            confirmationBoxId="authors-merge-confirmation"
+                            onAction={handleMergeConfirmation}
+                            onClose={handleHideMergeConfirmation}
+                            isOpen={isMergeConfirmationOpen}
+                            locale={{
+                                ...mergeConfirmationLocale,
+                                confirmationMessage: mergeConfirmationLocale.confirmationMessage(
+                                    studentAuthor,
+                                    staffAuthor,
+                                ),
+                            }}
+                        />
+                    );
+                })()}
             <MaterialReactTable table={table} />
         </Box>
     );
