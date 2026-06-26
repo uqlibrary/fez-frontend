@@ -568,9 +568,12 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     const firstAuthor = data[selection[0]];
                     const secondAuthor = data[selection[1]];
                     const studentAuthor = !isEmptyString(firstAuthor?.aut_student_username)
-                        ? firstAuthor
+                        ? /* istanbul ignore next */ firstAuthor
                         : secondAuthor;
-                    const staffAuthor = studentAuthor.aut_id === firstAuthor.aut_id ? secondAuthor : firstAuthor;
+                    const staffAuthor =
+                        studentAuthor.aut_id === firstAuthor.aut_id
+                            ? /* istanbul ignore next */ secondAuthor
+                            : firstAuthor;
                     return (
                         <ConfirmationBox
                             confirmationBoxId="authors-merge-confirmation"

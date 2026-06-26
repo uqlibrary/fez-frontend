@@ -5,6 +5,7 @@ import {
     deleteAuthorListItem,
     ingestFromScopus,
     loadAuthorList,
+    mergeAuthors,
     updateAuthorListItem,
 } from './manageAuthors';
 import * as actions from './actionTypes';
@@ -291,6 +292,40 @@ describe('author list actions', () => {
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             });
 
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('mergeAuthors', () => {
+        it('should dispatch expected actions on successful response', async () => {
+            mockApi.onPost(repositories.routes.AUTHORS_MERGE_API().apiUrl).reply(200, { data: '' });
+            const expectedActions = [actions.AUTHOR_MERGING, actions.AUTHOR_MERGING_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                mergeAuthors([
+                    { aut_id: 1, aut_org_username: 'test' },
+                    { aut_id: 2, aut_student_username: 'test2' },
+                ]),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch expected actions on failed response', async () => {
+            const error = 'custom server error';
+            mockApi.onPost(repositories.routes.AUTHORS_MERGE_API().apiUrl).reply(422, { message: error });
+            const expectedActions = [actions.AUTHOR_MERGING, actions.AUTHOR_MERGING_FAILED];
+
+            await expect(
+                mockActionsStore.dispatch(
+                    mergeAuthors([
+                        { aut_id: 1, aut_org_username: 'test' },
+                        { aut_id: 2, aut_student_username: 'test2' },
+                    ]),
+                ),
+            ).rejects.toMatchObject({
+                status: 422,
+                message: error,
+            });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

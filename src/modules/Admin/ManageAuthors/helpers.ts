@@ -15,7 +15,7 @@ export const canAuthorsBeMerged = (author?: FezAuthor, anotherAuthor?: FezAuthor
             !isEmptyString(anotherAuthor?.aut_student_username) &&
             isEmptyString(anotherAuthor?.aut_org_username)));
 
-export const canSelectedAuthorsBeMerged = (data: FezAuthor[], selection: string[]) => {
-    if (selection.length !== 2 || data?.length < Number(selection?.[1])) return false;
+export const canSelectedAuthorsBeMerged = (data?: FezAuthor[], selection?: string[]) => {
+    if (!data || selection?.length !== 2 || data?.length < Number(selection?.[1])) return false;
     return canAuthorsBeMerged(data[Number(selection?.[0])], data[Number(selection?.[1])]);
 };

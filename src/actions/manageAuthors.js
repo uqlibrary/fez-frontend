@@ -1,5 +1,4 @@
 import {
-    APP_ALERT_HIDE,
     AUTHOR_ADD_FAILED,
     AUTHOR_ADD_SUCCESS,
     AUTHOR_ADDING,
@@ -12,7 +11,6 @@ import {
     AUTHOR_LIST_FAILED,
     AUTHOR_LIST_LOADED,
     AUTHOR_LIST_LOADING,
-    AUTHOR_CLEAR_ALERTS,
     BULK_AUTHOR_ITEMS_DELETE_FAILED,
     BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
     BULK_AUTHOR_ITEMS_DELETING,
@@ -36,7 +34,6 @@ import {
     MANAGE_AUTHORS_LIST_API,
 } from 'repositories/routes';
 import { createSentryFriendlyError } from '../config/axios';
-import { canAuthorsBeMerged } from '../modules/Admin/ManageAuthors/helpers';
 
 export function loadAuthorList({ page, pageSize, search }) {
     return async dispatch => {
@@ -230,19 +227,8 @@ export function ingestFromScopus(autId) {
 }
 
 export const mergeAuthors = authors => async dispatch => {
-    if (!canAuthorsBeMerged(...authors)) {
-        const error = 'authors cannot be merged';
-        dispatch({
-            type: AUTHOR_MERGING_FAILED,
-            payload: error,
-        });
-        return Promise.reject(error);
-    }
-
     dispatch({ type: AUTHOR_MERGING });
-
-    const authorIds = authors.map(author => author.aut_id);
-    return post(AUTHORS_MERGE_API(), { authorIds })
+    return post(AUTHORS_MERGE_API(), { aut_ids: authors.map(author => author.aut_id) })
         .then(response => {
             dispatch({
                 type: AUTHOR_MERGING_SUCCESS,
@@ -254,6 +240,6 @@ export const mergeAuthors = authors => async dispatch => {
                 type: AUTHOR_MERGING_FAILED,
                 payload: e.message,
             });
-            return Promise.reject(e.message);
+            return Promise.reject(e);
         });
 };
