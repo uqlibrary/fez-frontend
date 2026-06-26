@@ -316,7 +316,7 @@ export default {
             },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace works',
+            publicationStatsTitle1: 'UQ eSpace works',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
