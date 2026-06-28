@@ -226,12 +226,12 @@ describe('PublicationForm', () => {
         });
 
         it('should validated NTRO Research Report', async () => {
-            const { queryByTestId } = setup();
+            const { queryByTestId, findByTestId } = setup();
             await selectTypeCombo(NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, DOCUMENT_TYPE_RESEARCH_REPORT);
 
             await assertValidationErrorSummary([validationErrors.validationErrorsSummary.commissionedResearchReport]);
-            expect(queryByTestId('commissioned-research-report-field-error')).toBeInTheDocument();
-            await userEvent.click(queryByTestId('commissioned-research-report-field'));
+            await findByTestId('commissioned-research-report-field-error');
+            await userEvent.click(await findByTestId('commissioned-research-report-field'));
             await assertMissingValidationErrorSummary([
                 validationErrors.validationErrorsSummary.commissionedResearchReport,
             ]);

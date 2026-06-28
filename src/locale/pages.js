@@ -255,7 +255,7 @@ export default {
                 // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
-                    countTitle: 'eSpace works from',
+                    countTitle: 'UQ eSpace works from',
                 },
                 dashboardAuthorAvatar: {
                     ariaPrefix: 'Photograph of ',
@@ -288,17 +288,17 @@ export default {
                     },
                 },
                 dashboardOrcidSync: {
-                    badgeTooltip: 'Information about uploading your eSpace works to ORCID',
+                    badgeTooltip: 'Information about uploading your UQ eSpace works to ORCID',
                     helpDrawer: {
                         messages: {
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
                             // Statuses
                             done: 'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
-                            error: 'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
-                            inProgress: 'A manual upload of your eSpace works to ORCID is in progress.',
+                            error: 'There has been an error while processing a manual upload of your UQ eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
+                            inProgress: 'A manual upload of your UQ eSpace works to ORCID is in progress.',
                             // Date of last upload
                             lastUpload: 'The last upload was on [syncTime].',
-                            noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                            noPrevious: 'There are no previous uploads of your UQ eSpace works to ORCID.',
                             syncPreference: {
                                 saving: 'Saving ORCID sync preferences.',
                                 error: 'Error while saving ORCID sync preferences.',
@@ -329,7 +329,7 @@ export default {
                 actionButtonLabel: 'Claim your works now',
             },
             nothingToClaimLure: {
-                title: 'Add your work to eSpace',
+                title: 'Add your work to UQ eSpace',
                 message: 'We found nothing new for you to claim, but you may add a work any time.',
                 type: 'info_outline',
                 actionButtonLabel: 'Add a missing work',
@@ -341,7 +341,7 @@ export default {
                 actionButtonLabel: 'Enable ORCID sync now',
             },
             publicationsByYearChart: {
-                title: 'eSpace works per year',
+                title: 'UQ eSpace works per year',
                 yAxisTitle: 'Total works',
             },
             publicationTypesCountChart: {
@@ -1351,7 +1351,7 @@ export default {
                 },
                 publishAsOAButton: {
                     tooltip: 'Avoid fees and meet mandates by viewing similar journals with open access.',
-                    text: "I'd like to publish open access",
+                    text: "I'd like to publish open access without fees",
                 },
             },
         },

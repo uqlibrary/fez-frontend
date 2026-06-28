@@ -691,7 +691,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         class="css-1o7ot5c"
       >
         <button
-          aria-label="Information about uploading your eSpace works to ORCID"
+          aria-label="Information about uploading your UQ eSpace works to ORCID"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="help-icon-orcid"
           data-mui-internal-clone-element="true"
