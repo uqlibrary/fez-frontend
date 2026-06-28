@@ -1475,13 +1475,13 @@ export default {
                                     Step 1 of 2
                                 </span>{' '}
                                 - Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
-                                order that they are published. Do not enter multiple names in one field.
+                                order that they are published.
                             </div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>
                                 Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
-                                order that they are published. Do not enter multiple names in one field.
+                                order that they are published.
                             </div>
                         ),
                         nameAsPublishedLabel: "Author's name as published",

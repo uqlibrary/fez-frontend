@@ -398,7 +398,7 @@ exports[`JournalArticleForm component 1`] = `
                       <b>
                         add one name at a time in the field below
                       </b>
-                      . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
+                      . Repeat for all authors in the order that they are published.
                     </div>
                     <div
                       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -1300,7 +1300,7 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
                       <b>
                         add one name at a time in the field below
                       </b>
-                      . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
+                      . Repeat for all authors in the order that they are published.
                     </div>
                     <div
                       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -2771,7 +2771,7 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
                       <b>
                         add one name at a time in the field below
                       </b>
-                      . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
+                      . Repeat for all authors in the order that they are published.
                     </div>
                     <div
                       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -4317,7 +4317,7 @@ exports[`JournalArticleForm component with all fields disabled 1`] = `
                       <b>
                         add one name at a time in the field below
                       </b>
-                      . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
+                      . Repeat for all authors in the order that they are published.
                     </div>
                     <div
                       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"

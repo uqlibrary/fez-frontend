@@ -572,7 +572,7 @@ exports[`ThesisForm component 1`] = `
                       <b>
                         add one name at a time in the field below
                       </b>
-                      . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
+                      . Repeat for all authors in the order that they are published.
                     </div>
                     <div
                       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -1716,7 +1716,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                       <b>
                         add one name at a time in the field below
                       </b>
-                      . Repeat for all authors in the order that they are published. Do not enter multiple names in one field.
+                      . Repeat for all authors in the order that they are published.
                     </div>
                     <div
                       class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
