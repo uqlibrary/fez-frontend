@@ -367,7 +367,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             />
         ),
         renderEditRowDialogContent: ({ table, row }) => {
-            console.log(row);
             return (
                 <FullAuthorDetails
                     data={row.original}
