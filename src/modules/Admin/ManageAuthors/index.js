@@ -16,7 +16,6 @@ import {
     updateAuthorListItem,
     mergeAuthors,
 } from 'actions';
-import { silentTryCatch } from '../../../helpers/general';
 
 export const ManageAuthors = () => {
     const dispatch = useDispatch();
