@@ -4046,11 +4046,11 @@ export default {
                     },
                     orgStaffId: {
                         label: 'Staff ID',
-                        helperText: 'This is a 7 digit number, usually preceded by a 0',
+                        helperText: 'This is a 7 digit number, usually preceded by a 0.',
                     },
                     orgStudentId: {
                         label: 'Student ID',
-                        helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
+                        helperText: 'This is a 8 digit number, usually preceded by a 3 or 4.',
                     },
                     orgUsername: {
                         label: 'Staff username',
@@ -4062,7 +4062,7 @@ export default {
                     },
                     isRhdStudent: {
                         label: 'Allow Thesis submission',
-                        helperText: 'Switch on if the student is a Research Higher Degree (RHD) student.',
+                        helperText: 'Switch on if the author needs to manually deposit their thesis.',
                     },
                     refNum: {
                         label: 'Ref num',
