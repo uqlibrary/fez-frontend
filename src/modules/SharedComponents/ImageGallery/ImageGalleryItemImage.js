@@ -29,7 +29,7 @@ const ImageGalleryItemImage = ({
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        rootMargin: '50px', // tweak if needed
+        rootMargin: '150px', // tweak if needed
     });
 
     const config = { ...defaultConfig, ...customDefaultConfig };
