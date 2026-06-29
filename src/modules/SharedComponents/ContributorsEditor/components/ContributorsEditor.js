@@ -19,6 +19,7 @@ import { diff } from 'deep-object-diff';
 import { uniqWith } from 'lodash';
 import { hasAtLeastOneItemSelected, isArrayDeeplyEqual } from '../../../../helpers/general';
 import { locale } from 'locale';
+import { MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST } from './NamesPopoverForm';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -48,6 +49,8 @@ export class ContributorsEditor extends PureComponent {
         actions: PropTypes.any,
         useFormReducer: PropTypes.bool,
         scaleOfSignificance: PropTypes.array,
+        hideNamesPopoverForm: PropTypes.bool,
+        namesPopoverFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
     };
 
     static defaultProps = {
@@ -69,6 +72,8 @@ export class ContributorsEditor extends PureComponent {
         showExternalIdentifierInput: false,
         useFormReducer: false,
         scaleOfSignificance: [],
+        hideNamesPopoverForm: false,
+        namesPopoverFormMode: MODE_FAMILY_NAME_FIRST,
     };
 
     constructor(props) {
@@ -393,6 +398,7 @@ export class ContributorsEditor extends PureComponent {
             contributor,
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
             canEdit: this.props.canEdit,
+            namesPopoverFormMode: this.props.namesPopoverFormMode,
         };
         return (
             <ContributorForm

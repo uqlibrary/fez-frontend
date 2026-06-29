@@ -24,7 +24,6 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
-import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
 import { api } from './MockApiWrapper';
 import { isEmptyObject } from '../src/helpers/general';
@@ -305,13 +304,6 @@ const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 5
     }
 };
 
-const originalUseForm = useForm.useForm;
-const mockUseForm = implementation => {
-    return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
-        return implementation(props, originalUseForm);
-    });
-};
-
 const enableJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
         autoPreview: true,
@@ -477,21 +469,27 @@ const selectDropDownOptionByElement = async (el, option, index = 0) => {
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addContributorsEditorItem = async (fieldName, name = 'author') => {
-    await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
+const addItemUsingNamesPopoverForm = async (fieldName, ...names) => {
+    await userEvent.click(screen.getByTestId(`${fieldName}-input`));
+    await waitFor(() => expect(screen.getByTestId(`${fieldName}-names-popover-form-family-name`)).toBeInTheDocument());
+    names[0] &&
+        (await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-given-name-input`), names[0]));
+    await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-family-name-input`), names[1]);
+    await waitToBeEnabled(`${fieldName}-names-popover-form-submit-button`);
+    await userEvent.click(screen.getByTestId(`${fieldName}-names-popover-form-submit-button`));
     await userEvent.click(screen.getByTestId(`${fieldName}-add`));
 };
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') => {
-    await addContributorsEditorItem(fieldName, name);
+const addAndSelectItemUsingNamesPopoverForm = async (fieldName, ...names) => {
+    await addItemUsingNamesPopoverForm(fieldName, ...(!!names.length ? names : ['Brown', 'James']));
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
@@ -602,7 +600,6 @@ module.exports = {
     waitForTextToBeRemoved,
     expectRequiredFieldError,
     expectMissingRequiredFieldError,
-    mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
@@ -625,8 +622,8 @@ module.exports = {
     assertRichTextEditorValue,
     selectDropDownOption,
     selectDropDownOptionByElement,
-    addContributorsEditorItem,
-    addAndSelectContributorsEditorItem,
+    addItemUsingNamesPopoverForm,
+    addAndSelectItemUsingNamesPopoverForm,
     clearAndType,
     sortObjectProps,
     getTableBodyRows,
