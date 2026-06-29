@@ -303,7 +303,7 @@ export const ContributorForm = ({
                             {renderNameField({
                                 inputProps: {
                                     readOnly: true,
-                                    style: { cursor: 'pointer' },
+                                    style: { cursor: 'pointer', paddingLeft: 4 },
                                 },
                                 style: {
                                     borderStyle: 'solid',
@@ -311,6 +311,11 @@ export const ContributorForm = ({
                                     borderColor: '#e5e5e5',
                                     borderRadius: 4,
                                     backgroundColor: '#efefef',
+                                },
+                                sx: {
+                                    '& .MuiInputLabel-root': {
+                                        left: 4,
+                                    },
                                 },
                                 onClick: openNamesForm,
                             })}

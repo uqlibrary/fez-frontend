@@ -467,7 +467,7 @@ exports[`AudioDocumentForm component 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="creators"
                       style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
@@ -502,7 +502,7 @@ exports[`AudioDocumentForm component 1`] = `
                           placeholder="Enter the name exactly as published"
                           readonly=""
                           required=""
-                          style="cursor: pointer;"
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />
@@ -660,7 +660,7 @@ exports[`AudioDocumentForm component 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="contributors"
                       style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
@@ -695,7 +695,7 @@ exports[`AudioDocumentForm component 1`] = `
                           placeholder="Enter the name exactly as published"
                           readonly=""
                           required=""
-                          style="cursor: pointer;"
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />
@@ -1341,7 +1341,7 @@ exports[`AudioDocumentForm component should render contributor assignment 1`] = 
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="creators"
                       style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
@@ -1376,7 +1376,7 @@ exports[`AudioDocumentForm component should render contributor assignment 1`] = 
                           placeholder="Enter the name exactly as published"
                           readonly=""
                           required=""
-                          style="cursor: pointer;"
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />
@@ -1528,7 +1528,7 @@ exports[`AudioDocumentForm component should render contributor assignment 1`] = 
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="contributors"
                       style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
@@ -1563,7 +1563,7 @@ exports[`AudioDocumentForm component should render contributor assignment 1`] = 
                           placeholder="Enter the name exactly as published"
                           readonly=""
                           required=""
-                          style="cursor: pointer;"
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />
@@ -2223,7 +2223,7 @@ exports[`AudioDocumentForm component with all fields disabled 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="creators"
                       style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
@@ -2259,7 +2259,7 @@ exports[`AudioDocumentForm component with all fields disabled 1`] = `
                           placeholder="Enter the name exactly as published"
                           readonly=""
                           required=""
-                          style="cursor: pointer;"
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />
@@ -2417,7 +2417,7 @@ exports[`AudioDocumentForm component with all fields disabled 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="contributors"
                       style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
@@ -2453,7 +2453,7 @@ exports[`AudioDocumentForm component with all fields disabled 1`] = `
                           placeholder="Enter the name exactly as published"
                           readonly=""
                           required=""
-                          style="cursor: pointer;"
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />
