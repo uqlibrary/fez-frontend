@@ -210,6 +210,7 @@
     "react-error-boundary": "^6.1.2",
     "react-hook-form": "^7.63.0",
     "react-image": "^4.1.0",
+    "react-intersection-observer": "^10.0.3",
     "react-jss": "^8.6.1",
     "react-player": "^2.16.0",
     "react-redux": "^9.2.0",

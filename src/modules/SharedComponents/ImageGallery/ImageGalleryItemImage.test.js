@@ -1,10 +1,23 @@
 import React from 'react';
 import { rtlRender, fireEvent } from 'test-utils';
+import { useInView } from 'react-intersection-observer';
 
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 import { collectionSearchResultsImages } from 'mock/data';
 import config from 'config/imageGalleryConfig';
 import * as utils from './Utils';
+
+jest.mock('react-intersection-observer', () => ({
+    useInView: jest.fn(),
+}));
+
+const mockUseInView = ({ inView = false } = {}) => {
+    useInView.mockReturnValue({
+        ref: jest.fn(),
+        inView,
+        entry: undefined,
+    });
+};
 
 const setup = (props = {}, render = rtlRender) => {
     const testProps = {
@@ -16,6 +29,7 @@ const setup = (props = {}, render = rtlRender) => {
 
 describe('Image Gallery Item Image', () => {
     beforeEach(() => {
+        mockUseInView({ inView: true });
         config.thumbnailImage.defaultImageName = 'image_unavailable.svg';
     });
 
@@ -514,5 +528,44 @@ describe('Image Gallery Item Image', () => {
         const galleryElement = getByTestId(`imageGalleryItemImage-${collectionSearchResultsImages.data[5].rek_pid}`);
         expect(galleryElement).toBeInTheDocument();
         expect(galleryElement.getAttribute('src')).toContain('thumbnail_Capture.jpg');
+    });
+
+    describe('Image Lazy Loading', () => {
+        const imageItem = {
+            rek_pid: 'UQ:123',
+            rek_display_type_lookup: 'Image',
+            fez_datastream_info: [
+                {
+                    dsi_dsid: 'abc.jpg',
+                    dsi_security_policy: 5,
+                },
+                {
+                    dsi_dsid: 'thumbnail_abc_t.jpg',
+                    dsi_security_policy: 5,
+                },
+            ],
+        };
+
+        it('shows the default thumbnail before the image enters the viewport', () => {
+            mockUseInView({ inView: false });
+
+            const { getByRole } = setup();
+
+            const image = getByRole('img');
+
+            expect(image).toHaveAttribute('src', expect.stringContaining(config.thumbnailImage.defaultImageName));
+        });
+
+        it('loads the thumbnail once it enters the viewport', () => {
+            mockUseInView({ inView: true });
+
+            const { getByRole } = setup({
+                item: imageItem,
+            });
+
+            const image = getByRole('img');
+
+            expect(image).toHaveAttribute('src', expect.stringContaining('thumbnail_abc_t.jpg'));
+        });
     });
 });

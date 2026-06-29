@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 
+import { useInView } from 'react-intersection-observer';
 import { default as defaultConfig } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
 
@@ -25,6 +26,11 @@ const ImageGalleryItemImage = ({
     ...rest
 }) => {
     const [imgSrc, setImgSrc] = React.useState();
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        rootMargin: '50px', // tweak if needed
+    });
 
     const config = { ...defaultConfig, ...customDefaultConfig };
 
@@ -67,12 +73,12 @@ const ImageGalleryItemImage = ({
 
     return (
         <StyledLazyLoadImage
+            ref={ref}
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
-            src={imgSrc || filename}
+            src={inView ? imgSrc || filename : config.thumbnailImage.defaultImageName}
             classes={classes}
             className={'image-gallery-item-image'}
-            loading="lazy"
             {...errorHandler}
             {...rest}
         />
