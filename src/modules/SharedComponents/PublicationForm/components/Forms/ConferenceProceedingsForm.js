@@ -5,7 +5,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { IssnListEditorField, ListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ContributorsEditorField, MODE_GIVEN_NAME_FIRST } from 'modules/SharedComponents/ContributorsEditor';
 import { validation } from 'config';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
@@ -137,6 +137,7 @@ export const ConferenceProceedingsForm = ({ control, isSubmitting, canEdit }) =>
                         required
                         validate={[validation.editorRequired]}
                         disabled={isSubmitting}
+                        popoverNamesFormMode={MODE_GIVEN_NAME_FIRST}
                     />
                 </StandardCard>
             </Grid>

@@ -474,9 +474,9 @@ exports[`BookChapterForm component 1`] = `
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add one name at a time in the field below
                   </b>
-                  , in the format and order that they are published.
+                  . Repeat for all authors in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -489,6 +489,7 @@ exports[`BookChapterForm component 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -518,8 +519,10 @@ exports[`BookChapterForm component 1`] = `
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
-                          placeholder="Type the name exactly as published"
+                          placeholder="Enter the name exactly as published"
+                          readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -644,6 +647,7 @@ exports[`BookChapterForm component 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="editors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -667,6 +671,8 @@ exports[`BookChapterForm component 1`] = `
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -1634,9 +1640,9 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add one name at a time in the field below
                   </b>
-                  , in the format and order that they are published.
+                  . Repeat for all authors in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -1709,6 +1715,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -1738,8 +1745,10 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
-                          placeholder="Type the name exactly as published"
+                          placeholder="Enter the name exactly as published"
+                          readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -1915,6 +1924,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="editors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -1938,6 +1948,8 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -3363,9 +3375,9 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add one name at a time in the field below
                   </b>
-                  , in the format and order that they are published.
+                  . Repeat for all authors in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -3438,6 +3450,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -3467,8 +3480,10 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
-                          placeholder="Type the name exactly as published"
+                          placeholder="Enter the name exactly as published"
+                          readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -3644,6 +3659,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="editors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -3667,6 +3683,8 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -5169,9 +5187,9 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add one name at a time in the field below
                   </b>
-                  , in the format and order that they are published.
+                  . Repeat for all authors in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -5184,6 +5202,7 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -5214,8 +5233,10 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                           disabled=""
                           id="authors-input"
                           label="Author's name as published"
-                          placeholder="Type the name exactly as published"
+                          placeholder="Enter the name exactly as published"
+                          readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -5340,6 +5361,7 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="editors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -5364,6 +5386,8 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -6338,9 +6362,9 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                    
                   - Please 
                   <b>
-                    add to a list of authors below
+                    add one name at a time in the field below
                   </b>
-                  , in the format and order that they are published.
+                  . Repeat for all authors in the order that they are published.
                 </div>
                 <div
                   class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
@@ -6353,6 +6377,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="authors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -6382,8 +6407,10 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                           data-testid="authors-input"
                           id="authors-input"
                           label="Author's name as published"
-                          placeholder="Type the name exactly as published"
+                          placeholder="Enter the name exactly as published"
+                          readonly=""
                           required=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />
@@ -6508,6 +6535,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       data-testid="editors"
+                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -6531,6 +6559,8 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
+                          style="cursor: pointer;"
                           type="text"
                           value=""
                         />

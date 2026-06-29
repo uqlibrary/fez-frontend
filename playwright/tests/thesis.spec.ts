@@ -1,6 +1,11 @@
 import { test, expect, Page } from '../test';
 import { typeCKEditor } from '../lib/ckeditor';
-import { clickAutoSuggestion, setFileInput } from '../lib/helpers';
+import {
+    addContributorUsingPopoverNamesForm,
+    clickAutoSuggestion,
+    enterContributorUsingPopoverNamesForm,
+    setFileInput,
+} from '../lib/helpers';
 
 test.describe('Thesis', () => {
     const ensureErrorCount = async (page: Page, count: number) => {
@@ -46,7 +51,7 @@ test.describe('Thesis', () => {
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
 
             // Supervisors
-            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
+            await enterContributorUsingPopoverNamesForm(page, 'rek-supervisor', 'Ky', 'Lane');
             await ensureErrorCount(page, 4);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
             await page.getByTestId('rek-supervisor-input').press('Enter');
@@ -56,12 +61,10 @@ test.describe('Thesis', () => {
             await page.locator('button').getByText(/Yes/).first().click();
             await ensureErrorCount(page, 4);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
-            await page.getByTestId('rek-supervisor-input').fill('Vishal Asai');
-            await page.getByTestId('rek-supervisor-input').press('Enter');
+            await addContributorUsingPopoverNamesForm(page, 'rek-supervisor', 'Vishal', 'Asai');
             await ensureErrorCount(page, 3);
             await expect(page.locator('button#submit-thesis')).toBeDisabled();
-            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
-            await page.getByTestId('rek-supervisor-input').press('Enter');
+            await addContributorUsingPopoverNamesForm(page, 'rek-supervisor', 'Ky', 'Lane');
             await expect(page.locator('ul.ContributorList').locator(':scope > *')).toHaveCount(2);
             await expect(page.locator('ul.ContributorList').locator(':scope > *').first()).toHaveText(/Vishal Asai/);
             await expect(page.locator('ul.ContributorList').locator(':scope > *').last()).toHaveText(/Ky Lane/);
@@ -72,8 +75,7 @@ test.describe('Thesis', () => {
             await page.locator('button').getByText(/Yes/).first().click();
 
             await ensureErrorCount(page, 4);
-            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
-            await page.getByTestId('rek-supervisor-input').press('Enter');
+            await addContributorUsingPopoverNamesForm(page, 'rek-supervisor', 'Ky', 'Lane');
             await ensureErrorCount(page, 3);
 
             // Field of Research
@@ -160,7 +162,7 @@ test.describe('Thesis', () => {
             // filling this field once doesn't always clear validation errors in this context
             await typeCKEditor(page, 'rek-title', 'ab');
             // supervisors
-            await page.getByTestId('rek-supervisor-input').fill('a');
+            await addContributorUsingPopoverNamesForm(page, 'rek-supervisor', 'James', 'Brown');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             // FoR
             await page.getByTestId('rek-subject-input').fill('a');
@@ -200,7 +202,7 @@ test.describe('Thesis', () => {
             await clickAutoSuggestion(page, 'rek-org-unit-name', 0);
             await ensureErrorCount(page, 3);
             // Supervisors
-            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
+            await addContributorUsingPopoverNamesForm(page, 'rek-supervisor', 'Ky', 'Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             await ensureErrorCount(page, 2);
             // Field of Research
@@ -232,7 +234,7 @@ test.describe('Thesis', () => {
             // filling this field once doesn't always clear validation errors in this context
             await typeCKEditor(page, 'rek-title', 'ab');
             // Supervisors
-            await page.getByTestId('rek-supervisor-input').fill('Ky Lane');
+            await addContributorUsingPopoverNamesForm(page, 'rek-supervisor', 'Ky', 'Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             // Field of Research
             await page.getByTestId('rek-subject-input').fill('a');

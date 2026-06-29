@@ -14,7 +14,7 @@ import {
     OrgNameField,
 } from 'modules/SharedComponents/LookupFields';
 import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
-import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ContributorsEditorField, MODE_GIVEN_NAME_FIRST } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 
@@ -32,8 +32,8 @@ import Typography from '@mui/material/Typography';
 import { useDispatch, useSelector } from 'react-redux';
 import { useValidatedForm } from '../../../hooks';
 import PropTypes from 'prop-types';
-import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
-import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
+import { createConfirmDialogBoxRefAssigner } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
+import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import * as actions from 'actions';
 import { PartialDateField } from '../../SharedComponents/Toolbox/PartialDate';
 
@@ -411,6 +411,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                     validate={[validation.supervisorRequired]}
                                     locale={txtSupervisors.field}
                                     disabled={isSubmitting}
+                                    popoverNamesFormMode={MODE_GIVEN_NAME_FIRST}
                                 />
                             </StandardCard>
                         </Grid>

@@ -10,13 +10,14 @@ import {
     assertEnabled,
     assertDisabled,
     userEvent,
-    mockUseForm,
     addFilesToFileUploader,
     waitForTextToBeRemoved,
     waitForText,
     expectApiRequestToMatchSnapshot,
     api,
     assertInstanceOfFile,
+    addContributorUsingPopoverNamesForm,
+    setRichTextEditorValue,
 } from 'test-utils';
 import { useAccountContext } from 'context';
 import { waitFor } from '@testing-library/dom';
@@ -81,16 +82,6 @@ describe('ThesisSubmission', () => {
     const isDebugging = false;
     const waitForOptions = { timeout: isDebugging ? 120000 : 2000 };
 
-    const mockRichEditorFieldValues = values => {
-        mockUseForm((props, original) => {
-            props.values.thesisTitle = values?.hasOwnProperty('thesisTitle') ? values.thesisTitle : 'thesis title';
-            props.values.thesisAbstract = values?.hasOwnProperty('thesisAbstract')
-                ? values.thesisAbstract
-                : 'thesis thesisAbstract';
-            return original(props);
-        });
-    };
-
     const assertValidationErrorSummary = async () => {
         await waitForText(formLocale.validationAlert.message, waitForOptions);
         assertEnabled(screen.getByTestId('cancel-deposit-thesis'));
@@ -106,11 +97,12 @@ describe('ThesisSubmission', () => {
     const fillUpForm = async () => {
         expect(defaultAuthor.aut_display_name.length).toBeGreaterThan(0);
         expect(screen.getByTestId('rek-author-input')).toHaveValue(defaultAuthor.aut_display_name);
+        await setRichTextEditorValue('rek-title', 'title');
+        await setRichTextEditorValue('rek-description', 'abstract');
         await userEvent.click(screen.getByTestId('rek-genre-type-select'));
         await userEvent.click(screen.getByText('PhD Thesis'));
         await userEvent.type(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
-        await userEvent.type(screen.getByTestId('rek-supervisor-input'), 'J.Smith');
-        await userEvent.click(screen.getByRole('button', { name: 'Add supervisor' }));
+        await addContributorUsingPopoverNamesForm('rek-supervisor', 'James', 'Smith');
         await userEvent.type(screen.getByTestId('rek-subject-input'), '01');
         await waitForText('0101 Pure Mathematics');
         await userEvent.click(screen.getByText('0101 Pure Mathematics'));
@@ -164,7 +156,6 @@ describe('ThesisSubmission', () => {
     describe('HDR submission', () => {
         describe('form', () => {
             it('should display error summary according to invalid fields', async () => {
-                mockRichEditorFieldValues({ thesisTitle: undefined, thesisAbstract: undefined });
                 const { getByTestId, queryByText, getByRole } = setup({ isHdrThesis: true });
                 await assertValidationErrorSummary();
 
@@ -177,6 +168,9 @@ describe('ThesisSubmission', () => {
                 await waitForText('Keywords are required');
                 await waitForText('File submission to be completed');
 
+                await setRichTextEditorValue('rek-title', 'title');
+                await waitForTextToBeRemoved('Thesis title is required');
+
                 await userEvent.click(getByTestId('rek-genre-type-select'));
                 await userEvent.click(queryByText('PhD Thesis'));
                 await waitForTextToBeRemoved('Thesis type is required');
@@ -184,8 +178,10 @@ describe('ThesisSubmission', () => {
                 await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
                 await waitForTextToBeRemoved('Enrolling unit is required');
 
-                await userEvent.type(getByTestId('rek-supervisor-input'), 'J.Smith');
-                await userEvent.click(getByRole('button', { name: 'Add supervisor' }));
+                await setRichTextEditorValue('rek-description', 'title');
+                await waitForTextToBeRemoved('Thesis abstract is required');
+
+                await addContributorUsingPopoverNamesForm('rek-supervisor', 'James', 'Smith');
                 await waitForTextToBeRemoved('Supervisor names are required');
 
                 await userEvent.type(getByTestId('rek-subject-input'), '01');
@@ -201,22 +197,6 @@ describe('ThesisSubmission', () => {
                 await waitForTextToBeRemoved('File submission to be completed');
             });
 
-            it('should display error summary according to invalid rich editor fields', async () => {
-                mockRichEditorFieldValues({ thesisTitle: 'abc' });
-                const { queryByText } = setup();
-                await assertValidationErrorSummary();
-
-                expect(queryByText('Thesis title is required')).not.toBeInTheDocument();
-            });
-
-            it('should display error summary according to invalid rich editor fields', async () => {
-                mockRichEditorFieldValues({ thesisAbstract: 'abc' });
-                const { queryByText } = setup();
-                await assertValidationErrorSummary();
-
-                expect(queryByText('Thesis abstract is required')).not.toBeInTheDocument();
-            });
-
             it('should show alert message not the thesis submission form to students not in the transition cohort', () => {
                 const { getByText } = setup({ author: { aut_org_student_id: 's333333' }, isHdrThesis: true });
                 expect(getByText(/HDR theses are now submitted via the UQ Research Data Manager/i)).toBeInTheDocument();
@@ -225,7 +205,6 @@ describe('ThesisSubmission', () => {
             it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
                 api.mock.records.create({ pid: 'UQ:123456' }).files.upload();
 
-                mockRichEditorFieldValues();
                 setup({ isHdrThesis: true });
                 await assertValidationErrorSummary();
                 await fillUpForm();
@@ -247,7 +226,6 @@ describe('ThesisSubmission', () => {
                     .records.issues({ pid })
                     .files.upload();
 
-                mockRichEditorFieldValues();
                 const { queryByText, getByTestId } = setup({ isHdrThesis: true });
                 await assertValidationErrorSummary();
                 await fillUpForm();
@@ -271,7 +249,6 @@ describe('ThesisSubmission', () => {
                     .presignedUrl({ status: 500 })
                     .records.issues({ pid });
 
-                mockRichEditorFieldValues();
                 const { getByText } = setup({ isHdrThesis: true });
                 await assertValidationErrorSummary();
                 await fillUpForm();
@@ -286,7 +263,6 @@ describe('ThesisSubmission', () => {
             it('should show server error while trying to create the thesis', async () => {
                 api.mock.records.create({ status: 500 });
 
-                mockRichEditorFieldValues();
                 setup({ isHdrThesis: true });
                 await assertValidationErrorSummary();
                 await fillUpForm();
@@ -340,7 +316,6 @@ describe('ThesisSubmission', () => {
         };
         describe('form', () => {
             it('should display error summary according to invalid fields', async () => {
-                mockRichEditorFieldValues({ thesisTitle: undefined, thesisAbstract: undefined });
                 const { getByTestId, queryByText, getByRole } = setup();
                 await assertValidationErrorSummary();
 
@@ -354,8 +329,7 @@ describe('ThesisSubmission', () => {
                 await userEvent.type(getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
                 await waitForTextToBeRemoved('Enrolling unit is required');
 
-                await userEvent.type(getByTestId('rek-supervisor-input'), 'J.Smith');
-                await userEvent.click(getByRole('button', { name: 'Add supervisor' }));
+                await addContributorUsingPopoverNamesForm('rek-supervisor', 'James', 'Smith');
                 await waitForTextToBeRemoved('Supervisor names are required');
 
                 await userEvent.type(getByTestId('rek-subject-input'), '01');
@@ -367,26 +341,9 @@ describe('ThesisSubmission', () => {
                 await waitForTextToBeRemoved('File submission to be completed');
             });
 
-            it('should display error summary according to invalid rich editor fields', async () => {
-                mockRichEditorFieldValues({ thesisTitle: 'abc' });
-                const { queryByText } = setup();
-                await assertValidationErrorSummary();
-
-                expect(queryByText('Thesis title is required')).not.toBeInTheDocument();
-            });
-
-            it('should display error summary according to invalid rich editor fields', async () => {
-                mockRichEditorFieldValues({ thesisAbstract: 'abc' });
-                const { queryByText } = setup();
-                await assertValidationErrorSummary();
-
-                expect(queryByText('Thesis abstract is required')).not.toBeInTheDocument();
-            });
-
             it('should display confirmation message and successful submission screen after proceeding with form submission', async () => {
                 api.mock.records.create({ pid: 'UQ:123456' }).files.upload();
 
-                mockRichEditorFieldValues();
                 setup();
                 await assertValidationErrorSummary();
                 await fillUpSbsForm();
@@ -408,7 +365,6 @@ describe('ThesisSubmission', () => {
                     .records.issues({ pid })
                     .files.upload();
 
-                mockRichEditorFieldValues();
                 const { getByTestId } = setup();
                 await assertValidationErrorSummary();
                 await fillUpSbsForm();
@@ -433,7 +389,6 @@ describe('ThesisSubmission', () => {
                     .presignedUrl({ status: 500 })
                     .records.issues({ pid });
 
-                mockRichEditorFieldValues();
                 const { getByText } = setup();
                 await assertValidationErrorSummary();
                 await fillUpSbsForm();
@@ -448,7 +403,6 @@ describe('ThesisSubmission', () => {
             it('should show server error while trying to create the thesis', async () => {
                 api.mock.records.create({ status: 500 });
 
-                mockRichEditorFieldValues();
                 setup();
                 await assertValidationErrorSummary();
                 await fillUpSbsForm();

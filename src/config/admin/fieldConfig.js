@@ -932,6 +932,7 @@ export default {
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
                 useFormReducer: true,
+                hidePopoverNamesForm: true,
             },
         },
         editors: {
@@ -942,6 +943,7 @@ export default {
                 locale: locale.components.authorsList('editor').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-contributor',
+                hidePopoverNamesForm: true,
             },
         },
         files: {
@@ -1860,6 +1862,7 @@ export default {
                 locale: locale.components.authorsList('architect').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-architect-name',
+                hidePopoverNamesForm: true,
             },
         },
         creators: {
@@ -1870,6 +1873,7 @@ export default {
                 locale: locale.components.authorsList('creator').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-creator-name',
+                hidePopoverNamesForm: true,
             },
         },
         supervisors: {
@@ -1880,6 +1884,7 @@ export default {
                 locale: locale.components.authorsList('supervisor').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-supervisor',
+                hidePopoverNamesForm: true,
             },
         },
     },
