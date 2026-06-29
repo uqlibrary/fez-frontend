@@ -411,7 +411,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                     validate={[validation.supervisorRequired]}
                                     locale={txtSupervisors.field}
                                     disabled={isSubmitting}
-                                    popoverNamesFormMode={MODE_GIVEN_NAME_FIRST}
+                                    namesPopoverFormMode={MODE_GIVEN_NAME_FIRST}
                                 />
                             </StandardCard>
                         </Grid>

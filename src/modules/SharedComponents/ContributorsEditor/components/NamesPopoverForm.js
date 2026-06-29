@@ -22,7 +22,7 @@ export const defaultFormFields = [
 
 const validateNames = value => (value?.match?.(/,/) && 'Commas are not allowed') || undefined;
 
-const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRST }, ref) => {
+const NamesPopoverForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRST }, ref) => {
     const formFields = [...defaultFormFields];
     let separator = LAST_NAME_FIRST_SEPARATOR;
     if (mode === MODE_GIVEN_NAME_FIRST) {
@@ -98,7 +98,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                 },
             }}
         >
-            <form data-testid={`${id}-popover-names-form`}>
+            <form data-testid={`${id}-names-popover-form`}>
                 <Grid container spacing={1} columns={10} sx={{ p: 2 }}>
                     {formFields.map(field => (
                         <Grid key={field.name} size={{ xs: 10, md: 4 }}>
@@ -118,7 +118,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                                         : []),
                                     validateNames,
                                 ]}
-                                textFieldId={`${id}-popover-names-form-${field.name}`}
+                                textFieldId={`${id}-names-popover-form-${field.name}`}
                                 fullWidth
                             />
                         </Grid>
@@ -136,7 +136,7 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
                             variant="contained"
                             color="primary"
                             disabled={hasValidationError}
-                            data-testid={`${id}-popover-names-form-submit-button`}
+                            data-testid={`${id}-names-popover-form-submit-button`}
                         >
                             SET
                         </Button>
@@ -147,10 +147,10 @@ const PopoverNamesForm = forwardRef(({ id, onClose, mode = MODE_FAMILY_NAME_FIRS
     );
 });
 
-PopoverNamesForm.propTypes = {
+NamesPopoverForm.propTypes = {
     id: PropTypes.string,
     onClose: PropTypes.func,
     mode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
 };
 
-export default PopoverNamesForm;
+export default NamesPopoverForm;
