@@ -12,6 +12,14 @@ jest.mock('react-router', () => ({
     useNavigate: () => mockUseNavigate,
 }));
 
+jest.mock('react-intersection-observer', () => ({
+    useInView: jest.fn(() => ({
+        ref: jest.fn(),
+        inView: true,
+        entry: undefined,
+    })),
+}));
+
 const setup = (props = {}) => {
     const testProps = {
         item: { rek_pid: 0 },

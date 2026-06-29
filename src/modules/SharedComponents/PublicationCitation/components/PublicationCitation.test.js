@@ -11,6 +11,14 @@ jest.mock('react-router', () => ({
     useLocation: jest.fn(() => ({ pathname: '/', search: '', state: {} })),
 }));
 
+jest.mock('react-intersection-observer', () => ({
+    useInView: jest.fn(() => ({
+        ref: jest.fn(),
+        inView: true,
+        entry: undefined,
+    })),
+}));
+
 function setup(testProps = {}, testState = {}) {
     const props = {
         publication: mockRecordToFix,
