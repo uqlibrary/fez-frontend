@@ -137,7 +137,7 @@ describe('Component PossiblyMyRecords', () => {
         // change facet should redo search
         fireEvent.click(getByTestId('clickable-facet-category-display-type'));
         fireEvent.click(getByTestId('facet-filter-nested-item-display-type-book'));
-        expect(mockSearchPossiblyYourPublications).toBeCalledTimes(2);
+        expect(mockSearchPossiblyYourPublications).toHaveBeenCalledTimes(2);
     });
 
     it('renders alert when the hide pub api fails', async () => {

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Component DeleteRecord form submission should allow enter reason and submit the form for a record without DOI 1`] = `"{"rek_status":8,"reason":"deletion reason","fez_record_search_key_doi_resolution_url":null,"fez_record_search_key_new_doi":null,"fez_record_search_key_deletion_notes":null}"`;
 

@@ -90,7 +90,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByTestId('rek-contributor-add'));
 
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             nameAsPublished: 'Firstname Lastname',
             affiliation: 'UQ',
             orgaff: 'The University of Queensland',
@@ -260,7 +260,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
 
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (mdcmar)',
             affiliation: '',
@@ -319,7 +319,7 @@ describe('Component ContributorForm', () => {
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (mdcmar)',
             affiliation: '',
@@ -410,7 +410,7 @@ describe('Component ContributorForm', () => {
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (smdcmar)'), list);
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (smdcmar)',
             affiliation: '',
@@ -566,7 +566,7 @@ describe('Component ContributorForm', () => {
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (123456)'), list);
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (123456)',
             affiliation: 'UQ',
@@ -646,7 +646,7 @@ describe('Component ContributorForm', () => {
             },
         });
         fireEvent.click(getByTestId('rek-contributor-cancel'));
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             nameAsPublished: 'Firstname Lastname',
             affiliation: 'UQ',
             orgaff: '',

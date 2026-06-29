@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Component FixRecord for non-compliant Open Access form submission payload should submit fix record data 1`] = `"{"issue":"Added comments: \\n          my comments"}"`;
 

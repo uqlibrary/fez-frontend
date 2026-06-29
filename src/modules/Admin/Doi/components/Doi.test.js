@@ -402,7 +402,7 @@ describe('DOI component', () => {
 
         const { getByTestId } = setup({});
         fireEvent.click(getByTestId('rek-doi-cancel'));
-        expect(window.location.assign).toBeCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);
+        expect(window.location.assign).toHaveBeenCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);
 
         window.location = location;
     });

@@ -154,7 +154,7 @@ describe('Application component', () => {
         window.location = { assign: assignFn };
         mockUseLocation.pathname = '/rhdsubmission';
         setup({ account: null });
-        expect(assignFn).toBeCalledWith('http://localhost/login?url=dW5kZWZpbmVk');
+        expect(assignFn).toHaveBeenCalledWith('http://localhost/login?url=dW5kZWZpbmVk');
     });
 
     // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
@@ -180,7 +180,7 @@ describe('Application component', () => {
             customRedirectors,
         });
 
-        expect(mockUseNavigate).toBeCalledWith('/admin/dashboard', { replace: true });
+        expect(mockUseNavigate).toHaveBeenCalledWith('/admin/dashboard', { replace: true });
     });
 
     it('should redirect to logout page', () => {
@@ -195,7 +195,7 @@ describe('Application component', () => {
         });
 
         fireEvent.click(getByRole('button', { name: /Log out/i }));
-        expect(assignFn).toBeCalledWith('https://auth.library.uq.edu.au/logout?url=aHR0cDovL2xvY2FsaG9zdC8=');
+        expect(assignFn).toHaveBeenCalledWith('https://auth.library.uq.edu.au/logout?url=aHR0cDovL2xvY2FsaG9zdC8=');
     });
 
     it('should not render alert if user is not fez author and on the journal search page', () => {
@@ -231,7 +231,7 @@ describe('Application component', () => {
         expect(getByTestId('orcid-optional')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('action-button'));
-        expect(mockUseNavigate).toBeCalledWith('/author-identifiers/orcid/link');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/author-identifiers/orcid/link');
     });
 
     it('should render orcid alert for account with fez author without ORCID ID and redirect when receiving orcid response', () => {
@@ -255,7 +255,7 @@ describe('Application component', () => {
         expect(getByTestId('orcid-optional')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('action-button'));
-        expect(assignFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
+        expect(assignFn).toHaveBeenCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
     });
 
     it('should not show orcid alert for a student without an author account', () => {

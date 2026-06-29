@@ -156,11 +156,11 @@ describe('MyRecords test', () => {
         });
         expect(container).toMatchSnapshot();
 
-        expect(loadFn).toBeCalledTimes(1);
+        expect(loadFn).toHaveBeenCalledTimes(1);
         // change facet should make api call
         fireEvent.click(getByTestId('clickable-facet-category-display-type'));
         fireEvent.click(getByTestId('facet-filter-nested-item-display-type-book'));
-        expect(loadFn).toBeCalledTimes(2);
+        expect(loadFn).toHaveBeenCalledTimes(2);
     });
 
     it('should handle larger number of pubs than page size', () => {

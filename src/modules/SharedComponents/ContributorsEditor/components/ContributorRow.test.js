@@ -244,7 +244,7 @@ describe('Component ContributorRow', () => {
         });
 
         fireEvent.click(getByRole('listitem', { name: 'Select this record (J. Smith) to assign it to you' }));
-        expect(testFunction).toBeCalledWith(0);
+        expect(testFunction).toHaveBeenCalledWith(0);
     });
 
     it('should select when it is not yet selected disabled', () => {
@@ -280,7 +280,7 @@ describe('Component ContributorRow', () => {
 
         const { getByTestId } = setup(testObj);
         fireEvent.click(getByTestId('test-list-row-0'));
-        expect(testFunction).toBeCalledWith(testObj.index);
+        expect(testFunction).toHaveBeenCalledWith(testObj.index);
     });
 
     it('should attempt to assign the current author when keyboard submit', () => {
