@@ -1115,7 +1115,7 @@ describe('ViewJournal', () => {
                         activeFacets: {
                             filters: {
                                 ...publishAsOASearchFacetDefaults,
-                                'Highest quartile': ['1', '2', '3', '4'],
+                                'Highest quartile': ['1'],
                             },
                         },
                     };
@@ -1161,7 +1161,7 @@ describe('ViewJournal', () => {
                         activeFacets: {
                             filters: {
                                 ...publishAsOASearchFacetDefaults,
-                                'Highest quartile': ['2', '3', '4'],
+                                'Highest quartile': ['1', '2'],
                             },
                         },
                     };
@@ -1207,7 +1207,7 @@ describe('ViewJournal', () => {
                         activeFacets: {
                             filters: {
                                 ...publishAsOASearchFacetDefaults,
-                                'Highest quartile': ['3', '4'],
+                                'Highest quartile': ['1', '2', '3'],
                             },
                         },
                     };

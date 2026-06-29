@@ -125,7 +125,7 @@ const buildPublishAsOASearch = data =>
             extractHighestQuartile(wosData, 'jnl_jcr_scie_category_quartile'),
         );
         if (highestQuartile < 5) {
-            facets['Highest quartile'] = [1, 2, 3, 4].slice(highestQuartile - 1);
+            facets['Highest quartile'] = [1, 2, 3, 4].slice(0, highestQuartile);
         }
 
         const scopusSubjects = extractSubjects(
