@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { render } from '@testing-library/react';
+import { render as defaultRender } from '@testing-library/react';
 import { useForm } from 'react-hook-form';
 import Controller from './Controller';
 import { fireEvent, waitFor } from 'test-utils';
@@ -20,7 +20,7 @@ const InputComponent = ({ field, fieldState, formState }) => (
     </div>
 );
 
-const setup = props => {
+const setup = (props = {}, render = defaultRender) => {
     const Wrapper = () => {
         const { control, handleSubmit, setFocus } = useForm();
 
@@ -61,9 +61,14 @@ describe('Controller component', () => {
     });
 
     test("should pass on `ref` prop as `inputRef` to allow React Hook Form's `setFocus` helper to work as expected for MUI components", async () => {
-        const { getByTestId } = setup({ focusInputOnRender: true });
-
+        const { getByTestId, rerender } = setup({ focusInputOnRender: true });
         await waitFor(() => expect(getByTestId('test-text-field-input')).toHaveFocus());
+
+        setup({ focusInputOnRender: true }, rerender);
+        await waitFor(() => expect(getByTestId('test-text-field-input')).toHaveFocus());
+
+        setup({}, rerender);
+        await waitFor(() => expect(getByTestId('test-text-field-input')).not.toHaveFocus());
     });
 
     test('should pass error as in field.state prop and formState', async () => {
