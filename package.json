@@ -15,6 +15,8 @@
     "codestyles:fix": "cross-env prettier-eslint --write",
     "codestyles:fix:all": "cross-env prettier-eslint '**/*.{js,jsx,ts,tsx}' --write",
     "codestyles:fix:staged": "cross-env FILES=$(git diff --cached --name-only --diff-filter=ACM | grep \".jsx\\{0,1\\}$\"); npx prettier-eslint $FILES --write",
+    "debug:cc:linux-fix-path": "find \"${PWD}/coverage\" -type f -exec sed -i 's|/src/|'\"${PWD}\"'/src/|g' {} +",
+    "debug:cc:macos-fix-path": "LC_ALL=C find \"${PWD}/coverage\" -type f -exec sed -i '' 's|/src/|'\"${PWD}\"'/src/|g' {} +",
     "eslint": "eslint '**/*.{js,jsx,ts,tsx}' --quiet",
     "eslint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --quiet --fix",
     "eslint:fix:staged": "sh -c 'files=$(git diff --name-only --diff-filter=ACM HEAD | grep -E \"\\.(js|jsx|ts|tsx)$\"); [ -n \"$files\" ] && echo \"$files\" | xargs eslint --fix || true'",
