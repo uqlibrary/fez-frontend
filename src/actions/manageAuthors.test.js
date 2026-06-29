@@ -176,6 +176,42 @@ describe('author list actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
+        it('should coerce an empty aut_name_overridden to integer 0 before posting', async () => {
+            let postedBody;
+            mockApi.onPost(repositories.routes.AUTHOR_API().apiUrl).reply(config => {
+                postedBody = JSON.parse(config.data);
+                return [200, { data: { ...mockData.authorListItem } }];
+            });
+
+            await mockActionsStore.dispatch(
+                addAuthor({
+                    aut_fname: 'Test',
+                    aut_lname: 'User',
+                    aut_name_overridden: '',
+                }),
+            );
+
+            expect(postedBody.aut_name_overridden).toBe(0);
+        });
+
+        it('should preserve a set aut_name_overridden value before posting', async () => {
+            let postedBody;
+            mockApi.onPost(repositories.routes.AUTHOR_API().apiUrl).reply(config => {
+                postedBody = JSON.parse(config.data);
+                return [200, { data: { ...mockData.authorListItem } }];
+            });
+
+            await mockActionsStore.dispatch(
+                addAuthor({
+                    aut_fname: 'Test',
+                    aut_lname: 'User',
+                    aut_name_overridden: 1,
+                }),
+            );
+
+            expect(postedBody.aut_name_overridden).toBe(1);
+        });
+
         it('should dispatch correct number of actions on author add failed', async () => {
             mockApi.onPost(repositories.routes.AUTHOR_API().apiUrl).reply(500);
 
