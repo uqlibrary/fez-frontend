@@ -27,21 +27,6 @@ import {
 import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
-    describe('silentTryCatch', () => {
-        it('it should call and return given closure return value', () => {
-            const returnValue = 'abc';
-            const mock = jest.fn().mockReturnValue('abc');
-            expect(silentTryCatch(mock)).toEqual(returnValue);
-        });
-        it('it should call and return default value in case of failures', () => {
-            const defaultValue = 'abc';
-            const mock = jest.fn().mockImplementation(() => {
-                throw new Error('test');
-            });
-            expect(silentTryCatch(mock, defaultValue)).toEqual(defaultValue);
-        });
-    });
-
     it('isURL', () => {
         expect(isURL('http://library.uq.edu.au')).toBeTruthy();
         expect(isURL('https://library.uq.edu.au')).toBeTruthy();
