@@ -47,18 +47,18 @@ export const fillInput = async (page: Page, selector: string, value: any, times:
     await page.fill(selector, String(value).repeat(times));
 };
 
-export const enterContributorUsingPopoverNamesForm = async (page: Page, fieldName: string, ...names: string[]) => {
+export const enterItemUsingNamesPopoverForm = async (page: Page, fieldName: string, ...names: string[]) => {
     await page.getByTestId(`${fieldName}-input`).click();
-    await page.waitForSelector(`[data-testid="${fieldName}-popover-names-form-family-name"]`);
-    if (names[0]) await page.getByTestId(`${fieldName}-popover-names-form-given-name-input`).fill(names[0]);
-    await page.getByTestId(`${fieldName}-popover-names-form-family-name-input`).fill(names[1]);
-    const submitButton = page.getByTestId(`${fieldName}-popover-names-form-submit-button`);
+    await page.waitForSelector(`[data-testid="${fieldName}-names-popover-form-family-name"]`);
+    if (names[0]) await page.getByTestId(`${fieldName}-names-popover-form-given-name-input`).fill(names[0]);
+    await page.getByTestId(`${fieldName}-names-popover-form-family-name-input`).fill(names[1]);
+    const submitButton = page.getByTestId(`${fieldName}-names-popover-form-submit-button`);
     await expect(submitButton).toBeEnabled();
     await submitButton.click();
 };
 
-export const addContributorUsingPopoverNamesForm = async (page: Page, fieldName: string, ...names: string[]) => {
-    await enterContributorUsingPopoverNamesForm(page, fieldName, ...names);
+export const addItemUsingNamesPopoverForm = async (page: Page, fieldName: string, ...names: string[]) => {
+    await enterItemUsingNamesPopoverForm(page, fieldName, ...names);
     await page.getByTestId(`${fieldName}-add`).click();
 };
 

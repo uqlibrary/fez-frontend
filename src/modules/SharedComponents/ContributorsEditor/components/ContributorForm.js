@@ -9,7 +9,7 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
-import PopoverNamesForm, { MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST } from './PopoverNamesForm';
+import NamesPopoverForm, { MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST } from './NamesPopoverForm';
 import { default as globalLocale } from 'locale/global';
 import { validation } from 'config';
 
@@ -64,8 +64,8 @@ export const ContributorForm = ({
     showContributorAssignment,
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput = false,
-    hidePopoverNamesForm = false,
-    popoverNamesFormMode = MODE_FAMILY_NAME_FIRST,
+    hideNamesPopoverForm = false,
+    namesPopoverFormMode = MODE_FAMILY_NAME_FIRST,
 }) => {
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
@@ -291,14 +291,14 @@ export const ContributorForm = ({
                     </Grid>
                 )}
                 <Grid item xs={12} sm>
-                    {!hidePopoverNamesForm && (
+                    {!hideNamesPopoverForm && (
                         <>
-                            <PopoverNamesForm
+                            <NamesPopoverForm
                                 id={contributorFormId}
                                 ref={namesFormRef}
                                 onClose={value => setContributor({ ...contributor, nameAsPublished: value })}
                                 isEditing={contributor?.selected}
-                                mode={popoverNamesFormMode}
+                                mode={namesPopoverFormMode}
                             />
                             {renderNameField({
                                 inputProps: {
@@ -316,7 +316,7 @@ export const ContributorForm = ({
                             })}
                         </>
                     )}
-                    {hidePopoverNamesForm && renderNameField()}
+                    {hideNamesPopoverForm && renderNameField()}
                 </Grid>
                 {(((showIdentifierLookup || isNtro) &&
                     (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
@@ -427,8 +427,8 @@ ContributorForm.propTypes = {
     showContributorAssignment: PropTypes.bool,
     showIdentifierLookup: PropTypes.bool,
     showRoleInput: PropTypes.bool,
-    hidePopoverNamesForm: PropTypes.bool,
-    popoverNamesFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
+    hideNamesPopoverForm: PropTypes.bool,
+    namesPopoverFormMode: PropTypes.oneOf([MODE_FAMILY_NAME_FIRST, MODE_GIVEN_NAME_FIRST]),
 };
 
 export default ContributorForm;

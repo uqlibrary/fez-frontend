@@ -472,14 +472,14 @@ const selectDropDownOptionByElement = async (el, option, index = 0) => {
  * @param {array} names
  * @return {Promise<void>}
  */
-const addContributorUsingPopoverNamesForm = async (fieldName, ...names) => {
+const addItemUsingNamesPopoverForm = async (fieldName, ...names) => {
     await userEvent.click(screen.getByTestId(`${fieldName}-input`));
-    await waitFor(() => expect(screen.getByTestId(`${fieldName}-popover-names-form-family-name`)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTestId(`${fieldName}-names-popover-form-family-name`)).toBeInTheDocument());
     names[0] &&
-        (await userEvent.type(screen.getByTestId(`${fieldName}-popover-names-form-given-name-input`), names[0]));
-    await userEvent.type(screen.getByTestId(`${fieldName}-popover-names-form-family-name-input`), names[1]);
-    await waitToBeEnabled(`${fieldName}-popover-names-form-submit-button`);
-    await userEvent.click(screen.getByTestId(`${fieldName}-popover-names-form-submit-button`));
+        (await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-given-name-input`), names[0]));
+    await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-family-name-input`), names[1]);
+    await waitToBeEnabled(`${fieldName}-names-popover-form-submit-button`);
+    await userEvent.click(screen.getByTestId(`${fieldName}-names-popover-form-submit-button`));
     await userEvent.click(screen.getByTestId(`${fieldName}-add`));
 };
 
@@ -488,8 +488,8 @@ const addContributorUsingPopoverNamesForm = async (fieldName, ...names) => {
  * @param {array} names
  * @return {Promise<void>}
  */
-const addAndSelectContributorUsingPopoverNamesForm = async (fieldName, ...names) => {
-    await addContributorUsingPopoverNamesForm(fieldName, ...(!!names.length ? names : ['Brown', 'James']));
+const addAndSelectItemUsingNamesPopoverForm = async (fieldName, ...names) => {
+    await addItemUsingNamesPopoverForm(fieldName, ...(!!names.length ? names : ['Brown', 'James']));
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
@@ -622,8 +622,8 @@ module.exports = {
     assertRichTextEditorValue,
     selectDropDownOption,
     selectDropDownOptionByElement,
-    addContributorUsingPopoverNamesForm,
-    addAndSelectContributorUsingPopoverNamesForm,
+    addItemUsingNamesPopoverForm,
+    addAndSelectItemUsingNamesPopoverForm,
     clearAndType,
     sortObjectProps,
     getTableBodyRows,

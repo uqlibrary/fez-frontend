@@ -10,7 +10,7 @@ function setup(testProps = {}, renderMethod = render) {
         author: { aut_id: 1 },
         contributorEditorId: 'test',
         locale: testProps.locale || locale.components.contributors.field,
-        hidePopoverNamesForm: true,
+        hideNamesPopoverForm: true,
         ...testProps,
     };
     return renderMethod(

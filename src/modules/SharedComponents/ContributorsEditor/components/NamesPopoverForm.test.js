@@ -1,7 +1,7 @@
 import React, { createRef } from 'react';
 import { render, act, assertDisabled, assertEnabled } from 'test-utils';
 import userEvent from '@testing-library/user-event';
-import PopoverNamesForm, { defaultFormFields, MODE_GIVEN_NAME_FIRST } from './PopoverNamesForm';
+import NamesPopoverForm, { defaultFormFields, MODE_GIVEN_NAME_FIRST } from './NamesPopoverForm';
 
 const setup = (props = {}, renderMethod = render) => {
     const ref = createRef();
@@ -11,14 +11,14 @@ const setup = (props = {}, renderMethod = render) => {
             <button data-testid="trigger" onClick={event => ref.current.open(event, props.value || '')}>
                 open form
             </button>
-            <PopoverNamesForm id="test" ref={ref} onClose={jest.fn()} {...props} />
+            <NamesPopoverForm id="test" ref={ref} onClose={jest.fn()} {...props} />
         </>,
     );
 
     return { ...result, ref };
 };
 
-describe('PopoverNamesForm', () => {
+describe('NamesPopoverForm', () => {
     let user;
     beforeEach(() => {
         user = userEvent.setup();
@@ -41,8 +41,8 @@ describe('PopoverNamesForm', () => {
                 jest.runAllTimers();
             });
 
-            expect(queryByTestId('test-popover-names-form-family-name-input')).not.toBeInTheDocument();
-            expect(queryByTestId('test-popover-names-form-given-name-input')).not.toBeInTheDocument();
+            expect(queryByTestId('test-names-popover-form-family-name-input')).not.toBeInTheDocument();
+            expect(queryByTestId('test-names-popover-form-given-name-input')).not.toBeInTheDocument();
         });
     });
 
@@ -51,26 +51,26 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId } = setup();
             await user.click(getByTestId('trigger'));
 
-            expect(await findByTestId('test-popover-names-form-family-name-input')).toBeInTheDocument();
-            expect(getByTestId('test-popover-names-form-family-name-input')).toHaveFocus();
-            expect(getByTestId('test-popover-names-form-given-name-input')).toBeInTheDocument();
+            expect(await findByTestId('test-names-popover-form-family-name-input')).toBeInTheDocument();
+            expect(getByTestId('test-names-popover-form-family-name-input')).toHaveFocus();
+            expect(getByTestId('test-names-popover-form-given-name-input')).toBeInTheDocument();
         });
 
         it('should display form when trigger is clicked and focus on first field for `given name first` mode', async () => {
             const { getByTestId, findByTestId } = setup({ mode: MODE_GIVEN_NAME_FIRST });
             await user.click(getByTestId('trigger'));
 
-            expect(await findByTestId('test-popover-names-form-given-name-input')).toBeInTheDocument();
-            expect(getByTestId('test-popover-names-form-given-name-input')).toHaveFocus();
-            expect(getByTestId('test-popover-names-form-family-name-input')).toBeInTheDocument();
+            expect(await findByTestId('test-names-popover-form-given-name-input')).toBeInTheDocument();
+            expect(getByTestId('test-names-popover-form-given-name-input')).toHaveFocus();
+            expect(getByTestId('test-names-popover-form-family-name-input')).toBeInTheDocument();
         });
 
         it('should open and pre-fill fields with given values', async () => {
             const { getByTestId, findByTestId } = setup({ value: ' Doe ,  John ' });
             await user.click(getByTestId('trigger'));
 
-            const familyInput = await findByTestId('test-popover-names-form-family-name-input');
-            const givenInput = getByTestId('test-popover-names-form-given-name-input');
+            const familyInput = await findByTestId('test-names-popover-form-family-name-input');
+            const givenInput = getByTestId('test-names-popover-form-given-name-input');
 
             expect(familyInput).toHaveValue('Doe');
             expect(givenInput).toHaveValue('John');
@@ -80,8 +80,8 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId } = setup({ value: ' John  Doe ', mode: MODE_GIVEN_NAME_FIRST });
             await user.click(getByTestId('trigger'));
 
-            const familyInput = await findByTestId('test-popover-names-form-family-name-input');
-            const givenInput = getByTestId('test-popover-names-form-given-name-input');
+            const familyInput = await findByTestId('test-names-popover-form-family-name-input');
+            const givenInput = getByTestId('test-names-popover-form-given-name-input');
 
             expect(familyInput).toHaveValue('Doe');
             expect(givenInput).toHaveValue('John');
@@ -92,11 +92,11 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId, queryByTestId } = setup(onClose);
             await user.click(getByTestId('trigger'));
 
-            await findByTestId('test-popover-names-form-family-name-input');
-            expect(queryByTestId('test-popover-names-form')).toBeInTheDocument();
+            await findByTestId('test-names-popover-form-family-name-input');
+            expect(queryByTestId('test-names-popover-form')).toBeInTheDocument();
             await user.keyboard('{escape}');
 
-            expect(queryByTestId('test-popover-names-form')).not.toBeInTheDocument();
+            expect(queryByTestId('test-names-popover-form')).not.toBeInTheDocument();
             expect(onClose).not.toHaveBeenCalled();
         });
     });
@@ -109,30 +109,30 @@ describe('PopoverNamesForm', () => {
             for (const item of defaultFormFields) {
                 // non-empty values
                 if (item.name === 'family-name') {
-                    expect(await findByTestId(`test-popover-names-form-${item.name}-helper-text`)).toHaveTextContent(
+                    expect(await findByTestId(`test-names-popover-form-${item.name}-helper-text`)).toHaveTextContent(
                         'This field is required',
                     );
-                    assertDisabled(getByTestId(`test-popover-names-form-submit-button`));
+                    assertDisabled(getByTestId(`test-names-popover-form-submit-button`));
                 }
 
                 // min chars
-                await user.type(await getByTestId(`test-popover-names-form-${item.name}-input`), 'd');
-                expect(getByTestId(`test-popover-names-form-${item.name}-helper-text`)).toHaveTextContent(
+                await user.type(await getByTestId(`test-names-popover-form-${item.name}-input`), 'd');
+                expect(getByTestId(`test-names-popover-form-${item.name}-helper-text`)).toHaveTextContent(
                     'Must be at least 2 characters',
                 );
-                assertDisabled(getByTestId(`test-popover-names-form-submit-button`));
+                assertDisabled(getByTestId(`test-names-popover-form-submit-button`));
 
                 // commas
-                await user.type(await getByTestId(`test-popover-names-form-${item.name}-input`), 'd,');
-                expect(getByTestId(`test-popover-names-form-${item.name}-helper-text`)).toHaveTextContent(
+                await user.type(await getByTestId(`test-names-popover-form-${item.name}-input`), 'd,');
+                expect(getByTestId(`test-names-popover-form-${item.name}-helper-text`)).toHaveTextContent(
                     'Commas are not allowed',
                 );
-                assertDisabled(getByTestId(`test-popover-names-form-submit-button`));
+                assertDisabled(getByTestId(`test-names-popover-form-submit-button`));
 
-                await user.type(await getByTestId(`test-popover-names-form-${item.name}-input`), '{backspace}d');
-                expect(queryByTestId(`test-popover-names-form-${item.name}-helper-text`)).not.toBeInTheDocument();
+                await user.type(await getByTestId(`test-names-popover-form-${item.name}-input`), '{backspace}d');
+                expect(queryByTestId(`test-names-popover-form-${item.name}-helper-text`)).not.toBeInTheDocument();
             }
-            assertEnabled(getByTestId(`test-popover-names-form-submit-button`));
+            assertEnabled(getByTestId(`test-names-popover-form-submit-button`));
         });
     });
 
@@ -142,9 +142,9 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId } = setup({ onClose });
             await user.click(getByTestId('trigger'));
 
-            await user.type(await findByTestId('test-popover-names-form-family-name-input'), '  Doe  ');
-            await user.type(getByTestId('test-popover-names-form-given-name-input'), '  John  ');
-            await user.click(getByTestId('test-popover-names-form-submit-button'));
+            await user.type(await findByTestId('test-names-popover-form-family-name-input'), '  Doe  ');
+            await user.type(getByTestId('test-names-popover-form-given-name-input'), '  John  ');
+            await user.click(getByTestId('test-names-popover-form-submit-button'));
 
             expect(onClose).toHaveBeenCalledTimes(1);
             expect(onClose).toHaveBeenCalledWith('Doe, John');
@@ -155,8 +155,8 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId } = setup({ onClose });
             await user.click(getByTestId('trigger'));
 
-            await user.type(await findByTestId('test-popover-names-form-family-name-input'), '  Doe  ');
-            await user.click(getByTestId('test-popover-names-form-submit-button'));
+            await user.type(await findByTestId('test-names-popover-form-family-name-input'), '  Doe  ');
+            await user.click(getByTestId('test-names-popover-form-submit-button'));
 
             expect(onClose).toHaveBeenCalledTimes(1);
             expect(onClose).toHaveBeenCalledWith('Doe');
@@ -167,9 +167,9 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId } = setup({ onClose, mode: MODE_GIVEN_NAME_FIRST });
             await user.click(getByTestId('trigger'));
 
-            await user.type(await findByTestId('test-popover-names-form-family-name-input'), '  Doe  ');
-            await user.type(getByTestId('test-popover-names-form-given-name-input'), '  John  ');
-            await user.click(getByTestId('test-popover-names-form-submit-button'));
+            await user.type(await findByTestId('test-names-popover-form-family-name-input'), '  Doe  ');
+            await user.type(getByTestId('test-names-popover-form-given-name-input'), '  John  ');
+            await user.click(getByTestId('test-names-popover-form-submit-button'));
 
             expect(onClose).toHaveBeenCalledTimes(1);
             expect(onClose).toHaveBeenCalledWith('John Doe');
@@ -180,8 +180,8 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId } = setup({ onClose, mode: MODE_GIVEN_NAME_FIRST });
             await user.click(getByTestId('trigger'));
 
-            await user.type(await findByTestId('test-popover-names-form-family-name-input'), '  Doe  ');
-            await user.click(getByTestId('test-popover-names-form-submit-button'));
+            await user.type(await findByTestId('test-names-popover-form-family-name-input'), '  Doe  ');
+            await user.click(getByTestId('test-names-popover-form-submit-button'));
 
             expect(onClose).toHaveBeenCalledTimes(1);
             expect(onClose).toHaveBeenCalledWith('Doe');
@@ -192,8 +192,8 @@ describe('PopoverNamesForm', () => {
             const { getByTestId, findByTestId } = setup({ onClose });
             await user.click(getByTestId('trigger'));
 
-            await user.type(await findByTestId('test-popover-names-form-family-name-input'), '  Doe  ');
-            await user.type(getByTestId('test-popover-names-form-given-name-input'), '  John  ');
+            await user.type(await findByTestId('test-names-popover-form-family-name-input'), '  Doe  ');
+            await user.type(getByTestId('test-names-popover-form-given-name-input'), '  John  ');
             await user.keyboard('{enter}');
 
             expect(onClose).toHaveBeenCalledTimes(1);

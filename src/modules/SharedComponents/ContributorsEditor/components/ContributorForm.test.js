@@ -1,14 +1,6 @@
 import React from 'react';
 import ContributorForm from './ContributorForm';
-import {
-    render,
-    WithReduxStore,
-    fireEvent,
-    waitFor,
-    act,
-    userEvent,
-    addContributorUsingPopoverNamesForm,
-} from 'test-utils';
+import { render, WithReduxStore, fireEvent, waitFor, act, userEvent, addItemUsingNamesPopoverForm } from 'test-utils';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data';
 
@@ -33,7 +25,7 @@ function setup(testProps = {}) {
             nameAsPublishedLabel: 'Please enter author name',
         },
         contributorFormId: 'rek-contributor',
-        hidePopoverNamesForm: true,
+        hideNamesPopoverForm: true,
         ...testProps,
     };
     return renderComponent(props);
@@ -112,7 +104,7 @@ describe('Component ContributorForm', () => {
     });
 
     describe('should add contributor if nameAsPublished is not empty', () => {
-        it('hidePopoverNamesForm=true', async () => {
+        it('hideNamesPopoverForm=true', async () => {
             const testFn = jest.fn();
             const { getByTestId } = setup({
                 onSubmit: testFn,
@@ -129,13 +121,13 @@ describe('Component ContributorForm', () => {
                 required: false,
             });
         });
-        it('hidePopoverNamesForm=false', async () => {
+        it('hideNamesPopoverForm=false', async () => {
             const testFn = jest.fn();
             setup({
                 onSubmit: testFn,
-                hidePopoverNamesForm: false,
+                hideNamesPopoverForm: false,
             });
-            await addContributorUsingPopoverNamesForm('rek-contributor', 'Test', 'Author');
+            await addItemUsingNamesPopoverForm('rek-contributor', 'Test', 'Author');
             expect(testFn).toHaveBeenCalledWith({
                 affiliation: '',
                 nameAsPublished: 'Author, Test',
