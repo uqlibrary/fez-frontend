@@ -81,15 +81,15 @@ describe('GrantListEditorForm', () => {
 
         fireEvent.change(getByTestId('rek-grant-id-input'), { target: { name: 'grantId', value: '123' } });
         fireEvent.keyDown(getByTestId('rek-grant-id-input'), { key: 'Enter', code: 13 });
-        expect(onAddFn).not.toBeCalled();
+        expect(onAddFn).not.toHaveBeenCalled();
 
         fireEvent.change(getByTestId('rek-grant-agency-input'), { target: { name: 'grantAgencyName', value: 'test' } });
 
         fireEvent.keyDown(getByTestId('rek-grant-id-input'), { key: 'Enter', code: 13 });
-        expect(onAddFn).not.toBeCalled();
+        expect(onAddFn).not.toHaveBeenCalled();
 
         fireEvent.keyDown(getByTestId('rek-grant-id-input'), { key: 'Esc', code: 27 });
-        expect(onAddFn).not.toBeCalled();
+        expect(onAddFn).not.toHaveBeenCalled();
     });
 
     it('should load form with selected grant information', () => {

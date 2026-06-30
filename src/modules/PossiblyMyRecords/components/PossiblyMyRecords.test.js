@@ -165,9 +165,9 @@ describe('Component PossiblyMyRecords', () => {
         });
 
         fireEvent.click(getByRole('button', { name: 'Not mine' }));
-        expect(mockHideRecord).not.toBeCalled();
+        expect(mockHideRecord).not.toHaveBeenCalled();
         fireEvent.click(getByRole('button', { name: 'Yes' }));
-        expect(mockHideRecord).toBeCalled();
+        expect(mockHideRecord).toHaveBeenCalled();
     });
 
     it('renders active filters', () => {
@@ -209,7 +209,7 @@ describe('Component PossiblyMyRecords', () => {
         };
         setup();
 
-        expect(mockSearchPossiblyYourPublications).toBeCalled();
+        expect(mockSearchPossiblyYourPublications).toHaveBeenCalled();
     });
 
     it('gets publications when user clicks back with no location state', () => {
@@ -220,7 +220,7 @@ describe('Component PossiblyMyRecords', () => {
         };
         setup();
 
-        expect(mockSearchPossiblyYourPublications).toBeCalled();
+        expect(mockSearchPossiblyYourPublications).toHaveBeenCalled();
     });
 
     it('should handle larger number of pubs than page size', () => {

@@ -241,7 +241,7 @@ describe('MyRecords test', () => {
             },
             rerender,
         );
-        expect(testAction).toBeCalled();
+        expect(testAction).toHaveBeenCalled();
         expect(container).toMatchSnapshot();
     });
 

@@ -326,7 +326,7 @@ describe('Component ClaimRecord ', () => {
 
             fireEvent.click(getByText('Cancel this claim'));
 
-            expect(mockClearNewRecord).toBeCalled();
+            expect(mockClearNewRecord).toHaveBeenCalled();
             expect(mockUseNavigate).toHaveBeenCalledWith(-1);
         });
 
@@ -448,8 +448,8 @@ describe('Component ClaimRecord ', () => {
                 expect(mockUseNavigate).toHaveBeenCalledWith('/records/mine');
                 fireEvent.click(getByTestId('cancel-dialog-box'));
                 expect(mockUseNavigate).toHaveBeenCalledWith('/test');
-                expect(mockClearNewRecord).toBeCalled();
-                expect(mockClearRedirectPath).toBeCalled();
+                expect(mockClearNewRecord).toHaveBeenCalled();
+                expect(mockClearRedirectPath).toHaveBeenCalled();
             });
 
             it('should display confirmation box after successful submission and go back to previous page', async () => {

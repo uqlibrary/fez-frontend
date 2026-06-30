@@ -114,7 +114,7 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const { getByTestId } = setup({ pagingData: data, onPageChanged: testFunction });
         fireEvent.click(getByTestId('test-select-page-2'));
-        expect(testFunction).toBeCalled();
+        expect(testFunction).toHaveBeenCalled();
     });
 
     it('component with non-empty paging data, next page clicked', () => {
@@ -128,7 +128,7 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const { getByRole } = setup({ pagingData: data, onPageChanged: testFunction });
         fireEvent.click(getByRole('button', { name: 'Next' }));
-        expect(testFunction).toBeCalled();
+        expect(testFunction).toHaveBeenCalled();
     });
 
     it('component with non-empty paging data, previous page clicked', () => {
@@ -142,7 +142,7 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const { getByRole } = setup({ pagingData: data, onPageChanged: testFunction });
         fireEvent.click(getByRole('button', { name: 'Previous' }));
-        expect(testFunction).toBeCalled();
+        expect(testFunction).toHaveBeenCalled();
     });
 
     it('component should update page buttons', () => {

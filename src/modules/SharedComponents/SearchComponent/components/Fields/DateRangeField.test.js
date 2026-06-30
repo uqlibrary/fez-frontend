@@ -66,7 +66,7 @@ describe('DateRangeField component', () => {
         const onChangeFn = jest.fn();
         const { getByTestId } = setup({ id: 'test-date-range', onChange: onChangeFn });
         fireEvent.change(getByTestId('test-date-range-from-date'), { target: { value: '10/10/2010' } });
-        expect(onChangeFn).not.toBeCalled();
+        expect(onChangeFn).not.toHaveBeenCalled();
     });
 
     it('should call onChange once both date are entered in the range', () => {

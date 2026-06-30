@@ -82,7 +82,7 @@ describe('Component MenuDrawer', () => {
         const toggleFn = jest.fn();
         const { getByRole } = setup({ drawerOpen: true, onToggleDrawer: toggleFn });
         fireEvent.click(getByRole('button', { name: 'Close menu' }));
-        expect(toggleFn).toBeCalled();
+        expect(toggleFn).toHaveBeenCalled();
 
         fireEvent.click(getByRole('button', { name: /Primary text 0/i }));
         expect(mockUseNavigate).toHaveBeenCalledWith('/');

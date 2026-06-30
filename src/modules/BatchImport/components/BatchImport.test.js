@@ -227,7 +227,7 @@ describe('BatchImport Component', () => {
 
         await waitFor(() => getByTestId('alert-error-batch-import'));
 
-        expect(createBatchImport).toBeCalled();
+        expect(createBatchImport).toHaveBeenCalled();
     });
 
     it('should hide all other fields except directory selector', async () => {

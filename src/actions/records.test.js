@@ -1268,7 +1268,7 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(recordActions.unlockRecord('UQ:123456', testCallback));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(testCallback).toBeCalled();
+            expect(testCallback).toHaveBeenCalled();
         });
 
         it('dispatches expected actions on failure', async () => {
