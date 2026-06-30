@@ -4,7 +4,14 @@ import { customRedirectors } from '../containers/App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
-import { render, WithReduxStore, WithMemoryRouter, fireEvent, waitForText } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithMemoryRouter,
+    fireEvent,
+    waitForText,
+    spyOnWindowLocationMethod,
+} from 'test-utils';
 import locale from '../../../locale/global';
 
 const mockUseNavigate = jest.fn();
@@ -51,17 +58,15 @@ function setup(testProps = {}, renderMethod = render) {
     );
 }
 
-beforeAll(() => {
-    delete global.window.location;
-    global.window.location = { href: jest.fn(), assign: jest.fn() };
-});
+const redirectHash = 'aHR0cDovL2Zlei1zdGFnaW5nLmxpYnJhcnkudXEuZWR1LmF1Lw==';
 
 describe('Application component', () => {
     let account;
     let author;
-    const saveLocation = window.location;
+    let assignMock;
 
     beforeEach(() => {
+        assignMock = spyOnWindowLocationMethod('assign');
         account = {
             id: 'uqauthor1',
             class: ['libstaff', 'IS_CURRENT'],
@@ -75,8 +80,7 @@ describe('Application component', () => {
     });
 
     afterEach(() => {
-        // delete window.location;
-        window.location = saveLocation;
+        jest.restoreAllMocks();
         mockUseNavigate.mockClear();
     });
 
@@ -149,12 +153,9 @@ describe('Application component', () => {
     });
 
     it('redirects user to login if not Authorized', () => {
-        const assignFn = jest.fn();
-        delete window.location;
-        window.location = { assign: assignFn };
         mockUseLocation.pathname = '/rhdsubmission';
         setup({ account: null });
-        expect(assignFn).toHaveBeenCalledWith('http://localhost/login?url=dW5kZWZpbmVk');
+        expect(assignMock).toHaveBeenCalledWith(`http://localhost/login?url=${redirectHash}`);
     });
 
     // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
@@ -162,7 +163,6 @@ describe('Application component', () => {
     // the file is not public, or they are logged in and the the file requires higher privs e.g. needs admin,
     // but they are a student.
     it('redirects user to login if going to a secure file url and not user logged in yet', () => {
-        window.location = { assign: jest.fn() };
         mockUseLocation.pathname = '/view/UQ:1/test.pdf';
         const { container } = setup({
             accountLoading: false,
@@ -184,18 +184,13 @@ describe('Application component', () => {
     });
 
     it('should redirect to logout page', () => {
-        const assignFn = jest.fn();
-        delete global.window.location;
-        global.window.location = {
-            assign: assignFn,
-        };
         const { getByRole } = setup({
             account: account,
             author: author,
         });
 
         fireEvent.click(getByRole('button', { name: /Log out/i }));
-        expect(assignFn).toHaveBeenCalledWith('https://auth.library.uq.edu.au/logout?url=aHR0cDovL2xvY2FsaG9zdC8=');
+        expect(assignMock).toHaveBeenCalledWith('https://auth.library.uq.edu.au/logout?url=aHR0cDovL2xvY2FsaG9zdC8=');
     });
 
     it('should not render alert if user is not fez author and on the journal search page', () => {
@@ -236,13 +231,6 @@ describe('Application component', () => {
 
     it('should render orcid alert for account with fez author without ORCID ID and redirect when receiving orcid response', () => {
         mockUseLocation = { pathname: '/not-public-page', search: '?code=010101' };
-        const assignFn = jest.fn();
-        delete global.window.location;
-        global.window.location = {
-            href: 'http://fez-staging.library.uq.edu.au?code=010101',
-            search: '?code=010101',
-            assign: assignFn,
-        };
         const { getByTestId } = setup({
             account: account,
             author: {
@@ -255,7 +243,7 @@ describe('Application component', () => {
         expect(getByTestId('orcid-optional')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('action-button'));
-        expect(assignFn).toHaveBeenCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
+        expect(assignMock).toHaveBeenCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
     });
 
     it('should not show orcid alert for a student without an author account', () => {

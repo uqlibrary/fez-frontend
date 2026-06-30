@@ -575,6 +575,26 @@ const withFakeTimers = async callback => {
     jest.useRealTimers();
 };
 
+// jsDom 25 no longer allows modification of window.location.
+// We therefore have to hack around this with some funky reflection code.
+// Use this in a beforeEach(), and be sure to jest.restoreAllMocks() in afterEach().
+// If using in a specific test only, you may need to jest.clearAllMocks() instead to
+// avoid settings leaking in to subsequent tests.
+// In general, you'll call this function like
+// let assignMock;
+// assignMock = hackLocationObject('assign');
+// where assignMock is defined with 'let' and assigned each time in beforeEach().
+// Then, check location calls using e.g. expect(assignMock).toHaveBeenCalledWith().
+
+const spyOnWindowLocationMethod = (methodToSpyOn, mockFn = jest.fn()) => {
+    const implSymbol = Reflect.ownKeys(window.location).find(key => typeof key === 'symbol');
+
+    if (implSymbol) {
+        jest.spyOn(window.location[implSymbol], methodToSpyOn).mockImplementation(mockFn);
+    }
+    return mockFn;
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -632,4 +652,5 @@ module.exports = {
     getTableBodyRows,
     api,
     withFakeTimers,
+    spyOnWindowLocationMethod,
 };
