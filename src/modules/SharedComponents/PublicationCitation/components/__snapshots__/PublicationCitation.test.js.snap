@@ -1835,6 +1835,19 @@ exports[`PublicationCitation  should render component with default item with ima
           src="http://localhost/view/UQ:676287/thumbnail_image.jpg"
           width="150"
         />
+        <div
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-1ywz4fm-MuiImageListItemBar-root"
+          data-testid="image-gallery-item-UQ:676287-alert"
+          id="image-gallery-item-UQ:676287-alert"
+        >
+          <div
+            class="MuiImageListItemBar-titleWrap MuiImageListItemBar-titleWrapTop css-q8s3vi-MuiImageListItemBar-titleWrap"
+          >
+            <div
+              class="MuiImageListItemBar-title css-1sdhmys-MuiImageListItemBar-title"
+            />
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -2205,7 +2218,7 @@ exports[`PublicationCitation  should render component with default item with ima
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-14of6lb-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-815vs4-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
@@ -4706,7 +4719,7 @@ exports[`PublicationCitation  should render component without image if whitelist
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-14of6lb-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-815vs4-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
