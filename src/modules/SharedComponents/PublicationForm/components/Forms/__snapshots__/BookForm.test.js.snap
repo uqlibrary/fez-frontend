@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`BookForm component 1`] = `
 <div>
@@ -475,7 +475,7 @@ exports[`BookForm component 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-author"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -639,7 +639,7 @@ exports[`BookForm component 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-contributor"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -2239,7 +2239,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-author"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -2454,7 +2454,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-contributor"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -3812,7 +3812,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-author"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -4027,7 +4027,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-contributor"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -5437,7 +5437,7 @@ exports[`BookForm component with all fields disabled 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-author"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -5602,7 +5602,7 @@ exports[`BookForm component with all fields disabled 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-contributor"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -6450,7 +6450,7 @@ exports[`BookForm should hide author when is edited book 1`] = `
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-contributor"
-                      style="border-style: solid; border-width: 2px; border-color: #e5e5e5; border-radius: 4px; background-color: rgb(239, 239, 239);"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"

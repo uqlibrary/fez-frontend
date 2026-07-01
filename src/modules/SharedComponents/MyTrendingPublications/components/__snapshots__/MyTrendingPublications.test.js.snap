@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Component MyTrendingPublications should not render trending publications when there are no matching source counts in the api response 1`] = `
 <div>

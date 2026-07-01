@@ -91,7 +91,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByTestId('rek-contributor-add'));
 
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             nameAsPublished: 'Firstname Lastname',
             affiliation: 'UQ',
             orgaff: 'The University of Queensland',
@@ -171,7 +171,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
         fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Esc', code: 27 });
-        expect(onAddFn).not.toBeCalled();
+        expect(onAddFn).not.toHaveBeenCalled();
     });
 
     it('should not add contributor if "Enter" is pressed but name as published is empty', () => {
@@ -181,7 +181,7 @@ describe('Component ContributorForm', () => {
         });
 
         fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Enter', code: 13 });
-        expect(onAddFn).not.toBeCalled();
+        expect(onAddFn).not.toHaveBeenCalled();
     });
 
     it('should not add contributor if "Enter" is pressed, name as published is set but creator role is empty', () => {
@@ -192,7 +192,7 @@ describe('Component ContributorForm', () => {
         });
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Test Author' } });
         fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Enter', code: 13 });
-        expect(onAddFn).not.toBeCalled();
+        expect(onAddFn).not.toHaveBeenCalled();
     });
 
     it('should not add contributor if key is Enter, affiliation is not UQ, and orgaff and orgtype props are empty strings', () => {
@@ -206,7 +206,7 @@ describe('Component ContributorForm', () => {
         fireEvent.mouseDown(getByTestId('org-affiliation-select'));
         fireEvent.click(getByText('Not UQ'));
         fireEvent.keyDown(getByTestId('rek-contributor-input'), { key: 'Enter', code: 13 });
-        expect(onAddFn).not.toBeCalled();
+        expect(onAddFn).not.toHaveBeenCalled();
     });
 
     it('should handle affiliation change', async () => {
@@ -299,7 +299,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
 
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (mdcmar)',
             affiliation: '',
@@ -359,7 +359,7 @@ describe('Component ContributorForm', () => {
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (mdcmar)',
             affiliation: '',
@@ -451,7 +451,7 @@ describe('Component ContributorForm', () => {
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (smdcmar)'), list);
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (smdcmar)',
             affiliation: '',
@@ -548,7 +548,7 @@ describe('Component ContributorForm', () => {
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (123456)'), list);
-        expect(testFn).not.toBeCalled();
+        expect(testFn).not.toHaveBeenCalled();
     });
 
     it('should submit contributor form if admin user is linking UQ user with identifier lookup', async () => {
@@ -607,7 +607,7 @@ describe('Component ContributorForm', () => {
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (123456)'), list);
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (123456)',
             affiliation: 'UQ',
@@ -687,7 +687,7 @@ describe('Component ContributorForm', () => {
             },
         });
         fireEvent.click(getByTestId('rek-contributor-cancel'));
-        expect(testFn).toBeCalledWith({
+        expect(testFn).toHaveBeenCalledWith({
             nameAsPublished: 'Firstname Lastname',
             affiliation: 'UQ',
             orgaff: '',
@@ -713,7 +713,7 @@ describe('Component ContributorForm', () => {
             },
         });
         fireEvent.click(getByTitle('Clear'));
-        expect(testFn).not.toBeCalled();
+        expect(testFn).not.toHaveBeenCalled();
     });
 
     it('should clear contributor form on clearing from UQ ID and submit for admins', () => {
@@ -733,7 +733,7 @@ describe('Component ContributorForm', () => {
             },
         });
         fireEvent.click(getByTitle('Clear'));
-        expect(testFn).toBeCalled();
+        expect(testFn).toHaveBeenCalled();
     });
 
     // it('should not clear and submit blank contributor', () => {
@@ -754,6 +754,6 @@ describe('Component ContributorForm', () => {
     //         },
     //     });
     //     fireEvent.click(getByTitle('Clear'));
-    //     expect(testFn).not.toBeCalled();
+    //     expect(testFn).not.toHaveBeenCalled();
     // });
 });

@@ -57,6 +57,6 @@ describe('LockedAlert', () => {
     it('should call alert action to unlock record', () => {
         const { getByTestId } = setup();
         fireEvent.click(getByTestId('action-button'));
-        expect(adminUnlockJournal).toBeCalled();
+        expect(adminUnlockJournal).toHaveBeenCalled();
     });
 });

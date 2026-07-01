@@ -63,7 +63,7 @@ describe('FavouriteSearch', () => {
 
         const { getByText } = setup({});
         expect(getByText('Loading list of favourite searches')).toBeInTheDocument();
-        expect(loadFavouriteSearchListFn).toBeCalled();
+        expect(loadFavouriteSearchListFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('Favourite searches'));
         expect(getByText('Favourite searches')).toBeInTheDocument();
@@ -99,6 +99,6 @@ describe('FavouriteSearch', () => {
         fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
         fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
 
-        expect(deleteFavouriteSearchListItemFn).toBeCalled();
+        expect(deleteFavouriteSearchListItemFn).toHaveBeenCalled();
     });
 });

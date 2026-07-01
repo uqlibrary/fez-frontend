@@ -9,6 +9,7 @@ import {
     waitForElementToBeRemoved,
     waitFor,
     userEvent,
+    spyOnWindowLocationMethod,
 } from 'test-utils';
 import * as repositories from 'repositories';
 import { record } from 'mock/data';
@@ -68,12 +69,19 @@ describe('Collection form - autofill', () => {
 });
 
 describe('Collection form', () => {
+    let assignMock;
+    let reloadMock;
     beforeAll(() => {
-        delete window.location;
-        window.location = { reload: jest.fn(), assign: jest.fn() }; // Mock reload function
+        const baseUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState(null, '', baseUrl);
     });
 
-    afterAll(() => {
+    beforeEach(() => {
+        assignMock = spyOnWindowLocationMethod('assign');
+        reloadMock = spyOnWindowLocationMethod('reload');
+    });
+
+    afterEach(() => {
         jest.restoreAllMocks();
     });
 
@@ -117,10 +125,10 @@ describe('Collection form', () => {
         await waitForElementToBeRemoved(() => getByTestId('rek-title-input'));
 
         fireEvent.click(getByTestId('add-another-collection'));
-        expect(window.location.reload).toHaveBeenCalled();
+        expect(reloadMock).toHaveBeenCalled();
 
         fireEvent.click(getByTestId('return-home'));
-        expect(window.location.assign).toHaveBeenCalledWith('/');
+        expect(assignMock).toHaveBeenCalledWith('/');
     });
 
     it('should show server error', async () => {

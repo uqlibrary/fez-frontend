@@ -18,6 +18,7 @@ import {
     assertInstanceOfFile,
     addItemUsingNamesPopoverForm,
     setRichTextEditorValue,
+    spyOnWindowLocationMethod,
 } from 'test-utils';
 import { useAccountContext } from 'context';
 import { waitFor } from '@testing-library/dom';
@@ -275,26 +276,20 @@ describe('ThesisSubmission', () => {
         });
 
         describe('redirections', () => {
-            const { location } = window;
+            let assignMock;
 
-            beforeAll(() => {
-                delete window.location;
-                window.location = { assign: jest.fn(), reload: jest.fn() };
+            beforeEach(() => {
+                assignMock = spyOnWindowLocationMethod('assign');
             });
 
             afterEach(() => {
-                window.location.assign.mockClear();
-                window.location.reload.mockClear();
-            });
-
-            afterAll(() => {
-                window.location = location;
+                jest.restoreAllMocks();
             });
 
             it('should redirect to cancel page', () => {
                 const { cancelSubmit } = getFormConstants({}, {}, true);
                 cancelSubmit();
-                expect(window.location.assign).toBeCalledWith(
+                expect(assignMock).toHaveBeenCalledWith(
                     expect.stringContaining(formLocale.thesisSubmission.cancelLink),
                 );
             });
@@ -302,7 +297,7 @@ describe('ThesisSubmission', () => {
             it('should redirect to after submit page', () => {
                 const { afterSubmit } = getFormConstants({}, {}, true);
                 afterSubmit();
-                expect(window.location.assign).toBeCalledWith(
+                expect(assignMock).toHaveBeenCalledWith(
                     expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
                 );
             });
@@ -415,32 +410,26 @@ describe('ThesisSubmission', () => {
         });
 
         describe('redirections', () => {
-            const { location } = window;
+            let reloadMock;
 
-            beforeAll(() => {
-                delete window.location;
-                window.location = { assign: jest.fn(), reload: jest.fn() };
+            beforeEach(() => {
+                reloadMock = spyOnWindowLocationMethod('reload');
             });
 
             afterEach(() => {
-                window.location.assign.mockClear();
-                window.location.reload.mockClear();
-            });
-
-            afterAll(() => {
-                window.location = location;
+                jest.resetAllMocks();
             });
 
             it('should reload after cancel', () => {
                 const { cancelSubmit } = getFormConstants({}, {});
                 cancelSubmit();
-                expect(window.location.reload).toBeCalled();
+                expect(reloadMock).toHaveBeenCalled();
             });
 
             it('should reload after submit', () => {
                 const { afterSubmit } = getFormConstants({}, {});
                 afterSubmit();
-                expect(window.location.reload).toBeCalled();
+                expect(reloadMock).toHaveBeenCalled();
             });
         });
     });
