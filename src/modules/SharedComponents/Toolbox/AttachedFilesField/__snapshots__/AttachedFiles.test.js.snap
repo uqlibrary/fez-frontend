@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AttachedFiles component AV Check should render download link infected files, preview link for non infected and none for derivatives 1`] = `
 [

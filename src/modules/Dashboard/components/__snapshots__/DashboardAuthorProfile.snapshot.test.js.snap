@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Dashboard Author Profile test Render the authors profile as expected for a UQ researcher) 1`] = `
 <div>

@@ -38,7 +38,7 @@ describe('Detailed History', () => {
 
         const { getByText } = setup({ record: { rek_pid: 'UQ:1' } });
 
-        expect(loadDetailedHistoryFn).toBeCalled();
+        expect(loadDetailedHistoryFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('First Element of the mock data'));
         expect(getByText('Date')).toBeInTheDocument();

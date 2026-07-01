@@ -8,7 +8,7 @@ describe('Author Affiliations', () => {
     it('Should correctly handle navigation', () => {
         const expected = '/admin/edit/UQ:1?tab=authors';
         navigateToEdit(mockNavigate, 'UQ:1');
-        expect(mockNavigate).toBeCalledWith(expected);
+        expect(mockNavigate).toHaveBeenCalledWith(expected);
     });
     it('should calculate affiliations correctly for valid affiliation data', () => {
         const KEY = 'fez_author_affiliation';

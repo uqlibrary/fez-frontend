@@ -89,7 +89,7 @@ describe('Component AddMissingRecord', () => {
                 addRecordStep: () => <span />,
             };
             setup({ ...props });
-            expect(mockUseNavigate).toBeCalledWith(pathConfig.records.add.find, { replace: true });
+            expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.records.add.find, { replace: true });
         },
     );
 });

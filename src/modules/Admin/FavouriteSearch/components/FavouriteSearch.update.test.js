@@ -63,6 +63,6 @@ describe('FavouriteSearch', () => {
         act(() => {
             fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
         });
-        expect(updateFavouriteSearchListItemFn).toBeCalled();
+        expect(updateFavouriteSearchListItemFn).toHaveBeenCalled();
     });
 });

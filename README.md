@@ -477,6 +477,13 @@ Before committing changes, locally run tests and update snapshots (if required).
 
 [Code coverage](coverage/jest/index.html) is available (after running `npm test`)
 
+**As of Jul 2026**, jsDom is at v29 and with this version comes some subtle changes to jest tests. 
+Most are minimal in impact, such as when using `toHaveStyle` calls to compare colour values; previously one could test with a string literal `red`, where in jsDom v29 this will now become an rgb check `rgb(255,0,0)`. Or where deprecated calls such as `toBeCalled` have been removed in favour of existing alternatives `toHaveBeenCalled`.
+
+However, when it comes to testing of `window.location` values and methods such as `href` or `assign`, v29 of jsDom no longer allows such direct manipulation. In order to test calls to e.g. `assign` or `reload`, use the helper function `spyOnWindowLocationMethod` and assert the returned spy functions.
+In rare occasions where the window location href expects to be set before tests run, the only way to reliably set this now is to add jsDom
+directives at the start of the test. See [src/helpers/redirectUserToPassiveLogin.test.js](src/helpers/redirectUserToPassiveLogin.test.js) as an example.
+
 #### Guidelines
 
 - [Action creators](https://github.com/uqlibrary/fez-frontend/blob/master/src/actions/README.md#testing)
