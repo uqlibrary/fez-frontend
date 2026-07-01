@@ -1,27 +1,15 @@
 import React from 'react';
 import { rtlRender, fireEvent } from 'test-utils';
-import { useInView } from 'react-intersection-observer';
 
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 import { collectionSearchResultsImages } from 'mock/data';
 import config from 'config/imageGalleryConfig';
 import * as utils from './Utils';
 
-jest.mock('react-intersection-observer', () => ({
-    useInView: jest.fn(),
-}));
-
-const mockUseInView = ({ inView = false } = {}) => {
-    useInView.mockReturnValue({
-        ref: jest.fn(),
-        inView,
-        entry: undefined,
-    });
-};
-
 const setup = (props = {}, render = rtlRender) => {
     const testProps = {
         item: { rek_pid: 0 },
+        inView: true,
         ...props,
     };
     return render(<ImageGalleryItemImage {...testProps} />);
@@ -29,7 +17,6 @@ const setup = (props = {}, render = rtlRender) => {
 
 describe('Image Gallery Item Image', () => {
     beforeEach(() => {
-        mockUseInView({ inView: true });
         config.thumbnailImage.defaultImageName = 'image_unavailable.svg';
     });
 
@@ -547,9 +534,7 @@ describe('Image Gallery Item Image', () => {
         };
 
         it('shows the default thumbnail before the image enters the viewport', () => {
-            mockUseInView({ inView: false });
-
-            const { getByRole } = setup();
+            const { getByRole } = setup({ item: imageItem, inView: false });
 
             const image = getByRole('img');
 
@@ -557,11 +542,7 @@ describe('Image Gallery Item Image', () => {
         });
 
         it('loads the thumbnail once it enters the viewport', () => {
-            mockUseInView({ inView: true });
-
-            const { getByRole } = setup({
-                item: imageItem,
-            });
+            const { getByRole } = setup({ item: imageItem });
 
             const image = getByRole('img');
 
