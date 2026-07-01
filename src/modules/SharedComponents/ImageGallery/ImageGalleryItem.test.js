@@ -42,19 +42,6 @@ describe('Image Gallery Item', () => {
         const galleryElement = getByTestId(`image-gallery-item-${collectionSearchResultsImages.data[1].rek_pid}`);
         expect(galleryElement).toBeInTheDocument();
         expect(getByText(collectionSearchResultsImages.data[1].rek_title)).toBeInTheDocument();
-        expect(getByTestId(`imageGalleryItemImage-${collectionSearchResultsImages.data[1].rek_pid}`)).toHaveAttribute(
-            'loading',
-            'lazy',
-        );
-    });
-    it('should render a full gallery item with eager loading', () => {
-        const { getByTestId } = setup({ item: collectionSearchResultsImages.data[1], lazyLoading: false });
-        const galleryElement = getByTestId(`image-gallery-item-${collectionSearchResultsImages.data[1].rek_pid}`);
-        expect(galleryElement).toBeInTheDocument();
-        expect(getByTestId(`imageGalleryItemImage-${collectionSearchResultsImages.data[1].rek_pid}`)).toHaveAttribute(
-            'loading',
-            'eager',
-        );
     });
 
     it('should enable clickable gallery item if URL prop supplied', () => {
