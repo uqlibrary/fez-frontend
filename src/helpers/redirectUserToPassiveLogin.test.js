@@ -1,20 +1,23 @@
+/**
+ * @jest-environment jsdom
+ * @jest-environment-options {"url": "https://espace.library.uq.edu.au/"}
+ */
 import Cookies from 'js-cookie';
 import { redirectUserToPassiveLogin } from './redirectUserToPassiveLogin';
 import { AUTH_URL_LOGIN, PASSIVE_LOGIN_CHECK_COOKIE_NAME } from 'config';
+import { spyOnWindowLocationMethod } from 'test-utils';
 
 jest.mock('js-cookie');
 
 describe('redirectUserToPassiveLogin', () => {
-    const originalLocation = window.location;
+    let assignMock;
 
     beforeEach(() => {
-        delete window.location;
-        window.location = { href: 'https://espace.library.uq.edu.au/', assign: jest.fn() };
+        assignMock = spyOnWindowLocationMethod('assign');
     });
 
     afterEach(() => {
-        window.location = originalLocation;
-        jest.clearAllMocks();
+        jest.resetAllMocks();
     });
 
     it('redirects to passive login when not suppressed', () => {
@@ -22,7 +25,7 @@ describe('redirectUserToPassiveLogin', () => {
 
         redirectUserToPassiveLogin();
 
-        expect(window.location.assign).toHaveBeenCalledWith(
+        expect(assignMock).toHaveBeenCalledWith(
             `${AUTH_URL_LOGIN}?passive=1&url=${window.btoa('https://espace.library.uq.edu.au/')}`,
         );
     });
@@ -32,6 +35,6 @@ describe('redirectUserToPassiveLogin', () => {
 
         redirectUserToPassiveLogin();
 
-        expect(window.location.assign).not.toHaveBeenCalled();
+        expect(assignMock).not.toHaveBeenCalled();
     });
 });

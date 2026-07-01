@@ -15,7 +15,7 @@ import {
     UQ_FULL_NAME,
 } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
-import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent, spyOnWindowLocationMethod } from 'test-utils';
 import { design } from '../../../../mock/data/testing/records';
 
 const confPaperRecord = {
@@ -396,15 +396,12 @@ describe('DOI component', () => {
     });
 
     it('should redirect to view page on form cancel', () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { assign: jest.fn(), reload: jest.fn() };
+        const assignMock = spyOnWindowLocationMethod('assign');
 
         const { getByTestId } = setup({});
         fireEvent.click(getByTestId('rek-doi-cancel'));
-        expect(window.location.assign).toBeCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);
-
-        window.location = location;
+        expect(assignMock).toHaveBeenCalledWith(`http://localhost/view/${mockRecord.rek_pid}`);
+        jest.clearAllMocks();
     });
 
     it('should call handleSubmit on form submit', () => {

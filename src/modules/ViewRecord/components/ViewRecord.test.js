@@ -1,6 +1,6 @@
 import React from 'react';
 import ViewRecord from './ViewRecord';
-import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, spyOnWindowLocationMethod } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
@@ -437,13 +437,7 @@ describe('ViewRecord', () => {
     });
 
     it('redirects user to login if not Authorized', () => {
-        const { location } = window;
-        delete window.location;
-
-        const assignFn = jest.fn();
-        window.location = {
-            assign: assignFn,
-        };
+        const assignFn = spyOnWindowLocationMethod('assign');
 
         const { getByTestId } = setup({
             viewRecordReducer: { recordToViewError: { message: 'Your session has expired', status: 403 } },
@@ -451,9 +445,11 @@ describe('ViewRecord', () => {
 
         fireEvent.click(getByTestId('action-button'));
 
-        expect(assignFn).toHaveBeenCalledWith('http://localhost/login?url=dW5kZWZpbmVk');
+        expect(assignFn).toHaveBeenCalledWith(
+            'http://localhost/login?url=aHR0cDovL2Zlei1zdGFnaW5nLmxpYnJhcnkudXEuZWR1LmF1Lw==',
+        );
 
-        window.location = location;
+        jest.clearAllMocks();
     });
 
     it('should not render for researcher', () => {

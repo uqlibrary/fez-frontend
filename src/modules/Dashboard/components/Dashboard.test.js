@@ -93,7 +93,7 @@ describe('Dashboard test', () => {
     it('_claimYourPublications method', () => {
         const { getByTestId } = setup({ possiblyYourPublicationsCount: 5 });
         fireEvent.click(getByTestId('action-button'));
-        expect(mockUseNavigate).toBeCalledWith('/records/possible');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/possible');
     });
 
     it('redirectToMissingRecordsList method', () => {
@@ -114,7 +114,7 @@ describe('Dashboard test', () => {
             authorDetails: mock.authorDetails.uqresearcher,
         });
         fireEvent.click(getByText(/View and Complete/i));
-        expect(mockUseNavigate).toBeCalledWith('/records/incomplete');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/incomplete');
     });
 
     it('redirectToOaComplianceRecordlist method', () => {
@@ -135,7 +135,7 @@ describe('Dashboard test', () => {
             authorDetails: mock.authorDetails.uqresearcher,
         });
         fireEvent.click(getByText(/View and Fix/i));
-        expect(mockUseNavigate).toBeCalledWith('/records/my-open-access');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/records/my-open-access');
     });
 
     it('should have helper to generate fibonacci numbers', () => {

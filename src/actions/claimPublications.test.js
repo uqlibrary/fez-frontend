@@ -542,7 +542,7 @@ describe('Claim publication actions tests ', () => {
                 }),
             );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(testFn).toBeCalledWith(files.files.queue, publication);
+            expect(testFn).toHaveBeenCalledWith(files.files.queue, publication);
         });
 
         it('dispatched expected actions claiming a publication with comments', async () => {

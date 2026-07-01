@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Component AddMissingRecord method getStepperIndex should return step [0] and Stepper should render the 1st step 1`] = `
 <div>
