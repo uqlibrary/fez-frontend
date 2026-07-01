@@ -1832,7 +1832,6 @@ exports[`PublicationCitation  should render component with default item with ima
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
           id="imageGalleryItemImage-UQ:676287"
-          loading="lazy"
           src="http://localhost/view/UQ:676287/thumbnail_image.jpg"
           width="150"
         />
@@ -2203,7 +2202,6 @@ exports[`PublicationCitation  should render component with default item with ima
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
           id="imageGalleryItemImage-UQ:676287"
-          loading="lazy"
           width="150"
         />
         <div
@@ -4705,7 +4703,6 @@ exports[`PublicationCitation  should render component without image if whitelist
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
           id="imageGalleryItemImage-UQ:676287"
-          loading="lazy"
           width="150"
         />
         <div

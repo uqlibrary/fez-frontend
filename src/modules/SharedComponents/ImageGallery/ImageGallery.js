@@ -32,7 +32,6 @@ export const getItemsPerRow = (itemsPerRow, sm, md) => {
 const ImageGallery = ({
     publicationsList,
     classes = {},
-    lazyLoading = config.thumbnailImage.defaultLazyLoading,
     itemWidth = config.thumbnailImage.defaultWidth,
     itemHeight = config.thumbnailImage.defaultHeight,
     itemsPerRow,
@@ -59,7 +58,6 @@ const ImageGallery = ({
                     key={item.rek_pid}
                     item={item}
                     url={getItemUrl(item.rek_pid)}
-                    lazyLoading={lazyLoading}
                     itemWidth={itemWidth}
                     itemHeight={itemHeight}
                     classes={{
@@ -81,7 +79,6 @@ ImageGallery.propTypes = {
         imageListItem: PropTypes.object,
         imageListItemBar: PropTypes.object,
     }),
-    lazyLoading: PropTypes.bool,
     itemWidth: PropTypes.number,
     itemHeight: PropTypes.number,
     itemsPerRow: PropTypes.number,
