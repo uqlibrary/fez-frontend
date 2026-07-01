@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PublicationCitation  should render button disabled on action buttons for publication without any authors metadata from crossref 1`] = `
 <div>

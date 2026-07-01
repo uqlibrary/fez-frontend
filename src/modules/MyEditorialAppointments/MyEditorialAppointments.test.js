@@ -65,7 +65,7 @@ describe('MyEditorialAppointments', () => {
 
         const { getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
-        expect(loadMyEditorialAppointmentsListFn).toBeCalled();
+        expect(loadMyEditorialAppointmentsListFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
@@ -98,7 +98,7 @@ describe('MyEditorialAppointments', () => {
 
         const { container, getByText, getByTestId, getByRole } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
-        expect(loadMyEditorialAppointmentsListFn).toBeCalled();
+        expect(loadMyEditorialAppointmentsListFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
@@ -140,7 +140,7 @@ describe('MyEditorialAppointments', () => {
 
         const { container, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
-        expect(loadMyEditorialAppointmentsListFn).toBeCalled();
+        expect(loadMyEditorialAppointmentsListFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
@@ -180,7 +180,7 @@ describe('MyEditorialAppointments', () => {
 
         const { container, getByText, getByTestId } = setup({});
         expect(getByText('Loading editorial appointments')).toBeInTheDocument();
-        expect(loadMyEditorialAppointmentsListFn).toBeCalled();
+        expect(loadMyEditorialAppointmentsListFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('My editorial appointments'));
         expect(getByTestId('my-editorial-appointments-list')).toBeInTheDocument();
