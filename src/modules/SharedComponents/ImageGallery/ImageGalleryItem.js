@@ -120,7 +120,7 @@ const ImageGalleryItem = ({
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        rootMargin: '200px 0px', // tweak if needed
+        rootMargin: '300px 0px', // tweak if needed
         root: document.querySelector('.content-container'),
     });
 
