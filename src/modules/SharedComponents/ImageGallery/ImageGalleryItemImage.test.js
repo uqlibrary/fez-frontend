@@ -533,6 +533,14 @@ describe('Image Gallery Item Image', () => {
             ],
         };
 
+        it('load the default thumbnail', () => {
+            const { getByRole } = setup({ item: imageItem, inView: undefined });
+
+            const image = getByRole('img');
+
+            expect(image).toHaveAttribute('src', expect.stringContaining(config.thumbnailImage.defaultImageName));
+        });
+
         it('shows the default thumbnail before the image enters the viewport', () => {
             const { getByRole } = setup({ item: imageItem, inView: false });
 
