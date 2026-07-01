@@ -27,7 +27,7 @@ describe('ExportPublications component', () => {
         const { getByTestId, getByText } = setup({ onChange: onChangeFn });
         fireEvent.mouseDown(getByTestId('export-publications-format-select'));
         fireEvent.click(getByText(format.label));
-        expect(onChangeFn).toBeCalledWith(format.value);
+        expect(onChangeFn).toHaveBeenCalledWith(format.value);
     });
 
     it('renders with disabled fields', () => {

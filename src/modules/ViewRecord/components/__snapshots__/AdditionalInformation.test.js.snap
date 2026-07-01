@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Additional Information Component  renderLicense() 1`] = `
 <div>
@@ -2250,7 +2250,7 @@ exports[`Additional Information Component  should render component with Attribut
                     <div
                       class="fez-icon_cilabel"
                       data-testid="fez-icon-cilabel"
-                      style="background-image: url(https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png); width: 100px; height: 100px; background-size: cover;"
+                      style="background-image: url("https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png"); width: 100px; height: 100px; background-size: cover;"
                     />
                     <br />
                     <strong>

@@ -88,12 +88,12 @@ describe('Media Preview Component ', () => {
 
     it('should render when video fails', () => {
         setup({ mimeType: 'video/mp4', videoErrorMsg: 'test failure', videoErrorCode: 12345 });
-        expect(scrollToPreview).toBeCalled();
+        expect(scrollToPreview).toHaveBeenCalled();
     });
 
     it('should render when image fails', () => {
         setup({ mimeType: 'image/jpeg', imageError: true });
-        expect(scrollToPreview).toBeCalled();
+        expect(scrollToPreview).toHaveBeenCalled();
     });
 
     /**
@@ -108,7 +108,7 @@ describe('Media Preview Component ', () => {
         setup({ mimeType: 'image/jpeg' });
 
         jest.advanceTimersByTime(100);
-        expect(scrollToPreview).toBeCalled();
+        expect(scrollToPreview).toHaveBeenCalled();
     });
 
     /**

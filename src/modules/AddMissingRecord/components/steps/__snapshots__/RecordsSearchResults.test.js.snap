@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Search record results should render a single claimable item with no authors on the record (record should appear in publicationsList prop) 1`] = `
 <div>

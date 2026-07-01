@@ -1,7 +1,7 @@
 import React from 'react';
 import Orcid from './Orcid';
 import { accounts, currentAuthor } from 'mock/data/account';
-import { rtlRender, WithReduxStore, fireEvent, WithRouter } from 'test-utils';
+import { rtlRender, WithReduxStore, fireEvent, WithRouter, spyOnWindowLocationMethod } from 'test-utils';
 import { useNavigate } from 'react-router';
 import * as AuthorAction from 'actions/authors';
 
@@ -85,11 +85,7 @@ describe('Component Orcid ', () => {
 
     it('should construct ORCID url for linking existing orcid', () => {
         jest.useFakeTimers('modern').setSystemTime(new Date('2020-01-01'));
-        const assignFn = jest.fn();
-        delete window.location;
-        window.location = {
-            assign: assignFn,
-        };
+        const assignMock = spyOnWindowLocationMethod('assign');
 
         const { getByRole, getByTestId } = setup({
             state: {
@@ -102,18 +98,17 @@ describe('Component Orcid ', () => {
 
         fireEvent.click(getByRole('button', { name: /Link your existing ORCID iD/i }));
         fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(assignFn).toBeCalledWith(
+        expect(assignMock).toHaveBeenCalledWith(
             'https://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=b650667a7eb582897f036e66099b78c7&show_login=true',
         );
+
+        jest.clearAllMocks();
     });
 
     it('should construct ORCID url for creating a new orcid', () => {
         jest.useFakeTimers('modern').setSystemTime(new Date('2020-01-01'));
-        const assignFn = jest.fn();
-        delete window.location;
-        window.location = {
-            assign: assignFn,
-        };
+        const assignMock = spyOnWindowLocationMethod('assign');
+
         const { getByRole, getByTestId } = setup({
             state: {
                 accountReducer: {
@@ -125,9 +120,10 @@ describe('Component Orcid ', () => {
 
         fireEvent.click(getByRole('button', { name: /Create a new ORCID iD/i }));
         fireEvent.click(getByTestId('confirm-dialog-box'));
-        expect(assignFn).toBeCalledWith(
+        expect(assignMock).toHaveBeenCalledWith(
             'https://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=b650667a7eb582897f036e66099b78c7&show_login=false&family_names=Researcher&given_names=J',
         );
+        jest.clearAllMocks();
     });
 
     it('should display appropriate alert message', () => {
@@ -243,7 +239,7 @@ describe('Component Orcid ', () => {
         });
 
         fireEvent.click(getByRole('button', { name: /Link your existing ORCID iD/i }));
-        expect(linkAuthorOrcidIdFn).toBeCalledWith('uqresearcher', 4101, '123');
+        expect(linkAuthorOrcidIdFn).toHaveBeenCalledWith('uqresearcher', 4101, '123');
     });
 
     it('should start author update when author is loaded and orcid response received', () => {
@@ -274,6 +270,6 @@ describe('Component Orcid ', () => {
         );
 
         fireEvent.click(getByRole('button', { name: /Link your existing ORCID iD/i }));
-        expect(linkAuthorOrcidIdFn).toBeCalledWith('uqresearcher', 4101, '123');
+        expect(linkAuthorOrcidIdFn).toHaveBeenCalledWith('uqresearcher', 4101, '123');
     });
 });
