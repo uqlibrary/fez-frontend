@@ -62,7 +62,6 @@ const ImageGallery = ({
                     itemHeight={itemHeight}
                     classes={{
                         imageListItem: { root: internalClasses.imageListItemRoot },
-                        imageListItemBar: internalClasses.imageListItemBar,
                     }}
                     security={security}
                 />

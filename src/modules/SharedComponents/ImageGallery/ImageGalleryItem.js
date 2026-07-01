@@ -178,9 +178,9 @@ const ImageGalleryItem = ({
                     data-testid={`image-gallery-item-${item.rek_pid}-title`}
                 />
             )}
-            {!!alertMessage && withAlert && (
+            {withAlert && (
                 <ImageListItemBar
-                    title={alertMessage}
+                    title={alertMessage ?? ''}
                     position="top"
                     sx={{
                         ...internalClasses.imageListAlertBarRoot,
@@ -193,6 +193,7 @@ const ImageGalleryItem = ({
                             ...internalClasses.imageListAlertBarWrap,
                             ...(!!classes && classes?.imageListAlertBar?.titleWrap),
                         },
+                        opacity: alertMessage ? 1 : 0,
                     }}
                     id={`image-gallery-item-${item.rek_pid}-alert`}
                     data-testid={`image-gallery-item-${item.rek_pid}-alert`}

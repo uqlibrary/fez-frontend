@@ -278,7 +278,6 @@ export const PublicationCitation = ({
                 <ImageGalleryItem
                     key={publication.rek_pid}
                     item={publication}
-                    lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
                     itemWidth={imageConfig.thumbnailImage.defaultWidth}
                     itemHeight={imageConfig.thumbnailImage.defaultHeight}
                     classes={{
