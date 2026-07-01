@@ -114,7 +114,7 @@ describe('BatchImport Component', () => {
 
         expect(getByText('The request to batch-import has been submitted successfully.')).toBeInTheDocument();
         assertDisabled('batch-import-submit');
-        expect(createBatchImport).toBeCalledWith({
+        expect(createBatchImport).toHaveBeenCalledWith({
             collection_pid: 'UQ:333',
             directory: 'Test directory 1',
             doc_type_id: 316,
@@ -171,7 +171,7 @@ describe('BatchImport Component', () => {
 
         expect(getByText('The request to batch-import has been submitted successfully.')).toBeInTheDocument();
         assertDisabled('batch-import-submit');
-        expect(createBatchImport).toBeCalledWith({
+        expect(createBatchImport).toHaveBeenCalledWith({
             directory: 'Test directory 2',
             is_bulk_file_ingest: true,
         });
@@ -227,7 +227,7 @@ describe('BatchImport Component', () => {
 
         await waitFor(() => getByTestId('alert-error-batch-import'));
 
-        expect(createBatchImport).toBeCalled();
+        expect(createBatchImport).toHaveBeenCalled();
     });
 
     it('should hide all other fields except directory selector', async () => {

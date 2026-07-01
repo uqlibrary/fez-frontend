@@ -24,7 +24,6 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
-import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
 import { api } from './MockApiWrapper';
 import { isEmptyObject } from '../src/helpers/general';
@@ -315,13 +314,6 @@ const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 5
     }
 };
 
-const originalUseForm = useForm.useForm;
-const mockUseForm = implementation => {
-    return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
-        return implementation(props, originalUseForm);
-    });
-};
-
 const enableJestPreviewOnTestFailure = (options = {}) =>
     jestPreviewConfigure({
         autoPreview: true,
@@ -487,21 +479,27 @@ const selectDropDownOptionByElement = async (el, option, index = 0) => {
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addContributorsEditorItem = async (fieldName, name = 'author') => {
-    await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
+const addItemUsingNamesPopoverForm = async (fieldName, ...names) => {
+    await userEvent.click(screen.getByTestId(`${fieldName}-input`));
+    await waitFor(() => expect(screen.getByTestId(`${fieldName}-names-popover-form-family-name`)).toBeInTheDocument());
+    names[0] &&
+        (await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-given-name-input`), names[0]));
+    await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-family-name-input`), names[1]);
+    await waitToBeEnabled(`${fieldName}-names-popover-form-submit-button`);
+    await userEvent.click(screen.getByTestId(`${fieldName}-names-popover-form-submit-button`));
     await userEvent.click(screen.getByTestId(`${fieldName}-add`));
 };
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') => {
-    await addContributorsEditorItem(fieldName, name);
+const addAndSelectItemUsingNamesPopoverForm = async (fieldName, ...names) => {
+    await addItemUsingNamesPopoverForm(fieldName, ...(!!names.length ? names : ['Brown', 'James']));
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
@@ -585,6 +583,26 @@ const withFakeTimers = async callback => {
     jest.useRealTimers();
 };
 
+// jsDom 25 no longer allows modification of window.location.
+// We therefore have to hack around this with some funky reflection code.
+// Use this in a beforeEach(), and be sure to jest.restoreAllMocks() in afterEach().
+// If using in a specific test only, you may need to jest.clearAllMocks() instead to
+// avoid settings leaking in to subsequent tests.
+// In general, you'll call this function like
+// let assignMock;
+// assignMock = hackLocationObject('assign');
+// where assignMock is defined with 'let' and assigned each time in beforeEach().
+// Then, check location calls using e.g. expect(assignMock).toHaveBeenCalledWith().
+
+const spyOnWindowLocationMethod = (methodToSpyOn, mockFn = jest.fn()) => {
+    const implSymbol = Reflect.ownKeys(window.location).find(key => typeof key === 'symbol');
+
+    if (implSymbol) {
+        jest.spyOn(window.location[implSymbol], methodToSpyOn).mockImplementation(mockFn);
+    }
+    return mockFn;
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -613,7 +631,6 @@ module.exports = {
     waitForTextToBeRemoved,
     expectRequiredFieldError,
     expectMissingRequiredFieldError,
-    mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
@@ -636,12 +653,13 @@ module.exports = {
     assertRichTextEditorValue,
     selectDropDownOption,
     selectDropDownOptionByElement,
-    addContributorsEditorItem,
-    addAndSelectContributorsEditorItem,
+    addItemUsingNamesPopoverForm,
+    addAndSelectItemUsingNamesPopoverForm,
     clearAndType,
     sortObjectProps,
     getTableBodyRows,
     api,
     withFakeTimers,
     waitToHaveBeenLastCalledWith,
+    spyOnWindowLocationMethod,
 };

@@ -563,4 +563,6 @@ export const TRANSITION_COHORT = [
     's4735852',
     's4735687',
     's4716725',
+    's4716636',
+    's4689368',
 ];

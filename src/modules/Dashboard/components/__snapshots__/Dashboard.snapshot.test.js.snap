@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
 <div>
@@ -187,7 +187,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -280,7 +280,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -331,7 +331,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -896,7 +896,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -989,7 +989,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -1021,8 +1021,8 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-17qouxb-MuiPaper-root-MuiCard-root"
-            data-testid="standard-card-espace-works-per-year"
-            id="standard-card-espace-works-per-year"
+            data-testid="standard-card-uq-espace-works-per-year"
+            id="standard-card-uq-espace-works-per-year"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
@@ -1033,18 +1033,18 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
               >
                 <h3
                   class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                  data-testid="standard-card-espace-works-per-year-header"
-                  id="standard-card-espace-works-per-year-header"
+                  data-testid="standard-card-uq-espace-works-per-year-header"
+                  id="standard-card-uq-espace-works-per-year-header"
                 >
-                  eSpace works per year
+                  UQ eSpace works per year
                 </h3>
               </div>
             </div>
             <div
               class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-              data-analyticsid="standard-card-espace-works-per-year-content"
-              data-testid="standard-card-espace-works-per-year-content"
-              id="standard-card-espace-works-per-year-content"
+              data-analyticsid="standard-card-uq-espace-works-per-year-content"
+              data-testid="standard-card-uq-espace-works-per-year-content"
+              id="standard-card-uq-espace-works-per-year-content"
             >
               <div
                 class="barChart authors-publications-per-year-chart"
@@ -1112,7 +1112,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -1639,7 +1639,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -1732,7 +1732,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -1764,8 +1764,8 @@ exports[`Dashboard test Should only render barChart 1`] = `
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-17qouxb-MuiPaper-root-MuiCard-root"
-            data-testid="standard-card-espace-works-per-year"
-            id="standard-card-espace-works-per-year"
+            data-testid="standard-card-uq-espace-works-per-year"
+            id="standard-card-uq-espace-works-per-year"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
@@ -1776,18 +1776,18 @@ exports[`Dashboard test Should only render barChart 1`] = `
               >
                 <h3
                   class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                  data-testid="standard-card-espace-works-per-year-header"
-                  id="standard-card-espace-works-per-year-header"
+                  data-testid="standard-card-uq-espace-works-per-year-header"
+                  id="standard-card-uq-espace-works-per-year-header"
                 >
-                  eSpace works per year
+                  UQ eSpace works per year
                 </h3>
               </div>
             </div>
             <div
               class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-              data-analyticsid="standard-card-espace-works-per-year-content"
-              data-testid="standard-card-espace-works-per-year-content"
-              id="standard-card-espace-works-per-year-content"
+              data-analyticsid="standard-card-uq-espace-works-per-year-content"
+              data-testid="standard-card-uq-espace-works-per-year-content"
+              id="standard-card-uq-espace-works-per-year-content"
             >
               <div
                 class="barChart authors-publications-per-year-chart"
@@ -1988,7 +1988,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -2081,7 +2081,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -2132,7 +2132,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -2761,7 +2761,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -2854,7 +2854,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -3138,7 +3138,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -3231,7 +3231,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -3515,7 +3515,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -3608,7 +3608,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -3828,7 +3828,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -3921,7 +3921,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -4321,7 +4321,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -4414,7 +4414,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -4742,7 +4742,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -4835,7 +4835,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -4867,8 +4867,8 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-17qouxb-MuiPaper-root-MuiCard-root"
-            data-testid="standard-card-espace-works-per-year"
-            id="standard-card-espace-works-per-year"
+            data-testid="standard-card-uq-espace-works-per-year"
+            id="standard-card-uq-espace-works-per-year"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
@@ -4879,18 +4879,18 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
               >
                 <h3
                   class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                  data-testid="standard-card-espace-works-per-year-header"
-                  id="standard-card-espace-works-per-year-header"
+                  data-testid="standard-card-uq-espace-works-per-year-header"
+                  id="standard-card-uq-espace-works-per-year-header"
                 >
-                  eSpace works per year
+                  UQ eSpace works per year
                 </h3>
               </div>
             </div>
             <div
               class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-              data-analyticsid="standard-card-espace-works-per-year-content"
-              data-testid="standard-card-espace-works-per-year-content"
-              id="standard-card-espace-works-per-year-content"
+              data-analyticsid="standard-card-uq-espace-works-per-year-content"
+              data-testid="standard-card-uq-espace-works-per-year-content"
+              id="standard-card-uq-espace-works-per-year-content"
             >
               <div
                 class="barChart authors-publications-per-year-chart"
@@ -5127,7 +5127,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -5220,7 +5220,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -5553,7 +5553,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -5802,7 +5802,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -5895,7 +5895,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -6115,7 +6115,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -6364,7 +6364,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -6457,7 +6457,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -6718,7 +6718,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -6811,7 +6811,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -6843,8 +6843,8 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-17qouxb-MuiPaper-root-MuiCard-root"
-            data-testid="standard-card-espace-works-per-year"
-            id="standard-card-espace-works-per-year"
+            data-testid="standard-card-uq-espace-works-per-year"
+            id="standard-card-uq-espace-works-per-year"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
@@ -6855,18 +6855,18 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
               >
                 <h3
                   class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                  data-testid="standard-card-espace-works-per-year-header"
-                  id="standard-card-espace-works-per-year-header"
+                  data-testid="standard-card-uq-espace-works-per-year-header"
+                  id="standard-card-uq-espace-works-per-year-header"
                 >
-                  eSpace works per year
+                  UQ eSpace works per year
                 </h3>
               </div>
             </div>
             <div
               class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-              data-analyticsid="standard-card-espace-works-per-year-content"
-              data-testid="standard-card-espace-works-per-year-content"
-              id="standard-card-espace-works-per-year-content"
+              data-analyticsid="standard-card-uq-espace-works-per-year-content"
+              data-testid="standard-card-uq-espace-works-per-year-content"
+              id="standard-card-uq-espace-works-per-year-content"
             >
               <div
                 class="barChart authors-publications-per-year-chart"
@@ -6934,7 +6934,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -7280,7 +7280,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -7373,7 +7373,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -7424,7 +7424,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -7770,7 +7770,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -7863,7 +7863,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -7914,7 +7914,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -8260,7 +8260,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -8353,7 +8353,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -8385,8 +8385,8 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-17qouxb-MuiPaper-root-MuiCard-root"
-            data-testid="standard-card-espace-works-per-year"
-            id="standard-card-espace-works-per-year"
+            data-testid="standard-card-uq-espace-works-per-year"
+            id="standard-card-uq-espace-works-per-year"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
@@ -8397,18 +8397,18 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
               >
                 <h3
                   class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                  data-testid="standard-card-espace-works-per-year-header"
-                  id="standard-card-espace-works-per-year-header"
+                  data-testid="standard-card-uq-espace-works-per-year-header"
+                  id="standard-card-uq-espace-works-per-year-header"
                 >
-                  eSpace works per year
+                  UQ eSpace works per year
                 </h3>
               </div>
             </div>
             <div
               class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-              data-analyticsid="standard-card-espace-works-per-year-content"
-              data-testid="standard-card-espace-works-per-year-content"
-              id="standard-card-espace-works-per-year-content"
+              data-analyticsid="standard-card-uq-espace-works-per-year-content"
+              data-testid="standard-card-uq-espace-works-per-year-content"
+              id="standard-card-uq-espace-works-per-year-content"
             >
               <div
                 class="barChart authors-publications-per-year-chart"
@@ -8476,7 +8476,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -8697,8 +8697,8 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-17qouxb-MuiPaper-root-MuiCard-root"
-            data-testid="standard-card-espace-works-per-year"
-            id="standard-card-espace-works-per-year"
+            data-testid="standard-card-uq-espace-works-per-year"
+            id="standard-card-uq-espace-works-per-year"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
@@ -8709,18 +8709,18 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
               >
                 <h3
                   class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
-                  data-testid="standard-card-espace-works-per-year-header"
-                  id="standard-card-espace-works-per-year-header"
+                  data-testid="standard-card-uq-espace-works-per-year-header"
+                  id="standard-card-uq-espace-works-per-year-header"
                 >
-                  eSpace works per year
+                  UQ eSpace works per year
                 </h3>
               </div>
             </div>
             <div
               class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-              data-analyticsid="standard-card-espace-works-per-year-content"
-              data-testid="standard-card-espace-works-per-year-content"
-              id="standard-card-espace-works-per-year-content"
+              data-analyticsid="standard-card-uq-espace-works-per-year-content"
+              data-testid="standard-card-uq-espace-works-per-year-content"
+              id="standard-card-uq-espace-works-per-year-content"
             >
               <div
                 class="barChart authors-publications-per-year-chart"
@@ -8788,7 +8788,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
                   <p
                     class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
                   >
-                    eSpace works
+                    UQ eSpace works
                   </p>
                 </div>
                 <div
@@ -9138,7 +9138,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -9231,7 +9231,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -9451,7 +9451,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -9544,7 +9544,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -9844,7 +9844,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -10118,7 +10118,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -10211,7 +10211,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"
@@ -10392,7 +10392,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                           class="css-1o7ot5c"
                         >
                           <button
-                            aria-label="Information about uploading your eSpace works to ORCID"
+                            aria-label="Information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -10485,7 +10485,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
                   >
                     <b>
-                      Add your work to eSpace - 
+                      Add your work to UQ eSpace - 
                     </b>
                     <span
                       data-testid="alert-message"

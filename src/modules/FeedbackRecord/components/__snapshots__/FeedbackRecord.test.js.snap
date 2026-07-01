@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Component FeedbackRecord should render feedback fields 1`] = `
 <div>
@@ -410,19 +410,19 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         for="first-name-input"
                         id="first-name-label"
                       >
-                        First Name
+                        Given Name
                       </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
-                          aria-label="First Name"
+                          aria-label="Given Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="first-name-input"
                           data-testid="first-name-input"
                           id="first-name-input"
-                          label="First Name"
+                          label="Given Name"
                           name="firstName"
                           type="text"
                           value=""
@@ -444,7 +444,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         for="last-name-input"
                         id="last-name-label"
                       >
-                        Last Name
+                        Family Name
                         <span
                           aria-hidden="true"
                           class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -459,12 +459,12 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         <input
                           aria-describedby="last-name-helper-text"
                           aria-invalid="true"
-                          aria-label="Last Name"
+                          aria-label="Family Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="last-name-input"
                           data-testid="last-name-input"
                           id="last-name-input"
-                          label="Last Name"
+                          label="Family Name"
                           name="lastName"
                           required=""
                           type="text"
@@ -2136,19 +2136,19 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         for="first-name-input"
                         id="first-name-label"
                       >
-                        First Name
+                        Given Name
                       </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
-                          aria-label="First Name"
+                          aria-label="Given Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="first-name-input"
                           data-testid="first-name-input"
                           id="first-name-input"
-                          label="First Name"
+                          label="Given Name"
                           name="firstName"
                           type="text"
                           value=""
@@ -2170,7 +2170,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         for="last-name-input"
                         id="last-name-label"
                       >
-                        Last Name
+                        Family Name
                         <span
                           aria-hidden="true"
                           class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -2185,12 +2185,12 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         <input
                           aria-describedby="last-name-helper-text"
                           aria-invalid="true"
-                          aria-label="Last Name"
+                          aria-label="Family Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="last-name-input"
                           data-testid="last-name-input"
                           id="last-name-input"
-                          label="Last Name"
+                          label="Family Name"
                           name="lastName"
                           required=""
                           type="text"
@@ -3647,19 +3647,19 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         for="first-name-input"
                         id="first-name-label"
                       >
-                        First Name
+                        Given Name
                       </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
-                          aria-label="First Name"
+                          aria-label="Given Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="first-name-input"
                           data-testid="first-name-input"
                           id="first-name-input"
-                          label="First Name"
+                          label="Given Name"
                           name="firstName"
                           type="text"
                           value=""
@@ -3681,7 +3681,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         for="last-name-input"
                         id="last-name-label"
                       >
-                        Last Name
+                        Family Name
                         <span
                           aria-hidden="true"
                           class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -3696,12 +3696,12 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         <input
                           aria-describedby="last-name-helper-text"
                           aria-invalid="true"
-                          aria-label="Last Name"
+                          aria-label="Family Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="last-name-input"
                           data-testid="last-name-input"
                           id="last-name-input"
-                          label="Last Name"
+                          label="Family Name"
                           name="lastName"
                           required=""
                           type="text"
@@ -5249,19 +5249,19 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         for="first-name-input"
                         id="first-name-label"
                       >
-                        First Name
+                        Given Name
                       </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
-                          aria-label="First Name"
+                          aria-label="Given Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="first-name-input"
                           data-testid="first-name-input"
                           id="first-name-input"
-                          label="First Name"
+                          label="Given Name"
                           name="firstName"
                           type="text"
                           value=""
@@ -5283,7 +5283,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         for="last-name-input"
                         id="last-name-label"
                       >
-                        Last Name
+                        Family Name
                         <span
                           aria-hidden="true"
                           class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
@@ -5298,12 +5298,12 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         <input
                           aria-describedby="last-name-helper-text"
                           aria-invalid="true"
-                          aria-label="Last Name"
+                          aria-label="Family Name"
                           class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="last-name-input"
                           data-testid="last-name-input"
                           id="last-name-input"
-                          label="Last Name"
+                          label="Family Name"
                           name="lastName"
                           required=""
                           type="text"

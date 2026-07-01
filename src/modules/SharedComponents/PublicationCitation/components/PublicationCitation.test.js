@@ -127,7 +127,7 @@ describe('PublicationCitation ', () => {
             .forEach((button, index) => {
                 expect(button).toHaveTextContent(customActions[index].label);
                 fireEvent.click(button);
-                expect(customActions[index].handleAction).toBeCalled();
+                expect(customActions[index].handleAction).toHaveBeenCalled();
             });
     });
 

@@ -137,7 +137,14 @@ export function addAuthor(data) {
         dispatch({ type: AUTHOR_ADDING });
 
         try {
-            const response = await post(AUTHOR_API(), data);
+            // The name-override switch submits '' when left untouched on the create form.
+            // Coerce it to an integer (0/1) so the API receives a valid value for the integer
+            // column rather than '', which MySQL rejects and which silently aborted the save.
+            const payload = {
+                ...data,
+                aut_name_overridden: Number(data.aut_name_overridden) || 0,
+            };
+            const response = await post(AUTHOR_API(), payload);
             dispatch({
                 type: AUTHOR_ADD_SUCCESS,
             });

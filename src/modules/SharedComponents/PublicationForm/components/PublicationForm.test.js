@@ -1,7 +1,7 @@
 import PublicationForm from './PublicationForm';
 import React from 'react';
 import {
-    addAndSelectContributorsEditorItem,
+    addAndSelectItemUsingNamesPopoverForm,
     addFilesToFileUploader,
     assertDisabled,
     assertInstanceOfFile,
@@ -166,7 +166,7 @@ describe('PublicationForm', () => {
 
             const editorValidationError = ['Editor/contributor names are required'];
             await assertValidationErrorSummary(editorValidationError);
-            await addAndSelectContributorsEditorItem('rek-contributor');
+            await addAndSelectItemUsingNamesPopoverForm('rek-contributor');
             await assertMissingValidationErrorSummary(editorValidationError);
         });
 
@@ -221,17 +221,17 @@ describe('PublicationForm', () => {
 
             const expectedError = ['Scale/Significance of work is required', 'Creator research statement is required'];
             await assertMissingValidationErrorSummary(expectedError);
-            await addAndSelectContributorsEditorItem('authors');
+            await addAndSelectItemUsingNamesPopoverForm('authors');
             await assertValidationErrorSummary(expectedError);
         });
 
         it('should validated NTRO Research Report', async () => {
-            const { queryByTestId } = setup();
+            const { queryByTestId, findByTestId } = setup();
             await selectTypeCombo(NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, DOCUMENT_TYPE_RESEARCH_REPORT);
 
             await assertValidationErrorSummary([validationErrors.validationErrorsSummary.commissionedResearchReport]);
-            expect(queryByTestId('commissioned-research-report-field-error')).toBeInTheDocument();
-            await userEvent.click(queryByTestId('commissioned-research-report-field'));
+            await findByTestId('commissioned-research-report-field-error');
+            await userEvent.click(await findByTestId('commissioned-research-report-field'));
             await assertMissingValidationErrorSummary([
                 validationErrors.validationErrorsSummary.commissionedResearchReport,
             ]);
@@ -287,7 +287,7 @@ describe('PublicationForm', () => {
                 'place of publication',
             );
             await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '1980');
-            await addAndSelectContributorsEditorItem('authors');
+            await addAndSelectItemUsingNamesPopoverForm('authors');
             await userEvent.type(screen.getByTestId('rek-total-pages-input'), '123');
             await selectDropDownOption(
                 'rek-quality-indicator-select',
@@ -322,7 +322,7 @@ describe('PublicationForm', () => {
             // fill up form
             await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
             await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
-            await addAndSelectContributorsEditorItem('creators');
+            await addAndSelectItemUsingNamesPopoverForm('creators');
             // fill up DOI
             // invalid
             const doiValidationError = ['DOI is invalid'];
@@ -364,7 +364,7 @@ describe('PublicationForm', () => {
                 // fill up form
                 await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
                 await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
-                await addAndSelectContributorsEditorItem('creators');
+                await addAndSelectItemUsingNamesPopoverForm('creators');
 
                 await submitForm();
                 await waitForText(/Error has occurred during request and request cannot be processed/i);

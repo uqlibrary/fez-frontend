@@ -21,6 +21,8 @@ export const numberToWords = value => {
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
+// Set by the API on a passive (silent) login attempt to suppress re-attempts until it expires
+export const PASSIVE_LOGIN_CHECK_COOKIE_NAME = 'UQL_PASSIVE_CHECKED';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 export const UQ_FULL_NAME = 'The University of Queensland';
@@ -263,7 +265,6 @@ export const AUTHOR_AFFILIATIONS_ALLOWED_TYPES = {
     [PUBLICATION_TYPE_BOOK]: [SUBTYPE_RESEARCH_BOOK_ORIGINAL_RESEARCH],
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: [SUBTYPE_FULLY_PUBLISHED_PAPER],
     [PUBLICATION_TYPE_JOURNAL_ARTICLE]: [SUBTYPE_ARTICLE_ORIGINAL_RESEARCH, SUBTYPE_CRITICAL_REVIEW],
-    // [PUBLICATION_TYPE_RESEARCH_REPORT]: [],
 };
 
 export const CW_NTRO_SUBTYPES = [

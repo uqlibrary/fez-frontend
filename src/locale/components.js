@@ -316,7 +316,7 @@ export default {
             },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace works',
+            publicationStatsTitle1: 'UQ eSpace works',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
@@ -1432,7 +1432,7 @@ export default {
                     <>
                         <div>
                             <p>
-                                Add all author names (in format Last name, First name) in the order they appear on the
+                                Add all author names (in format family name, given name) in the order they appear on the
                                 work.
                                 <br />
                                 <br />
@@ -1474,18 +1474,18 @@ export default {
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
                                 </span>{' '}
-                                - Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
+                                - Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
+                                order that they are published.
                             </div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>
-                                Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
+                                Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
+                                order that they are published.
                             </div>
                         ),
                         nameAsPublishedLabel: "Author's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author',
                         nameAsPublishedFieldId: 'authors-name-as-published-field',
@@ -1542,7 +1542,7 @@ export default {
                 form: {
                     locale: {
                         nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
-                        nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
+                        nameAsPublishedHint: 'Enter the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
                         externalIdentifierLabel: 'External identifier',
                         externalIdentifierHint: 'Enter an external identifier',
@@ -1615,11 +1615,6 @@ export default {
             description: 'Please provide a list of editors and then select your name from the list.',
             descriptionAuthorOrEditor:
                 'Please provide a list of editors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Editors',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -1689,11 +1684,6 @@ export default {
         },
         creators: {
             title: 'Creators',
-            // help: {
-            //     title: 'Creators',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
             description:
                 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
             descriptionCreatorOrContributor:
@@ -1717,7 +1707,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Creator's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
                             'Select role from list or type the role of the creator in relation to the dataset',
@@ -1807,7 +1797,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Designer's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer',
                         nameAsPublishedFieldId: 'designers-name-as-published-field',
@@ -1858,11 +1848,6 @@ export default {
         },
         supervisors: {
             title: 'Supervisors',
-            // help: {
-            //     title: 'Supervisors help',
-            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'CLOSE'
-            // },
             description: 'Please provide a list of supervisors and then select your name from the list.',
             field: {
                 form: {
@@ -1934,12 +1919,6 @@ export default {
         },
         designCreators: {
             title: 'Creators',
-            // help: {
-            //     title: 'Creators help',
-            //     text: 'Enter creator names e.g. first name, last name. ' +
-            // 'Additional boxes will appear for more creators.',
-            //     buttonLabel: 'CLOSE'
-            // },
             description: 'Please provide a list of creators and then select your name from the list.',
             field: {
                 form: {
@@ -2011,11 +1990,6 @@ export default {
         },
         thesisSubmissionSupervisors: {
             title: 'Supervisors',
-            // help: {
-            //     title: 'Supervisors help',
-            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -2066,7 +2040,7 @@ export default {
             title: 'Contributors',
             help: {
                 title: 'Contributors',
-                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -2088,7 +2062,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Contributor's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor',
                         nameAsPublishedFieldId: 'contributors-name-as-published-field',
@@ -3435,7 +3409,7 @@ export default {
             title: 'Architects',
             help: {
                 title: 'Architects',
-                text: 'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
+                text: 'Type architects in the order they appear on the work or associated material. Additional boxes will appear for more architects.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -3454,7 +3428,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Enter each architect's name as published (eg. Smith, John)",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add architect',
                         nameAsPublishedFieldId: 'architects-name-as-published-field',
@@ -3542,7 +3516,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Enter each photographer's name as published (eg. Smith, John)",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add photographer',
                         nameAsPublishedFieldId: 'photographers-name-as-published-field',
@@ -4023,13 +3997,13 @@ export default {
                         label: 'Title',
                     },
                     firstName: {
-                        label: 'First name',
+                        label: 'Given name',
                     },
                     middleName: {
                         label: 'Middle name',
                     },
                     lastName: {
-                        label: 'Last name',
+                        label: 'Family name',
                     },
                     isNameOverride: {
                         label: 'Prevent automatic updates',

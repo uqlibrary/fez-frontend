@@ -82,13 +82,13 @@ describe('Component MenuDrawer', () => {
         const toggleFn = jest.fn();
         const { getByRole } = setup({ drawerOpen: true, onToggleDrawer: toggleFn });
         fireEvent.click(getByRole('button', { name: 'Close menu' }));
-        expect(toggleFn).toBeCalled();
+        expect(toggleFn).toHaveBeenCalled();
 
         fireEvent.click(getByRole('button', { name: /Primary text 0/i }));
-        expect(mockUseNavigate).toBeCalledWith('/');
+        expect(mockUseNavigate).toHaveBeenCalledWith('/');
 
         fireEvent.click(getByRole('button', { name: /Primary text 1/i }));
-        expect(global.open).toBeCalledWith('https://www.example.com', '_blank');
+        expect(global.open).toHaveBeenCalledWith('https://www.example.com', '_blank');
     });
 
     it('should have working method for skipping menu items', () => {

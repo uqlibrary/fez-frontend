@@ -13,7 +13,7 @@ describe('ScrollToSection', () => {
             </ScrollToSection>,
         );
 
-        expect(scrollIntoViewMock).toBeCalled();
+        expect(scrollIntoViewMock).toHaveBeenCalled();
         expect(asFragment()).toMatchSnapshot();
     });
 
