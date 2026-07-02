@@ -164,6 +164,10 @@ export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, auth
     return { apiUrl: 'fez-authors' };
 };
 
+export const AUTHOR_MERGE_API = (staffId, studentId) => ({
+    apiUrl: `fez-authors/${staffId}/merge/${studentId}`,
+});
+
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
     apiUrl: `authors/details/${userId}`,
 });
@@ -173,12 +177,7 @@ export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
     options: { params: { ...params } },
 });
 
-export const AUTHORS_MERGE_API = () => ({
-    apiUrl: `authors/merge`,
-});
-
 // academic stats apis
-
 export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: `academic/${userId}/hindex` });
 export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-trending' });
 

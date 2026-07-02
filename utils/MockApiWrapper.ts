@@ -29,6 +29,11 @@ interface CvoParams extends Params {
     cvoId?: number;
 }
 
+interface AuthorParams extends Params {
+    staffId?: string;
+    studentId?: string;
+}
+
 interface ApiUrls {
     records: {
         create: string;
@@ -49,7 +54,7 @@ interface ApiUrls {
     };
     authors: {
         search: (params: SearchParams) => RegExp;
-        merge: () => string;
+        merge: (staffId: string, studentId: string) => RegExp;
     };
 }
 
@@ -99,7 +104,7 @@ interface ControlledVocabApi extends BaseApi {
 
 interface AuthorsApi extends BaseApi {
     search: (params?: SearchParams) => AuthorsApi;
-    merge: () => AuthorsApi;
+    merge: (params?: AuthorParams) => AuthorsApi;
 }
 
 interface Api {
@@ -149,7 +154,7 @@ export const api: Api = {
         },
         authors: {
             search: params => new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API(params).apiUrl),
-            merge: () => repositories.routes.AUTHORS_MERGE_API().apiUrl,
+            merge: (staffId, studentId) => new RegExp(repositories.routes.AUTHOR_MERGE_API(staffId, studentId).apiUrl),
         },
     },
     mock: {
@@ -256,8 +261,14 @@ export const api: Api = {
                     [replyMethod(once)](status, { data: data });
                 return this;
             },
-            merge: function ({ status = 200, data = {}, once = true }: Params = {}) {
-                this.instance.onPost(api.url.authors.merge())[replyMethod(once)](status, { data: data });
+            merge: function ({
+                staffId = '.*',
+                studentId = '.*',
+                status = 200,
+                data = {},
+                once = true,
+            }: AuthorParams = {}) {
+                this.instance.onPost(api.url.authors.merge(staffId, studentId))[replyMethod(once)](status, { ...data });
                 return this;
             },
             instance: {} as MockAdapter,

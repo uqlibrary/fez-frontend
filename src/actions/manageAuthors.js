@@ -28,7 +28,7 @@ import {
 import { destroy, get, post, put } from 'repositories/generic';
 import {
     AUTHOR_API,
-    AUTHORS_MERGE_API,
+    AUTHOR_MERGE_API,
     AUTHORS_SEARCH_API,
     INGEST_WORKS_API,
     MANAGE_AUTHORS_LIST_API,
@@ -233,9 +233,9 @@ export function ingestFromScopus(autId) {
     };
 }
 
-export const mergeAuthors = authors => async dispatch => {
+export const mergeAuthors = (staff, student) => async dispatch => {
     dispatch({ type: AUTHOR_MERGING });
-    return post(AUTHORS_MERGE_API(), { aut_ids: authors.map(author => author.aut_id) })
+    return post(AUTHOR_MERGE_API(staff?.aut_id, student?.aut_id))
         .then(response => {
             dispatch({
                 type: AUTHOR_MERGING_SUCCESS,

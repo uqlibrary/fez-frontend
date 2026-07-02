@@ -38,8 +38,7 @@ export const ManageAuthors = () => {
 
     const handleAuthorScopusIngest = autId => dispatch(ingestFromScopus(autId));
 
-    const handleAuthorsMerge = (data, selection) =>
-        dispatch(mergeAuthors([{ ...data[selection[0]] }, { ...data[selection[1]] }]));
+    const handleAuthorsMerge = (staff, student) => dispatch(mergeAuthors(staff, student));
 
     return (
         <StandardPage title={locale.pages.authors.title}>
