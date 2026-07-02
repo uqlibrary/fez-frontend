@@ -1,21 +1,21 @@
 import { FezAuthor } from 'types/models/FezAuthor';
 import { isEmptyString } from 'helpers/general';
 
-export const canAuthorsBeMerged = (author?: FezAuthor, anotherAuthor?: FezAuthor) =>
-    !!author &&
-    !!anotherAuthor &&
-    // first author is a student, second a staff
-    ((!isEmptyString(author?.aut_student_username) &&
-        isEmptyString(author?.aut_org_username) &&
-        isEmptyString(anotherAuthor?.aut_student_username) &&
-        !isEmptyString(anotherAuthor?.aut_org_username)) ||
-        // first author is a staff, second a student
-        (isEmptyString(author?.aut_student_username) &&
-            !isEmptyString(author?.aut_org_username) &&
-            !isEmptyString(anotherAuthor?.aut_student_username) &&
-            isEmptyString(anotherAuthor?.aut_org_username)));
+const getStaffAuthor = (authors: FezAuthor[]) =>
+    authors?.find(author => isEmptyString(author?.aut_student_username) && !isEmptyString(author?.aut_org_username));
 
-export const canSelectedAuthorsBeMerged = (data?: FezAuthor[], selection?: string[]) => {
+const getStudentAuthor = (authors: FezAuthor[]) =>
+    authors?.find(author => !isEmptyString(author?.aut_student_username));
+
+export const getMergeableAuthors = (data?: FezAuthor[], selection?: string[]) => {
     if (!data || selection?.length !== 2 || data?.length < Number(selection?.[1])) return false;
-    return canAuthorsBeMerged(data[Number(selection?.[0])], data[Number(selection?.[1])]);
+
+    const selected = new Set(selection?.map(Number));
+    const authors = data.filter((_, index) => selected.has(index));
+    const staff = getStaffAuthor(authors);
+    const student = getStudentAuthor(authors);
+
+    if (!staff || !student || staff?.aut_id === student?.aut_id) return false;
+
+    return { staff, student };
 };

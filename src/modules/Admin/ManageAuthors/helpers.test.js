@@ -1,71 +1,23 @@
-import { canAuthorsBeMerged, canSelectedAuthorsBeMerged } from './helpers';
+import { getMergeableAuthors } from './helpers';
 
 describe('helpers', () => {
-    it('canAuthorsBeMerged', async () => {
-        expect(canAuthorsBeMerged()).toBeFalsy();
-        expect(canAuthorsBeMerged({ aut_id: 1, aut_org_username: 'staff' })).toBeFalsy();
-        expect(canAuthorsBeMerged({ aut_id: 1, aut_student_username: 'student' })).toBeFalsy();
-        expect(canAuthorsBeMerged(undefined, { aut_id: 1, aut_org_username: 'staff' })).toBeFalsy();
-        expect(canAuthorsBeMerged(undefined, { aut_id: 1, aut_student_username: 'student' })).toBeFalsy();
-        expect(
-            canAuthorsBeMerged({ aut_id: 1, aut_org_username: 'staff 1' }, { aut_id: 2, aut_org_username: 'staff 2' }),
-        ).toBeFalsy();
-        expect(
-            canAuthorsBeMerged(
-                { aut_id: 1, aut_student_username: 'student 1' },
-                { aut_id: 2, aut_student_username: 'student 2' },
-            ),
-        ).toBeFalsy();
+    it('getMergeableAuthors', async () => {
+        const staff = { aut_id: 1, aut_org_username: 'staff 1' };
+        const student = { aut_id: 2, aut_student_username: 'student 1' };
 
-        expect(
-            canAuthorsBeMerged(
-                { aut_id: 1, aut_org_username: 'staff 1' },
-                { aut_id: 2, aut_student_username: 'student 1' },
-            ),
-        ).toBeTruthy();
-        expect(
-            canAuthorsBeMerged(
-                { aut_id: 2, aut_student_username: 'student 1' },
-                { aut_id: 1, aut_org_username: 'staff 1' },
-            ),
-        ).toBeTruthy();
-    });
+        expect(getMergeableAuthors()).toBeFalsy();
+        expect(getMergeableAuthors([staff, student])).toBeFalsy();
+        expect(getMergeableAuthors([staff, staff], [0, 1])).toBeFalsy();
+        expect(getMergeableAuthors([staff, {}, student], [0, 1])).toBeFalsy();
 
-    it('canSelectedAuthorsBeMerged', async () => {
-        expect(canSelectedAuthorsBeMerged()).toBeFalsy();
-        expect(canSelectedAuthorsBeMerged([{ aut_id: 1, aut_org_username: 'staff' }])).toBeFalsy();
+        const expected = { staff, student };
+        expect(getMergeableAuthors([staff, student], [0, 1])).toEqual(expected);
+        expect(getMergeableAuthors([{ ...student, aut_org_username: 'staff 3' }, staff], [0, 1])).toEqual({
+            staff,
+            student: { ...student, aut_org_username: 'staff 3' },
+        });
         expect(
-            canSelectedAuthorsBeMerged([
-                { aut_id: 1, aut_org_username: 'staff 1' },
-                { aut_id: 2, aut_student_username: 'student 1' },
-            ]),
-        ).toBeFalsy();
-        expect(
-            canSelectedAuthorsBeMerged(
-                [
-                    { aut_id: 1, aut_org_username: 'staff 1' },
-                    { aut_id: 2, aut_student_username: 'student 1' },
-                ],
-                ['0'],
-            ),
-        ).toBeFalsy();
-        expect(
-            canSelectedAuthorsBeMerged(
-                [
-                    { aut_id: 1, aut_org_username: 'staff 1' },
-                    { aut_id: 2, aut_student_username: 'student 1' },
-                ],
-                ['0', '2'],
-            ),
-        ).toBeFalsy();
-        expect(
-            canSelectedAuthorsBeMerged(
-                [
-                    { aut_id: 1, aut_org_username: 'staff 1' },
-                    { aut_id: 2, aut_student_username: 'student 1' },
-                ],
-                ['0', '1'],
-            ),
-        ).toBeTruthy();
+            getMergeableAuthors([staff, { aut_id: 3, aut_student_username: 'another author' }, student], [0, 2]),
+        ).toEqual(expected);
     });
 });

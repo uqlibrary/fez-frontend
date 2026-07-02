@@ -1445,7 +1445,7 @@ describe('ManageAuthors', () => {
         );
 
         it('should send `merge authors` request and refresh the list', async () => {
-            api.mock.authors.merge();
+            api.mock.authors.merge({ staffId: 1, studentId: 2 });
             // post-merge list refresh
             api.mock.authors.search({
                 data: [
@@ -1490,7 +1490,7 @@ describe('ManageAuthors', () => {
         });
 
         it('should display error from server on merge failure', async () => {
-            api.mock.authors.merge({ status: 500, data: { message: 'my error' } });
+            api.mock.authors.merge({ staffId: 1, studentId: 2, status: 500, data: { message: 'my error' } });
             const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
             const { getByTestId } = setup();
             await waitForText('staff 1');

@@ -33,8 +33,8 @@ import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/gene
 
 import { useMrtTable, useServerData } from 'hooks';
 import Grid from '@mui/material/Grid';
-import { isEmptyString, silentTryCatch, withErrorBoundary } from '../../../helpers/general';
-import { canSelectedAuthorsBeMerged } from './helpers';
+import { silentTryCatch, withErrorBoundary } from '../../../helpers/general';
+import { getMergeableAuthors } from './helpers';
 
 export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest, onMerge }) => {
     const theme = useTheme();
@@ -108,8 +108,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         hideConfirmation,
     } = useMrtTable(list);
 
-    const selection = Object.keys(selectedRows);
-    const canMergeAuthors = silentTryCatch(() => canSelectedAuthorsBeMerged(data, selection), false);
+    const mergeableAuthors = silentTryCatch(() => getMergeableAuthors(data, Object.keys(selectedRows)), false);
+    const hasMergeableAuthors = !!mergeableAuthors;
 
     const columns = useMemo(
         () => [
@@ -239,7 +239,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
 
     const handleMergeConfirmation = () => {
         setBusy();
-        onMerge(data, selection)
+        onMerge(mergeableAuthors.staff, mergeableAuthors.student)
             .then(refresh)
             .catch(console.error)
             .finally(() => setBusy(false));
@@ -453,7 +453,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             variant="contained"
                             color="primary"
                             onClick={showMergeConfirmation}
-                            disabled={!canMergeAuthors || !!table.getState().isLoading}
+                            disabled={!hasMergeableAuthors || !!table.getState().isLoading}
                         >
                             Merge Selected Authors
                         </Button>
@@ -562,34 +562,23 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 isOpen={isScopusIngestOpen}
                 locale={scopusIngestConfirmationLocale}
             />
-            {canMergeAuthors &&
+            {hasMergeableAuthors &&
                 isMergeConfirmationOpen &&
-                withErrorBoundary(() => {
-                    const firstAuthor = data[selection[0]];
-                    const secondAuthor = data[selection[1]];
-                    const studentAuthor = !isEmptyString(firstAuthor?.aut_student_username)
-                        ? /* istanbul ignore next */ firstAuthor
-                        : secondAuthor;
-                    const staffAuthor =
-                        studentAuthor.aut_id === firstAuthor.aut_id
-                            ? /* istanbul ignore next */ secondAuthor
-                            : firstAuthor;
-                    return (
-                        <ConfirmationBox
-                            confirmationBoxId="authors-merge-confirmation"
-                            onAction={handleMergeConfirmation}
-                            onClose={handleHideMergeConfirmation}
-                            isOpen={isMergeConfirmationOpen}
-                            locale={{
-                                ...mergeConfirmationLocale,
-                                confirmationMessage: mergeConfirmationLocale.confirmationMessage(
-                                    studentAuthor,
-                                    staffAuthor,
-                                ),
-                            }}
-                        />
-                    );
-                })()}
+                withErrorBoundary(() => (
+                    <ConfirmationBox
+                        confirmationBoxId="authors-merge-confirmation"
+                        onAction={handleMergeConfirmation}
+                        onClose={handleHideMergeConfirmation}
+                        isOpen={isMergeConfirmationOpen}
+                        locale={{
+                            ...mergeConfirmationLocale,
+                            confirmationMessage: mergeConfirmationLocale.confirmationMessage(
+                                mergeableAuthors.student,
+                                mergeableAuthors.staff,
+                            ),
+                        }}
+                    />
+                ))()}
             <MaterialReactTable table={table} />
         </Box>
     );
