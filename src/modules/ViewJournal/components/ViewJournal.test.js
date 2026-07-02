@@ -1146,7 +1146,7 @@ describe('ViewJournal', () => {
                     });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
@@ -1192,7 +1192,7 @@ describe('ViewJournal', () => {
                     });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
