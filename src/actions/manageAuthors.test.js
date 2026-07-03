@@ -354,8 +354,7 @@ describe('author list actions', () => {
                 ),
             ).rejects.toMatchObject({
                 status: 422,
-                message:
-                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                message: error,
             });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });

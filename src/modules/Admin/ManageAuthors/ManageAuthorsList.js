@@ -80,7 +80,6 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         data: list,
         pagination,
         request,
-        refresh,
         onPaginationChange,
     } = useServerData({
         actions,
@@ -240,7 +239,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
     const handleMergeConfirmation = () => {
         setBusy();
         onMerge(mergeableAuthors.staff, mergeableAuthors.student)
-            .then(refresh)
+            .then(resetSelectedRows)
             .catch(console.error)
             .finally(() => setBusy(false));
     };

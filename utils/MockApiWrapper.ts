@@ -268,9 +268,7 @@ export const api: Api = {
                 data = {},
                 once = true,
             }: AuthorParams = {}) {
-                this.instance
-                    .onPost(api.url.authors.merge(staffId, studentId))
-                    [replyMethod(once)](status, { data: { ...data } });
+                this.instance.onPost(api.url.authors.merge(staffId, studentId))[replyMethod(once)](status, { ...data });
                 return this;
             },
             instance: {} as MockAdapter,

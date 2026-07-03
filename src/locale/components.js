@@ -4145,7 +4145,8 @@ export default {
                 alertId: 'alert-done-author-merging',
                 allowDismiss: true,
                 type: 'done',
-                message: 'The authors were successfully merged.',
+                message:
+                    'A job to merge the authors has been created. A system alert will be generated when the job completes.',
             },
             updateAuthorSuccessAlert: {
                 alertId: 'alert-done-author-update',

@@ -1427,6 +1427,16 @@ describe('ManageAuthors', () => {
             await userEvent.click(within(row).getByRole('checkbox'));
         };
 
+        const assertSelected = name => {
+            const row = screen.getByDisplayValue(name).closest('tr');
+            expect(within(row).getByRole('checkbox')).toBeChecked();
+        };
+
+        const assertNotSelected = name => {
+            const row = screen.getByDisplayValue(name).closest('tr');
+            expect(within(row).getByRole('checkbox')).not.toBeChecked();
+        };
+
         beforeEach(() =>
             api.mock.authors.search({
                 data: [
@@ -1444,18 +1454,8 @@ describe('ManageAuthors', () => {
             }),
         );
 
-        it('should send `merge authors` request and refresh the list', async () => {
+        it('should send `merge authors` request', async () => {
             api.mock.authors.merge({ staffId: 1, studentId: 2 });
-            // post-merge list refresh
-            api.mock.authors.search({
-                data: [
-                    {
-                        aut_id: 1,
-                        aut_org_username: 'staff 1',
-                        aut_display_name: 'staff1',
-                    },
-                ],
-            });
             const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
             const { getByTestId, queryByText } = setup();
             await waitForText('staff 1');
@@ -1483,14 +1483,15 @@ describe('ManageAuthors', () => {
                 ...locale.components.manageAuthors.authorMergingSuccessAlert,
                 dismissAction: expect.any(Function),
             });
-            // assert list reload
-            await waitForText('staff 1');
+            assertNotSelected('staff 1');
+            assertNotSelected('student 1');
             assertNotInTheDocument(queryByText('student 1'));
             assertNotInTheDocument('cancel-authors-merge-confirmation');
         });
 
         it('should display error from server on merge failure', async () => {
-            api.mock.authors.merge({ staffId: 1, studentId: 2, status: 500, data: { message: 'my error' } });
+            const error = 'Failed to merge authors';
+            api.mock.authors.merge({ staffId: 1, studentId: 2, status: 422, data: { message: error } });
             const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
             const { getByTestId } = setup();
             await waitForText('staff 1');
@@ -1508,10 +1509,10 @@ describe('ManageAuthors', () => {
             await waitToHaveBeenLastCalledWith(showAppAlert, {
                 ...locale.components.manageAuthors.authorMergingErrorAlert,
                 dismissAction: expect.any(Function),
-                message: expect.stringContaining(
-                    'Error while merging authors: Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-                ),
+                message: expect.stringContaining(error),
             });
+            assertSelected('staff 1');
+            assertSelected('student 1');
         });
     });
 });
