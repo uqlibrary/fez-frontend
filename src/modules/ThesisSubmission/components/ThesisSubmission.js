@@ -18,7 +18,7 @@ import { ContributorsEditorField, MODE_GIVEN_NAME_FIRST } from 'modules/SharedCo
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 
-import { validation, TRANSITION_COHORT, general } from 'config';
+import { validation, general } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
@@ -50,7 +50,7 @@ export const getFormConstants = (account, author, isHdrThesis) => {
             fileAccessId: general.HDR_THESIS_DEFAULT_VALUES.fileAccessId,
             cancelSubmit: () => window.location.assign(thesisLocale.cancelLink),
             afterSubmit: () => window.location.assign(thesisLocale.afterSubmitLink),
-            userIsAllowed: TRANSITION_COHORT.includes(account.id),
+            userIsAllowed: author?.aut_rhd_cohort === 1,
             values: {
                 thesisTitle: '',
                 currentAuthor: [

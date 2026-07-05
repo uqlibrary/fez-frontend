@@ -325,8 +325,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     handleCancel(table)();
                 }
             },
-            '& .MuiDialog-paper': {
-                margin: { xs: 0, lg: 4 },
+            sx: {
+                '& .MuiDialog-paper': {
+                    margin: { xs: 0, lg: 4 },
+                },
             },
         },
         muiTableProps: {
@@ -364,16 +366,18 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 onEditingCanceled={handleCancel(table)}
             />
         ),
-        renderEditRowDialogContent: ({ table, row }) => (
-            <FullAuthorDetails
-                data={row.original}
-                mode="update"
-                id="authors-list-edit-row"
-                data-testid="authors-list-edit-row"
-                onEditingApproved={handleSave(table)}
-                onEditingCanceled={handleCancel(table)}
-            />
-        ),
+        renderEditRowDialogContent: ({ table, row }) => {
+            return (
+                <FullAuthorDetails
+                    data={row.original}
+                    mode="update"
+                    id="authors-list-edit-row"
+                    data-testid="authors-list-edit-row"
+                    onEditingApproved={handleSave(table)}
+                    onEditingCanceled={handleCancel(table)}
+                />
+            );
+        },
         renderTopToolbarCustomActions: ({ table }) => (
             <Box
                 sx={theme => ({
