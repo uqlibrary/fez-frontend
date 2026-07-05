@@ -87,7 +87,7 @@ describe('SimpleSearchComponent', () => {
             onSearch: searchFn,
         });
         fireEvent.keyDown(getByTestId('simple-search-input'), { key: 'Enter', code: 13 });
-        expect(searchFn).toBeCalled();
+        expect(searchFn).toHaveBeenCalled();
     });
 
     it('should render with default onSearch callback', () => {
@@ -105,7 +105,7 @@ describe('SimpleSearchComponent', () => {
             onSearch: searchFn,
         });
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
-        expect(searchFn).not.toBeCalled();
+        expect(searchFn).not.toHaveBeenCalled();
     });
 
     it('should toggle search mode', () => {

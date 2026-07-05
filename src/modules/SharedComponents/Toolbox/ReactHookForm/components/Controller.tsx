@@ -35,15 +35,16 @@ const getDecoratedField = (
     field: ControllerRenderProps,
     fieldState: ControllerFieldState,
     formState: UseFormStateReturn<FieldValues>,
-): DecoratedField => {
-    const decorated = field as unknown as DecoratedField;
-    decorated.state = {
-        error: fieldState.error?.message,
-        defaultValue: get(formState?.defaultValues, field.name),
-    };
-    decorated.ref = null;
-    return decorated;
-};
+): DecoratedField =>
+    ({
+        ...field,
+        inputRef: field.ref,
+        ref: null,
+        state: {
+            error: fieldState.error?.message,
+            defaultValue: get(formState?.defaultValues, field.name),
+        },
+    }) as DecoratedField;
 
 /**
  * An extended RHF's HoC <Controller> component, with additional props added to `render`s func `field` param,
