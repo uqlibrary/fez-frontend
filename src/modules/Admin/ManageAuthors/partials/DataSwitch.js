@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/GridLegacy';
 import FormHelperText from '@mui/material/FormHelperText';
-import ColumnTitle from '../partials/ColumnTitle';
+import ColumnTitle from './ColumnTitle';
 import { useFormContext } from 'react-hook-form';
 
 import { useTheme } from '@mui/material/styles';
@@ -10,7 +10,7 @@ import { useMediaQuery } from '@mui/system';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-export const NameOverride = ({ value, onChange, name, ['data-testid']: dataTestId, ...rest }) => {
+export const DataSwitch = ({ value, onChange, name, ['data-testid']: dataTestId, ...rest }) => {
     const {
         formState: { isValidating },
     } = useFormContext();
@@ -56,10 +56,10 @@ export const NameOverride = ({ value, onChange, name, ['data-testid']: dataTestI
     );
 };
 
-NameOverride.propTypes = {
+DataSwitch.propTypes = {
     name: PropTypes.string,
     value: PropTypes.any,
     onChange: PropTypes.func,
 };
 
-export default React.memo(NameOverride);
+export default React.memo(DataSwitch);
