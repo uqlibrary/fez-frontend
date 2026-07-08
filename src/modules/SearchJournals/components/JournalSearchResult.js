@@ -20,7 +20,7 @@ import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from 
 import { useNavigate, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
-import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
+import AddToListButton from './partials/AddToListButton';
 
 import { ScrollToPos as ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToPos';
 
@@ -171,13 +171,6 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                         <Grid style={{ paddingTop: 20 }} item xs={12}>
                             <Grid container spacing={2}>
                                 <StyledGridButtonContainer item xs={12} sm={6} md={3}>
-                                    <AddToFavouritesButton
-                                        disabled={countSelectedJournals() < 1}
-                                        clearSelectedJournals={clearSelectedJournals}
-                                        selectedJournals={selectedJournals}
-                                    />
-                                </StyledGridButtonContainer>
-                                <StyledGridButtonContainer item xs={12} sm={6} md={3}>
                                     <Button
                                         disabled={countSelectedJournals() < 2}
                                         onClick={handleJournalsComparisonClick}
@@ -189,6 +182,12 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         data-analyticsid="journal-comparison-button"
                                         data-testid="journal-comparison-button"
                                         fullWidth
+                                    />
+                                </StyledGridButtonContainer>
+                                <StyledGridButtonContainer item xs={12} sm={6} md={4}>
+                                    <AddToListButton
+                                        clearSelectedJournals={clearSelectedJournals}
+                                        selectedJournals={selectedJournals}
                                     />
                                 </StyledGridButtonContainer>
                                 <CommonButtons onSearchAll={onSearchAll} browseAllJournals={browseAllJournals} />

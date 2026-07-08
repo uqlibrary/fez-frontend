@@ -261,6 +261,10 @@ const randomWait = async (min, max) => {
     });
 };
 
+/**
+ * @param {Array<sting|number>} ids
+ * @return {AnyAction}
+ */
 export const addToFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_REQUESTING });
     await randomWait(50, 100);
