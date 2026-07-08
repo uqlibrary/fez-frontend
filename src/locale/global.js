@@ -45,7 +45,7 @@ export default {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    : celebrating 20 years
+                    : Celebrating 20 years
                 </a>
             </>
         ),
