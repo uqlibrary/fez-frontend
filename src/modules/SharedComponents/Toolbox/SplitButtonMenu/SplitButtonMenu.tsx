@@ -100,8 +100,13 @@ const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
                     aria-haspopup="menu"
                     aria-expanded={open ? 'true' : undefined}
                     aria-controls={open ? id : undefined}
+                    aria-label={open ? 'Close list options' : 'Open list options'}
                 >
-                    {loading ? <CircularProgress size={16} style={{ marginLeft: 8 }} /> : <ArrowDropDownIcon />}
+                    {loading ? (
+                        <CircularProgress aria-label="Loading..." size={16} style={{ marginLeft: 8 }} />
+                    ) : (
+                        <ArrowDropDownIcon aria-label="Open list options" />
+                    )}
                 </Button>
             </ButtonGroup>
 
