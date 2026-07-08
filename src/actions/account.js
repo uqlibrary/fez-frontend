@@ -40,7 +40,6 @@ export function loadCurrentAccount() {
                     return get(CURRENT_AUTHOR_API());
                 })
                 .then(currentAuthorResponse => {
-                    // TODO: to be decommissioned when author/details will become a part of author api
                     currentAuthor = currentAuthorResponse.data;
                     dispatch({
                         type: actions.CURRENT_AUTHOR_LOADED,
