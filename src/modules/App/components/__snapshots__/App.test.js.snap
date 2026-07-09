@@ -46,7 +46,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                     target="_blank"
                     title="Click to view the blog post"
                   >
-                    : celebrating 20 years
+                    : Celebrating 20 years
                   </a>
                 </h1>
               </div>
@@ -885,7 +885,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                     target="_blank"
                     title="Click to view the blog post"
                   >
-                    : celebrating 20 years
+                    : Celebrating 20 years
                   </a>
                 </h1>
               </div>
@@ -1454,7 +1454,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     target="_blank"
                     title="Click to view the blog post"
                   >
-                    : celebrating 20 years
+                    : Celebrating 20 years
                   </a>
                 </h1>
               </div>
@@ -1959,7 +1959,7 @@ exports[`Application component should render app for account with fez author wit
                     target="_blank"
                     title="Click to view the blog post"
                   >
-                    : celebrating 20 years
+                    : Celebrating 20 years
                   </a>
                 </h1>
               </div>
@@ -2464,7 +2464,7 @@ exports[`Application component should render application with routing for the us
                     target="_blank"
                     title="Click to view the blog post"
                   >
-                    : celebrating 20 years
+                    : Celebrating 20 years
                   </a>
                 </h1>
               </div>
@@ -2756,7 +2756,7 @@ exports[`Application component should render for anon user 1`] = `
                     target="_blank"
                     title="Click to view the blog post"
                   >
-                    : celebrating 20 years
+                    : Celebrating 20 years
                   </a>
                 </h1>
               </div>
