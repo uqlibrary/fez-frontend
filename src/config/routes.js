@@ -659,10 +659,6 @@ export const getMenuConfig = (
                       ...locale.menu.myEditorialAppointments,
                   },
                   {
-                      linkTo: pathConfig.authorStatistics.url(account.id),
-                      ...locale.menu.authorStatistics,
-                  },
-                  {
                       divider: true,
                       path: '/234234234242',
                   },
