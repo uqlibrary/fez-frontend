@@ -29,7 +29,7 @@
     "@ckeditor/ckeditor5-dev-utils": "^43.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^43.3.0",
     "css-loader": "^7.1.2",
-    "postcss": "^8.4.47",
+    "postcss": "^8.5.19",
     "raw-loader": "^4.0.2",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^4.2.3",
