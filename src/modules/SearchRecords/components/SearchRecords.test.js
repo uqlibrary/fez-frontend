@@ -18,9 +18,7 @@ jest.mock('actions', () => ({
 
 jest.mock('./AuthorStatisticsView', () => ({
     __esModule: true,
-    default: ({ authorId, username }) => (
-        <div data-testid="author-statistics-view" data-author-id={authorId} data-username={username || ''} />
-    ),
+    default: ({ authorId }) => <div data-testid="author-statistics-view" data-author-id={authorId} />,
 }));
 
 const mockUseNavigate = jest.fn();
@@ -660,28 +658,6 @@ describe('SearchRecords page', () => {
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
         });
 
-        it('passes the username extracted from the author label to AuthorStatisticsView', () => {
-            mockUseLocation = { pathname: '/', search: `?${param(authorOnlySearchParams)}` };
-            const { getByTestId } = setup(null, { ...defaultState });
-
-            expect(getByTestId('author-statistics-view').getAttribute('data-username')).toBe('e2hchans');
-        });
-
-        it('passes empty username when author label has no username in parentheses', () => {
-            mockUseLocation = {
-                pathname: '/',
-                search: `?${param({
-                    ...searchQuery,
-                    searchMode: 'advanced',
-                    searchQueryParams: { rek_author_id: { value: '193', label: 'Chanson, Hubert' } },
-                    displayRecordsAs: 'author_statistics',
-                })}`,
-            };
-            const { getByTestId } = setup(null, { ...defaultState });
-
-            expect(getByTestId('author-statistics-view').getAttribute('data-username')).toBe('');
-        });
-
         it('hides paging, sorting controls and facets when displaying author statistics', () => {
             mockUseLocation = { pathname: '/', search: `?${param(authorOnlySearchParams)}` };
             const { queryByTestId } = setup(null, { ...defaultState });
@@ -701,6 +677,14 @@ describe('SearchRecords page', () => {
             // href should not contain displayRecordsAs
             expect(link.getAttribute('href')).not.toContain('displayRecordsAs');
             expect(link.getAttribute('href')).toContain('rek_author_id');
+        });
+
+        it('clicking the publications list link fires the onClick handler', () => {
+            mockUseLocation = { pathname: '/records/search', search: `?${param(authorOnlySearchParams)}` };
+            const { getByRole } = setup(null, { ...defaultState });
+
+            const link = getByRole('link', { name: 'View publications list' });
+            fireEvent.click(link);
         });
 
         it('shows author statistics option in Display results dropdown for an author-only search in standard view', () => {

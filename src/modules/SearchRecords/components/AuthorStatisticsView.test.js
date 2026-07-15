@@ -47,7 +47,7 @@ const setup = (props = {}, stateOverrides = {}) => {
     };
     return render(
         <WithReduxStore initialState={initialState}>
-            <AuthorStatisticsView authorId="193" username="testuser" {...props} />
+            <AuthorStatisticsView authorId="193" {...props} />
         </WithReduxStore>,
     );
 };
@@ -57,19 +57,14 @@ describe('AuthorStatisticsView', () => {
         jest.clearAllMocks();
     });
 
-    it('dispatches loadAuthorStatsByAuthorId with authorId and username on mount', () => {
+    it('dispatches loadAuthorStatsByAuthorId with authorId on mount', () => {
         setup();
-        expect(actions.loadAuthorStatsByAuthorId).toHaveBeenCalledWith('193', 'testuser');
+        expect(actions.loadAuthorStatsByAuthorId).toHaveBeenCalledWith('193');
     });
 
     it('does not dispatch when authorId is not provided', () => {
         setup({ authorId: null });
         expect(actions.loadAuthorStatsByAuthorId).not.toHaveBeenCalled();
-    });
-
-    it('dispatches without username when only authorId provided', () => {
-        setup({ authorId: '193', username: undefined });
-        expect(actions.loadAuthorStatsByAuthorId).toHaveBeenCalledWith('193', undefined);
     });
 
     it('shows a loader while stats are loading', () => {

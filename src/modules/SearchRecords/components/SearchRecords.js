@@ -148,9 +148,6 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
     }, [searchParams.searchQueryParams]);
 
     const authorId = isAuthorOnlySearch ? searchParams.searchQueryParams?.rek_author_id?.value : null;
-    const username = isAuthorOnlySearch
-        ? (searchParams.searchQueryParams?.rek_author_id?.label?.match(/\(([^)]+)\)$/)?.[1] ?? null)
-        : null;
 
     const autoViewUrl = React.useMemo(() => {
         const params = new URLSearchParams(location.search);
@@ -186,7 +183,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
     const SelectRecordView = publicationsList => {
         switch (displayLookup) {
             case 'author_statistics':
-                return <AuthorStatisticsView authorId={authorId} username={username} />;
+                return <AuthorStatisticsView authorId={authorId} />;
             case 'image-gallery':
                 return (
                     <ImageGallery
@@ -329,7 +326,9 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                     )}
                                     {displayLookup === 'author_statistics' && (
                                         <Grid item xs={12}>
-                                            <Link to={autoViewUrl}>{txt.authorStatistics.viewPublicationsList}</Link>
+                                            <Link to={autoViewUrl} onClick={() => setUserSelectedDisplayAs(null)}>
+                                                {txt.authorStatistics.viewPublicationsList}
+                                            </Link>
                                         </Grid>
                                     )}
                                     {displayLookup === 'author_statistics' && (
