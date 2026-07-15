@@ -141,10 +141,7 @@ export const setup = () => {
                 return [401, { data: [] }];
             }
             // AUTHOR_STATS_BY_AUTHOR_ID_API
-            else if (
-                config.params['searchQueryParams[rek_author_id][value]'] &&
-                !!config.params['filters[stats_only]']
-            ) {
+            else if (config.params['key[rek_author_id][value]'] && !!config.params['filters[stats_only]']) {
                 return [200, mockData.currentAuthorStats];
             }
             // AUTHOR_PUBLICATIONS_STATS_ONLY_API

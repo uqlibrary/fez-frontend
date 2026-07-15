@@ -27,7 +27,7 @@ import { getQueryParams, useQueryStringParams, useSearchRecordsControls } from '
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 import AuthorStatisticsView from './AuthorStatisticsView';
-import { useNavigate, useLocation } from 'react-router';
+import { useNavigate, useLocation, Link } from 'react-router';
 import { pathConfig } from 'config/pathConfig';
 
 /*
@@ -152,6 +152,12 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
         ? (searchParams.searchQueryParams?.rek_author_id?.label?.match(/\(([^)]+)\)$/)?.[1] ?? null)
         : null;
 
+    const autoViewUrl = React.useMemo(() => {
+        const params = new URLSearchParams(location.search);
+        params.delete('displayRecordsAs');
+        return `${location.pathname}?${params.toString()}`;
+    }, [location.pathname, location.search]);
+
     const txt = locale.pages.searchRecords;
     const pagingData = publicationsListPagingData;
     const isLoadingOrExporting = searchLoading || exportPublicationsLoading;
@@ -274,24 +280,26 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                             />
                                         </Grid>
                                     )}
-                                    <Grid item xs={12}>
-                                        <PublicationsListSorting
-                                            showDisplayAs
-                                            canUseExport={canUseExport && displayLookup !== 'author_statistics'}
-                                            disabled={isLoadingOrExporting}
-                                            extraViewTypes={isAuthorOnlySearch ? [authorStatsViewType] : undefined}
-                                            onExportPublications={handleExport}
-                                            onPageSizeChanged={pageSizeChanged}
-                                            onSortByChanged={sortByChanged}
-                                            onDisplayRecordsAsChanged={onDisplayRecordsAsChanged}
-                                            pageSize={searchParams.pageSize}
-                                            pagingData={pagingData}
-                                            sortBy={searchParams.sortBy}
-                                            sortDirection={searchParams.sortDirection}
-                                            displayRecordsAs={displayLookup}
-                                            sortingData={sortingData}
-                                        />
-                                    </Grid>
+                                    {displayLookup !== 'author_statistics' && (
+                                        <Grid item xs={12}>
+                                            <PublicationsListSorting
+                                                showDisplayAs
+                                                canUseExport={canUseExport}
+                                                disabled={isLoadingOrExporting}
+                                                extraViewTypes={isAuthorOnlySearch ? [authorStatsViewType] : undefined}
+                                                onExportPublications={handleExport}
+                                                onPageSizeChanged={pageSizeChanged}
+                                                onSortByChanged={sortByChanged}
+                                                onDisplayRecordsAsChanged={onDisplayRecordsAsChanged}
+                                                pageSize={searchParams.pageSize}
+                                                pagingData={pagingData}
+                                                sortBy={searchParams.sortBy}
+                                                sortDirection={searchParams.sortDirection}
+                                                displayRecordsAs={displayLookup}
+                                                sortingData={sortingData}
+                                            />
+                                        </Grid>
+                                    )}
                                     {displayLookup !== 'author_statistics' && (
                                         <Grid item xs={12}>
                                             <PublicationsListPaging
@@ -317,6 +325,11 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                                     />
                                                 </Grid>
                                             </Grid>
+                                        </Grid>
+                                    )}
+                                    {displayLookup === 'author_statistics' && (
+                                        <Grid item xs={12}>
+                                            <Link to={autoViewUrl}>{txt.authorStatistics.viewPublicationsList}</Link>
                                         </Grid>
                                     )}
                                     {displayLookup === 'author_statistics' && (
