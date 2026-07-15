@@ -263,9 +263,6 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -820,9 +817,6 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -1374,9 +1368,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                       data-testid="oa-n/a-icon"
                                     />
                                   </div>
-                                  <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
                                   <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
