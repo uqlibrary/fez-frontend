@@ -26,6 +26,7 @@ import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/genera
 import { getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
+import AuthorStatisticsView from './AuthorStatisticsView';
 import { useNavigate, useLocation } from 'react-router';
 import { pathConfig } from 'config/pathConfig';
 
@@ -140,6 +141,17 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [queryParamsHash]);
 
+    const isAuthorOnlySearch = React.useMemo(() => {
+        const params = searchParams.searchQueryParams || {};
+        const keys = Object.keys(params);
+        return keys.length === 1 && keys[0] === 'rek_author_id' && !!params.rek_author_id?.value;
+    }, [searchParams.searchQueryParams]);
+
+    const authorId = isAuthorOnlySearch ? searchParams.searchQueryParams?.rek_author_id?.value : null;
+    const username = isAuthorOnlySearch
+        ? (searchParams.searchQueryParams?.rek_author_id?.label?.match(/\(([^)]+)\)$/)?.[1] ?? null)
+        : null;
+
     const txt = locale.pages.searchRecords;
     const pagingData = publicationsListPagingData;
     const isLoadingOrExporting = searchLoading || exportPublicationsLoading;
@@ -150,12 +162,16 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
     };
     const initSortingData = locale.components.sorting;
 
-    const displayLookup = normaliseDisplayLookup(
+    const rawDisplayLookup = normaliseDisplayLookup(
         userSelectedDisplayAs ??
             (searchParams.displayRecordsAs === 'auto' ? null : searchParams.displayRecordsAs) ??
             publicationsListDefaultView?.id ??
             null,
     );
+    const displayLookup =
+        rawDisplayLookup === 'author_statistics' && !isAuthorOnlySearch ? 'standard' : rawDisplayLookup;
+
+    const authorStatsViewType = { id: 456852, value: 'author_statistics', label: 'Author statistics' };
     const newSortingData = initSortingData.sortBy.filter(option =>
         option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
     );
@@ -163,6 +179,8 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
 
     const SelectRecordView = publicationsList => {
         switch (displayLookup) {
+            case 'author_statistics':
+                return <AuthorStatisticsView authorId={authorId} username={username} />;
             case 'image-gallery':
                 return (
                     <ImageGallery
@@ -195,6 +213,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                             isAdmin={isAdmin}
                             isAdvancedSearch={isAdvancedSearch}
                             isUnpublishedBufferPage={isUnpublishedBufferPage}
+                            keepAdvancedSearchOpen={displayLookup === 'author_statistics'}
                             searchLoading={searchLoading}
                             showAdvancedSearchButton
                         />
@@ -223,26 +242,29 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                 }
                 {
                     // results to display or loading if user is filtering/paging
-                    (exportPublicationsLoading ||
+                    ((displayLookup === 'author_statistics' && hasSearchParams) ||
+                        exportPublicationsLoading ||
                         (hasSearchParams && searchLoading) ||
                         (!!publicationsList && publicationsList.length > 0)) && (
-                        <Grid item xs sm md={9}>
+                        <Grid item xs sm md={displayLookup === 'author_statistics' ? 12 : 9}>
                             <StandardCard noHeader standardCardId="search-records-results">
                                 <Grid container spacing={2} justifyContent="space-between">
-                                    <Grid item xs="auto">
-                                        {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
-                                            <span>
-                                                {txt.recordCount
-                                                    .replace('[recordsTotal]', pagingData.total)
-                                                    .replace('[recordsFrom]', pagingData.from)
-                                                    .replace('[recordsTo]', pagingData.to)}
-                                            </span>
-                                        ) : (
-                                            <span>{txt.loadingPagingMessage}</span>
-                                        )}
-                                    </Grid>
-                                    <Grid item xs="auto">
-                                        {(isAdmin || isResearcher) && (
+                                    {displayLookup !== 'author_statistics' && (
+                                        <Grid item xs="auto">
+                                            {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
+                                                <span>
+                                                    {txt.recordCount
+                                                        .replace('[recordsTotal]', pagingData.total)
+                                                        .replace('[recordsFrom]', pagingData.from)
+                                                        .replace('[recordsTo]', pagingData.to)}
+                                                </span>
+                                            ) : (
+                                                <span>{txt.loadingPagingMessage}</span>
+                                            )}
+                                        </Grid>
+                                    )}
+                                    {displayLookup !== 'author_statistics' && (isAdmin || isResearcher) && (
+                                        <Grid item xs="auto">
                                             <BulkExport
                                                 exportPublications={handleExport}
                                                 locale={txt.bulkExport}
@@ -250,13 +272,14 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                                 totalMatches={publicationsListPagingData.total}
                                                 disabled={isLoadingOrExporting}
                                             />
-                                        )}
-                                    </Grid>
+                                        </Grid>
+                                    )}
                                     <Grid item xs={12}>
                                         <PublicationsListSorting
                                             showDisplayAs
-                                            canUseExport={canUseExport}
+                                            canUseExport={canUseExport && displayLookup !== 'author_statistics'}
                                             disabled={isLoadingOrExporting}
+                                            extraViewTypes={isAuthorOnlySearch ? [authorStatsViewType] : undefined}
                                             onExportPublications={handleExport}
                                             onPageSizeChanged={pageSizeChanged}
                                             onSortByChanged={sortByChanged}
@@ -269,16 +292,18 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                             sortingData={sortingData}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
-                                        <PublicationsListPaging
-                                            disabled={isLoadingOrExporting}
-                                            loading={isLoadingOrExporting}
-                                            onPageChanged={pageChanged}
-                                            pagingData={pagingData}
-                                            pagingId="search-records-paging-top"
-                                        />
-                                    </Grid>
-                                    {isLoadingOrExporting && (
+                                    {displayLookup !== 'author_statistics' && (
+                                        <Grid item xs={12}>
+                                            <PublicationsListPaging
+                                                disabled={isLoadingOrExporting}
+                                                loading={isLoadingOrExporting}
+                                                onPageChanged={pageChanged}
+                                                pagingData={pagingData}
+                                                pagingId="search-records-paging-top"
+                                            />
+                                        </Grid>
+                                    )}
+                                    {isLoadingOrExporting && displayLookup !== 'author_statistics' && (
                                         <Grid item xs={12}>
                                             <Grid container justifyContent={'center'}>
                                                 <Grid item xs={12}>
@@ -294,53 +319,65 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                             </Grid>
                                         </Grid>
                                     )}
-                                    {!isLoadingOrExporting && publicationsList && publicationsList.length > 0 && (
+                                    {displayLookup === 'author_statistics' && (
                                         <Grid item xs={12}>
-                                            <RecordsSelectorContext.Provider
-                                                value={{
-                                                    records: publicationsList,
-                                                }}
-                                            >
-                                                {SelectRecordView(publicationsList)}
-                                            </RecordsSelectorContext.Provider>
+                                            {SelectRecordView(publicationsList)}
                                         </Grid>
                                     )}
-                                    <Grid item xs={12}>
-                                        <PublicationsListPaging
-                                            disabled={isLoadingOrExporting}
-                                            loading={isLoadingOrExporting}
-                                            onPageChanged={pageChanged}
-                                            pagingData={pagingData}
-                                            pagingId="search-records-paging-bottom"
-                                        />
-                                    </Grid>
+                                    {displayLookup !== 'author_statistics' &&
+                                        !isLoadingOrExporting &&
+                                        publicationsList &&
+                                        publicationsList.length > 0 && (
+                                            <Grid item xs={12}>
+                                                <RecordsSelectorContext.Provider
+                                                    value={{
+                                                        records: publicationsList,
+                                                    }}
+                                                >
+                                                    {SelectRecordView(publicationsList)}
+                                                </RecordsSelectorContext.Provider>
+                                            </Grid>
+                                        )}
+                                    {displayLookup !== 'author_statistics' && (
+                                        <Grid item xs={12}>
+                                            <PublicationsListPaging
+                                                disabled={isLoadingOrExporting}
+                                                loading={isLoadingOrExporting}
+                                                onPageChanged={pageChanged}
+                                                pagingData={pagingData}
+                                                pagingId="search-records-paging-bottom"
+                                            />
+                                        </Grid>
+                                    )}
                                 </Grid>
                             </StandardCard>
                         </Grid>
                     )
                 }
-                {publicationsListFacets && Object.keys(publicationsListFacets).length !== 0 && (
-                    <Grid
-                        item
-                        md={3}
-                        id="refine-results-facets"
-                        data-testid="refine-results-facets"
-                        sx={{ display: { xs: 'none', md: 'block' } }}
-                    >
-                        <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                            <FacetsFilter
-                                activeFacets={searchParams.activeFacets}
-                                disabled={isLoadingOrExporting}
-                                excludeFacetsList={locale.pages.searchRecords.facetsFilter.excludeFacetsList}
-                                facetsData={publicationsListFacets}
-                                lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                onFacetsChanged={facetsChanged}
-                                renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                showOpenAccessFilter
-                            />
-                        </StandardRighthandCard>
-                    </Grid>
-                )}
+                {displayLookup !== 'author_statistics' &&
+                    publicationsListFacets &&
+                    Object.keys(publicationsListFacets).length !== 0 && (
+                        <Grid
+                            item
+                            md={3}
+                            id="refine-results-facets"
+                            data-testid="refine-results-facets"
+                            sx={{ display: { xs: 'none', md: 'block' } }}
+                        >
+                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                <FacetsFilter
+                                    activeFacets={searchParams.activeFacets}
+                                    disabled={isLoadingOrExporting}
+                                    excludeFacetsList={locale.pages.searchRecords.facetsFilter.excludeFacetsList}
+                                    facetsData={publicationsListFacets}
+                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                    onFacetsChanged={facetsChanged}
+                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                    showOpenAccessFilter
+                                />
+                            </StandardRighthandCard>
+                        </Grid>
+                    )}
             </Grid>
         </StandardPage>
     );
