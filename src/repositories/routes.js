@@ -332,7 +332,7 @@ export const AUTHOR_STATS_BY_AUTHOR_ID_API = ({ authorId }) => ({
     apiUrl: 'records/search',
     options: {
         params: {
-            'searchQueryParams[rek_author_id][value]': authorId,
+            'key[rek_author_id][value]': authorId,
             'filters[stats_only]': true,
         },
     },
