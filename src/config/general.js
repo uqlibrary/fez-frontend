@@ -1923,6 +1923,7 @@ export const COLLECTION_VIEW_TYPE = [
     { id: 456849, value: 'auto', label: 'Auto' },
     { id: 456850, value: 'standard', label: 'Standard' },
     { id: 456851, value: 'image-gallery', label: 'Image Gallery' },
+    { id: 456852, value: 'author_statistics', label: 'Author statistics', selectable: false },
 ];
 
 /** journalAdmin  */
@@ -1937,7 +1938,7 @@ export const dataTeamCollections = ['UQ:06510ce'];
 /** read only controlled vocabularies (hard coded above) */
 const READONLY_VOCABS_IDS = [
     453607, 453982, 453991, 453995, 453596, 454089, 454025, 450000, 453219, 453222, 453630, 453691, 454119, 456854,
-    454139, 453617, 453614, 456851, 456849, 456850, 453662,
+    454139, 453617, 453614, 456851, 456849, 456850, 456852, 453662,
 ];
 export const isReadonlyVocab = id => READONLY_VOCABS_IDS.includes(id);
 

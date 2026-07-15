@@ -118,7 +118,7 @@ export const setup = () => {
             }
             return [404, {}];
         })
-        .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: user }).apiUrl)
+        .onGet(new RegExp(escapeRegExp(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: '.*' }).apiUrl)))
         .reply(200, mockData.hindexResponse)
         .onGet(routes.BATCH_IMPORT_DIRECTORIES_API().apiUrl)
         .reply(200, mockData.batchImportDirectories)
@@ -139,6 +139,13 @@ export const setup = () => {
         .reply(config => {
             if (config.params?.all === 'should return 401') {
                 return [401, { data: [] }];
+            }
+            // AUTHOR_STATS_BY_AUTHOR_ID_API
+            else if (
+                config.params['searchQueryParams[rek_author_id][value]'] &&
+                !!config.params['filters[stats_only]']
+            ) {
+                return [200, mockData.currentAuthorStats];
             }
             // AUTHOR_PUBLICATIONS_STATS_ONLY_API
             else if (config.params.rule === 'incomplete') {
@@ -193,6 +200,8 @@ export const setup = () => {
                 return [200, mockData.collectionSearchList];
             } else if (config.params.key && config.params.key.rek_object_type === 1) {
                 return [200, mockData.communitySearchList];
+            } else if (config.params.key && config.params.key.rek_author_id) {
+                return [200, mockData.internalTitleSearchList];
             } else if (
                 config.params.id ||
                 config.params.doi ||

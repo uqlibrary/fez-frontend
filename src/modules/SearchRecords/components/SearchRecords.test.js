@@ -16,6 +16,13 @@ jest.mock('actions', () => ({
     searchEspacePublications: jest.fn(() => jest.fn()),
 }));
 
+jest.mock('./AuthorStatisticsView', () => ({
+    __esModule: true,
+    default: ({ authorId, username }) => (
+        <div data-testid="author-statistics-view" data-author-id={authorId} data-username={username || ''} />
+    ),
+}));
+
 const mockUseNavigate = jest.fn();
 let mockUseLocation = {};
 
@@ -633,6 +640,89 @@ describe('SearchRecords page', () => {
 
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
             expect(getByTestId('image-gallery')).toBeInTheDocument();
+        });
+    });
+
+    describe('author statistics view', () => {
+        const authorOnlySearchParams = {
+            ...searchQuery,
+            searchMode: 'advanced',
+            searchQueryParams: { rek_author_id: { value: '193', label: 'Chanson, Hubert (e2hchans)' } },
+            displayRecordsAs: 'author_statistics',
+        };
+
+        it('renders AuthorStatisticsView for an author-only search with displayRecordsAs=author_statistics', () => {
+            mockUseLocation = { pathname: '/', search: `?${param(authorOnlySearchParams)}` };
+            const { getByTestId, queryByTestId } = setup(null, { ...defaultState });
+
+            expect(getByTestId('author-statistics-view')).toBeInTheDocument();
+            expect(getByTestId('author-statistics-view').getAttribute('data-author-id')).toBe('193');
+            expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
+        });
+
+        it('passes the username extracted from the author label to AuthorStatisticsView', () => {
+            mockUseLocation = { pathname: '/', search: `?${param(authorOnlySearchParams)}` };
+            const { getByTestId } = setup(null, { ...defaultState });
+
+            expect(getByTestId('author-statistics-view').getAttribute('data-username')).toBe('e2hchans');
+        });
+
+        it('passes empty username when author label has no username in parentheses', () => {
+            mockUseLocation = {
+                pathname: '/',
+                search: `?${param({
+                    ...searchQuery,
+                    searchMode: 'advanced',
+                    searchQueryParams: { rek_author_id: { value: '193', label: 'Chanson, Hubert' } },
+                    displayRecordsAs: 'author_statistics',
+                })}`,
+            };
+            const { getByTestId } = setup(null, { ...defaultState });
+
+            expect(getByTestId('author-statistics-view').getAttribute('data-username')).toBe('');
+        });
+
+        it('hides paging and facets when displaying author statistics', () => {
+            mockUseLocation = { pathname: '/', search: `?${param(authorOnlySearchParams)}` };
+            const { queryByTestId } = setup(null, { ...defaultState });
+
+            expect(queryByTestId('search-records-paging-top')).not.toBeInTheDocument();
+            expect(queryByTestId('search-records-paging-bottom')).not.toBeInTheDocument();
+            expect(queryByTestId('refine-results-facets')).not.toBeInTheDocument();
+        });
+
+        it('falls back to standard view when displayRecordsAs=author_statistics but search is not author-only', () => {
+            mockUseLocation = {
+                pathname: '/',
+                search: `?${param({
+                    ...searchQuery,
+                    searchQueryParams: { all: 'test' },
+                    displayRecordsAs: 'author_statistics',
+                })}`,
+            };
+            const { getByTestId, queryByTestId } = setup(null, { ...defaultState });
+
+            expect(queryByTestId('author-statistics-view')).not.toBeInTheDocument();
+            expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
+        });
+
+        it('falls back to standard view when displayRecordsAs=author_statistics but multiple search params are present', () => {
+            mockUseLocation = {
+                pathname: '/',
+                search: `?${param({
+                    ...searchQuery,
+                    searchMode: 'advanced',
+                    searchQueryParams: {
+                        rek_author_id: { value: '193', label: 'Chanson, Hubert (e2hchans)' },
+                        all: 'extra term',
+                    },
+                    displayRecordsAs: 'author_statistics',
+                })}`,
+            };
+            const { getByTestId, queryByTestId } = setup(null, { ...defaultState });
+
+            expect(queryByTestId('author-statistics-view')).not.toBeInTheDocument();
+            expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
         });
     });
 });
