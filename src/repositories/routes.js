@@ -169,7 +169,7 @@ export const AUTHOR_MERGE_API = (staffId, studentId) => ({
 });
 
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
-    apiUrl: `authors/details/${userId}`,
+    apiUrl: `fez-authors/details/${userId}`,
 });
 
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
@@ -178,7 +178,10 @@ export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
 });
 
 // academic stats apis
-export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: `academic/${userId}/hindex` });
+
+export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({
+    apiUrl: `fez-authors/details/${userId}/hindex`,
+});
 export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-trending' });
 
 // lookup apis

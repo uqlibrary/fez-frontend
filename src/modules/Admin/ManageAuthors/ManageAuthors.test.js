@@ -99,6 +99,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Dr',
                         aut_twitter_username: null,
                         aut_update_date: '2020-01-19T19:29:55Z',
+                        aut_rhd_cohort: 0,
                     },
                     {
                         // student, coverage
@@ -136,6 +137,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Dr',
                         aut_twitter_username: null,
                         aut_update_date: '2020-01-19T19:29:55Z',
+                        aut_rhd_cohort: 1,
                     },
                 ],
                 total: 1,
@@ -551,6 +553,7 @@ describe('ManageAuthors', () => {
                     aut_title: 'Dr',
                     aut_twitter_username: null,
                     aut_update_date: '2020-01-19T19:29:55Z',
+                    aut_rhd_cohort: 0,
                 },
             ],
             total: 1,
@@ -609,6 +612,7 @@ describe('ManageAuthors', () => {
                     aut_title: 'Dr',
                     aut_twitter_username: null,
                     aut_update_date: '2020-01-19T19:29:55Z',
+                    aut_rhd_cohort: 0,
                 },
                 {
                     aut_created_date: '2006-03-31T00:00:00Z',
@@ -645,6 +649,7 @@ describe('ManageAuthors', () => {
                     aut_title: 'Dr',
                     aut_twitter_username: null,
                     aut_update_date: '2020-01-19T19:29:55Z',
+                    aut_rhd_cohort: 0,
                 },
             ],
             total: 2,
@@ -791,6 +796,7 @@ describe('ManageAuthors', () => {
             aut_title: 'Mr.',
             aut_twitter_username: null,
             aut_update_date: '2021-03-18T22:53:34Z',
+            aut_rhd_cohort: 0,
         };
         mockApi
             .onGet(new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API({}).apiUrl))
@@ -889,6 +895,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                 ],
                 total: 1,
@@ -966,6 +973,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -1002,6 +1010,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                 ],
                 total: 2,
@@ -1066,6 +1075,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -1102,6 +1112,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                 ],
                 total: 2,
@@ -1166,6 +1177,7 @@ describe('ManageAuthors', () => {
                     aut_title: 'Dr',
                     aut_twitter_username: null,
                     aut_update_date: '2020-01-19T19:29:55Z',
+                    aut_rhd_cohort: 0,
                 },
             ],
             total: 1,
@@ -1230,6 +1242,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                     {
                         aut_created_date: '2021-03-18T04:47:06Z',
@@ -1266,6 +1279,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
 
                     {
@@ -1303,6 +1317,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                 ],
                 total: 3,
@@ -1373,6 +1388,7 @@ describe('ManageAuthors', () => {
                         aut_title: 'Mr.',
                         aut_twitter_username: null,
                         aut_update_date: '2021-03-18T22:53:34Z',
+                        aut_rhd_cohort: 0,
                     },
                 ],
                 total: 1,
