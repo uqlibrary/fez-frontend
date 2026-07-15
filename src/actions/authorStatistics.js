@@ -3,7 +3,7 @@ import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import { ACADEMIC_STATS_PUBLICATION_HINDEX_API, AUTHOR_STATS_BY_AUTHOR_ID_API } from 'repositories/routes';
 
-export function loadAuthorStatsByAuthorId(authorId, username) {
+export function loadAuthorStatsByAuthorId(authorId) {
     return dispatch => {
         dispatch({ type: actions.AUTHOR_STATS_LOADING });
         let statsData = null;
@@ -29,10 +29,7 @@ export function loadAuthorStatsByAuthorId(authorId, username) {
                     },
                 });
 
-                if (username) {
-                    return get(ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: username }));
-                }
-                return null;
+                return get(ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: authorId }));
             })
             .then(response => {
                 if (response && response.hindex_scopus && statsData?.scopus_citation_count_i) {

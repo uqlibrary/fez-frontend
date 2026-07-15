@@ -17,7 +17,7 @@ import locale from 'locale/pages';
 
 const txt = locale.pages.dashboard;
 
-const AuthorStatisticsView = ({ authorId, username }) => {
+const AuthorStatisticsView = ({ authorId }) => {
     const dispatch = useDispatch();
     const { loadingAuthorStats, authorStatsByYear, authorStatsPerType, authorStats } = useSelector(state =>
         state.get('authorStatisticsReducer'),
@@ -25,7 +25,7 @@ const AuthorStatisticsView = ({ authorId, username }) => {
 
     React.useEffect(() => {
         if (authorId) {
-            dispatch(loadAuthorStatsByAuthorId(authorId, username));
+            dispatch(loadAuthorStatsByAuthorId(authorId));
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [authorId]);
@@ -79,7 +79,6 @@ const AuthorStatisticsView = ({ authorId, username }) => {
 
 AuthorStatisticsView.propTypes = {
     authorId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    username: PropTypes.string,
 };
 
 export default AuthorStatisticsView;
