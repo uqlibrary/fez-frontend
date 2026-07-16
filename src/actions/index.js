@@ -30,3 +30,4 @@ export * from './viewCommunitiesCollections';
 export * from './adminScaleSignificance';
 export * from './viewControlledVocab';
 export * from './adminDashboard';
+export * from './authorStatistics';

@@ -1,4 +1,5 @@
 export { default as academicStatsReducer } from './academic';
+export { default as authorStatisticsReducer } from './authorStatistics';
 export { default as accountReducer } from './account';
 export { default as appReducer } from './app';
 export { default as authorsReducer } from './authors';

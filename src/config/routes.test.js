@@ -16,7 +16,7 @@ describe('Routes getMenuConfig method', () => {
             currentAuthor.uqresearcher.data,
             authorDetails.uqresearcher,
         );
-        expect(testRoutes.length).toEqual(16);
+        expect(testRoutes.length).toEqual(15);
     });
 
     it('should return a list of menus including incomplete menu item for researcher (uqresearcher)', () => {
@@ -27,7 +27,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(17);
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should return menus for a user with dashboard only (eg HDR student without ORCID) (uqnoauthid)', () => {
@@ -43,7 +43,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should return a list of menus for user who has admin (uqstaff) and full masquerade access', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(29);
     });
 
     it('should return a list of menus for admins who can also masquerade', () => {
@@ -52,7 +52,7 @@ describe('Routes getMenuConfig method', () => {
             currentAuthor.uqmasquerade.data, // canMasqueradeType: readonly
             authorDetails.uqstaff,
         );
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(29);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -63,7 +63,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -74,7 +74,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             false,
         );
-        expect(testRoutes.length).toEqual(18);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
@@ -85,12 +85,12 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(19);
+        expect(testRoutes.length).toEqual(18);
     });
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(30);
+        expect(testRoutes.length).toEqual(29);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
@@ -101,7 +101,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of menus for user who can readonly masquerade', () => {
@@ -110,7 +110,7 @@ describe('Routes getMenuConfig method', () => {
             currentAuthor.uqmasquerade.data,
             authorDetails.uqmasquerade,
         );
-        expect(testRoutes.length).toEqual(18);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
@@ -121,7 +121,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(19);
+        expect(testRoutes.length).toEqual(18);
     });
 
     it('should return list of menus for a student with an author account', () => {
@@ -132,7 +132,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             false,
         );
-        expect(testMenuItems.length).toEqual(16);
+        expect(testMenuItems.length).toEqual(15);
     });
 
     it('should return list of menus for a student with no author account', () => {

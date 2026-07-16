@@ -336,7 +336,6 @@ export default {
                 altmetricCountLabel: 'Altmetric score is [count]',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
                 openAccessLockedLabel: 'Open Access - [oa_status] - Embargoed until [embargo_date]',
-                statsLabel: 'View full statistics',
                 altmetric: {
                     externalUrl: 'https://queensland.altmetric.com/details/[id]',
                     title: 'Altmetric',

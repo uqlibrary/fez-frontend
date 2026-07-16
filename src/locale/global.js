@@ -28,14 +28,26 @@ export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         appTitle: (
-            <Link
-                to={pathConfig.index}
-                className="appTitle"
-                title="Click to return to the eSpace home page"
-                style={{ color: '#FFFFFF' }}
-            >
-                UQ eSpace {process.env.TITLE_SUFFIX || ''}
-            </Link>
+            <>
+                <Link
+                    to={pathConfig.index}
+                    className="appTitle"
+                    title="Click to return to the eSpace home page"
+                    style={{ color: '#FFFFFF' }}
+                >
+                    UQ eSpace {process.env.TITLE_SUFFIX || ''}
+                </Link>
+                <a
+                    className="appTitle"
+                    title="Click to view the blog post"
+                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                    style={{ color: '#FFFFFF' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    : Celebrating 20 years
+                </a>
+            </>
         ),
         logo: {
             // image: 'https://static.uq.net.au/v2/logos/corporate/uq-logo-white.svg',
