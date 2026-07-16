@@ -66,7 +66,7 @@ export const getIndicatorProps = ({ type, data }) => {
             const doaj = data.fez_journal_doaj;
             if (!hasApc) {
                 indicatorProps.status = status.open;
-                if (doaj.jnl_doaj_has_other_fees === false) {
+                if (data.is_diamond) {
                     indicatorProps.showDiamond = true;
                 }
             }
