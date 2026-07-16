@@ -150,13 +150,14 @@ describe('utils', () => {
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open });
 
         // diamond journal
-        dataItem4.fez_journal_doaj = {};
+        dataItem4.is_diamond = true;
         dataItem4.fez_journal_doaj.jnl_doaj_apc_currency = '';
         dataItem4.fez_journal_doaj.jnl_doaj_has_other_fees = false;
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem4 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showDiamond: true });
 
         // doaj s2o
+        dataItem4.is_diamond = null;
         dataItem4.fez_journal_doaj = {};
         dataItem4.fez_journal_doaj.jnl_doaj_is_s2o = '1';
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem4 });
