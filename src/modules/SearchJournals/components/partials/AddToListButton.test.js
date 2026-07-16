@@ -2,7 +2,7 @@
 import React from 'react';
 import { render as defaultRender, userEvent, act } from 'test-utils';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToFavourites } from 'actions/journals';
+import { addToFavourites } from 'actions/journalLists';
 import AddToListButton from './AddToListButton';
 
 jest.mock('react-redux', () => ({
@@ -10,7 +10,7 @@ jest.mock('react-redux', () => ({
     useSelector: jest.fn(),
 }));
 
-jest.mock('actions/journals', () => ({
+jest.mock('actions/journalLists', () => ({
     addToFavourites: jest.fn(),
 }));
 

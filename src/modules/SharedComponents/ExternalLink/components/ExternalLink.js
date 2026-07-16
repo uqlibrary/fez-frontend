@@ -27,6 +27,8 @@ const internalClasses = {
         color: 'inherit',
         fontSize: '0.66rem',
         display: 'inline-block',
+    },
+    childrenLinkIcon: {
         float: 'right',
         marginLeft: '0.25rem',
     },
@@ -80,7 +82,10 @@ const ExternalLink = ({
                     {!!children && children}
                     {openInNewIcon && (
                         <OpenInNew
-                            sx={{ ...internalClasses.externalLinkIcon }}
+                            sx={{
+                                ...internalClasses.externalLinkIcon,
+                                ...(children ? internalClasses.childrenLinkIcon : {}),
+                            }}
                             id={`${rest.id}-link-new-window-icon`}
                         />
                     )}
@@ -89,7 +94,10 @@ const ExternalLink = ({
                 <>
                     {openInNewIcon && (
                         <OpenInNew
-                            sx={{ ...internalClasses.externalLinkIcon }}
+                            sx={{
+                                ...internalClasses.externalLinkIcon,
+                                ...(children ? internalClasses.childrenLinkIcon : {}),
+                            }}
                             id={`${rest.id}-link-new-window-icon`}
                         />
                     )}

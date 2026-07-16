@@ -10,7 +10,7 @@ import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
-import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
+import { removeFromFavourites, retrieveFavouriteJournals } from 'actions/journalLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
 import { useLocation } from 'react-router';
 import { AppState } from '../../../reducer';

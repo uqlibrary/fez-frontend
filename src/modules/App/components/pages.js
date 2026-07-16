@@ -82,5 +82,6 @@ export { PageNotFound } from 'modules/NotFound/components/PageNotFound';
 export { SearchRecords } from 'modules/SearchRecords';
 export { SearchJournals } from 'modules/SearchJournals';
 export { FavouriteJournals } from 'modules/FavouriteJournals';
+export { JournalLists } from 'modules/JournalLists';
 export { JournalComparison } from 'modules/JournalComparison';
 export { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';

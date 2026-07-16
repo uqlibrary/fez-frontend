@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { locale } from 'locale';
-import { addToFavourites } from 'actions/journals';
+import { addToFavourites } from 'actions/journalLists';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import SplitButtonMenu, { SplitButtonItem } from 'modules/SharedComponents/Toolbox/SplitButtonMenu/SplitButtonMenu';
 

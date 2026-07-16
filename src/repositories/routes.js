@@ -165,7 +165,7 @@ export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, auth
 };
 
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
-    apiUrl: `authors/details/${userId}`,
+    apiUrl: `fez-authors/details/${userId}`,
 });
 
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({

@@ -4484,6 +4484,19 @@ export default {
                 empty: 'No journals were selected for comparison',
             },
         },
+        journalLists: {
+            grid: {
+                noRowsLabel: 'No records to display',
+                columns: {
+                    label: {
+                        title: 'Label',
+                    },
+                    private: {
+                        title: 'Is private',
+                    },
+                },
+            },
+        },
         searchJournals: {
             snackbar: {
                 message: 'Search results updated',

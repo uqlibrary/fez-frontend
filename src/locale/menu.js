@@ -99,6 +99,9 @@ export default {
             search: {
                 primaryText: 'Journal search',
             },
+            lists: {
+                primaryText: 'Journal lists',
+            },
         },
         myOpenAccess: {
             primaryText: 'My open access',

@@ -331,6 +331,11 @@ export const getRoutesConfig = ({
                       element: <components.FavouriteJournals />,
                       pageTitle: locale.components.favouriteJournals.title,
                   },
+                  {
+                      path: pathConfig.journals.lists,
+                      element: <components.JournalLists />,
+                      pageTitle: locale.components.favouriteJournals.title,
+                  },
               ]
             : []),
 
@@ -571,6 +576,10 @@ export const getMenuConfig = (
             {
                 linkTo: pathConfig.journals.search,
                 ...locale.menu.journals.search,
+            },
+            {
+                linkTo: pathConfig.journals.lists,
+                ...locale.menu.journals.lists,
             },
         ]) ||
         [];
