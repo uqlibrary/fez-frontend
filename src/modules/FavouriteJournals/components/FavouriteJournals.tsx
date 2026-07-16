@@ -10,7 +10,7 @@ import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
-import { removeFromFavourites, retrieveFavouriteJournals } from 'actions/journalLists';
+import { deleteFavourites, loadFavourites } from 'actions/journalUserLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
 import { useLocation } from 'react-router';
 import { AppState } from '../../../reducer';
@@ -46,14 +46,14 @@ export const FavouriteJournals: React.FC = () => {
         true,
     );
 
-    const handleRemoveFromFavouritesClick = () =>
-        dispatch(removeFromFavourites(Object.keys(selectedJournals)))
+    const handleDeleteFavouritesClick = () =>
+        dispatch(deleteFavourites(Object.keys(selectedJournals)))
             .then(() => clearSelectedJournals())
-            .then(() => dispatch(retrieveFavouriteJournals(journalSearchQueryParams)));
+            .then(() => dispatch(loadFavourites(journalSearchQueryParams)));
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
-        dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection }));
+        dispatch(loadFavourites({ page, pageSize, sortBy, sortDirection }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page, pageSize, sortBy, sortDirection]);
 
@@ -128,9 +128,9 @@ export const FavouriteJournals: React.FC = () => {
                                                     data-testid="remove-from-favourites-button"
                                                     disabled={!!removing || countSelectedJournals() < 1}
                                                     loading={removing}
-                                                    aria-label={txt.buttons.removeFromFavourites.aria}
-                                                    children={txt.buttons.removeFromFavourites.title}
-                                                    onClick={handleRemoveFromFavouritesClick}
+                                                    aria-label={txt.buttons.deleteFavourites.aria}
+                                                    children={txt.buttons.deleteFavourites.title}
+                                                    onClick={handleDeleteFavouritesClick}
                                                     fullWidth
                                                 />
                                             </Grid>

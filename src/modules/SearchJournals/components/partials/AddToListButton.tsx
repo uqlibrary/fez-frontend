@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { locale } from 'locale';
-import { addToFavourites } from 'actions/journalLists';
+import { addFavourites } from 'actions/journalUserLists';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import SplitButtonMenu, { SplitButtonItem } from 'modules/SharedComponents/Toolbox/SplitButtonMenu/SplitButtonMenu';
 
@@ -29,7 +29,7 @@ const AddToListButton: React.FC<{
     };
 
     const handleMainClick = () => {
-        dispatch(addToFavourites(Object.keys(selectedJournals))).then(() => {
+        dispatch(addFavourites(Object.keys(selectedJournals))).then(() => {
             setIsDialogOpen(true);
             setTimeout(closeDialog, 1000);
         });
@@ -47,9 +47,9 @@ const AddToListButton: React.FC<{
                 isOpen={isDialogOpen}
                 // @ts-expect-error TODO fix once converted to TS
                 locale={{
-                    ...txt.confirmations.addToFavourites,
+                    ...txt.confirmations.addFavourites,
                     confirmationMessage: selectionCount
-                        ? txt.confirmations.addToFavourites.confirmationMessage.replace('COUNT', String(selectionCount))
+                        ? txt.confirmations.addFavourites.confirmationMessage.replace('COUNT', String(selectionCount))
                         : '',
                 }}
                 onClose={closeDialog}

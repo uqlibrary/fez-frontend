@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, WithReduxStore, fireEvent, userEvent, waitFor } from 'test-utils';
-import * as journalListsActions from 'actions/journalLists';
+import * as journalUserListsActions from 'actions/journalUserLists';
 import * as repository from '../../../repositories';
 import { Index } from './JournalList';
 
@@ -12,7 +12,7 @@ const setup = (testProps = {}) => {
     );
 };
 
-describe('journalLists', () => {
+describe('journalUserLists', () => {
     const getRows = () => document.querySelectorAll('.MuiDataGrid-row');
 
     beforeEach(() => {
@@ -59,11 +59,11 @@ describe('journalLists', () => {
     });
 
     it('should render default view', async () => {
-        const loadjournalListsListFn = jest.spyOn(journalListsActions, 'loadjournalListsList');
+        const loadListsListFn = jest.spyOn(journalUserListsActions, 'loadListsList');
 
         const { getByText } = setup({});
         expect(getByText('Loading list of favourite searches')).toBeInTheDocument();
-        expect(loadjournalListsListFn).toHaveBeenCalled();
+        expect(loadListsListFn).toHaveBeenCalled();
 
         await waitFor(() => getByText('Favourite searches'));
         expect(getByText('Favourite searches')).toBeInTheDocument();
@@ -93,12 +93,12 @@ describe('journalLists', () => {
 
     it('should handle row delete', async () => {
         const { getByText, getByTestId } = setup({});
-        const deletejournalListsListItemFn = jest.spyOn(journalListsActions, 'deletejournalListsListItem');
+        const deletejournalUserListsListItemFn = jest.spyOn(journalUserListsActions, 'deletejournalUserListsListItem');
 
         await waitFor(() => getByText('Favourite searches'));
         fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
         fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
 
-        expect(deletejournalListsListItemFn).toHaveBeenCalled();
+        expect(deletejournalUserListsListItemFn).toHaveBeenCalled();
     });
 });

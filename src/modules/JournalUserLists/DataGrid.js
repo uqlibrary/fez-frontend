@@ -9,7 +9,7 @@ import { classes, useColumns } from './columns';
 
 // eslint-disable-next-line react/prop-types
 export const DataGrid = ({ data, error, createAction, updateAction, deleteAction }) => {
-    const txt = locale.components.journalLists;
+    const txt = locale.components.journalUserLists;
     const {
         rows,
         setRows,
@@ -101,7 +101,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
                 <Typography
                     color="error"
                     variant="caption"
-                    data-testid="journal-lists-error"
+                    data-testid="journal-user-lists-error"
                     sx={{ flexGrow: 1, m: 1 }}
                 >
                     {error}

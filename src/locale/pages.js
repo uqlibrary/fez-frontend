@@ -1328,9 +1328,9 @@ export default {
             title: 'My editorial appointments',
             loadingMessage: 'Loading editorial appointments',
         },
-        journalLists: {
+        journalUserLists: {
             title: 'Journal Lists',
-            pageId: 'journal-lists',
+            pageId: 'journal-user-lists',
             loadingMessage: 'Loading journal lists data',
         },
         journal: {

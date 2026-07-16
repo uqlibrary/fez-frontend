@@ -6,7 +6,7 @@ import { JOURNAL_FAVOURITES_API } from '../repositories/routes';
  * @param searchQuery
  * @returns {AnyAction}
  */
-export const loadJournalLists = searchQuery => async dispatch => {
+export const loadLists = searchQuery => async dispatch => {
     dispatch({ type: actions.JOURNALS_LISTS_LOADING });
     return get({ apiUrl: '/journals/lists' }).then(
         response => {
@@ -24,7 +24,7 @@ export const loadJournalLists = searchQuery => async dispatch => {
  * @param {object} data
  * @return {AnyAction}
  */
-export const createJournalList = data => async dispatch => {
+export const createList = data => async dispatch => {
     dispatch({ type: actions.JOURNALS_LISTS_LOADING });
     return post({ apiUrl: '/journals/lists' }, data).then(
         response => {
@@ -42,7 +42,7 @@ export const createJournalList = data => async dispatch => {
  * @param {object} data
  * @return {AnyAction}
  */
-export const updateJournalList = data => async dispatch => {
+export const updateList = data => async dispatch => {
     dispatch({ type: actions.JOURNALS_LISTS_LOADING });
     return put({ apiUrl: `/journals/lists/${data.fjl_id}` }, data).then(
         response => {
@@ -60,7 +60,7 @@ export const updateJournalList = data => async dispatch => {
  * @param {number} id
  * @return {AnyAction}
  */
-export const deleteJournalList = id => async dispatch => {
+export const deleteList = id => async dispatch => {
     dispatch({ type: actions.JOURNALS_LISTS_LOADING });
     return destroy({ apiUrl: `/journals/lists/${id}` }).then(
         response => {
@@ -78,7 +78,7 @@ export const deleteJournalList = id => async dispatch => {
  * @param searchQuery
  * @returns {AnyAction}
  */
-export const retrieveFavouriteJournals = searchQuery => async dispatch => {
+export const loadFavourites = searchQuery => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
         response => {
@@ -96,7 +96,7 @@ export const retrieveFavouriteJournals = searchQuery => async dispatch => {
  * @param {Array<sting|number>} ids
  * @return {AnyAction}
  */
-export const addToFavourites = ids => async dispatch => {
+export const addFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_REQUESTING });
     return post(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
         response => {
@@ -114,7 +114,7 @@ export const addToFavourites = ids => async dispatch => {
  * @param ids: string[]
  * @returns {AnyAction}
  */
-export const removeFromFavourites = ids => async dispatch => {
+export const deleteFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
     return destroy(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
         response => {

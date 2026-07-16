@@ -2,7 +2,7 @@
 import React from 'react';
 import { render as defaultRender, userEvent, act } from 'test-utils';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToFavourites } from 'actions/journalLists';
+import { addFavourites } from 'actions/journalUserLists';
 import AddToListButton from './AddToListButton';
 
 jest.mock('react-redux', () => ({
@@ -10,8 +10,8 @@ jest.mock('react-redux', () => ({
     useSelector: jest.fn(),
 }));
 
-jest.mock('actions/journalLists', () => ({
-    addToFavourites: jest.fn(),
+jest.mock('actions/journalUserLists', () => ({
+    addFavourites: jest.fn(),
 }));
 
 jest.mock('modules/SharedComponents/Toolbox/SplitButtonMenu/SplitButtonMenu', () => props => (
@@ -53,7 +53,7 @@ const setup = (testProps = {}, render = defaultRender) => {
     );
 
     dispatch.mockReturnValue(Promise.resolve());
-    addToFavourites.mockReturnValue({ type: 'ADD' });
+    addFavourites.mockReturnValue({ type: 'ADD' });
 
     return {
         user: userEvent.setup({
@@ -82,11 +82,11 @@ describe('AddToListButton', () => {
         jest.useRealTimers();
     });
 
-    it('should dispatch addToFavourites', async () => {
+    it('should dispatch addFavourites', async () => {
         const { getByLabelText, user } = setup();
         await user.click(getByLabelText('main'));
 
-        expect(addToFavourites).toHaveBeenCalledWith(['a', 'b']);
+        expect(addFavourites).toHaveBeenCalledWith(['a', 'b']);
         expect(dispatch).toHaveBeenCalled();
     });
 

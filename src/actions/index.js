@@ -15,7 +15,7 @@ export * from './fixRecord';
 export * from './incompleteRecords';
 export * from './issnLinks';
 export * from './journals';
-export * from './journalLists';
+export * from './journalUserLists';
 export * from './manageAuthors';
 export * from './manageUsers';
 export * from './myEditorialAppointments';

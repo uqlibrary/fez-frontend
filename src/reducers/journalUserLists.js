@@ -24,7 +24,7 @@ const handlers = {
     }),
 };
 
-export default function journalListsReducer(state = initialState, action) {
+export default function journalUserListsReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

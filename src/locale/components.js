@@ -4452,7 +4452,7 @@ export default {
         favouriteJournals: {
             title: 'My Favourite Journals',
             buttons: {
-                removeFromFavourites: {
+                deleteFavourites: {
                     title: 'REMOVE FROM FAVOURITES',
                     aria: 'Remove from favourites',
                 },
@@ -4483,7 +4483,7 @@ export default {
                 empty: 'No journals were selected for comparison',
             },
         },
-        journalLists: {
+        journalUserLists: {
             grid: {
                 noRowsLabel: 'No records to display',
                 columns: {
@@ -4787,13 +4787,13 @@ export default {
                         title: 'COMPARE SELECTED',
                         aria: 'Compare Selected',
                     },
-                    addToFavourites: {
+                    addFavourites: {
                         title: 'ADD TO FAVOURITES',
                         aria: 'Add to favourites',
                     },
                 },
                 confirmations: {
-                    addToFavourites: {
+                    addFavourites: {
                         confirmationMessage: 'COUNT item(s) have been added.',
                     },
                 },

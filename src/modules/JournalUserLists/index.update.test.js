@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, WithReduxStore, fireEvent, waitFor, act } from 'test-utils';
-import * as journalListsActions from 'actions/journalLists';
+import * as journalUserListsActions from 'actions/journalUserLists';
 import * as repository from '../../../repositories';
 import { Index } from './JournalList';
 
@@ -12,7 +12,7 @@ const setup = (testProps = {}) => {
     );
 };
 
-describe('journalLists', () => {
+describe('journalUserLists', () => {
     beforeEach(() => {
         mockApi.onGet(repository.routes.FAVOURITE_SEARCH_LIST_API().apiUrl).replyOnce(200, {
             data: [
@@ -55,7 +55,7 @@ describe('journalLists', () => {
 
     it('should handle row update', async () => {
         const { getByText, getByTestId } = setup({});
-        const updatejournalListsListItemFn = jest.spyOn(journalListsActions, 'updatejournalListsListItem');
+        const updatejournalUserListsListItemFn = jest.spyOn(journalUserListsActions, 'updatejournalUserListsListItem');
 
         await waitFor(() => getByText('Favourite searches'));
         fireEvent.click(getByTestId('favourite-search-list-item-1-edit'));
@@ -63,6 +63,6 @@ describe('journalLists', () => {
         act(() => {
             fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
         });
-        expect(updatejournalListsListItemFn).toHaveBeenCalled();
+        expect(updatejournalUserListsListItemFn).toHaveBeenCalled();
     });
 });

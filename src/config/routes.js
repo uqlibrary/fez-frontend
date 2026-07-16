@@ -333,7 +333,7 @@ export const getRoutesConfig = ({
                   },
                   {
                       path: pathConfig.journals.lists,
-                      element: <components.JournalLists />,
+                      element: <components.JournalUserLists />,
                       pageTitle: locale.components.favouriteJournals.title,
                   },
               ]
