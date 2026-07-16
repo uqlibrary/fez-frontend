@@ -268,9 +268,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -755,9 +752,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -1131,9 +1125,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                       data-testid="oa-n/a-icon"
                                     />
                                   </div>
-                                  <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
                                   <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
