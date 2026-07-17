@@ -7,6 +7,7 @@ import { locale } from 'locale';
 import { Row, useGrid } from './hooks';
 import { useColumns } from './columns';
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
+import { Box } from '@mui/material';
 
 interface DataGridProps {
     data?: { data: FezJournalUserList[] };
@@ -140,8 +141,10 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
     );
 
     return (
+        // <Box sx={{ height: 300, width: '100%' }}>
         <MuiDataGrid
             data-testid="journal-user-lists-grid"
+            rowHeight={38}
             rows={rows}
             getRowId={row => row.fjl_id}
             columns={columns}
@@ -169,8 +172,8 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
             disableColumnFilter
             disableColumnSelector
             disableRowSelectionOnClick
-            disableVirtualization
         />
+        // </Box>
     );
 };
 

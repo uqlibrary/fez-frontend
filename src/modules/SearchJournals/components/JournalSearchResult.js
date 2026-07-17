@@ -23,6 +23,11 @@ import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import AddToListButton from './partials/AddToListButton';
 
 import { ScrollToPos as ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToPos';
+import Dialog from '@mui/material/Dialog';
+import { DialogContent, DialogTitle } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import { default as UserListManager } from '../../JournalUserLists/Manager';
 
 export const id = 'journal-search-results';
 
@@ -47,6 +52,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
     const location = useLocation();
     const navigate = useNavigate();
     const txt = locale.components.searchJournals;
+    const [openListManager, setOpenListManager] = React.useState(false);
 
     const journalsListLoading = useSelector(state => state.get('searchJournalsReducer').journalsListLoading);
     const journalsList = useSelector(state => state.get('searchJournalsReducer').journalsList);
@@ -80,6 +86,8 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                 journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]),
             },
         });
+
+    const handleListManagementClick = () => setOpenListManager(true);
 
     if (
         !browseAllJournals &&
@@ -185,9 +193,38 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                     />
                                 </StyledGridButtonContainer>
                                 <StyledGridButtonContainer item xs={12} sm={6} md={4}>
+                                    <Dialog
+                                        open={openListManager}
+                                        PaperProps={{
+                                            sx: {
+                                                maxWidth: '400',
+                                                minWidth: '300',
+                                                minHeight: '60vh',
+                                                maxHeight: '80vh',
+                                            },
+                                        }}
+                                    >
+                                        <DialogTitle
+                                            sx={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                py: 1,
+                                            }}
+                                        >
+                                            Journal list manager
+                                            <IconButton onClick={() => setOpenListManager(false)} size="small">
+                                                <CloseIcon />
+                                            </IconButton>
+                                        </DialogTitle>
+                                        <DialogContent>
+                                            <UserListManager />
+                                        </DialogContent>
+                                    </Dialog>
                                     <AddToListButton
                                         clearSelectedJournals={clearSelectedJournals}
                                         selectedJournals={selectedJournals}
+                                        onSettings={handleListManagementClick}
                                     />
                                 </StyledGridButtonContainer>
                                 <CommonButtons onSearchAll={onSearchAll} browseAllJournals={browseAllJournals} />

@@ -1,45 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import Grid from '@mui/material/GridLegacy';
 import Paper from '@mui/material/Paper';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import { loadLists, createList, updateList, deleteList } from 'actions/journalUserLists';
+import Manager from 'modules/JournalUserLists/Manager';
 import { locale } from 'locale';
-import { DataGrid } from './DataGrid';
 
 const JournalUserLists = () => {
-    const dispatch = useDispatch();
-    const txt = locale.pages.journalUserLists;
-
-    const { loading, data, error } = useSelector(
-        // @ts-expect-error TODO fix once converted to TS
-        /* istanbul ignore next */ state => state.get('journalUserListsReducer'),
-    );
-    const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
-
-    useEffect(() => {
-        dispatch(loadLists()).finally(() => setHasLoadedOnce(true));
-    }, []);
-
-    if (loading && !hasLoadedOnce) {
-        return <InlineLoader data-testid="journal-user-lists-loading" message={txt.loadingMessage} />;
-    }
-
     return (
-        <StandardPage title={txt.title}>
+        <StandardPage title={locale.pages.journalUserLists.title}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <div style={{ width: '100%' }}>
                         <Paper sx={{ padding: 2, display: 'flex', flexDirection: 'column' }}>
                             <div style={{ flexGrow: 1 }}>
-                                <DataGrid
-                                    createAction={createList}
-                                    updateAction={updateList}
-                                    deleteAction={deleteList}
-                                    data={data}
-                                    error={error}
-                                />
+                                <Manager />
                             </div>
                         </Paper>
                     </div>

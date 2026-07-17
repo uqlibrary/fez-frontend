@@ -75,6 +75,7 @@ export const deleteList = id => async dispatch => {
 };
 
 /**
+ * @param {{id: string|number|undefined|null, searchQuery: *}} ids
  * @param searchQuery
  * @returns {AnyAction}
  */
@@ -95,37 +96,41 @@ export const loadFavourites =
     };
 
 /**
- * @param {Array<sting|number>} ids
+ * @param {{id: string|number|undefined|null, ids: Array<string|number>}} ids
  * @return {AnyAction}
  */
-export const addFavourites = ids => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_REQUESTING });
-    return post(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
-        response => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_SUCCESS });
-            return Promise.resolve(response);
-        },
-        error => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_FAILED, payload: error });
-            return Promise.reject(error.message);
-        },
-    );
-};
+export const addFavourites =
+    ({ id, ids }) =>
+    async dispatch => {
+        dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_REQUESTING });
+        return post(JOURNAL_FAVOURITES_API({ id }), { ids }).then(
+            response => {
+                dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_SUCCESS });
+                return Promise.resolve(response);
+            },
+            error => {
+                dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_FAILED, payload: error });
+                return Promise.reject(error.message);
+            },
+        );
+    };
 
 /**
- * @param ids: string[]
+ * @param {{id: string|number|undefined|null, ids: Array<string|number>}} ids
  * @returns {AnyAction}
  */
-export const deleteFavourites = ids => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
-    return destroy(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
-        response => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS });
-            return Promise.resolve(response);
-        },
-        error => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_FAILED, payload: error });
-            return Promise.reject(error.message);
-        },
-    );
-};
+export const deleteFavourites =
+    ({ id, ids }) =>
+    async dispatch => {
+        dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
+        return destroy(JOURNAL_FAVOURITES_API({ id }), { ids }).then(
+            response => {
+                dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS });
+                return Promise.resolve(response);
+            },
+            error => {
+                dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_FAILED, payload: error });
+                return Promise.reject(error.message);
+            },
+        );
+    };

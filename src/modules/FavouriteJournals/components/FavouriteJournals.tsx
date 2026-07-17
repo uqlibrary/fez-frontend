@@ -48,7 +48,7 @@ export const FavouriteJournals: React.FC = () => {
     );
 
     const handleDeleteFavouritesClick = () =>
-        dispatch(deleteFavourites(Object.keys(selectedJournals)))
+        dispatch(deleteFavourites({ id: listId, ids: Object.keys(selectedJournals) }))
             .then(() => clearSelectedJournals())
             .then(() => dispatch(loadFavourites({ id: listId, searchQuery: journalSearchQueryParams })));
 

@@ -1,27 +1,44 @@
 import * as React from 'react';
-import { useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { locale } from 'locale';
-import { addFavourites } from 'actions/journalUserLists';
+import { addFavourites, loadLists } from 'actions/journalUserLists';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import SplitButtonMenu, { SplitButtonItem } from 'modules/SharedComponents/Toolbox/SplitButtonMenu/SplitButtonMenu';
+import { FezJournalUserList } from 'types/models/FezJournalUserList';
 
-// TODO remove hardcoded list
-const list: SplitButtonItem[] = [{ id: 'favourites', label: 'Favourites' }];
+const parseResponse = (response: { data: FezJournalUserList[] }): SplitButtonItem[] =>
+    response?.data?.map?.(item => ({ id: item.fjl_id, label: item.fjl_label })) || [];
 
 const AddToListButton: React.FC<{
     selectedJournals: Record<string, object>;
     clearSelectedJournals: (selection: object) => void;
-}> = ({ selectedJournals = /* istanbul ignore next */ {}, clearSelectedJournals }) => {
+    onSettings: () => void;
+}> = ({ selectedJournals = /* istanbul ignore next */ {}, clearSelectedJournals, onSettings }) => {
     const txt = locale.components.searchJournals.journalSearchInterface;
     const dispatch = useDispatch();
     // @ts-expect-error TODO fix once converted to TS
     const adding = useSelector((state: unknown) => state.get?.('favouriteJournalsReducer').add?.loading);
+    const { loading: loadingList, data: response } = useSelector((state: unknown) =>
+        // @ts-expect-error TODO fix once converted to TS
+        state.get?.('journalUserListsReducer'),
+    );
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
-
+    const [list, setList] = useState(Array<SplitButtonItem>);
     const selectionCount = Object.keys(selectedJournals).length;
-    const disabled = !selectionCount || adding;
+    const loading = adding || loadingList;
+    const disabled = !selectionCount || adding || loadingList;
+
+    // load list on render
+    useEffect(() => {
+        dispatch(loadLists());
+    }, []);
+
+    // parse loaded list
+    useEffect(() => {
+        setList(parseResponse(response));
+    }, [JSON.stringify(response?.data)]);
 
     const closeDialog = () => {
         setIsDialogOpen(false);
@@ -29,17 +46,11 @@ const AddToListButton: React.FC<{
     };
 
     const handleMainClick = () => {
-        dispatch(addFavourites(Object.keys(selectedJournals))).then(() => {
+        dispatch(addFavourites({ id: list[selectedIndex]?.id, ids: Object.keys(selectedJournals) })).then(() => {
             setIsDialogOpen(true);
             setTimeout(closeDialog, 1000);
         });
     };
-
-    /* istanbul ignore next */
-    const sortedList = useMemo(() => list.sort((a, b) => a.label.localeCompare(b.label)), [list]);
-
-    /* istanbul ignore next */
-    const handleAddNewList = () => {};
 
     return (
         <>
@@ -59,13 +70,13 @@ const AddToListButton: React.FC<{
 
             <SplitButtonMenu
                 id="add-to-list-menu"
-                items={sortedList}
+                items={list}
                 selectedIndex={selectedIndex}
                 onItemSelect={setSelectedIndex}
                 onClick={handleMainClick}
-                onSettings={handleAddNewList}
+                onSettings={onSettings}
                 label={item => `Add to ${item.label}`}
-                loading={adding}
+                loading={loading}
                 disabled={disabled}
                 sx={{
                     minWidth: 170,
@@ -74,6 +85,6 @@ const AddToListButton: React.FC<{
             />
         </>
     );
-};
+};;
 
 export default React.memo(AddToListButton);
