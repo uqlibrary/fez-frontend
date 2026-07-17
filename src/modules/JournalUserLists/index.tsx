@@ -28,27 +28,25 @@ const JournalUserLists = () => {
 
     return (
         <StandardPage title={txt.title}>
-            {!!data && (
-                <Grid container spacing={2}>
-                    <Grid item xs={12}>
-                        <div style={{ width: '100%' }}>
-                            <Paper sx={{ padding: 2, display: 'flex', flexDirection: 'column' }}>
-                                <div style={{ flexGrow: 1 }}>
-                                    <DataGrid
-                                        createAction={createList}
-                                        updateAction={updateList}
-                                        deleteAction={deleteList}
-                                        data={data}
-                                        error={error}
-                                    />
-                                </div>
-                            </Paper>
-                        </div>
-                    </Grid>
+            <Grid container spacing={2}>
+                <Grid item xs={12}>
+                    <div style={{ width: '100%' }}>
+                        <Paper sx={{ padding: 2, display: 'flex', flexDirection: 'column' }}>
+                            <div style={{ flexGrow: 1 }}>
+                                <DataGrid
+                                    createAction={createList}
+                                    updateAction={updateList}
+                                    deleteAction={deleteList}
+                                    data={data}
+                                    error={error}
+                                />
+                            </div>
+                        </Paper>
+                    </div>
                 </Grid>
-            )}
+            </Grid>
         </StandardPage>
     );
-};;
+};
 
 export default React.memo(JournalUserLists);

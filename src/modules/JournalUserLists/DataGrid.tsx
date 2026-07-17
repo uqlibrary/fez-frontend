@@ -114,7 +114,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
     });
 
     const Toolbar = () => (
-        <GridToolbarContainer sx={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+        <GridToolbarContainer sx={{ display: 'flex', justifyContent: 'flex-end', width: '99%' }}>
             {error?.trim?.() && (
                 <Typography
                     color="error"

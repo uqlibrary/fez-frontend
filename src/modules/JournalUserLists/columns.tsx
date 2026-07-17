@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import Typography from '@mui/material/Typography';
 import { ExternalLink } from '../SharedComponents/ExternalLink';
+import { Link } from 'react-router';
 import {
     GridActionsCellItem,
     GridEditInputCell,
@@ -19,12 +20,7 @@ import Delete from '@mui/icons-material/Delete';
 import Edit from '@mui/icons-material/Edit';
 import { Row } from 'modules/JournalUserLists/hooks';
 import { locale } from 'locale';
-
-const classes = {
-    text: {
-        lineHeight: 1.43,
-    },
-};
+import { TableViewSharp } from '@mui/icons-material';
 
 const createListUrl = (id: string) =>
     `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][UserList]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
@@ -66,7 +62,7 @@ export const useColumns = ({
                 resizable: false,
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography data-testid={`fjl-id-${props.id}`} sx={{ ...classes.text }}>
+                    <Typography data-testid={`fjl-id-${props.id}`}>
                         <ExternalLink id={String(props.id)} href={createListUrl(props.value)} children={undefined} />
                     </Typography>
                 ),
@@ -79,12 +75,7 @@ export const useColumns = ({
                 editable: true,
                 resizable: false,
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography
-                        data-testid={`fjl-label-${props.id}`}
-                        sx={{ ...classes.text }}
-                    >
-                        {props.value}
-                    </Typography>
+                    <Typography data-testid={`fjl-label-${props.id}`}>{props.value}</Typography>
                 ),
                 renderEditCell: (props: GridRenderEditCellParams) => {
                     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -116,14 +107,24 @@ export const useColumns = ({
                 cellClassName: 'cell-styled',
             },
             {
-                field: 'fjl_ids',
+                field: 'fjl_ids_count',
                 headerName: 'Items',
                 editable: false,
                 resizable: false,
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography data-testid={`fjl-ids-${props.id}`} sx={{ ...classes.text }}>
-                        {(props.value || []).length}
+                    <Typography data-testid={`fjl-ids-count-${props.id}`}>
+                        <Link
+                            to={
+                                props.row.fjl_label === 'favourites'
+                                    ? pathConfig.journals.favourites
+                                    : pathConfig.journals.list(String(props.id), props.row.fjl_label)
+                            }
+                            target="user-list-tab"
+                        >
+                            {props.value}
+                            <TableViewSharp color="info" />
+                        </Link>
                     </Typography>
                 ),
                 width: 80,
@@ -136,9 +137,7 @@ export const useColumns = ({
                 resizable: false,
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography data-testid={`fjl-label-${props.id}`} sx={{ ...classes.text }}>
-                        {props.value && <Check />}
-                    </Typography>
+                    <Typography data-testid={`fjl-label-${props.id}`}>{props.value && <Check />}</Typography>
                 ),
                 renderEditCell: (props: GridRenderEditCellParams) => (
                     <Switch

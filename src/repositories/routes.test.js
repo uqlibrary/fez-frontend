@@ -1007,14 +1007,25 @@ describe('Backend routes method', () => {
                 },
             });
 
-            // with append
+            // with id
             expect(
                 routes.JOURNAL_FAVOURITES_API({
-                    append: 'append',
+                    id: 'id',
                     query: 'a',
                 }),
             ).toEqual({
-                apiUrl: 'journals/favourites/append',
+                apiUrl: 'journals/favourites/id',
+                options: {
+                    params: { ...commonQueryParams },
+                },
+            });
+            expect(
+                routes.JOURNAL_FAVOURITES_API({
+                    id: 1,
+                    query: 'a',
+                }),
+            ).toEqual({
+                apiUrl: 'journals/favourites/1',
                 options: {
                     params: { ...commonQueryParams },
                 },

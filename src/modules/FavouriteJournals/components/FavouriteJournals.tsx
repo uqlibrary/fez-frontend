@@ -12,14 +12,15 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
 import { deleteFavourites, loadFavourites } from 'actions/journalUserLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
-import { useLocation } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 import { AppState } from '../../../reducer';
 
 export const FavouriteJournals: React.FC = () => {
+    const { id: listId, label: listLabel } = useParams();
     const dispatch = useDispatch();
     const location = useLocation();
     const txt = locale.components.favouriteJournals;
-    // keep track of previous location, so we can go back to the search page correctly after re rendering this component
+    // keep track of previous location, so we can go back to the search page correctly after re-rendering this component
     const prevLocation = useRef(location.state?.prevLocation);
 
     const response = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').response);
@@ -49,46 +50,22 @@ export const FavouriteJournals: React.FC = () => {
     const handleDeleteFavouritesClick = () =>
         dispatch(deleteFavourites(Object.keys(selectedJournals)))
             .then(() => clearSelectedJournals())
-            .then(() => dispatch(loadFavourites(journalSearchQueryParams)));
+            .then(() => dispatch(loadFavourites({ id: listId, searchQuery: journalSearchQueryParams })));
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
-        dispatch(loadFavourites({ page, pageSize, sortBy, sortDirection }));
+        dispatch(loadFavourites({ id: listId, searchQuery: { page, pageSize, sortBy, sortDirection } }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [page, pageSize, sortBy, sortDirection]);
+    }, [listId, page, pageSize, sortBy, sortDirection]);
 
     return (
-        // @ts-expect-error TODO remove upon converting to TS
-        <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
-            <Grid
-                container
-                spacing={3}
-                sx={{
-                    padding: 0,
-                }}
-            >
+        <StandardPage title={txt.title(listLabel)} data-testid="journal-search-page">
+            <Grid container spacing={3} sx={{ padding: 0 }}>
                 <Grid size="grow">
-                    <Grid
-                        container
-                        spacing={2}
-                        sx={{
-                            padding: 0,
-                        }}
-                    >
-                        <Grid
-                            size={12}
-                            sx={{
-                                flexGrow: 1,
-                            }}
-                        >
+                    <Grid container spacing={2} sx={{ padding: 0 }}>
+                        <Grid size={12} sx={{ flexGrow: 1 }}>
                             <StandardCard noHeader>
-                                <Grid
-                                    container
-                                    spacing={2}
-                                    sx={{
-                                        padding: 0,
-                                    }}
-                                >
+                                <Grid container spacing={2} sx={{ padding: 0 }}>
                                     <FavouriteJournalsList
                                         journalsList={response}
                                         loading={loading}
@@ -105,21 +82,9 @@ export const FavouriteJournals: React.FC = () => {
                                     />
                                 </Grid>
                                 <Grid style={{ paddingTop: response?.total ? 20 : 25 }} size={12}>
-                                    <Grid
-                                        container
-                                        spacing={2}
-                                        sx={{
-                                            padding: 0,
-                                        }}
-                                    >
+                                    <Grid container spacing={2} sx={{ padding: 0 }}>
                                         {!!response?.total && (
-                                            <Grid
-                                                size={{
-                                                    xs: 12,
-                                                    sm: 6,
-                                                    md: 'auto',
-                                                }}
-                                            >
+                                            <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
                                                 <LoadingButton
                                                     variant="contained"
                                                     type="submit"
@@ -135,19 +100,22 @@ export const FavouriteJournals: React.FC = () => {
                                                 />
                                             </Grid>
                                         )}
-                                        <Grid
-                                            size={{
-                                                xs: 12,
-                                                sm: 6,
-                                                md: 'auto',
-                                            }}
-                                        >
-                                            <BackToSearchButton
-                                                children={txt.buttons.returnToSearch.title}
-                                                aria-label={txt.buttons.returnToSearch.aria}
-                                                prevLocation={prevLocation.current}
-                                                fullWidth
-                                            />
+                                        <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
+                                            {!prevLocation.current && (
+                                                <BackToSearchButton
+                                                    children={txt.buttons.toJournalSearch.title}
+                                                    aria-label={txt.buttons.toJournalSearch.aria}
+                                                    fullWidth
+                                                />
+                                            )}
+                                            {prevLocation.current && (
+                                                <BackToSearchButton
+                                                    children={txt.buttons.returnToSearch.title}
+                                                    aria-label={txt.buttons.returnToSearch.aria}
+                                                    prevLocation={prevLocation.current}
+                                                    fullWidth
+                                                />
+                                            )}
                                         </Grid>
                                     </Grid>
                                 </Grid>
@@ -158,6 +126,6 @@ export const FavouriteJournals: React.FC = () => {
             </Grid>
         </StandardPage>
     );
-};
+};;;;
 
 export default React.memo(FavouriteJournals);

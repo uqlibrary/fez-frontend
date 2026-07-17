@@ -613,7 +613,7 @@ export const JOURNAL_USE_LISTS_API = (id = null) => ({
     apiUrl: `journals/lists/${id ?? ''}`,
 });
 
-export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
+export const JOURNAL_FAVOURITES_API = ({ id = 'favourites', query } = {}) => {
     const { pageSize } = {
         ...locale.components.favouriteJournals.sortingDefaults,
         ...query,
@@ -622,7 +622,7 @@ export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
     const validPageSize = getValidPageSize(locale.components.sorting.recordsPerPage, pageSize);
 
     const params = {
-        apiUrl: 'journals/favourites' + (!!append ? `/${append}` : ''),
+        apiUrl: `journals/${'favourites' ? id : `list/${String(id).trim()}`}`,
     };
 
     if (query) {

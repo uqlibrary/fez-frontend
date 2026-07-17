@@ -78,19 +78,21 @@ export const deleteList = id => async dispatch => {
  * @param searchQuery
  * @returns {AnyAction}
  */
-export const loadFavourites = searchQuery => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
-    return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
-        response => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
-            return Promise.resolve(response);
-        },
-        error => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: error });
-            return Promise.reject(error.message);
-        },
-    );
-};
+export const loadFavourites =
+    ({ id, searchQuery }) =>
+    async dispatch => {
+        dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
+        return get(JOURNAL_FAVOURITES_API({ id, query: searchQuery })).then(
+            response => {
+                dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
+                return Promise.resolve(response);
+            },
+            error => {
+                dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: error });
+                return Promise.reject(error.message);
+            },
+        );
+    };
 
 /**
  * @param {Array<sting|number>} ids

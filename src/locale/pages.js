@@ -1330,8 +1330,7 @@ export default {
         },
         journalUserLists: {
             title: 'Journal User Lists',
-            pageId: 'journal-user-lists',
-            loadingMessage: 'Loading lists data',
+            loadingMessage: 'Loading lists',
         },
         journal: {
             view: {

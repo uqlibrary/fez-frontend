@@ -4450,11 +4450,15 @@ export default {
             },
         },
         favouriteJournals: {
-            title: 'My Favourite Journals',
+            title: label => (label ? `Journal user list: ${label}` : 'My Favourite Journals'),
             buttons: {
                 deleteFavourites: {
                     title: 'REMOVE FROM FAVOURITES',
                     aria: 'Remove from favourites',
+                },
+                toJournalSearch: {
+                    title: 'TO JOURNAL SEARCH',
+                    aria: 'To Journal Search',
                 },
                 returnToSearch: {
                     title: 'RETURN TO JOURNAL SEARCH',
