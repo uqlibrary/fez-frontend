@@ -41,7 +41,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
         [],
     );
 
-    const handleAddClick = React.useCallback(() => {
+    const onAddClick = React.useCallback(() => {
         const newRow: Row = {
             fjl_id: -(rows.length + 1), // set temp id as a negative number to avoid collisions
             fjl_label: '',
@@ -56,7 +56,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
         }));
     }, [rows]);
 
-    const handleEditClick = React.useCallback(
+    const onEditClick = React.useCallback(
         (id: number) => () => {
             const row = rows.find(r => r.fjl_id === id);
             setEditingLabel(row?.fjl_label ?? /* istanbul ignore next */ '');
@@ -67,14 +67,14 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
         [rows],
     );
 
-    const handleSaveClick = React.useCallback(
+    const onSaveClick = React.useCallback(
         (id: number) => () => setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } }),
         [rowModesModel],
     );
 
-    const handleDeleteClick = React.useCallback((id: number) => () => setDeleteRowId(id), []);
+    const onDeleteClick = React.useCallback((id: number) => () => setDeleteRowId(id), []);
 
-    const handleCancelClick = React.useCallback(
+    const onCancelClick = React.useCallback(
         (id: number) => () => {
             setRowModesModel({
                 ...rowModesModel,
@@ -93,10 +93,10 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
         ) => {
             if (event.key === 'Escape' && params.row?.isNew) {
                 event.defaultMuiPrevented = true;
-                handleCancelClick(Number(params.id))();
+                onCancelClick(Number(params.id))();
             }
         },
-        [handleCancelClick],
+        [onCancelClick],
     );
 
     const columns = useColumns({
@@ -104,11 +104,11 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
         deleteRowId,
         editingLabel,
         setEditingLabel,
-        handleCancelClick,
-        handleDeleteClick,
+        onCancelClick,
+        onDeleteClick,
         handleDeleteRow,
-        handleEditClick,
-        handleSaveClick,
+        onEditClick,
+        onSaveClick,
         rowModesModel,
         rows,
     });
@@ -128,7 +128,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
             <Button
                 variant="contained"
                 startIcon={<Add />}
-                onClick={handleAddClick}
+                onClick={onAddClick}
                 data-testid="journal-user-lists-add"
                 disabled={
                     Object.values(rowModesModel).some(rowMode => rowMode.mode === GridRowModes.Edit) || !!deleteRowId

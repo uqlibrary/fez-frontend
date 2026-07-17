@@ -34,11 +34,11 @@ interface UseColumnsParams {
     deleteRowId: number | null;
     editingLabel: string;
     setEditingLabel: (value: string) => void;
-    handleCancelClick: (id: number) => () => void;
-    handleDeleteClick: (id: number) => () => void;
+    onCancelClick: (id: number) => () => void;
+    onDeleteClick: (id: number) => () => void;
     handleDeleteRow: (id: number) => void;
-    handleEditClick: (id: number) => () => void;
-    handleSaveClick: (id: number) => () => void;
+    onEditClick: (id: number) => () => void;
+    onSaveClick: (id: number) => () => void;
     rowModesModel: GridRowModesModel;
     rows: Row[];
 }
@@ -48,11 +48,11 @@ export const useColumns = ({
     deleteRowId,
     editingLabel,
     setEditingLabel,
-    handleCancelClick,
-    handleDeleteClick,
+    onCancelClick,
+    onDeleteClick,
     handleDeleteRow,
-    handleEditClick,
-    handleSaveClick,
+    onEditClick,
+    onSaveClick,
     rowModesModel,
     rows,
 }: UseColumnsParams): GridColDef[] =>
@@ -184,14 +184,14 @@ export const useColumns = ({
                                 label="Save"
                                 sx={{ color: 'primary.main' }}
                                 disabled={isInEditMode && !editingLabel.trim()}
-                                onClick={!isDeleting ? handleSaveClick(rowId) : () => handleDeleteRow(rowId)}
+                                onClick={!isDeleting ? onSaveClick(rowId) : () => handleDeleteRow(rowId)}
                                 data-testid={`journal-user-lists-item-${index}-save`}
                             />,
                             <GridActionsCellItem
                                 icon={<Clear />}
                                 label="Cancel"
                                 className="textPrimary"
-                                onClick={handleCancelClick(rowId)}
+                                onClick={onCancelClick(rowId)}
                                 color="inherit"
                                 data-testid={`journal-user-lists-item-${index}-cancel`}
                             />,
@@ -203,7 +203,7 @@ export const useColumns = ({
                             icon={<Edit />}
                             label="Edit"
                             className="textPrimary"
-                            onClick={handleEditClick(rowId)}
+                            onClick={onEditClick(rowId)}
                             color="inherit"
                             data-testid={`journal-user-lists-item-${index}-edit`}
                             disabled={isAnyInEditMode || isAnyDeleting}
@@ -211,7 +211,7 @@ export const useColumns = ({
                         <GridActionsCellItem
                             icon={<Delete />}
                             label="Delete"
-                            onClick={handleDeleteClick(rowId)}
+                            onClick={onDeleteClick(rowId)}
                             color="inherit"
                             data-testid={`journal-user-lists-item-${index}-delete`}
                             disabled={isAnyInEditMode || isAnyDeleting}
@@ -225,11 +225,11 @@ export const useColumns = ({
             deleteRowId,
             editingLabel,
             setEditingLabel,
-            handleCancelClick,
-            handleDeleteClick,
+            onCancelClick,
+            onDeleteClick,
             handleDeleteRow,
-            handleEditClick,
-            handleSaveClick,
+            onEditClick,
+            onSaveClick,
             rowModesModel,
             rows,
         ],

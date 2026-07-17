@@ -1,5 +1,5 @@
 import React from 'react';
-import { preview, render as defaultRender, userEvent, within } from 'test-utils';
+import { render as defaultRender, userEvent, within } from 'test-utils';
 import { DataGrid } from './DataGrid';
 
 const mockDispatch = jest.fn();
