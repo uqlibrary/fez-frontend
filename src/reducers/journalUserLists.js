@@ -7,17 +7,17 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.JOURNALS_LISTS_LOADING]: state => ({
+    [actions.JOURNAL_USER_LISTS_LOADING]: state => ({
         ...state,
         loading: true,
     }),
-    [actions.JOURNALS_LISTS_SUCCESS]: (state, action) => ({
+    [actions.JOURNAL_USER_LISTS_SUCCESS]: (state, action) => ({
         ...state,
         loading: false,
         error: null,
         ...(action.payload !== undefined && { data: action.payload }),
     }),
-    [actions.JOURNALS_LISTS_FAILED]: (state, action) => ({
+    [actions.JOURNAL_USER_LISTS_FAILED]: (state, action) => ({
         ...state,
         loading: false,
         error: action.payload?.message,

@@ -1,20 +1,20 @@
 import * as actions from './actionTypes';
 import { destroy, get, post, put } from '../repositories';
-import { JOURNAL_FAVOURITES_API } from '../repositories/routes';
+import { JOURNAL_FAVOURITES_API, JOURNAL_USE_LISTS_API } from '../repositories/routes';
 
 /**
  * @param searchQuery
  * @returns {AnyAction}
  */
 export const loadLists = () => async dispatch => {
-    dispatch({ type: actions.JOURNALS_LISTS_LOADING });
-    return get({ apiUrl: '/journals/lists' }).then(
+    dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
+    return get(JOURNAL_USE_LISTS_API()).then(
         response => {
-            dispatch({ type: actions.JOURNALS_LISTS_SUCCESS, payload: response });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_SUCCESS, payload: response });
             return Promise.resolve(response);
         },
         error => {
-            dispatch({ type: actions.JOURNALS_LISTS_FAILED, payload: error });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_FAILED, payload: error });
             return Promise.reject(error.message);
         },
     );
@@ -25,14 +25,14 @@ export const loadLists = () => async dispatch => {
  * @return {AnyAction}
  */
 export const createList = data => async dispatch => {
-    dispatch({ type: actions.JOURNALS_LISTS_LOADING });
-    return post({ apiUrl: '/journals/lists' }, data).then(
+    dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
+    return post(JOURNAL_USE_LISTS_API(), data).then(
         response => {
-            dispatch({ type: actions.JOURNALS_LISTS_SUCCESS });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_SUCCESS });
             return Promise.resolve(response);
         },
         error => {
-            dispatch({ type: actions.JOURNALS_LISTS_FAILED, payload: { message: 'Failed to create list' } });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_FAILED, payload: { message: 'Failed to create list' } });
             return Promise.reject(error.message);
         },
     );
@@ -43,14 +43,14 @@ export const createList = data => async dispatch => {
  * @return {AnyAction}
  */
 export const updateList = data => async dispatch => {
-    dispatch({ type: actions.JOURNALS_LISTS_LOADING });
-    return put({ apiUrl: `/journals/lists/${data.fjl_id}` }, data).then(
+    dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
+    return put(JOURNAL_USE_LISTS_API(data.fjl_id), data).then(
         response => {
-            dispatch({ type: actions.JOURNALS_LISTS_SUCCESS });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_SUCCESS });
             return Promise.resolve(response);
         },
         error => {
-            dispatch({ type: actions.JOURNALS_LISTS_FAILED, payload: { message: 'Failed to update list' } });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_FAILED, payload: { message: 'Failed to update list' } });
             return Promise.reject(error.message);
         },
     );
@@ -61,14 +61,14 @@ export const updateList = data => async dispatch => {
  * @return {AnyAction}
  */
 export const deleteList = id => async dispatch => {
-    dispatch({ type: actions.JOURNALS_LISTS_LOADING });
-    return destroy({ apiUrl: `/journals/lists/${id}` }).then(
+    dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
+    return destroy(JOURNAL_USE_LISTS_API(id)).then(
         response => {
-            dispatch({ type: actions.JOURNALS_LISTS_SUCCESS });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_SUCCESS });
             return Promise.resolve(response);
         },
         error => {
-            dispatch({ type: actions.JOURNALS_LISTS_FAILED, payload: { message: 'Failed to delete list' } });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_FAILED, payload: { message: 'Failed to delete list' } });
             return Promise.reject(error.message);
         },
     );

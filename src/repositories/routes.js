@@ -609,6 +609,10 @@ export const JOURNAL_SEARCH_API = query => {
     };
 };
 
+export const JOURNAL_USE_LISTS_API = (id = null) => ({
+    apiUrl: `journals/lists/${id ?? ''}`,
+});
+
 export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
     const { pageSize } = {
         ...locale.components.favouriteJournals.sortingDefaults,
