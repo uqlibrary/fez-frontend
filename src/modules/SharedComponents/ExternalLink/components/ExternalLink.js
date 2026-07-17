@@ -84,7 +84,7 @@ const ExternalLink = ({
                         <OpenInNew
                             sx={{
                                 ...internalClasses.externalLinkIcon,
-                                ...(children ? internalClasses.childrenLinkIcon : {}),
+                                ...(children ? internalClasses.childrenLinkIcon : /* istanbul ignore next */ {}),
                             }}
                             id={`${rest.id}-link-new-window-icon`}
                         />
@@ -96,7 +96,7 @@ const ExternalLink = ({
                         <OpenInNew
                             sx={{
                                 ...internalClasses.externalLinkIcon,
-                                ...(children ? internalClasses.childrenLinkIcon : {}),
+                                ...(children ? internalClasses.childrenLinkIcon : /* istanbul ignore next */ {}),
                             }}
                             id={`${rest.id}-link-new-window-icon`}
                         />

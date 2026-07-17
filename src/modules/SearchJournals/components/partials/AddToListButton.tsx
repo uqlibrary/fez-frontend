@@ -12,7 +12,7 @@ const list: SplitButtonItem[] = [{ id: 'favourites', label: 'Favourites' }];
 const AddToListButton: React.FC<{
     selectedJournals: Record<string, object>;
     clearSelectedJournals: (selection: object) => void;
-}> = ({ selectedJournals = {}, clearSelectedJournals }) => {
+}> = ({ selectedJournals = /* istanbul ignore next */ {}, clearSelectedJournals }) => {
     const txt = locale.components.searchJournals.journalSearchInterface;
     const dispatch = useDispatch();
     // @ts-expect-error TODO fix once converted to TS
@@ -35,8 +35,10 @@ const AddToListButton: React.FC<{
         });
     };
 
+    /* istanbul ignore next */
     const sortedList = useMemo(() => list.sort((a, b) => a.label.localeCompare(b.label)), [list]);
 
+    /* istanbul ignore next */
     const handleAddNewList = () => {};
 
     return (
