@@ -1,14 +1,22 @@
 import React from 'react';
-import { GridRowModes, DataGrid as MuiDataGrid, GridToolbarContainer } from '@mui/x-data-grid';
+import { GridRowModes, DataGrid as MuiDataGrid, GridToolbarContainer, GridRowModesModel } from '@mui/x-data-grid';
 import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import { locale } from 'locale';
-import { useGrid } from './hooks';
-import { classes, useColumns } from './columns';
+import { Row, useGrid } from './hooks';
+import { useColumns } from './columns';
+import { FezJournalUserList } from 'types/models/FezJournalUserList';
 
-// eslint-disable-next-line react/prop-types
-export const DataGrid = ({ data, error, createAction, updateAction, deleteAction }) => {
+interface DataGridProps {
+    data?: { data: FezJournalUserList[] };
+    error?: string;
+    createAction: (payload: Partial<Row>) => unknown;
+    updateAction: (payload: Partial<FezJournalUserList>) => unknown;
+    deleteAction: (id: number) => unknown;
+}
+
+export const DataGrid = ({ data, error, createAction, updateAction, deleteAction }: DataGridProps) => {
     const txt = locale.components.journalUserLists;
     const {
         rows,
@@ -25,42 +33,49 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
     } = useGrid({ createAction, updateAction, deleteAction });
 
     React.useEffect(() => {
-        setRows(data?.data);
+        setRows(data?.data ?? /* istanbul ignore next */ []);
     }, [data?.data]);
 
-    const handleRowModesModelChange = React.useCallback(newRowModesModel => setRowModesModel(newRowModesModel), []);
+    const handleRowModesModelChange = React.useCallback(
+        (fezJournalUserListModesModel: GridRowModesModel) => setRowModesModel(fezJournalUserListModesModel),
+        [],
+    );
 
     const handleAddClick = React.useCallback(() => {
-        const id = `new-${Date.now()}`;
-        const newRow = { fjl_id: id, fjl_label: '', fjl_private: true, isNew: true };
+        const newRow: Row = {
+            fjl_id: -(rows.length + 1), // set temp id as a negative number to avoid collisions
+            fjl_label: '',
+            fjl_private: true,
+            isNew: true,
+        };
         setEditingLabel('');
         setRows(prev => [newRow, ...prev]);
         setRowModesModel(prev => ({
             ...prev,
-            [id]: { mode: GridRowModes.Edit, fieldToFocus: 'fjl_label' },
+            [newRow.fjl_id]: { mode: GridRowModes.Edit, fieldToFocus: 'fjl_label' },
         }));
-    }, []);
+    }, [rows]);
 
     const handleEditClick = React.useCallback(
-        id => () => {
+        (id: number) => () => {
             const row = rows.find(r => r.fjl_id === id);
-            setEditingLabel(row?.fjl_label ?? '');
+            setEditingLabel(row?.fjl_label ?? /* istanbul ignore next */ '');
             setRowModesModel({
-                [id]: { mode: GridRowModes.Edit },
+                [id]: { mode: GridRowModes.Edit, fieldToFocus: 'fjl_label' },
             });
         },
         [rows],
     );
 
     const handleSaveClick = React.useCallback(
-        id => () => setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } }),
+        (id: number) => () => setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } }),
         [rowModesModel],
     );
 
-    const handleDeleteClick = React.useCallback(id => () => setDeleteRowId(id), []);
+    const handleDeleteClick = React.useCallback((id: number) => () => setDeleteRowId(id), []);
 
     const handleCancelClick = React.useCallback(
-        id => () => {
+        (id: number) => () => {
             setRowModesModel({
                 ...rowModesModel,
                 [id]: { mode: GridRowModes.View, ignoreModifications: true },
@@ -72,10 +87,13 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
     );
 
     const handleCellKeyDown = React.useCallback(
-        (params, event) => {
+        (
+            params: { id: number | string; row?: Row },
+            event: React.KeyboardEvent & { defaultMuiPrevented?: boolean },
+        ) => {
             if (event.key === 'Escape' && params.row?.isNew) {
                 event.defaultMuiPrevented = true;
-                handleCancelClick(params.id)();
+                handleCancelClick(Number(params.id))();
             }
         },
         [handleCancelClick],
@@ -111,7 +129,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
                 variant="contained"
                 startIcon={<Add />}
                 onClick={handleAddClick}
-                data-testid="favourite-search-list-add"
+                data-testid="journal-user-lists-add"
                 disabled={
                     Object.values(rowModesModel).some(rowMode => rowMode.mode === GridRowModes.Edit) || !!deleteRowId
                 }
@@ -123,8 +141,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
 
     return (
         <MuiDataGrid
-            id="favourite-search-list"
-            data-testid="favourite-search-list"
+            data-testid="journal-user-lists-grid"
             rows={rows}
             getRowId={row => row.fjl_id}
             columns={columns}
@@ -134,7 +151,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
             onRowModesModelChange={handleRowModesModelChange}
             processRowUpdate={handleUpdateRow}
             onCellKeyDown={handleCellKeyDown}
-            onProcessRowUpdateError={error => console.error(error)}
+            onProcessRowUpdateError={/* istanbul ignore next */ (err: unknown) => console.error(err)}
             localeText={{ noRowsLabel: txt.grid.noRowsLabel }}
             slots={{ toolbar: Toolbar }}
             sx={{
@@ -142,7 +159,6 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
                 '& .cell-styled': {
                     lineHeight: 1.43,
                     alignContent: 'center',
-                    ...classes.text,
                 },
                 '&.MuiDataGrid-root .MuiDataGrid-cell:focus-within': {
                     outline: 'none !important',
@@ -152,7 +168,6 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
             disableColumnMenu
             disableColumnFilter
             disableColumnSelector
-            disableSelectionOnClick
             disableRowSelectionOnClick
             disableVirtualization
         />

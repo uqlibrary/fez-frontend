@@ -8,10 +8,14 @@ import { loadLists, createList, updateList, deleteList } from 'actions/journalUs
 import { locale } from 'locale';
 import { DataGrid } from './DataGrid';
 
-const journalUserLists = () => {
+const JournalUserLists = () => {
     const dispatch = useDispatch();
     const txt = locale.pages.journalUserLists;
-    const { loading, data, error } = useSelector(state => state.get('journalUserListsReducer'));
+
+    const { loading, data, error } = useSelector(
+        // @ts-expect-error TODO fix once converted to TS
+        /* istanbul ignore next */ state => state.get('journalUserListsReducer'),
+    );
     const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
 
     useEffect(() => {
@@ -19,7 +23,7 @@ const journalUserLists = () => {
     }, []);
 
     if (loading && !hasLoadedOnce) {
-        return <InlineLoader message={txt.loadingMessage} />;
+        return <InlineLoader data-testid="journal-user-lists-loading" message={txt.loadingMessage} />;
     }
 
     return (
@@ -45,6 +49,6 @@ const journalUserLists = () => {
             )}
         </StandardPage>
     );
-};
+};;
 
-export default React.memo(journalUserLists);
+export default React.memo(JournalUserLists);

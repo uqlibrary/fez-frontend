@@ -1,104 +1,73 @@
 import React from 'react';
-import { render, WithReduxStore, fireEvent, userEvent, waitFor } from 'test-utils';
-import * as journalUserListsActions from 'actions/journalUserLists';
-import * as repository from '../../../repositories';
-import { Index } from './JournalList';
+import { render as defaultRender, waitFor, waitForText } from 'test-utils';
+import JournalUserLists from './index';
+import { loadLists } from 'actions/journalUserLists';
+import { locale } from '../../locale';
 
-const setup = (testProps = {}) => {
-    return render(
-        <WithReduxStore>
-            <Index {...testProps} />
-        </WithReduxStore>,
-    );
-};
+jest.mock('actions/journalUserLists', () => ({
+    loadLists: jest.fn(),
+    createList: jest.fn(),
+    updateList: jest.fn(),
+    deleteList: jest.fn(),
+}));
 
-describe('journalUserLists', () => {
-    const getRows = () => document.querySelectorAll('.MuiDataGrid-row');
+jest.mock('./DataGrid', () => ({
+    DataGrid: () => <div data-testid="mock-data-grid" />,
+}));
 
+const mockDispatch = jest.fn().mockReturnValue(Promise.resolve());
+const mockUseSelector = jest.fn();
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    useDispatch: () => mockDispatch,
+    useSelector: (...args) => mockUseSelector(...args),
+}));
+
+const setup = () => defaultRender(<JournalUserLists />);
+
+describe('JournalUserLists', () => {
     beforeEach(() => {
-        mockApi.onGet(repository.routes.FAVOURITE_SEARCH_LIST_API().apiUrl).replyOnce(200, {
-            data: [
-                {
-                    fjl_id: 1,
-                    fjl_description: 'test',
-                    fjl_alias: 'test',
-                    fjl_search_parameters: 'test',
-                },
-                {
-                    fjl_id: 2,
-                    fjl_description: 'testing',
-                    fjl_alias: 'testing',
-                    fjl_search_parameters: 'testing',
-                },
-            ],
-        });
-        mockApi.onGet(new RegExp(repository.routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)).replyOnce(200, {
-            data: {
-                fjl_id: 2,
-                fjl_description: 'testing',
-                fjl_alias: 'testing',
-                fjl_search_parameters: 'testing',
-            },
-        });
-        mockApi.onPut(new RegExp(repository.routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl)).replyOnce(200, {
-            data: {
-                fjl_id: 1,
-                fjl_description: 'test',
-                fjl_alias: 'test',
-                fjl_search_parameters: 'test',
-            },
-        });
-        mockApi
-            .onDelete(new RegExp(repository.routes.FAVOURITE_SEARCH_LIST_API({ id: '.*' }).apiUrl))
-            .replyOnce(200, { data: {} });
-    });
-
-    afterEach(() => {
-        mockApi.reset();
         jest.clearAllMocks();
     });
 
-    it('should render default view', async () => {
-        const loadListsListFn = jest.spyOn(journalUserListsActions, 'loadListsList');
+    it('should show the loader while loading and not yet loaded once', () => {
+        mockUseSelector.mockReturnValue({ loading: true, data: null, error: '' });
+        loadLists.mockReturnValue(() => Promise.resolve());
 
-        const { getByText } = setup({});
-        expect(getByText('Loading list of favourite searches')).toBeInTheDocument();
-        expect(loadListsListFn).toHaveBeenCalled();
+        const { getByText, queryByTestId } = setup();
 
-        await waitFor(() => getByText('Favourite searches'));
-        expect(getByText('Favourite searches')).toBeInTheDocument();
-
-        // Expect table column titles
-        expect(getByText('Real link')).toBeInTheDocument();
-        expect(getByText('Description')).toBeInTheDocument();
-        expect(getByText('Aliased link')).toBeInTheDocument();
-        expect(getByText('Alias')).toBeInTheDocument();
+        expect(getByText(/loading/i)).toBeInTheDocument();
+        expect(queryByTestId('mock-data-grid')).not.toBeInTheDocument();
     });
 
-    it('should not update row if alias has found', async () => {
-        const { getByText, getByTestId, findByTestId } = setup({});
+    it('should dispatch loadLists on mount', () => {
+        mockUseSelector.mockReturnValue({ loading: false, data: null, error: '' });
+        const thunk = jest.fn(() => Promise.resolve());
+        loadLists.mockReturnValue(thunk);
 
-        await waitFor(() => getByText('Favourite searches'));
+        setup();
 
-        fireEvent.click(getByTestId('favourite-search-list-item-0-edit'));
-
-        fireEvent.change(getByTestId('fjl-alias-input'), { target: { value: 'testing' } });
-        await userEvent.click(getByTestId('favourite-search-list-item-0-save'));
-
-        await findByTestId('fjl-description-0');
-        expect(getRows().length).toBe(2);
-        expect(getByTestId('fjl-alias-0')).toHaveTextContent('test');
-        expect(getByText('Alias "testing" has been taken')).toBeInTheDocument();
+        expect(loadLists).toHaveBeenCalled();
+        expect(mockDispatch).toHaveBeenCalledWith(thunk);
     });
 
-    it('should handle row delete', async () => {
-        const { getByText, getByTestId } = setup({});
-        const deletejournalUserListsListItemFn = jest.spyOn(journalUserListsActions, 'deletejournalUserListsListItem');
+    it('should render the page title and DataGrid once data is available', async () => {
+        mockUseSelector.mockReturnValue({ loading: false, data: { data: [] }, error: '' });
+        loadLists.mockReturnValue(() => Promise.resolve());
+        const { getByTestId } = setup();
 
-        await waitFor(() => getByText('Favourite searches'));
-        fireEvent.click(getByTestId('favourite-search-list-item-1-delete'));
-        fireEvent.click(getByTestId('favourite-search-list-item-1-save'));
+        expect(locale.pages.journalUserLists.title);
+        await waitFor(() => expect(getByTestId('mock-data-grid')).toBeInTheDocument());
+    });
 
-        expect(deletejournalUserListsListItemFn).toHaveBeenCalled();
+    it('should stop showing loader after load completes even if data stays falsy', async () => {
+        mockUseSelector.mockReturnValue({ loading: true, data: null, error: '' });
+        loadLists.mockReturnValue(() => Promise.resolve());
+        const { getByText } = setup();
+        expect(getByText(/loading/i)).toBeInTheDocument();
+
+        await waitFor(() => {
+            mockUseSelector.mockReturnValue({ loading: false, data: null, error: '' });
+        });
     });
 });

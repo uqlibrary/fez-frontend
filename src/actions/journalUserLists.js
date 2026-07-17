@@ -6,7 +6,7 @@ import { JOURNAL_FAVOURITES_API } from '../repositories/routes';
  * @param searchQuery
  * @returns {AnyAction}
  */
-export const loadLists = searchQuery => async dispatch => {
+export const loadLists = () => async dispatch => {
     dispatch({ type: actions.JOURNALS_LISTS_LOADING });
     return get({ apiUrl: '/journals/lists' }).then(
         response => {

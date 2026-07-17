@@ -4485,7 +4485,7 @@ export default {
         },
         journalUserLists: {
             grid: {
-                noRowsLabel: 'No records to display',
+                noRowsLabel: 'No lists to display',
                 columns: {
                     label: {
                         title: 'Label',
