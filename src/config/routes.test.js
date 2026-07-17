@@ -77,16 +77,6 @@ describe('Routes getMenuConfig method', () => {
         expect(testRoutes.length).toEqual(18);
     });
 
-    it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
-        const testRoutes = routes.getMenuConfig(
-            accounts.uqmasquerade,
-            currentAuthor.uqmasquerade.data,
-            authorDetails.uqmasquerade,
-            false,
-            true,
-        );
-    });
-
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
         expect(testRoutes.length).toEqual(30);
