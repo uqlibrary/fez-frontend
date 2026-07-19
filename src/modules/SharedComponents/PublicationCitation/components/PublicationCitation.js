@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
-import { useSelector } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router';
 
 import { parseHtmlToJSX } from 'helpers/general';
@@ -240,9 +239,7 @@ export const PublicationCitation = ({
     const theme = useTheme();
     const navigate = useNavigate();
     const location = useLocation();
-    const { account } = useSelector(state => state.get('accountReducer') || /* istanbul ignore next */ {});
 
-    const hideViewFullStatisticsLink = !account;
     const txt = locale.components.publicationCitation;
     const recordValue = showMetrics && publication.metricData;
     // get default actions from locale
@@ -278,7 +275,6 @@ export const PublicationCitation = ({
                 <ImageGalleryItem
                     key={publication.rek_pid}
                     item={publication}
-                    lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
                     itemWidth={imageConfig.thumbnailImage.defaultWidth}
                     itemHeight={imageConfig.thumbnailImage.defaultHeight}
                     classes={{
@@ -521,7 +517,6 @@ export const PublicationCitation = ({
                                             >
                                                 <CitationCounts
                                                     publication={publication}
-                                                    hideViewFullStatisticsLink={hideViewFullStatisticsLink}
                                                     showAltmetricWidget={showAltmetricWidget}
                                                 />
                                             </Grid>

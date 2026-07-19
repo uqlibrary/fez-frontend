@@ -123,6 +123,16 @@ class ResizeObserver {
 }
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 
+class IntersectionObserver {
+    constructor() {}
+
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+global.IntersectionObserver = IntersectionObserver;
+
 function canBeSpread(variable) {
     return typeof variable?.[Symbol.iterator] === 'function';
 }

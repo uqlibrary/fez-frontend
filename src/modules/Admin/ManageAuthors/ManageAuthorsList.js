@@ -32,13 +32,16 @@ import { useConfirmationState } from 'hooks';
 import { BULK_DELETE_AUTHOR_SUCCESS, SCOPUS_INGESTED_AUTHORS } from 'config/general';
 
 import { useMrtTable, useServerData } from 'hooks';
+import Grid from '@mui/material/Grid';
+import { silentTryCatch, withErrorBoundary } from '../../../helpers/general';
+import { getMergeableAuthors } from './helpers';
 
-export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest }) => {
+export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRowUpdate, onScopusIngest, onMerge }) => {
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
     const [searchTerm, setSearchTerm] = useState('');
     const [isScopusIngestOpen, showScopusIngestConfirmation, hideScopusIngestConfirmation] = useConfirmationState();
-
+    const [isMergeConfirmationOpen, showMergeConfirmation, hideMergeConfirmation] = useConfirmationState();
     const scopusIngestAuthor = React.useRef();
 
     const {
@@ -60,6 +63,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             deleteConfirmationLocale,
             bulkDeleteConfirmationLocale,
             scopusIngestConfirmationLocale,
+            mergeConfirmationLocale,
         },
     } = locale.components.manageAuthors;
 
@@ -70,7 +74,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         [],
     );
 
-    const { authorListLoading, authorListItemDeleting } = useSelector(state => state?.get('manageAuthorsReducer'));
+    const { authorListLoading } = useSelector(state => state?.get('manageAuthorsReducer'));
 
     const {
         data: list,
@@ -102,6 +106,9 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         showConfirmation,
         hideConfirmation,
     } = useMrtTable(list);
+
+    const mergeableAuthors = silentTryCatch(() => getMergeableAuthors(data, Object.keys(selectedRows)), false);
+    const hasMergeableAuthors = !!mergeableAuthors;
 
     const columns = useMemo(
         () => [
@@ -175,9 +182,10 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 });
         }
     };
+
     const handleDelete = () => {
-        const row = data[pendingDeleteRowIndex];
         setBusy();
+        const row = data[pendingDeleteRowIndex];
         onRowDelete(row)
             .then(() => {
                 return new Promise(resolve => {
@@ -228,7 +236,18 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
 
     const handleHideScopusIngestConfirmation = () => hideScopusIngestConfirmation();
 
+    const handleMergeConfirmation = () => {
+        setBusy();
+        onMerge(mergeableAuthors.staff, mergeableAuthors.student)
+            .then(resetSelectedRows)
+            .catch(console.error)
+            .finally(() => setBusy(false));
+    };
+
+    const handleHideMergeConfirmation = () => hideMergeConfirmation();
+
     const handleScopusIngest = () => {
+        setBusy();
         const autId = scopusIngestAuthor.current;
         onScopusIngest(autId)
             .then(() => {
@@ -236,6 +255,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             })
             .catch(() => {})
             .finally(() => {
+                setBusy(false);
                 scopusIngestAuthor.current = null;
             });
     };
@@ -279,6 +299,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    const isLoading = authorListLoading || isBusy;
     const table = useMaterialReactTable({
         columns,
         data,
@@ -306,11 +327,14 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         },
         state: {
             showAlertBanner: false,
-            isLoading: authorListLoading,
-            showLoadingOverlay: authorListLoading || authorListItemDeleting || isBusy,
+            isSaving: isBusy,
+            isLoading: isLoading,
+            showLoadingOverlay: isLoading,
             pagination,
             rowSelection: selectedRows,
         },
+        // work around the inability to disable 'clear selection' button
+        positionToolbarAlertBanner: isLoading ? 'none' : 'top',
         muiPaginationProps: {
             rowsPerPageOptions: tablePageSizeOptions,
         },
@@ -401,7 +425,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     sx={{ width: { md: '300px' } }}
                     value={searchTerm}
                     onChange={handleSearch}
-                    disabled={table.getState().creatingRow !== null}
+                    disabled={!!table.getState().isLoading}
                     slotProps={{
                         input: {
                             startAdornment: (
@@ -425,19 +449,32 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                         },
                     }}
                 />
-                <Button
-                    id={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
-                        .toLowerCase()
-                        .replace(/ /g, '-')}`}
-                    data-testid={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
-                        .toLowerCase()
-                        .replace(/ /g, '-')}`}
-                    disabled={table.getState().creatingRow !== null}
-                    variant="contained"
-                    color="primary"
-                    children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}
-                    onClick={hasSelectedRows ? showConfirmation : onCreateRecord(table)}
-                />
+                <Grid spacing={2} container>
+                    {hasSelectedRows && (
+                        <Button
+                            data-testid={`authors-merge-button`}
+                            variant="contained"
+                            color="primary"
+                            onClick={showMergeConfirmation}
+                            disabled={!hasMergeableAuthors || !!table.getState().isLoading}
+                        >
+                            Merge Selected Authors
+                        </Button>
+                    )}
+                    <Button
+                        id={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                            .toLowerCase()
+                            .replace(/ /g, '-')}`}
+                        data-testid={`authors-${(hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip)
+                            .toLowerCase()
+                            .replace(/ /g, '-')}`}
+                        disabled={!!table.getState().isLoading}
+                        variant="contained"
+                        color="primary"
+                        children={hasSelectedRows ? bulkDeleteButtonTooltip : addButtonTooltip}
+                        onClick={hasSelectedRows ? showConfirmation : onCreateRecord(table)}
+                    />
+                </Grid>
             </Box>
         ),
         renderRowActions: ({ row }) => {
@@ -445,52 +482,59 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             return (
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={scopusIngestButtonTooltip}>
-                        <IconButton
-                            onClick={handleShowScopusIngestConfirmation(row.original.aut_id)}
-                            disabled={
-                                isCookieSet ||
-                                !(
-                                    !!row.original.aut_orcid_id ||
-                                    (!!row.original.aut_scopus_id && row.original.aut_is_scopus_id_authenticated === 1)
-                                )
-                            }
-                            id={`authors-list-row-${row.index}-${scopusIngestButtonTooltip
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                            data-testid={`authors-list-row-${
-                                row.index
-                            }-${scopusIngestButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                        >
-                            <tableIcons.Download />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={handleShowScopusIngestConfirmation(row.original.aut_id)}
+                                disabled={
+                                    isCookieSet ||
+                                    !(
+                                        !!row.original.aut_orcid_id ||
+                                        (!!row.original.aut_scopus_id &&
+                                            row.original.aut_is_scopus_id_authenticated === 1)
+                                    )
+                                }
+                                id={`authors-list-row-${row.index}-${scopusIngestButtonTooltip
+                                    .toLowerCase()
+                                    .replace(/ /g, '-')}`}
+                                data-testid={`authors-list-row-${
+                                    row.index
+                                }-${scopusIngestButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                            >
+                                <tableIcons.Download />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                     <Tooltip title={editButtonTooltip}>
-                        <IconButton
-                            onClick={() => {
-                                setEditRow(row);
-                                table.setCreatingRow(null);
-                                table.setEditingRow(row);
-                            }}
-                            disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`authors-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`authors-list-row-${row.index}-${editButtonTooltip
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                        >
-                            <tableIcons.Edit />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    setEditRow(row);
+                                    table.setCreatingRow(null);
+                                    table.setEditingRow(row);
+                                }}
+                                disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                id={`authors-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`authors-list-row-${row.index}-${editButtonTooltip
+                                    .toLowerCase()
+                                    .replace(/ /g, '-')}`}
+                            >
+                                <tableIcons.Edit />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                     <Tooltip title={deleteButtonTooltip}>
-                        <IconButton
-                            onClick={openDeleteConfirmModal(row.index)}
-                            disabled={isPendingDelete || !!isBusy || !!editingRow}
-                            id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
-                            data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
-                                .toLowerCase()
-                                .replace(/ /g, '-')}`}
-                        >
-                            <tableIcons.Delete />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={openDeleteConfirmModal(row.index)}
+                                disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
+                                    .toLowerCase()
+                                    .replace(/ /g, '-')}`}
+                            >
+                                <tableIcons.Delete />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 </Box>
             );
@@ -521,6 +565,23 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                 isOpen={isScopusIngestOpen}
                 locale={scopusIngestConfirmationLocale}
             />
+            {hasMergeableAuthors &&
+                isMergeConfirmationOpen &&
+                withErrorBoundary(() => (
+                    <ConfirmationBox
+                        confirmationBoxId="authors-merge-confirmation"
+                        onAction={handleMergeConfirmation}
+                        onClose={handleHideMergeConfirmation}
+                        isOpen={isMergeConfirmationOpen}
+                        locale={{
+                            ...mergeConfirmationLocale,
+                            confirmationMessage: mergeConfirmationLocale.confirmationMessage(
+                                mergeableAuthors.student,
+                                mergeableAuthors.staff,
+                            ),
+                        }}
+                    />
+                ))()}
             <MaterialReactTable table={table} />
         </Box>
     );
@@ -532,6 +593,7 @@ ManageAuthorsList.propTypes = {
     onRowUpdate: PropTypes.func,
     onRowDelete: PropTypes.func,
     onSelectionChange: PropTypes.func,
+    onMerge: PropTypes.func,
 };
 
 export default React.memo(ManageAuthorsList);
