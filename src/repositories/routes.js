@@ -332,6 +332,16 @@ export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = values => ({
         },
     },
 });
+export const AUTHOR_STATS_BY_AUTHOR_ID_API = ({ authorId }) => ({
+    apiUrl: 'records/search',
+    options: {
+        params: {
+            'key[rek_author_id][value]': authorId,
+            'filters[stats_only]': true,
+        },
+    },
+});
+
 export const TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/trending' });
 
 export const formatSearchQueryParams = ({ result, key, searchQueryParams }) => {

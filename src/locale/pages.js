@@ -782,6 +782,9 @@ export default {
                 message: message => message,
                 alertId: 'alert-error',
             },
+            authorStatistics: {
+                viewPublicationsList: 'View publications list',
+            },
         },
         searchJournals: {
             title: 'Journal search',
