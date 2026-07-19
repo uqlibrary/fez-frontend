@@ -1,18 +1,6 @@
 import * as actions from 'actions/actionTypes';
 import manageAuthorsReducer, { initialState } from './manageAuthors';
 
-/*
-    "aut_id"
-    "aut_org_staff_id"
-    "aut_display_name"
-    "aut_org_username"
-    "aut_student_username"
-    "aut_fname"
-    "aut_lname"
-    "aut_mname"
-    "aut_title"
-*/
-
 describe(' manage authors reducer', () => {
     it('returns the correct state while author are loading', () => {
         const test = manageAuthorsReducer(initialState, {
@@ -124,6 +112,34 @@ describe(' manage authors reducer', () => {
         });
         expect(test.authorAdding).toEqual(false);
         expect(test.authorAddError).toEqual({ status: 403, message: 'Test error message' });
+    });
+
+    describe('author merging', () => {
+        it('returns the correct state while merging author', () => {
+            const test = manageAuthorsReducer(initialState, { type: actions.AUTHOR_MERGING });
+            expect(test.authorMerging).toEqual(true);
+            expect(test.authorMergingSuccess).toEqual(false);
+            expect(test.authorMergingError).toEqual(false);
+        });
+
+        it('returns the correct state on merging author successfully', () => {
+            const test = manageAuthorsReducer(initialState, {
+                type: actions.AUTHOR_MERGING_SUCCESS,
+            });
+            expect(test.authorMerging).toEqual(false);
+            expect(test.authorMergingSuccess).toEqual(true);
+            expect(test.authorMergingError).toEqual(false);
+        });
+
+        it('returns the correct state when merging author failed', () => {
+            const test = manageAuthorsReducer(initialState, {
+                type: actions.AUTHOR_MERGING_FAILED,
+                payload: { status: 422, message: 'Test error message' },
+            });
+            expect(test.authorMerging).toEqual(false);
+            expect(test.authorMergingSuccess).toEqual(false);
+            expect(test.authorMergingError).toEqual({ status: 422, message: 'Test error message' });
+        });
     });
 
     it('returns the correct state when existing author found', () => {
