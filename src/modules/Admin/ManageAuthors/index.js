@@ -14,6 +14,7 @@ import {
     deleteAuthorListItem,
     ingestFromScopus,
     updateAuthorListItem,
+    mergeAuthors,
 } from 'actions';
 
 export const ManageAuthors = () => {
@@ -37,6 +38,8 @@ export const ManageAuthors = () => {
 
     const handleAuthorScopusIngest = autId => dispatch(ingestFromScopus(autId));
 
+    const handleAuthorsMerge = (staff, student) => dispatch(mergeAuthors(staff, student));
+
     return (
         <StandardPage title={locale.pages.authors.title}>
             <Grid container spacing={2}>
@@ -49,6 +52,7 @@ export const ManageAuthors = () => {
                             onRowUpdate={handleRowUpdate}
                             onRowDelete={handleRowDelete}
                             onScopusIngest={handleAuthorScopusIngest}
+                            onMerge={handleAuthorsMerge}
                         />
                     </StandardCard>
                 </Grid>
