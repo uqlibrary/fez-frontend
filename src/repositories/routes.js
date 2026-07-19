@@ -164,6 +164,10 @@ export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, auth
     return { apiUrl: 'fez-authors' };
 };
 
+export const AUTHOR_MERGE_API = (staffId, studentId) => ({
+    apiUrl: `fez-authors/${staffId}/merge/${studentId}`,
+});
+
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
     apiUrl: `fez-authors/details/${userId}`,
 });

@@ -4101,6 +4101,20 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                mergeConfirmationLocale: {
+                    confirmationTitle: 'Confirm authors merge',
+                    confirmationMessage: (source, target) => (
+                        <>
+                            Do you wish to merge <b>{source.aut_id}</b> ({source.aut_student_username}) into{' '}
+                            <b>{target.aut_id}</b> ({target.aut_org_username})?
+                            <br />
+                            <br />
+                            Please ensure all publications are moved across to author ID you wish to retain.
+                        </>
+                    ),
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     bulkDeleteButtonTooltip: 'Delete selected authors',
@@ -4129,6 +4143,13 @@ export default {
                 allowDismiss: true,
                 type: 'done',
                 message: 'An author has been successfully added.',
+            },
+            authorMergingSuccessAlert: {
+                alertId: 'alert-done-author-merging',
+                allowDismiss: true,
+                type: 'done',
+                message:
+                    'A job to merge the authors has been created. A system alert will be generated when the job completes.',
             },
             updateAuthorSuccessAlert: {
                 alertId: 'alert-done-author-update',
@@ -4165,6 +4186,12 @@ export default {
                 allowDismiss: true,
                 type: 'error',
                 message: 'An author could not be added.',
+            },
+            authorMergingErrorAlert: {
+                alertId: 'alert-error-authors-merging',
+                allowDismiss: true,
+                type: 'error',
+                message: error => `Error while merging authors: ${error}`,
             },
             updateAuthorErrorAlert: {
                 alertId: 'alert-error-author-update',

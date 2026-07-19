@@ -7,6 +7,7 @@ import {
     handleKeyboardPressActivate,
     reorderObjectKeys,
     isEmptyObject,
+    isEmptyString,
     filterObjectKeys,
     combineObjects,
     isArrayDeeplyEqual,
@@ -315,6 +316,19 @@ describe('general helpers', () => {
             expect(isEmptyObject(null)).toEqual(false);
             expect(isEmptyObject(undefined)).toEqual(false);
             expect(isEmptyObject([])).toEqual(false);
+        });
+    });
+
+    describe('isEmptyString', () => {
+        it('returns expected results', () => {
+            expect(isEmptyString('test')).toEqual(false);
+            expect(isEmptyString('')).toEqual(true);
+            expect(isEmptyString(null)).toEqual(true);
+            expect(isEmptyString(undefined)).toEqual(true);
+            expect(isEmptyString([])).toEqual(true);
+            expect(isEmptyString({})).toEqual(true);
+            expect(isEmptyString(['a'])).toEqual(true);
+            expect(isEmptyString({ a: 'a' })).toEqual(true);
         });
     });
 
