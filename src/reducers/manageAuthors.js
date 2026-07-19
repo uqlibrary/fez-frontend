@@ -12,6 +12,9 @@ export const initialState = {
     authorAdding: false,
     authorAddSuccess: false,
     authorAddError: null,
+    authorMerging: false,
+    authorMergingSuccess: false,
+    authorMergingError: false,
     existingAuthorFieldError: null,
     bulkAuthorDeleteMessages: null,
     scopusIngestRequesting: false,
@@ -87,6 +90,27 @@ const handlers = {
         authorAdding: false,
         authorAddSuccess: false,
         authorAddError: action.payload,
+    }),
+
+    [actions.AUTHOR_MERGING]: () => ({
+        ...initialState,
+        authorMerging: true,
+        authorMergingSuccess: false,
+        authorMergingError: false,
+    }),
+
+    [actions.AUTHOR_MERGING_SUCCESS]: () => ({
+        ...initialState,
+        authorMerging: false,
+        authorMergingSuccess: true,
+        authorMergingError: false,
+    }),
+
+    [actions.AUTHOR_MERGING_FAILED]: (state, action) => ({
+        ...initialState,
+        authorMerging: false,
+        authorMergingSuccess: false,
+        authorMergingError: action.payload,
     }),
 
     [actions.EXISTING_AUTHOR_FOUND]: (state, action) => ({

@@ -14,9 +14,9 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import locale from 'locale/components';
 
 import { DEFAULT_DATEPICKER_INPUT_FORMAT, DEFAULT_SERVER_DATE_FORMAT_NO_TIME } from '../config';
-import { isEmptyStr } from '../utils';
 import { emptyReportActionState as emptyActionState, reportActionReducer as actionReducer } from '../reducers';
 import { isValidAlphanumeric, pid as validPid } from 'config/validation';
+import { isEmptyString } from '../../../helpers/general';
 
 export const validator = ({ locale, actionState }) => {
     const report = actionState.report?.value;
@@ -33,7 +33,7 @@ export const validator = ({ locale, actionState }) => {
 
     const isValidNumber = value => {
         const numValue = Number(value);
-        return isEmptyStr(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
+        return isEmptyString(`${value}`) || (Number.isFinite(numValue) && numValue > 0 && !`${value}`.includes('.'));
     };
 
     if (!report) {
@@ -42,7 +42,7 @@ export const validator = ({ locale, actionState }) => {
 
     if (report === 'systemalertlog') {
         const validSystemId = isValidNumber(record_id);
-        const validRequestorId = isEmptyStr(requestor_id) || isValidAlphanumeric(requestor_id);
+        const validRequestorId = isEmptyString(requestor_id) || isValidAlphanumeric(requestor_id);
         errors.pidError = validPid(pid);
 
         if (!validSystemId) {
