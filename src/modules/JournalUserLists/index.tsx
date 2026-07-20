@@ -2,8 +2,8 @@ import React from 'react';
 import Grid from '@mui/material/GridLegacy';
 import Paper from '@mui/material/Paper';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import Manager from 'modules/JournalUserLists/Manager';
 import { locale } from 'locale';
+import Manager from './Manager';
 
 const JournalUserLists = () => {
     return (

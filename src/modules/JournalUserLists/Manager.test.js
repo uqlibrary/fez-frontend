@@ -1,6 +1,6 @@
 import React from 'react';
-import { render as defaultRender, waitFor, waitForText } from 'test-utils';
-import JournalUserLists from './index';
+import { render as defaultRender, waitFor } from 'test-utils';
+import Manager from './Manager';
 import { loadLists } from 'actions/journalUserLists';
 import { locale } from '../../locale';
 
@@ -23,7 +23,7 @@ jest.mock('react-redux', () => ({
     useSelector: (...args) => mockUseSelector(...args),
 }));
 
-const setup = () => defaultRender(<JournalUserLists />);
+const setup = () => defaultRender(<Manager />);
 
 describe('JournalUserLists', () => {
     beforeEach(() => {
