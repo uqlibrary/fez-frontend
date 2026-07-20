@@ -130,7 +130,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
             }}
         >
             {error?.trim?.() && (
-                <Typography color="error" variant="caption" data-testid="journal-user-lists-error" sx={{ flexGrow: 1 }}>
+                <Typography data-testid="journal-user-lists-error" color="error" variant="caption" sx={{ flexGrow: 1 }}>
                     {error}
                 </Typography>
             )}
@@ -143,6 +143,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
                 variant="contained"
                 startIcon={<Add />}
                 onClick={onAddClick}
+                data-testid="journal-user-lists-add"
                 disabled={
                     Object.values(rowModesModel).some(rowMode => rowMode.mode === GridRowModes.Edit) || !!deleteRowId
                 }

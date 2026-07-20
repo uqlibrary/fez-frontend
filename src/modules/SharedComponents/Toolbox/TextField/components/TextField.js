@@ -9,7 +9,8 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const helperText = filteredProps.errorText || undefined;
     const hideLabel = !!filteredProps.hideLabel;
-    const id = props['data-testid'] ?? props.textFieldId ?? props.name ?? props.id;
+    const id = props.textFieldId ?? props.name ?? props.id;
+    const testId = typeof props['data-testid'] === 'string' ? props['data-testid'] : id;
 
     delete filteredProps.columnDef;
     delete filteredProps.errorText;
@@ -27,12 +28,12 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                 ref={ref}
                 helperText={helperText}
                 id={id}
-                data-testid={id}
+                data-testid={testId}
                 slotProps={{
                     htmlInput: {
                         id: `${id}-input`,
                         'data-analyticsid': `${id}-input`,
-                        'data-testid': `${id}-input`,
+                        'data-testid': `${testId}-input`,
                         label: filteredProps.label,
                         'aria-label': props.ariaLabel || filteredProps.label,
                         ...(props.ariaLabelledby && { 'aria-labelledby': props.ariaLabelledby }),

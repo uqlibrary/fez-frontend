@@ -27,6 +27,7 @@ describe('TextFieldWrapper snapshots tests', () => {
         const { container } = setup({
             ...testProps,
             className: 'requiredField',
+            'data-testid': 'my-test-id',
         });
         expect(container).toMatchSnapshot();
     });
