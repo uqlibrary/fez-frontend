@@ -4810,6 +4810,9 @@ export default {
                         </ul>
                     </React.Fragment>
                 ),
+                errors: {
+                    addList: 'Failed to create list. Please try again.',
+                },
                 buttons: {
                     myFavouriteJournals: {
                         title: 'My favourite journals',

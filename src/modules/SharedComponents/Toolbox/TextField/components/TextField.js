@@ -9,7 +9,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const helperText = filteredProps.errorText || undefined;
     const hideLabel = !!filteredProps.hideLabel;
-    const id = props.textFieldId ?? props.name ?? props.id;
+    const id = props['data-testid'] ?? props.textFieldId ?? props.name ?? props.id;
 
     delete filteredProps.columnDef;
     delete filteredProps.errorText;
