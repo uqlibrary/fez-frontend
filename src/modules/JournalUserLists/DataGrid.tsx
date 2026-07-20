@@ -4,10 +4,9 @@ import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import { locale } from 'locale';
-import { Row, useGrid } from './hooks';
-import { useColumns } from './columns';
+import { Row, useGrid } from './useGridHook';
+import { useColumns } from './useColumns';
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
-import { Box } from '@mui/material';
 
 interface DataGridProps {
     data?: { data: FezJournalUserList[] };
@@ -46,7 +45,7 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
         const newRow: Row = {
             fjl_id: -(rows.length + 1), // set temp id as a negative number to avoid collisions
             fjl_label: '',
-            fjl_private: true,
+            fjl_is_public: false,
             isNew: true,
         };
         setEditingLabel('');

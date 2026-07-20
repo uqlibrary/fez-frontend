@@ -4484,8 +4484,8 @@ export default {
                     aria: 'Remove from favourites',
                 },
                 toJournalSearch: {
-                    title: 'TO JOURNAL SEARCH',
-                    aria: 'To Journal Search',
+                    title: 'SEARCH JOURNALS',
+                    aria: 'Search Journals',
                 },
                 returnToSearch: {
                     title: 'RETURN TO JOURNAL SEARCH',
@@ -4518,11 +4518,20 @@ export default {
             grid: {
                 noRowsLabel: 'No lists to display',
                 columns: {
+                    link: {
+                        title: 'Link',
+                    },
                     label: {
                         title: 'Label',
                     },
-                    private: {
-                        title: 'Is private',
+                    isPublic: {
+                        title: 'Is public',
+                    },
+                    items: {
+                        title: 'Items',
+                        link: {
+                            title: 'Click to manage items in a new tab',
+                        },
                     },
                 },
             },

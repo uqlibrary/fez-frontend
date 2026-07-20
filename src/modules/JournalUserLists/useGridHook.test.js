@@ -1,5 +1,5 @@
 import { renderHook, act } from 'test-utils';
-import { useGrid } from './hooks';
+import { useGrid } from './useGridHook';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
@@ -11,8 +11,8 @@ const createAction = jest.fn();
 const updateAction = jest.fn();
 const deleteAction = jest.fn();
 
-const existingRow = { fjl_id: '1', fjl_label: 'List one', fjl_private: false, fjl_ids: [] };
-const newRowData = { fjl_id: 'new-1', fjl_label: 'New list', fjl_private: true, isNew: true };
+const existingRow = { fjl_id: '1', fjl_label: 'List one', fjl_is_public: true, fjl_ids: [] };
+const newRowData = { fjl_id: 'new-1', fjl_label: 'New list', fjl_is_public: false, isNew: true };
 
 const setupHook = () => renderHook(() => useGrid({ createAction, updateAction, deleteAction }));
 
@@ -24,7 +24,7 @@ describe('useGrid', () => {
     describe('handleUpdateRow', () => {
         it('should replace only the matching row when creating succeeds, leaving others untouched', async () => {
             createAction.mockReturnValue({ type: 'CREATE' });
-            mockDispatch.mockResolvedValue({ data: { fjl_id: '2', fjl_label: 'New list', fjl_private: true } });
+            mockDispatch.mockResolvedValue({ data: { fjl_id: '2', fjl_label: 'New list', fjl_is_public: false } });
             const { result } = setupHook();
 
             act(() => {
@@ -37,7 +37,7 @@ describe('useGrid', () => {
 
             expect(result.current.rows).toEqual([
                 existingRow,
-                { fjl_id: '2', fjl_label: 'New list', fjl_private: true },
+                { fjl_id: '2', fjl_label: 'New list', fjl_is_public: false },
             ]);
         });
 

@@ -14,8 +14,8 @@ const deleteAction = jest.fn();
 
 const data = {
     data: [
-        { fjl_id: 1, fjl_label: 'List one', fjl_private: false, fjl_ids: [1, 2] },
-        { fjl_id: 2, fjl_label: 'List two', fjl_private: true, fjl_ids: [] },
+        { fjl_id: 1, fjl_label: 'List one', fjl_is_public: true, fjl_ids: [1, 2] },
+        { fjl_id: 2, fjl_label: 'List two', fjl_is_public: false, fjl_ids: [] },
     ],
 };
 

@@ -18,9 +18,9 @@ import Switch from '@mui/material/Switch';
 import { pathConfig } from '../../config';
 import Delete from '@mui/icons-material/Delete';
 import Edit from '@mui/icons-material/Edit';
-import { Row } from 'modules/JournalUserLists/hooks';
+import { Row } from './useGridHook';
 import { locale } from 'locale';
-import { TableViewSharp } from '@mui/icons-material';
+import { FormatListBulleted, Public } from '@mui/icons-material';
 
 const createListUrl = (id: string) =>
     `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][UserList]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
@@ -56,7 +56,7 @@ export const useColumns = ({
         () => [
             {
                 field: 'fjl_id',
-                headerName: 'URL',
+                headerName: txt.columns.link.title,
                 editable: false,
                 sortable: false,
                 resizable: false,
@@ -75,7 +75,7 @@ export const useColumns = ({
                 editable: true,
                 resizable: false,
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography data-testid={`fjl-label-${props.id}`}>{props.value}</Typography>
+                    <span data-testid={`fjl-label-${props.id}`}>{props.value}</span>
                 ),
                 renderEditCell: (props: GridRenderEditCellParams) => {
                     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -107,37 +107,14 @@ export const useColumns = ({
                 cellClassName: 'cell-styled',
             },
             {
-                field: 'fjl_ids_count',
-                headerName: 'Items',
-                editable: false,
-                resizable: false,
-                align: 'center',
-                renderCell: (props: GridRenderCellParams) => (
-                    <Typography data-testid={`fjl-ids-count-${props.id}`}>
-                        <Link
-                            to={
-                                props.row.fjl_label === 'favourites'
-                                    ? pathConfig.journals.favourites
-                                    : pathConfig.journals.list(String(props.id), props.row.fjl_label)
-                            }
-                            target="user-list-tab"
-                        >
-                            {props.value}
-                            <TableViewSharp color="info" />
-                        </Link>
-                    </Typography>
-                ),
-                width: 80,
-                cellClassName: 'cell-styled',
-            },
-            {
-                field: 'fjl_private',
-                headerName: txt.columns.private.title,
+                field: 'fjl_is_public',
+                headerName: txt.columns.isPublic.title,
                 editable: true,
                 resizable: false,
+
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography data-testid={`fjl-label-${props.id}`}>{props.value && <Check />}</Typography>
+                    <span data-testid={`fjl-label-${props.id}`}>{props.value && <Public />}</span>
                 ),
                 renderEditCell: (props: GridRenderEditCellParams) => (
                     <Switch
@@ -157,8 +134,33 @@ export const useColumns = ({
                     ...params.props,
                     error: params.props.value === '',
                 }),
-                maxWidth: 100,
+                maxWidth: 110,
                 flex: 1,
+                cellClassName: 'cell-styled',
+            },
+            {
+                field: 'link_to_items',
+                headerName: txt.columns.items.title,
+                editable: false,
+                resizable: false,
+                sortable: false,
+                align: 'center',
+                renderCell: props => (
+                    <span data-testid={`fjl-items-${props.id}`}>
+                        <Link
+                            target="user-list-tab"
+                            title={txt.columns.items.link.title}
+                            to={
+                                props.row.fjl_label === 'favourites'
+                                    ? pathConfig.journals.favourites
+                                    : pathConfig.journals.list(String(props.id), props.row.fjl_label)
+                            }
+                        >
+                            <FormatListBulleted />
+                        </Link>
+                    </span>
+                ),
+                width: 80,
                 cellClassName: 'cell-styled',
             },
             {
