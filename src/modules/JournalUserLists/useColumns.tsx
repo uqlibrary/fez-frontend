@@ -119,7 +119,7 @@ export const useColumns = ({
                 renderEditCell: (props: GridRenderEditCellParams) => (
                     <Switch
                         checked={props.value}
-                        data-testid={`fjl-private-${props.id}`}
+                        data-testid={`fjl-is-public${props.id}`}
                         onChange={e =>
                             props.api.setEditCellValue({
                                 id: props.id,

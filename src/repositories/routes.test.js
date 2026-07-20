@@ -1018,7 +1018,7 @@ describe('Backend routes method', () => {
                     query: 'a',
                 }),
             ).toEqual({
-                apiUrl: 'journals/favourites/id',
+                apiUrl: 'journals/lists/id/items',
                 options: {
                     params: { ...commonQueryParams },
                 },
@@ -1029,7 +1029,7 @@ describe('Backend routes method', () => {
                     query: 'a',
                 }),
             ).toEqual({
-                apiUrl: 'journals/favourites/1',
+                apiUrl: 'journals/lists/1/items',
                 options: {
                     params: { ...commonQueryParams },
                 },

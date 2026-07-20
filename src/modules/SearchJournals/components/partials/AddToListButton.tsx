@@ -26,6 +26,7 @@ const AddToListButton: React.FC<{
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [list, setList] = useState(Array<SplitButtonItem>);
+    const selectedList = list[selectedIndex];
     const selectionCount = Object.keys(selectedJournals).length;
     const loading = adding || loadingList;
     const disabled = !selectionCount || adding || loadingList;
@@ -46,7 +47,7 @@ const AddToListButton: React.FC<{
     };
 
     const handleMainClick = () => {
-        dispatch(addFavourites({ id: list[selectedIndex]?.id, ids: Object.keys(selectedJournals) })).then(() => {
+        dispatch(addFavourites({ id: selectedList?.id, ids: Object.keys(selectedJournals) })).then(() => {
             setIsDialogOpen(true);
             setTimeout(closeDialog, 1000);
         });

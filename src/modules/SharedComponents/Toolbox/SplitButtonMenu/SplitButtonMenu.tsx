@@ -76,6 +76,7 @@ const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
             <ButtonGroup ref={anchorRef} variant="contained" sx={sx}>
                 <Button
                     onClick={onClick}
+                    aria-label={selectedItem ? undefined : 'Add to list'}
                     sx={{
                         flex: 1,
                         justifyContent: 'flex-start',

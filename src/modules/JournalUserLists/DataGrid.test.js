@@ -1,5 +1,5 @@
 import React from 'react';
-import { render as defaultRender, userEvent, within } from 'test-utils';
+import { render as defaultRender, userEvent, within, WithRouter } from 'test-utils';
 import { DataGrid } from './DataGrid';
 
 const mockDispatch = jest.fn();
@@ -28,7 +28,11 @@ const setup = (testProps = {}, render = defaultRender) => {
         deleteAction,
         ...testProps,
     };
-    return render(<DataGrid {...props} />);
+    return render(
+        <WithRouter>
+            <DataGrid {...props} />
+        </WithRouter>,
+    );
 };
 
 describe('DataGrid', () => {
@@ -194,10 +198,10 @@ describe('DataGrid', () => {
 
         await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
 
-        const switchInput = getByTestId('fjl-private-1').querySelector('input');
-        expect(switchInput).not.toBeChecked();
+        const switchInput = getByTestId('fjl-is-public1').querySelector('input');
+        expect(switchInput).toBeChecked();
 
         await userEvent.click(switchInput);
-        expect(switchInput).toBeChecked();
+        expect(switchInput).not.toBeChecked();
     });
 });

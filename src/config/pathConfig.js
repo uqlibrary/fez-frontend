@@ -212,6 +212,6 @@ export const pathConfig = {
         compare: '/journals/compare/',
         lists: '/journals/userLists/',
         list: (id, label) => `/journals/userList/${id}/${label}`,
-        favourites: '/journals/favourites',
+        favourites: '/journals/favourites/',
     },
 };
