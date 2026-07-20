@@ -13,49 +13,63 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import { useRef, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
-import ListItemText from 'modules/SharedComponents/Toolbox/SplitButtonMenu/ListItemText';
-import { Settings } from '@mui/icons-material';
+import ListItemText from 'modules/SharedComponents/Toolbox/ListSplitButtonMenu/ListItemText';
+import Add from '@mui/icons-material/Add';
 
-export type SplitButtonItem = {
+export type ListSplitButtonItem = {
     id: string | number;
     label: string;
 };
 
-export type SplitButtonMenuProps = {
+export type ListSplitButtonMenuProps = {
     id?: string;
-    items: SplitButtonItem[];
+    items: ListSplitButtonItem[];
     selectedIndex: number;
     onItemSelect: (index: number) => void;
     onClick: () => void;
-    onSettings?: () => void;
-    label: (selectedItem: SplitButtonItem) => string;
+    onAdd?: () => void;
+    label: (selectedItem: ListSplitButtonItem) => string;
     loading?: boolean;
     disabled?: boolean;
     sx?: object;
+    // optional controlled open state - falls back to internal state when omitted
+    open?: boolean;
+    onOpenChange?: (open: boolean) => void;
+    clickAwayExcludeRef?: React.RefObject<Element | null> | null;
 };
 
-const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
+const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
     id = 'split-button-menu',
     items,
     selectedIndex,
     onItemSelect,
     onClick,
-    onSettings,
+    onAdd,
     label,
     loading = false,
     disabled = false,
     sx = {},
+    open: openProp,
+    onOpenChange,
+    clickAwayExcludeRef = null,
 }) => {
     const anchorRef = useRef<HTMLDivElement>(null);
-    const [open, setOpen] = useState(false);
+    const [internalOpen, setInternalOpen] = useState(false);
+    const isControlled = openProp !== undefined;
+    const open = isControlled ? openProp : internalOpen;
+    const setOpen = (value: boolean) => (isControlled ? onOpenChange?.(value) : setInternalOpen(value));
     const selectedItem = items[selectedIndex];
 
     const handleToggle = () => {
-        setOpen(prev => !prev);
+        setOpen(!open);
     };
 
     const handleClose = (event: Event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target as HTMLElement)) {
+        const target = event.target as HTMLElement;
+        if (
+            (anchorRef.current && anchorRef.current.contains(target)) ||
+            clickAwayExcludeRef?.current?.contains?.(target)
+        ) {
             return;
         }
         setOpen(false);
@@ -66,14 +80,12 @@ const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
         setOpen(false);
     };
 
-    const handleSettings = () => {
-        onSettings?.();
-        setOpen(false);
-    };
+    const handleAdd = () => onAdd?.();
 
     return (
         <>
             <ButtonGroup ref={anchorRef} variant="contained" sx={sx}>
+                {/* action button */}
                 <Button
                     onClick={onClick}
                     aria-label={selectedItem ? undefined : 'Add to list'}
@@ -94,7 +106,7 @@ const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
                         {selectedItem ? label(selectedItem) : ''}
                     </span>
                 </Button>
-
+                {/* list trigger button */}
                 <Button
                     size="small"
                     onClick={handleToggle}
@@ -111,6 +123,7 @@ const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
                 </Button>
             </ButtonGroup>
 
+            {/* list */}
             <Popper
                 open={open}
                 anchorEl={anchorRef.current}
@@ -140,16 +153,17 @@ const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
                                         overflowY: 'auto',
                                     }}
                                 >
-                                    {onSettings && [
-                                        <MenuItem key={`${id}-settings`} onClick={handleSettings}>
+                                    {/* add button */}
+                                    {onAdd && [
+                                        <MenuItem key={`${id}-add-new`} onClick={handleAdd}>
                                             <ListItemIcon>
-                                                <Settings fontSize="small" />
+                                                <Add fontSize="small" />
                                             </ListItemIcon>
-                                            <ListItemText>Manage lists</ListItemText>
+                                            <ListItemText>Add new</ListItemText>
                                         </MenuItem>,
-                                        <Divider key={`${id}-settings-divider`} />,
+                                        <Divider key={`${id}-add-new-divider`} />,
                                     ]}
-
+                                    {/* list items */}
                                     {items.map((item, index) => (
                                         <MenuItem
                                             key={item.id}
@@ -172,4 +186,4 @@ const SplitButtonMenu: React.FC<SplitButtonMenuProps> = ({
     );
 };
 
-export default React.memo(SplitButtonMenu);
+export default React.memo(ListSplitButtonMenu);
