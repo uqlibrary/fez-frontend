@@ -40,11 +40,8 @@ jest.mock('../../../../SharedComponents/Toolbox/ListSplitButtonMenu/ListSplitBut
         <button aria-label="main" disabled={props.disabled} onClick={props.onClick}>
             {props.items[props.selectedIndex] ? props.label(props.items[props.selectedIndex]) : 'no list'}
         </button>
-
         <button aria-label="select" onClick={() => props.onItemSelect(1)} />
-
         <button aria-label="add" onClick={props.onAdd} />
-
         <div data-testid="loading">{String(props.loading)}</div>
         <div data-testid="menu-open">{String(props.open)}</div>
         <div data-testid="items">{props.items.map(item => item.label).join(',')}</div>
@@ -54,9 +51,9 @@ jest.mock('../../../../SharedComponents/Toolbox/ListSplitButtonMenu/ListSplitBut
 jest.mock('../../../../SharedComponents/Toolbox/ConfirmDialogBox', () => ({
     ConfirmationBox: props =>
         props.isOpen ? (
-            <div data-testid="confirmation" onClick={props.onClose}>
+            <button data-testid="confirmation" onClick={props.onClose}>
                 {props.locale.confirmationMessage}
-            </div>
+            </button>
         ) : null,
 }));
 
@@ -77,9 +74,7 @@ const defaultListData = [
 
 const setup = testProps => {
     const { loading = false, listLoading = false, listData = defaultListData, ...props } = testProps || {};
-
     useDispatch.mockReturnValue(dispatch);
-
     useSelector.mockImplementation(selector =>
         selector({
             get: key => {
@@ -100,19 +95,9 @@ const setup = testProps => {
             },
         }),
     );
-
-    loadLists.mockReturnValue({
-        type: 'LOAD_LISTS',
-    });
-
-    addFavourites.mockReturnValue({
-        type: 'ADD',
-    });
-
-    createList.mockReturnValue({
-        type: 'CREATE',
-    });
-
+    loadLists.mockReturnValue({ type: 'LOAD_LISTS' });
+    addFavourites.mockReturnValue({ type: 'ADD' });
+    createList.mockReturnValue({ type: 'CREATE' });
     dispatch.mockImplementation(action => {
         if (action?.type === 'CREATE') {
             return Promise.resolve({
@@ -122,7 +107,6 @@ const setup = testProps => {
                 },
             });
         }
-
         return Promise.resolve();
     });
 

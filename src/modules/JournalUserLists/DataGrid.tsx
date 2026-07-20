@@ -1,5 +1,11 @@
 import React from 'react';
-import { GridRowModes, DataGrid as MuiDataGrid, GridToolbarContainer, GridRowModesModel } from '@mui/x-data-grid';
+import {
+    GridRowModes,
+    DataGrid as MuiDataGrid,
+    GridToolbarContainer,
+    GridRowModesModel,
+    GridToolbarQuickFilter,
+} from '@mui/x-data-grid';
 import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
@@ -7,6 +13,7 @@ import { locale } from 'locale';
 import { Row, useGrid } from './useGridHook';
 import { useColumns } from './useColumns';
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
+import { Box } from '@mui/material';
 
 interface DataGridProps {
     data?: { data: FezJournalUserList[] };
@@ -114,36 +121,50 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
     });
 
     const Toolbar = () => (
-        <GridToolbarContainer sx={{ display: 'flex', justifyContent: 'flex-end', width: '99%' }}>
+        <GridToolbarContainer
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+                width: '100%',
+            }}
+        >
             {error?.trim?.() && (
-                <Typography
-                    color="error"
-                    variant="caption"
-                    data-testid="journal-user-lists-error"
-                    sx={{ flexGrow: 1, m: 1 }}
-                >
+                <Typography color="error" variant="caption" data-testid="journal-user-lists-error" sx={{ flexGrow: 1 }}>
                     {error}
                 </Typography>
             )}
+
+            <Box sx={{ flexGrow: 1 }} />
+
+            <GridToolbarQuickFilter debounceMs={300} />
+
             <Button
                 variant="contained"
                 startIcon={<Add />}
                 onClick={onAddClick}
-                data-testid="journal-user-lists-add"
                 disabled={
                     Object.values(rowModesModel).some(rowMode => rowMode.mode === GridRowModes.Edit) || !!deleteRowId
                 }
             >
-                {'Add new list'}
+                Add new list
             </Button>
         </GridToolbarContainer>
     );
 
     return (
-        // <Box sx={{ height: 300, width: '100%' }}>
         <MuiDataGrid
             data-testid="journal-user-lists-grid"
             rowHeight={38}
+            initialState={{
+                pagination: {
+                    paginationModel: {
+                        page: 0,
+                        pageSize: 10,
+                    },
+                },
+            }}
+            pageSizeOptions={[10, 25, 50, 100]}
             rows={rows}
             getRowId={row => row.fjl_id}
             columns={columns}
@@ -156,6 +177,14 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
             onProcessRowUpdateError={/* istanbul ignore next */ (err: unknown) => console.error(err)}
             localeText={{ noRowsLabel: txt.grid.noRowsLabel }}
             slots={{ toolbar: Toolbar }}
+            slotProps={{
+                toolbar: {
+                    showQuickFilter: true,
+                    quickFilterProps: {
+                        debounceMs: 300,
+                    },
+                },
+            }}
             sx={{
                 border: 0,
                 '& .cell-styled': {
@@ -172,7 +201,6 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
             disableColumnSelector
             disableRowSelectionOnClick
         />
-        // </Box>
     );
 };
 
