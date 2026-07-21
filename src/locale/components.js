@@ -4477,7 +4477,7 @@ export default {
             },
         },
         favouriteJournals: {
-            title: label => (label ? `Journal user list: ${label}` : 'My Favourite Journals'),
+            title: label => (label ? `Favourite list: ${label}` : 'My Favourite Journals'),
             buttons: {
                 delete: {
                     title: 'REMOVE FROM LIST',

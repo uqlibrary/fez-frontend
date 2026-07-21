@@ -89,6 +89,7 @@ export const useColumns = ({
                             placeholder="This field is required"
                             onChange={handleChange}
                             data-testid={`fjl-label-${props.id}-input`}
+                            inputProps={{ maxLength: 255 }}
                             sx={{
                                 border: '1px solid transparent',
                                 '&.Mui-error': {
