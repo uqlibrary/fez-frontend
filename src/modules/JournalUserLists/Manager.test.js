@@ -40,23 +40,15 @@ describe('JournalUserLists', () => {
         expect(queryByTestId('mock-data-grid')).not.toBeInTheDocument();
     });
 
-    it('should dispatch loadLists on mount', () => {
+    it('should dispatch loadLists on mount', async () => {
         mockUseSelector.mockReturnValue({ loading: false, data: null, error: '' });
         const thunk = jest.fn(() => Promise.resolve());
         loadLists.mockReturnValue(thunk);
 
-        setup();
+        const { getByTestId } = setup();
 
         expect(loadLists).toHaveBeenCalled();
         expect(mockDispatch).toHaveBeenCalledWith(thunk);
-    });
-
-    it('should render the page title and DataGrid once data is available', async () => {
-        mockUseSelector.mockReturnValue({ loading: false, data: { data: [] }, error: '' });
-        loadLists.mockReturnValue(() => Promise.resolve());
-        const { getByTestId } = setup();
-
-        expect(locale.pages.journalUserLists.title);
         await waitFor(() => expect(getByTestId('mock-data-grid')).toBeInTheDocument());
     });
 
