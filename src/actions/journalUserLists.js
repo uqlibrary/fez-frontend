@@ -75,12 +75,11 @@ export const deleteList = id => async dispatch => {
 };
 
 /**
- * @param {{id: string|number|undefined|null, searchQuery: *}} ids
- * @param searchQuery
+ * @param {{id: string|number|undefined|null, searchQuery?: *}} props
  * @returns {AnyAction}
  */
 export const loadListItems =
-    ({ id, searchQuery }) =>
+    ({ id, searchQuery = {} }) =>
     async dispatch => {
         dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
         return get(JOURNAL_USER_LIST_ITEMS_API({ id, query: searchQuery })).then(

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@mui/material/Grid';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../../SearchJournals/hooks';
@@ -14,14 +14,16 @@ import { deleteListItems, loadListItems } from 'actions/journalUserLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
 import { useLocation, useParams } from 'react-router';
 import { AppState } from '../../../reducer';
+import ListSelect from 'modules/FavouriteJournals/components/ListSelect';
 
 export const FavouriteJournals: React.FC = () => {
-    const { id: listId, label: listLabel } = useParams();
+    const { id: listIdParam } = useParams();
     const dispatch = useDispatch();
     const location = useLocation();
     const txt = locale.components.favouriteJournals;
     // keep track of previous location, so we can go back to the search page correctly after re-rendering this component
     const prevLocation = useRef(location.state?.prevLocation);
+    const [listId, setListId] = useState(listIdParam);
 
     const response = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').response);
     const loading = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').loading);
@@ -52,14 +54,37 @@ export const FavouriteJournals: React.FC = () => {
             .then(() => clearSelectedJournals())
             .then(() => dispatch(loadListItems({ id: listId, searchQuery: journalSearchQueryParams })));
 
+    // handle listIdParam changes
+    useEffect(() => {
+        setListId(listIdParam);
+    }, [listIdParam]);
+
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
         dispatch(loadListItems({ id: listId, searchQuery: { page, pageSize, sortBy, sortDirection } }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [listId, page, pageSize, sortBy, sortDirection]);
 
+    const handleListSelection = (id: string | number) => {
+        setListId(String(id));
+    };
+
+    const Title = (
+        <Grid container spacing={2} alignItems="center">
+            {txt.title}:
+            <ListSelect
+                sx={{ mb: 2, width: 300 }}
+                fullWidth={false}
+                value={listId}
+                disabled={loading}
+                //@ts-expect-error
+                onChange={handleListSelection}
+            />
+        </Grid>
+    );
+
     return (
-        <StandardPage title={txt.title(listLabel)} data-testid="journal-search-page">
+        <StandardPage title={Title} data-testid="journal-search-page">
             <Grid container spacing={3} sx={{ padding: 0 }}>
                 <Grid size="grow">
                     <Grid container spacing={2} sx={{ padding: 0 }}>
@@ -126,6 +151,6 @@ export const FavouriteJournals: React.FC = () => {
             </Grid>
         </StandardPage>
     );
-};;;;
+};
 
 export default React.memo(FavouriteJournals);

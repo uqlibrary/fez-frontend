@@ -329,7 +329,7 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.journals.favourites,
                       element: <components.FavouriteJournals />,
-                      pageTitle: locale.components.favouriteJournals.title(),
+                      pageTitle: locale.components.favouriteJournals.title,
                   },
                   {
                       path: pathConfig.journals.lists,
@@ -339,7 +339,7 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.journals.list(':id', ':label'),
                       element: <components.FavouriteJournals />,
-                      pageTitle: locale.components.favouriteJournals.title(),
+                      pageTitle: locale.components.favouriteJournals.title,
                   },
               ]
             : []),
