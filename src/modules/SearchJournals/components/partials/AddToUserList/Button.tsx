@@ -27,7 +27,6 @@ const Button: React.FC<{
     );
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
-    const isListLoaded = useRef(false);
     const [list, setList] = useState(Array<ListSplitButtonItem>);
     const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,10 +38,8 @@ const Button: React.FC<{
 
     // load list on render
     useEffect(() => {
-        if (isListLoaded.current) return;
         dispatch(loadLists());
-        isListLoaded.current = true;
-    }, [isListLoaded.current]);
+    }, []);
 
     // parse loaded list
     useEffect(() => {

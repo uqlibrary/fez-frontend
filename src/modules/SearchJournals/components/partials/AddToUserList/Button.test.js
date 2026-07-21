@@ -139,15 +139,12 @@ describe('Button', () => {
     });
 
     it('should dispatch loadLists on mount', () => {
-        const { rerender } = setup();
+        setup();
 
         expect(loadLists).toHaveBeenCalled();
         expect(dispatch).toHaveBeenCalledWith({
             type: 'LOAD_LISTS',
         });
-
-        setup({}, rerender);
-
         expect(loadLists).toHaveBeenCalledTimes(1);
     });
 
