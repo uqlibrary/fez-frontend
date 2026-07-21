@@ -6,8 +6,9 @@ import { useDispatchOnce } from 'hooks/useDispatchOnce';
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
 import MenuItem from '@mui/material/MenuItem';
 import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
-import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { SelectProps } from '@mui/material';
+import Select from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
 
 const getFavouriteId = (lists: FezJournalUserList[]) =>
     lists.find(list => list.fjl_label.toUpperCase() === JOURNAL_FAVOURITE_LIST_LABEL.toUpperCase())?.fjl_id;
@@ -20,14 +21,28 @@ const ListSelect: React.FC<SelectProps> = props => {
 
     const value = props.value || getFavouriteId(response?.data);
     return (
-        // @ts-expect-error TODO fix once converted to TS
-        <SelectField disabled={loading} {...props} value={value}>
-            {response?.data?.map((item: FezJournalUserList) => (
-                <MenuItem key={item.fjl_id} value={item.fjl_id}>
-                    {item.fjl_label}
-                </MenuItem>
-            ))}
-        </SelectField>
+        <FormControl variant="standard" fullWidth>
+            <Select
+                {...props}
+                value={value}
+                variant="standard"
+                labelId="sort-by-label"
+                data-testid="publication-list-sorting-sort-by"
+                MenuProps={{
+                    PaperProps: {
+                        sx: {
+                            maxHeight: '50vh',
+                        },
+                    },
+                }}
+            >
+                {response?.data?.map((item: FezJournalUserList) => (
+                    <MenuItem key={item.fjl_id} value={item.fjl_id}>
+                        {item.fjl_label}
+                    </MenuItem>
+                ))}
+            </Select>
+        </FormControl>
     );
 };
 

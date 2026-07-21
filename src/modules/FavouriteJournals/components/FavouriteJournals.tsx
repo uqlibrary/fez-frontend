@@ -15,6 +15,7 @@ import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
 import { useLocation, useParams } from 'react-router';
 import { AppState } from '../../../reducer';
 import ListSelect from 'modules/FavouriteJournals/components/ListSelect';
+import { Box } from '@mui/material';
 
 export const FavouriteJournals: React.FC = () => {
     const { id: listIdParam } = useParams();
@@ -66,21 +67,21 @@ export const FavouriteJournals: React.FC = () => {
     }, [listId, page, pageSize, sortBy, sortDirection]);
 
     /* istanbul ignore next */
-    const handleListSelection = (id: string | number) => {
-        setListId(String(id));
+    const handleListSelection = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setListId(String(event.target.value));
     };
 
     const Title = (
         <Grid container spacing={2} alignItems="center">
             {txt.title}:
-            <ListSelect
-                sx={{ mb: 2, width: 300 }}
-                fullWidth={false}
-                value={listId}
-                disabled={loading}
-                //@ts-expect-error
-                onChange={handleListSelection}
-            />
+            <Box component="span" sx={{ mb: -2, width: 300 }}>
+                <ListSelect
+                    value={listId}
+                    disabled={loading}
+                    //@ts-expect-error
+                    onChange={handleListSelection}
+                />
+            </Box>
         </Grid>
     );
 

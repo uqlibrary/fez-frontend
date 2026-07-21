@@ -12,7 +12,7 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
     const filteredProps = propFilter({ ...props, forceError: true }, Select.propTypes);
     filteredProps.value = filteredProps.value ?? '';
     filteredProps.onChange = event => (props.onChange || props.input.onChange)(event.target.value);
-    filteredProps.onBlur = () => (props.onBlur || props.input?.onBlur)?.(props.value || props.input?.value);
+    filteredProps.onBlur = () => (props.onBlur || props.input?.onBlur)(props.value || props.input?.value);
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
     const hideLabel = !!filteredProps.hideLabel;
@@ -23,12 +23,7 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
 
     return (
         <React.Fragment>
-            <FormControl
-                variant="standard"
-                error={error}
-                fullWidth={props.hasOwnProperty('fullWidth') ? props.fullWidth : true}
-                required={filteredProps.required}
-            >
+            <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
                 {!hideLabel && <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>}
                 <Select
                     ref={ref}
