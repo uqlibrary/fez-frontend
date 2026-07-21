@@ -2,6 +2,7 @@ import React from 'react';
 import { render as defaultRender, userEvent, within, WithRouter } from 'test-utils';
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
+import { JOURNAL_FAVOURITE_LIST_ID } from '../../config/general';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
@@ -16,7 +17,7 @@ const deleteAction = jest.fn();
 const data = [
     { fjl_id: 1, fjl_label: 'List one', fjl_is_public: true, fjl_ids: [1, 2] },
     { fjl_id: 2, fjl_label: 'List two', fjl_is_public: false, fjl_ids: [] },
-    { fjl_id: 3, fjl_label: 'favourites', fjl_is_public: true, fjl_ids: [1, 2] },
+    { fjl_id: 3, fjl_label: JOURNAL_FAVOURITE_LIST_ID, fjl_is_public: true, fjl_ids: [1, 2] },
 ];
 
 const setup = (testProps = {}, render = defaultRender) => {

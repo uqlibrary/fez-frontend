@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { locale } from 'locale';
 import { addListItems, createList, loadLists } from 'actions/journalUserLists';
@@ -10,9 +10,23 @@ import ListSplitButtonMenu, {
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
 import AddNewDialog, { FormValues } from './AddNewDialog';
 import { AnyAction } from 'redux';
+import { JOURNAL_FAVOURITE_LIST_ID, JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 
-const parseResponse = (response: { data: FezJournalUserList[] }): ListSplitButtonItem[] =>
-    response?.data?.map?.(item => ({ id: item.fjl_id, label: item.fjl_label })) || /* istanbul ignore next */ [];
+const favouritesListItem = { id: JOURNAL_FAVOURITE_LIST_ID, label: JOURNAL_FAVOURITE_LIST_LABEL };
+
+// eslint-disable-next-line camelcase
+const toListSplitButtonItem = ({ fjl_id, fjl_label }: FezJournalUserList): ListSplitButtonItem => ({
+    // eslint-disable-next-line camelcase
+    id: fjl_id,
+    // eslint-disable-next-line camelcase
+    label: fjl_label,
+});
+
+const parseResponse = ({ data }: { data?: FezJournalUserList[] }): ListSplitButtonItem[] => [
+    favouritesListItem,
+    // keep favourites at the top
+    ...(data?.map?.(toListSplitButtonItem).filter(({ id }) => id !== JOURNAL_FAVOURITE_LIST_ID) || /* istanbul ignore next */ []),
+];
 
 const Button: React.FC<{
     selectedJournals: Record<string, object>;
@@ -43,6 +57,8 @@ const Button: React.FC<{
 
     // parse loaded list
     useEffect(() => {
+        /* istanbul ignore if */
+        if (!response?.data) return;
         setList(parseResponse(response));
     }, [JSON.stringify(response?.data)]);
 

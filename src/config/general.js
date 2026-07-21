@@ -672,6 +672,8 @@ export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
 export const AIATSIS_CODES_VOCAB_ID = 453669;
 export const SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID = 456993;
 export const JOURNAL_ADVISORY_STATEMENT_TYPE = 457074;
+export const JOURNAL_FAVOURITE_LIST_ID = 'favourites';
+export const JOURNAL_FAVOURITE_LIST_LABEL = 'Favourites';
 
 export const UNPROCESSED_RECORDS_COLLECTION = {
     fez_record_search_key_ismemberof: [

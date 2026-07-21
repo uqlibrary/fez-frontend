@@ -4,6 +4,7 @@ import { render as defaultRender, userEvent, act } from 'test-utils';
 import { useDispatch, useSelector } from 'react-redux';
 import { addListItems, createList, loadLists } from '../../../../../actions/journalUserLists';
 import Button from './Button';
+import { JOURNAL_FAVOURITE_LIST_ID, JOURNAL_FAVOURITE_LIST_LABEL } from '../../../../../config/general';
 
 jest.mock('react-redux', () => ({
     useDispatch: jest.fn(),
@@ -63,12 +64,12 @@ const onAdd = jest.fn();
 
 const defaultListData = [
     {
-        fjl_id: 'favourites',
-        fjl_label: 'Favourites',
-    },
-    {
         fjl_id: 'reading',
         fjl_label: 'Reading',
+    },
+    {
+        fjl_id: JOURNAL_FAVOURITE_LIST_ID,
+        fjl_label: JOURNAL_FAVOURITE_LIST_LABEL,
     },
 ];
 
@@ -148,19 +149,25 @@ describe('Button', () => {
         expect(loadLists).toHaveBeenCalledTimes(1);
     });
 
+    it('should render default list items', () => {
+        const { getByTestId } = setup({ listData: [] });
+
+        expect(getByTestId('items')).toHaveTextContent('Favourites');
+    });
+
     it('should render parsed list items', () => {
         const { getByTestId } = setup();
 
         expect(getByTestId('items')).toHaveTextContent('Favourites,Reading');
     });
 
-    it('should render no items when list data is empty', () => {
+    it('should render default items when list data is empty', () => {
         const { getByTestId, getByLabelText } = setup({
             listData: [],
         });
 
-        expect(getByTestId('items')).toHaveTextContent('');
-        expect(getByLabelText('main')).toHaveTextContent('no list');
+        expect(getByTestId('items')).toHaveTextContent(JOURNAL_FAVOURITE_LIST_LABEL);
+        expect(getByLabelText('main')).not.toHaveTextContent('no list');
     });
 
     it('should dispatch addListItems with the selected list id', async () => {
@@ -169,7 +176,7 @@ describe('Button', () => {
         await user.click(getByLabelText('main'));
 
         expect(addListItems).toHaveBeenCalledWith({
-            id: 'favourites',
+            id: JOURNAL_FAVOURITE_LIST_ID,
             ids: ['a', 'b'],
         });
     });

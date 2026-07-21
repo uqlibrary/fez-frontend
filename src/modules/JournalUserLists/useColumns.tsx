@@ -21,6 +21,7 @@ import Edit from '@mui/icons-material/Edit';
 import { Row } from './useGridHook';
 import { locale } from 'locale';
 import { FormatListBulleted, Public } from '@mui/icons-material';
+import { JOURNAL_FAVOURITE_LIST_ID } from 'config/general';
 
 const createListUrl = (id: string) =>
     `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][UserList]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
@@ -152,7 +153,7 @@ export const useColumns = ({
                             target="user-list-tab"
                             title={txt.columns.items.link.title}
                             to={
-                                props.row.fjl_label === 'favourites'
+                                props.row.fjl_label === JOURNAL_FAVOURITE_LIST_ID
                                     ? pathConfig.journals.favourites
                                     : pathConfig.journals.list(String(props.id), props.row.fjl_label)
                             }
