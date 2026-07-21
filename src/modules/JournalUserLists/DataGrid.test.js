@@ -1,6 +1,7 @@
 import React from 'react';
 import { render as defaultRender, userEvent, within, WithRouter } from 'test-utils';
 import { DataGrid } from './DataGrid';
+import { pathConfig } from '../../config';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
@@ -12,16 +13,15 @@ const createAction = jest.fn();
 const updateAction = jest.fn();
 const deleteAction = jest.fn();
 
-const data = {
-    data: [
-        { fjl_id: 1, fjl_label: 'List one', fjl_is_public: true, fjl_ids: [1, 2] },
-        { fjl_id: 2, fjl_label: 'List two', fjl_is_public: false, fjl_ids: [] },
-    ],
-};
+const data = [
+    { fjl_id: 1, fjl_label: 'List one', fjl_is_public: true, fjl_ids: [1, 2] },
+    { fjl_id: 2, fjl_label: 'List two', fjl_is_public: false, fjl_ids: [] },
+    { fjl_id: 3, fjl_label: 'favourites', fjl_is_public: true, fjl_ids: [1, 2] },
+];
 
 const setup = (testProps = {}, render = defaultRender) => {
     const props = {
-        data,
+        data: { data: data },
         error: '',
         createAction,
         updateAction,
@@ -65,7 +65,7 @@ describe('DataGrid', () => {
         const { getByTestId } = setup();
 
         await userEvent.click(getByTestId('journal-user-lists-add'));
-        expect(getByTestId('fjl-label--3-input').querySelector('input')).toHaveFocus();
+        expect(getByTestId('fjl-label--4-input').querySelector('input')).toHaveFocus();
 
         expect(getByTestId('journal-user-lists-item-0-save')).toBeInTheDocument();
         expect(getByTestId('journal-user-lists-item-0-cancel')).toBeInTheDocument();
@@ -193,7 +193,7 @@ describe('DataGrid', () => {
         expect(saveButton).toBeDisabled();
     });
 
-    it('should update the switch value when toggling private in edit mode', async () => {
+    it('should update the switch value when toggling is public in edit mode', async () => {
         const { getByTestId } = setup();
 
         await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
@@ -203,5 +203,15 @@ describe('DataGrid', () => {
 
         await userEvent.click(switchInput);
         expect(switchInput).not.toBeChecked();
+    });
+
+    it('should link to list items page', async () => {
+        const { getByTestId } = setup();
+
+        const listLink = getByTestId('fjl-items-1').querySelector('a');
+        expect(listLink).toHaveAttribute('href', pathConfig.journals.list(data[0].fjl_id, data[0].fjl_label));
+
+        const favouritesLink = getByTestId('fjl-items-3').querySelector('a');
+        expect(favouritesLink).toHaveAttribute('href', pathConfig.journals.favourites);
     });
 });
