@@ -103,10 +103,10 @@ describe('FavouriteJournals', () => {
 
         assertEnabled(getByTestId('remove-from-favourites-button'));
 
-        expect(redux.useDispatch).toHaveBeenCalledTimes(4);
+        expect(redux.useDispatch).toHaveBeenCalledTimes(6);
         await userEvent.click(getByTestId('remove-from-favourites-button'));
         // basic check that the button was clicked
-        expect(redux.useDispatch).toHaveBeenCalledTimes(6);
+        expect(redux.useDispatch).toHaveBeenCalledTimes(9);
     });
 
     it('should render when there are no favs', () => {

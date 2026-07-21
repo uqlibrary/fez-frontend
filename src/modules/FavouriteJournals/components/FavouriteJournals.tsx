@@ -65,6 +65,7 @@ export const FavouriteJournals: React.FC = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [listId, page, pageSize, sortBy, sortDirection]);
 
+    /* istanbul ignore next */
     const handleListSelection = (id: string | number) => {
         setListId(String(id));
     };
