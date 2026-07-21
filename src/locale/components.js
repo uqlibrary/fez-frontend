@@ -4477,7 +4477,7 @@ export default {
             },
         },
         favouriteJournals: {
-            title: 'Preferred journals list',
+            title: 'Preferred Journals List',
             buttons: {
                 delete: {
                     title: 'REMOVE FROM LIST',
@@ -4815,8 +4815,8 @@ export default {
                 },
                 buttons: {
                     myFavouriteJournals: {
-                        title: 'My favourite journals',
-                        aria: 'My favourite journals',
+                        title: 'My Preferred Journals',
+                        aria: 'My Preferred Journals',
                     },
                     browseAllJournals: {
                         title: 'Browse all journals',
