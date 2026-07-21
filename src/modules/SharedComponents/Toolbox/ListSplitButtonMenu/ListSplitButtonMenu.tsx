@@ -15,6 +15,7 @@ import { useRef, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import ListItemText from 'modules/SharedComponents/Toolbox/ListSplitButtonMenu/ListItemText';
 import Add from '@mui/icons-material/Add';
+import { Box } from '@mui/material';
 
 export type ListSplitButtonItem = {
     id: string | number;
@@ -145,38 +146,42 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                     >
                         <Paper sx={{ mt: 1, width: '100%' }} elevation={8}>
                             <ClickAwayListener onClickAway={handleClose}>
-                                <MenuList
-                                    id={id}
-                                    autoFocusItem
-                                    sx={{
-                                        maxHeight: 360,
-                                        overflowY: 'auto',
-                                    }}
-                                >
+                                <Box>
                                     {/* add button */}
-                                    {onAdd && [
-                                        <MenuItem key={`${id}-add-new`} onClick={handleAdd}>
-                                            <ListItemIcon>
-                                                <Add fontSize="small" />
-                                            </ListItemIcon>
-                                            <ListItemText>Add new</ListItemText>
-                                        </MenuItem>,
-                                        <Divider key={`${id}-add-new-divider`} />,
-                                    ]}
+                                    {onAdd && (
+                                        <MenuList sx={{ pb: 0 }}>
+                                            <MenuItem onClick={handleAdd} key="add-new">
+                                                <ListItemIcon>
+                                                    <Add fontSize="small" />
+                                                </ListItemIcon>
+                                                <ListItemText>Add new</ListItemText>
+                                            </MenuItem>
+                                            <Divider sx={{ pb: 0 }} />
+                                        </MenuList>
+                                    )}
                                     {/* list items */}
-                                    {items.map((item, index) => (
-                                        <MenuItem
-                                            key={item.id}
-                                            selected={selectedIndex === index}
-                                            onClick={() => handleItemSelection(index)}
-                                        >
-                                            <ListItemIcon>
-                                                {selectedIndex === index ? <CheckIcon fontSize="small" /> : null}
-                                            </ListItemIcon>
-                                            <ListItemText>{item.label}</ListItemText>
-                                        </MenuItem>
-                                    ))}
-                                </MenuList>
+                                    <MenuList
+                                        sx={{
+                                            pt: 0,
+                                            maxHeight: 360,
+                                            overflowX: 'hidden',
+                                            overflowY: 'auto',
+                                        }}
+                                    >
+                                        {items.map((item, index) => (
+                                            <MenuItem
+                                                key={item.id}
+                                                selected={selectedIndex === index}
+                                                onClick={() => handleItemSelection(index)}
+                                            >
+                                                <ListItemIcon>
+                                                    {selectedIndex === index ? <CheckIcon fontSize="small" /> : null}
+                                                </ListItemIcon>
+                                                <ListItemText>{item.label}</ListItemText>
+                                            </MenuItem>
+                                        ))}
+                                    </MenuList>
+                                </Box>
                             </ClickAwayListener>
                         </Paper>
                     </Grow>
