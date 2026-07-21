@@ -1,5 +1,12 @@
 import React from 'react';
-import { render as defaultRender, userEvent, within, WithRouter } from 'test-utils';
+import {
+    assertEnabled,
+    assertToBeInTheDocument,
+    render as defaultRender,
+    userEvent,
+    within,
+    WithRouter,
+} from 'test-utils';
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
 import { JOURNAL_FAVOURITE_LIST_ID } from '../../config/general';
@@ -48,6 +55,8 @@ describe('DataGrid', () => {
 
         expect(firstOf(container, 'fjl-label-1')).toHaveTextContent('List one');
         expect(firstOf(container, 'fjl-label-2')).toHaveTextContent('List two');
+        assertToBeInTheDocument('journal-user-lists-quicksearch');
+        assertEnabled('journal-user-lists-add');
     });
 
     it('should show error message when error is present', () => {

@@ -8,13 +8,13 @@ import Manager from './Manager';
 const JournalUserLists = () => (
     <StandardPage title={locale.pages.journalUserLists.title}>
         <Grid container spacing={2}>
-            <div style={{ width: '100%' }}>
+            <Grid size="grow">
                 <Paper sx={{ padding: 2, display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ flexGrow: 1 }}>
+                    <Grid flexGrow={1}>
                         <Manager />
-                    </div>
+                    </Grid>
                 </Paper>
-            </div>
+            </Grid>
         </Grid>
     </StandardPage>
 );

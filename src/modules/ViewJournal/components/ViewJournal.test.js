@@ -11,7 +11,7 @@ import {
     fireEvent,
     createMatchMedia,
     waitForTextToBeRemoved,
-    assertNotInTheDocument,
+    assertNotToBeInTheDocument,
     api,
     waitElementToBeInTheDocument,
     userEvent,
@@ -1060,7 +1060,7 @@ describe('ViewJournal', () => {
             setup();
 
             await waitForTextToBeRemoved('Loading journal data');
-            assertNotInTheDocument('publish-as-oa-button');
+            assertNotToBeInTheDocument('publish-as-oa-button');
         });
 
         describe('search workflows', () => {
@@ -1081,7 +1081,7 @@ describe('ViewJournal', () => {
                 setup();
 
                 await waitForTextToBeRemoved('Loading journal data');
-                assertNotInTheDocument('publish-as-oa-button');
+                assertNotToBeInTheDocument('publish-as-oa-button');
             });
 
             describe("should display button for search workflows when OA status = `fee` and it's not embargoed", () => {
@@ -1302,7 +1302,7 @@ describe('ViewJournal', () => {
                     });
                     setup();
 
-                    assertNotInTheDocument('publish-as-oa-button');
+                    assertNotToBeInTheDocument('publish-as-oa-button');
                 });
             });
         });

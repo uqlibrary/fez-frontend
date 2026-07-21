@@ -124,25 +124,44 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
         <GridToolbarContainer
             sx={{
                 display: 'flex',
+                flexWrap: 'wrap',
                 alignItems: 'center',
                 gap: 1,
                 width: '100%',
             }}
         >
             {error?.trim?.() && (
-                <Typography data-testid="journal-user-lists-error" color="error" variant="caption" sx={{ flexGrow: 1 }}>
+                <Typography
+                    color="error"
+                    variant="caption"
+                    sx={{
+                        flex: { xs: '1 1 100%', md: '1 1 auto' },
+                    }}
+                    data-testid="journal-user-lists-error"
+                >
                     {error}
                 </Typography>
             )}
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <GridToolbarQuickFilter debounceMs={300} />
+            <GridToolbarQuickFilter
+                debounceMs={300}
+                data-testid="journal-user-lists-quicksearch"
+                sx={{
+                    width: { xs: '100%', sm: 240 },
+                }}
+            />
 
             <Button
                 variant="contained"
                 startIcon={<Add />}
                 onClick={onAddClick}
+                sx={{
+                    mx: 1,
+                    mb: 1,
+                    width: { xs: '100%', sm: 'auto' },
+                }}
                 data-testid="journal-user-lists-add"
                 disabled={
                     Object.values(rowModesModel).some(rowMode => rowMode.mode === GridRowModes.Edit) || !!deleteRowId

@@ -227,13 +227,13 @@ const waitElementToBeInTheDocument = async (dataTestId, options) =>
  * @param {string|function} testId
  * @return {void}
  */
-const assertIsInTheDocument = testId =>
+const assertToBeInTheDocument = testId =>
     expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).toBeInTheDocument();
 
 /**
  * @param {string|function} testId
  */
-const assertNotInTheDocument = testId =>
+const assertNotToBeInTheDocument = testId =>
     testId && expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
 
 /**
@@ -625,8 +625,8 @@ module.exports = {
     waitToBeEnabled,
     waitToBeDisabled,
     waitElementToBeInTheDocument,
-    assertIsInTheDocument,
-    assertNotInTheDocument,
+    assertToBeInTheDocument,
+    assertNotToBeInTheDocument,
     waitForText,
     waitForTextToBeRemoved,
     expectRequiredFieldError,
