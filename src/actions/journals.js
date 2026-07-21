@@ -1,4 +1,4 @@
-import { destroy, get, post, put } from 'repositories/generic';
+import { get, post, put } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,

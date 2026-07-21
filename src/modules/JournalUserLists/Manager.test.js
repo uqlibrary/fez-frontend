@@ -2,7 +2,6 @@ import React from 'react';
 import { render as defaultRender, waitFor } from 'test-utils';
 import Manager from './Manager';
 import { loadLists } from 'actions/journalUserLists';
-import { locale } from '../../locale';
 
 jest.mock('actions/journalUserLists', () => ({
     loadLists: jest.fn(),
