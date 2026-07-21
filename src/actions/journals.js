@@ -2,7 +2,7 @@ import { destroy, get, post, put } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
-    JOURNAL_FAVOURITES_API,
+    JOURNAL_USER_LIST_ITEMS_API,
     JOURNAL_KEYWORDS_LOOKUP_API,
     JOURNAL_LOOKUP_API,
     JOURNAL_SEARCH_API,
@@ -208,7 +208,7 @@ export const exportJournals =
             delete searchQuery.keywords;
         }
         const requestParams = favourites
-            ? JOURNAL_FAVOURITES_API({ query: searchQuery })
+            ? JOURNAL_USER_LIST_ITEMS_API({ query: searchQuery })
             : JOURNAL_SEARCH_API(searchQuery);
         const exportConfig = {
             format: requestParams.options.params.export_to,

@@ -212,8 +212,8 @@ export const ViewJournal = () => {
                     <TitleWithFavouriteButton
                         journal={journalDetails}
                         actions={{
-                            addFavourite: actions.addFavourites,
-                            removeFavourite: actions.deleteFavourites,
+                            addFavourite: actions.addListItems,
+                            removeFavourite: actions.deleteListItems,
                         }}
                         handlers={{ errorUpdatingFavourite: setUpdateFavouriteError }}
                         tooltips={{

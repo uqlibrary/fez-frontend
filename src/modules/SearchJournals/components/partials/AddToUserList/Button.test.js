@@ -2,7 +2,7 @@
 import React from 'react';
 import { render as defaultRender, userEvent, act } from 'test-utils';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavourites, createList, loadLists } from '../../../../../actions/journalUserLists';
+import { addListItems, createList, loadLists } from '../../../../../actions/journalUserLists';
 import Button from './Button';
 
 jest.mock('react-redux', () => ({
@@ -11,7 +11,7 @@ jest.mock('react-redux', () => ({
 }));
 
 jest.mock('../../../../../actions/journalUserLists', () => ({
-    addFavourites: jest.fn(),
+    addListItems: jest.fn(),
     createList: jest.fn(),
     loadLists: jest.fn(),
 }));
@@ -72,7 +72,7 @@ const defaultListData = [
     },
 ];
 
-const setup = testProps => {
+const setup = (testProps, render = defaultRender) => {
     const { loading = false, listLoading = false, listData = defaultListData, ...props } = testProps || {};
     useDispatch.mockReturnValue(dispatch);
     useSelector.mockImplementation(selector =>
@@ -96,7 +96,7 @@ const setup = testProps => {
         }),
     );
     loadLists.mockReturnValue({ type: 'LOAD_LISTS' });
-    addFavourites.mockReturnValue({ type: 'ADD' });
+    addListItems.mockReturnValue({ type: 'ADD' });
     createList.mockReturnValue({ type: 'CREATE' });
     dispatch.mockImplementation(action => {
         if (action?.type === 'CREATE') {
@@ -114,7 +114,7 @@ const setup = testProps => {
         user: userEvent.setup({
             advanceTimers: jest.advanceTimersByTime,
         }),
-        ...defaultRender(
+        ...render(
             <Button
                 selectedJournals={{
                     a: {},
@@ -139,12 +139,16 @@ describe('Button', () => {
     });
 
     it('should dispatch loadLists on mount', () => {
-        setup();
+        const { rerender } = setup();
 
         expect(loadLists).toHaveBeenCalled();
         expect(dispatch).toHaveBeenCalledWith({
             type: 'LOAD_LISTS',
         });
+
+        setup({}, rerender);
+
+        expect(loadLists).toHaveBeenCalledTimes(1);
     });
 
     it('should render parsed list items', () => {
@@ -162,24 +166,24 @@ describe('Button', () => {
         expect(getByLabelText('main')).toHaveTextContent('no list');
     });
 
-    it('should dispatch addFavourites with the selected list id', async () => {
+    it('should dispatch addListItems with the selected list id', async () => {
         const { user, getByLabelText } = setup();
 
         await user.click(getByLabelText('main'));
 
-        expect(addFavourites).toHaveBeenCalledWith({
+        expect(addListItems).toHaveBeenCalledWith({
             id: 'favourites',
             ids: ['a', 'b'],
         });
     });
 
-    it('should dispatch addFavourites with the selected list after switching', async () => {
+    it('should dispatch addListItems with the selected list after switching', async () => {
         const { user, getByLabelText } = setup();
 
         await user.click(getByLabelText('select'));
         await user.click(getByLabelText('main'));
 
-        expect(addFavourites).toHaveBeenCalledWith({
+        expect(addListItems).toHaveBeenCalledWith({
             id: 'reading',
             ids: ['a', 'b'],
         });
@@ -298,7 +302,7 @@ describe('Button', () => {
         await user.click(getByLabelText('create'));
         await user.click(getByLabelText('main'));
 
-        expect(addFavourites).toHaveBeenLastCalledWith({
+        expect(addListItems).toHaveBeenLastCalledWith({
             id: 'new-id',
             ids: ['a', 'b'],
         });

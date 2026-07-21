@@ -1,18 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-unreachable */
-/* eslint-disable no-debugger */
-/* eslint-disable no-constant-condition */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable max-len */
-/* eslint-disable react/prop-types */
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { locale } from 'locale';
-import { addFavourites, createList, loadLists } from 'actions/journalUserLists';
+import { addListItems, createList, loadLists } from 'actions/journalUserLists';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import ListSplitButtonMenu, {
     ListSplitButtonItem,
@@ -37,6 +27,7 @@ const Button: React.FC<{
     );
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const isListLoaded = useRef(false);
     const [list, setList] = useState(Array<ListSplitButtonItem>);
     const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,8 +39,10 @@ const Button: React.FC<{
 
     // load list on render
     useEffect(() => {
+        if (isListLoaded.current) return;
         dispatch(loadLists());
-    }, []);
+        isListLoaded.current = true;
+    }, [isListLoaded.current]);
 
     // parse loaded list
     useEffect(() => {
@@ -63,7 +56,7 @@ const Button: React.FC<{
 
     const handleMainClick = () => {
         dispatch(
-            addFavourites({
+            addListItems({
                 id: selectedList?.id,
                 ids: Object.keys(selectedJournals || /* istanbul ignore next */ {}),
             }),
@@ -114,9 +107,9 @@ const Button: React.FC<{
                 isOpen={isDialogOpen}
                 // @ts-expect-error TODO fix once converted to TS
                 locale={{
-                    ...txt.confirmations.addFavourites,
+                    ...txt.confirmations.addToList,
                     confirmationMessage: selectionCount
-                        ? txt.confirmations.addFavourites.confirmationMessage.replace('COUNT', String(selectionCount))
+                        ? txt.confirmations.addToList.confirmationMessage.replace('COUNT', String(selectionCount))
                         : '',
                 }}
                 onClose={closeDialog}

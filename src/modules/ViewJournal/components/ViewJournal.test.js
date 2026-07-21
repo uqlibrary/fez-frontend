@@ -845,7 +845,9 @@ describe('ViewJournal', () => {
                     ...journalDetails.data,
                 },
             });
-            mockApi.onPost(new RegExp(repositories.routes.JOURNAL_FAVOURITES_API().apiUrl)).reply(500, { data: '' });
+            mockApi
+                .onPost(new RegExp(repositories.routes.JOURNAL_USER_LIST_ITEMS_API().apiUrl))
+                .reply(500, { data: '' });
             const { getByTestId, getByText, queryByTestId } = setup();
 
             await waitForElementToBeRemoved(() => getByText('Loading journal data'));

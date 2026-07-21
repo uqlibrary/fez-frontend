@@ -251,7 +251,7 @@ describe('Search action creators', () => {
         it('should dispatch action for successful favourite journal export', async () => {
             promptForDownload = jest.spyOn(ExportPublicationsTransformers, 'promptForDownload');
             promptForDownload.mockImplementation(() => exportPublicationsFormat);
-            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({
+            const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({
                 query: 'a',
                 exportPublicationsFormat: 'excel',
             });

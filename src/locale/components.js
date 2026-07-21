@@ -4479,9 +4479,9 @@ export default {
         favouriteJournals: {
             title: label => (label ? `Journal user list: ${label}` : 'My Favourite Journals'),
             buttons: {
-                deleteFavourites: {
-                    title: 'REMOVE FROM FAVOURITES',
-                    aria: 'Remove from favourites',
+                delete: {
+                    title: 'REMOVE FROM LIST',
+                    aria: 'Remove from LIST',
                 },
                 toJournalSearch: {
                     title: 'SEARCH JOURNALS',
@@ -4830,13 +4830,9 @@ export default {
                         title: 'COMPARE SELECTED',
                         aria: 'Compare Selected',
                     },
-                    addFavourites: {
-                        title: 'ADD TO FAVOURITES',
-                        aria: 'Add to favourites',
-                    },
                 },
                 confirmations: {
-                    addFavourites: {
+                    addToList: {
                         confirmationMessage: 'COUNT item(s) have been added.',
                     },
                 },

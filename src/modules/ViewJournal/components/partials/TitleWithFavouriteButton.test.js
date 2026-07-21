@@ -10,7 +10,7 @@ import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 function setup(testProps = {}) {
     const props = {
         journal: journalDetails.data,
-        actions: { addFavourite: actions.addFavourites, removeFavourite: actions.deleteFavourites },
+        actions: { addFavourite: actions.addListItems, removeFavourite: actions.deleteListItems },
         tooltips: {
             favourite: 'Test favourite tooltip',
             notFavourite: 'Test not favourite tooltip',

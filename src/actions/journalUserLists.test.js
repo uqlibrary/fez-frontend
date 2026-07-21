@@ -114,16 +114,16 @@ describe('JournalUserLists', () => {
     });
 
     describe('favourites', () => {
-        describe('loadFavourites', () => {
+        describe('loadListItems', () => {
             it('should dispatch action for successful journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API();
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API();
                 mockApi.onGet(apiUrl).reply(200, { data: [] });
                 const expectedActions = [actions.FAVOURITE_JOURNALS_LOADING, actions.FAVOURITE_JOURNALS_LOADED];
-                await mockActionsStore.dispatch(_actions.loadFavourites({ id: 'favourites' }));
+                await mockActionsStore.dispatch(_actions.loadListItems({ id: 'favourites' }));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
             it('should dispatch action for failed journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ searchQuery: 'a' });
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ searchQuery: 'a' });
                 mockApi.onGet(apiUrl).reply(500);
                 const expectedActions = [
                     actions.FAVOURITE_JOURNALS_LOADING,
@@ -131,25 +131,25 @@ describe('JournalUserLists', () => {
                     actions.FAVOURITE_JOURNALS_FAILED,
                 ];
                 try {
-                    await mockActionsStore.dispatch(_actions.loadFavourites({ id: 'favourites', searchQuery: 'a' }));
+                    await mockActionsStore.dispatch(_actions.loadListItems({ id: 'favourites', searchQuery: 'a' }));
                 } catch {
                     expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 }
             });
         });
-        describe('AddFavourites', () => {
+        describe('AddListItems', () => {
             it('should dispatch action for successful adding journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ id: 1 });
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1 });
                 mockApi.onPost(apiUrl).reply(200, { data: [] });
                 const expectedActions = [
                     actions.FAVOURITE_JOURNALS_ADD_REQUESTING,
                     actions.FAVOURITE_JOURNALS_ADD_SUCCESS,
                 ];
-                await mockActionsStore.dispatch(_actions.addFavourites({ id: 1 }));
+                await mockActionsStore.dispatch(_actions.addListItems({ id: 1 }));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
             it('should dispatch action for failed adding journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ id: 1 });
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1 });
                 mockApi.onPost(apiUrl).reply(500);
                 const expectedActions = [
                     actions.FAVOURITE_JOURNALS_ADD_REQUESTING,
@@ -157,25 +157,25 @@ describe('JournalUserLists', () => {
                     actions.FAVOURITE_JOURNALS_ADD_FAILED,
                 ];
                 try {
-                    await mockActionsStore.dispatch(_actions.addFavourites({ id: 1 }));
+                    await mockActionsStore.dispatch(_actions.addListItems({ id: 1 }));
                 } catch {
                     expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 }
             });
         });
-        describe('DeleteFavourites', () => {
+        describe('DeleteListItems', () => {
             it('should dispatch action for successful removal journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ id: 1 });
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1 });
                 mockApi.onDelete(apiUrl).reply(200, { data: [] });
                 const expectedActions = [
                     actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING,
                     actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS,
                 ];
-                await mockActionsStore.dispatch(_actions.deleteFavourites({ id: 1 }));
+                await mockActionsStore.dispatch(_actions.deleteListItems({ id: 1 }));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
             it('should dispatch action for failed removal journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ id: 1 });
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1 });
                 mockApi.onDelete(apiUrl).reply(500);
                 const expectedActions = [
                     actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING,
@@ -183,7 +183,7 @@ describe('JournalUserLists', () => {
                     actions.FAVOURITE_JOURNALS_REMOVE_FAILED,
                 ];
                 try {
-                    await mockActionsStore.dispatch(_actions.deleteFavourites({ id: 1 }));
+                    await mockActionsStore.dispatch(_actions.deleteListItems({ id: 1 }));
                 } catch {
                     expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 }

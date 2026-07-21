@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import { destroy, get, post, put } from '../repositories';
-import { JOURNAL_FAVOURITES_API, JOURNAL_USE_LISTS_API } from '../repositories/routes';
+import { JOURNAL_USER_LIST_ITEMS_API, JOURNAL_USE_LISTS_API } from '../repositories/routes';
 
 /**
  * @param searchQuery
@@ -79,11 +79,11 @@ export const deleteList = id => async dispatch => {
  * @param searchQuery
  * @returns {AnyAction}
  */
-export const loadFavourites =
+export const loadListItems =
     ({ id, searchQuery }) =>
     async dispatch => {
         dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
-        return get(JOURNAL_FAVOURITES_API({ id, query: searchQuery })).then(
+        return get(JOURNAL_USER_LIST_ITEMS_API({ id, query: searchQuery })).then(
             response => {
                 dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
                 return Promise.resolve(response);
@@ -99,11 +99,11 @@ export const loadFavourites =
  * @param {{id: string|number|undefined|null, ids: Array<string|number>}} ids
  * @return {AnyAction}
  */
-export const addFavourites =
+export const addListItems =
     ({ id, ids }) =>
     async dispatch => {
         dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_REQUESTING });
-        return post(JOURNAL_FAVOURITES_API({ id }), { ids }).then(
+        return post(JOURNAL_USER_LIST_ITEMS_API({ id }), { ids }).then(
             response => {
                 dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_SUCCESS });
                 return Promise.resolve(response);
@@ -119,11 +119,11 @@ export const addFavourites =
  * @param {{id: string|number|undefined|null, ids: Array<string|number>}} ids
  * @returns {AnyAction}
  */
-export const deleteFavourites =
+export const deleteListItems =
     ({ id, ids }) =>
     async dispatch => {
         dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
-        return destroy(JOURNAL_FAVOURITES_API({ id }), { ids }).then(
+        return destroy(JOURNAL_USER_LIST_ITEMS_API({ id }), { ids }).then(
             response => {
                 dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS });
                 return Promise.resolve(response);

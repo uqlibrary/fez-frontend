@@ -613,7 +613,7 @@ export const setup = () => {
             }
             return [200, { ...journalsSearch.keywords.none }];
         })
-        .onGet(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({}).apiUrl)))
+        .onGet(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API({}).apiUrl)))
         .reply(config => {
             if (config.params.export_to && config.params.export_to === 'excel') {
                 return [
@@ -624,9 +624,9 @@ export const setup = () => {
             }
             return [200, { ...journalsSearch.favourites }];
         })
-        .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
+        .onPost(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API().apiUrl)))
         .reply(200)
-        .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
+        .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API().apiUrl)))
         .reply(200)
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
         .reply(config => {

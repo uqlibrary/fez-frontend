@@ -10,7 +10,7 @@ import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
-import { deleteFavourites, loadFavourites } from 'actions/journalUserLists';
+import { deleteListItems, loadListItems } from 'actions/journalUserLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
 import { useLocation, useParams } from 'react-router';
 import { AppState } from '../../../reducer';
@@ -48,13 +48,13 @@ export const FavouriteJournals: React.FC = () => {
     );
 
     const handleDeleteFavouritesClick = () =>
-        dispatch(deleteFavourites({ id: listId, ids: Object.keys(selectedJournals) }))
+        dispatch(deleteListItems({ id: listId, ids: Object.keys(selectedJournals) }))
             .then(() => clearSelectedJournals())
-            .then(() => dispatch(loadFavourites({ id: listId, searchQuery: journalSearchQueryParams })));
+            .then(() => dispatch(loadListItems({ id: listId, searchQuery: journalSearchQueryParams })));
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
-        dispatch(loadFavourites({ id: listId, searchQuery: { page, pageSize, sortBy, sortDirection } }));
+        dispatch(loadListItems({ id: listId, searchQuery: { page, pageSize, sortBy, sortDirection } }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [listId, page, pageSize, sortBy, sortDirection]);
 
@@ -93,8 +93,8 @@ export const FavouriteJournals: React.FC = () => {
                                                     data-testid="remove-from-favourites-button"
                                                     disabled={!!removing || countSelectedJournals() < 1}
                                                     loading={removing}
-                                                    aria-label={txt.buttons.deleteFavourites.aria}
-                                                    children={txt.buttons.deleteFavourites.title}
+                                                    aria-label={txt.buttons.delete.aria}
+                                                    children={txt.buttons.delete.title}
                                                     onClick={handleDeleteFavouritesClick}
                                                     fullWidth
                                                 />
