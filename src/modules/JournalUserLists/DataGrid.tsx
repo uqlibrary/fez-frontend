@@ -17,13 +17,12 @@ import { Box } from '@mui/material';
 
 interface DataGridProps {
     data?: { data: FezJournalUserList[] };
-    error?: string;
     createAction: (payload: Partial<Row>) => unknown;
     updateAction: (payload: Partial<FezJournalUserList>) => unknown;
     deleteAction: (id: number) => unknown;
 }
 
-export const DataGrid = ({ data, error, createAction, updateAction, deleteAction }: DataGridProps) => {
+export const DataGrid = ({ data, createAction, updateAction, deleteAction }: DataGridProps) => {
     const txt = locale.components.journalUserLists;
     const {
         rows,
@@ -130,21 +129,6 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
                 width: '100%',
             }}
         >
-            {error?.trim?.() && (
-                <Typography
-                    color="error"
-                    variant="caption"
-                    sx={{
-                        flex: { xs: '1 1 100%', md: '1 1 auto' },
-                    }}
-                    data-testid="journal-user-lists-error"
-                >
-                    {error}
-                </Typography>
-            )}
-
-            <Box sx={{ flexGrow: 1 }} />
-
             <GridToolbarQuickFilter
                 debounceMs={300}
                 data-testid="journal-user-lists-quicksearch"
@@ -153,12 +137,14 @@ export const DataGrid = ({ data, error, createAction, updateAction, deleteAction
                 }}
             />
 
+            <Box sx={{ flexGrow: 1 }} />
+
             <Button
                 variant="contained"
                 startIcon={<Add />}
                 onClick={onAddClick}
                 sx={{
-                    mx: 1,
+                    mr: 1,
                     mb: 1,
                     width: { xs: '100%', sm: 'auto' },
                 }}

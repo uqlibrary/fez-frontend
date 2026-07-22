@@ -66,18 +66,18 @@ const StyledGridWithIcon = styled(Grid, {
         },
 
         '& a:link, & a:hover, & a:visited': {
-            color: theme.palette.white.main,
+            color: theme.palette.white?.main,
             textDecoration: 'underline',
         },
 
-        color: theme.palette.white.main,
+        color: theme.palette.white?.main,
         backgroundColor: type !== 'done' ? theme.palette[_type].main : theme.palette[_type].light,
 
         '& .spinner, & .icon, & button.dismiss': {
             color: theme.palette[_type].dark,
         },
         '& button.action': {
-            color: theme.palette.white.main,
+            color: theme.palette.white?.main,
             backgroundColor: theme.palette[_type].dark,
         },
     };

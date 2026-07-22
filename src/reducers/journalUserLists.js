@@ -20,7 +20,7 @@ const handlers = {
     [actions.JOURNAL_USER_LISTS_FAILED]: (state, action) => ({
         ...state,
         loading: false,
-        error: action.payload?.message,
+        error: action.payload,
     }),
 };
 

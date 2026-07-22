@@ -32,7 +32,6 @@ const data = [
 const setup = (testProps = {}, render = defaultRender) => {
     const props = {
         data: { data: data },
-        error: '',
         createAction,
         updateAction,
         deleteAction,
@@ -59,18 +58,6 @@ describe('DataGrid', () => {
         expect(firstOf(container, 'fjl-label-2')).toHaveTextContent('List two');
         assertToBeInTheDocument('journal-user-lists-quicksearch');
         assertEnabled('journal-user-lists-add');
-    });
-
-    it('should show error message when error is present', () => {
-        const { getByTestId } = setup({ error: 'Something went wrong' });
-
-        expect(getByTestId('journal-user-lists-error')).toHaveTextContent('Something went wrong');
-    });
-
-    it('should not show error message when error is empty', () => {
-        const { queryByTestId } = setup({ error: '' });
-
-        expect(queryByTestId('journal-user-lists-error')).not.toBeInTheDocument();
     });
 
     it('should add a new row in edit mode when clicking add', async () => {
