@@ -162,11 +162,7 @@ export const useColumns = ({
                         <Link
                             target="_blank"
                             title={txt.columns.items.link.title}
-                            to={
-                                props.row.fjl_label === JOURNAL_FAVOURITE_LIST_LABEL
-                                    ? pathConfig.journals.favourites
-                                    : pathConfig.journals.list(String(props.id))
-                            }
+                            to={pathConfig.journals.favourites(String(props.id))}
                         >
                             <FormatListBulleted />
                         </Link>
