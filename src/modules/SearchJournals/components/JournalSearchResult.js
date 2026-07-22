@@ -92,7 +92,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
     }
 
     if (
-        (!!location.search.search(/isFavouriteLink=true/) || !browseAllJournals) &&
+        !browseAllJournals &&
         journalsListLoaded &&
         !journalsListLoading &&
         (!journalsList || (!!journalsList && journalsList.data.length === 0))
