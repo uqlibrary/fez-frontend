@@ -232,7 +232,6 @@
     "fsevents": "^2.3.0"
   },
   "overrides": {
-    "fast-uri": "^4.1.1",
     "@dr.pogodin/react-helmet": {
       "react": "^19.1.1",
       "react-dom": "^19.1.1"
