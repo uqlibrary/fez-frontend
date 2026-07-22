@@ -31,22 +31,27 @@ describe('useDispatchOnce hook', () => {
     });
 
     it('dispatches exactly once when called multiple times if initially not dispatched', () => {
+        const dispatchResult = Promise.resolve({ success: true });
+        dispatchMock.mockReturnValue(dispatchResult);
+
         const { result } = renderHook(
             ({ hasBeenDispatched, getDispatchable }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
             { initialProps: { hasBeenDispatched: false, getDispatchable } },
         );
 
+        let returned;
+
         act(() => {
-            result.current();
+            returned = result.current();
             result.current();
             result.current();
         });
 
-        // getDispatchable should be called once to produce the action
         expect(getDispatchable).toHaveBeenCalledTimes(1);
-        // dispatch should be called once with that action
         expect(dispatchMock).toHaveBeenCalledTimes(1);
         expect(dispatchMock).toHaveBeenCalledWith({ type: 'TEST_ACTION' });
+
+        expect(returned).toBe(dispatchResult);
     });
 
     it('respects prop change to true and does not dispatch afterwards', () => {
