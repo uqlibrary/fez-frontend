@@ -9,13 +9,22 @@ import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 import { SelectProps } from '@mui/material';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
+import { useEffect } from 'react';
 
 const getFavouriteId = (lists: FezJournalUserList[]) =>
     lists.find(list => list.fjl_label.toUpperCase() === JOURNAL_FAVOURITE_LIST_LABEL.toUpperCase())?.fjl_id;
 
 const ListSelect: React.FC<SelectProps> = props => {
-    const { loading, data: response } = useSelector((state: AnyAction) => state.get?.('journalUserListsReducer'));
-    useDispatchOnce(!!response?.data?.length, () => loadLists())();
+    const {
+        loading,
+        data: response,
+        isDirty,
+    } = useSelector((state: AnyAction) => state.get?.('journalUserListsReducer'));
+    const fetch = useDispatchOnce(!!response?.data && !isDirty, () => loadLists());
+
+    useEffect(() => {
+        fetch();
+    }, [fetch]);
 
     if (!response?.data.length) return null;
 

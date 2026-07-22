@@ -1,6 +1,9 @@
 import * as actions from './actionTypes';
 import { destroy, get, post, put } from '../repositories';
 import { JOURNAL_USER_LIST_ITEMS_API, JOURNAL_USE_LISTS_API } from '../repositories/routes';
+import { JOURNAL_USER_LISTS_CRUD_SUCCESS } from './actionTypes';
+
+export const reset = () => ({ type: actions.JOURNAL_USER_LISTS_RESET });
 
 /**
  * @param searchQuery
@@ -28,7 +31,7 @@ export const createList = data => async dispatch => {
     dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
     return post(JOURNAL_USE_LISTS_API(), data).then(
         response => {
-            dispatch({ type: actions.JOURNAL_USER_LISTS_SUCCESS });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_CRUD_SUCCESS });
             return Promise.resolve(response);
         },
         error => {
@@ -46,7 +49,7 @@ export const updateList = data => async dispatch => {
     dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
     return put(JOURNAL_USE_LISTS_API(data.fjl_id), data).then(
         response => {
-            dispatch({ type: actions.JOURNAL_USER_LISTS_SUCCESS });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_CRUD_SUCCESS });
             return Promise.resolve(response);
         },
         error => {
@@ -64,7 +67,7 @@ export const deleteList = id => async dispatch => {
     dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
     return destroy(JOURNAL_USE_LISTS_API(id)).then(
         response => {
-            dispatch({ type: actions.JOURNAL_USER_LISTS_SUCCESS });
+            dispatch({ type: actions.JOURNAL_USER_LISTS_CRUD_SUCCESS });
             return Promise.resolve(response);
         },
         error => {
