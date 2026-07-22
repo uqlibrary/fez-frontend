@@ -42,7 +42,9 @@ export const getIndicatorProps = ({ type, data }) => {
             // should not display Published Fee and Accepted Open Icons at the same time
         } else if (
             openAccess &&
-            ((hasDOAJ && !hasApc) || (hasRNP && (isCapped || (cappedValue === 'N' && !isDiscounted))))
+            (data.is_diamond ||
+                (hasDOAJ && !hasApc) ||
+                (hasRNP && (isCapped || (cappedValue === 'N' && !isDiscounted))))
         ) {
             indicatorProps.status = status.open;
         } else {
@@ -50,7 +52,10 @@ export const getIndicatorProps = ({ type, data }) => {
         }
     } else {
         indicatorProps.status = status.fee;
-        if (hasRNP) {
+        if (data.is_diamond) {
+            indicatorProps.status = status.open;
+            indicatorProps.showDiamond = true;
+        } else if (hasRNP) {
             if (s2oValue === 'S2O') {
                 indicatorProps.showS2O = true;
                 indicatorProps.status = status.open;
@@ -66,9 +71,6 @@ export const getIndicatorProps = ({ type, data }) => {
             const doaj = data.fez_journal_doaj;
             if (!hasApc) {
                 indicatorProps.status = status.open;
-                if (data.is_diamond) {
-                    indicatorProps.showDiamond = true;
-                }
             }
             if (!!doaj.jnl_doaj_is_s2o) {
                 indicatorProps.showS2O = true;
