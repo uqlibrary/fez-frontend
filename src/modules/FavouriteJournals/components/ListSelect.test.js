@@ -74,6 +74,14 @@ describe('ListSelect', () => {
     });
 
     it('should dispatch loadLists via useDispatchOnce', () => {
+        useSelector.mockImplementation(selector =>
+            selector({
+                get: () => ({
+                    loading: false,
+                    data: null,
+                }),
+            }),
+        );
         setup();
         expect(useDispatchOnce).toHaveBeenCalledWith(false, expect.any(Function));
 

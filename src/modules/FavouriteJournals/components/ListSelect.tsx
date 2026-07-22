@@ -15,7 +15,7 @@ const getFavouriteId = (lists: FezJournalUserList[]) =>
 
 const ListSelect: React.FC<SelectProps> = props => {
     const { loading, data: response } = useSelector((state: AnyAction) => state.get?.('journalUserListsReducer'));
-    useDispatchOnce(response, () => loadLists())();
+    useDispatchOnce(!!response?.data?.length, () => loadLists())();
 
     if (!response?.data.length) return null;
 
