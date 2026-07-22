@@ -188,7 +188,7 @@
     "fuse.js": "^6.4.0",
     "hash-sum": "^2.0.0",
     "highcharts": "^9.3.2",
-    "immutable": "^4.3.8",
+    "immutable": "^4.3.9",
     "js-cookie": "^3.0.8",
     "jss": "^9.8.7",
     "jss-global": "^3.0.0",
@@ -232,6 +232,7 @@
     "fsevents": "^2.3.0"
   },
   "overrides": {
+    "fast-uri": "^4.1.1",
     "@dr.pogodin/react-helmet": {
       "react": "^19.1.1",
       "react-dom": "^19.1.1"
