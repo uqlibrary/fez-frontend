@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent, waitFor } from 'test-utils';
+import { assertDisabled, assertEnabled, render, userEvent, waitFor } from 'test-utils';
 import ListSplitButtonMenu from './ListSplitButtonMenu';
 
 const onClick = jest.fn();
@@ -67,6 +67,12 @@ describe('ListSplitButtonMenu', () => {
         expect(getAllByRole('button')[0]).toHaveTextContent('');
     });
 
+    it('should render given placeholder when no item is selected', () => {
+        const placeholder = 'Select a list';
+        const { getAllByRole } = setup({ items: [], placeholder });
+        expect(getAllByRole('button')[0]).toHaveTextContent(placeholder);
+    });
+
     it('should call onClick when the primary button is clicked', async () => {
         const { getByRole } = setup();
         await userEvent.click(getByRole('button', { name: 'Add to List 2' }));
@@ -80,8 +86,16 @@ describe('ListSplitButtonMenu', () => {
     });
 
     it('should show a loading indicator', () => {
-        const { getByRole } = setup({ loading: true });
+        const { getByRole, getAllByRole } = setup({ loading: true });
         expect(getByRole('progressbar')).toBeInTheDocument();
+        getAllByRole('button').map(assertDisabled);
+    });
+
+    it('should show as disabled on error', () => {
+        const { getByRole, getAllByRole } = setup({ error: true });
+        expect(getByRole('group')).toHaveClass('MuiButtonGroup-colorError');
+        assertDisabled(getAllByRole('button')[0]);
+        assertEnabled(getAllByRole('button')[1]);
     });
 
     describe('uncontrolled open state', () => {

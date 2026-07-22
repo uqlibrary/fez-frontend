@@ -25,6 +25,7 @@ export type ListSplitButtonItem = {
 export type ListSplitButtonMenuProps = {
     id?: string;
     items: ListSplitButtonItem[];
+    placeholder?: string;
     selectedIndex: number;
     onItemSelect: (index: number) => void;
     onClick: () => void;
@@ -32,6 +33,7 @@ export type ListSplitButtonMenuProps = {
     label: (selectedItem: ListSplitButtonItem) => string;
     loading?: boolean;
     disabled?: boolean;
+    error?: boolean;
     sx?: object;
     // optional controlled open state - falls back to internal state when omitted
     open?: boolean;
@@ -42,6 +44,7 @@ export type ListSplitButtonMenuProps = {
 const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
     id = 'split-button-menu',
     items,
+    placeholder = '',
     selectedIndex,
     onItemSelect,
     onClick,
@@ -49,6 +52,7 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
     label,
     loading = false,
     disabled = false,
+    error = false,
     sx = {},
     open: openProp,
     onOpenChange,
@@ -85,9 +89,16 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
 
     return (
         <>
-            <ButtonGroup ref={anchorRef} variant="contained" sx={sx}>
+            <ButtonGroup
+                ref={anchorRef}
+                variant="contained"
+                sx={sx}
+                color={error ? 'error' : 'primary'}
+                disabled={error}
+            >
                 {/* action button */}
                 <Button
+                    disabled={error || loading || disabled}
                     onClick={onClick}
                     aria-label={selectedItem ? undefined : 'Add to list'}
                     sx={{
@@ -95,7 +106,6 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                         justifyContent: 'flex-start',
                         minWidth: 0,
                     }}
-                    disabled={disabled}
                 >
                     <span
                         style={{
@@ -104,11 +114,12 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                             textOverflow: 'ellipsis',
                         }}
                     >
-                        {selectedItem ? label(selectedItem) : ''}
+                        {selectedItem ? label(selectedItem) : placeholder}
                     </span>
                 </Button>
                 {/* list trigger button */}
                 <Button
+                    disabled={loading}
                     size="small"
                     onClick={handleToggle}
                     aria-haspopup="menu"
@@ -117,7 +128,7 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                     aria-label={open ? 'Close list options' : 'Open list options'}
                 >
                     {loading ? (
-                        <CircularProgress aria-label="Loading..." size={16} style={{ marginLeft: 8 }} />
+                        <CircularProgress aria-label="Loading..." size={20} />
                     ) : (
                         <ArrowDropDownIcon aria-label="Open list options" />
                     )}

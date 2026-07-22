@@ -14,9 +14,9 @@ export const useDispatchOnce = (hasBeenDispatched: boolean, getDispatchable: () 
     }, [hasBeenDispatched]);
 
     return useCallback(() => {
-        if (hasBeenDispatchedRef.current) return;
+        if (hasBeenDispatchedRef.current) return Promise.resolve();
 
         hasBeenDispatchedRef.current = true;
-        dispatch(getDispatchable() as AnyAction);
+        return dispatch(getDispatchable() as AnyAction);
     }, [dispatch, getDispatchable]);
 };

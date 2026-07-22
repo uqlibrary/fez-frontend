@@ -11,6 +11,7 @@ import { FezJournalUserList } from 'types/models/FezJournalUserList';
 import AddNewDialog, { FormValues } from './AddNewDialog';
 import { AnyAction } from 'redux';
 import { JOURNAL_FAVOURITE_LIST_ID, JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
+import { useDispatchOnce } from 'hooks/useDispatchOnce';
 
 const favouritesListItem = { id: JOURNAL_FAVOURITE_LIST_ID, label: JOURNAL_FAVOURITE_LIST_LABEL };
 
@@ -37,9 +38,11 @@ const Button: React.FC<{
     const txt = locale.components.searchJournals.journalSearchInterface;
     const dispatch = useDispatch();
     const adding = useSelector((state: AnyAction) => state.get?.('favouriteJournalsReducer').add?.loading);
-    const { loading: loadingList, data: response } = useSelector((state: AnyAction) =>
-        state.get?.('journalUserListsReducer'),
-    );
+    const {
+        loading: loadingList,
+        data: response,
+        error,
+    } = useSelector((state: AnyAction) => state.get?.('journalUserListsReducer'));
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [list, setList] = useState(Array<ListSplitButtonItem>);
@@ -50,11 +53,7 @@ const Button: React.FC<{
     const selectionCount = Object.keys(selectedJournals || /* istanbul ignore next */ {}).length;
     const loading = adding || loadingList;
     const disabled = !selectionCount || adding || loadingList;
-
-    // load list on render
-    useEffect(() => {
-        dispatch(loadLists());
-    }, []);
+    const fetch = useDispatchOnce(response || error, /* istanbul ignore next */ () => loadLists());
 
     // parse loaded list
     useEffect(() => {
@@ -62,6 +61,12 @@ const Button: React.FC<{
         if (!response?.data) return;
         setList(parseResponse(response));
     }, [JSON.stringify(response?.data)]);
+
+    const onOpenChange = async (opening: boolean) => {
+        if (error) return;
+        if (opening) await fetch();
+        setIsMenuOpen(opening);
+    };
 
     const closeDialog = () => {
         setIsDialogOpen(false);
@@ -139,16 +144,18 @@ const Button: React.FC<{
             <ListSplitButtonMenu
                 id="add-to-list-menu"
                 items={list}
+                placeholder={`Add to ${JOURNAL_FAVOURITE_LIST_LABEL}`}
                 selectedIndex={selectedIndex}
                 onItemSelect={setSelectedIndex}
                 onClick={handleMainClick}
                 onAdd={openAddListDialog}
                 open={isMenuOpen}
-                onOpenChange={setIsMenuOpen}
+                onOpenChange={onOpenChange}
                 clickAwayExcludeRef={addDialogPaperRef}
                 label={item => `Add to ${item.label}`}
                 loading={loading}
                 disabled={disabled}
+                error={!!error}
                 sx={{
                     minWidth: 170,
                     maxWidth: 220,

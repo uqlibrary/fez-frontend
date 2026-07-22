@@ -26,7 +26,7 @@ describe('reducer', () => {
             type: actions.JOURNAL_USER_LISTS_FAILED,
             payload: error,
         });
-        expect(test).toEqual({ ...initialState, error: error.message });
+        expect(test).toEqual({ ...initialState, error: error });
     });
 
     it('invalid', () => {
