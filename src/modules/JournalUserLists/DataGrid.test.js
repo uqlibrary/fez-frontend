@@ -11,6 +11,7 @@ import {
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
 import { JOURNAL_FAVOURITE_LIST_LABEL } from '../../config/general';
+import { createListUrl } from './useColumns';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
@@ -230,6 +231,13 @@ describe('DataGrid', () => {
         await userEvent.click(switchInput);
         expect(switchInput).not.toBeChecked();
         assertEnabled('journal-user-lists-item-2-save');
+    });
+
+    it('should link to journal search', async () => {
+        const { getByTestId } = setup();
+
+        expect(getByTestId('fjl-search-1-link')).toHaveAttribute('href', createListUrl(1));
+        expect(getByTestId('fjl-search-2-link')).toHaveAttribute('href', createListUrl(2));
     });
 
     it('should link to list items page', async () => {

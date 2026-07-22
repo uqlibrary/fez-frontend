@@ -37,8 +37,8 @@ interface UseColumnsParams {
     rows: Row[];
 }
 
-const createListUrl = (id: string) =>
-    `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][UserList]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
+export const createListUrl = (id: string | number) =>
+    `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][ShowFavouritedOnly]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?activeFacets[filters][ShowFavouritedOnly]=true&page=1&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
 
 const isFavouriteList = (label: string) =>
     label?.trim?.().toLowerCase?.() === JOURNAL_FAVOURITE_LIST_LABEL.toLowerCase();
@@ -66,8 +66,12 @@ export const useColumns = ({
                 resizable: false,
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography data-testid={`fjl-id-${props.id}`}>
-                        <ExternalLink id={String(props.id)} href={createListUrl(props.value)} children={undefined} />
+                    <Typography>
+                        <ExternalLink
+                            id={`fjl-search-${props.id}`}
+                            href={createListUrl(props.value)}
+                            children={undefined}
+                        />
                     </Typography>
                 ),
                 width: 50,
