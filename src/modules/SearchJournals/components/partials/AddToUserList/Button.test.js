@@ -64,11 +64,11 @@ const onAdd = jest.fn();
 
 const defaultListData = [
     {
-        fjl_id: 'reading',
+        fjl_id: 1,
         fjl_label: 'Reading',
     },
     {
-        fjl_id: JOURNAL_FAVOURITE_LIST_ID,
+        fjl_id: 2,
         fjl_label: JOURNAL_FAVOURITE_LIST_LABEL,
     },
 ];
@@ -118,8 +118,8 @@ const setup = (testProps, render = defaultRender) => {
         ...render(
             <Button
                 selectedJournals={{
-                    a: {},
-                    b: {},
+                    100: {},
+                    200: {},
                 }}
                 clearSelectedJournals={clearSelectedJournals}
                 onAdd={onAdd}
@@ -177,7 +177,7 @@ describe('Button', () => {
 
         expect(addListItems).toHaveBeenCalledWith({
             id: JOURNAL_FAVOURITE_LIST_ID,
-            ids: ['a', 'b'],
+            ids: [100, 200],
         });
     });
 
@@ -188,8 +188,8 @@ describe('Button', () => {
         await user.click(getByLabelText('main'));
 
         expect(addListItems).toHaveBeenCalledWith({
-            id: 'reading',
-            ids: ['a', 'b'],
+            id: 1,
+            ids: [100, 200],
         });
     });
 
@@ -308,7 +308,7 @@ describe('Button', () => {
 
         expect(addListItems).toHaveBeenLastCalledWith({
             id: 'new-id',
-            ids: ['a', 'b'],
+            ids: [100, 200],
         });
     });
 });

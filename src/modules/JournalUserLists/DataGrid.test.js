@@ -4,12 +4,13 @@ import {
     assertToBeInTheDocument,
     render as defaultRender,
     userEvent,
+    waitToBeDisabled,
     within,
     WithRouter,
 } from 'test-utils';
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
-import { JOURNAL_FAVOURITE_LIST_ID } from '../../config/general';
+import { JOURNAL_FAVOURITE_LIST_LABEL } from '../../config/general';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
@@ -24,7 +25,7 @@ const deleteAction = jest.fn();
 const data = [
     { fjl_id: 1, fjl_label: 'List one', fjl_is_public: true, fjl_ids: [1, 2] },
     { fjl_id: 2, fjl_label: 'List two', fjl_is_public: false, fjl_ids: [] },
-    { fjl_id: 3, fjl_label: JOURNAL_FAVOURITE_LIST_ID, fjl_is_public: true, fjl_ids: [1, 2] },
+    { fjl_id: 3, fjl_label: JOURNAL_FAVOURITE_LIST_LABEL, fjl_is_public: true, fjl_ids: [1, 2] },
 ];
 
 const setup = (testProps = {}, render = defaultRender) => {
@@ -75,7 +76,7 @@ describe('DataGrid', () => {
         const { getByTestId } = setup();
 
         await userEvent.click(getByTestId('journal-user-lists-add'));
-        expect(getByTestId('fjl-label--4-input').querySelector('input')).toHaveFocus();
+        expect(getByTestId('fjl-label--4-input')).toHaveFocus();
 
         expect(getByTestId('journal-user-lists-item-0-save')).toBeInTheDocument();
         expect(getByTestId('journal-user-lists-item-0-cancel')).toBeInTheDocument();
@@ -85,7 +86,7 @@ describe('DataGrid', () => {
         const { getByTestId, queryByTestId } = setup();
 
         await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
-        expect(getByTestId('fjl-label-1-input').querySelector('input')).toHaveFocus();
+        expect(getByTestId('fjl-label-1-input')).toHaveFocus();
 
         expect(getByTestId('journal-user-lists-add')).toBeDisabled();
         expect(getByTestId('journal-user-lists-item-0-save')).toBeInTheDocument();
@@ -208,11 +209,27 @@ describe('DataGrid', () => {
 
         await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
 
-        const switchInput = getByTestId('fjl-is-public1').querySelector('input');
+        const switchInput = getByTestId('fjl-is-public-1-input').querySelector('input');
         expect(switchInput).toBeChecked();
 
         await userEvent.click(switchInput);
         expect(switchInput).not.toBeChecked();
+    });
+
+    it('should update favourites visibility but not label', async () => {
+        const { getByTestId } = setup();
+        await waitToBeDisabled('journal-user-lists-item-2-delete');
+
+        await userEvent.click(getByTestId('journal-user-lists-item-2-edit'));
+        await waitToBeDisabled('fjl-label-3-input');
+
+        const switchInput = getByTestId('fjl-is-public-3-input').querySelector('input');
+        expect(switchInput).toBeChecked();
+        assertEnabled('journal-user-lists-item-2-save');
+
+        await userEvent.click(switchInput);
+        expect(switchInput).not.toBeChecked();
+        assertEnabled('journal-user-lists-item-2-save');
     });
 
     it('should link to list items page', async () => {

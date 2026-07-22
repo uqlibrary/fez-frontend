@@ -25,7 +25,8 @@ const toListSplitButtonItem = ({ fjl_id, fjl_label }: FezJournalUserList): ListS
 const parseResponse = ({ data }: { data?: FezJournalUserList[] }): ListSplitButtonItem[] => [
     favouritesListItem,
     // keep favourites at the top
-    ...(data?.map?.(toListSplitButtonItem).filter(({ id }) => id !== JOURNAL_FAVOURITE_LIST_ID) || /* istanbul ignore next */ []),
+    ...(data?.map?.(toListSplitButtonItem).filter(({ label }) => label !== JOURNAL_FAVOURITE_LIST_LABEL) ||
+        /* istanbul ignore next */ []),
 ];
 
 const Button: React.FC<{
@@ -71,7 +72,7 @@ const Button: React.FC<{
         dispatch(
             addListItems({
                 id: selectedList?.id,
-                ids: Object.keys(selectedJournals || /* istanbul ignore next */ {}),
+                ids: Object.keys(selectedJournals || /* istanbul ignore next */ {}).map(id => Number(id)),
             }),
         ).then(() => {
             setIsDialogOpen(true);

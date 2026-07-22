@@ -21,10 +21,7 @@ import Edit from '@mui/icons-material/Edit';
 import { Row } from './useGridHook';
 import { locale } from 'locale';
 import { FormatListBulleted, Public } from '@mui/icons-material';
-import { JOURNAL_FAVOURITE_LIST_ID } from 'config/general';
-
-const createListUrl = (id: string) =>
-    `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][UserList]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
+import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 
 interface UseColumnsParams {
     txt: typeof locale.components.journalUserLists.grid;
@@ -39,6 +36,12 @@ interface UseColumnsParams {
     rowModesModel: GridRowModesModel;
     rows: Row[];
 }
+
+const createListUrl = (id: string) =>
+    `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][UserList]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
+
+const isFavouriteList = (label: string) =>
+    label?.trim?.().toLowerCase?.() === JOURNAL_FAVOURITE_LIST_LABEL.toLowerCase();
 
 export const useColumns = ({
     txt,
@@ -86,11 +89,15 @@ export const useColumns = ({
                     return (
                         <GridEditInputCell
                             {...props}
+                            disabled={isFavouriteList(props.value)}
                             error={!props.value}
                             placeholder="This field is required"
                             onChange={handleChange}
-                            data-testid={`fjl-label-${props.id}-input`}
-                            inputProps={{ maxLength: 255 }}
+                            data-testid={`fjl-label-${props.id}`}
+                            inputProps={{
+                                'data-testid': `fjl-label-${props.id}-input`,
+                                maxLength: 255,
+                            }}
                             sx={{
                                 border: '1px solid transparent',
                                 '&.Mui-error': {
@@ -116,12 +123,12 @@ export const useColumns = ({
 
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <span data-testid={`fjl-label-${props.id}`}>{props.value && <Public />}</span>
+                    <span data-testid={`fjl-is-public-${props.id}`}>{props.value && <Public />}</span>
                 ),
                 renderEditCell: (props: GridRenderEditCellParams) => (
                     <Switch
                         checked={props.value}
-                        data-testid={`fjl-is-public${props.id}`}
+                        data-testid={`fjl-is-public-${props.id}-input`}
                         onChange={e =>
                             props.api.setEditCellValue({
                                 id: props.id,
@@ -153,7 +160,7 @@ export const useColumns = ({
                             target="user-list-tab"
                             title={txt.columns.items.link.title}
                             to={
-                                props.row.fjl_label === JOURNAL_FAVOURITE_LIST_ID
+                                props.row.fjl_label === JOURNAL_FAVOURITE_LIST_LABEL
                                     ? pathConfig.journals.favourites
                                     : pathConfig.journals.list(String(props.id), props.row.fjl_label)
                             }
@@ -173,13 +180,11 @@ export const useColumns = ({
                 cellClassName: 'cell-styled',
                 getActions: params => {
                     const rowId = params.id as number;
-                    const isAnyInEditMode = Object.values(rowModesModel).some(
-                        rowMode => rowMode.mode === GridRowModes.Edit,
-                    );
-                    const isAnyDeleting = !!deleteRowId;
+                    const index = rows.findIndex(row => row.fjl_id === rowId);
+
                     const isInEditMode = rowModesModel[rowId]?.mode === GridRowModes.Edit;
                     const isDeleting = rowId === deleteRowId;
-                    const index = rows.findIndex(row => row.fjl_id === rowId);
+
                     if (isInEditMode || isDeleting) {
                         return [
                             <GridActionsCellItem
@@ -201,6 +206,11 @@ export const useColumns = ({
                         ];
                     }
 
+                    const isAnyInEditMode = Object.values(rowModesModel).some(
+                        rowMode => rowMode.mode === GridRowModes.Edit,
+                    );
+                    const isAnyDeleting = !!deleteRowId;
+                    const isDeletable = !isFavouriteList(rows[index].fjl_label);
                     return [
                         <GridActionsCellItem
                             icon={<Edit />}
@@ -217,7 +227,7 @@ export const useColumns = ({
                             onClick={onDeleteClick(rowId)}
                             color="inherit"
                             data-testid={`journal-user-lists-item-${index}-delete`}
-                            disabled={isAnyInEditMode || isAnyDeleting}
+                            disabled={!isDeletable || isAnyInEditMode || isAnyDeleting}
                         />,
                     ];
                 },
