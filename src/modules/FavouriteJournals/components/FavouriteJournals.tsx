@@ -101,7 +101,6 @@ export const FavouriteJournals: React.FC = () => {
                                         isAllSelected={isAllSelected}
                                         onSelectionChange={handleSelectedJournalsChange}
                                         onToggleSelectAll={handleToggleSelectAllJournals}
-                                        onExport={handleExport}
                                         onPageSizeChange={pageSizeChanged}
                                         onPageChange={pageChanged}
                                         onSortByChange={sortByChanged}
