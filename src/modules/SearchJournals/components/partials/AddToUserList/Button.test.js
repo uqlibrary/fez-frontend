@@ -5,10 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addListItems, createList, loadLists } from '../../../../../actions/journalUserLists';
 import Button from './Button';
 import { JOURNAL_FAVOURITE_LIST_ID, JOURNAL_FAVOURITE_LIST_LABEL } from '../../../../../config/general';
+import { useDispatchOnce } from 'hooks/useDispatchOnce';
 
 jest.mock('react-redux', () => ({
     useDispatch: jest.fn(),
     useSelector: jest.fn(),
+}));
+
+jest.mock('hooks/useDispatchOnce', () => ({
+    useDispatchOnce: jest.fn(),
 }));
 
 jest.mock('../../../../../actions/journalUserLists', () => ({
@@ -41,6 +46,7 @@ jest.mock('../../../../SharedComponents/Toolbox/ListSplitButtonMenu/ListSplitBut
         <button aria-label="main" disabled={props.disabled} onClick={props.onClick}>
             {props.items[props.selectedIndex] ? props.label(props.items[props.selectedIndex]) : 'no list'}
         </button>
+        <button aria-label="open-menu" onClick={() => props.onOpenChange(!props.open)} />
         <button aria-label="select" onClick={() => props.onItemSelect(1)} />
         <button aria-label="add" onClick={props.onAdd} />
         <div data-testid="loading">{String(props.loading)}</div>
@@ -74,7 +80,15 @@ const defaultListData = [
 ];
 
 const setup = (testProps, render = defaultRender) => {
-    const { loading = false, listLoading = false, listData = defaultListData, ...props } = testProps || {};
+    const {
+        loading = false,
+        listLoading = false,
+        listData = defaultListData,
+        listResponse = { data: listData },
+        listError = false,
+        ...props
+    } = testProps || {};
+
     useDispatch.mockReturnValue(dispatch);
     useSelector.mockImplementation(selector =>
         selector({
@@ -82,9 +96,8 @@ const setup = (testProps, render = defaultRender) => {
                 if (key === 'journalUserListsReducer') {
                     return {
                         loading: listLoading,
-                        data: {
-                            data: listData,
-                        },
+                        data: listResponse,
+                        error: listError,
                     };
                 }
 
@@ -129,24 +142,50 @@ const setup = (testProps, render = defaultRender) => {
     };
 };
 
+const fetchMock = jest.fn();
+
 describe('Button', () => {
     beforeEach(() => {
         jest.clearAllMocks();
         jest.useFakeTimers();
+
+        fetchMock.mockResolvedValue(undefined);
+        useDispatchOnce.mockReturnValue(fetchMock);
     });
 
     afterEach(() => {
         jest.useRealTimers();
     });
 
-    it('should dispatch loadLists on mount', () => {
+    it('should not dispatch loadLists on mount', () => {
         setup();
+        jest.runAllTimers();
 
-        expect(loadLists).toHaveBeenCalled();
-        expect(dispatch).toHaveBeenCalledWith({
-            type: 'LOAD_LISTS',
-        });
-        expect(loadLists).toHaveBeenCalledTimes(1);
+        expect(loadLists).not.toHaveBeenCalled();
+    });
+
+    it('should fetch lists on menu open', async () => {
+        const { user, getByLabelText } = setup({ listResponse: null });
+
+        await user.click(getByLabelText('open-menu'));
+        expect(fetchMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('should not fetch on menu close', async () => {
+        const { user, getByLabelText } = setup({ listResponse: null });
+
+        await user.click(getByLabelText('open-menu'));
+        expect(fetchMock).toHaveBeenCalledTimes(1);
+
+        await user.click(getByLabelText('open-menu'));
+        expect(fetchMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('should should not fetch again after an error', async () => {
+        const { user, getByLabelText } = setup({ listError: true });
+
+        await user.click(getByLabelText('open-menu'));
+        expect(fetchMock).toHaveBeenCalledTimes(0);
     });
 
     it('should render default list items', () => {
