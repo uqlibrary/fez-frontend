@@ -337,7 +337,7 @@ export const getRoutesConfig = ({
                       pageTitle: locale.components.journalUserLists.title,
                   },
                   {
-                      path: pathConfig.journals.list(':id', ':label'),
+                      path: pathConfig.journals.list(':id'),
                       element: <components.FavouriteJournals />,
                       pageTitle: locale.components.favouriteJournals.title,
                   },

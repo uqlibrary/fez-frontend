@@ -236,17 +236,17 @@ describe('DataGrid', () => {
     it('should link to journal search', async () => {
         const { getByTestId } = setup();
 
-        expect(getByTestId('fjl-search-1-link')).toHaveAttribute('href', createListUrl(1));
-        expect(getByTestId('fjl-search-2-link')).toHaveAttribute('href', createListUrl(2));
+        expect(getByTestId('fjl-link-1')).toHaveAttribute('href', createListUrl(1));
+        expect(getByTestId('fjl-link-2')).toHaveAttribute('href', createListUrl(2));
     });
 
     it('should link to list items page', async () => {
         const { getByTestId } = setup();
 
-        const listLink = getByTestId('fjl-items-1').querySelector('a');
-        expect(listLink).toHaveAttribute('href', pathConfig.journals.list(data[0].fjl_id, data[0].fjl_label));
+        const listLink = getByTestId('fjl-items-link-1').querySelector('a');
+        expect(listLink).toHaveAttribute('href', pathConfig.journals.list(data[0].fjl_id));
 
-        const favouritesLink = getByTestId('fjl-items-3').querySelector('a');
+        const favouritesLink = getByTestId('fjl-items-link-3').querySelector('a');
         expect(favouritesLink).toHaveAttribute('href', pathConfig.journals.favourites);
     });
 });

@@ -22,6 +22,7 @@ import { Row } from './useGridHook';
 import { locale } from 'locale';
 import { FormatListBulleted, Public } from '@mui/icons-material';
 import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
+import OpenInNew from '@mui/icons-material/OpenInNew';
 
 interface UseColumnsParams {
     txt: typeof locale.components.journalUserLists.grid;
@@ -66,13 +67,11 @@ export const useColumns = ({
                 resizable: false,
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <Typography>
-                        <ExternalLink
-                            id={`fjl-search-${props.id}`}
-                            href={createListUrl(props.value)}
-                            children={undefined}
-                        />
-                    </Typography>
+                    <span>
+                        <Link target="_blank" data-testid={`fjl-link-${props.id}`} to={createListUrl(props.value)}>
+                            <OpenInNew style={{ width: 12 }} />
+                        </Link>
+                    </span>
                 ),
                 width: 50,
                 cellClassName: 'cell-styled',
@@ -159,14 +158,14 @@ export const useColumns = ({
                 sortable: false,
                 align: 'center',
                 renderCell: props => (
-                    <span data-testid={`fjl-items-${props.id}`}>
+                    <span data-testid={`fjl-items-link-${props.id}`}>
                         <Link
-                            target="user-list-tab"
+                            target="_blank"
                             title={txt.columns.items.link.title}
                             to={
                                 props.row.fjl_label === JOURNAL_FAVOURITE_LIST_LABEL
                                     ? pathConfig.journals.favourites
-                                    : pathConfig.journals.list(String(props.id), props.row.fjl_label)
+                                    : pathConfig.journals.list(String(props.id))
                             }
                         >
                             <FormatListBulleted />
