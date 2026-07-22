@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -12,12 +12,16 @@ import { useDispatchOnce } from 'hooks/useDispatchOnce';
 
 const JournalUserLists = () => {
     const txt = locale.pages.journalUserLists;
-    const { loading, data, error } = useSelector(
+    const { loading, data, error, isDirty } = useSelector(
         // @ts-expect-error TODO fix once converted to TS
         /* istanbul ignore next */ state => state.get('journalUserListsReducer'),
     );
     const loaded = data || error;
-    useDispatchOnce(loaded, () => loadLists())();
+    const fetch = useDispatchOnce(loaded && !isDirty, () => loadLists());
+
+    useEffect(() => {
+        fetch();
+    }, [fetch]);
 
     if (loading && !loaded) {
         return <InlineLoader data-testid="journal-user-lists-loading" message={txt.loadingMessage} />;

@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as _actions from './journalUserLists';
 import { JOURNAL_FAVOURITE_LIST_ID } from '../config/general';
+import { JOURNAL_USER_LISTS_CRUD_SUCCESS } from './actionTypes';
 
 describe('JournalUserLists', () => {
     beforeEach(() => {
@@ -42,7 +43,7 @@ describe('JournalUserLists', () => {
                 const data = { fjl_label: 'Test list' };
                 const { apiUrl } = repositories.routes.JOURNAL_USE_LISTS_API();
                 mockApi.onPost(apiUrl).reply(200, { data });
-                const expectedActions = [actions.JOURNAL_USER_LISTS_LOADING, actions.JOURNAL_USER_LISTS_SUCCESS];
+                const expectedActions = [actions.JOURNAL_USER_LISTS_LOADING, actions.JOURNAL_USER_LISTS_CRUD_SUCCESS];
                 await mockActionsStore.dispatch(_actions.createList(data));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
@@ -67,7 +68,7 @@ describe('JournalUserLists', () => {
                 const data = { fjl_id: 1, fjl_label: 'Updated list' };
                 const { apiUrl } = repositories.routes.JOURNAL_USE_LISTS_API(data.fjl_id);
                 mockApi.onPut(apiUrl).reply(200, { data });
-                const expectedActions = [actions.JOURNAL_USER_LISTS_LOADING, actions.JOURNAL_USER_LISTS_SUCCESS];
+                const expectedActions = [actions.JOURNAL_USER_LISTS_LOADING, actions.JOURNAL_USER_LISTS_CRUD_SUCCESS];
                 await mockActionsStore.dispatch(_actions.updateList(data));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
@@ -92,7 +93,7 @@ describe('JournalUserLists', () => {
                 const id = 1;
                 const { apiUrl } = repositories.routes.JOURNAL_USE_LISTS_API(id);
                 mockApi.onDelete(apiUrl).reply(200);
-                const expectedActions = [actions.JOURNAL_USER_LISTS_LOADING, actions.JOURNAL_USER_LISTS_SUCCESS];
+                const expectedActions = [actions.JOURNAL_USER_LISTS_LOADING, actions.JOURNAL_USER_LISTS_CRUD_SUCCESS];
                 await mockActionsStore.dispatch(_actions.deleteList(id));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });

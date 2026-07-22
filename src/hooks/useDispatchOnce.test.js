@@ -17,11 +17,8 @@ describe('useDispatchOnce hook', () => {
         jest.clearAllMocks();
     });
 
-    it('does not dispatch if hasBeenDispatched is true initially', () => {
-        const { result } = renderHook(
-            ({ hasBeenDispatched, getDispatchable }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
-            { initialProps: { hasBeenDispatched: true, getDispatchable } },
-        );
+    it('should not dispatch when initially marked as dispatched', () => {
+        const { result } = renderHook(() => useDispatchOnce(true, getDispatchable));
 
         act(() => {
             result.current();
@@ -30,14 +27,11 @@ describe('useDispatchOnce hook', () => {
         expect(dispatchMock).not.toHaveBeenCalled();
     });
 
-    it('dispatches exactly once when called multiple times if initially not dispatched', () => {
+    it('should dispatch only once', () => {
         const dispatchResult = Promise.resolve({ success: true });
         dispatchMock.mockReturnValue(dispatchResult);
 
-        const { result } = renderHook(
-            ({ hasBeenDispatched, getDispatchable }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
-            { initialProps: { hasBeenDispatched: false, getDispatchable } },
-        );
+        const { result } = renderHook(() => useDispatchOnce(false, getDispatchable));
 
         let returned;
 
@@ -50,18 +44,16 @@ describe('useDispatchOnce hook', () => {
         expect(getDispatchable).toHaveBeenCalledTimes(1);
         expect(dispatchMock).toHaveBeenCalledTimes(1);
         expect(dispatchMock).toHaveBeenCalledWith({ type: 'TEST_ACTION' });
-
         expect(returned).toBe(dispatchResult);
     });
 
-    it('respects prop change to true and does not dispatch afterwards', () => {
+    it('should honour a rerender with hasBeenDispatched=true', () => {
         const { result, rerender } = renderHook(
-            ({ hasBeenDispatched, getDispatchable }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
-            { initialProps: { hasBeenDispatched: false, getDispatchable } },
+            ({ hasBeenDispatched }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
+            { initialProps: { hasBeenDispatched: false } },
         );
 
-        // simulate external flag flip
-        rerender({ hasBeenDispatched: true, getDispatchable });
+        rerender({ hasBeenDispatched: true });
         act(() => {
             result.current();
         });
@@ -70,20 +62,36 @@ describe('useDispatchOnce hook', () => {
         expect(dispatchMock).not.toHaveBeenCalled();
     });
 
-    it('does not dispatch again after an initial dispatch and then prop change', () => {
+    it('should not dispatch again after rerendering with hasBeenDispatched=true', () => {
         const { result, rerender } = renderHook(
-            ({ hasBeenDispatched, getDispatchable }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
-            { initialProps: { hasBeenDispatched: false, getDispatchable } },
+            ({ hasBeenDispatched }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
+            { initialProps: { hasBeenDispatched: false } },
         );
 
-        // first call triggers dispatch
-        act(() => result.current());
+        act(() => {
+            result.current();
+        });
         expect(dispatchMock).toHaveBeenCalledTimes(1);
 
-        // now simulate prop indicating dispatch has happened elsewhere
-        rerender({ hasBeenDispatched: true, getDispatchable });
-        // subsequent calls should not dispatch again
-        act(() => result.current());
+        rerender({ hasBeenDispatched: true });
+        act(() => {
+            result.current();
+        });
+
+        expect(dispatchMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('should dispatch if rerendered with hasBeenDispatched=false', () => {
+        const { result, rerender } = renderHook(
+            ({ hasBeenDispatched }) => useDispatchOnce(hasBeenDispatched, getDispatchable),
+            { initialProps: { hasBeenDispatched: false } },
+        );
+
+        rerender({ hasBeenDispatched: false });
+        act(() => {
+            result.current();
+        });
+
         expect(dispatchMock).toHaveBeenCalledTimes(1);
     });
 });

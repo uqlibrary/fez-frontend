@@ -42,6 +42,7 @@ const Button: React.FC<{
         loading: loadingList,
         data: response,
         error,
+        isDirty,
     } = useSelector((state: AnyAction) => state.get?.('journalUserListsReducer'));
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -53,7 +54,7 @@ const Button: React.FC<{
     const selectionCount = Object.keys(selectedJournals || /* istanbul ignore next */ {}).length;
     const loading = adding || loadingList;
     const disabled = !selectionCount || adding || loadingList;
-    const fetch = useDispatchOnce(response || error, /* istanbul ignore next */ () => loadLists());
+    const fetch = useDispatchOnce((response || error) && !isDirty, /* istanbul ignore next */ () => loadLists());
 
     // parse loaded list
     useEffect(() => {

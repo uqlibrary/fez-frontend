@@ -1,22 +1,19 @@
 import { useDispatch } from 'react-redux';
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useRef } from 'react';
 import { AnyAction } from 'redux';
 
 export const useDispatchOnce = (hasBeenDispatched: boolean, getDispatchable: () => unknown) => {
     const dispatch = useDispatch();
-    const hasBeenDispatchedRef = useRef(hasBeenDispatched);
+    const dispatchedRef = useRef(hasBeenDispatched);
 
-    // handles keeping hasBeenDispatchedRef in sync
-    useEffect(() => {
-        if (hasBeenDispatched) {
-            hasBeenDispatchedRef.current = true;
-        }
-    }, [hasBeenDispatched]);
+    dispatchedRef.current ||= hasBeenDispatched;
 
     return useCallback(() => {
-        if (hasBeenDispatchedRef.current) return Promise.resolve();
+        if (dispatchedRef.current) {
+            return Promise.resolve();
+        }
 
-        hasBeenDispatchedRef.current = true;
+        dispatchedRef.current = true;
         return dispatch(getDispatchable() as AnyAction);
     }, [dispatch, getDispatchable]);
 };
