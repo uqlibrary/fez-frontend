@@ -28,6 +28,19 @@ describe('Search Journals Results component', () => {
         useNavigate.mockClear();
     });
 
+    it("should show 'No journals found' when no results are present for favourite link", () => {
+        const initialEntries = [
+            '/?&activeFacets%5Bfilters%5D%5BShowFavouritedOnly%5D=150&keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND',
+        ];
+
+        const { getByText } = setup({
+            state: { journalsListLoaded: true, journalsList: mockDataEmpty },
+            initialEntries,
+        });
+
+        expect(getByText('No journals found')).toBeInTheDocument();
+    });
+
     it("should show 'No journals found' when no results are present", () => {
         const initialEntries = [
             '/?keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology',

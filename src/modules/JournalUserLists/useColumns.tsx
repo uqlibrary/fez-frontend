@@ -39,7 +39,7 @@ interface UseColumnsParams {
 }
 
 export const createListUrl = (id: string | number) =>
-    `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][ShowFavouritedOnly]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?activeFacets[filters][ShowFavouritedOnly]=true&page=1&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
+    `${pathConfig.journals.search}?${encodeURI(`isFavouriteLink=true&activeFacets[filters][ShowFavouritedOnly]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?activeFacets[filters][ShowFavouritedOnly]=true&page=1&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
 
 const isFavouriteList = (label: string) =>
     label?.trim?.().toLowerCase?.() === JOURNAL_FAVOURITE_LIST_LABEL.toLowerCase();
