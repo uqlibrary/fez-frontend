@@ -68,7 +68,7 @@ export const useColumns = ({
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
                     <span>
-                        <Link target="_blank" data-testid={`fjl-link-${props.id}`} to={createListUrl(props.value)}>
+                        <Link data-testid={`fjl-link-${props.id}`} to={createListUrl(props.value)}>
                             <OpenInNew style={{ width: 12 }} />
                         </Link>
                     </span>
@@ -160,7 +160,6 @@ export const useColumns = ({
                 renderCell: props => (
                     <span data-testid={`fjl-items-link-${props.id}`}>
                         <Link
-                            target="_blank"
                             title={txt.columns.items.link.title}
                             to={pathConfig.journals.favourites(String(props.id))}
                         >
