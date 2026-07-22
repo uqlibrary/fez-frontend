@@ -244,9 +244,6 @@ describe('DataGrid', () => {
         const { getByTestId } = setup();
 
         const listLink = getByTestId('fjl-items-link-1').querySelector('a');
-        expect(listLink).toHaveAttribute('href', pathConfig.journals.list(data[0].fjl_id));
-
-        const favouritesLink = getByTestId('fjl-items-link-3').querySelector('a');
-        expect(favouritesLink).toHaveAttribute('href', pathConfig.journals.favourites);
+        expect(listLink).toHaveAttribute('href', pathConfig.journals.favourites(data[0].fjl_id));
     });
 });

@@ -19,7 +19,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
     const navigate = useNavigate();
     const txt = locale.components.searchJournals;
     const handleFavouriteJournalsClick = () => {
-        navigate(pathConfig.journals.favourites, {
+        navigate(pathConfig.journals.favourites(), {
             state: { prevLocation: location },
         });
     };
