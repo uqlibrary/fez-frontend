@@ -1,9 +1,6 @@
 import * as actions from './actionTypes';
 import { destroy, get, post, put } from '../repositories';
 import { JOURNAL_USER_LIST_ITEMS_API, JOURNAL_USE_LISTS_API } from '../repositories/routes';
-import { JOURNAL_USER_LISTS_CRUD_SUCCESS } from './actionTypes';
-
-export const reset = () => ({ type: actions.JOURNAL_USER_LISTS_RESET });
 
 /**
  * @param searchQuery
