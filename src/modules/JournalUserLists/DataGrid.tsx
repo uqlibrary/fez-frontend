@@ -6,7 +6,6 @@ import {
     GridRowModesModel,
     GridToolbarQuickFilter,
 } from '@mui/x-data-grid';
-import Typography from '@mui/material/Typography';
 import Add from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import { locale } from 'locale';

@@ -4492,6 +4492,10 @@ export default {
                     aria: 'Return to Journal Search',
                 },
             },
+            favouriteLists: {
+                noneSelected: 'Please select a list above to display items.',
+                empty: 'You haven\'t created any favourite lists yet. Use the "Add to favourites" button on the results page to add favourites.',
+            },
             favouriteJournalsList: {
                 loading: 'Loading ...',
                 empty: "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",

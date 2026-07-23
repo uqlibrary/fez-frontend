@@ -980,45 +980,13 @@ describe('Backend routes method', () => {
                 sort: 'score',
             };
 
-            expect(routes.JOURNAL_USER_LIST_ITEMS_API()).toEqual({
-                apiUrl: 'journals/favourites',
-            });
-
-            expect(routes.JOURNAL_USER_LIST_ITEMS_API({ query: 'a' })).toEqual({
-                apiUrl: 'journals/favourites',
-                options: {
-                    params: { ...commonQueryParams },
-                },
-            });
-
             expect(
                 routes.JOURNAL_USER_LIST_ITEMS_API({
-                    query: {
-                        keywords: [
-                            { type: 'Title', text: 'apple', operand: 'AND' },
-                            { type: 'Keyword', text: 'apple', operand: 'OR' },
-                            { type: 'Subject', text: 'apple', cvoId: 12345, operand: 'OR' },
-                        ],
-                    },
-                }),
-            ).toEqual({
-                apiUrl: 'journals/favourites',
-                options: {
-                    params: {
-                        ...commonQueryParams,
-                        query: 'title:apple OR description:apple OR subject:12345',
-                    },
-                },
-            });
-
-            // with id
-            expect(
-                routes.JOURNAL_USER_LIST_ITEMS_API({
-                    id: 'id',
+                    id: '1',
                     query: 'a',
                 }),
             ).toEqual({
-                apiUrl: 'journals/lists/id/items',
+                apiUrl: 'journals/lists/1/items',
                 options: {
                     params: { ...commonQueryParams },
                 },

@@ -10,10 +10,8 @@ import ListSplitButtonMenu, {
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
 import AddNewDialog, { FormValues } from './AddNewDialog';
 import { AnyAction } from 'redux';
-import { JOURNAL_FAVOURITE_LIST_ID, JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
+import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 import { useDispatchOnce } from 'hooks/useDispatchOnce';
-
-const favouritesListItem = { id: JOURNAL_FAVOURITE_LIST_ID, label: JOURNAL_FAVOURITE_LIST_LABEL };
 
 // eslint-disable-next-line camelcase
 const toListSplitButtonItem = ({ fjl_id, fjl_label }: FezJournalUserList): ListSplitButtonItem => ({
@@ -24,10 +22,7 @@ const toListSplitButtonItem = ({ fjl_id, fjl_label }: FezJournalUserList): ListS
 });
 
 const parseResponse = ({ data }: { data?: FezJournalUserList[] }): ListSplitButtonItem[] => [
-    favouritesListItem,
-    // keep favourites at the top
-    ...(data?.map?.(toListSplitButtonItem).filter(({ label }) => label !== JOURNAL_FAVOURITE_LIST_LABEL) ||
-        /* istanbul ignore next */ []),
+    ...(data?.map?.(toListSplitButtonItem) || /* istanbul ignore next */ []),
 ];
 
 const Button: React.FC<{
@@ -53,7 +48,7 @@ const Button: React.FC<{
     const selectedList = list[selectedIndex];
     const selectionCount = Object.keys(selectedJournals || /* istanbul ignore next */ {}).length;
     const loading = adding || loadingList;
-    const disabled = !selectionCount || adding || loadingList;
+    const disabled = !list.length || !selectionCount || adding || loadingList;
     const fetch = useDispatchOnce((response || error) && !isDirty, /* istanbul ignore next */ () => loadLists());
 
     // parse loaded list
@@ -150,6 +145,7 @@ const Button: React.FC<{
                 onItemSelect={setSelectedIndex}
                 onClick={handleMainClick}
                 onAdd={openAddListDialog}
+                addNewButtonLabel="Add new list"
                 open={isMenuOpen}
                 onOpenChange={onOpenChange}
                 clickAwayExcludeRef={addDialogPaperRef}

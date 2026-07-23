@@ -1,6 +1,4 @@
 import React, { useMemo } from 'react';
-import Typography from '@mui/material/Typography';
-import { ExternalLink } from '../SharedComponents/ExternalLink';
 import { Link } from 'react-router';
 import {
     GridActionsCellItem,
@@ -21,7 +19,6 @@ import Edit from '@mui/icons-material/Edit';
 import { Row } from './useGridHook';
 import { locale } from 'locale';
 import { FormatListBulleted, Public } from '@mui/icons-material';
-import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 import OpenInNew from '@mui/icons-material/OpenInNew';
 
 interface UseColumnsParams {
@@ -40,9 +37,6 @@ interface UseColumnsParams {
 
 export const createListUrl = (id: string | number) =>
     `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][ShowFavouritedOnly]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?activeFacets[filters][ShowFavouritedOnly]=true&page=1&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
-
-const isFavouriteList = (label: string) =>
-    label?.trim?.().toLowerCase?.() === JOURNAL_FAVOURITE_LIST_LABEL.toLowerCase();
 
 export const useColumns = ({
     txt,
@@ -92,7 +86,6 @@ export const useColumns = ({
                     return (
                         <GridEditInputCell
                             {...props}
-                            disabled={isFavouriteList(props.value)}
                             error={!props.value}
                             placeholder="This field is required"
                             onChange={handleChange}
@@ -208,7 +201,6 @@ export const useColumns = ({
                         rowMode => rowMode.mode === GridRowModes.Edit,
                     );
                     const isAnyDeleting = !!deleteRowId;
-                    const isDeletable = !isFavouriteList(rows[index].fjl_label);
                     return [
                         <GridActionsCellItem
                             icon={<Edit />}
@@ -225,7 +217,7 @@ export const useColumns = ({
                             onClick={onDeleteClick(rowId)}
                             color="inherit"
                             data-testid={`journal-user-lists-item-${index}-delete`}
-                            disabled={!isDeletable || isAnyInEditMode || isAnyDeleting}
+                            disabled={isAnyInEditMode || isAnyDeleting}
                         />,
                     ];
                 },

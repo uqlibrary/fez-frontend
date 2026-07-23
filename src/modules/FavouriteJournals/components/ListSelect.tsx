@@ -1,39 +1,23 @@
 import * as React from 'react';
-import { useSelector } from 'react-redux';
-import { loadLists } from 'actions';
-import { AnyAction } from 'redux';
-import { useDispatchOnce } from 'hooks/useDispatchOnce';
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
 import MenuItem from '@mui/material/MenuItem';
-import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 import { SelectProps } from '@mui/material';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
-import { useEffect } from 'react';
 
-const getFavouriteId = (lists: FezJournalUserList[]) =>
-    lists.find(list => list.fjl_label.toUpperCase() === JOURNAL_FAVOURITE_LIST_LABEL.toUpperCase())?.fjl_id;
+type ListSelectProps = SelectProps & {
+    lists?: FezJournalUserList[];
+    loading?: boolean;
+};
 
-const ListSelect: React.FC<SelectProps> = props => {
-    const {
-        loading,
-        data: response,
-        isDirty,
-    } = useSelector((state: AnyAction) => state.get?.('journalUserListsReducer'));
-    const fetch = useDispatchOnce(!!response?.data && !isDirty, () => loadLists());
+const ListSelect: React.FC<ListSelectProps> = ({ lists, loading, ...props }) => {
+    if (!lists?.length) return null;
 
-    useEffect(() => {
-        fetch();
-    }, [fetch]);
-
-    if (!response?.data.length) return null;
-
-    const value = props.value || getFavouriteId(response?.data);
     return (
         <FormControl variant="standard" fullWidth>
             <Select
                 {...props}
-                value={value}
+                value={props.value || ''}
                 variant="standard"
                 labelId="sort-by-label"
                 disabled={loading}
@@ -46,7 +30,7 @@ const ListSelect: React.FC<SelectProps> = props => {
                     },
                 }}
             >
-                {response?.data?.map((item: FezJournalUserList) => (
+                {lists.map((item: FezJournalUserList) => (
                     <MenuItem key={item.fjl_id} value={item.fjl_id}>
                         {item.fjl_label}
                     </MenuItem>
