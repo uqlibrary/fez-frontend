@@ -4,7 +4,6 @@ import {
     assertToBeInTheDocument,
     render as defaultRender,
     userEvent,
-    waitToBeDisabled,
     within,
     WithRouter,
 } from 'test-utils';
@@ -202,22 +201,6 @@ describe('DataGrid', () => {
 
         await userEvent.click(switchInput);
         expect(switchInput).not.toBeChecked();
-    });
-
-    it('should update favourites visibility but not label', async () => {
-        const { getByTestId } = setup();
-        await waitToBeDisabled('journal-user-lists-item-2-delete');
-
-        await userEvent.click(getByTestId('journal-user-lists-item-2-edit'));
-        await waitToBeDisabled('fjl-label-3-input');
-
-        const switchInput = getByTestId('fjl-is-public-3-input').querySelector('input');
-        expect(switchInput).toBeChecked();
-        assertEnabled('journal-user-lists-item-2-save');
-
-        await userEvent.click(switchInput);
-        expect(switchInput).not.toBeChecked();
-        assertEnabled('journal-user-lists-item-2-save');
     });
 
     it('should link to journal search', async () => {

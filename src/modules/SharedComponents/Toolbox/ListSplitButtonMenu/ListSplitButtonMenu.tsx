@@ -26,6 +26,7 @@ export type ListSplitButtonMenuProps = {
     id?: string;
     items: ListSplitButtonItem[];
     placeholder?: string;
+    addNewButtonLabel?: string;
     selectedIndex: number;
     onItemSelect: (index: number) => void;
     onClick: () => void;
@@ -45,6 +46,7 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
     id = 'split-button-menu',
     items,
     placeholder = '',
+    addNewButtonLabel = 'Add new',
     selectedIndex,
     onItemSelect,
     onClick,
@@ -64,6 +66,7 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
     const open = isControlled ? openProp : internalOpen;
     const setOpen = (value: boolean) => (isControlled ? onOpenChange?.(value) : setInternalOpen(value));
     const selectedItem = items[selectedIndex];
+    const hasItems = !!items?.length;
 
     const handleToggle = () => {
         setOpen(!open);
@@ -165,9 +168,9 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                                                 <ListItemIcon>
                                                     <Add fontSize="small" />
                                                 </ListItemIcon>
-                                                <ListItemText>Add new</ListItemText>
+                                                <ListItemText>{addNewButtonLabel}</ListItemText>
                                             </MenuItem>
-                                            <Divider sx={{ pb: 0 }} />
+                                            {hasItems && <Divider sx={{ pb: 0 }} />}
                                         </MenuList>
                                     )}
                                     {/* list items */}

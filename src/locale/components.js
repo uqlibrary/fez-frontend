@@ -4494,7 +4494,7 @@ export default {
             },
             favouriteJournalsList: {
                 loading: 'Loading ...',
-                empty: "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
+                empty: "You don't any favourite journals. Use the checkboxes on the results page to add favourites.",
             },
             sortingDefaults: {
                 pageSize: 20,

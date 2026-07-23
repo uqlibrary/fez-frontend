@@ -3,7 +3,6 @@ import {
     IN_CREATION,
     IN_DRAFT,
     IN_REVIEW,
-    JOURNAL_FAVOURITE_LIST_ID,
     PUB_SEARCH_BULK_EXPORT_SIZE,
     RETRACTED,
     SUBMITTED_FOR_APPROVAL,
@@ -622,9 +621,6 @@ export const JOURNAL_USE_LISTS_API = (id = null) => ({
  * @param {string|number} id
  * @return {`journals/${string|string}`}
  */
-const getUserListItemUrl = id =>
-    `journals/${!id || id === JOURNAL_FAVOURITE_LIST_ID ? JOURNAL_FAVOURITE_LIST_ID : `lists/${String(id).trim()}/items`}`;
-
 export const JOURNAL_USER_LIST_ITEMS_API = ({ id, query } = {}) => {
     const { pageSize } = {
         ...locale.components.favouriteJournals.sortingDefaults,
@@ -633,7 +629,7 @@ export const JOURNAL_USER_LIST_ITEMS_API = ({ id, query } = {}) => {
 
     const validPageSize = getValidPageSize(locale.components.sorting.recordsPerPage, pageSize);
     const params = {
-        apiUrl: getUserListItemUrl(id),
+        apiUrl: `journals/lists/${String(id).trim()}/items`,
     };
 
     if (query) {

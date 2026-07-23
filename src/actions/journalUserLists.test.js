@@ -1,7 +1,6 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as _actions from './journalUserLists';
-import { JOURNAL_FAVOURITE_LIST_ID } from '../config/general';
 
 describe('JournalUserLists', () => {
     beforeEach(() => {
@@ -117,14 +116,14 @@ describe('JournalUserLists', () => {
     describe('favourites', () => {
         describe('loadListItems', () => {
             it('should dispatch action for successful journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API();
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1 });
                 mockApi.onGet(apiUrl).reply(200, { data: [] });
                 const expectedActions = [actions.FAVOURITE_JOURNALS_LOADING, actions.FAVOURITE_JOURNALS_LOADED];
-                await mockActionsStore.dispatch(_actions.loadListItems({ id: JOURNAL_FAVOURITE_LIST_ID }));
+                await mockActionsStore.dispatch(_actions.loadListItems({ id: 1 }));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
             it('should dispatch action for failed journal favourites', async () => {
-                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ searchQuery: 'a' });
+                const { apiUrl } = repositories.routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1, searchQuery: 'a' });
                 mockApi.onGet(apiUrl).reply(500);
                 const expectedActions = [
                     actions.FAVOURITE_JOURNALS_LOADING,
@@ -132,9 +131,7 @@ describe('JournalUserLists', () => {
                     actions.FAVOURITE_JOURNALS_FAILED,
                 ];
                 try {
-                    await mockActionsStore.dispatch(
-                        _actions.loadListItems({ id: JOURNAL_FAVOURITE_LIST_ID, searchQuery: 'a' }),
-                    );
+                    await mockActionsStore.dispatch(_actions.loadListItems({ id: 1, searchQuery: 'a' }));
                 } catch {
                     expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 }
