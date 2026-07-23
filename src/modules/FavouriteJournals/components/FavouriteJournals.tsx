@@ -41,7 +41,7 @@ export const FavouriteJournals: React.FC = () => {
     } = useSelectedJournals({ available: response?.data });
     const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites());
     /* istanbul ignore next */
-    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
+    const { pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
         params => {
             handleSearch(params);
             clearSelectedJournals();
@@ -73,7 +73,7 @@ export const FavouriteJournals: React.FC = () => {
 
     const Title = (
         <Grid container spacing={2} alignItems="center">
-            {txt.title}:
+            {txt.title}
             <Box component="span" sx={{ mb: -2, width: 300 }}>
                 <ListSelect
                     value={listId}
