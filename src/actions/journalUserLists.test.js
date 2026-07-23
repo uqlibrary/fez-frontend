@@ -2,7 +2,6 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as _actions from './journalUserLists';
 import { JOURNAL_FAVOURITE_LIST_ID } from '../config/general';
-import { JOURNAL_USER_LISTS_CRUD_SUCCESS } from './actionTypes';
 
 describe('JournalUserLists', () => {
     beforeEach(() => {

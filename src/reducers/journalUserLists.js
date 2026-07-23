@@ -1,5 +1,4 @@
 import * as actions from 'actions/actionTypes';
-import { JOURNAL_USER_LISTS_CRUD_SUCCESS } from 'actions/actionTypes';
 
 export const initialState = {
     loading: false,
