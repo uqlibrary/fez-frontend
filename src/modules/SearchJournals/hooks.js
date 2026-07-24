@@ -165,7 +165,7 @@ export const buildJournalSearchQueryParams = (search, facetFilters, rangeFilters
 export const useJournalSearch = (path = pathConfig.journals.search) => {
     const navigate = useNavigate();
     const location = useLocation();
-    const searchQueryParams = deparam(location.search.substr(1));
+    const searchQueryParams = deparam(location.search?.substr(1));
     searchQueryParams.keywords = filterNonValidKeywords(searchQueryParams.keywords);
 
     Object.keys(searchQueryParams.keywords).map(

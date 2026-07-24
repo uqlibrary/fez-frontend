@@ -10,12 +10,13 @@ import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
-import { deleteListItems, loadListItems } from 'actions/journalUserLists';
+import { deleteListItems, loadListItems, loadLists } from 'actions/journalUserLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
 import { useLocation, useParams } from 'react-router';
 import { AppState } from '../../../reducer';
 import ListSelect from 'modules/FavouriteJournals/components/ListSelect';
 import { Box } from '@mui/material';
+import { useDispatchOnce } from 'hooks/useDispatchOnce';
 
 export const FavouriteJournals: React.FC = () => {
     const { id: listIdParam } = useParams();
@@ -30,6 +31,16 @@ export const FavouriteJournals: React.FC = () => {
     const loading = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').loading);
     const error = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').error);
     const removing = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').remove?.loading);
+    const {
+        loading: loadingLists,
+        data: listsResponse,
+        isDirty,
+    } = useSelector((state: AppState) => state.get?.('journalUserListsReducer'));
+    const fetchLists = useDispatchOnce(!!response?.data && !isDirty, () => loadLists());
+
+    useEffect(() => {
+        fetchLists();
+    }, [fetchLists]);
 
     const {
         selectedJournals,
@@ -62,6 +73,7 @@ export const FavouriteJournals: React.FC = () => {
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
+        if (!listId) return;
         dispatch(loadListItems({ id: listId, searchQuery: { page, pageSize, sortBy, sortDirection } }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [listId, page, pageSize, sortBy, sortDirection]);
@@ -76,6 +88,8 @@ export const FavouriteJournals: React.FC = () => {
             {txt.title}
             <Box component="span" sx={{ mb: -2, width: 300 }}>
                 <ListSelect
+                    loading={loadingLists}
+                    lists={listsResponse?.data}
                     value={listId}
                     disabled={loading}
                     //@ts-expect-error
@@ -93,23 +107,35 @@ export const FavouriteJournals: React.FC = () => {
                         <Grid size={12} sx={{ flexGrow: 1 }}>
                             <StandardCard noHeader>
                                 <Grid container spacing={2} sx={{ padding: 0 }}>
-                                    <FavouriteJournalsList
-                                        journalsList={response}
-                                        loading={loading}
-                                        error={error}
-                                        selected={selectedJournals}
-                                        isAllSelected={isAllSelected}
-                                        onSelectionChange={handleSelectedJournalsChange}
-                                        onToggleSelectAll={handleToggleSelectAllJournals}
-                                        onPageSizeChange={pageSizeChanged}
-                                        onPageChange={pageChanged}
-                                        onSortByChange={sortByChanged}
-                                        journalSearchQueryParams={journalSearchQueryParams}
-                                    />
+                                    {!listId && !listsResponse?.data?.length && (
+                                        <Grid id="favourite-lists-empty" data-testid="favourite-lists-empty" size={12}>
+                                            {txt.favouriteLists.empty}
+                                        </Grid>
+                                    )}
+                                    {!listId && !!listsResponse?.data?.length && (
+                                        <Grid id="favourite-lists-empty" data-testid="favourite-lists-empty" size={12}>
+                                            {txt.favouriteLists.noneSelected}
+                                        </Grid>
+                                    )}
+                                    {listId && (
+                                        <FavouriteJournalsList
+                                            journalsList={response}
+                                            loading={loading}
+                                            error={error}
+                                            selected={selectedJournals}
+                                            isAllSelected={isAllSelected}
+                                            onSelectionChange={handleSelectedJournalsChange}
+                                            onToggleSelectAll={handleToggleSelectAllJournals}
+                                            onPageSizeChange={pageSizeChanged}
+                                            onPageChange={pageChanged}
+                                            onSortByChange={sortByChanged}
+                                            journalSearchQueryParams={journalSearchQueryParams}
+                                        />
+                                    )}
                                 </Grid>
                                 <Grid style={{ paddingTop: response?.total ? 20 : 25 }} size={12}>
                                     <Grid container spacing={2} sx={{ padding: 0 }}>
-                                        {!!response?.total && (
+                                        {listId && !!response?.total && (
                                             <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
                                                 <LoadingButton
                                                     variant="contained"

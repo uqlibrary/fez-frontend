@@ -48,7 +48,7 @@ const Button: React.FC<{
     const selectedList = list[selectedIndex];
     const selectionCount = Object.keys(selectedJournals || /* istanbul ignore next */ {}).length;
     const loading = adding || loadingList;
-    const disabled = !selectionCount || adding || loadingList;
+    const disabled = !list.length || !selectionCount || adding || loadingList;
     const fetch = useDispatchOnce((response || error) && !isDirty, /* istanbul ignore next */ () => loadLists());
 
     // parse loaded list
