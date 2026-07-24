@@ -44,7 +44,7 @@ export const createList = data => async dispatch => {
  */
 export const updateList = data => async dispatch => {
     dispatch({ type: actions.JOURNAL_USER_LISTS_LOADING });
-    return put(JOURNAL_USE_LISTS_API(data.fjl_id), data).then(
+    return put(JOURNAL_USE_LISTS_API(data.id), data).then(
         response => {
             dispatch({ type: actions.JOURNAL_USER_LISTS_CRUD_SUCCESS });
             return Promise.resolve(response);

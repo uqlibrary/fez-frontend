@@ -14,11 +14,11 @@ import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 import { useDispatchOnce } from 'hooks/useDispatchOnce';
 
 // eslint-disable-next-line camelcase
-const toListSplitButtonItem = ({ fjl_id, fjl_label }: FezJournalUserList): ListSplitButtonItem => ({
+const toListSplitButtonItem = ({ id, label }: FezJournalUserList): ListSplitButtonItem => ({
     // eslint-disable-next-line camelcase
-    id: fjl_id,
+    id: id,
     // eslint-disable-next-line camelcase
-    label: fjl_label,
+    label: label,
 });
 
 const parseResponse = ({ data }: { data?: FezJournalUserList[] }): ListSplitButtonItem[] => [
@@ -103,14 +103,14 @@ const Button: React.FC<{
     const onCreate = async ({ label, isPublic }: FormValues) => {
         const response: { data: FezJournalUserList } = await dispatch(
             createList({
-                fjl_label: label.trim(),
-                fjl_is_public: isPublic,
+                label: label.trim(),
+                is_public: isPublic,
             }),
         );
 
         handleListCreated({
-            id: response.data.fjl_id,
-            label: response.data.fjl_label,
+            id: response.data.id,
+            label: response.data.label,
         });
     };
 
