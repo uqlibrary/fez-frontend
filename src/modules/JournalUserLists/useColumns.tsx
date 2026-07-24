@@ -59,6 +59,7 @@ export const useColumns = ({
                 editable: false,
                 sortable: false,
                 resizable: false,
+                headerAlign: 'center',
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
                     <span>
@@ -68,6 +69,27 @@ export const useColumns = ({
                     </span>
                 ),
                 width: 50,
+                cellClassName: 'cell-styled',
+            },
+            {
+                field: 'link_to_items',
+                headerName: txt.columns.items.title,
+                editable: false,
+                resizable: false,
+                sortable: false,
+                headerAlign: 'center',
+                align: 'center',
+                renderCell: props => (
+                    <span data-testid={`fjl-items-link-${props.id}`}>
+                        <Link
+                            title={txt.columns.items.link.title}
+                            to={pathConfig.journals.favourites(String(props.id))}
+                        >
+                            <FormatListBulleted style={{ width: 16 }} />
+                        </Link>
+                    </span>
+                ),
+                width: 80,
                 cellClassName: 'cell-styled',
             },
             {
@@ -141,26 +163,6 @@ export const useColumns = ({
                 }),
                 maxWidth: 110,
                 flex: 1,
-                cellClassName: 'cell-styled',
-            },
-            {
-                field: 'link_to_items',
-                headerName: txt.columns.items.title,
-                editable: false,
-                resizable: false,
-                sortable: false,
-                align: 'center',
-                renderCell: props => (
-                    <span data-testid={`fjl-items-link-${props.id}`}>
-                        <Link
-                            title={txt.columns.items.link.title}
-                            to={pathConfig.journals.favourites(String(props.id))}
-                        >
-                            <FormatListBulleted />
-                        </Link>
-                    </span>
-                ),
-                width: 80,
                 cellClassName: 'cell-styled',
             },
             {

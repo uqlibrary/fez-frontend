@@ -158,39 +158,6 @@ describe('SearchJournals', () => {
         expect(queryByText('Step 2.')).not.toBeInTheDocument();
     });
 
-    it('should update results when Favourite Journals facet clicked', () => {
-        // Note: test here to gain 100% coverage in src/modules/SearchJournals/hooks.js
-        window.matchMedia = createMatchMedia(1024);
-
-        const queryString =
-            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND';
-
-        const initialEntries = [`/?${queryString}`];
-        const path = pathConfig.journals.search;
-
-        const { getByTestId, queryByTestId } = setup({
-            state: { journalsListLoaded: true, journalsList: mockDataWithFilterFacets },
-            initialEntries,
-        });
-        const facetItemTestId = 'facet-filter-nested-item-showfavouritedonly-show-journals-favourited';
-        const clearFacetItemTestId = 'clear-facet-filter-nested-item-showfavouritedonly-show-journals-favourited';
-
-        // expand Favourite catageory
-        fireEvent.click(getByTestId('clickable-facet-category-showfavouritedonly'));
-
-        expect(getByTestId(facetItemTestId)).toBeVisible();
-        expect(queryByTestId(clearFacetItemTestId)).not.toBeInTheDocument();
-
-        fireEvent.click(getByTestId(facetItemTestId));
-
-        expect(getByTestId(clearFacetItemTestId)).toBeVisible();
-
-        expect(mockUseNavigate).toHaveBeenCalledWith(
-            { pathname: path, search: `${queryString}&activeFacets%5Bfilters%5D%5BShowFavouritedOnly%5D=true&page=1` },
-            { state: {} },
-        );
-    });
-
     it('should update querystring when operands are changed', () => {
         const queryStringPartial =
             'keywords%5BTitle-microbiology%5D%5Btype%5D=Title&keywords%5BTitle-microbiology%5D%5Btext%5D=microbiology&keywords%5BTitle-microbiology%5D%5Bid%5D=Title-microbiology&keywords%5BTitle-microbiology%5D%5Boperand%5D=OR&keywords%5BKeyword-biochemistry%5D%5Btype%5D=Keyword&keywords%5BKeyword-biochemistry%5D%5Btext%5D=biochemistry&keywords%5BKeyword-biochemistry%5D%5Bid%5D=Keyword-biochemistry&keywords%5BKeyword-biochemistry%5D%5Boperand%5D=';

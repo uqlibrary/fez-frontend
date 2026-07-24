@@ -12,16 +12,18 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
 import { deleteListItems, loadListItems, loadLists } from 'actions/journalUserLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
-import { useLocation, useParams } from 'react-router';
+import { useLocation, useNavigate, useParams } from 'react-router';
 import { AppState } from '../../../reducer';
 import ListSelect from 'modules/FavouriteJournals/components/ListSelect';
 import { Box } from '@mui/material';
 import { useDispatchOnce } from 'hooks/useDispatchOnce';
+import Button from '@mui/material/Button';
 
 export const FavouriteJournals: React.FC = () => {
     const { id: listIdParam } = useParams();
     const dispatch = useDispatch();
     const location = useLocation();
+    const navigate = useNavigate();
     const txt = locale.components.favouriteJournals;
     // keep track of previous location, so we can go back to the search page correctly after re-rendering this component
     const prevLocation = useRef(location.state?.prevLocation);
@@ -107,31 +109,19 @@ export const FavouriteJournals: React.FC = () => {
                         <Grid size={12} sx={{ flexGrow: 1 }}>
                             <StandardCard noHeader>
                                 <Grid container spacing={2} sx={{ padding: 0 }}>
-                                    {!listId && !listsResponse?.data?.length && (
-                                        <Grid id="favourite-lists-empty" data-testid="favourite-lists-empty" size={12}>
-                                            {txt.favouriteLists.empty}
-                                        </Grid>
-                                    )}
-                                    {!listId && !!listsResponse?.data?.length && (
-                                        <Grid id="favourite-lists-empty" data-testid="favourite-lists-empty" size={12}>
-                                            {txt.favouriteLists.noneSelected}
-                                        </Grid>
-                                    )}
-                                    {listId && (
-                                        <FavouriteJournalsList
-                                            journalsList={response}
-                                            loading={loading}
-                                            error={error}
-                                            selected={selectedJournals}
-                                            isAllSelected={isAllSelected}
-                                            onSelectionChange={handleSelectedJournalsChange}
-                                            onToggleSelectAll={handleToggleSelectAllJournals}
-                                            onPageSizeChange={pageSizeChanged}
-                                            onPageChange={pageChanged}
-                                            onSortByChange={sortByChanged}
-                                            journalSearchQueryParams={journalSearchQueryParams}
-                                        />
-                                    )}
+                                    <FavouriteJournalsList
+                                        journalsList={response}
+                                        loading={loading}
+                                        error={error}
+                                        selected={selectedJournals}
+                                        isAllSelected={isAllSelected}
+                                        onSelectionChange={handleSelectedJournalsChange}
+                                        onToggleSelectAll={handleToggleSelectAllJournals}
+                                        onPageSizeChange={pageSizeChanged}
+                                        onPageChange={pageChanged}
+                                        onSortByChange={sortByChanged}
+                                        journalSearchQueryParams={journalSearchQueryParams}
+                                    />
                                 </Grid>
                                 <Grid style={{ paddingTop: response?.total ? 20 : 25 }} size={12}>
                                     <Grid container spacing={2} sx={{ padding: 0 }}>
@@ -152,6 +142,18 @@ export const FavouriteJournals: React.FC = () => {
                                                 />
                                             </Grid>
                                         )}
+                                        <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
+                                            <Button
+                                                variant="contained"
+                                                type="submit"
+                                                color="primary"
+                                                data-analyticsid="to-favourite-journal-lists-button"
+                                                data-testid="to-favourite-journal-lists-button"
+                                                onClick={() => navigate(pathConfig.journals.lists)}
+                                            >
+                                                Favourites lists
+                                            </Button>
+                                        </Grid>
                                         <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
                                             {!prevLocation.current && (
                                                 <BackToSearchButton

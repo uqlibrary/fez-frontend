@@ -24,6 +24,7 @@ import {
     getRorURL,
     getDoiURL,
     silentTryCatch,
+    isNumeric,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
@@ -683,5 +684,16 @@ describe('general helpers', () => {
             const result = silentTryCatch(() => 42);
             expect(result instanceof Promise).toBe(false);
         });
+    });
+
+    it('isNumeric', () => {
+        expect(isNumeric(123)).toBeTruthy();
+        expect(isNumeric('123')).toBeTruthy();
+        expect(isNumeric('3.14')).toBeTruthy();
+        expect(isNumeric('')).toBeFalsy();
+        expect(isNumeric('abc')).toBeFalsy();
+        expect(isNumeric({})).toBeFalsy();
+        expect(isNumeric(true)).toBeFalsy();
+        expect(isNumeric(false)).toBeFalsy();
     });
 });

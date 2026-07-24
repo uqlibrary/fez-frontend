@@ -67,7 +67,7 @@ test.describe('Strategic Publishing - Search', () => {
         await expect(page.getByTestId('journal-search-facets')).toBeVisible();
         await expect(
             page.getByTestId('journal-search-facets').locator('[data-testid="facets-filter"] nav > div'),
-        ).toHaveCount(9);
+        ).toHaveCount(8);
         await expect(page.getByTestId('help-icon-journal-search-facets')).toBeVisible();
 
         await assertAccessibility(page, '[data-testid="journal-search-facets"]', {

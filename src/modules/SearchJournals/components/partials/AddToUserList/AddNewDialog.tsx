@@ -76,7 +76,7 @@ const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate
                     fontSize: '1rem',
                 }}
             >
-                New preferred journal list
+                New favourites list
                 <IconButton
                     data-testid="add-to-user-list-dialog-close-button"
                     onClick={handleClose}
