@@ -70,12 +70,12 @@ const onAdd = jest.fn();
 
 const defaultListData = [
     {
-        fjl_id: 1,
-        fjl_label: 'Reading',
+        id: 1,
+        label: 'Reading',
     },
     {
-        fjl_id: 2,
-        fjl_label: JOURNAL_FAVOURITE_LIST_LABEL,
+        id: 2,
+        label: JOURNAL_FAVOURITE_LIST_LABEL,
     },
 ];
 
@@ -116,8 +116,8 @@ const setup = (testProps, render = defaultRender) => {
         if (action?.type === 'CREATE') {
             return Promise.resolve({
                 data: {
-                    fjl_id: 'new-id',
-                    fjl_label: 'New list',
+                    id: 'new-id',
+                    label: 'New list',
                 },
             });
         }
@@ -299,8 +299,8 @@ describe('Button', () => {
         await user.click(getByLabelText('create'));
 
         expect(createList).toHaveBeenCalledWith({
-            fjl_label: 'New list',
-            fjl_is_public: true,
+            label: 'New list',
+            is_public: true,
         });
     });
 

@@ -48,25 +48,25 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
 
     const onAddClick = React.useCallback(() => {
         const newRow: Row = {
-            fjl_id: -(rows.length + 1), // set temp id as a negative number to avoid collisions
-            fjl_label: '',
-            fjl_is_public: false,
+            id: -(rows.length + 1), // set temp id as a negative number to avoid collisions
+            label: '',
+            is_public: false,
             isNew: true,
         };
         setEditingLabel('');
         setRows(prev => [newRow, ...prev]);
         setRowModesModel(prev => ({
             ...prev,
-            [newRow.fjl_id]: { mode: GridRowModes.Edit, fieldToFocus: 'fjl_label' },
+            [newRow.id]: { mode: GridRowModes.Edit, fieldToFocus: 'label' },
         }));
     }, [rows]);
 
     const onEditClick = React.useCallback(
         (id: number) => () => {
-            const row = rows.find(r => r.fjl_id === id);
-            setEditingLabel(row?.fjl_label ?? /* istanbul ignore next */ '');
+            const row = rows.find(r => r.id === id);
+            setEditingLabel(row?.label ?? /* istanbul ignore next */ '');
             setRowModesModel({
-                [id]: { mode: GridRowModes.Edit, fieldToFocus: 'fjl_label' },
+                [id]: { mode: GridRowModes.Edit, fieldToFocus: 'label' },
             });
         },
         [rows],
@@ -86,7 +86,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                 [id]: { mode: GridRowModes.View, ignoreModifications: true },
             });
             setDeleteRowId(null);
-            setRows(prev => prev.filter(row => !(row.fjl_id === id && row.isNew)));
+            setRows(prev => prev.filter(row => !(row.id === id && row.isNew)));
         },
         [rowModesModel],
     );
@@ -171,7 +171,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
             }}
             pageSizeOptions={[10, 25, 50, 100]}
             rows={rows}
-            getRowId={row => row.fjl_id}
+            getRowId={row => row.id}
             columns={columns}
             editMode="row"
             rowModesModel={rowModesModel}

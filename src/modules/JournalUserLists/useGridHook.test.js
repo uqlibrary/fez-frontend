@@ -11,8 +11,8 @@ const createAction = jest.fn();
 const updateAction = jest.fn();
 const deleteAction = jest.fn();
 
-const existingRow = { fjl_id: '1', fjl_label: 'List one', fjl_is_public: true, fjl_ids: [] };
-const newRowData = { fjl_id: 'new-1', fjl_label: 'New list', fjl_is_public: false, isNew: true };
+const existingRow = { id: '1', label: 'List one', is_public: true };
+const newRowData = { id: 'new-1', label: 'New list', is_public: false, isNew: true };
 
 const setupHook = () => renderHook(() => useGrid({ createAction, updateAction, deleteAction }));
 
@@ -24,7 +24,7 @@ describe('useGrid', () => {
     describe('handleUpdateRow', () => {
         it('should replace only the matching row when creating succeeds, leaving others untouched', async () => {
             createAction.mockReturnValue({ type: 'CREATE' });
-            mockDispatch.mockResolvedValue({ data: { fjl_id: '2', fjl_label: 'New list', fjl_is_public: false } });
+            mockDispatch.mockResolvedValue({ data: { id: '2', label: 'New list', is_public: false } });
             const { result } = setupHook();
 
             act(() => {
@@ -35,10 +35,7 @@ describe('useGrid', () => {
                 await result.current.handleUpdateRow(newRowData, newRowData);
             });
 
-            expect(result.current.rows).toEqual([
-                existingRow,
-                { fjl_id: '2', fjl_label: 'New list', fjl_is_public: false },
-            ]);
+            expect(result.current.rows).toEqual([existingRow, { id: '2', label: 'New list', is_public: false }]);
         });
 
         it('should remove the row on create failure', async () => {
@@ -64,7 +61,7 @@ describe('useGrid', () => {
             mockDispatch.mockResolvedValue(undefined);
             const { result } = setupHook();
 
-            const newData = { ...existingRow, fjl_label: 'Updated label' };
+            const newData = { ...existingRow, label: 'Updated label' };
             let updated;
             await act(async () => {
                 updated = await result.current.handleUpdateRow(newData, existingRow);
@@ -79,7 +76,7 @@ describe('useGrid', () => {
             mockDispatch.mockRejectedValue(new Error('update failed'));
             const { result } = setupHook();
 
-            const newData = { ...existingRow, fjl_label: 'Updated label' };
+            const newData = { ...existingRow, label: 'Updated label' };
             let returned;
             await act(async () => {
                 returned = await result.current.handleUpdateRow(newData, existingRow);
@@ -135,10 +132,10 @@ describe('useGrid', () => {
             });
 
             await act(async () => {
-                await result.current.handleDeleteRow(existingRow.fjl_id);
+                await result.current.handleDeleteRow(existingRow.id);
             });
 
-            expect(deleteAction).toHaveBeenCalledWith(existingRow.fjl_id);
+            expect(deleteAction).toHaveBeenCalledWith(existingRow.id);
             expect(result.current.rows).toEqual([]);
             expect(result.current.deleteRowId).toBeNull();
         });
@@ -151,11 +148,11 @@ describe('useGrid', () => {
 
             act(() => {
                 result.current.setRows([existingRow]);
-                result.current.setDeleteRowId(existingRow.fjl_id);
+                result.current.setDeleteRowId(existingRow.id);
             });
 
             await act(async () => {
-                await result.current.handleDeleteRow(existingRow.fjl_id);
+                await result.current.handleDeleteRow(existingRow.id);
             });
 
             expect(consoleErrorSpy).toHaveBeenCalled();

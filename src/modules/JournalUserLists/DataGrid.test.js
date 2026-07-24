@@ -23,9 +23,9 @@ const updateAction = jest.fn();
 const deleteAction = jest.fn();
 
 const data = [
-    { fjl_id: 1, fjl_label: 'List one', fjl_is_public: true, fjl_ids: [1, 2] },
-    { fjl_id: 2, fjl_label: 'List two', fjl_is_public: false, fjl_ids: [] },
-    { fjl_id: 3, fjl_label: JOURNAL_FAVOURITE_LIST_LABEL, fjl_is_public: true, fjl_ids: [1, 2] },
+    { id: 1, label: 'List one', is_public: true },
+    { id: 2, label: 'List two', is_public: false },
+    { id: 3, label: JOURNAL_FAVOURITE_LIST_LABEL, is_public: true },
 ];
 
 const setup = (testProps = {}, render = defaultRender) => {
@@ -214,6 +214,6 @@ describe('DataGrid', () => {
         const { getByTestId } = setup();
 
         const listLink = getByTestId('fjl-items-link-1').querySelector('a');
-        expect(listLink).toHaveAttribute('href', pathConfig.journals.favourites(data[0].fjl_id));
+        expect(listLink).toHaveAttribute('href', pathConfig.journals.favourites(data[0].id));
     });
 });

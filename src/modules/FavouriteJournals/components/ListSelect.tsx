@@ -31,8 +31,8 @@ const ListSelect: React.FC<ListSelectProps> = ({ lists, loading, ...props }) => 
                 }}
             >
                 {lists.map((item: FezJournalUserList) => (
-                    <MenuItem key={item.fjl_id} value={item.fjl_id}>
-                        {item.fjl_label}
+                    <MenuItem key={item.id} value={item.id}>
+                        {item.label}
                     </MenuItem>
                 ))}
             </Select>

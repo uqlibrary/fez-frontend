@@ -5,12 +5,12 @@ import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 
 const lists = [
     {
-        fjl_id: 1,
-        fjl_label: 'List 1',
+        id: 1,
+        label: 'List 1',
     },
     {
-        fjl_id: 2,
-        fjl_label: JOURNAL_FAVOURITE_LIST_LABEL,
+        id: 2,
+        label: JOURNAL_FAVOURITE_LIST_LABEL,
     },
 ];
 

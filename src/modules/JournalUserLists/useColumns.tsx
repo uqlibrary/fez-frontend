@@ -54,7 +54,7 @@ export const useColumns = ({
     useMemo(
         () => [
             {
-                field: 'fjl_id',
+                field: 'id',
                 headerName: txt.columns.link.title,
                 editable: false,
                 sortable: false,
@@ -71,7 +71,7 @@ export const useColumns = ({
                 cellClassName: 'cell-styled',
             },
             {
-                field: 'fjl_label',
+                field: 'label',
                 headerName: txt.columns.label.title,
                 editable: true,
                 resizable: false,
@@ -112,7 +112,7 @@ export const useColumns = ({
                 cellClassName: 'cell-styled',
             },
             {
-                field: 'fjl_is_public',
+                field: 'is_public',
                 headerName: txt.columns.isPublic.title,
                 editable: true,
                 resizable: false,
@@ -171,7 +171,7 @@ export const useColumns = ({
                 cellClassName: 'cell-styled',
                 getActions: params => {
                     const rowId = params.id as number;
-                    const index = rows.findIndex(row => row.fjl_id === rowId);
+                    const index = rows.findIndex(row => row.id === rowId);
 
                     const isInEditMode = rowModesModel[rowId]?.mode === GridRowModes.Edit;
                     const isDeleting = rowId === deleteRowId;
