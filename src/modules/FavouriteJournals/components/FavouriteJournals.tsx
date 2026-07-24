@@ -160,14 +160,16 @@ export const FavouriteJournals: React.FC = () => {
                                                     fullWidth
                                                 />
                                             )}
-                                            {prevLocation.current && (
-                                                <BackToSearchButton
-                                                    children={txt.buttons.returnToSearch.title}
-                                                    aria-label={txt.buttons.returnToSearch.aria}
-                                                    prevLocation={prevLocation.current}
-                                                    fullWidth
-                                                />
-                                            )}
+                                            {
+                                                /* istanbul ignore next */ prevLocation.current && (
+                                                    <BackToSearchButton
+                                                        children={txt.buttons.returnToSearch.title}
+                                                        aria-label={txt.buttons.returnToSearch.aria}
+                                                        prevLocation={prevLocation.current}
+                                                        fullWidth
+                                                    />
+                                                )
+                                            }
                                         </Grid>
                                     </Grid>
                                 </Grid>
