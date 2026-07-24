@@ -122,7 +122,7 @@ export function fixRecord(data, myOpenAccess = false) {
         if (hasFilesToUpload || data.rek_link || hasAddedContentIndicators) {
             patchRecordRequest = {
                 rek_pid: data.publication.rek_pid,
-                ...transformers.getRecordLinkSearchKey(data),
+                ...transformers.getRecordLinkSearchKeyExistingAndNew(data),
                 ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
                 ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
             };

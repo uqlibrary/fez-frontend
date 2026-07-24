@@ -286,6 +286,22 @@ const myRecordsList = {
             "Cortical actin network",
         ],
         "fez_record_search_key_language": ["eng"],
+        "fez_record_search_key_link": [{
+            rek_link: 'https://link1.au',
+            rek_link_order: 1,
+        },{
+            rek_link: 'https://link2.au',
+            rek_link_order: 2,
+        },
+        ],
+        "fez_record_search_key_link_description": [{
+            rek_link_description: 'desc1',
+            rek_link_order: 1,
+        },{
+            rek_link: 'desc2',
+            rek_link_order: 2,
+        },
+        ],
         "fez_record_search_key_oa_status": {
             "rek_oa_status": 453692,
             "rek_oa_status_lookup": "Not yet assessed"
