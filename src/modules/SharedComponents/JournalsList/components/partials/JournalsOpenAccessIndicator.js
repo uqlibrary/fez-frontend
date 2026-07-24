@@ -97,7 +97,9 @@ const JournalsOpenAccessIndicator = ({
 
     const getIcon = () => {
         if (showS2O) return 'S2O';
-        if (embargoPeriod) return `${embargoPeriod}M`;
+        if (embargoPeriod?.amount) {
+            return `${embargoPeriod.amount}${embargoPeriod.unit?.charAt(0)?.toUpperCase() || ''}`;
+        }
         return <Icon color="white" sx={{ width: 'auto', height: '18px' }} />;
     };
 
@@ -155,7 +157,7 @@ JournalsOpenAccessIndicator.propTypes = {
     status: PropTypes.oneOf(['open', 'cap', 'embargo', 'fee']).isRequired,
     showDiamond: PropTypes.bool,
     showS2O: PropTypes.bool,
-    embargoPeriod: PropTypes.number,
+    embargoPeriod: PropTypes.object,
     tooltip: PropTypes.string,
     label: PropTypes.string,
 };

@@ -4833,7 +4833,7 @@ export default {
                     },
                     accepted: {
                         open: 'Immediate access via UQ eSpace',
-                        embargo: months => `${months} months delayed access via UQ eSpace`,
+                        embargo: period => `${period.amount} ${period.unit} delayed access via UQ eSpace`,
                     },
                 },
             },
