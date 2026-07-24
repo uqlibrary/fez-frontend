@@ -149,7 +149,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.find(i => i.path === '/journals/favourites/:id?')).not.toBeUndefined();
+        expect(testRoutes.find(i => i.path === '/journals/favourites/:id')).not.toBeUndefined();
         expect(testRoutes.length).toEqual(32);
     });
 

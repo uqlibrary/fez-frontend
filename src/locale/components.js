@@ -4477,7 +4477,7 @@ export default {
             },
         },
         favouriteJournals: {
-            title: 'Preferred Journals List',
+            title: 'Favourite Journals List',
             buttons: {
                 delete: {
                     title: 'REMOVE FROM LIST',
@@ -4534,7 +4534,7 @@ export default {
                     items: {
                         title: 'Items',
                         link: {
-                            title: 'Click to manage items in a new tab',
+                            title: 'Click to manage view Items',
                         },
                     },
                 },
@@ -4819,8 +4819,8 @@ export default {
                 },
                 buttons: {
                     myFavouriteJournals: {
-                        title: 'My Preferred Journals',
-                        aria: 'My Preferred Journals',
+                        title: 'My Favourites Lists',
+                        aria: 'My Favourites Lists',
                     },
                     browseAllJournals: {
                         title: 'Browse all journals',
@@ -4892,10 +4892,6 @@ export default {
             journalFacetsFilter: {
                 title: 'Refine results',
                 resetButtonText: 'Clear all filters',
-                favoriteFilter: {
-                    displayTitle: 'Favourite Journals',
-                    activeFilter: 'Show journals favourited',
-                },
                 help: {
                     title: 'Refine results',
                     text: (

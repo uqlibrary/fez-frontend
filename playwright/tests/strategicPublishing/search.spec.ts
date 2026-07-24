@@ -139,7 +139,7 @@ test.describe('Strategic Publishing - Search', () => {
 
             await expect(
                 page.getByTestId('journal-search-facets').locator('[data-testid="facets-filter"] nav > div'),
-            ).toHaveCount(9);
+            ).toHaveCount(8);
 
             // Select facets
             await page.locator('[id="clickable-facet-category-listed-in"]').click();

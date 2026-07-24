@@ -157,25 +157,6 @@ describe('FavouriteJournals', () => {
         expect(deleteListItems.mock.calls[0][0].ids).toHaveLength(1);
     });
 
-    it('should render "empty" message when there is no list selected and no lists exist', () => {
-        const { queryByTestId, getByTestId } = setup({ listId: '', listsState: { data: [] } });
-
-        expect(queryByTestId('remove-from-favourites-button')).not.toBeInTheDocument();
-        expect(getByTestId('favourite-lists-empty')).toBeInTheDocument();
-    });
-
-    it('should render "none selected" message when there is no list selected but lists exist', () => {
-        const { getByTestId } = setup({
-            listId: '',
-            listsState: { data: { data: [{ id: '123', name: 'List A' }] } },
-        });
-
-        expect(getByTestId('favourite-lists-empty')).toBeInTheDocument();
-        expect(getByTestId('favourite-lists-empty').textContent).not.toEqual(
-            'You haven\'t created any favourite lists yet. Use the "Add to favourites" button on the results page to add favourites.',
-        );
-    });
-
     it('should not load list items when no list is selected', () => {
         setup({ listId: '' });
 

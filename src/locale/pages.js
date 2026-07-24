@@ -1329,7 +1329,7 @@ export default {
             loadingMessage: 'Loading editorial appointments',
         },
         journalUserLists: {
-            title: 'Preferred Journals Lists',
+            title: 'Favourite Journals Lists',
             loadingMessage: 'Loading lists',
         },
         journal: {

@@ -47,12 +47,6 @@ describe('Search Journals Facets component', () => {
         useLocation.mockClear();
     });
 
-    it('should render favourite facets if no facets are provided by the api', () => {
-        const { getByText } = setup(emptyFacets);
-
-        expect(getByText('Favourite Journals')).toBeInTheDocument();
-    });
-
     it('should render the component categories and nested items that match the input data', () => {
         const { getByTestId, queryByText } = setup(facets);
 
