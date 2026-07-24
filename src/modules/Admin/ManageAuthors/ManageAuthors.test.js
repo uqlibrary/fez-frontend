@@ -9,6 +9,13 @@ import {
     fireEvent,
     userEvent,
     expectApiRequestToMatchSnapshot,
+    waitToBeEnabled,
+    api,
+    waitForText,
+    screen,
+    assertNotInTheDocument,
+    waitForTextToBeRemoved,
+    waitToHaveBeenLastCalledWith,
 } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
@@ -16,6 +23,7 @@ import * as repository from 'repositories';
 
 jest.mock('js-cookie');
 import Cookie from 'js-cookie';
+import { locale } from '../../../locale';
 
 const setup = (testProps = {}) => {
     return render(
@@ -32,7 +40,7 @@ describe('ManageAuthors', () => {
     });
 
     afterEach(() => {
-        mockApi.reset();
+        api.reset();
         jest.clearAllMocks();
     });
 
@@ -688,6 +696,7 @@ describe('ManageAuthors', () => {
         const { getByTestId } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         fireEvent.click(getByTestId('authors-add-new-author'));
         await waitFor(() => expect(getByTestId('aut-fname-input')).toBeInTheDocument());
@@ -731,6 +740,7 @@ describe('ManageAuthors', () => {
 
         const { getByTestId, queryByTestId } = setup({});
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -1412,6 +1422,7 @@ describe('ManageAuthors', () => {
         const { getByTestId } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-search-input');
 
         await userEvent.type(getByTestId('authors-search-input'), 'test search');
 
@@ -1424,5 +1435,100 @@ describe('ManageAuthors', () => {
         );
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: '' }));
+    });
+
+    describe('author merging', () => {
+        const selectAuthor = async name => {
+            const row = screen.getByDisplayValue(name).closest('tr');
+            await userEvent.click(within(row).getByRole('checkbox'));
+        };
+
+        const assertSelected = name => {
+            const row = screen.getByDisplayValue(name).closest('tr');
+            expect(within(row).getByRole('checkbox')).toBeChecked();
+        };
+
+        const assertNotSelected = name => {
+            const row = screen.getByDisplayValue(name).closest('tr');
+            expect(within(row).getByRole('checkbox')).not.toBeChecked();
+        };
+
+        beforeEach(() =>
+            api.mock.authors.search({
+                data: [
+                    {
+                        aut_id: 1,
+                        aut_org_username: 'staff 1',
+                        aut_display_name: 'staff1',
+                    },
+                    {
+                        aut_id: 2,
+                        aut_student_username: 's001',
+                        aut_display_name: 'student 1',
+                    },
+                ],
+            }),
+        );
+
+        it('should send `merge authors` request', async () => {
+            api.mock.authors.merge({ staffId: 1, studentId: 2 });
+            const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+            const { getByTestId, queryByText } = setup();
+            await waitForText('staff 1');
+
+            await selectAuthor('staff 1');
+            await selectAuthor('student 1');
+            await waitToBeEnabled('authors-merge-button');
+
+            assertNotInTheDocument('cancel-authors-merge-confirmation');
+            await userEvent.click(getByTestId('authors-merge-button'));
+            await waitForText(locale.components.manageAuthors.form.mergeConfirmationLocale.confirmationTitle);
+
+            // test dismissing the confirmation dialog
+            await userEvent.click(getByTestId('cancel-authors-merge-confirmation'));
+            await waitForTextToBeRemoved(
+                locale.components.manageAuthors.form.mergeConfirmationLocale.confirmationTitle,
+            );
+            // selection should be kept
+            await userEvent.click(getByTestId('authors-merge-button'));
+            await waitForText(locale.components.manageAuthors.form.mergeConfirmationLocale.confirmationTitle);
+            await userEvent.click(getByTestId('confirm-authors-merge-confirmation'));
+
+            // assert confirmation message
+            await waitToHaveBeenLastCalledWith(showAppAlert, {
+                ...locale.components.manageAuthors.authorMergingSuccessAlert,
+                dismissAction: expect.any(Function),
+            });
+            assertNotSelected('staff 1');
+            assertNotSelected('student 1');
+            assertNotInTheDocument(queryByText('student 1'));
+            assertNotInTheDocument('cancel-authors-merge-confirmation');
+        });
+
+        it('should display error from server on merge failure', async () => {
+            const error = 'Failed to merge authors';
+            api.mock.authors.merge({ staffId: 1, studentId: 2, status: 422, data: { message: error } });
+            const showAppAlert = jest.spyOn(AppActions, 'showAppAlert');
+            const { getByTestId } = setup();
+            await waitForText('staff 1');
+
+            await selectAuthor('staff 1');
+            await selectAuthor('student 1');
+            await waitToBeEnabled('authors-merge-button');
+
+            assertNotInTheDocument('cancel-authors-merge-confirmation');
+            await userEvent.click(getByTestId('authors-merge-button'));
+            await waitForText(locale.components.manageAuthors.form.mergeConfirmationLocale.confirmationTitle);
+            await userEvent.click(getByTestId('confirm-authors-merge-confirmation'));
+
+            // assert error message
+            await waitToHaveBeenLastCalledWith(showAppAlert, {
+                ...locale.components.manageAuthors.authorMergingErrorAlert,
+                dismissAction: expect.any(Function),
+                message: expect.stringContaining(error),
+            });
+            assertSelected('staff 1');
+            assertSelected('student 1');
+        });
     });
 });

@@ -11,9 +11,9 @@ import {
     fireEvent,
     createMatchMedia,
     waitForTextToBeRemoved,
-    assertMissingElement,
+    assertNotInTheDocument,
     api,
-    waitElementToBeInDocument,
+    waitElementToBeInTheDocument,
     userEvent,
     within,
 } from 'test-utils';
@@ -1058,7 +1058,7 @@ describe('ViewJournal', () => {
             setup();
 
             await waitForTextToBeRemoved('Loading journal data');
-            assertMissingElement('publish-as-oa-button');
+            assertNotInTheDocument('publish-as-oa-button');
         });
 
         describe('search workflows', () => {
@@ -1079,7 +1079,7 @@ describe('ViewJournal', () => {
                 setup();
 
                 await waitForTextToBeRemoved('Loading journal data');
-                assertMissingElement('publish-as-oa-button');
+                assertNotInTheDocument('publish-as-oa-button');
             });
 
             describe("should display button for search workflows when OA status = `fee` and it's not embargoed", () => {
@@ -1088,7 +1088,7 @@ describe('ViewJournal', () => {
                     api.mock.journals.get({ id: '.*', data: { ...data } });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
@@ -1146,7 +1146,7 @@ describe('ViewJournal', () => {
                     });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
@@ -1192,7 +1192,7 @@ describe('ViewJournal', () => {
                     });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
@@ -1238,7 +1238,7 @@ describe('ViewJournal', () => {
                     });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
@@ -1284,7 +1284,7 @@ describe('ViewJournal', () => {
                     api.mock.journals.get({ id: '.*', data: { ...data } });
                     setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
 
                 it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
@@ -1300,7 +1300,7 @@ describe('ViewJournal', () => {
                     });
                     setup();
 
-                    assertMissingElement('publish-as-oa-button');
+                    assertNotInTheDocument('publish-as-oa-button');
                 });
             });
         });

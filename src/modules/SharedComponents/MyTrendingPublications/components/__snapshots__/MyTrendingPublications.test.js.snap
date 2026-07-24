@@ -416,9 +416,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 />
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                              />
-                              <div
                                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />
                             </div>
@@ -787,9 +784,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 />
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                              />
-                              <div
                                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />
                             </div>
@@ -1142,9 +1136,6 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   data-testid="oa-n/a-icon"
                                 />
                               </div>
-                              <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                              />
                               <div
                                 class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                               />

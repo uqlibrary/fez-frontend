@@ -8,4 +8,6 @@ export interface CoreAttributes {
 
 export interface FezAuthor extends Optional<CoreAttributes> {
     aut_id: number | string;
+    aut_student_username: string | null;
+    aut_org_username: string | null;
 }

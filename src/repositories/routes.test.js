@@ -717,6 +717,10 @@ describe('Backend routes method', () => {
         expect(routes.AUTHOR_API({ authorId: '12345' })).toEqual({ apiUrl: 'fez-authors/12345' });
     });
 
+    it('should construct url for AUTHOR_MERGE_API', () => {
+        expect(routes.AUTHOR_MERGE_API(1, 2)).toEqual({ apiUrl: 'fez-authors/1/merge/2' });
+    });
+
     it('should construct url for CURRENT_AUTHOR_API', () => {
         expect(routes.CURRENT_AUTHOR_API()).toEqual({ apiUrl: 'fez-authors' });
     });

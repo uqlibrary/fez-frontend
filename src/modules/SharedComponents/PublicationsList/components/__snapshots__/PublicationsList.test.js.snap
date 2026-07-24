@@ -81,9 +81,6 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -362,9 +359,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -708,9 +702,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -897,9 +888,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -1220,9 +1208,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -1550,9 +1535,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -1866,9 +1848,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -2188,9 +2167,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -2518,9 +2494,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -2821,9 +2794,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -3100,9 +3070,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -3429,9 +3396,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -3878,9 +3842,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -4172,9 +4133,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -4439,9 +4397,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -4748,9 +4703,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -5006,9 +4958,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -5285,9 +5234,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -5630,9 +5576,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -5981,9 +5924,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -6268,9 +6208,6 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
-                      <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
                     </div>
@@ -6480,9 +6417,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />
@@ -6809,9 +6743,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           data-testid="oa-n/a-icon"
                         />
                       </div>
-                      <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                      />
                       <div
                         class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                       />

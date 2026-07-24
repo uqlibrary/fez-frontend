@@ -5,8 +5,10 @@ import {
     deleteAuthorListItem,
     ingestFromScopus,
     loadAuthorList,
+    mergeAuthors,
     updateAuthorListItem,
 } from './manageAuthors';
+import { api } from 'test-utils';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as mockData from 'mock/data/testing/authorsList';
@@ -14,11 +16,10 @@ import * as mockData from 'mock/data/testing/authorsList';
 describe('author list actions', () => {
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
-        mockApi = setupMockAdapter();
     });
 
     afterEach(() => {
-        mockApi.reset();
+        api.reset();
     });
 
     describe('loadAuthorList action', () => {
@@ -327,6 +328,34 @@ describe('author list actions', () => {
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
             });
 
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('mergeAuthors', () => {
+        it('should dispatch expected actions on successful response', async () => {
+            api.mock.authors.merge({ staffId: 1, studentId: 2 });
+            const expectedActions = [actions.AUTHOR_MERGING, actions.AUTHOR_MERGING_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                mergeAuthors({ aut_id: 1, aut_org_username: 'test' }, { aut_id: 2, aut_student_username: 'test2' }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch expected actions on failed response', async () => {
+            const error = 'custom server error';
+            api.mock.authors.merge({ staffId: 1, studentId: 2, status: 422, data: { message: error } });
+            const expectedActions = [actions.AUTHOR_MERGING, actions.AUTHOR_MERGING_FAILED];
+
+            await expect(
+                mockActionsStore.dispatch(
+                    mergeAuthors({ aut_id: 1, aut_org_username: 'test' }, { aut_id: 2, aut_student_username: 'test2' }),
+                ),
+            ).rejects.toMatchObject({
+                status: 422,
+                message: error,
+            });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });

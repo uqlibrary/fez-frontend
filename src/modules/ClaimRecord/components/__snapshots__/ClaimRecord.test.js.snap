@@ -298,9 +298,6 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -933,9 +930,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                       data-testid="oa-n/a-icon"
                                     />
                                   </div>
-                                  <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
                                   <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
@@ -1730,9 +1724,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -2457,9 +2448,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       data-testid="oa-n/a-icon"
                                     />
                                   </div>
-                                  <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
                                   <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
@@ -3232,9 +3220,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       data-testid="oa-n/a-icon"
                                     />
                                   </div>
-                                  <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
                                   <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
@@ -4541,9 +4526,6 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -5813,9 +5795,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     />
                                   </div>
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
-                                  <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />
                                 </div>
@@ -6266,9 +6245,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       data-testid="oa-n/a-icon"
                                     />
                                   </div>
-                                  <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                  />
                                   <div
                                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                   />

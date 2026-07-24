@@ -439,9 +439,6 @@ exports[`Search record results should render a single claimable item with no aut
                                       />
                                     </div>
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
-                                    <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
                                   </div>
@@ -1218,9 +1215,6 @@ exports[`Search record results should render a single unclaimable item with no a
                                         data-testid="oa-n/a-icon"
                                       />
                                     </div>
-                                    <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
                                     <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
@@ -1999,9 +1993,6 @@ exports[`Search record results should render a single unclaimable item with no a
                                       />
                                     </div>
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
-                                    <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
                                   </div>
@@ -2778,9 +2769,6 @@ exports[`Search record results should render publications list with one publicat
                                         data-testid="oa-n/a-icon"
                                       />
                                     </div>
-                                    <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
                                     <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
