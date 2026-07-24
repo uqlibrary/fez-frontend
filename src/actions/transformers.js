@@ -76,31 +76,6 @@ export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimR
 export const getRecordLinkSearchKey = data => {
     if (!data.rek_link) return null;
 
-    return {
-        fez_record_search_key_link: [
-            {
-                rek_link: data.rek_link,
-                rek_link_order: 1,
-            },
-        ],
-        fez_record_search_key_link_description: [
-            {
-                rek_link_description:
-                    (!!data.rek_link_description && data.rek_link_description) || locale.global.defaultLinkDescription,
-                rek_link_description_order: 1,
-            },
-        ],
-    };
-};
-
-/* getRecordLinkSearchKeyExistingAndNew - returns link object formatted for record request
- * NOTE: link description is required to save link
- * @param {Object} form data may contain link attribute  {rek_link: {string}}
- * @returns {Object} formatted {fez_record_search_key_link*} for record request
- */
-export const getRecordLinkSearchKeyExistingAndNew = data => {
-    if (!data.rek_link) return null;
-
     const nextOrder =
         (data.publication.fez_record_search_key_link || []).reduce(
             (max, item) => Math.max(max, item.rek_link_order),
