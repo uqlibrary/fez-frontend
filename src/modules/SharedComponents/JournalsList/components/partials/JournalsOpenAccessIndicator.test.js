@@ -37,6 +37,14 @@ describe('JournalsOpenAccessIndicator', () => {
             const { getByTestId } = setup({ type: types.accepted, status: status.embargo });
             assertIndicator(getByTestId('open-access-testIndicator'), types.accepted, status.embargo);
         });
+        it('renders EMBARGO with no unit', () => {
+            const { getByTestId } = setup({
+                type: types.accepted,
+                status: status.embargo,
+                embargoPeriod: { amount: 1, unit: null },
+            });
+            assertIndicator(getByTestId('open-access-testIndicator'), types.accepted, status.embargo);
+        });
         it('renders FEE', () => {
             const { getByTestId } = setup({ type: types.accepted, status: status.fee });
             assertIndicator(getByTestId('open-access-testIndicator'), types.accepted, status.fee);

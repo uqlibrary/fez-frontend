@@ -6,6 +6,29 @@ import { isEmptyObject } from 'helpers/general';
 export const types = { published: 'published', accepted: 'accepted' };
 export const status = { open: 'open', cap: 'cap', embargo: 'embargo', fee: 'fee' };
 
+const embargoUnitToDays = { days: 1, weeks: 7, months: 30, years: 365 };
+
+const getEmbargoInDays = embargo => {
+    const unit = embargo?.srm_max_embargo_units?.toLowerCase();
+
+    if (!embargo?.srm_max_embargo_amount || !embargoUnitToDays[unit]) {
+        return 0;
+    }
+
+    return embargo.srm_max_embargo_amount * embargoUnitToDays[unit];
+};
+
+const getMaxEmbargo = issns =>
+    (issns || []).reduce((max, issn) => {
+        const embargo = issn.fez_sherpa_romeo;
+
+        if (embargo && getEmbargoInDays(embargo) > getEmbargoInDays(max)) {
+            return embargo;
+        }
+
+        return max;
+    }, null);
+
 export const getIndicatorProps = ({ type, data }) => {
     const indicatorProps = {
         type,
@@ -28,17 +51,18 @@ export const getIndicatorProps = ({ type, data }) => {
 
     if (type === types.accepted) {
         // Embargo period and open access from sherpa romeo
-        const maxEmbargo = data.fez_journal_issn?.reduce((max, issn) => {
-            return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
-        }, 0);
+        const maxEmbargo = getMaxEmbargo(data.fez_journal_issn);
         const openAccess = data.fez_journal_issn?.reduce(
             (max, issn) => issn.fez_sherpa_romeo?.srm_open_access || max,
             false,
         );
 
-        if (!!maxEmbargo) {
+        if (maxEmbargo?.srm_max_embargo_amount) {
             indicatorProps.status = status.embargo;
-            indicatorProps.embargoPeriod = maxEmbargo;
+            indicatorProps.embargoPeriod = {
+                amount: maxEmbargo.srm_max_embargo_amount,
+                unit: maxEmbargo.srm_max_embargo_units,
+            };
             // should not display Published Fee and Accepted Open Icons at the same time
         } else if (
             openAccess &&
