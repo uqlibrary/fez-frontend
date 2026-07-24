@@ -18,7 +18,7 @@ const getEmbargoInDays = embargo => {
     return embargo.srm_max_embargo_amount * embargoUnitToDays[unit];
 };
 
-const getMaxEmbargo = issns =>
+export const getMaxEmbargo = issns =>
     (issns || []).reduce((max, issn) => {
         const embargo = issn.fez_sherpa_romeo;
 
