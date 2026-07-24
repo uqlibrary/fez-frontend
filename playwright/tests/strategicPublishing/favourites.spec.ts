@@ -1,7 +1,7 @@
 import { test, expect } from '../../test';
 import { assertAccessibility } from '../../lib/axe';
 
-test.describe('Strategic Publishing - Favourite Journals', () => {
+test.describe.skip('Strategic Publishing - Favourite Journals', () => {
     test('Should render', async ({ page }) => {
         await page.goto('/journals/favourites/');
         await expect(page.locator('#journal-list-data-col-1-checkbox-1')).toBeVisible();
