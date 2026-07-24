@@ -46,6 +46,7 @@ const hrdStudentAuthor = {
     "aut_rid_last_updated": null,
     "aut_publons_id": null,
     "aut_student_username": "s2222222",
+    "aut_rhd_cohort" : 1,
 };
 
 export const accounts = {
@@ -332,7 +333,8 @@ export const authorsSearch = {
         "is_super_administrator": 0,
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
-        "aut_student_username": null
+        "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 61940,
@@ -362,6 +364,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 553,
@@ -391,6 +394,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 608,
@@ -420,6 +424,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 639,
@@ -449,6 +454,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 102,
@@ -478,6 +484,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 485,
@@ -507,6 +514,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 241,
@@ -536,6 +544,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 1015,
@@ -565,6 +574,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": "1975-12-15",
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 1086,
@@ -594,6 +604,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": null,
         "aut_publons_id": null,
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 906,
@@ -623,6 +634,7 @@ export const authorsSearch = {
         "aut_rid_last_updated": "2017-02-24",
         "aut_publons_id": "1",
         "aut_student_username": null,
+        "aut_rhd_cohort": 0,
     },
     {
         "aut_id": 20288,
@@ -652,7 +664,40 @@ export const authorsSearch = {
         "aut_rid_last_updated": "2016-01-08",
         "aut_publons_id": null,
         "aut_student_username": null,
-    }],
+        "aut_rhd_cohort": 0,
+    },
+    {
+        pol_id: 4,
+        "aut_id": 44444,
+        "aut_org_username": null,
+        "aut_org_staff_id": null,
+        "aut_org_student_id": "2222222",
+        "aut_email": null,
+        "aut_display_name": "HDR Student, N",
+        "aut_fname": "N",
+        "aut_mname": null,
+        "aut_lname": "HDR Student",
+        "aut_title": "Miss",
+        "aut_position": null,
+        "aut_homepage_link": null,
+        "aut_created_date": "2017-11-03T01:00:24Z",
+        "aut_update_date": "2017-12-21T07:31:09Z",
+        "aut_external_id": null,
+        "aut_ref_num": null,
+        "aut_researcher_id": null,
+        "aut_scopus_id": null,
+        "aut_mypub_url": null,
+        "aut_rid_password": null,
+        "aut_people_australia_id": null,
+        "aut_description": null,
+        "aut_orcid_id": '12345',
+        "aut_google_scholar_id": null,
+        "aut_rid_last_updated": null,
+        "aut_publons_id": null,
+        "aut_student_username": "s1111111",
+        "aut_rhd_cohort": 1,
+    },
+],
 };
 
 export const currentAuthor = {

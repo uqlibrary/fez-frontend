@@ -10,9 +10,8 @@ import Grid from '@mui/material/GridLegacy';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { isEmptyStr } from './utils';
 import { GridFilterInputSingleSelect } from '@mui/x-data-grid';
-import { isURL } from '../../helpers/general';
+import { isEmptyString, isURL } from '../../helpers/general';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 
@@ -467,7 +466,7 @@ export const exportReportFilters = {
         },
         validator: ({ state, locale, maxDateRangeUnit = defaultDateRangeUnit }) => {
             if (!state.report?.sel_bindings?.includes(':date_from')) return {};
-            if (isEmptyStr(state.filters.date_from)) return { date_from: locale.required };
+            if (isEmptyString(state.filters.date_from)) return { date_from: locale.required };
 
             const mFrom = moment(state.filters.date_from);
             if (!mFrom.isValid()) return { date_from: locale.invalidDate };
@@ -556,7 +555,7 @@ export const exportReportFilters = {
         },
         validator: ({ state, locale }) => {
             if (!state.report?.sel_bindings?.includes(':date_to')) return {};
-            if (isEmptyStr(state.filters.date_to)) return { date_to: locale.required };
+            if (isEmptyString(state.filters.date_to)) return { date_to: locale.required };
 
             const mTo = moment(state.filters.date_to);
             if (!mTo.isValid()) return { date_to: locale.invalidDate };

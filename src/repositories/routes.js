@@ -164,8 +164,12 @@ export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, auth
     return { apiUrl: 'fez-authors' };
 };
 
+export const AUTHOR_MERGE_API = (staffId, studentId) => ({
+    apiUrl: `fez-authors/${staffId}/merge/${studentId}`,
+});
+
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
-    apiUrl: `authors/details/${userId}`,
+    apiUrl: `fez-authors/details/${userId}`,
 });
 
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
@@ -175,7 +179,9 @@ export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
 
 // academic stats apis
 
-export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: `academic/${userId}/hindex` });
+export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({
+    apiUrl: `fez-authors/details/${userId}/hindex`,
+});
 export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-trending' });
 
 // lookup apis
@@ -326,6 +332,16 @@ export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = values => ({
         },
     },
 });
+export const AUTHOR_STATS_BY_AUTHOR_ID_API = ({ authorId }) => ({
+    apiUrl: 'records/search',
+    options: {
+        params: {
+            'key[rek_author_id][value]': authorId,
+            'filters[stats_only]': true,
+        },
+    },
+});
+
 export const TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/trending' });
 
 export const formatSearchQueryParams = ({ result, key, searchQueryParams }) => {

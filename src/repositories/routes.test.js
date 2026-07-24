@@ -634,7 +634,7 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for AUTHOR_DETAILS_API', () => {
-        expect(routes.AUTHOR_DETAILS_API({ userId: '410' })).toEqual({ apiUrl: 'authors/details/410' });
+        expect(routes.AUTHOR_DETAILS_API({ userId: '410' })).toEqual({ apiUrl: 'fez-authors/details/410' });
     });
 
     it('should construct url for VOCABULARIES_API', () => {
@@ -702,7 +702,7 @@ describe('Backend routes method', () => {
 
     it('should construct url for ACADEMIC_STATS_PUBLICATION_HINDEX_API', () => {
         expect(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: '12345' })).toEqual({
-            apiUrl: 'academic/12345/hindex',
+            apiUrl: 'fez-authors/details/12345/hindex',
         });
     });
 
@@ -715,6 +715,10 @@ describe('Backend routes method', () => {
 
     it('should construct url for AUTHOR_API', () => {
         expect(routes.AUTHOR_API({ authorId: '12345' })).toEqual({ apiUrl: 'fez-authors/12345' });
+    });
+
+    it('should construct url for AUTHOR_MERGE_API', () => {
+        expect(routes.AUTHOR_MERGE_API(1, 2)).toEqual({ apiUrl: 'fez-authors/1/merge/2' });
     });
 
     it('should construct url for CURRENT_AUTHOR_API', () => {

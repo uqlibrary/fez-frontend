@@ -438,6 +438,12 @@ export const isEmptyObject = object =>
     object && typeof object === 'object' && !(object instanceof Array) ? Object.keys(object)?.length === 0 : false;
 
 /**
+ * @param string
+ * @return {boolean}
+ */
+export const isEmptyString = string => typeof string !== 'string' || !string.trim();
+
+/**
  * Get a subset of an object for a given set of keys
  * Returns a new object without given keys. Use inclusive=true for the opposite.
  * @param object
@@ -602,10 +608,10 @@ export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) 
 
 /**
  * @param children
- * @param {Function} callback
+ * @param {Function?} callback
  * @return {(): React.JSX.Element}
  */
-export const withErrorBoundary = (Component, callback) => {
+export const withErrorBoundary = (Component, callback = undefined) => {
     const WrappedComponent = props => (
         <TryCatch callback={callback}>
             <Component {...props} />
