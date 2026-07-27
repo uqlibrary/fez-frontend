@@ -39,6 +39,7 @@ export interface AlertProps {
     title?: string;
     type?: AlertType;
     wiggle?: boolean | null;
+    sx?: object;
 }
 
 declare const Alert: React.FC<AlertProps>;
