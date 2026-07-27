@@ -7,7 +7,7 @@ import Grid from '@mui/material/GridLegacy';
 import AdminActions from './AdminActions';
 
 const TitleWithFavouriteButton = props => {
-    const { journal, showAdminActions = false } = props;
+    const { journal, showAdminActions } = props;
     const isMobileView = useIsMobileView();
 
     return (

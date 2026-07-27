@@ -48,9 +48,9 @@ describe('Search Journals Facets component', () => {
     });
 
     it('should not render favourite facets if no facets are provided by the api', () => {
-        const { getByText } = setup(emptyFacets);
+        const { queryByText } = setup(emptyFacets);
 
-        expect(getByText('Favourite Journals')).not.toBeInTheDocument();
+        expect(queryByText('Favourite Journals')).not.toBeInTheDocument();
     });
 
     it('should remove the favourite journals filter when deselected', async () => {

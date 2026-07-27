@@ -8,7 +8,6 @@ import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
 import SearchJournals, { areKeywordsDifferent } from './SearchJournals';
 import {
     mockData,
-    mockDataWithFilterFacets,
     mockDataWithFilterFacetsAndPagination,
 } from 'mock/data/testing/journals/journalSearchResults';
 

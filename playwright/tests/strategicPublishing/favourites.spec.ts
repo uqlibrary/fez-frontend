@@ -2,12 +2,6 @@ import { test, expect } from '../../test';
 import { assertAccessibility } from '../../lib/axe';
 
 test.describe.skip('Strategic Publishing - Favourite Journals', () => {
-    test('Should render', async ({ page }) => {
-        await page.goto('/journals/favourites/');
-        await expect(page.locator('#journal-list-data-col-1-checkbox-1')).toBeVisible();
-        await assertAccessibility(page, 'div.StandardPage');
-    });
-
     test('Should toggle select all', async ({ page }) => {
         await page.goto('/journals/favourites/');
         await expect(page.locator('#journal-list-header-col-1-select-all')).not.toBeChecked();
@@ -49,12 +43,6 @@ test.describe.skip('Strategic Publishing - Favourite Journals', () => {
         await expect(page.locator('#journal-list-data-col-1-checkbox-1')).not.toBeChecked();
 
         await assertAccessibility(page, 'div.StandardPage');
-    });
-
-    test('Should navigate to search', async ({ page }) => {
-        await page.goto('/journals/favourites/');
-        await page.getByTestId('return-to-search-results-button').click();
-        await expect(page).toHaveURL(/.*\/journals\/search\//);
     });
 
     test('Should remove a favourite journal and navigate back to search results', async ({ page }) => {

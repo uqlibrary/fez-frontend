@@ -233,4 +233,11 @@ describe('FavouriteJournals', () => {
         await userEvent.click(getByTestId('to-favourite-journal-lists-button'));
         expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.lists);
     });
+
+    it('should navigate to search', async () => {
+        const { getByTestId } = setup();
+
+        await userEvent.click(getByTestId('return-to-search-results-button'));
+        expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.search);
+    });
 });
