@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@mui/material/Grid';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../../SearchJournals/hooks';
@@ -81,7 +81,16 @@ export const FavouriteJournals: React.FC = () => {
     }, [listId, page, pageSize, sortBy, sortDirection]);
 
     /* istanbul ignore next */
-    const handleListSelection = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleListSelection = (
+        event:
+            | ChangeEvent<HTMLInputElement, Element>
+            | (Event & {
+                  target: {
+                      value: unknown;
+                      name: string;
+                  };
+              }),
+    ) => {
         setListId(String(event.target.value));
     };
 
@@ -94,7 +103,6 @@ export const FavouriteJournals: React.FC = () => {
                     lists={listsResponse?.data}
                     value={listId}
                     disabled={loading}
-                    //@ts-expect-error
                     onChange={handleListSelection}
                 />
             </Box>

@@ -15,6 +15,13 @@ import mockData from '../../../mock/data/testing/journals/journals';
 import * as redux from 'react-redux';
 import { loadLists, loadListItems, deleteListItems } from 'actions/journalUserLists';
 import { useDispatchOnce } from 'hooks/useDispatchOnce';
+import { pathConfig } from '../../../config';
+
+const mockNavigate = jest.fn();
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
+    useNavigate: () => mockNavigate,
+}));
 
 jest.mock('actions/journalUserLists', () => ({
     loadLists: jest.fn(() => ({ type: 'LOAD_LISTS' })),
@@ -218,5 +225,12 @@ describe('FavouriteJournals', () => {
         await userEvent.selectOptions(getByTestId('list-select'), '456');
 
         expect(loadListItems).toHaveBeenLastCalledWith(expect.objectContaining({ id: '456' }));
+    });
+
+    it('should navigate to favourite journal lists', async () => {
+        const { getByTestId } = setup();
+
+        await userEvent.click(getByTestId('to-favourite-journal-lists-button'));
+        expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.lists);
     });
 });
