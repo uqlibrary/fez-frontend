@@ -577,10 +577,6 @@ export const getMenuConfig = (
                 linkTo: pathConfig.journals.search,
                 ...locale.menu.journals.search,
             },
-            {
-                linkTo: pathConfig.journals.lists,
-                ...locale.menu.journals.lists,
-            },
         ]) ||
         [];
 
