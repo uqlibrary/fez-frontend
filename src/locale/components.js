@@ -4680,6 +4680,15 @@ export default {
                             answer: (
                                 <ul>
                                     <li>
+                                        See{' '}
+                                        <a
+                                            target="_blank"
+                                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/journal-search"
+                                        >
+                                            Journal Search guide
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a target="_blank" href="https://web.library.uq.edu.au/contact-us">
                                             Contact us for help
                                         </a>
@@ -4780,7 +4789,15 @@ export default {
                             <li>Identify journals with open access or pre-paid charges</li>
                             <li>Understand, refine and rank results by indexing and a range of metrics</li>
                             <li>Create a list of favourite journals</li>
-                            <li>Investigate journal scope, peer review processes and publisher details.</li>
+                            <li>Investigate journal scope, peer review processes and publisher details</li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/journal-search"
+                                >
+                                    More information
+                                </a>
+                            </li>
                         </ul>
                     </React.Fragment>
                 ),
