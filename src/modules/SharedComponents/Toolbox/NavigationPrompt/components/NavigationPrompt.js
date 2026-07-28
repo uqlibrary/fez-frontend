@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useBlocker, useNavigate } from 'react-router';
 
@@ -9,49 +9,64 @@ import { useBlocker, useNavigate } from 'react-router';
  * https://gist.github.com/bummzack/a586533607ece482475e0c211790dd50
  */
 const NavigationPrompt = ({ when, children }) => {
-    const [nextLocation, setNextLocation] = useState(null);
+    const [pendingLocation, setPendingLocation] = useState(null);
     const [confirmationBox, setConfirmationBox] = useState(null);
+    const [phase, setPhase] = useState('idle');
     const navigate = useNavigate();
 
-    const blockNavigation = (currentLocation, nextLocation) => {
-        if (when && nextLocation.pathname !== currentLocation.pathname) {
-            setNextLocation(nextLocation);
+    const resetPromptState = useCallback(() => {
+        setPendingLocation(null);
+        setPhase('idle');
+    }, []);
+
+    const blockNavigation = useCallback(
+        (currentLocation, nextLocation) => {
+            if (!when || !nextLocation?.pathname || nextLocation.pathname === currentLocation.pathname) {
+                return false;
+            }
+
+            if (phase === 'blocked' && pendingLocation?.pathname === nextLocation.pathname) {
+                return true;
+            }
+
+            setPendingLocation(nextLocation);
+            setPhase('blocked');
             confirmationBox?.showConfirmation?.();
             return true;
-        }
-
-        return false;
-    };
+        },
+        [confirmationBox, pendingLocation, phase, when],
+    );
 
     const blocker = useBlocker(({ currentLocation, nextLocation }) => blockNavigation(currentLocation, nextLocation));
 
-    const navigateToNextLocation = () => {
-        // When blocked, let react-router continue the blocked transition.
+    const navigateToNextLocation = useCallback(() => {
         if (blocker?.state === 'blocked' && blocker?.proceed) {
+            confirmationBox?.hideConfirmation?.();
+            setPhase('resolving');
             blocker.proceed();
-            setNextLocation(null);
+            resetPromptState();
             return;
         }
 
-        // Fallback for non-blocked flows.
-        if (nextLocation?.pathname) {
-            navigate(nextLocation.pathname);
+        if (pendingLocation?.pathname) {
+            navigate(pendingLocation.pathname);
+            resetPromptState();
         }
-        setNextLocation(null);
-    };
+    }, [blocker, confirmationBox, navigate, pendingLocation, resetPromptState]);
 
-    const setNavigationConfirmation = ref => {
+    const setNavigationConfirmation = useCallback(ref => {
         setConfirmationBox(ref);
-    };
+    }, []);
 
-    const _onCancel = () => {
+    const _onCancel = useCallback(() => {
+        confirmationBox?.hideConfirmation?.();
         blocker?.reset?.();
-        setNextLocation(null);
-    };
+        resetPromptState();
+    }, [blocker, confirmationBox, resetPromptState]);
 
-    const _onConfirm = () => {
+    const _onConfirm = useCallback(() => {
         navigateToNextLocation();
-    };
+    }, [navigateToNextLocation]);
 
     return <div>{children(setNavigationConfirmation, _onConfirm, _onCancel)}</div>;
 };

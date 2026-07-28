@@ -1,4 +1,5 @@
 import React from 'react';
+import { fireEvent } from '@testing-library/react';
 import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 
 import { render, WithRouter } from 'test-utils';
@@ -57,5 +58,48 @@ describe('NavigationPrompt component', () => {
             when: false,
         });
         expect(container).toMatchSnapshot();
+    });
+
+    it('should close the confirmation dialog before proceeding', () => {
+        const proceed = jest.fn();
+        const reset = jest.fn();
+        const confirmationBox = {
+            showConfirmation: jest.fn(),
+            hideConfirmation: jest.fn(),
+        };
+        let didBlock = false;
+
+        useBlocker.mockImplementation(f => {
+            if (!didBlock) {
+                didBlock = true;
+                f({ currentLocation: { pathname: 'current' }, nextLocation: { pathname: 'next' } });
+            }
+            return { state: 'blocked', proceed, reset };
+        });
+
+        const TestHarness = ({ setNavigationConfirmation, onConfirm }) => {
+            React.useEffect(() => {
+                setNavigationConfirmation(confirmationBox);
+            }, [setNavigationConfirmation]);
+
+            return (
+                <button data-testid="confirm-navigation" onClick={onConfirm}>
+                    Confirm
+                </button>
+            );
+        };
+
+        const { getByTestId } = render(
+            <WithRouter>
+                <NavigationPrompt when>
+                    {(setNavigationConfirmation, onConfirm) => <TestHarness setNavigationConfirmation={setNavigationConfirmation} onConfirm={onConfirm} />}
+                </NavigationPrompt>
+            </WithRouter>,
+        );
+
+        fireEvent.click(getByTestId('confirm-navigation'));
+
+        expect(confirmationBox.hideConfirmation).toHaveBeenCalled();
+        expect(proceed).toHaveBeenCalled();
     });
 });
