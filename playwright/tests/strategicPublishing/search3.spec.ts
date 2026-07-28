@@ -65,7 +65,15 @@ test.describe('Strategic Publishing - Search', () => {
         await page.getByTestId('journal-search-item-addable-title-microbiology-0').click();
         await page.getByTestId('journal-search-button').click();
         await page.getByTestId('MenuIcon').click();
-        await page.getByRole('button').getByText('Journal search').click();
+
+        await page
+            .locator('#menudrawer')
+            .getByRole('button', { name: /^Journal search$/ })
+            .click();
+
+        await expect(page).toHaveURL(/\/journals\/search\/?$/);
+        await expect(page).not.toHaveURL(/keywords%5B/);
+        await expect(page.getByTestId('journal-search-intro-card')).toBeVisible();
 
         await expect(page.getByText('Step 2.')).not.toBeVisible();
         await expect(page.getByTestId('journal-search-keyword-list-titles-containing')).not.toBeVisible();
