@@ -575,6 +575,7 @@ describe('ViewJournal', () => {
                         fez_sherpa_romeo: {
                             srm_issn: '1111-1111',
                             srm_max_embargo_amount: 6,
+                            srm_max_embargo_units: 'months',
                             srm_journal_link: 'http://test',
                         },
                     },
@@ -609,6 +610,7 @@ describe('ViewJournal', () => {
                         jnl_issn_order: 2,
                         fez_sherpa_romeo: {
                             srm_max_embargo_amount: 6,
+                            srm_max_embargo_units: 'weeks',
                             srm_issn: '2222-2222',
                             srm_journal_link: null,
                         },
@@ -622,7 +624,7 @@ describe('ViewJournal', () => {
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
         expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
-        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
+        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 weeks');
         expect(queryByTestId('srm-journal-link-lookup-link')).not.toBeInTheDocument();
     });
 
