@@ -16,7 +16,7 @@ const NavigationPrompt = ({ when, children }) => {
     const blockNavigation = (currentLocation, nextLocation) => {
         if (when && nextLocation.pathname !== currentLocation.pathname) {
             setNextLocation(nextLocation);
-            confirmationBox.showConfirmation();
+            confirmationBox?.showConfirmation?.();
             return true;
         }
 
@@ -26,8 +26,18 @@ const NavigationPrompt = ({ when, children }) => {
     const blocker = useBlocker(({ currentLocation, nextLocation }) => blockNavigation(currentLocation, nextLocation));
 
     const navigateToNextLocation = () => {
-        blocker?.proceed?.();
-        navigate(nextLocation.pathname);
+        // When blocked, let react-router continue the blocked transition.
+        if (blocker?.state === 'blocked' && blocker?.proceed) {
+            blocker.proceed();
+            setNextLocation(null);
+            return;
+        }
+
+        // Fallback for non-blocked flows.
+        if (nextLocation?.pathname) {
+            navigate(nextLocation.pathname);
+        }
+        setNextLocation(null);
     };
 
     const setNavigationConfirmation = ref => {
