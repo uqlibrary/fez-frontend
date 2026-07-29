@@ -17,8 +17,9 @@ import {
     MenuButtonRedo,
 } from 'mui-tiptap';
 import MenuButtonLetterCase from './toolbar/LetterCase/MenuButtonLetterCase';
+import MenuButtonSpecialCharacters from './toolbar/SpecialCharacters/MenuButtonSpecialCharacters';
 
-const RichTextToolbar = ({ singleLine = false }) => (
+const RichTextToolbar = ({ onOpenSpecialCharacters, singleLine = false }) => (
     <MenuControlsContainer>
         <MenuButtonBold />
         <MenuButtonItalic />
@@ -39,6 +40,7 @@ const RichTextToolbar = ({ singleLine = false }) => (
         <MenuDivider />
         <MenuButtonLetterCase />
         <MenuButtonRemoveFormatting />
+        <MenuButtonSpecialCharacters onOpen={onOpenSpecialCharacters} />
 
         <MenuDivider />
 
@@ -49,6 +51,7 @@ const RichTextToolbar = ({ singleLine = false }) => (
 
 RichTextToolbar.propTypes = {
     editor: PropTypes.object,
+    onOpenSpecialCharacters: PropTypes.func,
     singleLine: PropTypes.bool,
 };
 

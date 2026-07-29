@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { RichTextEditor as MuiRichTextEditor, LinkBubbleMenu } from 'mui-tiptap';
 
 import RichTextToolbar from './RichTextToolbar';
+import { SpecialCharactersPicker } from './toolbar/SpecialCharacters';
 import { createExtensions } from './createExtensions';
 
 const editorStyles = singleLine => ({
@@ -51,6 +52,7 @@ const RichTextEditor = ({
     const content = typeof value === 'string' ? value : value?.htmlText || value?.plainText || '';
 
     const [inputLength, setInputLength] = useState(0);
+    const [specialCharacterPicker, setSpecialCharacterPicker] = useState(null);
 
     let error = null;
 
@@ -99,7 +101,9 @@ const RichTextEditor = ({
                     singleLine,
                     textOnlyOnPaste,
                 })}
-                renderControls={() => <RichTextToolbar singleLine={singleLine} />}
+                renderControls={() => (
+                    <RichTextToolbar singleLine={singleLine} onOpenSpecialCharacters={setSpecialCharacterPicker} />
+                )}
                 onUpdate={handleUpdate}
                 sx={{
                     ...editorStyles(singleLine),
@@ -124,6 +128,20 @@ const RichTextEditor = ({
                 {() => (
                     <>
                         <LinkBubbleMenu />
+                        {/*
+                         * NOTE:
+                         * The SpecialCharactersPicker is intentionally rendered here instead of inside
+                         * the toolbar. Rendering it from the toolbar caused the editor field container
+                         * (MuiTiptap-FieldContainer-root) to paint its border above the picker due to
+                         * stacking-context/z-index behaviour in mui-tiptap. Keeping the picker as a
+                         * sibling of the editor content avoids the border overlapping the popup while
+                         * still allowing the toolbar button to control its position.
+                         */}
+                        <SpecialCharactersPicker
+                            open={Boolean(specialCharacterPicker)}
+                            position={specialCharacterPicker}
+                            onClose={() => setSpecialCharacterPicker(null)}
+                        />
                     </>
                 )}
             </MuiRichTextEditor>
