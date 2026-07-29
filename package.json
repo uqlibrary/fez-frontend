@@ -173,6 +173,22 @@
     "@mui/x-data-grid": "7.29.5",
     "@mui/x-date-pickers": "7.29.4",
     "@sentry/react": "^10.28.0",
+    "@tiptap/core": "^3.28.0",
+    "@tiptap/extension-bold": "^3.28.0",
+    "@tiptap/extension-document": "^3.28.0",
+    "@tiptap/extension-hard-break": "^3.28.0",
+    "@tiptap/extension-history": "^3.28.0",
+    "@tiptap/extension-italic": "^3.28.0",
+    "@tiptap/extension-link": "^3.28.0",
+    "@tiptap/extension-list": "^3.28.0",
+    "@tiptap/extension-paragraph": "^3.28.0",
+    "@tiptap/extension-strike": "^3.28.0",
+    "@tiptap/extension-subscript": "^3.28.0",
+    "@tiptap/extension-superscript": "^3.28.0",
+    "@tiptap/extension-text": "^3.28.0",
+    "@tiptap/extension-underline": "^3.28.0",
+    "@tiptap/pm": "^3.28.0",
+    "@tiptap/react": "^3.28.0",
     "@types/lodash": "^4.17.16",
     "@vis.gl/react-google-maps": "^1.8.3",
     "axios": "^1.18.0",
@@ -201,6 +217,7 @@
     "microdiff": "^1.4.0",
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.43",
+    "mui-tiptap": "^1.31.0",
     "number-to-words": "^1.2.4",
     "prop-types": "^15.7.2",
     "query-string": "^6.5.0",
@@ -233,7 +250,7 @@
   },
   "overrides": {
     "sass": {
-        "immutable": "^5.1.8"
+      "immutable": "^5.1.8"
     },
     "fast-uri": "^4.1.1",
     "@dr.pogodin/react-helmet": {
