@@ -14,7 +14,7 @@ import History from '@tiptap/extension-history';
 import HardBreak from '@tiptap/extension-hard-break';
 import { LinkBubbleMenuHandler } from 'mui-tiptap';
 
-import { PlainTextPaste } from './extensions';
+import { LetterCase, PlainTextPaste } from './extensions';
 
 // Prevent newly typed text at the start or end of a link from
 // automatically becoming part of the hyperlink.
@@ -33,6 +33,7 @@ export const createExtensions = ({ singleLine, textOnlyOnPaste }) => [
     Strike,
     Superscript,
     Subscript,
+    LetterCase,
 
     CustomLinkExtension.configure({
         openOnClick: false,

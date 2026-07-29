@@ -16,6 +16,7 @@ import {
     MenuButtonUndo,
     MenuButtonRedo,
 } from 'mui-tiptap';
+import MenuButtonLetterCase from './toolbar/LetterCase/MenuButtonLetterCase';
 
 const RichTextToolbar = ({ singleLine = false }) => (
     <MenuControlsContainer>
@@ -36,6 +37,7 @@ const RichTextToolbar = ({ singleLine = false }) => (
         )}
 
         <MenuDivider />
+        <MenuButtonLetterCase />
         <MenuButtonRemoveFormatting />
 
         <MenuDivider />
