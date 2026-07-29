@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useBlocker, useNavigate } from 'react-router';
 
@@ -12,12 +12,39 @@ const NavigationPrompt = ({ when, children }) => {
     const [pendingLocation, setPendingLocation] = useState(null);
     const [confirmationBox, setConfirmationBox] = useState(null);
     const [phase, setPhase] = useState('idle');
+    const confirmationBoxRef = useRef(null);
+    const phaseRef = useRef('idle');
+    const lastShownLocationRef = useRef(null);
     const navigate = useNavigate();
 
     const resetPromptState = useCallback(() => {
         setPendingLocation(null);
         setPhase('idle');
+        phaseRef.current = 'idle';
+        lastShownLocationRef.current = null;
     }, []);
+
+    useEffect(() => {
+        if (phase === 'blocked' && pendingLocation?.pathname && confirmationBoxRef.current) {
+            if (lastShownLocationRef.current !== pendingLocation.pathname) {
+                confirmationBoxRef.current.showConfirmation?.();
+                lastShownLocationRef.current = pendingLocation.pathname;
+            }
+            return;
+        }
+
+        if (phase === 'idle') {
+            confirmationBoxRef.current?.hideConfirmation?.();
+            lastShownLocationRef.current = null;
+        }
+    }, [confirmationBox, pendingLocation, phase]);
+
+    useEffect(() => {
+        if (!when && phase !== 'idle') {
+            confirmationBoxRef.current?.hideConfirmation?.();
+            resetPromptState();
+        }
+    }, [phase, resetPromptState, when]);
 
     const blockNavigation = useCallback(
         (currentLocation, nextLocation) => {
@@ -25,26 +52,31 @@ const NavigationPrompt = ({ when, children }) => {
                 return false;
             }
 
-            if (phase === 'blocked' && pendingLocation?.pathname === nextLocation.pathname) {
+            if (phaseRef.current === 'resolving') {
+                return false;
+            }
+
+            if (phaseRef.current === 'blocked' && pendingLocation?.pathname === nextLocation.pathname) {
                 return true;
             }
 
             setPendingLocation(nextLocation);
             setPhase('blocked');
-            confirmationBox?.showConfirmation?.();
+            phaseRef.current = 'blocked';
             return true;
         },
-        [confirmationBox, pendingLocation, phase, when],
+        [pendingLocation, when],
     );
 
     const blocker = useBlocker(({ currentLocation, nextLocation }) => blockNavigation(currentLocation, nextLocation));
 
     const navigateToNextLocation = useCallback(() => {
         if (blocker?.state === 'blocked' && blocker?.proceed) {
-            confirmationBox?.hideConfirmation?.();
+            confirmationBoxRef.current?.hideConfirmation?.();
             setPhase('resolving');
+            phaseRef.current = 'resolving';
+            lastShownLocationRef.current = null;
             blocker.proceed();
-            resetPromptState();
             return;
         }
 
@@ -52,17 +84,18 @@ const NavigationPrompt = ({ when, children }) => {
             navigate(pendingLocation.pathname);
             resetPromptState();
         }
-    }, [blocker, confirmationBox, navigate, pendingLocation, resetPromptState]);
+    }, [blocker, navigate, pendingLocation, resetPromptState]);
 
     const setNavigationConfirmation = useCallback(ref => {
+        confirmationBoxRef.current = ref;
         setConfirmationBox(ref);
     }, []);
 
     const _onCancel = useCallback(() => {
-        confirmationBox?.hideConfirmation?.();
+        confirmationBoxRef.current?.hideConfirmation?.();
         blocker?.reset?.();
         resetPromptState();
-    }, [blocker, confirmationBox, resetPromptState]);
+    }, [blocker, resetPromptState]);
 
     const _onConfirm = useCallback(() => {
         navigateToNextLocation();

@@ -102,4 +102,57 @@ describe('NavigationPrompt component', () => {
         expect(confirmationBox.hideConfirmation).toHaveBeenCalled();
         expect(proceed).toHaveBeenCalled();
     });
+
+    it('should avoid reopening the dialog while navigation is resolving', () => {
+        const proceed = jest.fn();
+        const reset = jest.fn();
+        const confirmationBox = {
+            showConfirmation: jest.fn(),
+            hideConfirmation: jest.fn(),
+        };
+        let blockerCallback;
+        let didBlock = false;
+
+        useBlocker.mockImplementation(f => {
+            blockerCallback = f;
+            if (!didBlock) {
+                didBlock = true;
+                f({ currentLocation: { pathname: 'current' }, nextLocation: { pathname: 'next' } });
+            }
+            return {
+                state: 'blocked',
+                proceed: jest.fn(() => {
+                    blockerCallback({ currentLocation: { pathname: 'current' }, nextLocation: { pathname: 'next' } });
+                    proceed();
+                }),
+                reset,
+            };
+        });
+
+        const TestHarness = ({ setNavigationConfirmation, onConfirm }) => {
+            React.useEffect(() => {
+                setNavigationConfirmation(confirmationBox);
+            }, [setNavigationConfirmation]);
+
+            return (
+                <button data-testid="confirm-navigation" onClick={onConfirm}>
+                    Confirm
+                </button>
+            );
+        };
+
+        const { getByTestId } = render(
+            <WithRouter>
+                <NavigationPrompt when>
+                    {(setNavigationConfirmation, onConfirm) => <TestHarness setNavigationConfirmation={setNavigationConfirmation} onConfirm={onConfirm} />}
+                </NavigationPrompt>
+            </WithRouter>,
+        );
+
+        fireEvent.click(getByTestId('confirm-navigation'));
+
+        expect(confirmationBox.hideConfirmation).toHaveBeenCalled();
+        expect(proceed).toHaveBeenCalled();
+        expect(confirmationBox.showConfirmation).toHaveBeenCalledTimes(1);
+    });
 });
