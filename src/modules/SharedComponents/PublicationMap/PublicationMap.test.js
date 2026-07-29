@@ -53,6 +53,9 @@ const defaultProps = {
     readOnly: false,
 };
 
+const originalGoogleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+const originalGoogleMapsGlobal = window.google;
+
 function setup(props = {}, render = defaultRender) {
     return render(<PublicationMap {...defaultProps} {...props} />);
 }
@@ -60,6 +63,22 @@ function setup(props = {}, render = defaultRender) {
 describe('PublicationMap', () => {
     beforeEach(() => {
         jest.clearAllMocks();
+        process.env.GOOGLE_MAPS_API_KEY = 'test-key';
+        window.google = { maps: { Map: jest.fn() } };
+    });
+
+    afterEach(() => {
+        if (originalGoogleMapsApiKey === undefined) {
+            delete process.env.GOOGLE_MAPS_API_KEY;
+        } else {
+            process.env.GOOGLE_MAPS_API_KEY = originalGoogleMapsApiKey;
+        }
+
+        if (originalGoogleMapsGlobal === undefined) {
+            delete window.google;
+        } else {
+            window.google = originalGoogleMapsGlobal;
+        }
     });
 
     it('should render search box and drawing manager when not readOnly', () => {
@@ -77,6 +96,23 @@ describe('PublicationMap', () => {
         expect(getByTestId('map')).toBeInTheDocument();
         expect(queryByTestId('search-box')).not.toBeInTheDocument();
         expect(queryByTestId('drawing-manager')).not.toBeInTheDocument();
+    });
+
+    it('should render a fallback message when the Google Maps API key is not configured', () => {
+        delete process.env.GOOGLE_MAPS_API_KEY;
+
+        const { getByTestId, queryByTestId } = setup();
+
+        expect(getByTestId('map-unavailable')).toBeInTheDocument();
+        expect(queryByTestId('map')).not.toBeInTheDocument();
+    });
+
+    it('should render a fallback message when Google Maps is not ready', () => {
+        delete window.google;
+        const { getByTestId, queryByTestId } = setup();
+
+        expect(getByTestId('map-unavailable')).toBeInTheDocument();
+        expect(queryByTestId('map')).not.toBeInTheDocument();
     });
 
     it('should render a marker for a single coordinate', () => {

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ControlPosition, MapControl, APIProvider, Map, Polygon, AdvancedMarker } from '@vis.gl/react-google-maps';
 import SearchBox from 'modules/SharedComponents/Toolbox/Map/SearchBox';
@@ -21,6 +21,12 @@ const coordinatesToString = coordinates => coordinates.map(item => `${item[0]},$
 
 const PublicationMap = ({ value, onChange, readOnly }) => {
     const isDirtyRef = useRef(false);
+    const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+    const hasGoogleMapsApiKey = !!googleMapsApiKey?.trim?.();
+    const [isGoogleMapsReady, setIsGoogleMapsReady] = useState(() => {
+        if (typeof window === 'undefined') return false;
+        return !!window.google?.maps?.Map;
+    });
     const coordinates = React.useMemo(
         () =>
             (!!value?.trim?.() &&
@@ -52,8 +58,64 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
 
     const onClear = () => onChange(null);
 
+    useEffect(() => {
+        if (!hasGoogleMapsApiKey) {
+            setIsGoogleMapsReady(false);
+            return undefined;
+        }
+
+        let cancelled = false;
+        let attempts = 0;
+
+        const checkGoogleMapsAvailability = () => {
+            if (cancelled) return;
+
+            const googleMapsReady = typeof window !== 'undefined' && !!window.google?.maps?.Map;
+            if (googleMapsReady) {
+                setIsGoogleMapsReady(true);
+                return;
+            }
+
+            attempts += 1;
+            if (attempts >= 20) {
+                setIsGoogleMapsReady(false);
+                return;
+            }
+
+            window.setTimeout(checkGoogleMapsAvailability, 100);
+        };
+
+        setIsGoogleMapsReady(false);
+        checkGoogleMapsAvailability();
+
+        return () => {
+            cancelled = true;
+        };
+    }, [hasGoogleMapsApiKey]);
+
+    if (!hasGoogleMapsApiKey || !isGoogleMapsReady) {
+        return (
+            <div data-testid="rek-geographic-area" data-analyticsid="rek-geographic-area">
+                <div
+                    data-testid="map-unavailable"
+                    style={{
+                        height: '400px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: '1px solid #d0d7de',
+                        backgroundColor: '#f6f8fa',
+                        color: '#57606a',
+                    }}
+                >
+                    Map unavailable: Google Maps is not ready.
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <APIProvider apiKey={process.env.GOOGLE_MAPS_API_KEY} region="au" libraries={['maps', 'places']}>
+        <APIProvider apiKey={googleMapsApiKey} region="au" libraries={['maps', 'places']}>
             <ThemeProvider theme={localTheme}>
                 <TerraDrawLayer readOnly={readOnly} onCreate={onCreate} onClear={onClear}>
                     {draw => (

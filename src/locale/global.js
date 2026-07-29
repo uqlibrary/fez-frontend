@@ -2,7 +2,7 @@ import React from 'react';
 import { APP_URL, ESPACE_TEAM_CONTACT_US_URL } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { RESOLVER_URL_PREFIX } from 'config/general';
-import { Link } from 'react-router';
+import LocaleLink from 'helpers/LocaleLink';
 
 /*
 
@@ -29,14 +29,14 @@ export default {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         appTitle: (
             <>
-                <Link
+                <LocaleLink
                     to={pathConfig.index}
                     className="appTitle"
                     title="Click to return to the eSpace home page"
                     style={{ color: '#FFFFFF' }}
                 >
                     UQ eSpace {process.env.TITLE_SUFFIX || ''}
-                </Link>
+                </LocaleLink>
                 <a
                     className="appTitle"
                     title="Click to view the blog post"
