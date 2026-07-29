@@ -5,6 +5,7 @@ import PublicationMap from './PublicationMap';
 import { MAP_DEFAULT_CENTER } from '../../../config/general';
 
 const mockOnCreate = jest.fn();
+let apiProviderProps = {};
 
 const mockTerraDrawLayer = jest.fn(({ children, onCreate }) => {
     mockOnCreate.mockImplementation(onCreate);
@@ -14,7 +15,10 @@ const mockTerraDrawLayer = jest.fn(({ children, onCreate }) => {
 const mockSearchBox = jest.fn(() => <button data-testid="search-box">Search</button>);
 
 jest.mock('@vis.gl/react-google-maps', () => ({
-    APIProvider: ({ children }) => <div>{children}</div>,
+    APIProvider: ({ children, onError }) => {
+        apiProviderProps = { onError };
+        return <div>{children}</div>;
+    },
     Map: ({ children, defaultCenter }) => (
         <div data-testid="map" data-default-center={JSON.stringify(defaultCenter)}>
             {children}
@@ -53,9 +57,6 @@ const defaultProps = {
     readOnly: false,
 };
 
-const originalGoogleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
-const originalGoogleMapsGlobal = window.google;
-
 function setup(props = {}, render = defaultRender) {
     return render(<PublicationMap {...defaultProps} {...props} />);
 }
@@ -63,22 +64,7 @@ function setup(props = {}, render = defaultRender) {
 describe('PublicationMap', () => {
     beforeEach(() => {
         jest.clearAllMocks();
-        process.env.GOOGLE_MAPS_API_KEY = 'test-key';
-        window.google = { maps: { Map: jest.fn() } };
-    });
-
-    afterEach(() => {
-        if (originalGoogleMapsApiKey === undefined) {
-            delete process.env.GOOGLE_MAPS_API_KEY;
-        } else {
-            process.env.GOOGLE_MAPS_API_KEY = originalGoogleMapsApiKey;
-        }
-
-        if (originalGoogleMapsGlobal === undefined) {
-            delete window.google;
-        } else {
-            window.google = originalGoogleMapsGlobal;
-        }
+        apiProviderProps = {};
     });
 
     it('should render search box and drawing manager when not readOnly', () => {
@@ -96,23 +82,6 @@ describe('PublicationMap', () => {
         expect(getByTestId('map')).toBeInTheDocument();
         expect(queryByTestId('search-box')).not.toBeInTheDocument();
         expect(queryByTestId('drawing-manager')).not.toBeInTheDocument();
-    });
-
-    it('should render a fallback message when the Google Maps API key is not configured', () => {
-        delete process.env.GOOGLE_MAPS_API_KEY;
-
-        const { getByTestId, queryByTestId } = setup();
-
-        expect(getByTestId('map-unavailable')).toBeInTheDocument();
-        expect(queryByTestId('map')).not.toBeInTheDocument();
-    });
-
-    it('should render a fallback message when Google Maps is not ready', () => {
-        delete window.google;
-        const { getByTestId, queryByTestId } = setup();
-
-        expect(getByTestId('map-unavailable')).toBeInTheDocument();
-        expect(queryByTestId('map')).not.toBeInTheDocument();
     });
 
     it('should render a marker for a single coordinate', () => {
@@ -216,6 +185,22 @@ describe('PublicationMap', () => {
         });
 
         expect(mockOnChange).not.toHaveBeenCalled();
+    });
+
+    it('should log an error when the Google Maps provider reports an error', () => {
+        const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+        setup();
+
+        act(() => {
+            apiProviderProps.onError(new Error('maps failed'));
+        });
+
+        expect(consoleErrorSpy).toHaveBeenCalledWith(
+            'Google Maps failed to load for PublicationMap',
+            expect.any(Error),
+        );
+
+        consoleErrorSpy.mockRestore();
     });
 
     it('should call onChange with null when onClear is called and remove maker', () => {

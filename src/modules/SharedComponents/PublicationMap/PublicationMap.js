@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { ControlPosition, MapControl, APIProvider, Map, Polygon, AdvancedMarker } from '@vis.gl/react-google-maps';
 import SearchBox from 'modules/SharedComponents/Toolbox/Map/SearchBox';
@@ -21,12 +21,7 @@ const coordinatesToString = coordinates => coordinates.map(item => `${item[0]},$
 
 const PublicationMap = ({ value, onChange, readOnly }) => {
     const isDirtyRef = useRef(false);
-    const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
-    const hasGoogleMapsApiKey = !!googleMapsApiKey?.trim?.();
-    const [isGoogleMapsReady, setIsGoogleMapsReady] = useState(() => {
-        if (typeof window === 'undefined') return false;
-        return !!window.google?.maps?.Map;
-    });
+
     const coordinates = React.useMemo(
         () =>
             (!!value?.trim?.() &&
@@ -40,6 +35,7 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
             [],
         [value],
     );
+
     const hasCoordinates = !!coordinates?.length;
 
     const updateFieldValue = coordinates => onChange(coordinatesToString(coordinates));
@@ -47,75 +43,31 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
     const onCreate = feature => {
         if (!feature?.geometry?.coordinates?.length) return;
         isDirtyRef.current = true;
-
         if (String(feature.geometry.type) === 'Point') {
             updateFieldValue([[feature.geometry.coordinates[0], feature.geometry.coordinates[1]]]);
             return;
         }
-
         updateFieldValue(feature.geometry.coordinates[0]);
     };
 
     const onClear = () => onChange(null);
 
-    useEffect(() => {
-        if (!hasGoogleMapsApiKey) {
-            setIsGoogleMapsReady(false);
-            return undefined;
-        }
-
-        let cancelled = false;
-        let attempts = 0;
-
-        const checkGoogleMapsAvailability = () => {
-            if (cancelled) return;
-
-            const googleMapsReady = typeof window !== 'undefined' && !!window.google?.maps?.Map;
-            if (googleMapsReady) {
-                setIsGoogleMapsReady(true);
-                return;
-            }
-
-            attempts += 1;
-            if (attempts >= 20) {
-                setIsGoogleMapsReady(false);
-                return;
-            }
-
-            window.setTimeout(checkGoogleMapsAvailability, 100);
-        };
-
-        setIsGoogleMapsReady(false);
-        checkGoogleMapsAvailability();
-
-        return () => {
-            cancelled = true;
-        };
-    }, [hasGoogleMapsApiKey]);
-
-    if (!hasGoogleMapsApiKey || !isGoogleMapsReady) {
-        return (
-            <div data-testid="rek-geographic-area" data-analyticsid="rek-geographic-area">
-                <div
-                    data-testid="map-unavailable"
-                    style={{
-                        height: '400px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '1px solid #d0d7de',
-                        backgroundColor: '#f6f8fa',
-                        color: '#57606a',
-                    }}
-                >
-                    Map unavailable: Google Maps is not ready.
-                </div>
-            </div>
-        );
-    }
+    const mapDataKey = React.useMemo(() => {
+        if (!hasCoordinates) return 'empty';
+        if (coordinates.length > 1) return `poly-${coordinates.length}-${coordinates[0].lat}-${coordinates[0].lng}`;
+        return `marker-${coordinates[0].lat}-${coordinates[0].lng}`;
+    }, [coordinates, hasCoordinates]);
 
     return (
-        <APIProvider apiKey={googleMapsApiKey} region="au" libraries={['maps', 'places']}>
+        <APIProvider
+            apiKey={process.env.GOOGLE_MAPS_API_KEY}
+            region="au"
+            version="quarterly"
+            libraries={['maps', 'places']}
+            onError={error => {
+                console.error('Google Maps failed to load for PublicationMap', error);
+            }}
+        >
             <ThemeProvider theme={localTheme}>
                 <TerraDrawLayer readOnly={readOnly} onCreate={onCreate} onClear={onClear}>
                     {draw => (
@@ -128,9 +80,11 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
                                 style={{ height: '400px' }}
                             >
                                 {!isDirtyRef.current && <CenterMapToCoordinates coordinates={coordinates} />}
+
                                 {hasCoordinates &&
                                     (coordinates.length > 1 ? (
                                         <Polygon
+                                            key={mapDataKey}
                                             paths={coordinates}
                                             options={{
                                                 strokeColor: '#FF0000',
@@ -141,14 +95,15 @@ const PublicationMap = ({ value, onChange, readOnly }) => {
                                             }}
                                         />
                                     ) : (
-                                        <AdvancedMarker position={coordinates[0]} />
+                                        <AdvancedMarker key={mapDataKey} position={coordinates[0]} />
                                     ))}
+
                                 {!readOnly && (
                                     <>
-                                        <MapControl position={ControlPosition.TOP_CENTER}>
+                                        <MapControl key="ctrl-center" position={ControlPosition.TOP_CENTER}>
                                             <DrawingControls draw={draw} sx={{ mt: 1.2 }} />
                                         </MapControl>
-                                        <MapControl position={ControlPosition.TOP_RIGHT}>
+                                        <MapControl key="ctrl-right" position={ControlPosition.TOP_RIGHT}>
                                             <SearchBox sx={{ width: 220, mt: 1.2, mr: 1.2 }} />
                                         </MapControl>
                                     </>
