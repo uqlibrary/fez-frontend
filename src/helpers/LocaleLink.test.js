@@ -49,4 +49,22 @@ describe('LocaleLink', () => {
 
         expect(pushStateSpy).not.toHaveBeenCalled();
     });
+
+    it('does not navigate when history pushState is unavailable', () => {
+        const originalPushState = window.history.pushState;
+        Object.defineProperty(window.history, 'pushState', {
+            value: undefined,
+            configurable: true,
+        });
+
+        const { getByText } = render(<LocaleLink to="/next">Next</LocaleLink>);
+        fireEvent.click(getByText('Next'));
+
+        expect(pushStateSpy).not.toHaveBeenCalled();
+
+        Object.defineProperty(window.history, 'pushState', {
+            value: originalPushState,
+            configurable: true,
+        });
+    });
 });

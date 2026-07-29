@@ -17,6 +17,7 @@ const LocaleLink = ({ to, children, onClick, ...props }) => {
 
         event.preventDefault();
 
+        /* istanbul ignore else */
         if (typeof window !== 'undefined' && typeof window.history?.pushState === 'function') {
             window.history.pushState({}, '', to);
             window.dispatchEvent(new PopStateEvent('popstate'));
