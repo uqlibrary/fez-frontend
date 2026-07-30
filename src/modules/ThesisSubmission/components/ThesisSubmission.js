@@ -21,7 +21,7 @@ import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { validation, general } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { THESIS_SUBMISSION_SUBTYPES, THESIS_UPLOAD_RETRIES } from 'config/general';
 
 import { useAccountContext } from 'context';
@@ -296,14 +296,13 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                     <Grid size={12}>
                                         <Field
                                             control={control}
-                                            component={RichEditorField}
+                                            component={RichTextEditorField}
                                             name="thesisTitle"
                                             title={txt.information.fieldLabels.documentTitle.placeholder}
                                             disabled={isSubmitting}
-                                            height={50}
                                             required
                                             validate={[validation.required]}
-                                            richEditorId="rek-title"
+                                            id="rek-title"
                                         />
                                     </Grid>
                                     <Grid
@@ -388,13 +387,13 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                     <Grid size={12}>
                                         <Field
                                             control={control}
-                                            component={RichEditorField}
+                                            component={RichTextEditorField}
                                             disabled={isSubmitting}
                                             title={txt.optional.fieldLabels.abstract.label}
                                             name="thesisAbstract"
                                             required
                                             validate={[validation.required]}
-                                            richEditorId="rek-description"
+                                            id="rek-description"
                                         />
                                     </Grid>
                                 </Grid>

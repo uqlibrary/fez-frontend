@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import JournalAdvisoryStatementTypeField from '../../SharedComponents/LookupFields/containers/JournalAdvisoryStatementTypeField';
-import { RichEditorField } from '../../SharedComponents/RichEditor';
+import { RichTextEditorField } from '../../SharedComponents/RichTextEditor';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useFormContext, useWatch } from 'react-hook-form';
 import Grid from '@mui/material/GridLegacy';
@@ -63,7 +63,7 @@ export const AdvisoryStatementFields = props => {
                 />
             </Grid>
             <Grid item xs={12} md={12}>
-                <Field control={control} component={RichEditorField} disable={props.disable} {...props.text} />
+                <Field control={control} component={RichTextEditorField} disable={props.disable} {...props.text} />
             </Grid>
         </>
     );

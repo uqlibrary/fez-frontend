@@ -52,7 +52,7 @@ describe('AdminSection component', () => {
         allFields = simpleFields.concat(composedFields);
         fieldIds = allFields
             .filter(props => props.name.includes('adminSection.'))
-            .map(props => props.id || props.textFieldId || props.richEditorId || props.genericSelectFieldId)
+            .map(props => props.id || props.textFieldId || props.genericSelectFieldId)
             .map(id => (id === 'jnl_advisory_statement_type' || id === 'jnl_is_refereed' ? `${id}-input` : id));
     });
 
