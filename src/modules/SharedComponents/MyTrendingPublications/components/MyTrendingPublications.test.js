@@ -7,7 +7,7 @@ import * as actions from 'actions';
 
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
-    searchTrendingPublications: jest.fn(),
+    searchTrendingPublications: jest.fn(() => ({ type: 'MOCK_SEARCH_TRENDING_PUBLICATIONS' })),
 }));
 
 function setup(testState = {}) {
