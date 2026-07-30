@@ -161,6 +161,7 @@ api.interceptors.response.use(
 
         const reportHttpStatusToSentry = [422];
         if (!!error?.response?.status && reportHttpStatusToSentry.includes(error.response.status)) {
+            console.log(`[1] reporting ${error.response.status} to sentry`);
             reportToSentry(error);
         }
 
@@ -189,7 +190,9 @@ api.interceptors.response.use(
                 }
             }
 
-            if (!!error.message && errorStatus === 500) {
+            const appHandledErrorMessageCodes = [500, 429];
+            if (!!error.message && appHandledErrorMessageCodes.includes(errorStatus)) {
+                console.log('[1] handling error', error, error.message);
                 errorMessage =
                     ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
@@ -202,10 +205,11 @@ api.interceptors.response.use(
                 errorMessage = statusMessages.hasOwnProperty(errorStatus)
                     ? statusMessages[errorStatus]
                     : statusMessages.generic;
-                if ([410, 422].includes(errorStatus)) {
+                console.log('[2] handling error', error.response, errorMessage);
+                if ([410, 422, 429].includes(errorStatus)) {
                     // override for these statuses
                     errorMessage = {
-                        ...errorMessage,
+                        errorMessage,
                         ...error.response.data,
                     };
                 }
@@ -214,12 +218,15 @@ api.interceptors.response.use(
 
         const shouldNotAppearInSentry =
             document.location.hostname === 'localhost' || // testing on AWS sometimes fires these
-            [401, 403, 404, 410].includes(errorStatus) || // login expired - no notice required
+            [401, 403, 404, 410, 429].includes(errorStatus) || // login expired - no notice required
             errorStatus === 0 || // catch those "the network request was interrupted" we see so much
             errorStatus === '0' || // don't know what format it comes in
             errorStatus === 500 || // api should handle these
-            errorStatus === 502; // connection timed out - it happens, FE can't do anything about it
+            errorStatus === 502 || // connection timed out - it happens, FE can't do anything about it
+            errorStatus === 429; // too many requests - api should handle these;
+
         if (!shouldNotAppearInSentry) {
+            console.log(`[2] reporting ${errorStatus} to sentry`);
             reportToSentry(error);
         }
 
@@ -227,7 +234,7 @@ api.interceptors.response.use(
             return Promise.reject(
                 createSentryFriendlyError(errorMessage?.message || null, {
                     request: error.request,
-                    ...errorMessage,
+                    errorMessage,
                     // allow the original error message to be handled further down the stack
                     ...(error.response?.data ? { original: error.response.data } : {}),
                 }),

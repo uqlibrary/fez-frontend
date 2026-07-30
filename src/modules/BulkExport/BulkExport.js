@@ -53,6 +53,7 @@ const BulkExport = ({
     pageSize,
     totalMatches,
     disabled,
+    errorMessage = null,
 }) => {
     const { loadingByPage, loadedByPage } = useSelector(state => state.get('exportPublicationsReducer'));
     const [open, setOpen] = React.useState(false);
@@ -123,7 +124,7 @@ const BulkExport = ({
                 className={`${statusClass}`}
                 data-analyticsid={id}
                 data-testid={id}
-                disabled={['success', 'loading'].includes(statusClass)}
+                disabled={['success', 'loading'].includes(statusClass) || Object.keys(loadingByPage).length > 0}
                 endIcon={statusIcon}
                 fullWidth
                 id={id}
@@ -220,6 +221,11 @@ const BulkExport = ({
                                 <Alert message={successMessage} type="info" />
                             </Grid>
                         )}
+                        {!!errorMessage && (
+                            <Grid item xs={12}>
+                                <Alert message={errorMessage} type="error" />
+                            </Grid>
+                        )}
                         {exportOptionRender}
                     </Grid>
                 </MuiDialogContent>
@@ -239,6 +245,7 @@ BulkExport.propTypes = {
     pageSize: PropTypes.number,
     totalMatches: PropTypes.number,
     disabled: PropTypes.bool,
+    errorMessage: PropTypes.string,
 };
 
 export default BulkExport;

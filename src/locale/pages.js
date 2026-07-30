@@ -763,6 +763,7 @@ export default {
                 successMessage:
                     'Bulk export requests have been queued. When the requests have been processed, ' +
                     'you will receive an email for each request with the exported file as an attachment.',
+                errorMessageTooManyRequests: `Bulk export request failed because you already have a bulk export job in the queue. Please allow the existing bulk export job to complete before requesting another, or contact eSpace administrators if you require assistance.`,
                 rowLabel: 'Export works [start] to [end]',
             },
             loadingPagingMessage: 'Searching for works',

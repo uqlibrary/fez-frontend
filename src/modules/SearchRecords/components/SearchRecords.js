@@ -72,6 +72,8 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
     const [searchParams, setSearchParams] = useState(queryParams);
     const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
 
+    const [bulkExportErrorMessage, setBulkExportErrorMessage] = useState(null);
+
     React.useEffect(() => {
         // This effect ensures the change to display type in the UI, followed by search term text change,
         // maintains the user chosen display preference in the results.
@@ -90,7 +92,16 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                 ...queryParams,
                 ...exportFormat,
             }),
-        );
+        )
+            .then(() => {
+                setBulkExportErrorMessage(null);
+            })
+            .catch(error => {
+                console.error('Export error:', error);
+
+                error.message.includes('429') &&
+                    setBulkExportErrorMessage(locale.pages.searchRecords.bulkExport.errorMessageTooManyRequests);
+            });
     };
 
     /**
@@ -274,6 +285,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                                 pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                                 totalMatches={publicationsListPagingData.total}
                                                 disabled={isLoadingOrExporting}
+                                                errorMessage={bulkExportErrorMessage}
                                             />
                                         </Grid>
                                     )}

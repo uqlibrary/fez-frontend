@@ -38,7 +38,7 @@ export function exportPublications(requestParams) {
                     type: actions.EXPORT_PUBLICATIONS_LOADED,
                     payload: exportConfig,
                 });
-                return Promise.resolve();
+                return Promise.resolve(response);
             })
             .catch(error => {
                 dispatch({
@@ -48,6 +48,8 @@ export function exportPublications(requestParams) {
                         errorMessage: error.message,
                     },
                 });
+
+                return Promise.reject(error);
             });
     };
 }
