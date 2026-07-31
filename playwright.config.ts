@@ -33,7 +33,7 @@ export default defineConfig({
         ignoreHTTPSErrors: true,
         bypassCSP: true,
         launchOptions: {
-            args: ['--disable-web-security', '--disable-ipv6'],
+            args: ['--disable-web-security', '--disable-ipv6', '--disable-dev-shm-usage'],
         },
     },
     projects: [
