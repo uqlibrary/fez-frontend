@@ -2,6 +2,7 @@ import React from 'react';
 import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
 import { pathConfig } from 'config';
 import * as actions from 'actions/journals.js';
+import * as searchJournalHooks from '../hooks';
 
 import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
 
@@ -132,6 +133,36 @@ describe('SearchJournals', () => {
 
         expect(queryByTestId('journal-search-browse-all-button')).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-chip-keyword-all-journals')).toBeInTheDocument();
+    });
+
+    it('should cover updater branches when URL has no keywords', () => {
+        const setSelectedKeywordsMock = jest.fn(updater => {
+            if (typeof updater === 'function') {
+                // Cover fallback branch for `prevSelectedKeywords || {}`
+                updater(undefined);
+                // Cover true branch returning `{}` when previous keywords exist
+                updater({ 'Keyword-existing': { id: 'Keyword-existing' } });
+            }
+        });
+
+        const useSelectedKeywordsSpy = jest.spyOn(searchJournalHooks, 'useSelectedKeywords');
+
+        try {
+            useSelectedKeywordsSpy.mockImplementation(() => ({
+                selectedKeywords: {},
+                setSelectedKeywords: setSelectedKeywordsMock,
+                handleKeywordAdd: jest.fn(),
+                handleKeywordUpdate: jest.fn(),
+                handleKeywordDelete: jest.fn(),
+                hasAnySelectedKeywords: false,
+            }));
+
+            setup({ route: '/' });
+
+            expect(setSelectedKeywordsMock).toHaveBeenCalled();
+        } finally {
+            useSelectedKeywordsSpy.mockRestore();
+        }
     });
 
     /* Commented out test due bug in test cases causing 404 page not found error */

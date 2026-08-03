@@ -9,7 +9,7 @@ describe('utils', () => {
         const data = { ...mockData.data[0] };
         const tooltipLocale = {
             accepted: {
-                embargo: months => `${months} months Test embargo`,
+                embargo: period => `${period.amount} ${period.unit} Test embargo`,
             },
         };
         // returns node
@@ -50,18 +50,30 @@ describe('utils', () => {
 
         // accepted embargo
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem1 });
-        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
+        expect(acceptedIndicatorProps).toEqual({
+            type: types.accepted,
+            status: status.embargo,
+            embargoPeriod: { amount: 6, unit: 'months' },
+        });
 
         // accepted embargo - from second issn
         delete dataItem1.fez_journal_issn[0].fez_sherpa_romeo;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem1 });
-        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
+        expect(acceptedIndicatorProps).toEqual({
+            type: types.accepted,
+            status: status.embargo,
+            embargoPeriod: { amount: 6, unit: 'months' },
+        });
 
         // accepted embargo - from second issn
         const dataItem2 = { ...mockData.data[0] };
         dataItem2.fez_journal_issn[0].fez_sherpa_romeo.srm_max_embargo_amount = null;
         acceptedIndicatorProps = getIndicatorProps({ type: types.accepted, data: dataItem2 });
-        expect(acceptedIndicatorProps).toEqual({ type: types.accepted, status: status.embargo, embargoPeriod: 6 });
+        expect(acceptedIndicatorProps).toEqual({
+            type: types.accepted,
+            status: status.embargo,
+            embargoPeriod: { amount: 6, unit: 'months' },
+        });
 
         // accepted null
         dataItem2.fez_journal_issn[1].fez_sherpa_romeo.srm_max_embargo_amount = null;

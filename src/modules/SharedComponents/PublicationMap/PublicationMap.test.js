@@ -5,6 +5,7 @@ import PublicationMap from './PublicationMap';
 import { MAP_DEFAULT_CENTER } from '../../../config/general';
 
 const mockOnCreate = jest.fn();
+let apiProviderProps = {};
 
 const mockTerraDrawLayer = jest.fn(({ children, onCreate }) => {
     mockOnCreate.mockImplementation(onCreate);
@@ -14,7 +15,10 @@ const mockTerraDrawLayer = jest.fn(({ children, onCreate }) => {
 const mockSearchBox = jest.fn(() => <button data-testid="search-box">Search</button>);
 
 jest.mock('@vis.gl/react-google-maps', () => ({
-    APIProvider: ({ children }) => <div>{children}</div>,
+    APIProvider: ({ children, onError }) => {
+        apiProviderProps = { onError };
+        return <div>{children}</div>;
+    },
     Map: ({ children, defaultCenter }) => (
         <div data-testid="map" data-default-center={JSON.stringify(defaultCenter)}>
             {children}
@@ -60,6 +64,7 @@ function setup(props = {}, render = defaultRender) {
 describe('PublicationMap', () => {
     beforeEach(() => {
         jest.clearAllMocks();
+        apiProviderProps = {};
     });
 
     it('should render search box and drawing manager when not readOnly', () => {
@@ -180,6 +185,22 @@ describe('PublicationMap', () => {
         });
 
         expect(mockOnChange).not.toHaveBeenCalled();
+    });
+
+    it('should log an error when the Google Maps provider reports an error', () => {
+        const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+        setup();
+
+        act(() => {
+            apiProviderProps.onError(new Error('maps failed'));
+        });
+
+        expect(consoleErrorSpy).toHaveBeenCalledWith(
+            'Google Maps failed to load for PublicationMap',
+            expect.any(Error),
+        );
+
+        consoleErrorSpy.mockRestore();
     });
 
     it('should call onChange with null when onClear is called and remove maker', () => {
