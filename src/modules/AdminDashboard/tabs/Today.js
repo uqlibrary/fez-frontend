@@ -13,7 +13,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 import { useAlertStatus } from '../hooks';
-import { transformUrlToPlatform, transformOaCategories } from '../transformers';
+import { transformUrlToPlatform, transformOaCategoriesToChartData } from '../transformers';
 
 import RibbonChartContainer from '../components/RibbonChartContainer';
 import ChartContainer from '../components/ChartContainer';
@@ -21,7 +21,8 @@ import QuickLinkContainer from '../components/QuickLinkContainer';
 import VisualisationSystemAlerts from '../components/visualisations/VisualisationSystemAlerts';
 import VisualisationWorks from '../components/visualisations/VisualisationWorks';
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
-import { getTotalDocCount } from '../utils';
+import { getTotalDocCount, transformBucketsToChartData } from '../utils';
+import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 import ChartBlock from '../components/ChartBlock';
 
 const Today = () => {
@@ -210,7 +211,37 @@ const Today = () => {
                                         <VisualisationWorks
                                             id="open-access-categories"
                                             text={`${getTotalDocCount(adminDashboardTodayData.oa_categories)}`}
-                                            data={transformOaCategories(adminDashboardTodayData.oa_categories)}
+                                            data={transformOaCategoriesToChartData(
+                                                adminDashboardTodayData.oa_categories,
+                                            )}
+                                            showTooltips
+                                        />
+                                    </ChartContainer>
+                                )}
+                            />
+                        </Grid>
+                    </Grid>
+                    <Grid container rowSpacing={4} spacing={5} sx={{ pt: 2 }}>
+                        <Grid item xs={12} sm={6}>
+                            <ChartBlock
+                                loading={adminDashboardTodayLoading}
+                                success={adminDashboardTodaySuccess}
+                                hasData={!!adminDashboardTodayData?.doi_populated_doc_type_counts}
+                                id={'admin-dashboard-doi-populated-doc-types'}
+                                render={() => (
+                                    <ChartContainer
+                                        label={txt.doiPopulateDocTypes.title}
+                                        subtext={txt.doiPopulateDocTypes.subText}
+                                        tooltip={txt.doiPopulateDocTypes.tooltip}
+                                        id="doi-populated-doc-types-container"
+                                    >
+                                        <VisualisationWorks
+                                            id="doi-populated-doc-types"
+                                            text={`${getTotalDocCount(adminDashboardTodayData.doi_populated_doc_type_counts)}`}
+                                            data={transformBucketsToChartData(
+                                                adminDashboardTodayData.doi_populated_doc_type_counts,
+                                                DOCUMENT_TYPES_LOOKUP,
+                                            )}
                                             showTooltips
                                         />
                                     </ChartContainer>

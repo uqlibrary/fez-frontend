@@ -27,7 +27,7 @@ describe('publication enhancer', () => {
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'FIX_RECORD_LOADED', payload: publication });
 
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 payload: {
                     calculateOpenAccess: expect.any(Function),
@@ -154,7 +154,7 @@ describe('publication enhancer', () => {
         };
         publicationEnhancer()(next)({ type: 'LATEST_PUBLICATIONS_LOADED', payload: payload });
 
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 payload: expectedPayload,
                 type: 'LATEST_PUBLICATIONS_LOADED',
@@ -205,7 +205,7 @@ describe('publication enhancer', () => {
         };
         publicationEnhancer()(next)({ type: 'TRENDING_PUBLICATIONS_LOADED@altmetric', payload: payload });
 
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 payload: expectedPayload,
                 type: 'TRENDING_PUBLICATIONS_LOADED@altmetric',
@@ -221,7 +221,7 @@ describe('publication enhancer', () => {
             payload: publication,
         });
 
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 type: 'FIX_RECORD_LOAD_FAILED',
                 payload: publication,
@@ -236,7 +236,7 @@ describe('publication enhancer', () => {
             payload: { nothing: 'here' },
         });
 
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 type: 'SEARCH_LOADED',
                 payload: { nothing: 'here' },
@@ -683,7 +683,7 @@ describe('publication enhancer', () => {
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'SEARCH_LOADED@wos', payload: { data: [publication] } });
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 type: 'SEARCH_LOADED@wos',
                 payload: {
@@ -711,7 +711,7 @@ describe('publication enhancer', () => {
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'LATEST_PUBLICATIONS_LOADED', payload: { data: [publication] } });
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 type: 'LATEST_PUBLICATIONS_LOADED',
                 payload: {
@@ -740,7 +740,7 @@ describe('publication enhancer', () => {
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'VIEW_RECORD_LOADED', payload: publication });
 
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 type: 'VIEW_RECORD_LOADED',
                 payload: {

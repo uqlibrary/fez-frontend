@@ -10,7 +10,7 @@ import { MemoryRouter } from 'react-router';
 import { thunk } from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import { mui1theme } from 'config';
+import { mui1theme } from 'config/theme';
 import { api, sessionApi } from 'config/axios';
 import { StyledEngineProvider } from '@mui/material/styles';
 import ThemeProvider from '@mui/material/styles';
@@ -122,6 +122,16 @@ class ResizeObserver {
     disconnect() {}
 }
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
+
+class IntersectionObserver {
+    constructor() {}
+
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+}
+
+global.IntersectionObserver = IntersectionObserver;
 
 function canBeSpread(variable) {
     return typeof variable?.[Symbol.iterator] === 'function';

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`GrantInformationSection should render default view 1`] = `
 <div>
@@ -125,6 +125,11 @@ exports[`GrantInformationSection should render default view 1`] = `
                           value=""
                         />
                       </div>
+                    </div>
+                    <div
+                      class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+                    >
+                      Accepts IDs or full URLs
                     </div>
                   </div>
                   <div
@@ -333,6 +338,11 @@ exports[`GrantInformationSection should render disabled view 1`] = `
                           value=""
                         />
                       </div>
+                    </div>
+                    <div
+                      class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+                    >
+                      Accepts IDs or full URLs
                     </div>
                   </div>
                   <div

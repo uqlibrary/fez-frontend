@@ -94,7 +94,7 @@ export const AddToSelectedSubjects: React.FC<AddToSelectedSubjects> = ({ onAdd, 
         >
             <ForCodeAutocompleteField
                 filter={data => data.filter(item => !selectedIds.includes(String(item?.key).toLowerCase()))}
-                // @ts-ignore
+                // @ts-expect-error TODO remove upon converting to TS
                 onChange={handleOnAdd}
                 onKeyDown={(e: React.KeyboardEvent) => {
                     if (e.key !== 'Escape') return;

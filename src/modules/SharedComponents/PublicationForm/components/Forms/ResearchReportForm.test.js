@@ -17,17 +17,11 @@ describe('ResearchReportForm', () => {
     it('component with 5 input fields for NTRO', () => {
         const testProps = {
             isNtro: true,
-        };
-        const { container } = setup(testProps);
-        expect(container).toMatchSnapshot();
-    });
-
-    it('should render validation required', () => {
-        const { container } = setup({
             values: {
                 rek_subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
             },
-        });
+        };
+        const { container } = setup(testProps);
         expect(container).toMatchSnapshot();
     });
 });

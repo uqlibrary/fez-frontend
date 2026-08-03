@@ -1,6 +1,6 @@
 import React from 'react';
 import BulkUpdatesActions from './BulkUpdatesActions';
-import { render, fireEvent, WithReduxStore } from 'test-utils';
+import { render, fireEvent, WithReduxStore, spyOnWindowLocationMethod } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -17,6 +17,16 @@ function setup(testProps = {}) {
 }
 
 describe('BulkUpdatesActions', () => {
+    let reloadMock;
+
+    beforeEach(() => {
+        reloadMock = spyOnWindowLocationMethod('reload');
+    });
+
+    afterEach(() => {
+        jest.restoreAllMocks();
+    });
+
     it('should render bulk updates actions selector', () => {
         const { getByTestId } = setup();
 
@@ -30,10 +40,6 @@ describe('BulkUpdatesActions', () => {
     });
 
     it('should render confirmation box on action selected', () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { reload: jest.fn() };
-
         const { getByTestId, getByText, queryByTestId } = setup();
 
         fireEvent.mouseDown(getByTestId('bulk-updates-actions-select'));
@@ -44,15 +50,10 @@ describe('BulkUpdatesActions', () => {
         fireEvent.click(getByTestId('change-display-type-cancel'));
 
         expect(queryByTestId('change-display-type-form')).not.toBeInTheDocument();
-        expect(window.location.reload).toHaveBeenCalled();
-        window.location = location;
+        expect(reloadMock).toHaveBeenCalled();
     });
 
     it('should render confirmation box on action selected', () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { reload: jest.fn() };
-
         const { getByTestId, getByText, queryByTestId } = setup({
             recordsSelected: {
                 'UQ:123456': {
@@ -70,7 +71,6 @@ describe('BulkUpdatesActions', () => {
         fireEvent.click(getByTestId('remove-from-collection-cancel'));
 
         expect(queryByTestId('remove-from-collection-form')).not.toBeInTheDocument();
-        expect(window.location.reload).toHaveBeenCalled();
-        window.location = location;
+        expect(reloadMock).toHaveBeenCalled();
     });
 });

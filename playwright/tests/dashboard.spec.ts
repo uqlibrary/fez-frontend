@@ -12,7 +12,7 @@ test.describe('Dashboard', () => {
 
         test('should display graphs', async ({ page }) => {
             await expect(page.locator('text=Professor J Researcher')).toBeVisible();
-            await expect(page.getByTestId('standard-card-espace-works-per-year')).toBeVisible();
+            await expect(page.getByTestId('standard-card-uq-espace-works-per-year')).toBeVisible();
             await expect(page.getByTestId('standard-card-work-types-overview-content')).toBeVisible();
         });
 
@@ -30,7 +30,7 @@ test.describe('Dashboard', () => {
 
         test("shouldn't display graphs", async ({ page }) => {
             await expect(page.locator('text=Professor J Researcher')).toBeVisible();
-            await expect(page.getByTestId('standard-card-espace-works-per-year')).toHaveCount(0);
+            await expect(page.getByTestId('standard-card-uq-espace-works-per-year')).toHaveCount(0);
             await expect(page.getByTestId('standard-card-work-types-overview-content')).toHaveCount(0);
         });
     });
@@ -42,7 +42,7 @@ test.describe('Dashboard with no OrcID', () => {
         await expect(page.getByTestId('orcid-required')).toBeVisible();
         await expect(page.getByTestId('standard-card-i-already-have-an-orcid-id')).toBeVisible();
         await expect(page.getByTestId('standard-card-i-need-an-orcid-id-content')).toBeVisible();
-        await expect(page.getByTestId('standard-card-espace-works-per-year')).toHaveCount(0);
+        await expect(page.getByTestId('standard-card-uq-espace-works-per-year')).toHaveCount(0);
         await expect(page.getByTestId('standard-card-work-types-overview-content')).toHaveCount(0);
     });
 });
@@ -57,9 +57,19 @@ test.describe('Dashboard with open accessible work', () => {
         await expect(
             page
                 .locator('[data-testid=alert]')
-                .getByText('We have found 3 work(s) that may not meet the funder(s) Open Access requirements.'),
+                .getByText('We have found 13 work(s) that may not meet the funder(s) Open Access requirements.'),
         ).toBeVisible();
-        await page.locator('[data-testid=alert]').getByRole('button', { name: 'View and Fix' }).click();
+        await page.locator('[data-testid=alert]').first().getByRole('button', { name: 'View and Fix' }).click();
+        await expect(page).toHaveURL(/records\/my-open-access/);
+    });
+
+    test('should show creative work alert at top of page', async ({ page }) => {
+        await expect(
+            page
+                .locator('[data-testid=alert]')
+                .getByText('Creative Works funded by the ARC are encouraged to be open access.'),
+        ).toBeVisible();
+        await page.locator('[data-testid=alert]').nth(2).getByRole('button', { name: 'View and Fix' }).click();
         await expect(page).toHaveURL(/records\/my-open-access/);
     });
     test('should show a "make open access" button that navs to the open-access work route', async ({ page }) => {

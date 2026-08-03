@@ -58,7 +58,7 @@ export const FavouriteJournals: React.FC = () => {
     }, [page, pageSize, sortBy, sortDirection]);
 
     return (
-        // @ts-ignore
+        // @ts-expect-error TODO remove upon converting to TS
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid
                 container
@@ -143,7 +143,6 @@ export const FavouriteJournals: React.FC = () => {
                                             }}
                                         >
                                             <BackToSearchButton
-                                                // @ts-ignore
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
                                                 prevLocation={prevLocation.current}

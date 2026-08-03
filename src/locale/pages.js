@@ -15,13 +15,15 @@ import {
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_PREFIX,
     ESPACE_TEAM_CONTACT_US_URL,
+    ORCID_BASE_URL,
     PUBLICATION_TYPE_DATA_COLLECTION,
-    PUBLICATION_TYPE_INSTRUMENT,
 } from 'config/general';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { Link } from 'react-router';
+import LocaleLink from 'helpers/LocaleLink';
 import { Box } from '@mui/material';
+import { getDoiURL } from 'helpers/general';
+import { isDataCiteSupportedType } from '../helpers/doi';
 
 /*
 
@@ -253,7 +255,7 @@ export default {
                 // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
-                    countTitle: 'eSpace works from',
+                    countTitle: 'UQ eSpace works from',
                 },
                 dashboardAuthorAvatar: {
                     ariaPrefix: 'Photograph of ',
@@ -261,8 +263,6 @@ export default {
                 dashboardResearcherIds: {
                     researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
                     researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
-                    orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
-                    orcidLinkPrefix: ' orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
                         scopus: 'Scopus',
@@ -275,7 +275,7 @@ export default {
                             scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
                             researcher: 'https://www.webofscience.com/wos/author/rid/',
                             google_scholar: 'https://scholar.google.com.au/citations?user=',
-                            orcid: 'https://orcid.org/',
+                            orcid: `${ORCID_BASE_URL}/`,
                         },
                         notLinkedUrl: {
                             scopus: 'https://web.library.uq.edu.au/research-and-publish/orcid-and-researcher-identifiers/google-scholar-scopus-and-other-profiles',
@@ -288,17 +288,17 @@ export default {
                     },
                 },
                 dashboardOrcidSync: {
-                    badgeTooltip: 'Information about uploading your eSpace works to ORCID',
+                    badgeTooltip: 'Information about uploading your UQ eSpace works to ORCID',
                     helpDrawer: {
                         messages: {
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
                             // Statuses
                             done: 'There is no pending manual upload of your works to ORCID. You can trigger an immediate upload by clicking on the button below.',
-                            error: 'There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
-                            inProgress: 'A manual upload of your eSpace works to ORCID is in progress.',
+                            error: 'There has been an error while processing a manual upload of your UQ eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties.',
+                            inProgress: 'A manual upload of your UQ eSpace works to ORCID is in progress.',
                             // Date of last upload
                             lastUpload: 'The last upload was on [syncTime].',
-                            noPrevious: 'There are no previous uploads of your eSpace works to ORCID.',
+                            noPrevious: 'There are no previous uploads of your UQ eSpace works to ORCID.',
                             syncPreference: {
                                 saving: 'Saving ORCID sync preferences.',
                                 error: 'Error while saving ORCID sync preferences.',
@@ -329,7 +329,7 @@ export default {
                 actionButtonLabel: 'Claim your works now',
             },
             nothingToClaimLure: {
-                title: 'Add your work to eSpace',
+                title: 'Add your work to UQ eSpace',
                 message: 'We found nothing new for you to claim, but you may add a work any time.',
                 type: 'info_outline',
                 actionButtonLabel: 'Add a missing work',
@@ -341,7 +341,7 @@ export default {
                 actionButtonLabel: 'Enable ORCID sync now',
             },
             publicationsByYearChart: {
-                title: 'eSpace works per year',
+                title: 'UQ eSpace works per year',
                 yAxisTitle: 'Total works',
             },
             publicationTypesCountChart: {
@@ -360,6 +360,12 @@ export default {
                 actionButtonLabel: 'View and Fix',
                 icon: <LockOpenIcon id="unlock-outline-icon" className="icon" />,
             },
+            oacomplianceCreativeWorkRecordLure: {
+                title: 'Open Access Required',
+                message: 'Creative Works funded by the ARC are encouraged to be open access.',
+                type: 'info_outline',
+                actionButtonLabel: 'View and Fix',
+            },
         },
         myResearch: {
             pageTitle: 'My works',
@@ -367,8 +373,8 @@ export default {
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
             text: (
                 <span>
-                    Add to this list by <Link to={pathConfig.records.possible}>claiming a work</Link> or{' '}
-                    <Link to={pathConfig.records.add.find}>adding a missing work</Link>.
+                    Add to this list by <LocaleLink to={pathConfig.records.possible}>claiming a work</LocaleLink> or{' '}
+                    <LocaleLink to={pathConfig.records.add.find}>adding a missing work</LocaleLink>.
                 </span>
             ),
             loadingMessage: 'Searching for your works',
@@ -379,8 +385,8 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <Link to={pathConfig.records.possible}>claim works we think may be yours</Link> or{' '}
-                        <Link to={pathConfig.records.add.find}>add a missing publication</Link>
+                        <LocaleLink to={pathConfig.records.possible}>claim works we think may be yours</LocaleLink> or{' '}
+                        <LocaleLink to={pathConfig.records.add.find}>add a missing publication</LocaleLink>
                     </div>
                 ),
             },
@@ -391,7 +397,8 @@ export default {
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             text: (
                 <span>
-                    Add to this list by <Link to={`${pathConfig.dataset.add}`}>adding a missing dataset</Link>.
+                    Add to this list by{' '}
+                    <LocaleLink to={`${pathConfig.dataset.add}`}>adding a missing dataset</LocaleLink>.
                 </span>
             ),
             loadingMessage: 'Searching for your datasets',
@@ -401,7 +408,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <Link to={pathConfig.dataset.add}>add a missing dataset</Link>.
+                        <LocaleLink to={pathConfig.dataset.add}>add a missing dataset</LocaleLink>.
                     </div>
                 ),
             },
@@ -545,6 +552,10 @@ export default {
                                 id: 'crossref',
                                 title: 'Crossref',
                             },
+                            {
+                                id: 'openalex',
+                                title: 'OpenAlex',
+                            },
                         ],
                     },
                 },
@@ -674,10 +685,7 @@ export default {
                         record.fez_record_search_key_new_doi?.rek_new_doi ? (
                             <>
                                 This Data Collection has been deleted and substituted by{' '}
-                                <a
-                                    href={`https://doi.org/${record.fez_record_search_key_new_doi?.rek_new_doi}`}
-                                    target="_blank"
-                                >
+                                <a href={getDoiURL(record.fez_record_search_key_new_doi?.rek_new_doi)} target="_blank">
                                     another version
                                 </a>
                                 .
@@ -728,6 +736,8 @@ export default {
                         authorAffiliations: 'Author Affiliations',
                         wosId: 'WoS ID',
                         wosDocType: 'WoS Doc Type',
+                        openalexId: 'OpenAlex ID',
+                        openalexDocType: 'OpenAlex Doc Type',
                         scopusId: 'Scopus ID',
                         scopusDocType: 'Scopus Doc Type',
                         pubmedId: 'Pubmed ID',
@@ -772,6 +782,9 @@ export default {
                 title: 'Error',
                 message: message => message,
                 alertId: 'alert-error',
+            },
+            authorStatistics: {
+                viewPublicationsList: 'View publications list',
             },
         },
         searchJournals: {
@@ -1039,7 +1052,7 @@ export default {
                 noDoi: 'DOI (Preview)',
             },
             doiTemplate: (pid, displayType) =>
-                displayType === PUBLICATION_TYPE_DATA_COLLECTION || displayType === PUBLICATION_TYPE_INSTRUMENT
+                isDataCiteSupportedType(displayType)
                     ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
                     : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
@@ -1056,7 +1069,7 @@ export default {
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
                 uqIsNotPublisher: '[SUBJECT] does not appear to be have an UQ DOI',
                 warningTitle: 'Please note:',
-                wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
+                wrongSubtype: 'Sorry, only the following subtypes are supported for [TYPE]: [SUBTYPES]',
                 bookChapter: {
                     parent: {
                         missing: "Sorry, this book chapter doesn't seem to belong to a existing book",
@@ -1342,7 +1355,7 @@ export default {
                 },
                 publishAsOAButton: {
                     tooltip: 'Avoid fees and meet mandates by viewing similar journals with open access.',
-                    text: "I'd like to publish open access",
+                    text: "I'd like to publish open access without fees",
                 },
             },
         },

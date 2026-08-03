@@ -8,6 +8,7 @@ import {
     REPORT_TYPE,
 } from './config';
 import {
+    buildChartItem,
     filterObjectProps,
     filterObjectPropsByKey,
     getPlatformUrl,
@@ -98,6 +99,10 @@ export const transformDisplayReportRequest = data => {
         ...(data.report.value === 'systemalertlog' && !!data.filters?.record_id
             ? { record_id: data.filters.record_id }
             : {}),
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.requestor_id
+            ? { requestor_id: data.filters.requestor_id }
+            : {}),
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.pid ? { pid: data.filters.pid } : {}),
     };
 
     return request;
@@ -114,14 +119,9 @@ export const transformDisplayReportExportData = (columns, data) => {
     return newData;
 };
 
-export const transformOaCategories = categories =>
-    OA_STATUS_CATEGORIES.map(({ value, text }) => {
-        const total = getTotalDocCount(categories);
-        const count = categories[value]?.doc_count ?? 0;
-        const percentage = total ? (count / total) * 100 : 0;
-        return {
-            id: value,
-            label: `${text} (${percentage.toFixed(1)}%)`,
-            value: count,
-        };
-    });
+export const transformOaCategoriesToChartData = categories => {
+    const total = getTotalDocCount(categories);
+    return OA_STATUS_CATEGORIES.map(({ value, text }) =>
+        buildChartItem(value, text, categories[value]?.doc_count ?? 0, total),
+    );
+};

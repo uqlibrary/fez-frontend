@@ -28,6 +28,7 @@ export default {
                       ['rek_description'],
                       ['fez_record_search_key_original_format'],
                       ['fez_record_search_key_location'],
+                      ['fez_record_search_key_raid'],
                   ]
                 : [
                       ['fez_record_search_key_series'],
@@ -41,6 +42,7 @@ export default {
                       ['fez_record_search_key_source'],
                       ['fez_record_search_key_rights'],
                       ['fez_record_search_key_location'],
+                      ['fez_record_search_key_raid'],
                   ],
         },
         ...(!isDesignNtro

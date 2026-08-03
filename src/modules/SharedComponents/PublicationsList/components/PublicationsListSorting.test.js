@@ -80,7 +80,7 @@ describe('PublicationsListSorting component', () => {
         const { getByTestId, getByRole } = setup({ onPageSizeChanged: testFn });
         fireEvent.mouseDown(within(getByTestId('publication-list-sorting-page-size')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: '50' }));
-        expect(testFn).toBeCalled();
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('renders with non-empty paging data, orderDirectionsChanged called', () => {
@@ -88,7 +88,7 @@ describe('PublicationsListSorting component', () => {
         const { getByTestId, getByRole } = setup({ onSortByChanged: testFn });
         fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-order')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Asc' }));
-        expect(testFn).toBeCalled();
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('renders with non-empty paging data, sortByChanged called', () => {
@@ -96,7 +96,7 @@ describe('PublicationsListSorting component', () => {
         const { getByTestId, getByRole } = setup({ onSortByChanged: testFn });
         fireEvent.mouseDown(within(getByTestId('publication-list-sorting-sort-by')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Title' }));
-        expect(testFn).toBeCalled();
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('renders with non-empty paging data, onExportPublications called', () => {
@@ -113,7 +113,7 @@ describe('PublicationsListSorting component', () => {
         const { getByTestId, getByRole } = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
         fireEvent.mouseDown(within(getByTestId('publication-list-display-records-as')).getByRole('combobox'));
         fireEvent.click(getByRole('option', { name: 'Standard' }));
-        expect(testFn).toBeCalled();
+        expect(testFn).toHaveBeenCalled();
     });
 
     it('does not render dropdown for displayRecordsAs if not assigned showDisplayAs prop', () => {

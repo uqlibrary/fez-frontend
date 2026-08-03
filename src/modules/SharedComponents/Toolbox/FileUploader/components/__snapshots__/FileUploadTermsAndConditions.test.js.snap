@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Component FileUploadTermsAndConditions should render checked if terms and conditions accepted 1`] = `
 <div>

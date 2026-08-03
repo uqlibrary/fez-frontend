@@ -41,7 +41,7 @@ describe('CommonButtons', () => {
 
         fireEvent.click(queryByTestId('journal-search-favourite-journals-button'));
 
-        expect(mockUseNavigate).toBeCalledWith('/journals/favourites/', { state: { prevLocation: { pathname: '/' } } });
+        expect(mockUseNavigate).toHaveBeenCalledWith('/journals/favourites/', { state: { prevLocation: { pathname: '/' } } });
     });
 
     it('should call supplied function when Search All Journals button pressed', () => {

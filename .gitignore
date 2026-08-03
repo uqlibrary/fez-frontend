@@ -26,3 +26,9 @@ stats.json
 # Playwright
 /playwright/.results
 /playwright/.cache
+
+# AI
+CLAUDE.md
+.claude/
+src/.mcp.json
+src/boost.json

@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DashboardOrcidSync Component should render Done status 1`] = `
 <div>
   <button
-    aria-label="Information about uploading your eSpace works to ORCID"
+    aria-label="Information about uploading your UQ eSpace works to ORCID"
     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
@@ -31,7 +31,7 @@ exports[`DashboardOrcidSync Component should render Done status 1`] = `
 exports[`DashboardOrcidSync Component should render Error status 1`] = `
 <div>
   <button
-    aria-label="There has been an error while processing a manual upload of your eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties."
+    aria-label="There has been an error while processing a manual upload of your UQ eSpace works to ORCID. Please try again in a few minutes or contact espace@library.uq.edu.au if you continue to experience difficulties."
     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
@@ -59,7 +59,7 @@ exports[`DashboardOrcidSync Component should render Error status 1`] = `
 exports[`DashboardOrcidSync Component should render Pending status 1`] = `
 <div>
   <button
-    aria-label="A manual upload of your eSpace works to ORCID is in progress."
+    aria-label="A manual upload of your UQ eSpace works to ORCID is in progress."
     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
@@ -96,7 +96,7 @@ exports[`DashboardOrcidSync Component should render Pending status 1`] = `
 exports[`DashboardOrcidSync Component should render properly 1`] = `
 <div>
   <button
-    aria-label="Information about uploading your eSpace works to ORCID"
+    aria-label="Information about uploading your UQ eSpace works to ORCID"
     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
@@ -124,7 +124,7 @@ exports[`DashboardOrcidSync Component should render properly 1`] = `
 exports[`DashboardOrcidSync Component should render properly when sync is disabled 1`] = `
 <div>
   <button
-    aria-label="Information about uploading your eSpace works to ORCID"
+    aria-label="Information about uploading your UQ eSpace works to ORCID"
     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
@@ -152,7 +152,7 @@ exports[`DashboardOrcidSync Component should render properly when sync is disabl
 exports[`DashboardOrcidSync Component should render properly when sync is enabled 1`] = `
 <div>
   <button
-    aria-label="Information about uploading your eSpace works to ORCID"
+    aria-label="Information about uploading your UQ eSpace works to ORCID"
     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"
@@ -180,7 +180,7 @@ exports[`DashboardOrcidSync Component should render properly when sync is enable
 exports[`DashboardOrcidSync Container should render properly 1`] = `
 <div>
   <button
-    aria-label="Information about uploading your eSpace works to ORCID"
+    aria-label="Information about uploading your UQ eSpace works to ORCID"
     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
     data-analyticsid="help-icon-orcid"
     data-mui-internal-clone-element="true"

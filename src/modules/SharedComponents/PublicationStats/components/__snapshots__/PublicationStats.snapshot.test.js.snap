@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
 <div>
@@ -11,7 +11,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
       >
-        eSpace works
+        UQ eSpace works
       </p>
     </div>
     <div
@@ -226,7 +226,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
       >
-        eSpace works
+        UQ eSpace works
       </p>
     </div>
     <div
@@ -441,7 +441,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
       >
-        eSpace works
+        UQ eSpace works
       </p>
     </div>
     <div
@@ -656,7 +656,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
       >
-        eSpace works
+        UQ eSpace works
       </p>
     </div>
     <div
@@ -879,7 +879,7 @@ exports[`PublicationStats component should render statistics with table and data
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
       >
-        eSpace works
+        UQ eSpace works
       </p>
     </div>
     <div

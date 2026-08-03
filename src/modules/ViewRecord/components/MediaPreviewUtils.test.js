@@ -11,6 +11,6 @@ describe('Media Preview Utils ', () => {
         jest.useFakeTimers();
         scrollToPreview(mediaRef);
         jest.advanceTimersByTime(100);
-        expect(scrollIntoViewFn).toBeCalledTimes(1);
+        expect(scrollIntoViewFn).toHaveBeenCalledTimes(1);
     });
 });

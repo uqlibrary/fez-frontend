@@ -1,5 +1,13 @@
 import { test, expect, Page } from '../test';
 import { readCKEditor, typeCKEditor } from '../lib/ckeditor';
+import errors from 'locale/validationErrors';
+import {
+    assertHasText,
+    assertMissingText,
+    assertMissingValidationSummaryError,
+    assertValidationSummaryError,
+    validationSummary,
+} from '../lib/helpers';
 
 test.describe('Incomplete record form', () => {
     const checkSignificance = async (page: Page, significance: string) => {
@@ -33,8 +41,6 @@ test.describe('Incomplete record form', () => {
     };
 
     const authorEditInstruction = 'Step 2 of 2 - Update the affiliation information.';
-    const grantMessage = 'You must click ADD GRANT to enter the value to the grants list';
-    const validationErrorsSelector = '[data-testid=alert] li';
 
     const editNonUQAuthor = async (page: Page, authorNumber: number, orgName: string, orgType: string) => {
         await page.locator(`#rek-author-list-row-edit-${authorNumber}`).click();
@@ -143,15 +149,17 @@ test.describe('Incomplete record form', () => {
         await editNonUQAuthor(page, 2, 'Test org type', 'Government');
         await editUQAuthor(page, 3);
 
-        await expect(page.locator(validationErrorsSelector)).toHaveCount(1);
-        await expect(page.locator(validationErrorsSelector)).toContainText('File submission to be completed'); // Use toContainText
+        await expect(validationSummary(page)).toHaveCount(1);
+        await expect(validationSummary(page)).toContainText('File submission to be completed'); // Use toContainText
         await expect(page.locator('#update-my-work')).toBeDisabled();
 
         // 'should have working tests for Grants editor'
+        await assertMissingValidationSummaryError(page, errors.validationErrors.grants);
+        await assertMissingText(page.getByTestId('grant-list-editor-error'), errors.validationErrors.grants);
         await page.getByTestId('rek-grant-agency-input').fill('Grant name');
+        await assertValidationSummaryError(page, errors.validationErrors.grants);
+        await assertHasText(page.getByTestId('grant-list-editor-error'), errors.validationErrors.grants);
         await expect(page.getByTestId('rek-grant-add')).toBeDisabled();
-        await expect(page.locator(validationErrorsSelector)).toHaveCount(2);
-        await expect(page.locator(validationErrorsSelector).getByText(grantMessage)).toBeVisible();
         await page.getByTestId('rek-grant-id-input').fill('0001');
         await page.getByTestId('rek-grant-type-select').click();
         await page
@@ -162,8 +170,9 @@ test.describe('Incomplete record form', () => {
         await expect(page.getByTestId('rek-grant-type-input')).toHaveValue('453984');
         await expect(page.getByTestId('rek-grant-add')).toBeEnabled();
         await page.getByTestId('rek-grant-add').click();
-        await expect(page.locator(validationErrorsSelector)).toHaveCount(1);
-        await expect(page.locator(validationErrorsSelector)).not.toContainText(grantMessage);
+        await expect(validationSummary(page)).toHaveCount(1);
+        await assertMissingValidationSummaryError(page, errors.validationErrors.grants);
+        await assertMissingText(page.getByTestId('grant-list-editor-error'), errors.validationErrors.grants);
     });
 
     test("should allow going back to list using browser's back button", async ({ page }) => {

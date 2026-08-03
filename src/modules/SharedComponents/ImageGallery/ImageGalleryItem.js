@@ -10,6 +10,7 @@ import { handleKeyboardPressActivate } from 'helpers/general';
 
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItemImage from './ImageGalleryItemImage';
+import { useInView } from 'react-intersection-observer';
 
 const internalClasses = {
     imageListItemRoot: {
@@ -86,7 +87,6 @@ const ImageGalleryItem = ({
     withAlert = true,
     url,
     classes = {},
-    lazyLoading = config.thumbnailImage.defaultLazyLoading,
     itemWidth = config.thumbnailImage.defaultWidth,
     itemHeight = config.thumbnailImage.defaultHeight,
     security = { isAdmin: false, isAuthor: false, author: {} },
@@ -118,8 +118,15 @@ const ImageGalleryItem = ({
             ? { 'aria-label': txt.components.imageGallery.thumbnail.ariaLabel.replace('[title]', item.rek_title) }
             : {};
 
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        rootMargin: '300px 0px', // tweak if needed
+        root: document.querySelector('.content-container'),
+    });
+
     return (
         <ImageListItem
+            ref={ref}
             id={`image-gallery-item-${item.rek_pid}`}
             data-testid={`image-gallery-item-${item.rek_pid}`}
             sx={{
@@ -143,11 +150,11 @@ const ImageGalleryItem = ({
                 alt={item.rek_title}
                 width={itemWidth}
                 height={itemHeight}
-                loading={lazyLoading ? 'lazy' : 'eager'}
                 classes={{
                     ...internalClasses.imageGalleryItemImage,
                     ...(!!classes && classes?.imageListItemImage),
                 }}
+                inView={inView}
                 setRestricted={setRestricted}
                 setAdvisory={setAdvisory}
                 setUnavailable={setUnavailable}
@@ -171,9 +178,9 @@ const ImageGalleryItem = ({
                     data-testid={`image-gallery-item-${item.rek_pid}-title`}
                 />
             )}
-            {!!alertMessage && withAlert && (
+            {withAlert && (
                 <ImageListItemBar
-                    title={alertMessage}
+                    title={alertMessage ?? ''}
                     position="top"
                     sx={{
                         ...internalClasses.imageListAlertBarRoot,
@@ -186,6 +193,7 @@ const ImageGalleryItem = ({
                             ...internalClasses.imageListAlertBarWrap,
                             ...(!!classes && classes?.imageListAlertBar?.titleWrap),
                         },
+                        opacity: alertMessage ? 1 : 0,
                     }}
                     id={`image-gallery-item-${item.rek_pid}-alert`}
                     data-testid={`image-gallery-item-${item.rek_pid}-alert`}
@@ -210,7 +218,6 @@ ImageGalleryItem.propTypes = {
         imageListItemBar: PropTypes.object,
         imageListAlertBar: PropTypes.object,
     }),
-    lazyLoading: PropTypes.bool,
     itemWidth: PropTypes.number,
     itemHeight: PropTypes.number,
 };

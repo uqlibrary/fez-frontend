@@ -20,6 +20,7 @@ const PublicationsListSorting = ({
     canUseExport,
     exportData = {},
     disabled,
+    extraViewTypes,
     initPageLength,
     onExportPublications,
     onPageSizeChanged,
@@ -67,7 +68,7 @@ const PublicationsListSorting = ({
         ? initPropPageSize
         : (sortingDefaults.pageSize ?? pageLength[0]);
 
-    const selectableCollectionViewType = filterCollectionViewTypes();
+    const selectableCollectionViewType = [...filterCollectionViewTypes(), ...(extraViewTypes || [])];
 
     const propDisplayRecordsAs = doesListContainItem(selectableCollectionViewType, initPropDisplayRecordsAs)
         ? initPropDisplayRecordsAs
@@ -288,6 +289,7 @@ PublicationsListSorting.propTypes = {
     sortDirection: PropTypes.string,
     onDisplayRecordsAsChanged: PropTypes.func,
     displayRecordsAs: PropTypes.string,
+    extraViewTypes: PropTypes.array,
 };
 
 export default PublicationsListSorting;

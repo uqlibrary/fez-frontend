@@ -4,6 +4,7 @@
     "paths": {
       "test-utils": ["../utils/test-utils"]
     },
+      "jsx": "react"
   },
   "exclude": [
     ".git",

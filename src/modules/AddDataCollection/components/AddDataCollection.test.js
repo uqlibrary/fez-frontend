@@ -1,6 +1,14 @@
 import React from 'react';
 import AddDataCollection, { licenseText, validateDOI } from './AddDataCollection';
-import { render, WithReduxStore, WithMemoryRouter, fireEvent, waitFor, screen } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithMemoryRouter,
+    fireEvent,
+    waitFor,
+    screen,
+    spyOnWindowLocationMethod,
+} from 'test-utils';
 import { useValidatedForm } from 'hooks';
 import userEvent from '@testing-library/user-event';
 import { useWatch } from 'react-hook-form';
@@ -132,14 +140,13 @@ describe('AddDataCollection test', () => {
     });
 
     it('should redirect to cancel page', async () => {
-        const { location } = window;
-        delete window.location;
-        window.location = { reload: jest.fn() };
+        const reloadMock = spyOnWindowLocationMethod('reload');
+
         const { getByRole } = setup();
 
         fireEvent.click(getByRole('button', { name: 'Cancel' }));
-        expect(window.location.reload).toHaveBeenCalled();
-        window.location = location;
+        expect(reloadMock).toHaveBeenCalled();
+        jest.clearAllMocks();
     });
 
     it('should get save confirmation locale correctly', () => {

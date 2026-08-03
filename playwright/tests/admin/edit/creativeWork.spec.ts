@@ -11,6 +11,7 @@ import {
     assertChangeSelectFromTo,
 } from '../helpers';
 import { typeCKEditor } from '../../../lib/ckeditor';
+import { assertHasText } from '../../../lib/helpers';
 
 test.describe('Creative Work admin edit, general', () => {
     const record = { ...recordList.data[0] };
@@ -18,7 +19,7 @@ test.describe('Creative Work admin edit, general', () => {
     test.beforeEach(async ({ page }) => await loadRecordForAdminEdit(page, record.rek_pid));
 
     test('tabs for Creative entry should also include NTRO', async ({ page }) => {
-        await adminEditCountCards(page, 9);
+        await adminEditCountCards(page, 10);
         await adminEditNoAlerts(page);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');
@@ -269,6 +270,47 @@ test.describe('Creative Work admin edit, general', () => {
             const dialog = page.getByRole('dialog');
             await expect(dialog).toBeVisible();
             await expect(dialog.locator('h2')).toContainText('Work has been updated');
+        });
+    });
+
+    test.describe('in the Grants section', () => {
+        test('should not remove items when switching tabs', async ({ page }) => {
+            // turn on tabbed mode and select grants tab
+            await page.locator('input[type=checkbox][value=tabbed]').click();
+            await page.getByTestId('grants-tab').click();
+
+            // add a couple of grants
+            await page.getByTestId('rek-grant-agency-input').fill('agency 1');
+            await page.getByTestId('rek-grant-type-select').click();
+            await page
+                .locator('body > [role=presentation]')
+                .locator('li')
+                .getByText('Commercial Gallery', { exact: true })
+                .click();
+            await page.getByTestId('rek-grant-add').click();
+            await page.getByTestId('rek-grant-agency-input').fill('agency 2');
+            await page.getByTestId('rek-grant-type-select').click();
+            await page
+                .locator('body > [role=presentation]')
+                .locator('li')
+                .getByText('Commercial Gallery', { exact: true })
+                .click();
+            await page.getByTestId('rek-grant-add').click();
+            await assertHasText(page.getByTestId('rek-grant-list'), 'agency 1');
+            await assertHasText(page.getByTestId('rek-grant-list'), 'agency 2');
+
+            // switch to another tab and come back and start filling the form
+            await page.getByTestId('identifiers-tab').click();
+            await page.getByTestId('grants-tab').click();
+            await assertHasText(page.getByTestId('rek-grant-list'), 'agency 1');
+            await assertHasText(page.getByTestId('rek-grant-list'), 'agency 2');
+            await page.getByTestId('rek-grant-agency-input').fill('agency 3');
+
+            // switch to another tab and come back and make sure the list items remain
+            await page.getByTestId('identifiers-tab').click();
+            await page.getByTestId('grants-tab').click();
+            await assertHasText(page.getByTestId('rek-grant-list'), 'agency 1');
+            await assertHasText(page.getByTestId('rek-grant-list'), 'agency 2');
         });
     });
 });

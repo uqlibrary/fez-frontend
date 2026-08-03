@@ -24,7 +24,6 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { KeywordsForm, NewListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import DepositAgreementField from './DepositAgreementField';
@@ -42,6 +41,7 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import { useNavigate } from 'react-router';
 import { createNewRecord, doesDOIExist } from 'actions';
 import validationErrors from '../../../locale/validationErrors';
+import PublicationMap from '../../SharedComponents/PublicationMap/PublicationMap';
 
 /**
  * @param {object} value
@@ -764,7 +764,7 @@ export const AddDataCollection = ({ disableSubmit, ...props }) => {
                                 </Typography>
                                 <Field
                                     control={control}
-                                    component={GeoCoordinatesField}
+                                    component={PublicationMap}
                                     disabled={isSubmitting}
                                     name="geographicArea"
                                 />

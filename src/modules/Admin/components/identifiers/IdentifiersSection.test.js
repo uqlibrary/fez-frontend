@@ -62,7 +62,7 @@ describe('IdentifiersSection component', () => {
         }));
 
         const { container } = setup({ disabled: true });
-        expect(document.querySelectorAll('input[disabled=""]')).toHaveLength(10);
+        expect(document.querySelectorAll('input[disabled=""]')).toHaveLength(12);
         expect(container).toMatchSnapshot();
     });
 

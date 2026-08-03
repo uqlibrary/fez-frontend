@@ -30,15 +30,27 @@ export const navToHomeFromMenu = async (
     page: Page,
     locale?: { confirmationTitle: string; confirmButtonLabel: string },
 ) => {
+    const maybeConfirmDialog = async () => {
+        if (!locale) return;
+
+        const dialog = page.getByRole('dialog').filter({ hasText: locale.confirmationTitle });
+        if (!(await dialog.count())) return;
+
+        const button = dialog.getByRole('button', { name: locale.confirmButtonLabel });
+        if (!(await button.count())) return;
+
+        if (await button.isVisible()) {
+            await button.click();
+        }
+    };
+
+    await maybeConfirmDialog();
+
     await page.locator('button#main-menu-button').click();
     await page.locator('#menu-item-0').click();
 
     if (locale && page.url() !== `${baseURL}/`) {
-        await page
-            .getByRole('dialog')
-            .filter({ hasText: locale.confirmationTitle })
-            .getByRole('button', { name: locale.confirmButtonLabel })
-            .click();
+        await maybeConfirmDialog();
     }
 };
 
@@ -47,23 +59,38 @@ export const fillInput = async (page: Page, selector: string, value: any, times:
     await page.fill(selector, String(value).repeat(times));
 };
 
-export async function assertIsVisible(element: Locator): Promise<void> {
+export const enterItemUsingNamesPopoverForm = async (page: Page, fieldName: string, ...names: string[]) => {
+    await page.getByTestId(`${fieldName}-input`).click();
+    await page.waitForSelector(`[data-testid="${fieldName}-names-popover-form-family-name"]`);
+    if (names[0]) await page.getByTestId(`${fieldName}-names-popover-form-given-name-input`).fill(names[0]);
+    await page.getByTestId(`${fieldName}-names-popover-form-family-name-input`).fill(names[1]);
+    const submitButton = page.getByTestId(`${fieldName}-names-popover-form-submit-button`);
+    await expect(submitButton).toBeEnabled();
+    await submitButton.click();
+};
+
+export const addItemUsingNamesPopoverForm = async (page: Page, fieldName: string, ...names: string[]) => {
+    await enterItemUsingNamesPopoverForm(page, fieldName, ...names);
+    await page.getByTestId(`${fieldName}-add`).click();
+};
+
+export const assertIsVisible = async (element: Locator): Promise<void> => {
     await expect(element).toBeVisible();
-}
+};
 
-export async function assertIsNotVisible(element: Locator): Promise<void> {
+export const assertIsNotVisible = async (element: Locator): Promise<void> => {
     await expect(element).not.toBeInViewport();
-}
+};
 
-export async function clickAutoSuggestion(page: Page, fieldName: string, ordinal: string | number): Promise<void> {
+export const clickAutoSuggestion = async (page: Page, fieldName: string, ordinal: string | number): Promise<void> => {
     await page.locator(`#${fieldName}-option-${ordinal}`).click();
-}
+};
 
-export async function loadAdminDashboard(page: Page, user: string = 'uqstaff') {
+export const loadAdminDashboard = async (page: Page, user: string = 'uqstaff') => {
     await page.setViewportSize({ width: 1200, height: 1000 });
     await page.goto(`/admin/dashboard?user=${user}`);
     await expect(page.locator('h2').getByText('Admin dashboard')).toBeVisible();
-}
+};
 
 export const testIdStartsWith = (page: Page | Locator, id: string) => page.locator(`[data-testid^=${id}]`);
 
@@ -72,11 +99,11 @@ export const getOpenedLink = async (context: BrowserContext, locator: Locator) =
     return newPage;
 };
 
-export async function setPartialDate(
+export const setPartialDate = async (
     page: Page,
     id: string,
     { day, month, year }: { day?: string | number; month?: number; year?: string | number },
-) {
+) => {
     if (day !== undefined) {
         const dayInput = page.getByTestId(`${id}-day-input`);
         await dayInput.fill(String(day));
@@ -94,13 +121,13 @@ export async function setPartialDate(
         const yearInput = page.getByTestId(`${id}-year-input`);
         await yearInput.fill(String(year));
     }
-}
+};
 
-export async function checkPartialDate(
+export const checkPartialDate = async (
     page: Page,
     id: string,
     { day, monthName, year }: { day?: string; monthName?: string; year?: string },
-) {
+) => {
     if (day !== undefined) {
         const dayInput = page.getByTestId(`${id}-day-input`);
         await expect(dayInput).toHaveValue(day);
@@ -115,16 +142,32 @@ export async function checkPartialDate(
         const yearInput = page.getByTestId(`${id}-year-input`);
         await expect(yearInput).toHaveValue(year);
     }
-}
+};
 
-export async function checkPartialDateFromRecordValue(page: Page, id: string, dateString: string) {
+export const checkPartialDateFromRecordValue = async (page: Page, id: string, dateString: string) => {
     const date = moment(dateString);
     await checkPartialDate(page, id, {
         day: date.format('D'),
         monthName: date.format('MMMM'),
         year: date.format('YYYY'),
     });
-}
+};
 
 export const setFileInput = async (container: Page | Locator, fileName: string) =>
+    // @ts-expect-error TODO double-check setInputFiles usage
     await container.setInputFiles(path.join(__dirname, `../tests/fixtures/${fileName}`));
+
+export const assertHasText = async (container: Locator, text: string) =>
+    await expect(container.getByText(text, { exact: true })).toBeVisible();
+
+export const assertMissingText = async (container: Locator, text: string) =>
+    await expect(container.getByText(text, { exact: true })).toHaveCount(0);
+
+// expect the validation summary container is the last element with data-testid="alert-message" on the page
+export const validationSummary = (page: Page) => page.getByTestId('alert-message').last();
+
+export const assertValidationSummaryError = async (page: Page, text: string) =>
+    await assertHasText(validationSummary(page), text);
+
+export const assertMissingValidationSummaryError = async (page: Page, text: string) =>
+    await assertMissingText(validationSummary(page), text);

@@ -106,7 +106,7 @@ describe('AutoCompleteSelectField component', () => {
             fireEvent.click(getByTitle('Clear'));
         });
 
-        expect(onClearFn).toBeCalled();
+        expect(onClearFn).toHaveBeenCalled();
     });
 
     it('should clear the input value on deleting input value by keyboard', () => {
@@ -126,7 +126,7 @@ describe('AutoCompleteSelectField component', () => {
             fireEvent.change(getByTestId('autocomplete-select-field-input'), { target: { value: '' } });
         });
 
-        expect(onClearFn).toBeCalled();
+        expect(onClearFn).toHaveBeenCalled();
     });
 
     it('correctly matches options with the same value but different object references', async () => {

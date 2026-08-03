@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NtroSection component should not render ismn field for Book - Creative Work - Musical Composition 1`] = `
 <div>
@@ -274,7 +274,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
-                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgba(224, 224, 224, 1);"
+                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
                   </p>
@@ -667,7 +667,7 @@ exports[`NtroSection component should render default view 1`] = `
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
-                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgba(224, 224, 224, 1);"
+                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
                   </p>
@@ -1060,7 +1060,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
-                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgba(224, 224, 224, 1);"
+                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
                   </p>
@@ -1456,7 +1456,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
-                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgba(224, 224, 224, 1);"
+                    style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
                   </p>

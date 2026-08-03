@@ -83,7 +83,7 @@ describe('Component ThirdPartyLookupFormResult', () => {
 
         fireEvent.click(getByRole('button', { name: /New Test Search/i }));
 
-        expect(mockCallback).not.toBeCalled();
+        expect(mockCallback).not.toHaveBeenCalled();
     });
 
     it('should display the secondary field when required', () => {

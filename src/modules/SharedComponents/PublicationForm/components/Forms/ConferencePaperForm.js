@@ -235,6 +235,10 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                             />
                         </Grid>
                         <Grid item xs={12}>
+                            <Typography>
+                                Please add any other notes for the UQ eSpace team. If there is a <b>preprint version</b>{' '}
+                                of this work, please include its details and link.
+                            </Typography>
                             <Field
                                 control={control}
                                 component={TextField}

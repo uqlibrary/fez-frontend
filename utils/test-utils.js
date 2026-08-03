@@ -24,7 +24,6 @@ import userEvent from '@testing-library/user-event';
 import { waitFor, waitForElementToBeRemoved } from '@testing-library/dom';
 import preview, { jestPreviewConfigure } from 'jest-preview';
 import * as useValidatedForm from 'hooks/useValidatedForm';
-import * as useForm from 'hooks/useForm';
 import { apiRequestHistory } from '../src/config/axios';
 import { api } from './MockApiWrapper';
 import { isEmptyObject } from '../src/helpers/general';
@@ -204,24 +203,20 @@ const addFilesToFileUploader = async (files, timeout = 500) => {
     }
 };
 const assertEnabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled');
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeEnabled();
 const assertDisabled = element =>
-    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled');
+    expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeDisabled();
 const waitToBeEnabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).not.toHaveAttribute('disabled'),
-    );
+    await waitFor(() => expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeEnabled());
 const waitToBeDisabled = async element =>
-    await waitFor(() =>
-        expect(typeof element === 'string' ? screen.getByTestId(element) : element).toHaveAttribute('disabled'),
-    );
+    await waitFor(() => expect(typeof element === 'string' ? screen.getByTestId(element) : element).toBeDisabled());
 
 /**
  * @param {string|function} dataTestId
  * @param {object?} options
  * @return {Promise<HTMLElement>}
  */
-const waitElementToBeInDocument = async (dataTestId, options) =>
+const waitElementToBeInTheDocument = async (dataTestId, options) =>
     await waitFor(() => {
         const element = typeof dataTestId === 'string' ? screen.getByTestId(dataTestId) : dataTestId();
         expect(element).toBeInTheDocument();
@@ -230,10 +225,16 @@ const waitElementToBeInDocument = async (dataTestId, options) =>
 
 /**
  * @param {string|function} testId
- * @return {HTMLElement}
+ * @return {void}
  */
-const assertMissingElement = testId =>
-    expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
+const assertIsInTheDocument = testId =>
+    expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).toBeInTheDocument();
+
+/**
+ * @param {string|function} testId
+ */
+const assertNotInTheDocument = testId =>
+    testId && expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
 
 /**
  * note: it will match visible texts in DOM or input's values
@@ -248,7 +249,7 @@ const waitForText = async (text, options) => {
 
     return await waitFor(
         async () =>
-            await waitElementToBeInDocument(
+            await waitElementToBeInTheDocument(
                 () =>
                     (!options?.within && (screen.queryByText(text) || screen.queryByDisplayValue(text))) ||
                     (options?.within &&
@@ -269,6 +270,14 @@ const waitForTextToBeRemoved = async (text, options) => {
     if (typeof text === 'string' && !text.trim().length) throw new Error('empty text');
     screen.queryByText(text) && (await waitForElementToBeRemoved(() => screen.queryByText(text)), options);
 };
+
+/**
+ * @param {object} mock
+ * @param {*[]} params
+ * @return {Promise<void>}
+ */
+const waitToHaveBeenLastCalledWith = async (mock, ...params) =>
+    await waitFor(() => expect(mock).toHaveBeenLastCalledWith(...params));
 
 const expectRequiredFieldError = async field =>
     await waitFor(() => {
@@ -303,13 +312,6 @@ const setFileUploaderFilesSecurityPolicy = async (files, optionName, timeout = 5
         );
         fireEvent.click(screen.getByRole('option', { name: optionName }));
     }
-};
-
-const originalUseForm = useForm.useForm;
-const mockUseForm = implementation => {
-    return jest.spyOn(useForm, 'useForm').mockImplementation(props => {
-        return implementation(props, originalUseForm);
-    });
 };
 
 const enableJestPreviewOnTestFailure = (options = {}) =>
@@ -477,21 +479,27 @@ const selectDropDownOptionByElement = async (el, option, index = 0) => {
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addContributorsEditorItem = async (fieldName, name = 'author') => {
-    await userEvent.type(screen.getByTestId(`${fieldName}-input`), name);
+const addItemUsingNamesPopoverForm = async (fieldName, ...names) => {
+    await userEvent.click(screen.getByTestId(`${fieldName}-input`));
+    await waitFor(() => expect(screen.getByTestId(`${fieldName}-names-popover-form-family-name`)).toBeInTheDocument());
+    names[0] &&
+        (await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-given-name-input`), names[0]));
+    await userEvent.type(screen.getByTestId(`${fieldName}-names-popover-form-family-name-input`), names[1]);
+    await waitToBeEnabled(`${fieldName}-names-popover-form-submit-button`);
+    await userEvent.click(screen.getByTestId(`${fieldName}-names-popover-form-submit-button`));
     await userEvent.click(screen.getByTestId(`${fieldName}-add`));
 };
 
 /**
  * @param {string} fieldName
- * @param {string} name
+ * @param {array} names
  * @return {Promise<void>}
  */
-const addAndSelectContributorsEditorItem = async (fieldName, name = 'author') => {
-    await addContributorsEditorItem(fieldName, name);
+const addAndSelectItemUsingNamesPopoverForm = async (fieldName, ...names) => {
+    await addItemUsingNamesPopoverForm(fieldName, ...(!!names.length ? names : ['Brown', 'James']));
     await userEvent.click(screen.getByTestId(`${fieldName}-list-row-0-name-as-published`));
 };
 
@@ -564,6 +572,37 @@ const assertRichTextEditorValue = async (testId, value) => {
 const getTableBodyRows = element =>
     element.querySelectorAll('tr.MuiTableRow-root:not(.Mui-TableBodyCell-DetailPanel):not(.MuiTableRow-head)');
 
+/**
+ * @param callback
+ * @return {Promise<void>}
+ */
+const withFakeTimers = async callback => {
+    jest.useFakeTimers();
+    await callback();
+    jest.runAllTimers();
+    jest.useRealTimers();
+};
+
+// jsDom 25 no longer allows modification of window.location.
+// We therefore have to hack around this with some funky reflection code.
+// Use this in a beforeEach(), and be sure to jest.restoreAllMocks() in afterEach().
+// If using in a specific test only, you may need to jest.clearAllMocks() instead to
+// avoid settings leaking in to subsequent tests.
+// In general, you'll call this function like
+// let assignMock;
+// assignMock = hackLocationObject('assign');
+// where assignMock is defined with 'let' and assigned each time in beforeEach().
+// Then, check location calls using e.g. expect(assignMock).toHaveBeenCalledWith().
+
+const spyOnWindowLocationMethod = (methodToSpyOn, mockFn = jest.fn()) => {
+    const implSymbol = Reflect.ownKeys(window.location).find(key => typeof key === 'symbol');
+
+    if (implSymbol) {
+        jest.spyOn(window.location[implSymbol], methodToSpyOn).mockImplementation(mockFn);
+    }
+    return mockFn;
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -585,13 +624,13 @@ module.exports = {
     assertDisabled,
     waitToBeEnabled,
     waitToBeDisabled,
-    waitElementToBeInDocument,
-    assertMissingElement,
+    waitElementToBeInTheDocument,
+    assertIsInTheDocument,
+    assertNotInTheDocument,
     waitForText,
     waitForTextToBeRemoved,
     expectRequiredFieldError,
     expectMissingRequiredFieldError,
-    mockUseForm,
     getFilenameExtension,
     getFilenameBasename,
     addFilesToFileUploader,
@@ -614,10 +653,13 @@ module.exports = {
     assertRichTextEditorValue,
     selectDropDownOption,
     selectDropDownOptionByElement,
-    addContributorsEditorItem,
-    addAndSelectContributorsEditorItem,
+    addItemUsingNamesPopoverForm,
+    addAndSelectItemUsingNamesPopoverForm,
     clearAndType,
     sortObjectProps,
     getTableBodyRows,
     api,
+    withFakeTimers,
+    waitToHaveBeenLastCalledWith,
+    spyOnWindowLocationMethod,
 };

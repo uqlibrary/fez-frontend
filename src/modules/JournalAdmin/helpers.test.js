@@ -12,7 +12,6 @@ describe('Helpers', () => {
             expect(getInitialFormValues(journalDoaj.data)).toEqual(helpersTypicalExpected);
         });
         it('expected non-typical output', () => {
-            const notUsed = 0;
             const fields = adminJournalFields;
             delete fields.uqData;
             delete fields.openAccess;

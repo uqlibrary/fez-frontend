@@ -151,7 +151,7 @@ describe('Component FeedbackRecord', () => {
         await assertFeedbackRecordConfirmationMessage();
 
         await userEvent.click(getByTestId('cancel-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith(`/view/${mockRecordToFeedback.rek_pid}`);
+        expect(mockUseNavigate).toHaveBeenCalledWith(`/view/${mockRecordToFeedback.rek_pid}`);
     });
 
     it('should display confirmation box after successful feedback and go to homepage for non-logged in users', async () => {
@@ -168,8 +168,8 @@ describe('Component FeedbackRecord', () => {
         await assertFeedbackRecordConfirmationMessage();
 
         await userEvent.click(getByTestId('confirm-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/');
-        expect(mockUseNavigate).toBeCalledTimes(1);
+        expect(mockUseNavigate).toHaveBeenCalledWith('/');
+        expect(mockUseNavigate).toHaveBeenCalledTimes(1);
     });
 
     it('should display confirmation box after successful feedback and go to my dashboard for logged in users', async () => {
@@ -191,8 +191,8 @@ describe('Component FeedbackRecord', () => {
         await assertFeedbackRecordConfirmationMessage();
 
         await userEvent.click(getByTestId('confirm-dialog-box'));
-        expect(mockUseNavigate).toBeCalledWith('/dashboard');
-        expect(mockUseNavigate).toBeCalledTimes(1);
+        expect(mockUseNavigate).toHaveBeenCalledWith('/dashboard');
+        expect(mockUseNavigate).toHaveBeenCalledTimes(1);
     });
 
     it('should handle server error when feedback record', async () => {

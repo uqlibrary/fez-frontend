@@ -7,7 +7,6 @@ export default {
         defaultWidth: 150,
         defaultHeight: 150,
         defaultItemsPerRow: 4,
-        defaultLazyLoading: true,
     },
     allowedTypes: [
         { viewType: 'Image' },

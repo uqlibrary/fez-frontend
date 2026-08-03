@@ -7,6 +7,7 @@ import {
     handleKeyboardPressActivate,
     reorderObjectKeys,
     isEmptyObject,
+    isEmptyString,
     filterObjectKeys,
     combineObjects,
     isArrayDeeplyEqual,
@@ -17,10 +18,25 @@ import {
     filterObject,
     numbersOnly,
     hasAtLeastOneItemSelected,
+    sortByNumericField,
+    isURL,
+    getOrcidURL,
+    getRorURL,
+    getDoiURL,
+    silentTryCatch,
 } from './general';
 import { mockWebApiFile } from 'test-utils';
 
 describe('general helpers', () => {
+    it('isURL', () => {
+        expect(isURL('http://library.uq.edu.au')).toBeTruthy();
+        expect(isURL('https://library.uq.edu.au')).toBeTruthy();
+        expect(isURL('https://a')).toBeTruthy();
+        expect(isURL('https://')).toBeFalsy();
+        expect(isURL('library.uq.edu.au')).toBeFalsy();
+        expect(isURL('abc')).toBeFalsy();
+    });
+
     it('leftJoin', () => {
         const objArrA = [
             { nameA: 'test1', testA: 'testA1' },
@@ -303,6 +319,19 @@ describe('general helpers', () => {
         });
     });
 
+    describe('isEmptyString', () => {
+        it('returns expected results', () => {
+            expect(isEmptyString('test')).toEqual(false);
+            expect(isEmptyString('')).toEqual(true);
+            expect(isEmptyString(null)).toEqual(true);
+            expect(isEmptyString(undefined)).toEqual(true);
+            expect(isEmptyString([])).toEqual(true);
+            expect(isEmptyString({})).toEqual(true);
+            expect(isEmptyString(['a'])).toEqual(true);
+            expect(isEmptyString({ a: 'a' })).toEqual(true);
+        });
+    });
+
     describe('filterObjectKeys', () => {
         it('should return empty object for given non-object', () => {
             expect(filterObjectKeys(null, ['a'])).toEqual({});
@@ -555,6 +584,104 @@ describe('general helpers', () => {
         it('should return true', () => {
             expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, selected: true }])).toBeTruthy();
             expect(hasAtLeastOneItemSelected([{ a: 1 }, { b: 2, custom: true }], 'custom')).toBeTruthy();
+        });
+    });
+
+    describe('sortByNumericField', () => {
+        test('should sort correctly', () => {
+            const items = [
+                { anotherField: 'b', order: 2 },
+                { anotherField: 'd' },
+                { anotherField: 'a', order: '1' },
+                { anotherField: 'c', order: 3 },
+            ];
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order'))).toEqual([
+                {
+                    anotherField: 'a',
+                    order: '1',
+                },
+                {
+                    anotherField: 'b',
+                    order: 2,
+                },
+                {
+                    anotherField: 'c',
+                    order: 3,
+                },
+                { anotherField: 'd' },
+            ]);
+            // desc
+            expect([...items].sort((a, b) => sortByNumericField(a, b, 'order', 'desc'))).toEqual([
+                {
+                    anotherField: 'd',
+                },
+                {
+                    anotherField: 'c',
+                    order: 3,
+                },
+                {
+                    anotherField: 'b',
+                    order: 2,
+                },
+                {
+                    anotherField: 'a',
+                    order: '1',
+                },
+            ]);
+        });
+    });
+
+    it('getOrcidURL', () => {
+        expect(getOrcidURL()).toEqual('');
+        expect(getOrcidURL('0000-11111-2222-3333')).toEqual('https://orcid.org/0000-11111-2222-3333');
+    });
+
+    it('getRorURL', () => {
+        expect(getRorURL()).toEqual('');
+        expect(getRorURL('02mhbdp94')).toEqual('https://ror.org/02mhbdp94');
+    });
+
+    it('getDoiURL', () => {
+        expect(getDoiURL()).toEqual('');
+        expect(getDoiURL('10.000/abc-def.10')).toEqual('https://doi.org/10.000/abc-def.10');
+    });
+
+    describe('silentTryCatch', () => {
+        it('should return the result of a sync callback', () => {
+            expect(silentTryCatch(() => 42)).toBe(42);
+        });
+
+        it('should return undefined by default when sync callback throws', () => {
+            expect(
+                silentTryCatch(() => {
+                    throw new Error('fail');
+                }),
+            ).toBeUndefined();
+        });
+
+        it('should return _default when sync callback throws', () => {
+            expect(
+                silentTryCatch(() => {
+                    throw new Error('fail');
+                }, 'fallback'),
+            ).toBe('fallback');
+        });
+
+        it('should return a resolved promise value for async callback', async () => {
+            await expect(silentTryCatch(() => Promise.resolve(42))).resolves.toBe(42);
+        });
+
+        it('should return undefined by default when async callback rejects', async () => {
+            await expect(silentTryCatch(() => Promise.reject(new Error('fail')))).resolves.toBeUndefined();
+        });
+
+        it('should return _default when async callback rejects', async () => {
+            await expect(silentTryCatch(() => Promise.reject(new Error('fail')), 'fallback')).resolves.toBe('fallback');
+        });
+
+        it('should return sync value directly, not wrapped in a promise', () => {
+            const result = silentTryCatch(() => 42);
+            expect(result instanceof Promise).toBe(false);
         });
     });
 });

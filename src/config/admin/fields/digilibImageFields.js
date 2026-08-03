@@ -18,6 +18,7 @@ export default {
                 ['fez_record_search_key_construction_date'],
                 ['fez_record_search_key_date_photo_taken'],
                 ['fez_record_search_key_date_scanned'],
+                ['fez_record_search_key_raid'],
             ],
         },
         {

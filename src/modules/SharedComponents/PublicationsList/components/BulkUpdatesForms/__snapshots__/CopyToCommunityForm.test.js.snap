@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`CopyToCommunityForm should correctly submit form and display success info for copy to collection form 1`] = `"[{"rek_pid":"UQ:123456","fez_record_search_key_ismemberof":[{"rek_ismemberof":"UQ:123"},{"rek_ismemberof":"UQ:222","rek_ismemberof_order":2}]}]"`;
 

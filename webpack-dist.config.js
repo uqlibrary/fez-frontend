@@ -47,7 +47,7 @@ const useMock = (process && process.env && !!process.env.USE_MOCK) || false;
 
 // config for development deployment
 if (config.environment === 'development') {
-    config.basePath += branchType + '/';
+    config.basePath += branchType;
 }
 
 /**
@@ -97,7 +97,7 @@ const webpackConfig = {
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
         filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
-        publicPath: config.publicPath,
+        publicPath: config.basePath ? `/${config.basePath}${config.publicPath}` : config.publicPath,
     },
     devServer: {
         compress: true,
@@ -132,9 +132,7 @@ const webpackConfig = {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
                 type: 'asset/resource',
                 generator: {
-                    publicPath: `/${config.basePath}assets/`,
-                    outputPath: 'assets/',
-                    filename: '[hash][ext]',
+                    filename: 'assets/[hash][ext]',
                 },
             },
         ],

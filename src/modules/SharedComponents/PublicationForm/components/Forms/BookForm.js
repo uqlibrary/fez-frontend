@@ -6,7 +6,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { ListEditorField, IssnListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
-import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ContributorsEditorField, MODE_GIVEN_NAME_FIRST } from 'modules/SharedComponents/ContributorsEditor';
 import { validation } from 'config';
 import { locale } from 'locale';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config/general';
@@ -163,26 +163,30 @@ export const BookForm = ({
                             name="editors"
                             locale={txt.editors.field}
                             disabled={isSubmitting}
+                            namesPopoverFormMode={MODE_GIVEN_NAME_FIRST}
                         />
                     </StandardCard>
                 </Grid>
             )}
             {isNtro && (
-                <NtroFields
-                    control={control}
-                    canEdit
-                    isSubmitting={isSubmitting}
-                    showContributionStatement={showContributionStatement}
-                    hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
-                    hideIsrc
-                    hideVolume
-                    hideIssue
-                    hideSeries
-                    hideStartPage
-                    hideEndPage
-                    hideOriginalFormat
-                    hideAudienceSize
-                />
+                <Grid item xs={12}>
+                    <NtroFields
+                        control={control}
+                        canEdit
+                        isSubmitting={isSubmitting}
+                        showContributionStatement={showContributionStatement}
+                        hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideSeries
+                        hideStartPage
+                        hideEndPage
+                        hideOriginalFormat
+                        hideAudienceSize
+                        legacyCompatible
+                    />
+                </Grid>
             )}
             <Grid item xs={12}>
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ChangeDisplayType form submission should correctly submit form and display success info for type with subtype 1`] = `"{"rek_pid":"UQ:284280","rek_display_type":174,"rek_subtype":"Research book (original research)","fez_record_search_key_herdc_code":{"rek_herdc_code":null}}"`;
 

@@ -19,6 +19,7 @@ const ImageGalleryItemImage = ({
     security = { isAdmin: false, isAuthor: false, author: {} },
     customDefaultConfig = {},
     classes = {},
+    inView = false,
     setRestricted,
     setAdvisory,
     setUnavailable,
@@ -69,10 +70,9 @@ const ImageGalleryItemImage = ({
         <StyledLazyLoadImage
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
-            src={imgSrc || filename}
+            src={inView ? imgSrc || filename : config.thumbnailImage.defaultImageName}
             classes={classes}
             className={'image-gallery-item-image'}
-            loading="lazy"
             {...errorHandler}
             {...rest}
         />
@@ -87,6 +87,7 @@ ImageGalleryItemImage.propTypes = {
         allowedTypes: PropTypes.array,
     }),
     classes: PropTypes.object,
+    inView: PropTypes.bool,
     setRestricted: PropTypes.func,
     setAdvisory: PropTypes.func,
     setUnavailable: PropTypes.func,

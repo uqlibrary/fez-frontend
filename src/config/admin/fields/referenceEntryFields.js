@@ -33,6 +33,7 @@ export default {
                 ['fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['fez_record_search_key_parent_publication'],
+                ['fez_record_search_key_raid'],
             ],
         },
         {

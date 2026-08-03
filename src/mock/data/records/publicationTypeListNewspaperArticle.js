@@ -178,7 +178,7 @@ const publicationTypeListNewspaperArticle = {
             "fez_record_search_key_newspaper": "Australian Doctor",
             "fez_record_search_key_oa_status": {
                 "rek_oa_status": 454118,
-                "rek_oa_status_lookup": "Not yet assessed (Unpaywall)"
+                "rek_oa_status_lookup": "Not yet assessed (OpenAlex)"
             },
             "fez_record_search_key_oa_status_type": {
                 "rek_oa_status_type": 454121,

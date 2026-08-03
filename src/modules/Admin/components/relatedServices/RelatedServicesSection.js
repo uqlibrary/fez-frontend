@@ -7,7 +7,7 @@ import { adminInterfaceConfig } from 'config/admin';
 
 export const RelatedServicesSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    const cards = useRef(adminInterfaceConfig[record.rek_display_type].relatedServices());
+    const cards = useRef(adminInterfaceConfig[record.rek_display_type].relatedServices?.());
 
     return <Section cards={cards.current} disabled={disabled} />;
 };

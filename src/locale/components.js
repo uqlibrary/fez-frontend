@@ -71,6 +71,11 @@ export default {
                         subText: 'of research subtypes',
                         tooltip: 'OA status counts in the past 5 years',
                     },
+                    doiPopulateDocTypes: {
+                        title: 'DOI by Doc Type',
+                        subText: 'In Last 12 Months',
+                        tooltip: 'Doc types record counts with UQ minted DOI populated in the past 12 months',
+                    },
                     quicklinks: {
                         title: 'Quick Links ',
                         addLinkText: '+ add',
@@ -166,6 +171,8 @@ export default {
                     label: {
                         report: 'Report',
                         systemId: 'System alert ID',
+                        requestorId: 'Requestor username',
+                        pid: 'PID',
                         dateFrom: 'From',
                         dateTo: 'To',
                         runReport: 'Run report',
@@ -204,6 +211,7 @@ export default {
                         dateNotBefore: 'Must not be before "from" date',
                         dateNotAfter: 'Must not be after "to" date',
                         recordId: 'Must be a positive whole number',
+                        requestorId: 'Must be alphanumeric',
                     },
                     alert: {
                         noResults: reportName => ({
@@ -308,7 +316,7 @@ export default {
             },
         },
         publicationStats: {
-            publicationStatsTitle1: 'eSpace works',
+            publicationStatsTitle1: 'UQ eSpace works',
             publicationStatsTitle2: 'Web of science',
             publicationStatsTitle2mobile: 'WOS',
             publicationStatsTitle3: 'Scopus',
@@ -328,7 +336,6 @@ export default {
                 altmetricCountLabel: 'Altmetric score is [count]',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
                 openAccessLockedLabel: 'Open Access - [oa_status] - Embargoed until [embargo_date]',
-                statsLabel: 'View full statistics',
                 altmetric: {
                     externalUrl: 'https://queensland.altmetric.com/details/[id]',
                     title: 'Altmetric',
@@ -733,6 +740,7 @@ export default {
                         grantAgencyNameHint: 'Funder/sponsor name for this work',
                         grantIdLabel: 'Grant ID',
                         grantIdHint: 'Grant number for this work',
+                        grantIdHelperText: 'Accepts IDs or full URLs',
                         grantAgencyTypeLabel: 'Funder/Sponsor type',
                         grantAgencyTypeHint: 'Select Funder/Sponsor type',
                         addButton: 'Add grant',
@@ -1423,7 +1431,7 @@ export default {
                     <>
                         <div>
                             <p>
-                                Add all author names (in format Last name, First name) in the order they appear on the
+                                Add all author names (in format family name, given name) in the order they appear on the
                                 work.
                                 <br />
                                 <br />
@@ -1465,18 +1473,18 @@ export default {
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
                                 </span>{' '}
-                                - Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
+                                - Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
+                                order that they are published.
                             </div>
                         ),
                         descriptionStep1NoStep2: (
                             <div>
-                                Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
+                                Please <b>add one name at a time in the field below</b>. Repeat for all authors in the
+                                order that they are published.
                             </div>
                         ),
                         nameAsPublishedLabel: "Author's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author',
                         nameAsPublishedFieldId: 'authors-name-as-published-field',
@@ -1533,7 +1541,7 @@ export default {
                 form: {
                     locale: {
                         nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
-                        nameAsPublishedHint: 'Type the name exactly as published (eg. Smith, John)',
+                        nameAsPublishedHint: 'Enter the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
                         externalIdentifierLabel: 'External identifier',
                         externalIdentifierHint: 'Enter an external identifier',
@@ -1606,11 +1614,6 @@ export default {
             description: 'Please provide a list of editors and then select your name from the list.',
             descriptionAuthorOrEditor:
                 'Please provide a list of editors and then select your name once from the list of authors or editors.',
-            // help: {
-            //     title: 'Editors',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -1680,11 +1683,6 @@ export default {
         },
         creators: {
             title: 'Creators',
-            // help: {
-            //     title: 'Creators',
-            //     text: 'some help',
-            //     buttonLabel: 'CLOSE'
-            // },
             description:
                 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
             descriptionCreatorOrContributor:
@@ -1708,7 +1706,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Creator's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
                             'Select role from list or type the role of the creator in relation to the dataset',
@@ -1798,7 +1796,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Designer's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer',
                         nameAsPublishedFieldId: 'designers-name-as-published-field',
@@ -1849,11 +1847,6 @@ export default {
         },
         supervisors: {
             title: 'Supervisors',
-            // help: {
-            //     title: 'Supervisors help',
-            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'CLOSE'
-            // },
             description: 'Please provide a list of supervisors and then select your name from the list.',
             field: {
                 form: {
@@ -1925,12 +1918,6 @@ export default {
         },
         designCreators: {
             title: 'Creators',
-            // help: {
-            //     title: 'Creators help',
-            //     text: 'Enter creator names e.g. first name, last name. ' +
-            // 'Additional boxes will appear for more creators.',
-            //     buttonLabel: 'CLOSE'
-            // },
             description: 'Please provide a list of creators and then select your name from the list.',
             field: {
                 form: {
@@ -2002,11 +1989,6 @@ export default {
         },
         thesisSubmissionSupervisors: {
             title: 'Supervisors',
-            // help: {
-            //     title: 'Supervisors help',
-            //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'CLOSE'
-            // },
             field: {
                 form: {
                     locale: {
@@ -2057,7 +2039,7 @@ export default {
             title: 'Contributors',
             help: {
                 title: 'Contributors',
-                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -2079,7 +2061,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Contributor's name as published",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor',
                         nameAsPublishedFieldId: 'contributors-name-as-published-field',
@@ -3426,7 +3408,7 @@ export default {
             title: 'Architects',
             help: {
                 title: 'Architects',
-                text: 'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
+                text: 'Type architects in the order they appear on the work or associated material. Additional boxes will appear for more architects.',
                 buttonLabel: 'CLOSE',
             },
             field: {
@@ -3445,7 +3427,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Enter each architect's name as published (eg. Smith, John)",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add architect',
                         nameAsPublishedFieldId: 'architects-name-as-published-field',
@@ -3533,7 +3515,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Enter each photographer's name as published (eg. Smith, John)",
-                        nameAsPublishedHint: 'Type the name exactly as published',
+                        nameAsPublishedHint: 'Enter the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add photographer',
                         nameAsPublishedFieldId: 'photographers-name-as-published-field',
@@ -4014,13 +3996,13 @@ export default {
                         label: 'Title',
                     },
                     firstName: {
-                        label: 'First name',
+                        label: 'Given name',
                     },
                     middleName: {
                         label: 'Middle name',
                     },
                     lastName: {
-                        label: 'Last name',
+                        label: 'Family name',
                     },
                     isNameOverride: {
                         label: 'Prevent automatic updates',
@@ -4037,11 +4019,11 @@ export default {
                     },
                     orgStaffId: {
                         label: 'Staff ID',
-                        helperText: 'This is a 7 digit number, usually preceded by a 0',
+                        helperText: 'This is a 7 digit number, usually preceded by a 0.',
                     },
                     orgStudentId: {
                         label: 'Student ID',
-                        helperText: 'This is a 8 digit number, usually preceded by a 3 or 4',
+                        helperText: 'This is a 8 digit number, usually preceded by a 3 or 4.',
                     },
                     orgUsername: {
                         label: 'Staff username',
@@ -4050,6 +4032,10 @@ export default {
                         label: 'Student username',
                         helperText:
                             "This is an 8 characters string: remove last digit from student ID and add prefix 's'.",
+                    },
+                    isRhdStudent: {
+                        label: 'Allow Thesis submission',
+                        helperText: 'Switch on if the author needs to manually deposit their thesis.',
                     },
                     refNum: {
                         label: 'Ref num',
@@ -4115,6 +4101,20 @@ export default {
                     cancelButtonLabel: 'No',
                     confirmButtonLabel: 'Yes',
                 },
+                mergeConfirmationLocale: {
+                    confirmationTitle: 'Confirm authors merge',
+                    confirmationMessage: (source, target) => (
+                        <>
+                            Do you wish to merge <b>{source.aut_id}</b> ({source.aut_student_username}) into{' '}
+                            <b>{target.aut_id}</b> ({target.aut_org_username})?
+                            <br />
+                            <br />
+                            Please ensure all publications are moved across to author ID you wish to retain.
+                        </>
+                    ),
+                    cancelButtonLabel: 'No',
+                    confirmButtonLabel: 'Yes',
+                },
                 locale: {
                     addButtonTooltip: 'Add new author',
                     bulkDeleteButtonTooltip: 'Delete selected authors',
@@ -4143,6 +4143,13 @@ export default {
                 allowDismiss: true,
                 type: 'done',
                 message: 'An author has been successfully added.',
+            },
+            authorMergingSuccessAlert: {
+                alertId: 'alert-done-author-merging',
+                allowDismiss: true,
+                type: 'done',
+                message:
+                    'A job to merge the authors has been created. A system alert will be generated when the job completes.',
             },
             updateAuthorSuccessAlert: {
                 alertId: 'alert-done-author-update',
@@ -4179,6 +4186,12 @@ export default {
                 allowDismiss: true,
                 type: 'error',
                 message: 'An author could not be added.',
+            },
+            authorMergingErrorAlert: {
+                alertId: 'alert-error-authors-merging',
+                allowDismiss: true,
+                type: 'error',
+                message: error => `Error while merging authors: ${error}`,
             },
             updateAuthorErrorAlert: {
                 alertId: 'alert-error-author-update',
@@ -4667,6 +4680,15 @@ export default {
                             answer: (
                                 <ul>
                                     <li>
+                                        See{' '}
+                                        <a
+                                            target="_blank"
+                                            href="https://guides.library.uq.edu.au/research-and-teaching-staff/journal-search"
+                                        >
+                                            Journal Search guide
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a target="_blank" href="https://web.library.uq.edu.au/contact-us">
                                             Contact us for help
                                         </a>
@@ -4767,7 +4789,15 @@ export default {
                             <li>Identify journals with open access or pre-paid charges</li>
                             <li>Understand, refine and rank results by indexing and a range of metrics</li>
                             <li>Create a list of favourite journals</li>
-                            <li>Investigate journal scope, peer review processes and publisher details.</li>
+                            <li>Investigate journal scope, peer review processes and publisher details</li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://guides.library.uq.edu.au/research-and-teaching-staff/journal-search"
+                                >
+                                    More information
+                                </a>
+                            </li>
                         </ul>
                     </React.Fragment>
                 ),
@@ -4820,7 +4850,7 @@ export default {
                     },
                     accepted: {
                         open: 'Immediate access via UQ eSpace',
-                        embargo: months => `${months} months delayed access via UQ eSpace`,
+                        embargo: period => `${period.amount} ${period.unit} delayed access via UQ eSpace`,
                     },
                 },
             },

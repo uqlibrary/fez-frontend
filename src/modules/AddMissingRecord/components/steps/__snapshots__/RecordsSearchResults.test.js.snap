@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Search record results should render a single claimable item with no authors on the record (record should appear in publicationsList prop) 1`] = `
 <div>
@@ -176,6 +176,43 @@ exports[`Search record results should render a single claimable item with no aut
           >
             <span
               aria-label="Crossref loading"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+              role="progressbar"
+              style="width: 12px; height: 12px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20"
+                  stroke-width="4"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+            >
+              OpenAlex
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="OpenAlex loading"
               class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
               role="progressbar"
               style="width: 12px; height: 12px;"
@@ -401,9 +438,6 @@ exports[`Search record results should render a single claimable item with no aut
                                         data-testid="oa-n/a-icon"
                                       />
                                     </div>
-                                    <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
                                     <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
@@ -754,6 +788,43 @@ exports[`Search record results should render a single claimable item with no aut
                 </span>
               </div>
             </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                >
+                  OpenAlex
+                </p>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              >
+                <span
+                  aria-label="OpenAlex loading"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  role="progressbar"
+                  style="width: 12px; height: 12px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20"
+                      stroke-width="4"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
           <span
             aria-valuemax="100"
@@ -970,6 +1041,43 @@ exports[`Search record results should render a single unclaimable item with no a
             </span>
           </div>
         </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+            >
+              OpenAlex
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="OpenAlex loading"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+              role="progressbar"
+              style="width: 12px; height: 12px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20"
+                  stroke-width="4"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
       </div>
       <span
         aria-valuemax="100"
@@ -1107,9 +1215,6 @@ exports[`Search record results should render a single unclaimable item with no a
                                         data-testid="oa-n/a-icon"
                                       />
                                     </div>
-                                    <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
                                     <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
@@ -1440,6 +1545,43 @@ exports[`Search record results should render a single unclaimable item with no a
               >
                 <span
                   aria-label="Crossref loading"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  role="progressbar"
+                  style="width: 12px; height: 12px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20"
+                      stroke-width="4"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                >
+                  OpenAlex
+                </p>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              >
+                <span
+                  aria-label="OpenAlex loading"
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                   role="progressbar"
                   style="width: 12px; height: 12px;"
@@ -1676,6 +1818,43 @@ exports[`Search record results should render a single unclaimable item with no a
             </span>
           </div>
         </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+            >
+              OpenAlex
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="OpenAlex loading"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+              role="progressbar"
+              style="width: 12px; height: 12px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20"
+                  stroke-width="4"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
       </div>
       <span
         aria-valuemax="100"
@@ -1813,9 +1992,6 @@ exports[`Search record results should render a single unclaimable item with no a
                                         data-testid="oa-n/a-icon"
                                       />
                                     </div>
-                                    <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
                                     <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
@@ -2166,6 +2342,43 @@ exports[`Search record results should render a single unclaimable item with no a
                 </span>
               </div>
             </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                >
+                  OpenAlex
+                </p>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              >
+                <span
+                  aria-label="OpenAlex loading"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  role="progressbar"
+                  style="width: 12px; height: 12px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20"
+                      stroke-width="4"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
           <span
             aria-valuemax="100"
@@ -2382,6 +2595,43 @@ exports[`Search record results should render publications list with one publicat
             </span>
           </div>
         </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+            >
+              OpenAlex
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="OpenAlex loading"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+              role="progressbar"
+              style="width: 12px; height: 12px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20"
+                  stroke-width="4"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
       </div>
       <span
         aria-valuemax="100"
@@ -2519,9 +2769,6 @@ exports[`Search record results should render publications list with one publicat
                                         data-testid="oa-n/a-icon"
                                       />
                                     </div>
-                                    <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
-                                    />
                                     <div
                                       class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
                                     />
@@ -2811,6 +3058,43 @@ exports[`Search record results should render publications list with one publicat
                 </span>
               </div>
             </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                >
+                  OpenAlex
+                </p>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              >
+                <span
+                  aria-label="OpenAlex loading"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  role="progressbar"
+                  style="width: 12px; height: 12px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20"
+                      stroke-width="4"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
           <span
             aria-valuemax="100"
@@ -3007,6 +3291,43 @@ exports[`Search record results should render spinner 1`] = `
           >
             <span
               aria-label="Crossref loading"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+              role="progressbar"
+              style="width: 12px; height: 12px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20"
+                  stroke-width="4"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+        >
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+            >
+              OpenAlex
+            </p>
+          </div>
+          <div
+            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          >
+            <span
+              aria-label="OpenAlex loading"
               class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
               role="progressbar"
               style="width: 12px; height: 12px;"
@@ -3288,6 +3609,43 @@ exports[`Search record results should render spinner 1`] = `
               >
                 <span
                   aria-label="Crossref loading"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  role="progressbar"
+                  style="width: 12px; height: 12px;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20"
+                      stroke-width="4"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            >
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                >
+                  OpenAlex
+                </p>
+              </div>
+              <div
+                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              >
+                <span
+                  aria-label="OpenAlex loading"
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
                   role="progressbar"
                   style="width: 12px; height: 12px;"

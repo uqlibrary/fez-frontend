@@ -11,6 +11,14 @@ jest.mock('react-router', () => ({
     useLocation: jest.fn(() => ({ pathname: '/', search: '', state: {} })),
 }));
 
+jest.mock('react-intersection-observer', () => ({
+    useInView: jest.fn(() => ({
+        ref: jest.fn(),
+        inView: true,
+        entry: undefined,
+    })),
+}));
+
 function setup(testProps = {}, testState = {}) {
     const props = {
         publication: mockRecordToFix,
@@ -127,7 +135,7 @@ describe('PublicationCitation ', () => {
             .forEach((button, index) => {
                 expect(button).toHaveTextContent(customActions[index].label);
                 fireEvent.click(button);
-                expect(customActions[index].handleAction).toBeCalled();
+                expect(customActions[index].handleAction).toHaveBeenCalled();
             });
     });
 

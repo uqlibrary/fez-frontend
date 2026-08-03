@@ -297,6 +297,42 @@ describe('Action creators for admin dashboard', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
+    it('dispatches expected actions while batch assign updating system alerts', async () => {
+        const request = {};
+        mockApi.onPatch(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API().apiUrl).reply(200, {});
+
+        const expectedActions = [
+            actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_UPDATING,
+            actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_SUCCESS,
+        ];
+
+        await mockActionsStore.dispatch(adminActions.adminDashboardSystemAlertsBatchAssign(request));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+    it('dispatches expected actions while batch assign system alerts fails', async () => {
+        const request = {};
+        mockApi.onPatch(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API().apiUrl).reply(500);
+
+        const expectedActions = [
+            actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_UPDATING,
+            actions.APP_ALERT_SHOW,
+            actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_FAILED,
+        ];
+
+        try {
+            await mockActionsStore.dispatch(adminActions.adminDashboardSystemAlertsBatchAssign(request));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
+    });
+    it('dispatches expected actions while clearing system alerts batch assign', async () => {
+        const expectedActions = [actions.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_CLEAR];
+
+        await mockActionsStore.dispatch(adminActions.adminDashboardSystemAlertsBatchAssignClear());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
     it('dispatches expected actions while exporting reports', async () => {
         const request = { id: 1 };
         const options = { export_to: 'excel' };

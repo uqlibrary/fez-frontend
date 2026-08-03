@@ -250,6 +250,7 @@ export default {
                 fez_record_search_key_herdc_status: 'HERDC status',
                 fez_record_search_key_institutional_status: 'Institutional status',
                 fez_record_search_key_notes: 'Additional notes',
+                fez_record_search_key_related_service: 'Related service(s)',
                 grantInformation: {
                     fez_record_search_key_grant_agency: 'Grant agency',
                     fez_record_search_key_grant_id: 'Grant ID',
@@ -318,7 +319,6 @@ export default {
                 fez_record_search_key_type_of_data: 'Type of data',
                 fez_record_search_key_grant_id: 'Grant ID',
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
-                fez_record_search_key_related_service: 'Related service(s)',
                 fez_record_search_key_related_publications: 'Additional related publication(s)',
                 fez_record_search_key_related_datasets: 'Additional related dataset(s)',
             },
@@ -548,6 +548,10 @@ export default {
                     order: 25,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 25.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 25.5,
                 },
@@ -653,10 +657,6 @@ export default {
                     field: 'fez_record_search_key_contributor',
                     order: 15,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 16
-                // },
                 {
                     field: 'fez_record_search_key_start_page',
                     order: 17,
@@ -684,6 +684,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 22,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 22.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -815,10 +819,6 @@ export default {
                     field: 'fez_record_search_key_total_chapters',
                     order: 24,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 25
-                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 26,
@@ -826,6 +826,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 27,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 27.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -1026,6 +1030,10 @@ export default {
                     order: 35,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 35.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 35.5,
                 },
@@ -1196,6 +1204,10 @@ export default {
                     order: 35,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 35.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 35.5,
                 },
@@ -1213,10 +1225,6 @@ export default {
                 },
             ],
             'Creative Work': [
-                // {
-                //     field: 'rek_genre',
-                //     order: 1,
-                // },
                 {
                     field: 'fez_record_search_key_translated_title',
                     order: 2,
@@ -1312,6 +1320,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 22,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 22.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -1483,10 +1495,6 @@ export default {
                     field: 'fez_record_search_key_related_datasets',
                     order: 34,
                 },
-                {
-                    field: 'fez_record_search_key_related_service',
-                    order: 35,
-                },
             ],
             'Department Technical Report': [
                 {
@@ -1572,6 +1580,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 17,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 17.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -1695,10 +1707,6 @@ export default {
                     field: 'fez_record_search_key_contributor',
                     order: 17,
                 },
-                // {
-                //     field: 'fez_record_search_key_language',
-                //     order: 17
-                // },
                 {
                     field: 'fez_record_search_key_subject',
                     order: 18,
@@ -1710,6 +1718,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 20,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 20.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -1874,8 +1886,12 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_rights',
+                    field: 'fez_record_search_key_raid',
                     order: 23,
+                },
+                {
+                    field: 'fez_record_search_key_rights',
+                    order: 24,
                 },
             ],
             'Generic Document': [
@@ -1952,8 +1968,12 @@ export default {
                     order: 14,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 15,
+                },
+                {
                     field: 'rek_ci_notice_attribution_incomplete',
-                    order: 14.5,
+                    order: 16,
                 },
             ],
             Image: [
@@ -2050,6 +2070,10 @@ export default {
                     order: 18,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 18.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 18.5,
                 },
@@ -2134,6 +2158,10 @@ export default {
                 {
                     field: 'fez_record_search_key_alternate_identifier',
                     order: 15,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 16,
                 },
             ],
             Journal: [
@@ -2232,6 +2260,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -2344,10 +2376,6 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_contributor',
-                    order: 20,
-                },
-                {
                     field: 'fez_record_search_key_place_of_publication',
                     order: 21,
                 },
@@ -2362,6 +2390,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 24,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 24.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -2460,6 +2492,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 15,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 15.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -2580,6 +2616,10 @@ export default {
                     order: 19,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
@@ -2688,6 +2728,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 19,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -2813,6 +2857,10 @@ export default {
                     order: 19,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
@@ -2907,6 +2955,10 @@ export default {
                     order: 13,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 13.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 13.5,
                 },
@@ -2983,6 +3035,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 12,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 12.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -3087,6 +3143,10 @@ export default {
                     order: 16,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 16.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 16.5,
                 },
@@ -3189,6 +3249,10 @@ export default {
                     order: 15,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 15.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 15.5,
                 },
@@ -3289,6 +3353,10 @@ export default {
                 {
                     field: 'fez_record_search_key_keywords',
                     order: 18,
+                },
+                {
+                    field: 'fez_record_search_key_raid',
+                    order: 18.4,
                 },
                 {
                     field: 'fez_record_search_key_sdg_source',
@@ -3413,6 +3481,10 @@ export default {
                     order: 19,
                 },
                 {
+                    field: 'fez_record_search_key_raid',
+                    order: 19.4,
+                },
+                {
                     field: 'fez_record_search_key_sdg_source',
                     order: 19.5,
                 },
@@ -3451,6 +3523,10 @@ export default {
                     order: 52,
                 },
                 {
+                    field: 'fez_record_search_key_related_service',
+                    order: 53,
+                },
+                {
                     field: 'fez_record_search_key_notes',
                     order: 54,
                 },
@@ -3478,6 +3554,9 @@ export default {
             wosId: 'fez_record_search_key_isi_loc.rek_isi_loc',
             wosDocType: 'rek_wok_doc_type',
             wosDocTypeLookup: 'rek_wok_doc_type_lookup',
+            openalexId: 'fez_record_search_key_openalex_id.rek_openalex_id',
+            openalexDocType: 'rek_openalex_doc_type',
+            // openalexDocTypeLookup: 'rek_wok_doc_type_lookup',
             scopusId: 'fez_record_search_key_scopus_id.rek_scopus_id',
             scopusDocType: 'rek_scopus_doc_type',
             scopusDocTypeLookup: 'rek_scopus_doc_type_lookup',
@@ -3499,6 +3578,7 @@ export default {
                 wos: 4,
                 scopus: 6,
                 pubmed: 8,
+                openalex: 10,
             },
             object: {
                 sections: [
@@ -3599,6 +3679,28 @@ export default {
                         },
                         {
                             type: 'header', // pubmed doc type
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header', // scopus id
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header', // scopus doc type
                             value: undefined,
                         },
                         {

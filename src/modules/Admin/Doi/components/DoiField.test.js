@@ -237,6 +237,17 @@ describe('DoiField', () => {
                     expect(getByTestId('rek-edition')).toHaveTextContent('1');
                 },
             },
+            // notes
+            {
+                field: 'fez_record_search_key_notes',
+                data: {
+                    rek_notes: '<p>Some <br /><b>notes</b></p>',
+                },
+                test: render => {
+                    const { getByTestId } = render;
+                    expect(getByTestId('rek-notes')).toHaveTextContent('Some notes');
+                },
+            },
         ];
 
         knownFields.map(testFn);

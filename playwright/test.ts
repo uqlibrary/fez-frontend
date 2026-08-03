@@ -28,6 +28,7 @@ test = test.extend({
             });
         });
         // next
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         await use(page);
     },
 });

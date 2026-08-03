@@ -7,7 +7,7 @@ import {
     isFezRecordOneToOneRelation,
     isFezRecordOneToManyRelation,
 } from '../helpers/general';
-import arrayDiff from 'locutus/php/array/array_diff';
+import { array_diff as arrayDiff } from 'locutus/php/array/array_diff';
 import { merge } from 'lodash';
 import { IS_PRODUCTION } from '../config/general';
 

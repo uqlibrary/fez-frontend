@@ -32,6 +32,7 @@ export default {
                 ],
                 ['rek_date'],
                 ['rek_description'],
+                ['fez_record_search_key_raid'],
             ],
         },
         {

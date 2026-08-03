@@ -27,7 +27,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: {},
             query: '',
         });
-        expect(next).toBeCalledWith(
+        expect(next).toHaveBeenCalledWith(
             expect.objectContaining({
                 payload: {},
                 query: '',
@@ -41,7 +41,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: keywordsSearch.data,
             query: searchTerm,
         });
-        expect(next).toBeCalledWith(expect.objectContaining(referenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(referenceObject));
     });
     it('skip empty keywords', () => {
         const mockSearchData = {
@@ -77,7 +77,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus ',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(expectedObject));
     });
     it('returns title fuzzy match values without dups', () => {
         const mockSearchData = {
@@ -102,7 +102,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus to & vir',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(expectedObject));
     });
     it('returns title fuzzy match values with match on doaj title', () => {
         const mockSearchData = {
@@ -130,7 +130,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus to & vir',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(expectedObject));
     });
     it('returns title fuzzy match values with match on era title', () => {
         const mockSearchData = {
@@ -160,7 +160,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus to & vir',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(expectedObject));
     });
     it('has no KeywordMatch values if no journal_issn data available', () => {
         const mockSearchData = {
@@ -180,7 +180,7 @@ describe('Journal Search Keyword enhancer', () => {
             query: searchTerm,
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('has no KeywordMatch values if theres no match', () => {
         const mockSearchData = {
@@ -199,7 +199,7 @@ describe('Journal Search Keyword enhancer', () => {
             query: 'empty',
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('has no KeywordMatch values if no fez_ulrichs data available', () => {
         const mockSearchData = {
@@ -227,7 +227,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('has no titleMatch value if no titleFuzzyMatch data available', () => {
         const mockSearchData = {
@@ -246,7 +246,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('return empty arrays when API returned empty body', () => {
         const mockSearchData = {};
@@ -263,7 +263,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('returns subjectMatch if subjectFuzzyMatch data is available', () => {
         const mockSearchData = {
@@ -294,7 +294,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: 'virus',
         });
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('has no exactMatch value if no exactMatch data available', () => {
         const mockSearchData = {
@@ -323,7 +323,7 @@ describe('Journal Search Keyword enhancer', () => {
             query: 'test',
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('has no keyword match if no descriptionFuzzyMatch data available', () => {
         const mockSearchData = {
@@ -347,7 +347,7 @@ describe('Journal Search Keyword enhancer', () => {
             query: 'test',
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(mockReferenceObject));
     });
     it('returns title fuzzy match values with match on title with punctuation', () => {
         const query = 'es reserved chars + - = & | > < ! ( ) { } [ ] ^ " ~ * ? : \\ /';
@@ -375,6 +375,6 @@ describe('Journal Search Keyword enhancer', () => {
             payload: mockSearchData,
             query: query,
         });
-        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+        expect(next).toHaveBeenCalledWith(expect.objectContaining(expectedObject));
     });
 });

@@ -7,7 +7,7 @@ import {
     setRichTextEditorValue,
     userEvent,
     waitForText,
-    waitElementToBeInDocument,
+    waitElementToBeInTheDocument,
     WithReduxStore,
 } from 'test-utils';
 import { FormProvider } from 'react-hook-form';
@@ -111,7 +111,7 @@ describe('Component JournalAdvisoryStatementTypeField', () => {
 
     const clearStatementTypeField = async () => {
         await userEvent.click(screen.getByTestId(`${defaultComponentProps.type.id}-input`));
-        await waitElementToBeInDocument(() =>
+        await waitElementToBeInTheDocument(() =>
             within(screen.getByTestId(`${defaultComponentProps.type.id}-input`).parentNode).getByTitle('Clear'),
         );
         await userEvent.click(

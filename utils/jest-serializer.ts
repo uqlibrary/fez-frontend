@@ -35,7 +35,7 @@ module.exports = {
     test: (val: Element) => {
         if (val === lastCleanedNode || !val?.attributes) return false;
         for (let i = 0; i < val.attributes.length; i++) {
-            if (attributeValueToReplacementMap.hasOwnProperty(val.attributes[i].name)) {
+            if (Object.prototype.hasOwnProperty.call(attributeValueToReplacementMap, val.attributes[i].name)) {
                 return true;
             }
         }

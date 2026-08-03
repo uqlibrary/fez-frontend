@@ -10,6 +10,16 @@ import babelParser from '@babel/eslint-parser';
 import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
 
+const overrides = [
+    {
+        files: ['**/*.spec.*', '**/*.test.*'],
+        rules: {
+            'no-lone-blocks': 'off',
+            'consistent-return': 'off',
+        },
+    },
+];
+
 export default defineConfig([
     globalIgnores([
         '**/__mocks__',
@@ -365,4 +375,5 @@ export default defineConfig([
         extends: [js.configs.recommended, tseslint.configs.recommended],
     }),
     eslintPluginPrettierRecommended,
+    ...overrides,
 ]);

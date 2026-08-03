@@ -78,7 +78,7 @@ export const getOpenAccessSearchParams = ({ facets = {} }) => ({
 export const getSearchType = searchQuery => {
     if (!searchQuery) return {};
 
-    if (validation.isValidDOIValue(searchQuery)) {
+    if (validation.isValidDoi(searchQuery)) {
         return { doi: sanitizeDoi(searchQuery) };
     }
 
@@ -164,8 +164,12 @@ export const AUTHOR_API = ({ authorId, authorIds } = { authorId: undefined, auth
     return { apiUrl: 'fez-authors' };
 };
 
+export const AUTHOR_MERGE_API = (staffId, studentId) => ({
+    apiUrl: `fez-authors/${staffId}/merge/${studentId}`,
+});
+
 export const AUTHOR_DETAILS_API = ({ userId }) => ({
-    apiUrl: `authors/details/${userId}`,
+    apiUrl: `fez-authors/details/${userId}`,
 });
 
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
@@ -175,7 +179,9 @@ export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => ({
 
 // academic stats apis
 
-export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: `academic/${userId}/hindex` });
+export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({
+    apiUrl: `fez-authors/details/${userId}/hindex`,
+});
 export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-trending' });
 
 // lookup apis
@@ -326,6 +332,16 @@ export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = values => ({
         },
     },
 });
+export const AUTHOR_STATS_BY_AUTHOR_ID_API = ({ authorId }) => ({
+    apiUrl: 'records/search',
+    options: {
+        params: {
+            'key[rek_author_id][value]': authorId,
+            'filters[stats_only]': true,
+        },
+    },
+});
+
 export const TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/trending' });
 
 export const formatSearchQueryParams = ({ result, key, searchQueryParams }) => {
@@ -645,15 +661,18 @@ export const ADMIN_DASHBOARD_SYSTEM_ALERTS_API = ({ id } = { id: null }) => ({
     apiUrl: `dashboard/alerts${id ? `/${id}` : ''}`,
 });
 
+export const ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API = () => ({
+    apiUrl: 'dashboard/alerts/assign',
+});
+
 export const simpleQueryEncode = request =>
     Object.keys(request)
         .filter(key => request[key] !== '' && request[key] !== undefined)
         .map(key => key + '=' + encodeURIComponent(request[key]))
         .join('&');
 
-// eslint-disable-next-line camelcase
+/* eslint-disable camelcase */
 export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date_to }) => {
-    // eslint-disable-next-line camelcase
     const request = { sel_id: report_type, date_from, date_to };
     const query = simpleQueryEncode(request);
 
@@ -662,13 +681,19 @@ export const ADMIN_DASHBOARD_EXPORT_REPORT_API = ({ report_type, date_from, date
     };
 };
 
-// eslint-disable-next-line camelcase
-export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({ report_type, date_from, date_to, record_id }) => {
-    // eslint-disable-next-line camelcase
-    const request = { report_type, date_from, date_to, record_id };
+export const ADMIN_DASHBOARD_DISPLAY_REPORT_API = ({
+    report_type,
+    date_from,
+    date_to,
+    record_id,
+    requestor_id,
+    pid,
+}) => {
+    const request = { report_type, date_from, date_to, record_id, requestor_id, pid };
     const query = simpleQueryEncode(request);
 
     return {
         apiUrl: `dashboard/reports?${query}`,
     };
 };
+/* eslint-enable camelcase */

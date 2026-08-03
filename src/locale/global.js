@@ -2,7 +2,7 @@ import React from 'react';
 import { APP_URL, ESPACE_TEAM_CONTACT_US_URL } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
 import { RESOLVER_URL_PREFIX } from 'config/general';
-import { Link } from 'react-router';
+import LocaleLink from 'helpers/LocaleLink';
 
 /*
 
@@ -28,14 +28,26 @@ export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         appTitle: (
-            <Link
-                to={pathConfig.index}
-                className="appTitle"
-                title="Click to return to the eSpace home page"
-                style={{ color: '#FFFFFF' }}
-            >
-                UQ eSpace {process.env.TITLE_SUFFIX || ''}
-            </Link>
+            <>
+                <LocaleLink
+                    to={pathConfig.index}
+                    className="appTitle"
+                    title="Click to return to the eSpace home page"
+                    style={{ color: '#FFFFFF' }}
+                >
+                    UQ eSpace {process.env.TITLE_SUFFIX || ''}
+                </LocaleLink>
+                <a
+                    className="appTitle"
+                    title="Click to view the blog post"
+                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                    style={{ color: '#FFFFFF' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    : Celebrating 20 years
+                </a>
+            </>
         ),
         logo: {
             // image: 'https://static.uq.net.au/v2/logos/corporate/uq-logo-white.svg',
@@ -191,11 +203,16 @@ export default {
                 externalUrl: RESOLVER_URL_PREFIX + encodeURIComponent('https://doi.org/') + '[id]',
                 idKey: 'fez_record_search_key_doi.rek_doi',
             },
+            openalex: {
+                id: 'openAlex',
+                title: 'OpenAlex',
+                priority: 5,
+                externalUrl: 'https://openalex.org/works?page=1&filter=cites:' + '[id]',
+                idKey: 'fez_record_search_key_openalex_id.rek_openalex_id',
+            },
         },
         doiCitationLink: {
             ariaLabel: 'Open this DOI in an new window',
-            prefix: 'https://doi.org/',
-            externalUrl: 'https://doi.org/[id]',
         },
         pubmedCentralLink: {
             ariaLabel: 'Full text via Pubmed Central (open access)',

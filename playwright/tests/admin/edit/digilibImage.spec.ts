@@ -20,7 +20,7 @@ test.describe('Digilib Image admin edit', () => {
     });
 
     test('should load with specified elements', async ({ page }) => {
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
         await adminEditVerifyAlerts(page, 2, [
             'You are required to accept deposit agreement',
             'Publication date is required',

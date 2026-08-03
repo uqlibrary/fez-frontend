@@ -1,25 +1,39 @@
+import React from 'react';
 import HTMLReactParser from 'html-react-parser';
 import diff from 'microdiff';
+import { DOI_BASE_URL, ORCID_BASE_URL, ROR_BASE_URL } from '../config/general';
+import TryCatch from 'modules/SharedComponents/Toolbox/TryCatch/TryCatch';
 
-/* istanbul ignore next */
-global.dd = console.dir.bind(console);
-/* istanbul ignore next */
-global.dc = console.log;
-/* istanbul ignore next */
-global.dr = arg => {
-    console.dir.apply(console, [arg, { depth: null }]);
-    return arg;
-};
-/* istanbul ignore next */
-global.dj = console.log.bind(console, '%O');
-
-export const tryCatch = (callback, _default = undefined) => {
+/**
+ * @param {function} callback
+ * @param {*} _default
+ * @return {undefined|*}
+ */
+export const silentTryCatch = (callback, _default = undefined) => {
     try {
-        return callback();
+        const result = callback();
+        if (result instanceof Promise) return result.catch(() => _default);
+
+        return result;
     } catch (e) {
         /* istanbul ignore next */
         return _default;
     }
+};
+
+/**
+ * @param {object} itemA
+ * @param {object} itemB
+ * @param {string} field
+ * @param {string} direction
+ * @return {number}
+ */
+export const sortByNumericField = (a, b, field, direction = 'asc') => {
+    const valueA = Number(a[field]);
+    const valueB = Number(b[field]);
+    return direction === 'asc'
+        ? (isNaN(valueA) ? Infinity : valueA) - (isNaN(valueB) ? Infinity : valueB)
+        : (isNaN(valueB) ? Infinity : valueB) - (isNaN(valueA) ? Infinity : valueA);
 };
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
@@ -72,8 +86,8 @@ export function hydrateMock(truncatedData) {
                         [`${shortKey}_id`]: truncatedData[`rek_${shortKey}_id`] || 547492, // any random number to mock db long unique id
                         [`${shortKey}_pid`]: truncatedData.rek_pid,
                         [`${shortKey}_xsdmf_id`]: null,
-                        ...field2,
                         [`${shortKey}_order`]: order + 1,
+                        ...field2,
                     };
                 } else {
                     newEntry = {
@@ -424,6 +438,12 @@ export const isEmptyObject = object =>
     object && typeof object === 'object' && !(object instanceof Array) ? Object.keys(object)?.length === 0 : false;
 
 /**
+ * @param string
+ * @return {boolean}
+ */
+export const isEmptyString = string => typeof string !== 'string' || !string.trim();
+
+/**
  * Get a subset of an object for a given set of keys
  * Returns a new object without given keys. Use inclusive=true for the opposite.
  * @param object
@@ -561,3 +581,43 @@ export const numbersOnly = value => (value?.replace && value?.replace(/[^\d]/g, 
  * @return {boolean}
  */
 export const hasAtLeastOneItemSelected = (items, attr = 'selected') => !!items?.some?.(v => v[attr] === true);
+
+/**
+ * @param {*} value
+ * @return {boolean}
+ */
+export const isURL = value => silentTryCatch(() => !!String(new URL(value).protocol).match(/^https?:/), false);
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getOrcidURL = id => (id?.trim?.() && `${ORCID_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getRorURL = id => (id?.trim?.() && `${ROR_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param {string} id
+ * @return {string}
+ */
+export const getDoiURL = id => (id?.trim?.() && `${DOI_BASE_URL}/${id.trim()}`) || '';
+
+/**
+ * @param children
+ * @param {Function?} callback
+ * @return {(): React.JSX.Element}
+ */
+export const withErrorBoundary = (Component, callback = undefined) => {
+    const WrappedComponent = props => (
+        <TryCatch callback={callback}>
+            <Component {...props} />
+        </TryCatch>
+    );
+
+    WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+    return WrappedComponent;
+};

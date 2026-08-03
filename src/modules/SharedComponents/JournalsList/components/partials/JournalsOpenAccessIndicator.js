@@ -17,6 +17,24 @@ const getIconColumnStyle = (showDiamond, showS2O) => {
     return { backgroundColor: '#51247A' };
 };
 
+const getIndicatorIcon = (type, showDiamond) =>
+    ({
+        accepted: AcceptedIcon,
+        published: showDiamond ? DiamondIcon : PublishedIcon,
+    })[type];
+
+const getIcon = ({ showS2O, embargoPeriod, Icon }) => {
+    if (showS2O) {
+        return 'S2O';
+    }
+
+    if (embargoPeriod?.amount) {
+        return `${embargoPeriod.amount}${embargoPeriod.unit?.charAt(0)?.toUpperCase() || ''}`;
+    }
+
+    return <Icon color="white" sx={{ width: 'auto', height: '18px' }} />;
+};
+
 const JournalsOpenAccessIndicator = ({
     type,
     status,
@@ -28,12 +46,7 @@ const JournalsOpenAccessIndicator = ({
     id,
     ...rest
 }) => {
-    const icons = {
-        accepted: AcceptedIcon,
-        published: showDiamond ? DiamondIcon : PublishedIcon,
-    };
-
-    const Icon = icons[type];
+    const Icon = getIndicatorIcon(type, showDiamond);
 
     const classes = {
         [oaStatus.open]: {
@@ -95,20 +108,14 @@ const JournalsOpenAccessIndicator = ({
         lineHeight: 1.5,
     };
 
-    const getIcon = () => {
-        if (showS2O) return 'S2O';
-        if (embargoPeriod) return `${embargoPeriod}M`;
-        return <Icon color="white" sx={{ width: 'auto', height: '18px' }} />;
-    };
-
     return (
         <Tooltip
             title={tooltip}
             placement="left"
             key={`tooltip-${type}-${status}`}
-            disableFocusListener={!!!tooltip}
-            disableHoverListener={!!!tooltip}
-            disableTouchListener={!!!tooltip}
+            disableFocusListener={!tooltip}
+            disableHoverListener={!tooltip}
+            disableTouchListener={!tooltip}
             id={`open-access-${id}`}
             data-testid={`open-access-${id}`}
         >
@@ -138,7 +145,7 @@ const JournalsOpenAccessIndicator = ({
                     className="wrapper"
                 >
                     <Box sx={{ gridArea: 'icon', ...columnStyle }} className="iconColumn">
-                        {getIcon()}
+                        {getIcon({ showS2O, embargoPeriod, Icon })}
                     </Box>
                     <Box sx={{ gridArea: 'label', ...columnStyle }} className="labelColumn">
                         {label ?? status}
@@ -155,7 +162,7 @@ JournalsOpenAccessIndicator.propTypes = {
     status: PropTypes.oneOf(['open', 'cap', 'embargo', 'fee']).isRequired,
     showDiamond: PropTypes.bool,
     showS2O: PropTypes.bool,
-    embargoPeriod: PropTypes.number,
+    embargoPeriod: PropTypes.object,
     tooltip: PropTypes.string,
     label: PropTypes.string,
 };
