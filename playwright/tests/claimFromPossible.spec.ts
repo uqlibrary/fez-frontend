@@ -240,8 +240,13 @@ test.describe('Claim possible work', () => {
             await page.locator('.menu-item-container').getByText('My works').click();
 
             // confirm
-            await page.getByTestId('confirm-dialog-box').click();
-            // navigate away
+            const confirmationDialog = page
+                .getByRole('dialog')
+                .filter({ hasText: claimFormLocale.cancelWorkflowConfirmation.confirmationTitle });
+            await Promise.all([
+                page.waitForURL('**/records/mine'),
+                confirmationDialog.getByTestId('confirm-dialog-box').click(),
+            ]);
             await expect(page).toHaveURL('/records/mine');
         });
 
