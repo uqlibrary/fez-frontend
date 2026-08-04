@@ -85,8 +85,11 @@ const StyledTableCell = styled(TableCell, {
 
 const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
+    const journalId = row?.jnl_jid ?? '';
+
     // account for HashRouter usage
-    const href = useHref((<Link to={`/journal/view/${row.jnl_jid}?fromSearch=true`} />).props.to);
+    const href = useHref((<Link to={`/journal/view/${journalId}?fromSearch=true`} />).props.to);
+
     // istanbul ignore next
     if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
 

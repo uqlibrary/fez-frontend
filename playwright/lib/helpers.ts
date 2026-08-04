@@ -30,15 +30,27 @@ export const navToHomeFromMenu = async (
     page: Page,
     locale?: { confirmationTitle: string; confirmButtonLabel: string },
 ) => {
+    const maybeConfirmDialog = async () => {
+        if (!locale) return;
+
+        const dialog = page.getByRole('dialog').filter({ hasText: locale.confirmationTitle });
+        if (!(await dialog.count())) return;
+
+        const button = dialog.getByRole('button', { name: locale.confirmButtonLabel });
+        if (!(await button.count())) return;
+
+        if (await button.isVisible()) {
+            await button.click();
+        }
+    };
+
+    await maybeConfirmDialog();
+
     await page.locator('button#main-menu-button').click();
     await page.locator('#menu-item-0').click();
 
     if (locale && page.url() !== `${baseURL}/`) {
-        await page
-            .getByRole('dialog')
-            .filter({ hasText: locale.confirmationTitle })
-            .getByRole('button', { name: locale.confirmButtonLabel })
-            .click();
+        await maybeConfirmDialog();
     }
 };
 

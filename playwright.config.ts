@@ -14,7 +14,7 @@ export default defineConfig({
     failOnFlakyTests: !process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
     retries: process.env.CI_BRANCH ? 2 : 0,
-    workers: '75%',
+    workers: '50%',
     reporter: [
         ['list'],
         [
@@ -33,7 +33,7 @@ export default defineConfig({
         ignoreHTTPSErrors: true,
         bypassCSP: true,
         launchOptions: {
-            args: ['--disable-web-security', '--disable-ipv6'],
+            args: ['--disable-web-security', '--disable-ipv6', '--disable-dev-shm-usage'],
         },
     },
     projects: [

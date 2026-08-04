@@ -122,12 +122,12 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "30.4.2",
     "jest-cli": "30.4.2",
-    "jest-environment-jsdom": "30.4.1",
+    "jest-environment-jsdom": "^30.4.1",
     "jest-html-reporter": "^4.4.0",
     "jest-localstorage-mock": "^2.4.26",
     "jest-preview": "^0.3.3",
     "jest-summary-reporter": "^0.0.2",
-    "jsdom": "29.1.1",
+    "jsdom": "^30.0.1",
     "mini-css-extract-plugin": "^2.7.2",
     "mockdate": "^3.0.5",
     "postcss-loader": "^8.2.1",
@@ -214,7 +214,7 @@
     "react-jss": "^8.6.1",
     "react-player": "^2.16.0",
     "react-redux": "^9.2.0",
-    "react-router": "^7.17.0",
+    "react-router": "^8.3.0",
     "react-speech-recognition": "^3.8.2",
     "redux": "5.0.1",
     "redux-immutable": "^4.0.0",
@@ -233,9 +233,9 @@
   },
   "overrides": {
     "sass": {
-        "immutable": "^5.1.8"
+      "immutable": "^5.1.8"
     },
-    "fast-uri": "^4.1.1",
+    "fast-uri": "4.1.2",
     "@dr.pogodin/react-helmet": {
       "react": "^19.1.1",
       "react-dom": "^19.1.1"
@@ -396,10 +396,11 @@
     ],
     "moduleNameMapper": {
       "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
-      "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
+      "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js",
+      "^react-router$": "<rootDir>/__mocks__/react-router.js"
     },
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/"
+      "<rootDir>/node_modules/(?!(react-router|cookie-es)/)"
     ],
     "reporters": [
       "default",

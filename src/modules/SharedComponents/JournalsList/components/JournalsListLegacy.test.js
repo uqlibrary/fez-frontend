@@ -32,17 +32,17 @@ const checkOaTooltips = (dataElement, dataItem) => {
             tooltipLocale[publishedIndicatorProps.type][publishedIndicatorProps.status],
         );
     }
+
     if (acceptedIndicatorProps) {
-        const maxEmbargo = dataItem.fez_journal_issn?.reduce((max, issn) => {
-            return issn.fez_sherpa_romeo ? Math.max(max, issn.fez_sherpa_romeo.srm_max_embargo_amount) : max;
-        }, 0);
         const label =
             acceptedIndicatorProps.status === 'embargo'
-                ? tooltipLocale[acceptedIndicatorProps.type].embargo(maxEmbargo)
+                ? tooltipLocale[acceptedIndicatorProps.type].embargo(acceptedIndicatorProps.embargoPeriod)
                 : tooltipLocale[acceptedIndicatorProps.type][acceptedIndicatorProps.status];
+
         expect(dataElement.querySelector('.openAccessIndicator.accepted')).toHaveAttribute('aria-label', label);
     }
-    if (!!!publishedIndicatorProps && !!!acceptedIndicatorProps) {
+
+    if (!publishedIndicatorProps && !acceptedIndicatorProps) {
         expect(dataElement.querySelector('.openAccessIndicator')).not.toHaveAttribute('aria-label');
     }
 };
