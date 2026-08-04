@@ -44,7 +44,12 @@ const MenuButtonLetterCase = () => {
 
     return (
         <>
-            <MenuButton tooltipLabel="Change case" IconComponent={LetterCaseIcon} onClick={handleClick} />
+            <MenuButton
+                tooltipLabel="Change case"
+                disabled={!editor?.isEditable}
+                IconComponent={LetterCaseIcon}
+                onClick={handleClick}
+            />
 
             <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
                 {options.map(({ label, command }) => (
