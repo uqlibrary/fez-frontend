@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import JournalAdvisoryStatementTypeField from '../../SharedComponents/LookupFields/containers/JournalAdvisoryStatementTypeField';
 import { RichTextEditorField } from '../../SharedComponents/RichTextEditor';
@@ -8,7 +8,6 @@ import { useFormContext, useWatch } from 'react-hook-form';
 import Grid from '@mui/material/GridLegacy';
 import { useControlledVocabs } from '../../../hooks/useControlledVocabs';
 import { JOURNAL_ADVISORY_STATEMENT_TYPE as cvoId } from '../../../config/general';
-import { usePrevious } from '../../../hooks/usePrevious';
 import get from 'lodash/get';
 
 const flattenCVOTree = data =>
@@ -24,8 +23,14 @@ const flattenCVOTree = data =>
 export const AdvisoryStatementFields = props => {
     const { control, setValue, getValues, formState } = useFormContext();
     const type = useWatch({ name: props.type.name });
-    const statement = getValues(props.text.name)?.plainText?.trim?.() || getValues(props.text.name);
-    const prevType = usePrevious(type);
+
+    const lastAppliedDefault = useRef(null);
+    const previousTypeDefault = useRef(null);
+
+    const statementValue = getValues(props.text.name);
+    const statement =
+        typeof statementValue === 'string' ? statementValue.trim() : (statementValue?.plainText?.trim() ?? '');
+
     const cvoList = useControlledVocabs(cvoId, flattenCVOTree);
     const isPrePopulated = !!get(formState.defaultValues, props.type.name);
 
@@ -39,15 +44,54 @@ export const AdvisoryStatementFields = props => {
 
     // handle type changes
     useEffect(() => {
-        const prevTypeItem = cvoList.items.find(item => item.key === prevType);
         const currentTypeItem = cvoList.items.find(item => item.key === type);
-        // if current advisory statement text is empty, or it has type's default statement value,
-        // then update it to the corresponding selected type's statement text (item.id - see flattenCVOTree)
-        if (!statement || statement === prevTypeItem?.id) {
-            setValue(props.text.name, currentTypeItem?.id);
+        const currentDefault = currentTypeItem?.id || '';
+
+        /*
+         * Initialize tracking when editing an existing record where the current
+         * value already matches the selected type's default.
+         */
+        if (currentTypeItem && !lastAppliedDefault.current && statement === currentDefault) {
+            lastAppliedDefault.current = currentDefault;
         }
+
+        /*
+         * Type cleared:
+         * Restore the previous default only if the user has not replaced it.
+         */
+        if (!currentTypeItem) {
+            if (statement === lastAppliedDefault.current) {
+                const previousDefault = previousTypeDefault.current || '';
+                setValue(props.text.name, {
+                    htmlText: `<p>${previousDefault}</p>`,
+                    plainText: previousDefault,
+                });
+
+                lastAppliedDefault.current = previousDefault;
+            }
+
+            return;
+        }
+
+        /*
+         * Type changed:
+         * Replace only empty values or previously generated defaults.
+         */
+        const shouldUpdate = !statement || statement === lastAppliedDefault.current;
+        if (!shouldUpdate) {
+            return;
+        }
+
+        previousTypeDefault.current = lastAppliedDefault.current;
+
+        setValue(props.text.name, {
+            htmlText: `<p>${currentDefault}</p>`,
+            plainText: currentDefault,
+        });
+
+        lastAppliedDefault.current = currentDefault;
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [type]);
+    }, [type, cvoList.items]);
 
     return (
         <>
@@ -63,7 +107,7 @@ export const AdvisoryStatementFields = props => {
                 />
             </Grid>
             <Grid item xs={12} md={12}>
-                <Field control={control} component={RichTextEditorField} disable={props.disable} {...props.text} />
+                <Field control={control} component={RichTextEditorField} disabled={props.disabled} {...props.text} />
             </Grid>
         </>
     );
@@ -73,4 +117,4 @@ AdvisoryStatementFields.propTypes = {
     props: PropTypes.any,
 };
 
-export default React.memo(AdvisoryStatementFields);
+export default AdvisoryStatementFields;

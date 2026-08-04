@@ -155,7 +155,7 @@ export const getValueSearchKeyArray = (record, searchKey) => {
     return returnValue;
 };
 
-export const getValueSearchKeyCKEditor = (record, plainTextSearchKey, htmlTextSearchKey) => {
+export const getValueSearchKeyRichTextEditor = (record, plainTextSearchKey, htmlTextSearchKey) => {
     let returnValue;
     if (plainTextSearchKey.indexOf('.') >= 0) {
         const [primaryKey, subKey] = plainTextSearchKey.split('.');
@@ -210,14 +210,14 @@ export const getValueSearchKeyRekValueList = (record, searchKey) => {
 
 export default {
     rek_title: {
-        getValue: record => getValueSearchKeyCKEditor(record, 'rek_title', 'rek_formatted_title'),
+        getValue: record => getValueSearchKeyRichTextEditor(record, 'rek_title', 'rek_formatted_title'),
     },
     rek_description: {
-        getValue: record => getValueSearchKeyCKEditor(record, 'rek_description', 'rek_formatted_abstract'),
+        getValue: record => getValueSearchKeyRichTextEditor(record, 'rek_description', 'rek_formatted_abstract'),
     },
     internalNotes: {
         getValue: record =>
-            getValueSearchKeyCKEditor(record, 'fez_internal_notes.ain_detail', 'fez_internal_notes.ain_detail'),
+            getValueSearchKeyRichTextEditor(record, 'fez_internal_notes.ain_detail', 'fez_internal_notes.ain_detail'),
     },
     rek_date: {
         getValue: record => getValueFromRekKey(record, 'rek_date'),
@@ -546,7 +546,7 @@ export default {
     },
     additionalNotes: {
         getValue: record =>
-            getValueSearchKeyCKEditor(
+            getValueSearchKeyRichTextEditor(
                 record,
                 'fez_record_search_key_notes.rek_notes',
                 'fez_record_search_key_notes.rek_notes',
@@ -554,7 +554,7 @@ export default {
     },
     advisoryStatement: {
         getValue: record =>
-            getValueSearchKeyCKEditor(
+            getValueSearchKeyRichTextEditor(
                 record,
                 'fez_record_search_key_advisory_statement.rek_advisory_statement',
                 'fez_record_search_key_advisory_statement.rek_advisory_statement',
@@ -789,7 +789,7 @@ export default {
     },
     fez_record_search_key_transcript: {
         getValue: record =>
-            getValueSearchKeyCKEditor(
+            getValueSearchKeyRichTextEditor(
                 record,
                 'fez_record_search_key_transcript.rek_transcript',
                 'fez_record_search_key_transcript.rek_transcript',
@@ -818,7 +818,7 @@ export default {
     },
     fez_record_search_key_related_datasets: {
         getValue: record =>
-            getValueSearchKeyCKEditor(
+            getValueSearchKeyRichTextEditor(
                 record,
                 'fez_record_search_key_related_datasets.rek_related_datasets',
                 'fez_record_search_key_related_datasets.rek_related_datasets',
@@ -826,7 +826,7 @@ export default {
     },
     fez_record_search_key_related_publications: {
         getValue: record =>
-            getValueSearchKeyCKEditor(
+            getValueSearchKeyRichTextEditor(
                 record,
                 'fez_record_search_key_related_publications.rek_related_publications',
                 'fez_record_search_key_related_publications.rek_related_publications',

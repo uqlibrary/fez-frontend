@@ -7,7 +7,7 @@ import {
     editAffiliationAndAssert,
 } from '../helpers';
 import { clickAutoSuggestion, testIdStartsWith } from '../../../lib/helpers';
-import { typeCKEditor } from '../../../lib/ckeditor';
+import { typeRichTextEditor } from '../../../lib/richTextEditor';
 
 test.describe('As an admin,', () => {
     test('I can add a journal article', async ({ page }) => {
@@ -48,7 +48,7 @@ test.describe('As an admin,', () => {
 
         // Fill required fields
 
-        await typeCKEditor(page, 'rek-title', 'Test title');
+        await typeRichTextEditor(page, 'rek-title', 'Test title');
         await page.getByTestId('rek-date-year-input').fill('2020');
         await page.getByTestId('rek-author-add').click();
         await page.getByTestId('rek-author-input').fill('Test author');
@@ -105,7 +105,7 @@ test.describe('As an admin,', () => {
             await adminEditTabbedView(page, false);
 
             // Fill required fields
-            await typeCKEditor(page, 'rek-title', 'Test title with affiliations');
+            await typeRichTextEditor(page, 'rek-title', 'Test title with affiliations');
             await page.getByTestId('rek-date-year-input').fill('2020');
         });
 

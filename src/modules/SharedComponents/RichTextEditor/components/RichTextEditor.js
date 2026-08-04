@@ -46,24 +46,25 @@ const RichTextEditor = ({
     error: hasFormError,
     errorText,
     titleProps,
+    disabled = false,
 }) => {
     const content = typeof value === 'string' ? value : value?.htmlText || value?.plainText || '';
 
     const editorRef = useRef(null);
-    const hasUserUpdated = useRef(false);
     const [inputLength, setInputLength] = useState(0);
     const [specialCharacterPicker, setSpecialCharacterPicker] = useState(null);
 
+    const isEditorUsable = editor => !!editor && !editor.isDestroyed && !!editor.editorView?.dom?.isConnected;
+
     /*
      * Sync editor content when it is populated or updated from an async API response.
-     * Avoid overwriting user edits by skipping updates after the user has started typing.
      * `emitUpdate: false` prevents triggering the editor change handler and avoids
      * unnecessary update loops back to the form state.
      */
     useEffect(() => {
         const editor = editorRef.current;
 
-        if (!editor || hasUserUpdated.current || !content) {
+        if (!isEditorUsable(editor)) {
             return;
         }
 
@@ -84,8 +85,6 @@ const RichTextEditor = ({
 
     const handleUpdate = useCallback(
         ({ editor }) => {
-            hasUserUpdated.current = true;
-
             const htmlText = editor.getHTML();
             const plainText = editor.getText();
 
@@ -112,12 +111,13 @@ const RichTextEditor = ({
 
     /*
      * Memoise renderControls to avoid recreating the toolbar renderer on every render.
-     * The guard prevents toolbar buttons from accessing an editor instance while it is
-     * being initialised or after it has been destroyed during React re-renders.
+     * The editor instance can exist before the ProseMirror view is mounted. Toolbar
+     * buttons rely on editor commands (e.g. editor.can()), so only render controls
+     * once the editor view is available and avoid rendering after destruction.
      */
     const renderControls = useCallback(
         editor => {
-            if (!editor || editor.isDestroyed || !editor.isInitialized) {
+            if (!isEditorUsable(editor)) {
                 return null;
             }
 
@@ -146,7 +146,7 @@ const RichTextEditor = ({
             <MuiRichTextEditor
                 className={className}
                 content={content}
-                editable
+                editable={!disabled}
                 extensions={extensions}
                 renderControls={renderControls}
                 onUpdate={handleUpdate}
@@ -171,6 +171,7 @@ const RichTextEditor = ({
             >
                 {editor => {
                     editorRef.current = editor;
+
                     return (
                         <>
                             <LinkBubbleMenu />
@@ -240,6 +241,7 @@ RichTextEditor.propTypes = {
     title: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     titleProps: PropTypes.object,
+    disabled: PropTypes.bool,
 };
 
 export default RichTextEditor;

@@ -22,7 +22,7 @@ const CustomLinkExtension = Link.extend({
     inclusive: false,
 });
 
-export const createExtensions = ({ singleLine, textOnlyOnPaste }) => [
+export const createExtensions = ({ singleLine = false, textOnlyOnPaste = true }) => [
     Document,
     Paragraph,
     Text,

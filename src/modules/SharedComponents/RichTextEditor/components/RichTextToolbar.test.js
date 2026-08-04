@@ -6,6 +6,13 @@ import RichTextToolbar from './RichTextToolbar';
 
 jest.mock('mui-tiptap', () => ({
     // eslint-disable-next-line react/prop-types
+    MenuButton: ({ onClick, IconComponent }) => (
+        <button data-testid="menu-button" onClick={onClick}>
+            <IconComponent />
+        </button>
+    ),
+
+    // eslint-disable-next-line react/prop-types
     MenuControlsContainer: ({ children }) => <div data-testid="menu-controls-container">{children}</div>,
 
     MenuDivider: () => <hr data-testid="menu-divider" />,
@@ -37,6 +44,10 @@ jest.mock('mui-tiptap', () => ({
 
 jest.mock('./toolbar/LetterCase/MenuButtonLetterCase', () => () => (
     <button data-testid="letter-case-button">Letter Case</button>
+));
+
+jest.mock('./toolbar/SpecialCharacters/MenuButtonSpecialCharacters', () => () => (
+    <button data-testid="special-characters-button">Special Characters</button>
 ));
 
 const setup = (props = {}) => rtlRender(<RichTextToolbar {...props} />);

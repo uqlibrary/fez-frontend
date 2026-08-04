@@ -67,11 +67,8 @@ describe('Component JournalAdvisoryStatementTypeField', () => {
             text: {
                 name: 'adminSection.advisoryStatement.text',
                 title: 'Advisory statement',
-                format: value => Immutable.Map(value),
-                richEditorId: 'jnl-advisory-statement',
-                canEdit: true,
+                id: 'jnl-advisory-statement',
                 required: false,
-                noRef: true,
             },
         };
 
@@ -100,13 +97,11 @@ describe('Component JournalAdvisoryStatementTypeField', () => {
         if (!match) throw new Error(`unable to find statement type matching: ${value}`);
         return match;
     };
-    const setStatementText = async value =>
-        await setRichTextEditorValue(defaultComponentProps.text.richEditorId, value);
+    const setStatementText = async value => await setRichTextEditorValue(defaultComponentProps.text.id, value);
 
     const assertStatementText = async value => {
-        await assertRichTextEditorValue(defaultComponentProps.text.richEditorId, value);
-        value &&
-            (await waitForText(value, { within: () => screen.getByTestId(defaultComponentProps.text.richEditorId) }));
+        await assertRichTextEditorValue(defaultComponentProps.text.id, value);
+        value && (await waitForText(value, { within: () => screen.getByTestId(defaultComponentProps.text.id) }));
     };
 
     const clearStatementTypeField = async () => {

@@ -88,7 +88,11 @@ describe('AdminSection component', () => {
         // only test actual input fields
         const { getByTestId } = setup({ values: { journal: { ...journalDoaj.data } }, disabled: true });
         fieldIds.forEach(id => {
-            expect(getByTestId(`${id}-input`)).toHaveAttribute('disabled');
+            if (id !== 'jnl-advisory-statement') {
+                expect(getByTestId(`${id}-input`)).toHaveAttribute('disabled');
+            } else {
+                expect(getByTestId(id)).toHaveAttribute('contenteditable', 'false');
+            }
         });
     });
 });

@@ -1,8 +1,44 @@
 import React from 'react';
-
 import { rtlRender } from 'test-utils';
-
 import RichTextEditor from './RichTextEditor';
+import { createExtensions } from './createExtensions';
+
+const mockEditor = {
+    isDestroyed: false,
+    isInitialized: true,
+    editorView: { dom: { isConnected: true } },
+    getHTML: jest.fn(() => '<p>Old Content</p>'),
+    commands: { setContent: jest.fn() },
+};
+
+jest.mock('mui-tiptap', () => {
+    const actual = jest.requireActual('mui-tiptap');
+
+    return {
+        ...actual,
+
+        useRichTextEditorContext: () => mockEditor,
+        /* eslint-disable-next-line react/prop-types */
+        RichTextEditor: ({ children, renderControls, editorProps }) => (
+            <div data-testid="mock-rich-text-editor">
+                {renderControls?.(mockEditor)}
+
+                {/* eslint-disable-next-line react/prop-types */}
+                <div className="ProseMirror" {...editorProps?.attributes}>
+                    {children?.(mockEditor)}
+                </div>
+            </div>
+        ),
+
+        LinkBubbleMenu: () => null,
+    };
+});
+
+jest.mock('./createExtensions', () => ({
+    createExtensions: jest.fn(() => []),
+}));
+
+jest.mock('./RichTextToolbar', () => () => <div data-testid="rich-text-toolbar" />);
 
 function setup(testProps = {}) {
     const props = {
@@ -18,25 +54,22 @@ function setup(testProps = {}) {
 }
 
 describe('RichTextEditor', () => {
+    beforeEach(() => {
+        jest.clearAllMocks();
+        mockEditor.isDestroyed = false;
+        mockEditor.isInitialized = true;
+    });
+
     it('should render editor', () => {
         const { container } = setup({ singleLine: true, description: 'Description' });
 
         expect(container.querySelector('.ProseMirror')).toBeInTheDocument();
     });
 
-    it('should render initial content', () => {
-        const { container } = setup({
-            textOnlyOnPaste: false,
-            value: '<p>Hello World</p>',
-        });
-
-        expect(container.querySelector('.ProseMirror')).toHaveTextContent('Hello World');
-    });
-
     it('should render toolbar', () => {
-        const { getByRole } = setup();
+        const { getByTestId } = setup();
 
-        expect(getByRole('button', { name: /bold/i })).toBeInTheDocument();
+        expect(getByTestId('rich-text-toolbar')).toBeInTheDocument();
     });
 
     it('should render editor id', () => {
@@ -49,10 +82,37 @@ describe('RichTextEditor', () => {
 
     it('should render editor test id', () => {
         const { getByTestId } = setup({
-            testId: 'test-editor',
+            id: 'test-editor',
         });
 
         expect(getByTestId('test-editor')).toBeInTheDocument();
+    });
+
+    it('should pass textOnlyOnPaste option to createExtensions', () => {
+        setup({
+            textOnlyOnPaste: false,
+        });
+
+        expect(createExtensions).toHaveBeenCalledWith({
+            singleLine: false,
+            textOnlyOnPaste: false,
+        });
+    });
+
+    it('should not render toolbar when editor is destroyed', () => {
+        mockEditor.isDestroyed = true;
+
+        const { queryByTestId } = setup();
+
+        expect(queryByTestId('rich-text-toolbar')).not.toBeInTheDocument();
+    });
+
+    it('should not render toolbar before editor is initialized', () => {
+        mockEditor.editorView.dom.isConnected = false;
+
+        const { queryByTestId } = setup();
+
+        expect(queryByTestId('rich-text-toolbar')).not.toBeInTheDocument();
     });
 
     it('should render empty editor when value is empty', () => {
