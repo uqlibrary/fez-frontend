@@ -11,7 +11,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { SeriesField } from 'modules/SharedComponents/LookupFields';
 
 import { validation } from 'config';
@@ -117,16 +117,15 @@ const NtroFields = props => {
                                 <Grid style={{ marginTop: 24 }} size={12}>
                                     <Field
                                         control={control}
-                                        component={RichEditorField}
+                                        component={RichTextEditorField}
                                         name="impactStatement"
-                                        fullWidth
                                         title={contributionStatement.fields.impactStatement.label}
                                         description={contributionStatement.fields.impactStatement.placeholder}
                                         maxValue={2000}
                                         required
                                         disabled={isSubmitting}
                                         validate={[validation.required, validation.maxListEditorTextLength2000]}
-                                        richEditorId="rek-creator-contribution-statement"
+                                        id="rek-creator-contribution-statement"
                                     />
                                 </Grid>
                             )}
@@ -154,14 +153,13 @@ const NtroFields = props => {
                                 {!hideAbstract && (
                                     <Field
                                         control={control}
-                                        component={RichEditorField}
+                                        component={RichTextEditorField}
                                         name="ntroAbstract"
-                                        fullWidth
                                         title={metadata.fields.abstract.label}
                                         description={metadata.fields.abstract.placeholder}
                                         disabled={isSubmitting}
                                         validate={[validation.required, validation.maxListEditorTextLength65k]}
-                                        richEditorId="rek-description"
+                                        id="rek-description"
                                     />
                                 )}
                             </Grid>

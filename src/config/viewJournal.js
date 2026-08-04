@@ -1,6 +1,6 @@
 import React from 'react';
 import globalLocale from 'locale/global';
-import { getDoajUrl, prefixByUrlResolver } from 'config/general';
+import { getDoajUrl, getOpenPolicyFinderUrl, prefixByUrlResolver } from 'config/general';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 import { getIndicator, getMaxEmbargo, types } from 'modules/SharedComponents/JournalsList/components/partials/utils';
 import componentLocale from 'locale/components';
@@ -321,7 +321,7 @@ export const viewJournalConfig = {
                         getMaxEmbargo(journalDetails.fez_journal_issn),
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: item => item.srm_journal_link,
+                        href: item => getOpenPolicyFinderUrl(item.srm_source_id),
                         title: "Open journal's open access policy in a new tab",
                         ariaLabel: item =>
                             `${item.srm_max_embargo_amount} ${item.srm_max_embargo_units} embargo - Open journal's open access policy details in a new tab`,

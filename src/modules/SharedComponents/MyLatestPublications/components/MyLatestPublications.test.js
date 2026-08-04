@@ -7,7 +7,7 @@ import { openAccessibleProps } from './MyLatestPublications';
 
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
-    searchLatestPublications: jest.fn(),
+    searchLatestPublications: jest.fn(() => ({ type: 'MOCK_SEARCH_LATEST_PUBLICATIONS' })),
 }));
 const mockUseNavigate = jest.fn();
 
