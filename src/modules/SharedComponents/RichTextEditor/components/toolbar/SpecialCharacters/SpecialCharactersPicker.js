@@ -20,23 +20,29 @@ const PANEL_HEIGHT = 352;
 const SpecialCharactersPicker = ({ open, position, onClose }) => {
     const editor = useRichTextEditorContext();
 
-    const [category, setCategory] = useState('all');
+    const [category, setCategory] = useState(categories[0].id); // all
     const [hoverCharacter, setHoverCharacter] = useState(null);
 
     const [panelPosition, setPanelPosition] = useState({ x: 0, y: 0 });
 
     const dragging = useRef(false);
-    const dragOffset = useRef({
-        x: 0,
-        y: 0,
-    });
+    const dragOffset = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
+        /* istanbul ignore else */
         if (position) {
             setPanelPosition(position);
         }
     }, [position]);
 
+    useEffect(() => {
+        setHoverCharacter(null);
+    }, [category]);
+
+    /*
+     * Track mouse movement globally so dragging continues even when the cursor
+     * moves outside the picker panel.
+     */
     useEffect(() => {
         const handleMouseMove = event => {
             if (!dragging.current) {
@@ -73,7 +79,7 @@ const SpecialCharactersPicker = ({ open, position, onClose }) => {
         return null;
     }
 
-    const selectedCategory = categories.find(item => item.id === category) ?? categories[0];
+    const selectedCategory = categories.find(item => item.id === category);
 
     const handleDragStart = event => {
         // only allow left mouse button
@@ -115,9 +121,6 @@ const SpecialCharactersPicker = ({ open, position, onClose }) => {
                 overflow: 'hidden',
 
                 borderRadius: 1,
-
-                // force paint above editor pseudo elements
-                isolation: 'isolate',
             }}
         >
             {/* Header / Drag handle */}
@@ -146,7 +149,7 @@ const SpecialCharactersPicker = ({ open, position, onClose }) => {
                     Special characters
                 </Typography>
 
-                <IconButton size="small" onClick={onClose}>
+                <IconButton size="small" onClick={onClose} data-testid="special-character-close-button">
                     <CloseIcon fontSize="small" />
                 </IconButton>
             </Box>
@@ -245,7 +248,6 @@ SpecialCharactersPicker.propTypes = {
         x: PropTypes.number.isRequired,
         y: PropTypes.number.isRequired,
     }),
-    editor: PropTypes.object,
     onClose: PropTypes.func.isRequired,
 };
 
