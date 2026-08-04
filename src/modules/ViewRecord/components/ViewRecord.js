@@ -332,11 +332,12 @@ export const ViewRecord = () => {
                         <Alert
                             sx={{
                                 backgroundColor: '#fef8e8',
-                                color: '#3a383e',
-                                fontWeight: 400,
+                                color: '#3b383e',
+                                '& .MuiSvgIcon-root': {
+                                    color: '#3a383e',
+                                },
                             }}
-                            allowDismiss
-                            type={'custom'}
+                            type={'info_outline'}
                             message={stripHtml(
                                 recordToView.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             )}
