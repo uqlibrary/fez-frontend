@@ -76,18 +76,24 @@ export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimR
 export const getRecordLinkSearchKey = data => {
     if (!data.rek_link) return null;
 
+    const existingLinks = data.publication?.fez_record_search_key_link || [];
+    const existingDescriptions = data.publication?.fez_record_search_key_link_description || [];
+
+    const nextOrder = existingLinks.reduce((max, item) => Math.max(max, item.rek_link_order), 0) + 1;
+
     return {
         fez_record_search_key_link: [
+            ...existingLinks,
             {
                 rek_link: data.rek_link,
-                rek_link_order: 1,
+                rek_link_order: nextOrder,
             },
         ],
         fez_record_search_key_link_description: [
+            ...existingDescriptions,
             {
-                rek_link_description:
-                    (!!data.rek_link_description && data.rek_link_description) || locale.global.defaultLinkDescription,
-                rek_link_description_order: 1,
+                rek_link_description: data.rek_link_description ?? locale.global.defaultLinkDescription,
+                rek_link_description_order: nextOrder,
             },
         ],
     };
