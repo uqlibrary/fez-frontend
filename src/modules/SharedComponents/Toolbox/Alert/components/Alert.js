@@ -155,6 +155,7 @@ export const Alert = ({
     title,
     type = 'error',
     wiggle = null,
+    sx = {},
 }) => {
     /* istanbul ignore next */
     const convertedType = type === 'success' ? 'done' : type;
@@ -170,7 +171,7 @@ export const Alert = ({
                 id={alertId}
                 data-analyticsid={alertId}
                 data-testid={alertId}
-                sx={{}}
+                sx={sx}
             >
                 <Grid
                     item
@@ -306,6 +307,7 @@ Alert.propTypes = {
         'custom',
     ]),
     wiggle: PropTypes.bool,
+    sx: PropTypes.object,
 };
 
 export default Alert;
