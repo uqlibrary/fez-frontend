@@ -112,7 +112,9 @@ export const SearchJournals = () => {
 
         // make sure selected keywords are cleared if previous page doesnt have any query params
         if (!Object.keys(keywordsFromUrl).length) {
-            setSelectedKeywords({});
+            setSelectedKeywords(prevSelectedKeywords =>
+                Object.keys(prevSelectedKeywords || {}).length > 0 ? {} : prevSelectedKeywords,
+            );
             setShowInputControls(true);
             return;
         }
@@ -126,7 +128,7 @@ export const SearchJournals = () => {
         setSelectedKeywords(searchQueryParams.keywords);
         setShowInputControls(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [location]);
+    }, [location.search]);
 
     /**
      *  Hide search input controls if there aren't any selected keywords

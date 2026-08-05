@@ -136,7 +136,9 @@ describe('DashboardOrcidSync', () => {
 
         it('should display confirmation dialog when route state variable `showOrcidLinkingConfirmation` is set to true', async () => {
             // `showOrcidLinkingConfirmation` is set to true upon the Orcid linking - see Orcid component
-            setup({}, '/', [{ path: pathConfig.dashboard, state: { showOrcidLinkingConfirmation: true } }]);
+            setup({}, pathConfig.dashboard, [
+                { path: pathConfig.dashboard, state: { showOrcidLinkingConfirmation: true } },
+            ]);
             await waitElementToBeInTheDocument('orcid-sync-confirmation-message');
         });
 

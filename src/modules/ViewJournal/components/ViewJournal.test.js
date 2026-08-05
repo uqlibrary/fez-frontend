@@ -572,8 +572,10 @@ describe('ViewJournal', () => {
                         jnl_issn: '1111-1111',
                         jnl_issn_order: 1,
                         fez_sherpa_romeo: {
+                            srm_source_id: 1,
                             srm_issn: '1111-1111',
                             srm_max_embargo_amount: 6,
+                            srm_max_embargo_units: 'months',
                             srm_journal_link: 'http://test',
                         },
                     },
@@ -587,7 +589,10 @@ describe('ViewJournal', () => {
 
         expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
         expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
-        expect(queryByTestId('srm-journal-link-lookup-link')).toHaveAttribute('href', 'http://test');
+        expect(queryByTestId('srm-journal-link-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1',
+        );
     });
 
     it('Should show embargo details from second issn even when journal link is not available', async () => {
@@ -599,17 +604,18 @@ describe('ViewJournal', () => {
                         jnl_issn: '1111-1111',
                         jnl_issn_order: 1,
                         fez_sherpa_romeo: {
+                            srm_source_id: null,
                             srm_issn: '1111-1111',
-                            srm_journal_link: null,
                         },
                     },
                     {
                         jnl_issn: '2222-2222',
                         jnl_issn_order: 2,
                         fez_sherpa_romeo: {
+                            srm_source_id: null,
                             srm_max_embargo_amount: 6,
+                            srm_max_embargo_units: 'weeks',
                             srm_issn: '2222-2222',
-                            srm_journal_link: null,
                         },
                     },
                 ],
@@ -621,7 +627,7 @@ describe('ViewJournal', () => {
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
         expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
-        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
+        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 weeks');
         expect(queryByTestId('srm-journal-link-lookup-link')).not.toBeInTheDocument();
     });
 

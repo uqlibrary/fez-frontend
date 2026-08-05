@@ -13,6 +13,14 @@ export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURICompone
 
 export const getDoajUrl = issn => prefixByUrlResolver(`https://doaj.org/toc/${issn}`);
 
+/*
+ Construct the Open Policy Finder URL locally because the API still returns
+ the legacy Sherpa/RoMEO link. This can be removed once the API returns
+ Open Policy Finder URLs directly.
+ */
+export const getOpenPolicyFinderUrl = id =>
+    id ? prefixByUrlResolver(` https://openpolicyfinder.jisc.ac.uk/publication/${id}`) : null;
+
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
