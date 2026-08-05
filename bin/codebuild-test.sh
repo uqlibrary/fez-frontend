@@ -80,7 +80,6 @@ function install_pw_deps() {
 
 function run_pw_test_shard() {
     set -e
-    npm run start:mock &
     install_pw_deps
     export PW_SHARD_INDEX="$1"
 
