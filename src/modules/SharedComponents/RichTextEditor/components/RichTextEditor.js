@@ -56,6 +56,17 @@ const RichTextEditor = ({
 
     const isEditorUsable = editor => !!editor && !editor.isDestroyed && !!editor.editorView?.dom?.isConnected;
 
+    const log = (...args) => console.log(`[RTE:${id}]`, ...args);
+
+    useEffect(() => {
+        log('mounted');
+
+        return () => {
+            log('unmounted');
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     /*
      * Sync editor content when it is populated or updated from an async API response.
      * `emitUpdate: false` prevents triggering the editor change handler and avoids
@@ -63,6 +74,12 @@ const RichTextEditor = ({
      */
     useEffect(() => {
         const editor = editorRef.current;
+
+        log('sync', {
+            destroyed: editor?.isDestroyed,
+            connected: editor?.editorView?.dom?.isConnected,
+            contentLength: content?.length,
+        });
 
         if (!isEditorUsable(editor)) {
             return;
@@ -170,7 +187,29 @@ const RichTextEditor = ({
                 }}
             >
                 {editor => {
+                    const extensions = editor?.extensionManager?.extensions?.map(e => e.name) ?? [];
+
+                    log('render', {
+                        editor,
+                        destroyed: editor?.isDestroyed,
+                        connected: editor?.editorView?.dom?.isConnected,
+                        hasHandler: extensions.includes('linkBubbleMenuHandler'),
+                        extensions,
+                    });
                     editorRef.current = editor;
+
+                    const DebugBubbleMenu = () => {
+                        const extensions = editor?.extensionManager?.extensions?.map(e => e.name) ?? [];
+
+                        console.log(`[RTE:${id}] LinkBubbleMenu render`, {
+                            destroyed: editor?.isDestroyed,
+                            connected: editor?.editorView?.dom?.isConnected,
+                            hasHandler: extensions.includes('linkBubbleMenuHandler'),
+                            extensions,
+                        });
+
+                        return <DebugBubbleMenu />;
+                    };
 
                     return (
                         <>

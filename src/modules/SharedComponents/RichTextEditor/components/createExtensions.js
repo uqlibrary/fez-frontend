@@ -22,28 +22,38 @@ const CustomLinkExtension = Link.extend({
     inclusive: false,
 });
 
-export const createExtensions = ({ singleLine = false, textOnlyOnPaste = true }) => [
-    Document,
-    Paragraph,
-    Text,
+export const createExtensions = ({ singleLine = false, textOnlyOnPaste = true }) => {
+    const extensions = [
+        Document,
+        Paragraph,
+        Text,
 
-    Bold,
-    Italic,
-    Underline,
-    Strike,
-    Superscript,
-    Subscript,
-    LetterCase,
+        Bold,
+        Italic,
+        Underline,
+        Strike,
+        Superscript,
+        Subscript,
+        LetterCase,
 
-    CustomLinkExtension.configure({
-        openOnClick: false,
-    }),
+        CustomLinkExtension.configure({
+            openOnClick: false,
+        }),
 
-    ...(!singleLine ? [ListItem, BulletList, OrderedList, HardBreak] : []),
+        ...(!singleLine ? [ListItem, BulletList, OrderedList, HardBreak] : []),
 
-    History,
+        History,
 
-    ...(textOnlyOnPaste ? [PlainTextPaste] : []),
+        ...(textOnlyOnPaste ? [PlainTextPaste] : []),
 
-    LinkBubbleMenuHandler,
-];
+        LinkBubbleMenuHandler,
+    ];
+
+    console.log('createExtensions', {
+        singleLine,
+        textOnlyOnPaste,
+        extensions: extensions.map(extension => extension.name),
+    });
+
+    return extensions;
+};
