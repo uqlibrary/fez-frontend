@@ -198,22 +198,9 @@ const RichTextEditor = ({
                     });
                     editorRef.current = editor;
 
-                    const DebugBubbleMenu = () => {
-                        const extensions = editor?.extensionManager?.extensions?.map(e => e.name) ?? [];
-
-                        console.log(`[RTE:${id}] LinkBubbleMenu render`, {
-                            destroyed: editor?.isDestroyed,
-                            connected: editor?.editorView?.dom?.isConnected,
-                            hasHandler: extensions.includes('linkBubbleMenuHandler'),
-                            extensions,
-                        });
-
-                        return <DebugBubbleMenu />;
-                    };
-
                     return (
                         <>
-                            <LinkBubbleMenu />
+                            {isEditorUsable(editor) && <LinkBubbleMenu />}
                             {/*
                              * NOTE:
                              * The SpecialCharactersPicker is intentionally rendered here instead of inside
