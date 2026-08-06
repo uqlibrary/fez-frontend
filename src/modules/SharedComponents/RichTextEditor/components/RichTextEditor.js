@@ -174,7 +174,7 @@ const RichTextEditor = ({
 
                     return (
                         <>
-                            <LinkBubbleMenu />
+                            {isEditorUsable(editor) && <LinkBubbleMenu />}
                             {/*
                              * NOTE:
                              * The SpecialCharactersPicker is intentionally rendered here instead of inside

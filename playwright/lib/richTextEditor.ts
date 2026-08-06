@@ -7,6 +7,12 @@ export const assertRichTextEditorEmpty = async (page: Page, elementDataTestId: s
     await expect(paragraph).toHaveText('');
 };
 
+export const assertRichTextEditorValue = async (page: Page, elementDataTestId: string, expectedText: string) => {
+    const editor = page.locator(`.ProseMirror[data-testid="${elementDataTestId}"]`);
+
+    await expect(editor).toContainText(expectedText);
+};
+
 export const readRichTextEditor = async (page: Page, elementDataTestId: string) =>
     (await page.locator(`.ProseMirror[data-testid="${elementDataTestId}"]`).textContent()) ?? '';
 
