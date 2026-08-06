@@ -18,9 +18,12 @@ import { useDispatchOnce } from 'hooks/useDispatchOnce';
 import { pathConfig } from '../../../config';
 
 const mockNavigate = jest.fn();
+const mockParams = jest.fn();
+
 jest.mock('react-router', () => ({
     ...jest.requireActual('react-router'),
     useNavigate: () => mockNavigate,
+    useParams: () => mockParams(),
 }));
 
 jest.mock('actions/journalUserLists', () => ({
@@ -55,9 +58,9 @@ jest.mock('modules/FavouriteJournals/components/ListSelect', () => ({
 }));
 
 const setup = ({ state = {}, listsState = {}, listId = '123' } = {}) => {
-    const route = listId ? `/favourites/${listId}` : '/favourites';
+    mockParams.mockReturnValue({ id: listId });
     return render(
-        <WithMemoryRouter route={route}>
+        <WithMemoryRouter route={`/favourites/${listId}`}>
             <WithReduxStore
                 initialState={{
                     favouriteJournalsReducer: state,
@@ -71,7 +74,6 @@ const setup = ({ state = {}, listsState = {}, listId = '123' } = {}) => {
             >
                 <Routes>
                     <Route path="/favourites/:id" element={<FavouriteJournals />} />
-                    <Route path="/favourites" element={<FavouriteJournals />} />
                 </Routes>
             </WithReduxStore>
         </WithMemoryRouter>,
