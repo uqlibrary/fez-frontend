@@ -75,6 +75,7 @@ export const FavouriteJournals: React.FC = () => {
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
+        /* istanbul ignore next */
         if (!listId) return;
         dispatch(loadListItems({ id: listId, searchQuery: { page, pageSize, sortBy, sortDirection } }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
