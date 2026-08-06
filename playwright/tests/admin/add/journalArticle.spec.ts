@@ -7,7 +7,7 @@ import {
     editAffiliationAndAssert,
 } from '../helpers';
 import { clickAutoSuggestion, testIdStartsWith } from '../../../lib/helpers';
-import { typeRichTextEditor } from '../../../lib/richTextEditor';
+import { typeRichTextEditor, assertRichTextEditorValue } from '../../../lib/richTextEditor';
 
 test.describe('As an admin,', () => {
     test('I can add a journal article', async ({ page }) => {
@@ -47,8 +47,21 @@ test.describe('As an admin,', () => {
         await adminEditTabbedView(page, false);
 
         // Fill required fields
-
         await typeRichTextEditor(page, 'rek-title', 'Test title');
+
+        // Test Insert Special Characters
+        const titleEditor = page.getByTestId('rek-title-container');
+        await titleEditor.locator('.ProseMirror').click();
+        await titleEditor.getByRole('button', { name: 'Insert special character' }).click();
+        await expect(page.getByTestId('special-character-close-button')).toHaveCount(1);
+
+        await titleEditor.getByRole('button', { name: '🔚' }).click();
+        await assertRichTextEditorValue(page, 'rek-title', 'Test title🔚');
+
+        // Close picker
+        await titleEditor.getByTestId('special-character-close-button').click();
+        await expect(titleEditor.getByText('Special characters')).not.toBeVisible();
+
         await page.getByTestId('rek-date-year-input').fill('2020');
         await page.getByTestId('rek-author-add').click();
         await page.getByTestId('rek-author-input').fill('Test author');

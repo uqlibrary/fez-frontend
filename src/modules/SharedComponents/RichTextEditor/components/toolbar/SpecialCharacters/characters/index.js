@@ -18,11 +18,11 @@ export const characters = {
 };
 
 export const allCharacters = [
+    ...characters.arrows,
+    ...characters.currency,
+    ...characters.text,
     ...characters.mathematics,
     ...characters.latin,
-    ...characters.text,
-    ...characters.currency,
-    ...characters.arrows,
 ];
 
 export const categories = [
