@@ -8,7 +8,7 @@ export const getValueSearchKeyArray = (journal, searchKey) => {
     return returnValue;
 };
 
-export const getValueSearchKeyCKEditor = (journal, plainTextSearchKey, htmlTextSearchKey) => {
+export const getValueSearchKeyRichTextEditor = (journal, plainTextSearchKey, htmlTextSearchKey) => {
     let returnValue;
     if (plainTextSearchKey.indexOf('.') >= 0) {
         const [primaryKey, subKey] = plainTextSearchKey.split('.');
@@ -134,7 +134,7 @@ export default {
     advisoryStatement: {
         getValue: journal => ({
             type: journal?.jnl_advisory_statement_type,
-            text: getValueSearchKeyCKEditor(journal, 'jnl_advisory_statement', 'jnl_advisory_statement'),
+            text: getValueSearchKeyRichTextEditor(journal, 'jnl_advisory_statement', 'jnl_advisory_statement'),
         }),
     },
     issns: {

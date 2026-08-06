@@ -1,4 +1,3 @@
-import Immutable from 'immutable';
 import { validation, DATASET_ACCESS_CONDITIONS_OPTIONS } from 'config';
 import locale from 'locale/components';
 import {
@@ -81,7 +80,7 @@ import {
 import { RelatedServiceListEditorField } from 'modules/SharedComponents/RelatedServiceListEditor';
 import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/ScaleOfSignificanceListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
@@ -99,7 +98,7 @@ const transformCollectionView = () =>
 export default {
     default: {
         rek_title: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'bibliographicSection.rek_title',
                 title: 'Formatted title',
@@ -109,17 +108,15 @@ export default {
                         opacity: 0.666,
                     },
                 },
-                height: 100,
-                format: value => Immutable.Map(value),
                 validate: [validation.required],
                 required: true,
-                richEditorId: 'rek-title',
+                id: 'rek-title',
                 singleLine: true,
                 textOnlyOnPaste: false,
             },
         },
         internalNotes: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'notesSection.internalNotes',
                 title: 'Internal notes (admin)',
@@ -129,9 +126,7 @@ export default {
                         opacity: 0.666,
                     },
                 },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'ain-notes',
+                id: 'ain-notes',
             },
         },
         fez_record_search_key_isi_loc: {
@@ -243,7 +238,7 @@ export default {
             },
         },
         rek_description: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'bibliographicSection.rek_description',
                 title: 'Abstract / Description',
@@ -253,9 +248,7 @@ export default {
                         opacity: 0.666,
                     },
                 },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-description',
+                id: 'rek-description',
                 textOnlyOnPaste: false,
             },
         },
@@ -1009,7 +1002,7 @@ export default {
             },
         },
         additionalNotes: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'notesSection.additionalNotes',
                 title: 'Additional notes (public)',
@@ -1020,13 +1013,11 @@ export default {
                         fontWeight: 600,
                     },
                 },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-notes',
+                id: 'rek-notes',
             },
         },
         advisoryStatement: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'filesSection.advisoryStatement',
                 title: 'Advisory statement',
@@ -1036,9 +1027,7 @@ export default {
                         opacity: 0.666,
                     },
                 },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-advisory-statement',
+                id: 'rek-advisory-statement',
             },
         },
         sensitiveHandlingNote: {
@@ -1049,7 +1038,7 @@ export default {
             },
         },
         fez_record_search_key_transcript: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_transcript',
                 title: 'Transcript',
@@ -1059,9 +1048,7 @@ export default {
                         opacity: 0.666,
                     },
                 },
-                height: 100,
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-transcript',
+                id: 'rek-transcript',
             },
         },
         significanceAndContributionStatement: {
@@ -1343,7 +1330,7 @@ export default {
             },
         },
         fez_record_search_key_related_datasets: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_related_datasets',
                 title: 'Other related datasets',
@@ -1353,12 +1340,11 @@ export default {
                         opacity: 0.666,
                     },
                 },
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-related-datasets',
+                id: 'rek-related-datasets',
             },
         },
         fez_record_search_key_related_publications: {
-            component: RichEditorField,
+            component: RichTextEditorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_related_publications',
                 title: 'Other related publications',
@@ -1368,8 +1354,7 @@ export default {
                         opacity: 0.666,
                     },
                 },
-                format: value => Immutable.Map(value),
-                richEditorId: 'rek-related-publications',
+                id: 'rek-related-publications',
             },
         },
         fez_record_search_key_isdatasetof: {

@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -185,14 +185,10 @@ export const CommunityForm = () => {
                                             <Typography>{txt.formLabels.internalNotes.label}</Typography>
                                             <Field
                                                 control={control}
-                                                component={RichEditorField}
-                                                richEditorId="internalNotes"
+                                                component={RichTextEditorField}
+                                                id="internalNotes"
                                                 disabled={isSubmitting}
                                                 name="internalNotes"
-                                                fullWidth
-                                                multiline
-                                                rows={5}
-                                                {...txt.formLabels.internalNotes}
                                             />
                                         </Grid>
                                     </Grid>
