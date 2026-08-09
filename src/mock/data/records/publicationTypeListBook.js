@@ -247,6 +247,7 @@ const publicationTypeListBook = {
                 ],
                 "fez_sherpa_romeo": {
                     "srm_id": 69421,
+                    "srm_source_id": 33095,
                     "srm_issn": "0302-9743",
                     "srm_journal_name": "Lecture Notes in Artificial Intelligence",
                     "srm_journal_link": "https://v2.sherpa.ac.uk/id/publication/33095"

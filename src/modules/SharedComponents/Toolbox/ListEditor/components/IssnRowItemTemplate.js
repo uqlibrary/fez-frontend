@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
+import { getOpenPolicyFinderUrl } from 'config/general';
 
 export const IssnRowItemTemplate = React.memo(
     ({ actions, hasPreload, item }) => {
@@ -77,19 +78,8 @@ export const getValidUlrichs = (ulrichsData, issn) =>
  * Returns non-empty journal link for valid records, or link to legacy site if
  * colour is found.
  */
-export const getSherpaLink = sherpaEntry => {
-    if (!sherpaEntry) {
-        return '';
-    }
-    if (!!sherpaEntry.srm_journal_link) {
-        return sherpaEntry.srm_journal_link;
-    }
-    const validOldColours = ['green', 'blue', 'yellow', 'white'];
-    if (validOldColours.includes(sherpaEntry.srm_colour) && !!sherpaEntry.srm_issn) {
-        return globalLocale.global.sherpaRomeoLink.externalUrl.replace('[id]', sherpaEntry.srm_issn);
-    }
-    return '';
-};
+export const getSherpaLink = sherpaEntry =>
+    !!sherpaEntry?.srm_source_id ? getOpenPolicyFinderUrl(sherpaEntry.srm_source_id) : '';
 
 export const getUlrichsLink = ulrichsEntry =>
     (!!ulrichsEntry &&
