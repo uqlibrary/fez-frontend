@@ -233,6 +233,7 @@ const PossiblyMyRecords: React.FC = () => {
                 'error',
                 'error_outline',
                 'warning',
+                'warning_outline',
                 'info',
                 'info_outline',
                 'help',
