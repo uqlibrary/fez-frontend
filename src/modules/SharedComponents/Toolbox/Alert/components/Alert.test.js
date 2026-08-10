@@ -30,6 +30,14 @@ describe('Alert', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should render warning outline type of alert', () => {
+        const { container, getByText, getByTestId } = setup({ type: 'warning_outline' });
+        expect(getByText(/Title*/)).toBeInTheDocument();
+        expect(getByText('Message')).toBeInTheDocument();
+        expect(getByTestId('WarningAmberOutlinedIcon')).toBeInTheDocument();
+        expect(container).toMatchSnapshot();
+    });
+
     it('should render error type of alert', () => {
         const { container, getByText, getByTestId } = setup({
             title: 'This is an error title',

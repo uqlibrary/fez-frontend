@@ -10,6 +10,7 @@ import Close from '@mui/icons-material/Close';
 import ErrorOutline from '@mui/icons-material/ErrorOutline';
 import Error from '@mui/icons-material/Error';
 import Warning from '@mui/icons-material/Warning';
+import WarningAmberOutlined from '@mui/icons-material/WarningAmberOutlined';
 import Info from '@mui/icons-material/Info';
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import Help from '@mui/icons-material/Help';
@@ -125,6 +126,8 @@ export const renderIcon = type => {
             return <ErrorOutline id="error-outline-icon" className="icon" />;
         case 'warning':
             return <Warning id="warning-icon" className="icon" />;
+        case 'warning_outline':
+            return <WarningAmberOutlined id="warning-outline-icon" className="icon" />;
         case 'info':
             return <Info id="info-icon" className="icon" />;
         case 'info_outline':

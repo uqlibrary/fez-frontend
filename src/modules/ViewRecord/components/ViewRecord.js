@@ -337,7 +337,7 @@ export const ViewRecord = () => {
                                     color: '#3a383e',
                                 },
                             }}
-                            type={'info_outline'}
+                            type={'warning_outline'}
                             message={stripHtml(
                                 recordToView.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             )}
