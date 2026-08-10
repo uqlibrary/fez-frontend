@@ -17,6 +17,7 @@ import {
 import { readRichTextEditor } from '../../../lib/richTextEditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 import { sortByNumericField } from '../../../../src/helpers/general';
+import { getOpenPolicyFinderUrl } from 'config/general';
 
 test.describe('Journal Article admin edit', () => {
     const record = { ...recordList.data[0] };
@@ -120,8 +121,15 @@ test.describe('Journal Article admin edit', () => {
                 await expect(issnRow).toContainText(issnItem.rek_issn);
 
                 const sherpaLinkLocator = issnRow.locator('#sherparomeo-link');
-                await expect(sherpaLinkLocator).toContainText('SHERPA/RoMEO');
-                await expect(sherpaLinkLocator).toHaveAttribute('href', issnItem.fez_sherpa_romeo.srm_journal_link);
+                if (issnItem.fez_sherpa_romeo?.srm_source_id) {
+                    await expect(sherpaLinkLocator).toContainText('Open Policy Finder');
+                    await expect(sherpaLinkLocator).toHaveAttribute(
+                        'href',
+                        getOpenPolicyFinderUrl(issnItem.fez_sherpa_romeo.srm_source_id),
+                    );
+                } else {
+                    await expect(sherpaLinkLocator).not.toBeVisible();
+                }
 
                 const ulrichsLinkLocator = issnRow.locator('#ulrichs-link');
                 await expect(ulrichsLinkLocator).toContainText('Ulrichs');

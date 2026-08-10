@@ -2,17 +2,18 @@ import { test, expect, Page, Locator } from '../../../test';
 
 import { sherpaRomeo as sherpaMocks } from '../../../../src/mock/data/sherpaRomeo';
 import { readRichTextEditor, typeRichTextEditor } from '../../../lib/richTextEditor';
-import { ULRICHS_URL_PREFIX } from 'config/general';
+import { ULRICHS_URL_PREFIX, getOpenPolicyFinderUrl } from 'config/general';
 
 const removeJournalLock = async (page: Page) => {
     await page.getByTestId('alert-error').getByTestId('action-button').click();
 };
 
 const checkIssnLinks = async (container: Locator, issn: string) => {
-    const sherpaLink =
-        (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link || sherpaMocks[0].srm_journal_link;
+    const sherpaId =
+        (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_source_id || sherpaMocks[0].srm_source_id;
+    const sherpaLink = sherpaId ? getOpenPolicyFinderUrl(sherpaId) : sherpaId;
     await expect(container).toContainText(issn);
-    await expect(container).toContainText('SHERPA/RoMEO');
+    await expect(container).toContainText('Open Policy Finder');
     await expect(container).toContainText('Ulrichs');
     await expect(container.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
 
