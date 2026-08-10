@@ -1,34 +1,21 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> 1`] = `
-{
-  "$$typeof": Symbol(react.transitional.element),
-  "_owner": null,
-  "_store": {},
-  "key": null,
-  "props": {
-    "error": false,
-    "errorText": undefined,
-    "onChange": [MockFunction],
-  },
-  "type": [Function],
-}
+<LinkInfoListEditor
+  error={false}
+  onChange={[MockFunction]}
+/>
 `;
 
 exports[`LinkInfoListEditorField function should return <LinkInfoListEditor> with error attributes 1`] = `
-{
-  "$$typeof": Symbol(react.transitional.element),
-  "_owner": null,
-  "_store": {},
-  "key": null,
-  "props": {
-    "error": true,
-    "errorText": "test",
-    "onChange": [MockFunction],
-    "state": {
+<LinkInfoListEditor
+  error={true}
+  errorText="test"
+  onChange={[MockFunction]}
+  state={
+    {
       "error": "test",
-    },
-  },
-  "type": [Function],
-}
+    }
+  }
+/>
 `;

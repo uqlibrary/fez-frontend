@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 1`] = `
 <div>
@@ -104,7 +104,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
         <span
           class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
-           orcid.org/0000-0001-1111-1111
+          orcid.org/0000-0001-1111-1111
         </span>
       </a>
     </div>
@@ -394,7 +394,7 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
         <span
           class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
-           orcid.org/0000-0001-1111-1111
+          orcid.org/0000-0001-1111-1111
         </span>
       </a>
     </div>
@@ -590,7 +590,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
         <span
           class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
-           orcid.org/0000-0001-1111-1111
+          orcid.org/0000-0001-1111-1111
         </span>
       </a>
     </div>
@@ -691,7 +691,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         class="css-1o7ot5c"
       >
         <button
-          aria-label="Information about uploading your eSpace works to ORCID"
+          aria-label="Information about uploading your UQ eSpace works to ORCID"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="help-icon-orcid"
           data-mui-internal-clone-element="true"
@@ -729,7 +729,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         <span
           class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
         >
-           orcid.org/0000-0001-1111-1111
+          orcid.org/0000-0001-1111-1111
         </span>
       </a>
     </div>

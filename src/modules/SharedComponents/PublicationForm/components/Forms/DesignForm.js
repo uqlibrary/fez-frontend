@@ -162,19 +162,22 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                 </StandardCard>
             </Grid>
             {isNtro && (
-                <NtroFields
-                    control={control}
-                    canEdit
-                    isSubmitting={isSubmitting}
-                    showContributionStatement={isAuthorSelected}
-                    hideIsmn
-                    hideIsrc
-                    hideVolume
-                    hideIssue
-                    hideStartPage
-                    hideEndPage
-                    hideAudienceSize
-                />
+                <Grid item xs={12}>
+                    <NtroFields
+                        control={control}
+                        canEdit
+                        isSubmitting={isSubmitting}
+                        showContributionStatement={isAuthorSelected}
+                        hideIsmn
+                        hideIsrc
+                        hideVolume
+                        hideIssue
+                        hideStartPage
+                        hideEndPage
+                        hideAudienceSize
+                        legacyCompatible
+                    />
+                </Grid>
             )}
             <Grid item xs={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>

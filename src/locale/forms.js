@@ -405,8 +405,8 @@ export default {
             },
             details: {
                 title: 'Your Details',
-                firstName: 'First Name',
-                lastName: 'Last Name',
+                firstName: 'Given Name',
+                lastName: 'Family Name',
                 contactDetail: 'Contact Detail (Email or Contact Number)',
                 community: 'Community',
                 shareDetails: {

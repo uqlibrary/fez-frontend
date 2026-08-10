@@ -1,6 +1,16 @@
 import { test, expect } from '../test';
+import errors from 'locale/validationErrors';
+import {
+    assertHasText,
+    assertMissingText,
+    assertMissingValidationSummaryError,
+    assertValidationSummaryError,
+} from '../lib/helpers';
+import { addItemUsingNamesPopoverForm } from '../lib/helpers';
 
 test.describe('Add missing record', () => {
+    const validationSummarySelector = '[data-testid=alert] li';
+
     test.describe('add new', () => {
         test.beforeEach(async ({ page }) => {
             await page.goto('/records/add/new');
@@ -63,14 +73,13 @@ test.describe('Add missing record', () => {
                 .click();
 
             await expect(page.locator('#submit-work')).toBeDisabled();
-            await page.getByTestId('authors-input').fill('New Author');
-            await page.getByTestId('authors-add').click();
+            await addItemUsingNamesPopoverForm(page, 'authors', 'New', 'Author');
             await expect(page.getByTestId('authors-error')).toContainText(
                 'Please provide a list as described and select one as you',
             );
-            await page.getByText('New Author').click();
+            await page.getByText('Author, New').click();
             await expect(page.getByTestId('authors-error')).not.toBeVisible();
-            await page.getByText('New Author').click();
+            await page.getByText('Author, New').click();
             await expect(page.getByTestId('authors-error')).toContainText(
                 'Please provide a list as described and select one as you',
             );
@@ -121,8 +130,8 @@ test.describe('Add missing record', () => {
                 'Publisher',
                 'Publication date',
             ];
-            const validationErrors = page.locator('[data-testid=alert] li');
-            await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
+            const validationErrors = page.locator(validationSummarySelector);
+            await expect(page.locator(validationSummarySelector)).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
                 await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
@@ -131,16 +140,14 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-publisher-input').fill('test publisher');
             await page.getByTestId('rek-date-year-input').fill('2020');
             await expect(validationErrors).toHaveCount(2);
-            await page.getByTestId('rek-author-input').fill('New Author');
-            await page.getByTestId('rek-author-add').click();
-            await page.getByText(/New Author/).click();
+            await addItemUsingNamesPopoverForm(page, 'rek-author', 'New', 'Author');
+            await page.getByText(/Author, New/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
             await page.locator('#rek-author-list-row-delete-0').click();
             await page.locator('button').getByText(/Yes/).click();
             await expect(page.locator('#submit-work')).toBeDisabled();
             await expect(validationErrors).toHaveCount(2);
-            await page.locator('#rek-contributor-input').fill('New Editor');
-            await page.getByTestId('rek-contributor-add').click();
+            await addItemUsingNamesPopoverForm(page, 'rek-contributor', 'New', 'Editor');
             await page.getByText(/New Editor/).click();
             await expect(page.locator('#submit-work')).toBeEnabled();
         });
@@ -173,8 +180,8 @@ test.describe('Add missing record', () => {
                 'Publisher',
                 'Publication date',
             ];
-            const validationErrors = page.locator('[data-testid=alert] li');
-            await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
+            const validationErrors = page.locator(validationSummarySelector);
+            await expect(page.locator(validationSummarySelector)).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
                 await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
@@ -183,9 +190,8 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-publisher-input').fill('test publisher');
             await page.getByTestId('rek-date-year-input').fill('2020');
             await expect(validationErrors).toHaveCount(2);
-            await page.getByTestId('rek-author-input').fill('New Author');
-            await page.getByTestId('rek-author-add').click();
-            await page.getByText(/New Author/).click();
+            await addItemUsingNamesPopoverForm(page, 'rek-author', 'New', 'Author');
+            await page.getByText(/Author, New/).click();
             await page.getByTestId('rek-doi-input').fill('10.1426/12345');
             await expect(page.locator('#submit-work')).toBeEnabled();
             await page.locator('#submit-work').click();
@@ -248,8 +254,8 @@ test.describe('Add missing record', () => {
                 'Publisher',
                 'Publication date',
             ];
-            const validationErrors = page.locator('[data-testid=alert] li');
-            await expect(page.locator('[data-testid=alert] li')).toHaveCount(invalidFieldNames.length);
+            const validationErrors = page.locator(validationSummarySelector);
+            await expect(page.locator(validationSummarySelector)).toHaveCount(invalidFieldNames.length);
             for (const invalidFieldName of invalidFieldNames) {
                 await expect(validationErrors.getByText(invalidFieldName)).toBeVisible();
             }
@@ -258,10 +264,8 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-publisher-input').fill('test publisher');
             await page.getByTestId('rek-date-year-input').fill('2020');
             await expect(validationErrors).toHaveCount(2);
-            await page.getByTestId('rek-author-input').fill('First');
-            await page.getByTestId('rek-author-add').click();
-            await page.getByTestId('rek-author-input').fill('Second');
-            await page.getByTestId('rek-author-add').click();
+            await addItemUsingNamesPopoverForm(page, 'rek-author', 'Author', 'First');
+            await addItemUsingNamesPopoverForm(page, 'rek-author', 'Author', 'Second');
             // Check the movement arrows
             await expect(page.getByTestId('rek-author-list-row-0-move-down')).toBeVisible();
             await expect(page.getByTestId('rek-author-list-row-0-move-up')).not.toBeVisible();
@@ -276,12 +280,11 @@ test.describe('Add missing record', () => {
             await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second/);
             // Edit the data.
             await page.getByTestId('rek-author-list-row-0-edit').click();
-            await expect(page.getByTestId('rek-author-input')).toHaveValue('Second');
-            await page.getByTestId('rek-author-input').clear();
-            await page.getByTestId('rek-author-input').fill('Second Edited');
-            await page.getByTestId('rek-author-add').click();
+            await expect(page.getByTestId('rek-author-input')).toHaveValue('Second, Author');
+            await addItemUsingNamesPopoverForm(page, 'rek-author', 'Second (edit1)', 'Author (edit2)');
             // Change reflected in the list.
-            await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second Edited/);
+            await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Second \(edit1\)/);
+            await expect(page.getByTestId('rek-author-list-row-0-name-as-published')).toHaveText(/Author \(edit2\)/);
             // Select "First" as yourself.
             await page.getByTestId('rek-author-list-row-1-name-as-published').click();
             // is selected.
@@ -322,7 +325,11 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-date-year-input').fill('2020');
 
             // Grant information.
+            await assertMissingValidationSummaryError(page, errors.validationErrors.grants);
+            await assertMissingText(page.getByTestId('grant-list-editor-error'), errors.validationErrors.grants);
             await page.getByTestId('rek-grant-agency-input').fill('First Grant');
+            await assertValidationSummaryError(page, errors.validationErrors.grants);
+            await assertHasText(page.getByTestId('grant-list-editor-error'), errors.validationErrors.grants);
             await page.getByTestId('rek-grant-id-input').fill('12345');
             await page.getByTestId('rek-grant-type-select').click();
             await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
@@ -332,6 +339,7 @@ test.describe('Add missing record', () => {
             await page.getByTestId('rek-grant-type-select').click();
             await page.getByTestId('rek-grant-type-options').locator('li[role=option]').getByText(/NGO/).click();
             await page.getByTestId('rek-grant-add').click();
+            await assertMissingValidationSummaryError(page, errors.validationErrors.grants);
             await expect(page.getByTestId('grant-list-move-up=0')).toHaveAttribute('disabled', /.*/);
             await expect(page.getByTestId('grant-list-move-down=1')).toHaveAttribute('disabled', /.*/);
             await expect(page.getByTestId('grant-list-row-0')).toHaveText(/First Grant/);

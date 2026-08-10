@@ -4,14 +4,14 @@ import Grid from '@mui/material/Grid';
 import Popover from '@mui/material/Popover';
 import CircularProgress from '@mui/material/CircularProgress';
 import { debounce } from 'throttle-debounce';
-import { tryCatch } from 'helpers/general';
+import { silentTryCatch } from 'helpers/general';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const hidePopoverDelayInMs = 300;
 export const externalDependenciesUrl = 'https://embed.altmetric.com/assets/embed.js';
 
 const cleanUpWidgetCreationDeps = () =>
-    tryCatch(() =>
+    silentTryCatch(() =>
         document.querySelectorAll<HTMLScriptElement>('script[src*="altmetric.com/"]').forEach(script => {
             // keep imported main deps, as we want to reuse it
             if (script.src?.startsWith?.(externalDependenciesUrl)) return;
@@ -28,7 +28,8 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
 }) => {
     const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
     const [isOpen, setIsOpen] = useState<boolean>(!!anchorEl);
-    const createWidgetFunction = (window as any)?._altmetric_embed_init as (id: string) => void;
+    const createWidgetFunction = (window as Window & typeof globalThis & Record<string, unknown>)
+        ?._altmetric_embed_init as (id: string) => void;
     const isInjectingExternalDependencies = useRef<boolean>(false);
     const isCreatingWidget = useRef<boolean>(false);
     const widgetContainerId = `altmetric-widget-${id}`;
@@ -36,8 +37,8 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
     /**
      * Handles importing external deps required for creating widget on the fly.
      * There are at least two important scenarios that are handled:
-     * - deps are imported for the first time and the widget gets automatically .
-     * - deps has been previously imported and the widget initialization need to be invoked.
+     * - deps are imported for the first time, and the widget gets automatically.
+     * - deps have been previously imported, and the widget initialization needs to be invoked.
      */
     useEffect(() => {
         // initialize widget if deps have already been imported
@@ -45,7 +46,7 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
             // istanbul ignore next
             if (!createWidgetFunction || isCreatingWidget.current) return cleanUpWidgetCreationDeps; // onunmount
             isCreatingWidget.current = true;
-            // when external deps is already present, widget creation needs to run in the Macrotask queue
+            // when external deps are already present, widget creation needs to run in the Macrotask queue
             setTimeout(() => createWidgetFunction?.(`#${widgetContainerId}`));
             return cleanUpWidgetCreationDeps; // onunmount
         }
@@ -55,7 +56,7 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
         script.src = externalDependenciesUrl;
         script.async = true;
         document.body.appendChild(script);
-        // eslint-disable-next-line consistent-return
+
         return cleanUpWidgetCreationDeps; // onunmount
     }, []);
 
@@ -65,7 +66,7 @@ const AltmetricWidget: React.FC<{ id: number; link: string; title: string; child
     };
     // add a small delay before hiding the popover to allow it to remain open while the user moves the cursor over to
     // its contents
-    const scheduleHidePopover = debounce(hidePopoverDelayInMs, () => tryCatch(hidePopover));
+    const scheduleHidePopover = debounce(hidePopoverDelayInMs, () => silentTryCatch(hidePopover));
     const cancelScheduledHidePopoverCall = () => scheduleHidePopover.cancel({ upcomingOnly: true });
     const showPopover = (event: React.MouseEvent<HTMLElement>) => {
         cancelScheduledHidePopoverCall();

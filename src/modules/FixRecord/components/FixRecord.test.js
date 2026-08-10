@@ -235,8 +235,8 @@ describe('Component FixRecord', () => {
 
                 await assertFixedRecordConfirmationMessage();
                 fireEvent.click(getByTestId('cancel-dialog-box'));
-                expect(mockUseNavigate).toBeCalledTimes(1);
-                expect(mockUseNavigate).toBeCalledWith(pathConfig.records.mine);
+                expect(mockUseNavigate).toHaveBeenCalledTimes(1);
+                expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.records.mine);
             });
 
             it('should display confirmation box after successful unclaim and go to my works', async () => {
@@ -250,8 +250,8 @@ describe('Component FixRecord', () => {
 
                 await assertFixedRecordConfirmationMessage();
                 fireEvent.click(getByTestId('confirm-dialog-box'));
-                expect(mockUseNavigate).toBeCalledTimes(1);
-                expect(mockUseNavigate).toBeCalledWith(pathConfig.records.mine);
+                expect(mockUseNavigate).toHaveBeenCalledTimes(1);
+                expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.records.mine);
             });
 
             it('should display confirmation box after fix work successful submission and go to dashboard', async () => {
@@ -268,7 +268,7 @@ describe('Component FixRecord', () => {
 
                 await assertFixedRecordConfirmationMessage();
                 fireEvent.click(getByTestId('cancel-dialog-box'));
-                expect(mockUseNavigate).toBeCalledWith(pathConfig.dashboard);
+                expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.dashboard);
             });
         });
 

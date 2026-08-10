@@ -20,7 +20,7 @@ test.describe('Thesis admin edit', () => {
     });
 
     test('should load the nav bar', async ({ page }) => {
-        await adminEditCountCards(page, 7);
+        await adminEditCountCards(page, 8);
         await adminEditNoAlerts(page);
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');

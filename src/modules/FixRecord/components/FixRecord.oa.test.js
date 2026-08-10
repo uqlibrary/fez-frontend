@@ -202,7 +202,7 @@ describe('Component FixRecord for non-compliant Open Access', () => {
 
                 await assertFixedRecordConfirmationMessage();
                 fireEvent.click(getByTestId('cancel-dialog-box'));
-                expect(mockUseNavigate).toBeCalledWith(pathConfig.dashboard);
+                expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.dashboard);
             });
         });
 

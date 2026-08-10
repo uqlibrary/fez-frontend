@@ -110,7 +110,7 @@ describe('NotFound page component', () => {
             getByText('If you’re sure the page should be at this address, email us at webmaster@library.uq.edu.au.'),
         ).toBeInTheDocument();
 
-        expect(getFavouriteSearchAlias).not.toBeCalled();
+        expect(getFavouriteSearchAlias).not.toHaveBeenCalled();
     });
 
     it('should redirect to records search page if alias found', async () => {

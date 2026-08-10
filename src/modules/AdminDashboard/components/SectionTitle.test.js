@@ -23,7 +23,7 @@ describe('SectionTitle', () => {
         );
         const parent = getByTestId('test-section');
         expect(parent).toBeInTheDocument();
-        expect(parent).toHaveStyle('background-color: red');
+        expect(parent).toHaveStyle('background-color: rgb(255, 0, 0)');
         expect(parent).toHaveStyle('font-weight: 400');
     });
 

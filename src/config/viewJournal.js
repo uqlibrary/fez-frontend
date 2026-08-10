@@ -1,8 +1,8 @@
 import React from 'react';
 import globalLocale from 'locale/global';
-import { getDoajUrl, prefixByUrlResolver } from 'config/general';
+import { getDoajUrl, getOpenPolicyFinderUrl, prefixByUrlResolver } from 'config/general';
 import { default as viewJournalLocale } from 'locale/viewJournal';
-import { getIndicator, types } from 'modules/SharedComponents/JournalsList/components/partials/utils';
+import { getIndicator, getMaxEmbargo, types } from 'modules/SharedComponents/JournalsList/components/partials/utils';
 import componentLocale from 'locale/components';
 import { pathConfig } from './pathConfig';
 
@@ -236,7 +236,16 @@ export const viewJournalConfig = {
                             return viewJournalLocale.viewJournal.readAndPublish.status.capped;
                         }
                     },
-                    template: 'DefaultTemplate',
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: data =>
+                            (data === viewJournalLocale.viewJournal.readAndPublish.status.discounted ||
+                                data === viewJournalLocale.viewJournal.readAndPublish.status.capped) &&
+                            viewJournalLocale.viewJournal.readAndPublish.status.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.status.ariaLabel,
+                        text: data => data,
+                        ariaLabel: () => viewJournalLocale.viewJournal.readAndPublish.status.ariaLabel,
+                    },
                 },
             ],
             [
@@ -281,20 +290,42 @@ export const viewJournalConfig = {
             ],
             [
                 {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.publisher.heading,
+                    fieldId: 'jnl-read-and-publish-publisher',
+                    getData: journalDetails => {
+                        return (
+                            journalDetails.fez_journal_read_and_publish &&
+                            !['y', 'approaching', 'nodeal'].includes(
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped.toLowerCase(),
+                            ) &&
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher
+                        );
+                    },
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () => viewJournalLocale.viewJournal.readAndPublish.publisher.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.publisher.ariaLabel,
+                        text: publisher => publisher,
+                        ariaLabel: () => viewJournalLocale.viewJournal.readAndPublish.publisher.ariaLabel,
+                    },
+                },
+            ],
+            [
+                {
                     heading: 'Open access with Accepted manuscript',
                     fieldId: 'srm-journal-link',
                     getData: journalDetails =>
                         !journalDetails.fez_journal_doaj &&
                         journalDetails.fez_journal_issn &&
                         Array.isArray(journalDetails.fez_journal_issn) &&
-                        journalDetails.fez_journal_issn.find(issn => issn?.fez_sherpa_romeo?.srm_max_embargo_amount),
+                        getMaxEmbargo(journalDetails.fez_journal_issn),
                     template: 'LinkTemplate',
                     templateProps: {
-                        href: item => item.fez_sherpa_romeo.srm_journal_link,
+                        href: item => getOpenPolicyFinderUrl(item.srm_source_id),
                         title: "Open journal's open access policy in a new tab",
                         ariaLabel: item =>
-                            `${item.fez_sherpa_romeo.srm_max_embargo_amount} months embargo - Open journal's open access policy details in a new tab`,
-                        text: item => `${item.fez_sherpa_romeo.srm_max_embargo_amount} months`,
+                            `${item.srm_max_embargo_amount} ${item.srm_max_embargo_units} embargo - Open journal's open access policy details in a new tab`,
+                        text: item => `${item.srm_max_embargo_amount} ${item.srm_max_embargo_units}`,
                     },
                 },
             ],

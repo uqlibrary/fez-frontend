@@ -2,16 +2,11 @@ import { useFormContext } from 'react-hook-form';
 import React from 'react';
 
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
-import { useWatch } from 'react-hook-form';
 
 import Grid from '@mui/material/GridLegacy';
-import OverriddenIcon from '@mui/icons-material/Lock';
-import NotOverriddenIcon from '@mui/icons-material/LockOpenOutlined';
-import Tooltip from '@mui/material/Tooltip';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
 
 import AuthorFieldData from './AuthorFieldData';
+import DataSwitch from './DataSwitch';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { default as locale } from 'locale/components';
@@ -20,23 +15,10 @@ import { validation } from 'config';
 export const UsernameIdColumnData = () => {
     const {
         editRow: {
-            fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, refNum, isUsernameOverridden },
+            fields: { orgStaffId, orgStudentId, orgUsername, studentUsername, isRhdStudent, refNum },
         },
     } = locale.components.manageAuthors;
-
-    const { control, setValue, getValues } = useFormContext();
-
-    const [autOrgUsername, setAutOrgUsername] = React.useState(getValues('aut_org_username'));
-    const [watchedField] = useWatch({ control, name: ['aut_org_username'] });
-    React.useEffect(() => {
-        setAutOrgUsername(watchedField);
-    }, [watchedField]);
-
-    const [autNameOverridden, setAutNameOverridden] = React.useState(getValues('aut_name_overridden'));
-    const handleNameOverridden = () => {
-        setAutNameOverridden(Number(!autNameOverridden));
-        setValue('aut_name_overridden', Number(!autNameOverridden), { shouldDirty: true });
-    };
+    const { control } = useFormContext();
 
     return (
         <StandardCard subCard title="Username & IDs" smallTitle customTitleBgColor="#F7F7F7">
@@ -56,41 +38,6 @@ export const UsernameIdColumnData = () => {
                     authorFieldDataId="aut-org-username"
                     name="aut_org_username"
                     validate={[validation.spacelessMaxLength20Validator]}
-                    InputProps={{
-                        ...((!!autOrgUsername && {
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <Tooltip title={isUsernameOverridden.label}>
-                                        <span>
-                                            <IconButton
-                                                aria-label={isUsernameOverridden.label}
-                                                onClick={handleNameOverridden}
-                                                id="aut-name-overridden"
-                                                data-analyticsid="aut-name-overridden"
-                                                data-testid="aut-name-overridden"
-                                                size="large"
-                                            >
-                                                {autNameOverridden ? (
-                                                    <OverriddenIcon
-                                                        id="name-is-overridden"
-                                                        data-testid="name-is-overridden"
-                                                        color="primary"
-                                                    />
-                                                ) : (
-                                                    <NotOverriddenIcon
-                                                        id="name-is-not-overridden"
-                                                        data-testid="name-is-not-overridden"
-                                                        color="secondary"
-                                                    />
-                                                )}
-                                            </IconButton>
-                                        </span>
-                                    </Tooltip>
-                                </InputAdornment>
-                            ),
-                        }) ||
-                            {}),
-                    }}
                 />
                 <Field
                     {...orgStudentId}
@@ -107,6 +54,13 @@ export const UsernameIdColumnData = () => {
                     authorFieldDataId="aut-student-username"
                     name="aut_student_username"
                     validate={[validation.spacelessMaxLength30Validator]}
+                />
+                <Field
+                    {...isRhdStudent}
+                    control={control}
+                    component={DataSwitch}
+                    data-testid="aut-rhd-student"
+                    name="aut_rhd_cohort"
                 />
                 <Field
                     {...refNum}

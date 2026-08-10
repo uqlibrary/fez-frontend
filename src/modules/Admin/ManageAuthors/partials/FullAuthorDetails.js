@@ -11,8 +11,6 @@ import { useWatch } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/GridLegacy';
-import TableRow from '@mui/material/TableRow';
-import TableCell from '@mui/material/TableCell';
 import Box from '@mui/material/Box';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
@@ -176,91 +174,83 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
     };
 
     return (
-        <Box
-            sx={{
-                display: 'table',
-            }}
-        >
-            <TableRow onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row">
-                <TableCell colSpan={4} sx={{ p: 0 }}>
-                    <ScrollToSection scrollToSection>
-                        <FormProvider {...validatedForm}>
-                            <form onSubmit={handleSubmit(onSubmit)}>
-                                <Box sx={{ ...classes.background, paddingTop: 2, paddingRight: 2, paddingLeft: 2 }}>
-                                    <Grid container spacing={2} sx={{ position: 'relative' }}>
-                                        <Grid item xs={12}>
-                                            <NameData />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <UsernameIdData />
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <ResearcherIdentifierData />
-                                        </Grid>
-                                        <Grid item xs={12} sx={{ paddingBottom: 2 }}>
-                                            <NotesData />
-                                        </Grid>
-                                    </Grid>
+        <Box onKeyDown={handleKeyPress} id="author-edit-row" data-testid="author-edit-row" sx={{ p: 0 }}>
+            <ScrollToSection scrollToSection>
+                <FormProvider {...validatedForm}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Box sx={{ ...classes.background, paddingTop: 2, paddingRight: 2, paddingLeft: 2 }}>
+                            <Grid container spacing={2} sx={{ position: 'relative' }}>
+                                <Grid item xs={12}>
+                                    <NameData />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <UsernameIdData />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <ResearcherIdentifierData />
+                                </Grid>
+                                <Grid item xs={12} sx={{ paddingBottom: 2 }}>
+                                    <NotesData />
+                                </Grid>
+                            </Grid>
+                            <Grid
+                                container
+                                spacing={2}
+                                sx={{
+                                    ...classes.background,
+                                    position: 'sticky',
+                                    padding: 0,
+                                    bottom: 0,
+                                }}
+                            >
+                                <Grid item xs={12}>
                                     <Grid
                                         container
+                                        direction="row-reverse"
+                                        justifyContent="flex-start"
+                                        alignItems="center"
                                         spacing={2}
-                                        sx={{
-                                            ...classes.background,
-                                            position: 'sticky',
-                                            padding: 0,
-                                            bottom: 0,
-                                        }}
+                                        paddingBottom={2}
                                     >
-                                        <Grid item xs={12}>
-                                            <Grid
-                                                container
-                                                direction="row-reverse"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-                                                paddingBottom={2}
+                                        <Grid item>
+                                            <Button
+                                                id={`authors-${mode}-this-author-save`}
+                                                data-analyticsid={`authors-${mode}-this-author-save`}
+                                                data-testid={`authors-${mode}-this-author-save`}
+                                                disabled={disableSubmit || submitting || disabled}
+                                                variant="contained"
+                                                color="primary"
+                                                type="submit"
                                             >
-                                                <Grid item>
-                                                    <Button
-                                                        id={`authors-${mode}-this-author-save`}
-                                                        data-analyticsid={`authors-${mode}-this-author-save`}
-                                                        data-testid={`authors-${mode}-this-author-save`}
-                                                        disabled={disableSubmit || submitting || disabled}
-                                                        variant="contained"
-                                                        color="primary"
-                                                        type="submit"
-                                                    >
-                                                        {mode === 'update' ? editButton : addButton}
-                                                    </Button>
-                                                </Grid>
-                                                <Grid item>
-                                                    <Button
-                                                        id={`authors-${mode}-this-author-cancel`}
-                                                        data-analyticsid={`authors-${mode}-this-author-cancel`}
-                                                        data-testid={`authors-${mode}-this-author-cancel`}
-                                                        disabled={disabled}
-                                                        variant="outlined"
-                                                        color="secondary"
-                                                        onClick={handleCancel}
-                                                    >
-                                                        {cancelButton}
-                                                    </Button>
-                                                </Grid>
-                                            </Grid>
-
-                                            {(!!apiError || !!Object.keys(errors).length) && (
-                                                <Grid xs={12} paddingBottom={2}>
-                                                    <Alert alertId="api_error_alert" {...alertProps} />
-                                                </Grid>
-                                            )}
+                                                {mode === 'update' ? editButton : addButton}
+                                            </Button>
+                                        </Grid>
+                                        <Grid item>
+                                            <Button
+                                                id={`authors-${mode}-this-author-cancel`}
+                                                data-analyticsid={`authors-${mode}-this-author-cancel`}
+                                                data-testid={`authors-${mode}-this-author-cancel`}
+                                                disabled={disabled}
+                                                variant="outlined"
+                                                color="secondary"
+                                                onClick={handleCancel}
+                                            >
+                                                {cancelButton}
+                                            </Button>
                                         </Grid>
                                     </Grid>
-                                </Box>
-                            </form>
-                        </FormProvider>
-                    </ScrollToSection>
-                </TableCell>
-            </TableRow>
+
+                                    {(!!apiError || !!Object.keys(errors).length) && (
+                                        <Grid xs={12} paddingBottom={2}>
+                                            <Alert alertId="api_error_alert" {...alertProps} />
+                                        </Grid>
+                                    )}
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </form>
+                </FormProvider>
+            </ScrollToSection>
         </Box>
     );
 };

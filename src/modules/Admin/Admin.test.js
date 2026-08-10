@@ -189,6 +189,18 @@ describe('form submission', () => {
                             rek_author_id_lookup: 'Abu-Aysha, Ahmad',
                         },
                     ],
+                    fez_record_search_key_related_service: [
+                        {
+                            rek_related_service: 'ror123',
+                            rek_related_service_order: 1,
+                        },
+                    ],
+                    fez_record_search_key_related_service_description: [
+                        {
+                            rek_related_service_description: 'ror123 description',
+                            rek_related_service_description_order: 1,
+                        },
+                    ],
                 };
 
                 const { getByTestId, findByTestId } = setup(

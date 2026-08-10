@@ -185,7 +185,7 @@ describe('SearchComponent', () => {
         const testFn = jest.fn();
         const { getByRole } = setup();
         fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
-        expect(testFn).not.toBeCalled();
+        expect(testFn).not.toHaveBeenCalled();
     });
 
     it('should handle advanced search', () => {

@@ -1,7 +1,11 @@
 import { APP_URL } from 'config/general';
 import React from 'react';
+import { ESPACE_TEAM_CONTACT_US_URL } from '../config/general';
 
-const caulLink = 'https://caul.libguides.com/read-and-publish/reports';
+const caulHomeLink = 'https://caul.libguides.com/read-and-publish/home';
+const caulReportLink = 'https://caul.libguides.com/read-and-publish/wiley';
+const publisherAgreementLink =
+    'https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements';
 
 export default {
     viewJournal: {
@@ -66,11 +70,7 @@ export default {
 
                         <p>
                             UQ Library may have{' '}
-                            <a
-                                href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access-publishing-agreements"
-                                target="_blank"
-                                rel="noopener"
-                            >
+                            <a href={publisherAgreementLink} target="_blank" rel="noopener">
                                 an agreement
                             </a>{' '}
                             with the publisher that covers the APC or provides a discount on the APC.
@@ -189,19 +189,26 @@ export default {
                 exceeded: 'No (exhausted)',
                 discounted: 'Discount',
                 capped: 'Article Processing Charge covered',
+                externalUrl: publisherAgreementLink,
+                ariaLabel: 'Open UQ open access publishing agreement page in a new tab',
             },
             caulLink: {
                 heading: 'Limited amount available',
                 ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
                 linkText: 'Check current status',
-                externalUrl: caulLink,
+                externalUrl: caulReportLink,
+            },
+            publisher: {
+                heading: 'Publisher',
+                ariaLabel: 'Click to view read and publish agreement information',
+                externalUrl: caulHomeLink,
             },
             alert: {
                 title: 'Read and Publish Agreement',
                 approaching: (
                     <p>
                         The available cap for this title is projected to run out shortly. Please{' '}
-                        <a href={caulLink} target="_blank" rel="noopener">
+                        <a href={caulReportLink} target="_blank" rel="noopener">
                             check the current status
                         </a>
                         .
@@ -235,8 +242,8 @@ export default {
                     <p>The journal you are attempting to access does not appear in our system.</p>
                     <p>
                         If you believe this is in error, please{' '}
-                        <a href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us">
-                            contact the eSpace team.
+                        <a href={ESPACE_TEAM_CONTACT_US_URL} target="_blank">
+                            contact the UQ eSpace team.
                         </a>
                     </p>
                 </div>

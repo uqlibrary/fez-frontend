@@ -41,7 +41,7 @@ const VisualisationOpenAccess = ({
             <GaugeContainer
                 startAngle={-110}
                 endAngle={110}
-                height={160}
+                height={180}
                 value={chartVal}
                 sx={{
                     '& [class$="MuiGauge-referenceArc"]': {

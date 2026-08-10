@@ -118,7 +118,7 @@ export const setup = () => {
             }
             return [404, {}];
         })
-        .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: user }).apiUrl)
+        .onGet(new RegExp(escapeRegExp(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: '.*' }).apiUrl)))
         .reply(200, mockData.hindexResponse)
         .onGet(routes.BATCH_IMPORT_DIRECTORIES_API().apiUrl)
         .reply(200, mockData.batchImportDirectories)
@@ -139,6 +139,10 @@ export const setup = () => {
         .reply(config => {
             if (config.params?.all === 'should return 401') {
                 return [401, { data: [] }];
+            }
+            // AUTHOR_STATS_BY_AUTHOR_ID_API
+            else if (config.params['key[rek_author_id][value]'] && !!config.params['filters[stats_only]']) {
+                return [200, mockData.currentAuthorStats];
             }
             // AUTHOR_PUBLICATIONS_STATS_ONLY_API
             else if (config.params.rule === 'incomplete') {
@@ -193,6 +197,8 @@ export const setup = () => {
                 return [200, mockData.collectionSearchList];
             } else if (config.params.key && config.params.key.rek_object_type === 1) {
                 return [200, mockData.communitySearchList];
+            } else if (config.params.key && config.params.key.rek_author_id) {
+                return [200, mockData.internalTitleSearchList];
             } else if (
                 config.params.id ||
                 config.params.doi ||
@@ -701,6 +707,8 @@ export const setup = () => {
         .reply(200, { data: [...mockData.adminDashboardQuickLinks] })
         .onGet(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
         .reply(200, { data: [...mockData.adminDashboardSystemAlerts] })
+        .onPatch(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_BATCH_ASSIGN_API().apiUrl)))
+        .reply(200, { data: { updated: 1, not_found: 0 } })
         .onGet(
             new RegExp(
                 escapeRegExp(routes.ADMIN_DASHBOARD_EXPORT_REPORT_API({ report_type: 5, date_from: '.*' }).apiUrl),
@@ -960,9 +968,23 @@ export const setup = () => {
         // .reply(422, { message: 'failed to save quicklink update' })
         .reply(201, {})
 
-        .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)))
-        .reply(201, {})
+        // test unresolve
+        .onPut(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: 1 }).apiUrl))
+        .reply(200, {
+            data: {
+                ...mockData.adminDashboardReportSystemAlertsData[0],
+                resolved_by_full_name: null,
+                sat_resolved_date: null,
+            },
+        })
 
+        .onPut(new RegExp(escapeRegExp(routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API({ id: '*' }).apiUrl)))
+        .reply(config => {
+            const id = Number(config.url.split('/').pop());
+            const payload = JSON.parse(config.data);
+            const alert = mockData.adminDashboardSystemAlerts.find(a => a.sat_id === id);
+            return [200, { data: { ...Object.assign(alert, payload) } }];
+        })
         .onAny()
         .reply(config => {
             console.log('url not found...', config);

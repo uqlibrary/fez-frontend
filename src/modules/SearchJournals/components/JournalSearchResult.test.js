@@ -186,7 +186,7 @@ describe('Search Journals Results component', () => {
         fireEvent.click(queryByTestId('journal-comparison-button'));
 
         // compare button should update the URL path
-        expect(navigateFn).toBeCalledWith(pathConfig.journals.compare, expect.anything());
+        expect(navigateFn).toHaveBeenCalledWith(pathConfig.journals.compare, expect.anything());
     });
 
     it('should show dropdown values as specified in the locale configuration', () => {

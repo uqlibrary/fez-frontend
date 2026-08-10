@@ -1,9 +1,21 @@
 import React from 'react';
 import ManageAuthorsList from './ManageAuthorsList';
-import { render, userEvent, fireEvent, waitFor, WithReduxStore } from 'test-utils';
+import {
+    render,
+    userEvent,
+    fireEvent,
+    waitFor,
+    WithReduxStore,
+    waitToBeEnabled,
+    waitToBeDisabled,
+    assertNotInTheDocument,
+    waitForText,
+    api,
+} from 'test-utils';
 import * as repository from 'repositories';
 
 import * as ManageAuthorsActions from 'actions/manageAuthors';
+import { screen, within } from '@testing-library/react';
 
 // import userEvent from '@testing-library/user-event';
 
@@ -26,13 +38,10 @@ describe('ManageAuthorsList', () => {
     beforeEach(() => {
         const scrollIntoViewMock = jest.fn();
         window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
-
-        // jest.spyOn(console, 'error').mockImplementationOnce(jest.fn());
-        mockApi.reset();
     });
 
     afterEach(() => {
-        mockApi.reset();
+        api.reset();
         jest.clearAllMocks();
     });
 
@@ -62,6 +71,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -119,6 +129,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -176,6 +187,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -235,6 +247,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -392,6 +405,7 @@ describe('ManageAuthorsList', () => {
         const { getByTestId, queryAllByText, findByTestId } = setup();
 
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
+        await waitToBeEnabled('authors-add-new-author');
 
         await userEvent.click(getByTestId('authors-add-new-author'));
 
@@ -484,5 +498,67 @@ describe('ManageAuthorsList', () => {
         await userEvent.click(getByTestId('authors-update-this-author-save'));
 
         await waitFor(() => expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Vishal, Asai'));
+    });
+
+    describe('author merging', () => {
+        it('should disable/enable `merge button` according to `merge eligibility` of selected authors', async () => {
+            const selectAuthor = async name => {
+                const row = screen.getByDisplayValue(name).closest('tr');
+                await userEvent.click(within(row).getByRole('checkbox'));
+            };
+
+            api.mock.authors.search({
+                data: [
+                    {
+                        aut_id: 1,
+                        aut_org_username: 'staff1',
+                        aut_display_name: 'staff 1',
+                    },
+                    {
+                        aut_id: 2,
+                        aut_org_username: 'staff2',
+                        aut_display_name: 'staff 2',
+                    },
+                    {
+                        aut_id: 3,
+                        aut_student_username: 's001',
+                        aut_display_name: 'student 1',
+                    },
+                    {
+                        aut_id: 4,
+                        aut_student_username: 's002',
+                        aut_display_name: 'student 2',
+                    },
+                ],
+            });
+
+            const { getByText } = setup();
+            await waitForText('staff 1');
+
+            // should not allow staff authors to be merged
+            assertNotInTheDocument('authors-merge-button');
+            await selectAuthor('staff 1');
+            await waitToBeDisabled('authors-merge-button');
+            await selectAuthor('staff 2');
+            await waitToBeDisabled('authors-merge-button');
+
+            await userEvent.click(getByText(/clear selection/i));
+
+            // should not allow student authors to be merged
+            assertNotInTheDocument('authors-merge-button');
+            await selectAuthor('student 1');
+            await waitToBeDisabled('authors-merge-button');
+            await selectAuthor('student 2');
+            await waitToBeDisabled('authors-merge-button');
+
+            await userEvent.click(getByText(/clear selection/i));
+
+            // should allow student author to be merged with staff author
+            assertNotInTheDocument('authors-merge-button');
+            await selectAuthor('student 1');
+            await waitToBeDisabled('authors-merge-button');
+            await selectAuthor('staff 1');
+            await waitToBeEnabled('authors-merge-button');
+        });
     });
 });

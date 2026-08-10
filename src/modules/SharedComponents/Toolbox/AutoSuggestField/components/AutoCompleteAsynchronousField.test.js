@@ -89,7 +89,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: 'cherry' } });
 
         fireEvent.click(getByTitle('Clear'));
-        expect(onClearFn).toBeCalled();
+        expect(onClearFn).toHaveBeenCalled();
     });
 
     it('should not clear the input value on deleting input value by keyboard', () => {
@@ -104,7 +104,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
         fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
 
-        expect(onClearFn).not.toBeCalled();
+        expect(onClearFn).not.toHaveBeenCalled();
     });
 
     it('should render given option template for options', async () => {
@@ -150,7 +150,7 @@ describe('AutoCompleteAsynchronousField component', () => {
         fireEvent.click(getByTestId('autocomplete-asynchronous-field-input'));
         fireEvent.change(getByTestId('autocomplete-asynchronous-field-input'), { target: { value: '' } });
 
-        expect(onClearFn).toBeCalled();
+        expect(onClearFn).toHaveBeenCalled();
     });
 
     it('should display supplemental node when provided', () => {

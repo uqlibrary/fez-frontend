@@ -326,8 +326,8 @@ describe('Component ClaimRecord ', () => {
 
             fireEvent.click(getByText('Cancel this claim'));
 
-            expect(mockClearNewRecord).toBeCalled();
-            expect(mockUseNavigate).toBeCalledWith(-1);
+            expect(mockClearNewRecord).toHaveBeenCalled();
+            expect(mockUseNavigate).toHaveBeenCalledWith(-1);
         });
 
         it('should redirect if no author or record set', () => {
@@ -445,11 +445,11 @@ describe('Component ClaimRecord ', () => {
                 await submitForm();
 
                 fireEvent.click(getByTestId('confirm-dialog-box'));
-                expect(mockUseNavigate).toBeCalledWith('/records/mine');
+                expect(mockUseNavigate).toHaveBeenCalledWith('/records/mine');
                 fireEvent.click(getByTestId('cancel-dialog-box'));
-                expect(mockUseNavigate).toBeCalledWith('/test');
-                expect(mockClearNewRecord).toBeCalled();
-                expect(mockClearRedirectPath).toBeCalled();
+                expect(mockUseNavigate).toHaveBeenCalledWith('/test');
+                expect(mockClearNewRecord).toHaveBeenCalled();
+                expect(mockClearRedirectPath).toHaveBeenCalled();
             });
 
             it('should display confirmation box after successful submission and go back to previous page', async () => {
@@ -460,7 +460,7 @@ describe('Component ClaimRecord ', () => {
                 await submitForm();
 
                 fireEvent.click(getByTestId('cancel-dialog-box'));
-                expect(mockUseNavigate).toBeCalledWith(-1);
+                expect(mockUseNavigate).toHaveBeenCalledWith(-1);
             });
 
             it('should render the confirm dialog with an alert due to a file upload error and navigate to fix record page', async () => {
@@ -478,7 +478,7 @@ describe('Component ClaimRecord ', () => {
                 );
                 // navigate to fix page
                 fireEvent.click(getByTestId('alternate-dialog-box'));
-                expect(mockUseNavigate).toBeCalledWith('/records/UQ:676287/fix');
+                expect(mockUseNavigate).toHaveBeenCalledWith('/records/UQ:676287/fix');
             });
         });
 

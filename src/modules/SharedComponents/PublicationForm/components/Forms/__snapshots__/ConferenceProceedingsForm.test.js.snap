@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ConferenceProceedingsForm component 1`] = `
 <div>
@@ -500,8 +500,9 @@ exports[`ConferenceProceedingsForm component 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="editors"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -532,7 +533,9 @@ exports[`ConferenceProceedingsForm component 1`] = `
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
                           required=""
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />
@@ -1415,8 +1418,9 @@ exports[`ConferenceProceedingsForm component with all fields disabled 1`] = `
                     class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1mngrrf-MuiFormControl-root-MuiTextField-root"
                       data-testid="editors"
+                      style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
                         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
@@ -1448,7 +1452,9 @@ exports[`ConferenceProceedingsForm component with all fields disabled 1`] = `
                           id="editors-input"
                           label="Editor's name as published"
                           placeholder="e.g. "John Smith""
+                          readonly=""
                           required=""
+                          style="cursor: pointer; padding-left: 4px;"
                           type="text"
                           value=""
                         />

@@ -14,7 +14,7 @@ import * as actions from 'actions';
 
 import { JournalContext } from 'context';
 import Section from './Section';
-import { parseHtmlToJSX, tryCatch } from 'helpers/general';
+import { parseHtmlToJSX, silentTryCatch } from 'helpers/general';
 
 import { userIsAdmin } from 'hooks';
 import { default as globalLocale } from 'locale/global';
@@ -47,7 +47,7 @@ const isEmbargoDateMoreThanOnYearAway = data => {
     if (!['days', 'weeks', 'months', 'years'].includes(units) || !Number.isFinite(amount)) return false;
 
     const now = moment().utc();
-    const embargoDate = tryCatch(() => now.clone().add(amount, units), now.clone());
+    const embargoDate = silentTryCatch(() => now.clone().add(amount, units), now.clone());
     return embargoDate.isSameOrAfter(now.add(12, 'months'));
 };
 
@@ -57,7 +57,7 @@ const isEmbargoDateMoreThanOnYearAway = data => {
  * @return {boolean}
  */
 const shouldShowPublishAsOAButton = (location, data) =>
-    tryCatch(() => {
+    silentTryCatch(() => {
         const qsParams = Object.fromEntries(new URLSearchParams(location?.search));
         if (qsParams?.fromSearch !== 'true') return false;
 
@@ -70,7 +70,7 @@ const shouldShowPublishAsOAButton = (location, data) =>
     }, false);
 
 /**
- * Note: lowest is greatest
+ * Note: lower is greater
  * @param data
  * @return {number}
  */
@@ -78,7 +78,7 @@ const extractHighestQuartile = (data, prop) =>
     Math.min(
         ...(data?.map?.(item =>
             parseInt(String(item[prop]).toLowerCase().replace('q', ''), 10),
-        ) || /* istanbul ignore next */ [0]),
+        ) || /* istanbul ignore next */ [5]),
     );
 
 /**
@@ -113,7 +113,7 @@ export const publishAsOASearchFacetDefaults = {
  * @return {object}
  */
 const buildPublishAsOASearch = data =>
-    tryCatch(() => {
+    silentTryCatch(() => {
         const scopusData = data?.fez_journal_cite_score?.fez_journal_cite_score_asjc_code;
         const wosData = data?.fez_journal_jcr_scie?.fez_journal_jcr_scie_category;
         const facets = {
@@ -124,9 +124,8 @@ const buildPublishAsOASearch = data =>
             extractHighestQuartile(scopusData, 'jnl_cite_score_asjc_code_quartile'),
             extractHighestQuartile(wosData, 'jnl_jcr_scie_category_quartile'),
         );
-        /* istanbul ignore else */
-        if (highestQuartile > 0) {
-            facets['Highest quartile'] = [highestQuartile];
+        if (highestQuartile < 5) {
+            facets['Highest quartile'] = [1, 2, 3, 4].slice(0, highestQuartile);
         }
 
         const scopusSubjects = extractSubjects(

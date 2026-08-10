@@ -77,7 +77,11 @@ test.describe('My Open Access', () => {
                     hasText: oaFormLocale.cancelWorkflowConfirmation.confirmationTitle,
                 }),
             ).toBeVisible();
-            await page.getByText(oaFormLocale.cancelWorkflowConfirmation.confirmButtonLabel).click();
+            await page
+                .getByRole('dialog')
+                .filter({ hasText: oaFormLocale.cancelWorkflowConfirmation.confirmationTitle })
+                .getByRole('button', { name: oaFormLocale.cancelWorkflowConfirmation.confirmButtonLabel })
+                .click();
             await expect(page).toHaveURL('/records/my-open-access');
         });
 
@@ -117,7 +121,7 @@ test.describe('My Open Access', () => {
             await page
                 .locator('.StandardCard', { hasText: oaFormLocale.comments.title })
                 .locator('input')
-                .fill('https://');
+                .fill('https://a.b');
             await expect(page.locator('button', { hasText: oaPagesLocale.submit })).not.toBeDisabled();
         });
 

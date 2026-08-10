@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
-import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate, isUrl } from '../config';
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate } from '../config';
 
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
@@ -20,7 +20,8 @@ import IconButton from '@mui/material/IconButton';
 import Copy from '@mui/icons-material/FileCopyOutlined';
 import Tooltip from '@mui/material/Tooltip';
 import { FEZ_USER_SYSTEM_ID, FEZ_USER_SYSTEM_LABEL } from '../../../config/general';
-
+import { useAdminUserOptions } from '../hooks';
+import { isURL } from '../../../helpers/general';
 const rootId = 'system-alert-detail';
 const StyledDivider = styled(Divider)(({ theme }) => ({
     marginTop: theme.spacing(2),
@@ -87,37 +88,7 @@ const renderCreatorsUsername = row => {
 };
 
 const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpdate }) => {
-    const config = useSelector(
-        state => state.get('adminDashboardConfigReducer')?.adminDashboardConfigData || /* istanbul ignore next */ {},
-    );
-    const users = React.useMemo(() => config.admin_users ?? /* istanbul ignore next */ [], [config.admin_users]);
-
-    const getAdminUserList = () => {
-        const unassignedOptionLabel = locale.alertStatus.UNASSIGNED;
-        const currentUser = config.logged_in_user || /* istanbul ignore next */ {};
-        const defaultOption = { id: 0, preferred_name: unassignedOptionLabel };
-        // Sort user's names alphabetically
-        /* istanbul ignore next */
-        users.sort((a, b) => {
-            const nameA = a.preferred_name.toUpperCase(); // ignore upper and lowercase
-            const nameB = b.preferred_name.toUpperCase(); // ignore upper and lowercase
-            if (nameA < nameB) {
-                return -1;
-            }
-            if (nameA > nameB) {
-                return 1;
-            }
-
-            return 0;
-        });
-        const activeUser = users.find(user => user.id === currentUser?.id);
-        const updatedUsers = users.filter(user => user.id !== activeUser?.id);
-
-        // e2e tests can result in the activeUser object being unpopulated,
-        // so always filter out any element in the array that is undefined.
-        return [defaultOption, activeUser, ...updatedUsers].filter(item => !!item);
-    };
-    const [adminUsers] = React.useState(getAdminUserList);
+    const adminUsers = useAdminUserOptions(locale.alertStatus.UNASSIGNED);
 
     const txt = locale.drawer;
     const { adminDashboardSystemAlertsUpdating } = useSelector(state => state.get('adminDashboardSystemAlertsReducer'));
@@ -170,7 +141,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     >
                         {row.sat_title}
                     </Typography>
-                    {isUrl(row.sat_link) && (
+                    {isURL(row.sat_link) && (
                         <ExternalLink id={rootId} href={row.sat_link}>
                             {row.sat_link}
                         </ExternalLink>

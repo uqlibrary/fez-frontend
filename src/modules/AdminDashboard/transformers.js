@@ -7,9 +7,16 @@ import {
     SYSTEM_ALERT_ACTION,
     REPORT_TYPE,
 } from './config';
-import { filterObjectProps, filterObjectPropsByKey, getPlatformUrl, trimTrailingSlash } from './utils';
+import {
+    buildChartItem,
+    filterObjectProps,
+    filterObjectPropsByKey,
+    getPlatformUrl,
+    getTotalDocCount,
+    trimTrailingSlash,
+} from './utils';
 
-import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
+import { IS_PRODUCTION, OA_STATUS_CATEGORIES, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 export const transformSystemAlertRequest = ({ user, action, row }) => {
     const keys =
@@ -92,6 +99,10 @@ export const transformDisplayReportRequest = data => {
         ...(data.report.value === 'systemalertlog' && !!data.filters?.record_id
             ? { record_id: data.filters.record_id }
             : {}),
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.requestor_id
+            ? { requestor_id: data.filters.requestor_id }
+            : {}),
+        ...(data.report.value === 'systemalertlog' && !!data.filters?.pid ? { pid: data.filters.pid } : {}),
     };
 
     return request;
@@ -106,4 +117,11 @@ export const transformDisplayReportExportData = (columns, data) => {
         return newRow;
     });
     return newData;
+};
+
+export const transformOaCategoriesToChartData = categories => {
+    const total = getTotalDocCount(categories);
+    return OA_STATUS_CATEGORIES.map(({ value, text }) =>
+        buildChartItem(value, text, categories[value]?.doc_count ?? 0, total),
+    );
 };

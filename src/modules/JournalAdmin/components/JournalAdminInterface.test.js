@@ -86,8 +86,8 @@ describe('JournalAdminInterface component', () => {
     });
 
     afterEach(() => {
-        useAccountContext.mockReset();
-        useJournalContext.mockReset();
+        useAccountContext.mockClear();
+        useJournalContext.mockClear();
         useDispatchMock.mockRestore();
         mockUseNavigate.mockClear();
     });
@@ -97,7 +97,7 @@ describe('JournalAdminInterface component', () => {
             useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         });
         afterEach(() => {
-            useTabbedContext.mockReset();
+            useTabbedContext.mockClear();
         });
 
         it('should render when no record is available', () => {
@@ -379,7 +379,7 @@ describe('JournalAdminInterface component', () => {
             useTabbedContext.mockImplementation(() => ({ tabbed: false }));
         });
         afterEach(() => {
-            useTabbedContext.mockReset();
+            useTabbedContext.mockClear();
         });
         it('should return an empty div if no journal provided', () => {
             useJournalContext.mockImplementation(() => ({

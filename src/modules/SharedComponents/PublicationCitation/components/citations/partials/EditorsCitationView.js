@@ -25,11 +25,6 @@ const EditorsCitationView = ({
                 subkey: 'rek_contributor',
                 order: 'rek_contributor_order',
             }}
-            idSearchKey={{
-                idKey: 'fez_record_search_key_contributor_id',
-                idSubkey: 'rek_contributor_id',
-                idOrder: 'rek_contributor_id_order',
-            }}
             showLink={showLink}
             getLink={pathConfig.list.contributor}
         />

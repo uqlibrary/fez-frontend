@@ -1,11 +1,16 @@
 import {
+    CW_NTRO_SUBTYPES,
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_INSTRUMENT,
     PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_WORKING_PAPER,
@@ -16,6 +21,202 @@ import {
  * @type {{[number]: {fields: {field: string, order: number}[]}}}
  */
 export const doiFields = {
+    [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
+        subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, ...CW_NTRO_SUBTYPES],
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 1,
+            },
+            {
+                field: 'rek_year',
+                order: 2,
+            },
+            {
+                field: 'rek_title',
+                order: 3,
+            },
+            {
+                field: 'fez_record_search_key_journal_name',
+                order: 4,
+            },
+            {
+                field: 'fez_record_search_key_volume_number',
+                order: 5,
+            },
+            {
+                field: 'fez_record_search_key_issue_number',
+                order: 6,
+            },
+            {
+                field: 'rek_pages',
+                order: 7,
+            },
+            {
+                field: 'fez_record_search_key_place_of_publication',
+                order: 8,
+            },
+            {
+                field: 'fez_record_search_key_publisher',
+                order: 9,
+                requiresUQ: true,
+            },
+            {
+                field: 'rek_description',
+                order: 10,
+            },
+            {
+                field: 'fez_record_search_key_keywords',
+                order: 11,
+            },
+            {
+                field: 'fez_record_search_key_isbn',
+                order: 12,
+            },
+            {
+                field: 'fez_record_search_key_issn',
+                order: 13,
+            },
+            {
+                field: 'fez_record_search_key_article_number',
+                order: 14,
+            },
+            {
+                field: 'fez_record_search_key_series',
+                order: 15,
+            },
+            {
+                field: 'fez_record_search_key_notes',
+                order: 16,
+            },
+        ],
+    },
+
+    [PUBLICATION_TYPE_DESIGN]: {
+        subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK],
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 2,
+            },
+            {
+                field: 'rek_year',
+                order: 3,
+            },
+            {
+                field: 'rek_title',
+                order: 4,
+            },
+            {
+                field: 'fez_record_search_key_place_of_publication',
+                order: 5,
+            },
+            {
+                field: 'fez_record_search_key_publisher',
+                order: 6,
+                requiresUQ: true,
+            },
+            {
+                field: 'rek_pages',
+                order: 7,
+            },
+            {
+                field: 'rek_description',
+                order: 8,
+            },
+            {
+                field: 'fez_record_search_key_keywords',
+                order: 9,
+            },
+            {
+                field: 'fez_record_search_key_isbn',
+                order: 10,
+            },
+            {
+                field: 'fez_record_search_key_issn',
+                order: 11,
+            },
+            {
+                field: 'fez_record_search_key_volume_number',
+                order: 12,
+            },
+            {
+                field: 'fez_record_search_key_issue_number',
+                order: 13,
+            },
+            {
+                field: 'fez_record_search_key_series',
+                order: 14,
+            },
+            {
+                field: 'fez_record_search_key_notes',
+                order: 15,
+            },
+        ],
+    },
+
+    [PUBLICATION_TYPE_CREATIVE_WORK]: {
+        fields: [
+            {
+                field: 'fez_record_search_key_author',
+                order: 1,
+            },
+            {
+                field: 'rek_date',
+                order: 2,
+            },
+            {
+                field: 'rek_title',
+                order: 3,
+            },
+            {
+                field: 'rek_subtype',
+                order: 4,
+            },
+            {
+                field: 'fez_record_search_key_place_of_publication',
+                order: 5,
+            },
+            {
+                field: 'fez_record_search_key_publisher',
+                order: 6,
+                requiresUQ: true,
+            },
+            {
+                field: 'fez_record_search_key_total_pages',
+                order: 7,
+            },
+            {
+                field: 'rek_description',
+                order: 8,
+            },
+            {
+                field: 'fez_record_search_key_isbn',
+                order: 9,
+            },
+            {
+                field: 'fez_record_search_key_issn',
+                order: 10,
+            },
+            {
+                field: 'fez_record_search_key_volume_number',
+                order: 11,
+            },
+            {
+                field: 'fez_record_search_key_issue_number',
+                order: 12,
+            },
+            {
+                field: 'fez_record_search_key_series',
+                order: 13,
+            },
+            {
+                field: 'fez_record_search_key_notes',
+                order: 14,
+            },
+        ],
+    },
+
     [PUBLICATION_TYPE_BOOK_CHAPTER]: {
         fields: [
             {
@@ -102,7 +303,6 @@ export const doiFields = {
     },
 
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
-        subtypes: ['Fully published paper'],
         fields: [
             {
                 field: 'fez_record_search_key_author',

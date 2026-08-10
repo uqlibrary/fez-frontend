@@ -1,19 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Author Affiliations internal notes should remove invalid html 1`] = `
 [
   "To: UQ eSpace Manager 
 ",
-  {
-    "$$typeof": Symbol(react.transitional.element),
-    "_owner": null,
-    "_store": {},
-    "key": "1",
-    "props": {
-      "children": "test",
-    },
-    "type": "b",
-  },
+  <b>
+    test
+  </b>,
 ]
 `;
 

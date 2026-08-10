@@ -151,18 +151,21 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                 </StandardCard>
             </Grid>
             {isNtro && (
-                <NtroFields
-                    control={control}
-                    canEdit
-                    isSubmitting={isSubmitting}
-                    showContributionStatement={isAuthorSelected}
-                    hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
-                    hideIsrc={!RRW_NTRO_SUBTYPES.includes(subtype)}
-                    hideAudienceSize={![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(subtype)}
-                    hideVolume={![NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(subtype)}
-                    hideIssue={![NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(subtype)}
-                    hideOriginalFormat={CPEE_NTRO_SUBTYPES.includes(subtype)}
-                />
+                <Grid item xs={12}>
+                    <NtroFields
+                        control={control}
+                        canEdit
+                        isSubmitting={isSubmitting}
+                        showContributionStatement={isAuthorSelected}
+                        hideIsmn={subtype !== NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION}
+                        hideIsrc={!RRW_NTRO_SUBTYPES.includes(subtype)}
+                        hideAudienceSize={![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(subtype)}
+                        hideVolume={![NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(subtype)}
+                        hideIssue={![NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(subtype)}
+                        hideOriginalFormat={CPEE_NTRO_SUBTYPES.includes(subtype)}
+                        legacyCompatible
+                    />
+                </Grid>
             )}
             <Grid item xs={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>

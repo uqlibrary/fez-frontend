@@ -449,7 +449,7 @@ describe('useForm hook', () => {
                     fieldA: 'required',
                 },
             });
-            expect(mock).toBeCalledWith(getPropsForAlertInconsistencyWarning(['fieldB', 'fieldC']));
+            expect(mock).toHaveBeenCalledWith(getPropsForAlertInconsistencyWarning(['fieldB', 'fieldC']));
         });
 
         it('should not warn devs when formErrors have missing errors for prod', () => {

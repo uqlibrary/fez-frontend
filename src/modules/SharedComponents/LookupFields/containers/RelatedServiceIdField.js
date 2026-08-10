@@ -7,13 +7,13 @@ import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/
 
 import * as actions from 'actions';
 import { RelatedServiceIdOptionTemplate } from 'modules/SharedComponents/LookupFields';
-import { isValidDOIValue, isValidROR } from 'config/validation';
+import { isValidDoi, isValidRor } from 'config/validation';
 
 export const RelatedServiceIdField = props => {
     const dispatch = useDispatch();
 
     const loadSuggestions = (id = ' ') => {
-        return (isValidROR(id) || isValidDOIValue(id)) && dispatch(actions.loadRelatedServiceList(id));
+        return (isValidRor(id) || isValidDoi(id)) && dispatch(actions.loadRelatedServiceList(id));
     };
 
     const { itemsList, itemsLoading } = useSelector(state => state.get('relatedServicesReducer'));

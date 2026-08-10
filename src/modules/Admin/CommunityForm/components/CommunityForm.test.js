@@ -1,6 +1,14 @@
 import CommunityForm from './CommunityForm';
 import React from 'react';
-import { render, WithReduxStore, WithRouter, fireEvent, userEvent, waitFor } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    fireEvent,
+    userEvent,
+    waitFor,
+    spyOnWindowLocationMethod,
+} from 'test-utils';
 import * as actions from 'actions';
 
 jest.mock('actions', () => ({
@@ -28,15 +36,16 @@ async function inputText(getByTestId, settings) {
 }
 
 describe('Community form', () => {
-    const { location } = window;
+    let assignMock;
+    let reloadMock;
 
-    beforeAll(() => {
-        delete window.location;
-        window.location = { assign: jest.fn(), reload: jest.fn() };
+    beforeEach(() => {
+        assignMock = spyOnWindowLocationMethod('assign');
+        reloadMock = spyOnWindowLocationMethod('reload');
     });
 
-    afterAll(() => {
-        window.location = location;
+    afterEach(() => {
+        jest.restoreAllMocks();
     });
 
     it('should render form', async () => {
@@ -72,15 +81,15 @@ describe('Community form', () => {
         await userEvent.click(submitButton);
         await waitFor(() => expect(getByTestId('after-submit-community')).toBeInTheDocument());
         await userEvent.click(getByTestId('after-submit-community'));
-        expect(window.location.assign).toHaveBeenCalledWith('/');
+        expect(assignMock).toHaveBeenCalledWith('/');
 
         await userEvent.click(getByTestId('reload-community'));
-        expect(window.location.reload).toHaveBeenCalled();
+        expect(reloadMock).toHaveBeenCalled();
     });
 
     it('should redirect to cancel page', () => {
         const { getByTestId } = setup({});
         fireEvent.click(getByTestId('cancel-community'));
-        expect(window.location.assign).toHaveBeenCalledWith('/');
+        expect(assignMock).toHaveBeenCalledWith('/');
     });
 });

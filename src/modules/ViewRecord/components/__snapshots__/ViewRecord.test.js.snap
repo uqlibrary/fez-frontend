@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ViewRecord should render not found 1`] = `
 <div>
@@ -40,8 +40,9 @@ exports[`ViewRecord should render not found 1`] = `
                
               <a
                 href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+                target="_blank"
               >
-                contact the eSpace team.
+                contact the UQ eSpace team.
               </a>
             </p>
           </div>

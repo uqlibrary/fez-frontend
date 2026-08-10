@@ -135,6 +135,6 @@ describe('AutoCompleteMultiSelectField component', () => {
             loadSuggestions,
         });
 
-        expect(loadSuggestions).toBeCalled();
+        expect(loadSuggestions).toHaveBeenCalled();
     });
 });

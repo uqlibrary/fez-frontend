@@ -11,9 +11,9 @@ import {
     fireEvent,
     createMatchMedia,
     waitForTextToBeRemoved,
-    assertMissingElement,
+    assertNotInTheDocument,
     api,
-    waitElementToBeInDocument,
+    waitElementToBeInTheDocument,
     userEvent,
     within,
 } from 'test-utils';
@@ -573,8 +573,10 @@ describe('ViewJournal', () => {
                         jnl_issn: '1111-1111',
                         jnl_issn_order: 1,
                         fez_sherpa_romeo: {
+                            srm_source_id: 1,
                             srm_issn: '1111-1111',
                             srm_max_embargo_amount: 6,
+                            srm_max_embargo_units: 'months',
                             srm_journal_link: 'http://test',
                         },
                     },
@@ -588,7 +590,10 @@ describe('ViewJournal', () => {
 
         expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
         expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
-        expect(queryByTestId('srm-journal-link-lookup-link')).toHaveAttribute('href', 'http://test');
+        expect(queryByTestId('srm-journal-link-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1',
+        );
     });
 
     it('Should show embargo details from second issn even when journal link is not available', async () => {
@@ -600,17 +605,18 @@ describe('ViewJournal', () => {
                         jnl_issn: '1111-1111',
                         jnl_issn_order: 1,
                         fez_sherpa_romeo: {
+                            srm_source_id: null,
                             srm_issn: '1111-1111',
-                            srm_journal_link: null,
                         },
                     },
                     {
                         jnl_issn: '2222-2222',
                         jnl_issn_order: 2,
                         fez_sherpa_romeo: {
+                            srm_source_id: null,
                             srm_max_embargo_amount: 6,
+                            srm_max_embargo_units: 'weeks',
                             srm_issn: '2222-2222',
-                            srm_journal_link: null,
                         },
                     },
                 ],
@@ -622,7 +628,7 @@ describe('ViewJournal', () => {
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
 
         expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
-        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
+        expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 weeks');
         expect(queryByTestId('srm-journal-link-lookup-link')).not.toBeInTheDocument();
     });
 
@@ -887,44 +893,6 @@ describe('ViewJournal', () => {
         expect(getByText('Test advisory statement')).toBeInTheDocument();
     });
 
-    it('should display read and publish warning banner', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                ...journalDetails.data,
-                fez_journal_read_and_publish: {
-                    jnl_read_and_publish_is_capped: 'Approaching',
-                    jnl_read_and_publish_is_discounted: false,
-                },
-            },
-        });
-
-        const { getAllByTestId, getByText } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        const alerts = getAllByTestId('alert');
-        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
-    });
-
-    it('should display read and publish ceased info banner', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                ...journalDetails.data,
-                fez_journal_read_and_publish: {
-                    jnl_read_and_publish_is_capped: 'NoDeal',
-                    jnl_read_and_publish_is_discounted: false,
-                },
-            },
-        });
-
-        const { getAllByTestId, getByText } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        const alerts = getAllByTestId('alert');
-        expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
-    });
-
     it('should not display apc link when theres no apc', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
@@ -944,44 +912,131 @@ describe('ViewJournal', () => {
         expect(queryByTestId('jnl-doaj-apc-average-price-value')).not.toBeInTheDocument();
     });
 
-    it('Should show read and publish section when theres no read and publish agreement', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                jnl_title: 'test',
-                fez_journal_read_and_publish: null,
-            },
-        });
-
-        const { queryByTestId, getByTestId, getByText } = setup();
-
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-        expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
-        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
-        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
-    });
-
-    it('Should show read and publish section when read and publish agreement is ceased', async () => {
-        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-            data: {
-                jnl_title: 'test',
-                fez_journal_read_and_publish: {
-                    jnl_read_and_publish_is_capped: 'NoDeal',
-                    jnl_read_and_publish_publisher: 'publisher',
-                    jnl_read_and_publish_source_date: '2025-01-01',
+    describe('Read And Publish', () => {
+        it('should display read and publish warning banner', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    ...journalDetails.data,
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'Approaching',
+                        jnl_read_and_publish_is_discounted: false,
+                    },
                 },
-            },
+            });
+
+            const { getAllByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            const alerts = getAllByTestId('alert');
+            expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
         });
 
-        const { queryByTestId, getByTestId, getByText } = setup();
+        it('should display read and publish ceased info banner', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    ...journalDetails.data,
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'NoDeal',
+                        jnl_read_and_publish_is_discounted: false,
+                    },
+                },
+            });
 
-        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+            const { getAllByTestId, getByText } = setup();
 
-        expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
-        expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
-        expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            const alerts = getAllByTestId('alert');
+            expect(alerts[1]).toHaveTextContent(/Read and Publish Agreement/);
+        });
+
+        it('Should show read and publish section when theres no read and publish agreement', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: null,
+                },
+            });
+
+            const { queryByTestId, getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+            expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+            expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+        });
+
+        it('Should show read and publish section when read and publish agreement is ceased', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'NoDeal',
+                        jnl_read_and_publish_publisher: 'publisher',
+                        jnl_read_and_publish_source_date: '2025-01-01',
+                    },
+                },
+            });
+
+            const { queryByTestId, getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('No');
+            expect(queryByTestId('jnl-read-and-publish-caul-link-header')).not.toBeInTheDocument();
+            expect(queryByTestId('jnl-read-and-publish-source-date-header')).not.toBeInTheDocument();
+            expect(queryByTestId('jnl-read-and-publish-lookup-link')).not.toBeInTheDocument();
+        });
+
+        it('Should show read and publish link when read and publish agreement is discounted', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'N',
+                        jnl_read_and_publish_is_discounted: true,
+                        jnl_read_and_publish_publisher: 'publisher',
+                        jnl_read_and_publish_source_date: '2025-01-01',
+                    },
+                },
+            });
+
+            const { getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('Discount');
+            expect(getByTestId('jnl-read-and-publish-lookup-link')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-publisher-value')).toHaveTextContent('publisher');
+            expect(getByTestId('jnl-read-and-publish-publisher-lookup-link')).toBeInTheDocument();
+        });
+
+        it('Should show read and publish link when read and publish agreement is capped', async () => {
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    jnl_title: 'test',
+                    fez_journal_read_and_publish: {
+                        jnl_read_and_publish_is_capped: 'Y',
+                        jnl_read_and_publish_is_discounted: false,
+                        jnl_read_and_publish_publisher: 'publisher',
+                        jnl_read_and_publish_source_date: '2025-01-01',
+                    },
+                },
+            });
+
+            const { getByTestId, getByText } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('journal-details-openAccess-header')).toBeInTheDocument();
+            expect(getByTestId('jnl-read-and-publish-value')).toHaveTextContent('Article Processing Charge covered');
+            expect(getByTestId('jnl-read-and-publish-lookup-link')).toBeInTheDocument();
+        });
     });
 
     describe('getAdvisoryStatement', () => {
@@ -1009,7 +1064,7 @@ describe('ViewJournal', () => {
             setup();
 
             await waitForTextToBeRemoved('Loading journal data');
-            assertMissingElement('publish-as-oa-button');
+            assertNotInTheDocument('publish-as-oa-button');
         });
 
         describe('search workflows', () => {
@@ -1030,16 +1085,16 @@ describe('ViewJournal', () => {
                 setup();
 
                 await waitForTextToBeRemoved('Loading journal data');
-                assertMissingElement('publish-as-oa-button');
+                assertNotInTheDocument('publish-as-oa-button');
             });
 
             describe("should display button for search workflows when OA status = `fee` and it's not embargoed", () => {
-                it('With HQ', async () => {
+                it('With HQ=1 based on both Scopus and wos data', async () => {
                     window.open = jest.fn();
                     api.mock.journals.get({ id: '.*', data: { ...data } });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
@@ -1077,6 +1132,98 @@ describe('ViewJournal', () => {
                     );
                 });
 
+                it('With HQ=2 based on Scopus data', async () => {
+                    window.open = jest.fn();
+                    api.mock.journals.get({
+                        data: {
+                            ...data,
+                            fez_journal_read_and_publish: null,
+                            fez_journal_jcr_scie: null,
+                            fez_journal_cite_score: {
+                                ...data.fez_journal_cite_score,
+                                fez_journal_cite_score_asjc_code: [
+                                    {
+                                        ...data.fez_journal_cite_score.fez_journal_cite_score_asjc_code[0],
+                                        jnl_cite_score_asjc_code_quartile: '2',
+                                    },
+                                ],
+                            },
+                        },
+                    });
+                    const { getByTestId } = setup();
+
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
+                    await userEvent.click(getByTestId('publish-as-oa-button'));
+
+                    const expectedSearchParams = {
+                        keywords: {
+                            'Subject-453458': {
+                                cvoId: '453458',
+                                text: '2739 Public Health, Environmental and Occupational Health',
+                                type: 'Subject',
+                                id: 'Subject-453458',
+                            },
+                        },
+                        activeFacets: {
+                            filters: {
+                                ...publishAsOASearchFacetDefaults,
+                                'Highest quartile': ['1', '2'],
+                            },
+                        },
+                    };
+                    expect(window.open).toHaveBeenCalledWith(
+                        `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                        '_blank',
+                        'noopener,noreferrer',
+                    );
+                });
+
+                it('With HQ=3 based on WOS data', async () => {
+                    window.open = jest.fn();
+                    api.mock.journals.get({
+                        data: {
+                            ...data,
+                            fez_journal_read_and_publish: null,
+                            fez_journal_jcr_scie: {
+                                ...data.fez_journal_jcr_scie,
+                                fez_journal_jcr_scie_category: [
+                                    {
+                                        ...data.fez_journal_jcr_scie.fez_journal_jcr_scie_category[0],
+                                        jnl_jcr_scie_category_quartile: 'Q3',
+                                    },
+                                ],
+                            },
+                            fez_journal_cite_score: null,
+                        },
+                    });
+                    const { getByTestId } = setup();
+
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
+                    await userEvent.click(getByTestId('publish-as-oa-button'));
+
+                    const expectedSearchParams = {
+                        keywords: {
+                            'Subject-456676': {
+                                cvoId: '456676',
+                                text: 'Public, Environmental & Occupational Health',
+                                type: 'Subject',
+                                id: 'Subject-456676',
+                            },
+                        },
+                        activeFacets: {
+                            filters: {
+                                ...publishAsOASearchFacetDefaults,
+                                'Highest quartile': ['1', '2', '3'],
+                            },
+                        },
+                    };
+                    expect(window.open).toHaveBeenCalledWith(
+                        `${pathConfig.journals.search}?${param(expectedSearchParams)}`,
+                        '_blank',
+                        'noopener,noreferrer',
+                    );
+                });
+
                 it('Without HQ', async () => {
                     window.open = jest.fn();
                     api.mock.journals.get({
@@ -1084,11 +1231,20 @@ describe('ViewJournal', () => {
                         data: {
                             ...data,
                             fez_journal_jcr_scie: null,
+                            fez_journal_cite_score: {
+                                ...data.fez_journal_cite_score,
+                                fez_journal_cite_score_asjc_code: [
+                                    {
+                                        ...data.fez_journal_cite_score.fez_journal_cite_score_asjc_code[0],
+                                        jnl_cite_score_asjc_code_quartile: null,
+                                    },
+                                ],
+                            },
                         },
                     });
                     const { getByTestId } = setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                     await userEvent.click(getByTestId('publish-as-oa-button'));
 
                     const expectedSearchParams = {
@@ -1134,7 +1290,7 @@ describe('ViewJournal', () => {
                     api.mock.journals.get({ id: '.*', data: { ...data } });
                     setup();
 
-                    await waitElementToBeInDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
 
                 it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
@@ -1150,7 +1306,7 @@ describe('ViewJournal', () => {
                     });
                     setup();
 
-                    assertMissingElement('publish-as-oa-button');
+                    assertNotInTheDocument('publish-as-oa-button');
                 });
             });
         });

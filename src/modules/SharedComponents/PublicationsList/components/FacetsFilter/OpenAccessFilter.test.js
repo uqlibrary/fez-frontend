@@ -43,6 +43,6 @@ describe('OpenAccessFilter ', () => {
         expect(getByText('Show open access only')).toBeInTheDocument();
         expect(getByTestId('clear-facet-filter-nested-item-open-access')).toBeInTheDocument();
         fireEvent.click(getByText('Show open access only'));
-        expect(onChange).toBeCalledWith(false);
+        expect(onChange).toHaveBeenCalledWith(false);
     });
 });

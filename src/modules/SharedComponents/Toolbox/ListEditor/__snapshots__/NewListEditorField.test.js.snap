@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NewListEditorField component should render new list editor component with the given List 1`] = `
 <DocumentFragment>

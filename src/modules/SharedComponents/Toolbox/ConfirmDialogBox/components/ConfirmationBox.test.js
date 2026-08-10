@@ -51,8 +51,8 @@ describe('ConfirmationBox component', () => {
         const onCloseFn = jest.fn();
         const { getByTestId } = setup({ isOpen: true, onAction: onActionFn, onClose: onCloseFn });
         fireEvent.click(getByTestId('confirm-confirmation-box'));
-        expect(onActionFn).toBeCalled();
-        expect(onCloseFn).toBeCalled();
+        expect(onActionFn).toHaveBeenCalled();
+        expect(onCloseFn).toHaveBeenCalled();
     });
 
     it('should call cancel action', () => {
@@ -60,8 +60,8 @@ describe('ConfirmationBox component', () => {
         const onCloseFn = jest.fn();
         const { getByTestId } = setup({ isOpen: true, onCancelAction: onCancelActionFn, onClose: onCloseFn });
         fireEvent.click(getByTestId('cancel-confirmation-box'));
-        expect(onCancelActionFn).toBeCalled();
-        expect(onCloseFn).toBeCalled();
+        expect(onCancelActionFn).toHaveBeenCalled();
+        expect(onCloseFn).toHaveBeenCalled();
     });
 
     it('should call alternate action', () => {
@@ -74,7 +74,7 @@ describe('ConfirmationBox component', () => {
             showAlternateActionButton: true,
         });
         fireEvent.click(getByTestId('confirm-alternate-confirmation-box'));
-        expect(onAlternateActionFn).toBeCalled();
-        expect(onCloseFn).toBeCalled();
+        expect(onAlternateActionFn).toHaveBeenCalled();
+        expect(onCloseFn).toHaveBeenCalled();
     });
 });

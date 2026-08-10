@@ -72,6 +72,19 @@ test.describe('Admin Dashboard - Today tab', () => {
         await expect(openAccessChart.locator('svg path')).toHaveCount(3);
         await expect(openAccessChart.locator('svg circle')).toHaveCount(1);
 
+        // Open Access Categories Chart
+        await expect(page.getByTestId('open-access-categories-container-title')).toContainText('OA Status Categories');
+        const openAccessCategoriesChart = page.getByTestId('chart-container-open-access-categories');
+        await expect(openAccessCategoriesChart.locator('svg > text').getByText('68686')).toBeVisible();
+        await expect(openAccessCategoriesChart.locator('svg path')).toHaveCount(3); // 3 types
+
+        // DOI Doc Types Chart
+        await expect(page.getByTestId('doi-populated-doc-types-container-title')).toContainText('DOI by Doc Type');
+        await expect(page.getByTestId('doi-populated-doc-types-container-subtitle')).toContainText('In Last 12 Months');
+        const doiByDocTypesChart = page.getByTestId('chart-container-doi-populated-doc-types');
+        await expect(doiByDocTypesChart.locator('svg > text').getByText('1540')).toBeVisible();
+        await expect(doiByDocTypesChart.locator('svg path')).toHaveCount(10); // 10 doc types
+
         // Quicklinks
         const quickLinksList = page.getByRole('list');
         await expect(quickLinksList.getByRole('listitem')).toHaveCount(7);

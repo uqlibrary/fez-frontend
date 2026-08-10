@@ -187,7 +187,7 @@ describe('Component ContributorRow', () => {
         expect(queryByRole('button', { name: 'Move record up the order' })).toBeInTheDocument();
         expect(queryByRole('button', { name: 'Move record down the order' })).not.toBeInTheDocument();
         fireEvent.click(queryByRole('button', { name: 'Move record up the order' }));
-        expect(testFunction).toBeCalled();
+        expect(testFunction).toHaveBeenCalled();
     });
 
     it('a row with index and contributor set calls move down function', () => {
@@ -201,7 +201,7 @@ describe('Component ContributorRow', () => {
         expect(queryByRole('button', { name: 'Move record down the order' })).toBeInTheDocument();
         fireEvent.click(queryByRole('button', { name: 'Move record down the order' }));
 
-        expect(testFunction).toBeCalled();
+        expect(testFunction).toHaveBeenCalled();
         expect(queryByRole('button', { name: 'Move record up the order' })).not.toBeInTheDocument();
         testFunction.mockReset();
     });
@@ -215,7 +215,7 @@ describe('Component ContributorRow', () => {
         });
 
         fireEvent.click(getByRole('listitem', { name: 'Select this record (A. Smith) to assign it to you' }));
-        expect(testFunction).toBeCalled;
+        expect(testFunction).toHaveBeenCalled;
     });
 
     it('a row with index and contributor set calls delete function', () => {
@@ -226,7 +226,7 @@ describe('Component ContributorRow', () => {
         });
 
         fireEvent.click(getByRole('button', { name: 'Remove this record' }));
-        expect(testFunction).toBeCalled;
+        expect(testFunction).toHaveBeenCalled;
     });
 
     it('should select when it is not yet selected enabled', () => {
@@ -244,7 +244,7 @@ describe('Component ContributorRow', () => {
         });
 
         fireEvent.click(getByRole('listitem', { name: 'Select this record (J. Smith) to assign it to you' }));
-        expect(testFunction).toBeCalledWith(0);
+        expect(testFunction).toHaveBeenCalledWith(0);
     });
 
     it('should select when it is not yet selected disabled', () => {
@@ -262,7 +262,7 @@ describe('Component ContributorRow', () => {
         });
 
         fireEvent.click(getByTestId('test-list-row-0'));
-        expect(testFunction).not.toBeCalled();
+        expect(testFunction).not.toHaveBeenCalled();
     });
 
     it('should deselect when it is already selected', () => {
@@ -280,7 +280,7 @@ describe('Component ContributorRow', () => {
 
         const { getByTestId } = setup(testObj);
         fireEvent.click(getByTestId('test-list-row-0'));
-        expect(testFunction).toBeCalledWith(testObj.index);
+        expect(testFunction).toHaveBeenCalledWith(testObj.index);
     });
 
     it('should attempt to assign the current author when keyboard submit', () => {
@@ -292,11 +292,11 @@ describe('Component ContributorRow', () => {
         const { getByTestId } = setup({ contributor, index: 0, enableSelect: true, onSelect: testFn });
 
         fireEvent.keyDown(getByTestId('test-list-row-0'), { key: 'Enter', keyCode: 13 });
-        expect(testFn).toBeCalled();
+        expect(testFn).toHaveBeenCalled();
 
         testFn.mockClear();
         fireEvent.keyDown(getByTestId('test-list-row-0'), { key: 'A' });
-        expect(testFn).not.toBeCalled();
+        expect(testFn).not.toHaveBeenCalled();
     });
 
     it('should not attempt to assign the current author when keyboard submit for disabled contributor', () => {
@@ -309,7 +309,7 @@ describe('Component ContributorRow', () => {
         const { getByTestId } = setup({ contributor, index: 0, enableSelect: true, onSelect: testFn });
 
         fireEvent.keyDown(getByTestId('test-list-row-0'), { key: 'Enter', keyCode: 13 });
-        expect(testFn).not.toBeCalled();
+        expect(testFn).not.toHaveBeenCalled();
     });
 
     it('should handle edits', () => {
@@ -377,7 +377,7 @@ describe('Component ContributorRow', () => {
         await waitFor(() => getByTestId('confirm-test-list-row-0-delete'));
 
         fireEvent.click(getByTestId('confirm-test-list-row-0-delete'));
-        expect(onDeleteFn).toBeCalled();
+        expect(onDeleteFn).toHaveBeenCalled();
     });
 
     it('should not call certain prop methods if disabled prop is set', async () => {
@@ -396,10 +396,10 @@ describe('Component ContributorRow', () => {
         });
 
         fireEvent.click(getByRole('button', { name: 'Move record up the order' }));
-        expect(onMoveUpFn).not.toBeCalled();
+        expect(onMoveUpFn).not.toHaveBeenCalled();
 
         fireEvent.click(getByRole('button', { name: 'Move record down the order' }));
-        expect(onMoveDownFn).not.toBeCalled();
+        expect(onMoveDownFn).not.toHaveBeenCalled();
 
         fireEvent.click(getByRole('button', { name: 'Remove this record' }));
         await waitFor(() => queryByTestId('confirm-test-list-row-0-delete'));

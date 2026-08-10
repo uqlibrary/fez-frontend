@@ -1,5 +1,4 @@
 import {
-    APP_ALERT_HIDE,
     AUTHOR_ADD_FAILED,
     AUTHOR_ADD_SUCCESS,
     AUTHOR_ADDING,
@@ -12,7 +11,6 @@ import {
     AUTHOR_LIST_FAILED,
     AUTHOR_LIST_LOADED,
     AUTHOR_LIST_LOADING,
-    AUTHOR_CLEAR_ALERTS,
     BULK_AUTHOR_ITEMS_DELETE_FAILED,
     BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
     BULK_AUTHOR_ITEMS_DELETING,
@@ -23,9 +21,18 @@ import {
     SCOPUS_INGEST_REQUEST_FAILED,
     SCOPUS_INGEST_REQUEST_SUCCESS,
     SCOPUS_INGEST_REQUESTING,
+    AUTHOR_MERGING,
+    AUTHOR_MERGING_FAILED,
+    AUTHOR_MERGING_SUCCESS,
 } from './actionTypes';
 import { destroy, get, post, put } from 'repositories/generic';
-import { AUTHOR_API, AUTHORS_SEARCH_API, INGEST_WORKS_API, MANAGE_AUTHORS_LIST_API } from 'repositories/routes';
+import {
+    AUTHOR_API,
+    AUTHOR_MERGE_API,
+    AUTHORS_SEARCH_API,
+    INGEST_WORKS_API,
+    MANAGE_AUTHORS_LIST_API,
+} from 'repositories/routes';
 import { createSentryFriendlyError } from '../config/axios';
 
 export function loadAuthorList({ page, pageSize, search }) {
@@ -130,7 +137,14 @@ export function addAuthor(data) {
         dispatch({ type: AUTHOR_ADDING });
 
         try {
-            const response = await post(AUTHOR_API(), data);
+            // The name-override switch submits '' when left untouched on the create form.
+            // Coerce it to an integer (0/1) so the API receives a valid value for the integer
+            // column rather than '', which MySQL rejects and which silently aborted the save.
+            const payload = {
+                ...data,
+                aut_name_overridden: Number(data.aut_name_overridden) || 0,
+            };
+            const response = await post(AUTHOR_API(), payload);
             dispatch({
                 type: AUTHOR_ADD_SUCCESS,
             });
@@ -218,10 +232,21 @@ export function ingestFromScopus(autId) {
         }
     };
 }
-/* istanbul ignore next */
-export function clearAuthorAlerts() {
-    return dispatch => {
-        dispatch({ type: AUTHOR_CLEAR_ALERTS });
-        dispatch({ type: APP_ALERT_HIDE });
-    };
-}
+
+export const mergeAuthors = (staff, student) => async dispatch => {
+    dispatch({ type: AUTHOR_MERGING });
+    return post(AUTHOR_MERGE_API(staff?.aut_id, student?.aut_id))
+        .then(response => {
+            dispatch({
+                type: AUTHOR_MERGING_SUCCESS,
+                payload: response.data,
+            });
+        })
+        .catch(e => {
+            dispatch({
+                type: AUTHOR_MERGING_FAILED,
+                payload: e.message,
+            });
+            return Promise.reject(e);
+        });
+};

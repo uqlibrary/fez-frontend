@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Skeleton from '@mui/material/Skeleton';
 import Grid from '@mui/material/GridLegacy';
 import Typography from '@mui/material/Typography';
 
@@ -14,15 +13,17 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { LINK_UNPROCESSED_WORKS, COLOURS } from '../config';
 import { useAlertStatus } from '../hooks';
-import { transformUrlToPlatform } from '../transformers';
+import { transformUrlToPlatform, transformOaCategoriesToChartData } from '../transformers';
 
 import RibbonChartContainer from '../components/RibbonChartContainer';
-import PieChartContainer from '../components/PieChartContainer';
-import GaugeChartContainer from '../components/GaugeChartContainer';
+import ChartContainer from '../components/ChartContainer';
 import QuickLinkContainer from '../components/QuickLinkContainer';
 import VisualisationSystemAlerts from '../components/visualisations/VisualisationSystemAlerts';
 import VisualisationWorks from '../components/visualisations/VisualisationWorks';
 import VisualisationOpenAccess from '../components/visualisations/VisualisationOpenAccess';
+import { getTotalDocCount, transformBucketsToChartData } from '../utils';
+import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
+import ChartBlock from '../components/ChartBlock';
 
 const Today = () => {
     const txt = locale.components.adminDashboard.tabs.today;
@@ -81,131 +82,171 @@ const Today = () => {
                                 </RibbonChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={4}>
-                            {!!adminDashboardTodayLoading && (
-                                <Skeleton
-                                    animation="wave"
-                                    height={225}
-                                    width={'100%'}
-                                    id={'admin-dashboard-systemalerts-skeleton'}
-                                    data-testid={'admin-dashboard-systemalerts-skeleton'}
-                                />
-                            )}
-                            {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
-                                <PieChartContainer
-                                    label={txt.works.unprocessed}
-                                    subtext={
-                                        <ExternalLink
-                                            id={'unprocessed'}
-                                            data-testid={'unprocessed'}
-                                            href={transformUrlToPlatform(LINK_UNPROCESSED_WORKS)}
-                                        >
-                                            <Typography
-                                                variant="span"
-                                                sx={{
-                                                    fontSize: '0.875rem',
-                                                    fontWeight: 200,
-                                                    display: 'inline-block',
-                                                }}
+                        <Grid item xs={12} sm={6}>
+                            <ChartBlock
+                                loading={adminDashboardTodayLoading}
+                                success={adminDashboardTodaySuccess}
+                                hasData={!!adminDashboardTodayData?.works}
+                                id="admin-dashboard-unprocessed-works"
+                                render={() => (
+                                    <ChartContainer
+                                        label={txt.works.unprocessed.title}
+                                        subtext={
+                                            <ExternalLink
+                                                id={'unprocessed'}
+                                                data-testid={'unprocessed'}
+                                                href={transformUrlToPlatform(LINK_UNPROCESSED_WORKS)}
                                             >
-                                                {txt.works.unprocessedSubText}
-                                            </Typography>
-                                        </ExternalLink>
-                                    }
-                                    id="unprocessed-works"
-                                >
-                                    <VisualisationWorks
+                                                <Typography
+                                                    variant="span"
+                                                    sx={{
+                                                        fontSize: '0.875rem',
+                                                        fontWeight: 200,
+                                                        display: 'inline-block',
+                                                    }}
+                                                >
+                                                    {txt.works.unprocessed.subText}
+                                                </Typography>
+                                            </ExternalLink>
+                                        }
+                                        tooltip={txt.works.unprocessed.tooltip}
                                         id="unprocessed-works"
-                                        text={`${adminDashboardTodayData.works.unprocessed}`}
-                                        amount={
-                                            adminDashboardTodayData.works.unprocessed === 0
-                                                ? /* istanbul ignore next */ 100
-                                                : adminDashboardTodayData.works.unprocessed
-                                        }
-                                    />
-                                </PieChartContainer>
-                            )}
+                                    >
+                                        <VisualisationWorks
+                                            id="unprocessed-works"
+                                            text={`${adminDashboardTodayData.works.unprocessed}`}
+                                            data={[
+                                                {
+                                                    id: 0,
+                                                    value:
+                                                        adminDashboardTodayData.works.unprocessed === 0
+                                                            ? /* istanbul ignore next */ 100
+                                                            : adminDashboardTodayData.works.unprocessed,
+                                                    color: '#B60DCE',
+                                                },
+                                            ]}
+                                        />
+                                    </ChartContainer>
+                                )}
+                            />
                         </Grid>
-                        <Grid item xs={12} sm={4}>
-                            {!!adminDashboardTodayLoading && (
-                                <Skeleton
-                                    animation="wave"
-                                    height={225}
-                                    width={'100%'}
-                                    id={'admin-dashboard-systemalerts-skeleton'}
-                                    data-testid={'admin-dashboard-systemalerts-skeleton'}
-                                />
-                            )}
-                            {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
-                                <PieChartContainer
-                                    label={txt.works.processed}
-                                    subtext={
-                                        <Typography
-                                            variant="span"
-                                            sx={{
-                                                fontSize: '0.875rem',
-                                                fontWeight: 200,
-                                            }}
+                        <Grid item xs={12} sm={6}>
+                            <ChartBlock
+                                loading={adminDashboardTodayLoading}
+                                success={adminDashboardTodaySuccess}
+                                hasData={!!adminDashboardTodayData?.works}
+                                id={'admin-dashboard-processed-works'}
+                                render={() => {
+                                    const { from, to } = adminDashboardTodayData.works.iteration;
+                                    const processedInfo = txt.works.processed.subTextAndTooltip(from, to);
+                                    return (
+                                        <ChartContainer
+                                            label={txt.works.processed.title}
+                                            subtext={processedInfo.text}
+                                            tooltip={processedInfo.tooltip}
+                                            id="processed-works"
                                         >
-                                            {txt.works.processedSubText(
-                                                adminDashboardTodayData.works.iteration.from,
-                                                adminDashboardTodayData.works.iteration.to,
+                                            <VisualisationWorks
+                                                id="processed-works"
+                                                text={`${adminDashboardTodayData.works.processed}`}
+                                                data={[
+                                                    {
+                                                        id: 0,
+                                                        value:
+                                                            adminDashboardTodayData.works.processed === 0
+                                                                ? /* istanbul ignore next */ 100
+                                                                : adminDashboardTodayData.works.processed,
+                                                        color: '#35A9A5',
+                                                    },
+                                                ]}
+                                            />
+                                        </ChartContainer>
+                                    );
+                                }}
+                            />
+                        </Grid>
+                    </Grid>
+                    <Grid container rowSpacing={4} spacing={5} sx={{ pt: 2 }}>
+                        <Grid item xs={12} sm={6}>
+                            <ChartBlock
+                                loading={adminDashboardTodayLoading}
+                                success={adminDashboardTodaySuccess}
+                                hasData={!!adminDashboardTodayData}
+                                id={'admin-dashboard-open-access'}
+                                render={() => (
+                                    <ChartContainer
+                                        label={txt.openaccess.researchOutput.title}
+                                        subtext={txt.openaccess.researchOutput.subText}
+                                        tooltip={txt.openaccess.researchOutput.tooltip}
+                                        id="open-access"
+                                    >
+                                        <VisualisationOpenAccess
+                                            text={txt.openaccess.researchOutput.chart.text(
+                                                adminDashboardTodayData.oa.current,
+                                                adminDashboardTodayData.oa.total,
                                             )}
-                                        </Typography>
-                                    }
-                                    id="processed-works"
-                                >
-                                    <VisualisationWorks
-                                        id="processed-works"
-                                        text={`${adminDashboardTodayData.works.processed}`}
-                                        amount={
-                                            adminDashboardTodayData.works.processed === 0
-                                                ? /* istanbul ignore next */ 100
-                                                : adminDashboardTodayData.works.processed
-                                        }
-                                        colour="#35A9A5"
-                                    />
-                                </PieChartContainer>
-                            )}
+                                            subText={txt.openaccess.researchOutput.chart.subtext(
+                                                adminDashboardTodayData.oa.total,
+                                            )}
+                                            amount={adminDashboardTodayData.oa.current}
+                                            maxAmount={adminDashboardTodayData.oa.total}
+                                        />
+                                    </ChartContainer>
+                                )}
+                            />
                         </Grid>
-                        <Grid item xs={12} sm={4}>
-                            {!!adminDashboardTodayLoading && (
-                                <Skeleton
-                                    animation="wave"
-                                    height={225}
-                                    width={'100%'}
-                                    data-testid={'admin-dashboard-systemalerts-skeleton'}
-                                />
-                            )}
-                            {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
-                                <GaugeChartContainer
-                                    label={txt.openaccess.researchOutput.title}
-                                    subtext={
-                                        <Typography
-                                            variant="span"
-                                            sx={{
-                                                fontSize: '0.875rem',
-                                                fontWeight: 200,
-                                            }}
-                                        >
-                                            {txt.openaccess.researchOutput.subText}
-                                        </Typography>
-                                    }
-                                    id="open-access"
-                                >
-                                    <VisualisationOpenAccess
-                                        text={txt.openaccess.researchOutput.chart.text(
-                                            adminDashboardTodayData.oa.current,
-                                            adminDashboardTodayData.oa.total,
-                                        )}
-                                        subText={txt.openaccess.researchOutput.chart.subtext(
-                                            adminDashboardTodayData.oa.total,
-                                        )}
-                                        amount={adminDashboardTodayData.oa.current}
-                                        maxAmount={adminDashboardTodayData.oa.total}
-                                    />
-                                </GaugeChartContainer>
-                            )}
+                        <Grid item xs={12} sm={6}>
+                            <ChartBlock
+                                loading={adminDashboardTodayLoading}
+                                success={adminDashboardTodaySuccess}
+                                hasData={!!adminDashboardTodayData?.oa_categories}
+                                id={'admin-dashboard-open-access-categories'}
+                                render={() => (
+                                    <ChartContainer
+                                        label={txt.openAccessCategories.title}
+                                        subtext={txt.openAccessCategories.subText}
+                                        tooltip={txt.openAccessCategories.tooltip}
+                                        id="open-access-categories-container"
+                                    >
+                                        <VisualisationWorks
+                                            id="open-access-categories"
+                                            text={`${getTotalDocCount(adminDashboardTodayData.oa_categories)}`}
+                                            data={transformOaCategoriesToChartData(
+                                                adminDashboardTodayData.oa_categories,
+                                            )}
+                                            showTooltips
+                                        />
+                                    </ChartContainer>
+                                )}
+                            />
+                        </Grid>
+                    </Grid>
+                    <Grid container rowSpacing={4} spacing={5} sx={{ pt: 2 }}>
+                        <Grid item xs={12} sm={6}>
+                            <ChartBlock
+                                loading={adminDashboardTodayLoading}
+                                success={adminDashboardTodaySuccess}
+                                hasData={!!adminDashboardTodayData?.doi_populated_doc_type_counts}
+                                id={'admin-dashboard-doi-populated-doc-types'}
+                                render={() => (
+                                    <ChartContainer
+                                        label={txt.doiPopulateDocTypes.title}
+                                        subtext={txt.doiPopulateDocTypes.subText}
+                                        tooltip={txt.doiPopulateDocTypes.tooltip}
+                                        id="doi-populated-doc-types-container"
+                                    >
+                                        <VisualisationWorks
+                                            id="doi-populated-doc-types"
+                                            text={`${getTotalDocCount(adminDashboardTodayData.doi_populated_doc_type_counts)}`}
+                                            data={transformBucketsToChartData(
+                                                adminDashboardTodayData.doi_populated_doc_type_counts,
+                                                DOCUMENT_TYPES_LOOKUP,
+                                            )}
+                                            showTooltips
+                                        />
+                                    </ChartContainer>
+                                )}
+                            />
                         </Grid>
                     </Grid>
 

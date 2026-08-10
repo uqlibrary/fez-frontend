@@ -9,6 +9,7 @@ import * as utils from './Utils';
 const setup = (props = {}, render = rtlRender) => {
     const testProps = {
         item: { rek_pid: 0 },
+        inView: true,
         ...props,
     };
     return render(<ImageGalleryItemImage {...testProps} />);
@@ -514,5 +515,46 @@ describe('Image Gallery Item Image', () => {
         const galleryElement = getByTestId(`imageGalleryItemImage-${collectionSearchResultsImages.data[5].rek_pid}`);
         expect(galleryElement).toBeInTheDocument();
         expect(galleryElement.getAttribute('src')).toContain('thumbnail_Capture.jpg');
+    });
+
+    describe('Image Lazy Loading', () => {
+        const imageItem = {
+            rek_pid: 'UQ:123',
+            rek_display_type_lookup: 'Image',
+            fez_datastream_info: [
+                {
+                    dsi_dsid: 'abc.jpg',
+                    dsi_security_policy: 5,
+                },
+                {
+                    dsi_dsid: 'thumbnail_abc_t.jpg',
+                    dsi_security_policy: 5,
+                },
+            ],
+        };
+
+        it('load the default thumbnail', () => {
+            const { getByRole } = setup({ item: imageItem, inView: undefined });
+
+            const image = getByRole('img');
+
+            expect(image).toHaveAttribute('src', expect.stringContaining(config.thumbnailImage.defaultImageName));
+        });
+
+        it('shows the default thumbnail before the image enters the viewport', () => {
+            const { getByRole } = setup({ item: imageItem, inView: false });
+
+            const image = getByRole('img');
+
+            expect(image).toHaveAttribute('src', expect.stringContaining(config.thumbnailImage.defaultImageName));
+        });
+
+        it('loads the thumbnail once it enters the viewport', () => {
+            const { getByRole } = setup({ item: imageItem });
+
+            const image = getByRole('img');
+
+            expect(image).toHaveAttribute('src', expect.stringContaining('thumbnail_abc_t.jpg'));
+        });
     });
 });

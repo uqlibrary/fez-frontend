@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Journal Name Component test  should render with empty props 1`] = `<span />`;
 
@@ -29,12 +29,12 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
       class="css-1oqhn84"
       data-analyticsid="rek-journal-name-sherpa-link"
       data-testid="rek-journal-name-sherpa-link"
-      href="https://example.com/"
+      href="https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1376"
       id="rek-journal-name-sherpa-link"
       rel="noopener noreferrer"
       tabindex="0"
       target="_blank"
-      title="Link to https://example.com/ will open in a new window."
+      title="Link to https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1376 will open in a new window."
     >
       <svg
         aria-hidden="true"
@@ -75,12 +75,12 @@ exports[`Journal Name Component test  should render without era journal listed 1
       class="css-1oqhn84"
       data-analyticsid="rek-journal-name-sherpa-link"
       data-testid="rek-journal-name-sherpa-link"
-      href="https://example.com/"
+      href="https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1376"
       id="rek-journal-name-sherpa-link"
       rel="noopener noreferrer"
       tabindex="0"
       target="_blank"
-      title="Link to https://example.com/ will open in a new window."
+      title="Link to https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1376 will open in a new window."
     >
       <svg
         aria-hidden="true"

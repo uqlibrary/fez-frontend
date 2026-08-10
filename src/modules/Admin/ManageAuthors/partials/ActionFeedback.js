@@ -32,6 +32,8 @@ export const ActionFeedback = () => {
         authorListItemDeleteError,
         authorAddSuccess,
         authorAddError,
+        authorMergingSuccess,
+        authorMergingError,
         bulkAuthorDeleteMessages,
         scopusIngestRequesting,
         scopusIngestRequestSuccess,
@@ -42,6 +44,8 @@ export const ActionFeedback = () => {
         listAuthorErrorAlert,
         addAuthorSuccessAlert,
         addAuthorErrorAlert,
+        authorMergingSuccessAlert,
+        authorMergingErrorAlert,
         deleteAuthorSuccessAlert,
         deleteAuthorErrorAlert,
         updateAuthorSuccessAlert,
@@ -56,6 +60,11 @@ export const ActionFeedback = () => {
         const alert =
             (!!authorAddSuccess && addAuthorSuccessAlert) ||
             (!!authorAddError && addAuthorErrorAlert) ||
+            (!!authorMergingSuccess && authorMergingSuccessAlert) ||
+            (!!authorMergingError && {
+                ...authorMergingErrorAlert,
+                message: authorMergingErrorAlert.message(authorMergingError),
+            }) ||
             (!!authorListItemDeleteSuccess && deleteAuthorSuccessAlert) ||
             (!!authorListItemDeleteError && { ...deleteAuthorErrorAlert, message: authorListItemDeleteError }) ||
             (!!authorListItemUpdateSuccess && updateAuthorSuccessAlert) ||
@@ -73,14 +82,17 @@ export const ActionFeedback = () => {
             }) ||
             null;
 
-        !!alert &&
-            dispatch(
-                showAppAlert({
-                    ...alert,
-                    dismissAction: /* istanbul ignore next */ () => dispatch(dismissAppAlert()),
-                }),
-            );
+        if (!alert) {
+            dispatch(dismissAppAlert());
+            return;
+        }
 
+        dispatch(
+            showAppAlert({
+                ...alert,
+                dismissAction: /* istanbul ignore next */ () => dispatch(dismissAppAlert()),
+            }),
+        );
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
         authorListLoadingError,
@@ -90,6 +102,8 @@ export const ActionFeedback = () => {
         authorListItemDeleteError,
         authorAddSuccess,
         authorAddError,
+        authorMergingSuccess,
+        authorMergingError,
         bulkAuthorDeleteMessages,
         scopusIngestRequesting,
         scopusIngestRequestSuccess,

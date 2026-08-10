@@ -16,9 +16,6 @@ export default {
         myDatasets: {
             primaryText: 'My research data',
         },
-        authorStatistics: {
-            primaryText: 'Author statistics',
-        },
         claimPublication: {
             primaryText: 'Claim possible work',
         },

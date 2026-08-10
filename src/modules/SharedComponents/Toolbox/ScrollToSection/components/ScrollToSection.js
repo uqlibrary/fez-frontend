@@ -20,8 +20,9 @@ export const ScrollToSection = ({ scrollToSection, children }) => {
                 value={{
                     scrollToSection: scrollToSection,
                     sectionRef: React.createRef(),
-                    scrollToSectionCallback: (scrollToSection, sectionRef) => () =>
-                        scrollToSection && sectionRef.current.scrollIntoView(true),
+                    scrollToSectionCallback: (scrollToSection, sectionRef) => () => {
+                        scrollToSection && sectionRef.current.scrollIntoView(true);
+                    },
                 }}
             >
                 <ScrollToSectionDiv>{children}</ScrollToSectionDiv>

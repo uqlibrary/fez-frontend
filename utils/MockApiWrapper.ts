@@ -3,6 +3,7 @@
 import { clearLastRequest } from '../src/config/axios';
 import * as repositories from '../src/repositories';
 import MockAdapter from 'axios-mock-adapter';
+import * as repository from 'repositories';
 
 interface Params {
     status?: number;
@@ -10,17 +11,27 @@ interface Params {
     once?: boolean;
 }
 
+interface SearchParams extends Params {
+    page?: number;
+    pageSize?: number;
+    query?: string;
+}
+
 interface RecordParams extends Params {
     pid?: string;
 }
 
-interface JournalParams extends Params {
+interface JournalParams extends SearchParams {
     id?: string;
-    search?: string;
 }
 
 interface CvoParams extends Params {
     cvoId?: number;
+}
+
+interface AuthorParams extends Params {
+    staffId?: string;
+    studentId?: string;
 }
 
 interface ApiUrls {
@@ -41,9 +52,17 @@ interface ApiUrls {
     cvo: {
         get: (cvoId: number) => string;
     };
+    authors: {
+        search: (params: SearchParams) => RegExp;
+        merge: (staffId: string, studentId: string) => RegExp;
+    };
 }
 
-interface DatastreamApi {
+interface BaseApi {
+    instance: MockAdapter;
+}
+
+interface DatastreamApi extends BaseApi {
     presignedUrl: (params?: Params) => DatastreamApi;
     put: (params?: Params) => DatastreamApi;
     upload: (attributes?: Params, defaults?: Params) => DatastreamApi;
@@ -52,10 +71,9 @@ interface DatastreamApi {
     };
     records: RecordApi;
     cvo: ControlledVocabApi;
-    instance: MockAdapter;
 }
 
-interface RecordApi {
+interface RecordApi extends BaseApi {
     create: (params?: RecordParams) => RecordApi;
     get: (params?: RecordParams) => RecordApi;
     update: (params?: RecordParams) => RecordApi;
@@ -70,20 +88,23 @@ interface RecordApi {
     };
     files: DatastreamApi;
     cvo: ControlledVocabApi;
-    instance: MockAdapter;
 }
 
-interface JournalApi {
+interface JournalApi extends BaseApi {
     get: (params?: JournalParams) => JournalApi;
     search: (params?: JournalParams) => JournalApi;
-    instance: MockAdapter;
 }
 
-interface ControlledVocabApi {
+interface ControlledVocabApi extends BaseApi {
     get: (params: CvoParams) => ControlledVocabApi;
     records: RecordApi;
     files: DatastreamApi;
     instance: MockAdapter;
+}
+
+interface AuthorsApi extends BaseApi {
+    search: (params?: SearchParams) => AuthorsApi;
+    merge: (params?: AuthorParams) => AuthorsApi;
 }
 
 interface Api {
@@ -94,6 +115,7 @@ interface Api {
         journals: JournalApi;
         files: DatastreamApi;
         cvo: ControlledVocabApi;
+        authors: AuthorsApi;
         reset: () => void;
     };
     request: {
@@ -107,7 +129,7 @@ interface Api {
 const replyMethod = (once: boolean): 'reply' | 'replyOnce' => (once ? 'replyOnce' : 'reply');
 
 /**
- * This is an `mockApi` (Axios Mock Adapter instance) wrapper, for improved DX when mocking API requests.
+ * This is a `mockApi` (Axios Mock Adapter instance) wrapper, for improved DX when mocking API requests.
  */
 export const api: Api = {
     url: {
@@ -129,6 +151,10 @@ export const api: Api = {
         },
         cvo: {
             get: (cvoId: number) => repositories.routes.VOCABULARIES_API({ id: cvoId }).apiUrl,
+        },
+        authors: {
+            search: params => new RegExp(repository.routes.MANAGE_AUTHORS_LIST_API(params).apiUrl),
+            merge: (staffId, studentId) => new RegExp(repositories.routes.AUTHOR_MERGE_API(staffId, studentId).apiUrl),
         },
     },
     mock: {
@@ -213,10 +239,36 @@ export const api: Api = {
                 });
                 return this;
             },
-            search: function ({ status = 200, search = '', data = {}, once = true }: JournalParams = {}) {
-                this.instance.onGet(api.url.journals.search(search))[replyMethod(once)](status, {
+            search: function ({ status = 200, query = '', data = {}, once = true }: JournalParams = {}) {
+                this.instance.onGet(api.url.journals.search(query))[replyMethod(once)](status, {
                     data: { data: { ...data } },
                 });
+                return this;
+            },
+            instance: {} as MockAdapter,
+        },
+        authors: {
+            search: function ({
+                page = 0,
+                pageSize = 10,
+                query = '',
+                status = 200,
+                data = {},
+                once = true,
+            }: SearchParams = {}) {
+                this.instance
+                    .onGet(api.url.authors.search({ page, pageSize, query }))
+                    [replyMethod(once)](status, { data: data });
+                return this;
+            },
+            merge: function ({
+                staffId = '.*',
+                studentId = '.*',
+                status = 200,
+                data = {},
+                once = true,
+            }: AuthorParams = {}) {
+                this.instance.onPost(api.url.authors.merge(staffId, studentId))[replyMethod(once)](status, { ...data });
                 return this;
             },
             instance: {} as MockAdapter,
@@ -247,3 +299,4 @@ api.mock.cvo.records = api.mock.records as RecordApi;
 api.mock.cvo.files = api.mock.files as DatastreamApi;
 api.mock.cvo.instance = api.mock.instance as MockAdapter;
 api.mock.journals.instance = api.mock.instance as MockAdapter;
+api.mock.authors.instance = api.mock.instance as MockAdapter;

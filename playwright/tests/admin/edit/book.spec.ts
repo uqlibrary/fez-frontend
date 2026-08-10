@@ -2,7 +2,7 @@ import { test, expect, Locator } from '../../../test';
 
 import { default as recordList } from 'mock/data/records/publicationTypeListBook';
 import { sherpaRomeo as sherpaMocks } from 'mock/data/sherpaRomeo';
-import { ULRICHS_URL_PREFIX } from 'config/general';
+import { ULRICHS_URL_PREFIX, getOpenPolicyFinderUrl } from 'config/general';
 
 import {
     adminEditCheckDefaultTab,
@@ -19,14 +19,14 @@ test.describe('Book admin edit', () => {
 
     test('should load expected tabs', async ({ page }) => {
         await loadRecordForAdminEdit(page, record.rek_pid);
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
         await adminEditNoAlerts(page);
 
         await adminEditTabbedView(page);
         await adminEditCheckDefaultTab(page, 'Bibliographic');
 
         await adminEditTabbedView(page, false); // Pass page to adminEditTabbedView
-        await adminEditCountCards(page, 8);
+        await adminEditCountCards(page, 9);
     });
 
     test('should render the different sections as expected', async ({ page }) => {
@@ -69,9 +69,10 @@ test.describe('Book admin edit', () => {
         const bibliographicTab = page.getByTestId('bibliographic-section-content');
 
         const checkIssnLinks = async (container: Locator, issn: string) => {
-            const sherpaLink =
-                (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link ||
-                sherpaMocks[0].srm_journal_link;
+            const sherpaId =
+                (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_source_id || sherpaMocks[0].srm_source_id;
+
+            const sherpaLink = getOpenPolicyFinderUrl(sherpaId);
 
             await expect(container.getByText(issn, { exact: true })).toBeVisible();
 
@@ -80,7 +81,7 @@ test.describe('Book admin edit', () => {
             const sherpaRomeoLink = container.locator('a[data-testid="sherparomeo-link"]');
             await expect(sherpaRomeoLink).toBeVisible();
             await expect(container.locator('a[data-testid="sherparomeo-link"]')).toBeVisible();
-            await expect(container.locator('a').filter({ hasText: 'SHERPA/RoMEO' })).toBeVisible();
+            await expect(container.locator('a').filter({ hasText: 'Open Policy Finder' })).toBeVisible();
             await expect(container.locator('a[data-testid="ulrichs-link"]')).toBeVisible();
             await expect(container.locator('a').filter({ hasText: 'Ulrichs' })).toBeVisible();
             await expect(container.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
