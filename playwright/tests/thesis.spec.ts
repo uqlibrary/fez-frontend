@@ -1,5 +1,5 @@
 import { test, expect, Page } from '../test';
-import { typeCKEditor } from '../lib/ckeditor';
+import { typeRichTextEditor } from '../lib/richTextEditor';
 import {
     addItemUsingNamesPopoverForm,
     clickAutoSuggestion,
@@ -32,10 +32,10 @@ test.describe('Thesis', () => {
             await ensureErrorCount(page, 8);
 
             // Title
-            await typeCKEditor(page, 'rek-title', '<p>This is a thesis title</p>');
+            await typeRichTextEditor(page, 'rek-title', '<p>This is a thesis title</p>');
             await ensureErrorCount(page, 7);
             // Abstract
-            await typeCKEditor(page, 'rek-description', '<p>This is the thesis abstract</p>');
+            await typeRichTextEditor(page, 'rek-description', '<p>This is the thesis abstract</p>');
             await ensureErrorCount(page, 6);
 
             // Thesis subtype
@@ -150,17 +150,17 @@ test.describe('Thesis', () => {
             await page.goto('rhdsubmission?user=s5555555');
 
             // Title
-            await typeCKEditor(page, 'rek-title', 'a');
+            await typeRichTextEditor(page, 'rek-title', 'a');
             // subtype
             await page.getByTestId('rek-genre-type-select').click();
             await page.locator('li[data-value="MPhil Thesis"]').click();
             // Abstract
-            await typeCKEditor(page, 'rek-description', 'a');
+            await typeRichTextEditor(page, 'rek-description', 'a');
             // unit
             await page.getByTestId('rek-org-unit-name-input').fill('a');
             await clickAutoSuggestion(page, 'rek-org-unit-name', 0);
             // filling this field once doesn't always clear validation errors in this context
-            await typeCKEditor(page, 'rek-title', 'ab');
+            await typeRichTextEditor(page, 'rek-title', 'ab');
             // supervisors
             await addItemUsingNamesPopoverForm(page, 'rek-supervisor', 'James', 'Brown');
             await page.getByTestId('rek-supervisor-input').press('Enter');
@@ -170,7 +170,7 @@ test.describe('Thesis', () => {
             // keywords
             await page.getByTestId('rek-keywords-input').fill('a');
             await page.getByTestId('rek-keywords-input').press('Enter');
-            await typeCKEditor(page, 'rek-description', 'ab');
+            await typeRichTextEditor(page, 'rek-description', 'ab');
             // files
             await uploadFile(page, 'test.jpg');
             await uploadFile(page, 'test_two.jpg');
@@ -192,10 +192,10 @@ test.describe('Thesis', () => {
             await ensureErrorCount(page, 6);
 
             // Title
-            await typeCKEditor(page, 'rek-title', '<p>This is a thesis title</p>');
+            await typeRichTextEditor(page, 'rek-title', '<p>This is a thesis title</p>');
             await ensureErrorCount(page, 5);
             // Abstract
-            await typeCKEditor(page, 'rek-description', '<p>This is the thesis abstract</p>');
+            await typeRichTextEditor(page, 'rek-description', '<p>This is the thesis abstract</p>');
             await ensureErrorCount(page, 4);
             // Enrolling unit
             await page.getByTestId('rek-org-unit-name-input').fill('a');
@@ -225,21 +225,21 @@ test.describe('Thesis', () => {
             await page.goto('habslodge?user=s5555555');
 
             // Title
-            await typeCKEditor(page, 'rek-title', 'a');
+            await typeRichTextEditor(page, 'rek-title', 'a');
             // Abstract
-            await typeCKEditor(page, 'rek-description', 'a');
+            await typeRichTextEditor(page, 'rek-description', 'a');
             // Enrolling unit
             await page.getByTestId('rek-org-unit-name-input').fill('a');
             await clickAutoSuggestion(page, 'rek-org-unit-name', 0);
             // filling this field once doesn't always clear validation errors in this context
-            await typeCKEditor(page, 'rek-title', 'ab');
+            await typeRichTextEditor(page, 'rek-title', 'ab');
             // Supervisors
             await addItemUsingNamesPopoverForm(page, 'rek-supervisor', 'Ky', 'Lane');
             await page.getByTestId('rek-supervisor-input').press('Enter');
             // Field of Research
             await page.getByTestId('rek-subject-input').fill('a');
             await clickAutoSuggestion(page, 'rek-subject', 0);
-            await typeCKEditor(page, 'rek-description', 'ab');
+            await typeRichTextEditor(page, 'rek-description', 'ab');
             // Files
             await uploadFile(page, 'test.jpg');
             await uploadFile(page, 'test_two.jpg');

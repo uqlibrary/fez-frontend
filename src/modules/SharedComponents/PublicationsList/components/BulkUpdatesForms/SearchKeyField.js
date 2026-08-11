@@ -13,7 +13,7 @@ import {
 } from 'config/bulkUpdates';
 
 import { OrgUnitNameField, SeriesField } from 'modules/SharedComponents/LookupFields';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { OA_STATUS, SCOPUS_DOC_TYPES, WOS_DOC_TYPES } from 'config/general';
 import { selectFields } from 'locale/selectFields';
@@ -57,7 +57,7 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
         },
     },
     [BULK_UPDATE_SEARCH_KEY_ADDITIONAL_NOTES]: {
-        component: RichEditorField,
+        component: RichTextEditorField,
         componentProps: {
             title: 'Search key value',
             titleProps: {
@@ -66,9 +66,8 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
                     opacity: 0.666,
                 },
             },
-            height: 100,
             normalize: normalizeFn,
-            richEditorId: 'rek-notes',
+            id: 'rek-notes',
         },
     },
     [BULK_UPDATE_SEARCH_KEY_SERIES]: {
@@ -89,7 +88,7 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
         },
     },
     [BULK_UPDATE_SEARCH_KEY_ADVISORY_STATEMENT]: {
-        component: RichEditorField,
+        component: RichTextEditorField,
         componentProps: {
             title: 'Search key value',
             titleProps: {
@@ -98,9 +97,8 @@ export const BULK_UPDATES_SEARCH_KEY_COMPONENTS = {
                     opacity: 0.666,
                 },
             },
-            height: 100,
             normalize: normalizeFn,
-            richEditorId: 'rek-advisory-statement',
+            id: 'rek-advisory-statement',
         },
     },
 };

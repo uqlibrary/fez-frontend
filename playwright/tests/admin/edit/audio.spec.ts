@@ -12,7 +12,7 @@ import {
     loadRecordForAdminEdit,
 } from '../helpers';
 import { checkPartialDateFromRecordValue, setPartialDate } from '../../../lib/helpers';
-import { readCKEditor } from '../../../lib/ckeditor';
+import { readRichTextEditor } from '../../../lib/richTextEditor';
 
 test.describe('Audio admin edit', () => {
     const record = { ...recordList.data[0] };
@@ -67,11 +67,11 @@ test.describe('Audio admin edit', () => {
         await expect(bibliographicCard.getByTestId('rek-rights-input')).toHaveText(
             record.fez_record_search_key_rights.rek_rights,
         );
-        await expect(bibliographicCard.getByTestId('rek-transcript').locator('.MuiTypography-caption')).toHaveText(
-            'Transcript',
-        );
+        await expect(
+            bibliographicCard.getByTestId('rek-transcript-container').locator('.MuiTypography-caption'),
+        ).toHaveText('Transcript');
 
-        const transcriptText = await readCKEditor(page, 'rek-transcript');
+        const transcriptText = await readRichTextEditor(page, 'rek-transcript');
         expect(transcriptText).toContain(record.fez_record_search_key_transcript.rek_transcript.substring(0, 10));
 
         await expect(bibliographicCard.getByTestId('rek-alternate-genre-input')).toHaveValue(
@@ -124,7 +124,7 @@ test.describe('Audio admin edit', () => {
         await expect(advisoryCardScope.locator('h4')).toHaveText('Advisory statement');
         await expect(advisoryCardScope.locator('span span').first()).toHaveText('Advisory statement');
 
-        const advisoryText = await readCKEditor(page, 'rek-advisory-statement');
+        const advisoryText = await readRichTextEditor(page, 'rek-advisory-statement');
         expect(advisoryText).toContain(record.fez_record_search_key_advisory_statement.rek_advisory_statement);
     });
 });
