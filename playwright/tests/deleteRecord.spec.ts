@@ -8,7 +8,7 @@ import {
     recordThatFailsDeletion,
 } from 'mock/data/records';
 import { assertTriggersDisabled, fillInput, navToHomeFromMenu } from '../lib/helpers';
-import { typeCKEditor } from '../lib/ckeditor';
+import { typeRichTextEditor } from '../lib/richTextEditor';
 
 const record = myRecordsList.data[0];
 const recordWithCrossrefDoi = publicationTypeListThesis.data[0];
@@ -80,8 +80,8 @@ test.describe('Delete work form', () => {
                     await triggerReasonFieldValidationError(page);
                     await fillInput(page, '[data-testid=rek-new-doi-input]', '10.123.bad-doi');
                     await expect(page.getByTestId('rek-new-doi-helper-text')).toContainText('DOI is not valid');
-                    await typeCKEditor(page, 'rek-deletion-notes', 'a'.repeat(2001));
-                    const helperTextContainer = page.getByTestId('rek-deletion-notes').locator(' span');
+                    await typeRichTextEditor(page, 'rek-deletion-notes', 'a'.repeat(2001));
+                    const helperTextContainer = page.getByTestId('rek-deletion-notes-container').locator(' span');
                     await expect(helperTextContainer.nth((await helperTextContainer.count()) - 3)).toContainText(
                         'Must be 2000 characters or less',
                     );

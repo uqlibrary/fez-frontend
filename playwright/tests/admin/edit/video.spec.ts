@@ -9,7 +9,7 @@ import {
     assertAffiliationsAllowed,
     loadRecordForAdminEdit,
 } from '../helpers';
-import { typeCKEditor } from '../../../lib/ckeditor';
+import { typeRichTextEditor } from '../../../lib/richTextEditor';
 
 test.describe('Video admin edit', () => {
     const record = { ...recordList.data[0] };
@@ -38,7 +38,7 @@ test.describe('Video admin edit', () => {
     });
 
     test('should submit successfully', async ({ page }) => {
-        await typeCKEditor(page, 'rek-description', 'some description'); // description
+        await typeRichTextEditor(page, 'rek-description', 'some description'); // description
         await page.locator('#admin-work-submit').click();
         // Confirmation message
         const dialog = page.getByRole('dialog');

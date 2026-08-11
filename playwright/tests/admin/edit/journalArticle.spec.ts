@@ -14,7 +14,7 @@ import {
     editAffiliationAndAssert,
     loadRecordForAdminEdit,
 } from '../helpers';
-import { readCKEditor } from '../../../lib/ckeditor';
+import { readRichTextEditor } from '../../../lib/richTextEditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 import { sortByNumericField } from '../../../../src/helpers/general';
 import { getOpenPolicyFinderUrl } from 'config/general';
@@ -43,11 +43,11 @@ test.describe('Journal Article admin edit', () => {
 
         // ---------------------------------------------- NOTES TAB --------------------------------------------------
         await expect(page.getByTestId('notes-section-header')).toHaveText('Notes');
-        let ckeditorText = await readCKEditor(page, 'rek-notes');
-        expect(ckeditorText).toContain(record.fez_record_search_key_notes.rek_notes);
+        let rchText = await readRichTextEditor(page, 'rek-notes');
+        expect(rchText).toContain(record.fez_record_search_key_notes.rek_notes);
         // 'Published online before print: 28 December 2012.'
-        ckeditorText = await readCKEditor(page, 'ain-notes');
-        expect(ckeditorText).toContain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13'
+        rchText = await readRichTextEditor(page, 'ain-notes');
+        expect(rchText).toContain(record.fez_internal_notes.ain_detail); // 'Not yet indexed in Scopus/ISI 3/5/13'
 
         // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
         await expect(page.getByTestId('identifiers-section-header')).toHaveText('Identifiers');
@@ -92,8 +92,8 @@ test.describe('Journal Article admin edit', () => {
             const card = bibliographicCards.first();
             await expect(card.locator('h4')).toHaveText(/Title/);
             await expect(card.locator('span span').first()).toContainText('Formatted title');
-            const titleCkEditorText = await readCKEditor(page, 'rek-title');
-            expect(titleCkEditorText).toContain(record.rek_title);
+            const titleText = await readRichTextEditor(page, 'rek-title');
+            expect(titleText).toContain(record.rek_title);
         }
         {
             const card = bibliographicCards.nth(1);
@@ -171,8 +171,8 @@ test.describe('Journal Article admin edit', () => {
                 moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY'),
             );
             await expect(bibliographicCard.locator('span span').first()).toHaveText('Abstract / Description');
-            const descriptionCkEditorText = await readCKEditor(page, 'rek-description');
-            expect(descriptionCkEditorText).toContain(record.rek_description);
+            const descriptionText = await readRichTextEditor(page, 'rek-description');
+            expect(descriptionText).toContain(record.rek_description);
         }
         {
             const card = bibliographicCards.nth(5);
