@@ -171,7 +171,7 @@
     "@mui/x-charts": "8.19.0",
     "@mui/x-data-grid": "7.29.5",
     "@mui/x-date-pickers": "7.29.4",
-    "@sentry/react": "^10.28.0",
+    "@sentry/react": "^10.69.0",
     "@tiptap/core": "^3.28.0",
     "@tiptap/extension-bold": "^3.28.0",
     "@tiptap/extension-document": "^3.28.0",
