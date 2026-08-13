@@ -43,7 +43,7 @@ export const createListUrl = (id: string | number) =>
     `${pathConfig.journals.search}?${encodeURI(`activeFacets[filters][ShowFavouritedOnly]=${id}&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND#/journals/search/?activeFacets[filters][ShowFavouritedOnly]=true&page=1&keywords[Keyword-all-journals][type]=Keyword&keywords[Keyword-all-journals][text]=all+journals&keywords[Keyword-all-journals][id]=Keyword-all-journals&keywords[Keyword-all-journals][operand]=AND`)}`;
 
 export const createListSharingUrl = (id: string | number) =>
-    `${APP_URL.replace(/\/$/, window.location.hash ? '/#' : '')}${createListUrl(id)}`;
+    `${APP_URL.replace(/\/$/, window.location.hash ? /* istanbul ignore next */ '/#' : '')}${createListUrl(id)}`;
 
 export const useColumns = ({
     txt,
@@ -229,7 +229,7 @@ export const useColumns = ({
                             label="items"
                             onClick={() => navigate(pathConfig.journals.favourites(String(rowId)))}
                             color="inherit"
-                            data-testid={`journal-user-lists-item-${index}-delete`}
+                            data-testid={`journal-user-lists-item-${index}-items`}
                             disabled={isAnyInEditMode || isAnyDeleting}
                         />,
                         <GridActionsCellItem

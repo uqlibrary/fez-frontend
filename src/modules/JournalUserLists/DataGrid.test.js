@@ -10,13 +10,40 @@ import {
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
 import { JOURNAL_FAVOURITE_LIST_LABEL } from '../../config/general';
-import { createListUrl } from './useColumns';
+import { createListUrl, createListSharingUrl } from './useColumns';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
     useDispatch: () => mockDispatch,
 }));
+
+const mockNavigate = jest.fn();
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
+    useNavigate: () => mockNavigate,
+}));
+
+const mockCopyToClipboard = jest.fn();
+jest.mock('usehooks-ts', () => ({
+    useCopyToClipboard: () => [null, mockCopyToClipboard],
+}));
+
+jest.mock(
+    'modules/SharedComponents/Toolbox/CopyToClipboardDialog',
+    () => props =>
+        props.open ? (
+            <div data-testid="copy-dialog">
+                <span data-testid="copy-dialog-text">{props.text}</span>
+                <button data-testid="copy-dialog-copy" onClick={props.onCopy}>
+                    Copy
+                </button>
+                <button data-testid="copy-dialog-close" onClick={props.onClose}>
+                    Close
+                </button>
+            </div>
+        ) : null,
+);
 
 const createAction = jest.fn();
 const updateAction = jest.fn();
@@ -48,13 +75,13 @@ describe('DataGrid', () => {
         jest.clearAllMocks();
     });
 
-    const firstOf = (container, testId) => within(container).getAllByTestId(testId)[0];
-
     it('should render rows from data', () => {
-        const { container } = setup();
+        const { getByTestId } = setup();
 
-        expect(firstOf(container, 'fjl-label-1')).toHaveTextContent('List one');
-        expect(firstOf(container, 'fjl-label-2')).toHaveTextContent('List two');
+        expect(getByTestId('fjl-label-1')).toHaveTextContent('List one');
+        expect(getByTestId('fjl-label-2')).toHaveTextContent('List two');
+        expect(getByTestId('fjl-view-link-1')).toHaveAttribute('href', createListUrl(1));
+        expect(getByTestId('fjl-view-link-2')).toHaveAttribute('href', createListUrl(2));
         assertToBeInTheDocument('journal-user-lists-quicksearch');
         assertEnabled('journal-user-lists-add');
     });
@@ -91,13 +118,13 @@ describe('DataGrid', () => {
     });
 
     it('should remove newly added row on cancel', async () => {
-        const { getByTestId, queryByTestId, container } = setup();
+        const { getByTestId, queryByTestId } = setup();
 
         await userEvent.click(getByTestId('journal-user-lists-add'));
         await userEvent.click(getByTestId('journal-user-lists-item-0-cancel'));
 
         expect(queryByTestId('fjl-label-new')).not.toBeInTheDocument();
-        expect(firstOf(container, 'fjl-label-1')).toBeInTheDocument();
+        expect(getByTestId('fjl-label-1')).toBeInTheDocument();
     });
 
     it('should call deleteAction when confirming delete of existing row', async () => {
@@ -203,17 +230,68 @@ describe('DataGrid', () => {
         expect(switchInput).not.toBeChecked();
     });
 
-    it('should link to journal search', async () => {
+    it('should disable view/share links while any row is in edit mode', async () => {
         const { getByTestId } = setup();
 
-        expect(getByTestId('fjl-link-1')).toHaveAttribute('href', createListUrl(1));
-        expect(getByTestId('fjl-link-2')).toHaveAttribute('href', createListUrl(2));
+        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
+
+        expect(getByTestId('fjl-view-link-1')).toHaveAttribute('href', '');
     });
 
-    it('should link to list items page', async () => {
+    it('should disable share link for a non-public list', () => {
         const { getByTestId } = setup();
 
-        const listLink = getByTestId('fjl-items-link-1').querySelector('a');
-        expect(listLink).toHaveAttribute('href', pathConfig.journals.favourites(data[0].id));
+        const shareLink = getByTestId('fjl-sharable-link-2');
+        expect(shareLink).toHaveAttribute('href', createListUrl(2));
+        expect(shareLink).toHaveStyle({ pointerEvents: 'none', opacity: 0.5 });
+    });
+
+    it('should not open share dialog when clicking share link on non-public list', async () => {
+        const { getByTestId, queryByTestId } = setup();
+
+        await userEvent.click(getByTestId('fjl-sharable-link-2'), { pointerEventsCheck: 0 });
+
+        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
+        expect(mockCopyToClipboard).not.toHaveBeenCalled();
+    });
+
+    it('should not open share dialog when clicking view/share link while a row is in edit mode', async () => {
+        const { getByTestId, queryByTestId } = setup();
+
+        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
+        await userEvent.click(getByTestId('fjl-sharable-link-1'), { pointerEventsCheck: 0 });
+
+        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
+    });
+
+    it('should copy link and close dialog when confirming copy', async () => {
+        mockCopyToClipboard.mockResolvedValue(undefined);
+        const { getByTestId, queryByTestId } = setup();
+
+        await userEvent.click(getByTestId('fjl-sharable-link-1'));
+        expect(getByTestId('copy-dialog-text')).toHaveTextContent(createListSharingUrl(1));
+
+        await userEvent.click(getByTestId('copy-dialog-copy'));
+
+        expect(mockCopyToClipboard).toHaveBeenCalledWith(createListSharingUrl(1));
+        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
+    });
+
+    it('should close copy dialog without copying', async () => {
+        const { getByTestId, queryByTestId } = setup();
+
+        await userEvent.click(getByTestId('fjl-sharable-link-1'));
+        await userEvent.click(getByTestId('copy-dialog-close'));
+
+        expect(mockCopyToClipboard).not.toHaveBeenCalled();
+        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
+    });
+
+    it('should navigate to list items page when clicking items action', async () => {
+        const { getByTestId } = setup();
+
+        await userEvent.click(getByTestId('journal-user-lists-item-0-items'));
+
+        expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.favourites(String(data[0].id)));
     });
 });
