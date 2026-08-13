@@ -221,7 +221,10 @@ describe('ControlledVocabularies', () => {
                 await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
 
                 await userEvent.click(getByTestId('expand-row-453669'));
-                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+
+                await waitFor(() => {
+                    expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
+                });
 
                 await userEvent.click(getByTestId('admin-edit-button-453670'));
 
