@@ -1,18 +1,19 @@
 import { test, expect, Page, Locator } from '../../../test';
 
 import { sherpaRomeo as sherpaMocks } from '../../../../src/mock/data/sherpaRomeo';
-import { readCKEditor, typeCKEditor } from '../../../lib/ckeditor';
-import { ULRICHS_URL_PREFIX } from 'config/general';
+import { readRichTextEditor, typeRichTextEditor } from '../../../lib/richTextEditor';
+import { ULRICHS_URL_PREFIX, getOpenPolicyFinderUrl } from 'config/general';
 
 const removeJournalLock = async (page: Page) => {
     await page.getByTestId('alert-error').getByTestId('action-button').click();
 };
 
 const checkIssnLinks = async (container: Locator, issn: string) => {
-    const sherpaLink =
-        (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_journal_link || sherpaMocks[0].srm_journal_link;
+    const sherpaId =
+        (sherpaMocks.find(item => item.srm_issn === issn) || {}).srm_source_id || sherpaMocks[0].srm_source_id;
+    const sherpaLink = sherpaId ? getOpenPolicyFinderUrl(sherpaId) : sherpaId;
     await expect(container).toContainText(issn);
-    await expect(container).toContainText('SHERPA/RoMEO');
+    await expect(container).toContainText('Open Policy Finder');
     await expect(container).toContainText('Ulrichs');
     await expect(container.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
 
@@ -50,8 +51,8 @@ test.describe('JournalAdmin', () => {
             await page.getByTestId('jnl_publisher-input').fill('Walter de Gruyter GmbH UPDATED');
             await expect(page.getByTestId('jnl_publisher-input')).toHaveValue('Walter de Gruyter GmbH UPDATED');
 
-            await typeCKEditor(page, 'jnl-advisory-statement', 'This is an advisory statement UPDATED');
-            expect(await readCKEditor(page, 'jnl-advisory-statement')).toContain(
+            await typeRichTextEditor(page, 'jnl-advisory-statement', 'This is an advisory statement UPDATED');
+            expect(await readRichTextEditor(page, 'jnl-advisory-statement')).toContain(
                 'This is an advisory statement UPDATED',
             );
         });
@@ -163,8 +164,8 @@ test.describe('JournalAdmin', () => {
             await page.getByTestId('jnl_publisher-input').fill('Walter de Gruyter GmbH UPDATED');
             await expect(page.getByTestId('jnl_publisher-input')).toHaveValue('Walter de Gruyter GmbH UPDATED');
 
-            await typeCKEditor(page, 'jnl-advisory-statement', 'This is an advisory statement UPDATED');
-            const text = await readCKEditor(page, 'jnl-advisory-statement');
+            await typeRichTextEditor(page, 'jnl-advisory-statement', 'This is an advisory statement UPDATED');
+            const text = await readRichTextEditor(page, 'jnl-advisory-statement');
             await expect(text).toContain('This is an advisory statement UPDATED');
 
             await page.getByTestId('jnl_issn_jid-list-row-1-move-up').click();

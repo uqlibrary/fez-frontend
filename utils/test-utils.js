@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { render, within } from '@testing-library/react';
+import { act, render, within } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider, MemoryRouter } from 'react-router';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
@@ -540,12 +540,9 @@ const sortObjectProps = obj => {
  * @param {string} testId
  * @return {Promise<Element>}
  */
-const getRichTextEditor = async testId =>
-    await waitFor(() => {
-        const el = screen.getByTestId(testId).querySelector('.ck-editor__editable');
-        if (!el.ckeditorInstance) throw new Error('Waiting for CKEditor editable element');
-        return el;
-    });
+const getRichTextEditor = async testId => {
+    return await screen.findByTestId(testId);
+};
 
 /**
  * Note: value is set programmatically, not via DOM
@@ -553,8 +550,10 @@ const getRichTextEditor = async testId =>
  * @param {string} value
  */
 const setRichTextEditorValue = async (testId, value) => {
-    const editor = await getRichTextEditor(testId);
-    await editor.ckeditorInstance.setData(value);
+    const editorElement = await getRichTextEditor(testId);
+    await act(async () => {
+        editorElement.editor.commands.setContent(value);
+    });
     await userEvent.tab();
 };
 
