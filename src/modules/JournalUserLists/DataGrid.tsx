@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     GridRowModes,
     DataGrid as MuiDataGrid,
@@ -13,6 +13,8 @@ import { Row, useGrid } from './useGridHook';
 import { useColumns } from './useColumns';
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
 import { Box } from '@mui/material';
+import CopyToClipboardDialog from 'modules/SharedComponents/Toolbox/CopyToClipboardDialog';
+import { useCopyToClipboard } from 'usehooks-ts';
 
 interface DataGridProps {
     data?: { data: FezJournalUserList[] };
@@ -23,6 +25,10 @@ interface DataGridProps {
 
 export const DataGrid = ({ data, createAction, updateAction, deleteAction }: DataGridProps) => {
     const txt = locale.components.journalUserLists;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [_, copyToClipboard] = useCopyToClipboard();
+    const [linkToBeCopied, setLinkToBeCopied] = useState('');
+    const [isCopyLinkDialogOpen, setIsCopyLinkDialogOpen] = useState(false);
     const {
         rows,
         setRows,
@@ -104,6 +110,19 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
         [onCancelClick],
     );
 
+    const onShareListClick = (url: string) => {
+        setLinkToBeCopied(url);
+        setIsCopyLinkDialogOpen(true);
+    };
+
+    const onCopiedLink = async () => {
+        // @ts-ignore
+        await copyToClipboard(linkToBeCopied);
+        setIsCopyLinkDialogOpen(false);
+    };
+
+    const onCloseCopyLinkDialog = () => setIsCopyLinkDialogOpen(false);
+
     const columns = useColumns({
         txt: txt.grid,
         deleteRowId,
@@ -112,6 +131,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
         onCancelClick,
         onDeleteClick,
         handleDeleteRow,
+        onShareListClick,
         onEditClick,
         onSaveClick,
         rowModesModel,
@@ -158,55 +178,64 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
     );
 
     return (
-        <MuiDataGrid
-            data-testid="journal-user-lists-grid"
-            rowHeight={38}
-            initialState={{
-                pagination: {
-                    paginationModel: {
-                        page: 0,
-                        pageSize: 10,
+        <>
+            <CopyToClipboardDialog
+                title={txt.grid.columns.sharableLink.copyLink.title}
+                open={isCopyLinkDialogOpen}
+                text={linkToBeCopied}
+                onCopy={onCopiedLink}
+                onClose={onCloseCopyLinkDialog}
+            />
+            <MuiDataGrid
+                data-testid="journal-user-lists-grid"
+                rowHeight={38}
+                initialState={{
+                    pagination: {
+                        paginationModel: {
+                            page: 0,
+                            pageSize: 10,
+                        },
                     },
-                },
-            }}
-            pageSizeOptions={[10, 25, 50, 100]}
-            rows={rows}
-            getRowId={row => row.id}
-            columns={columns}
-            editMode="row"
-            rowModesModel={rowModesModel}
-            loading={processing}
-            onRowModesModelChange={handleRowModesModelChange}
-            processRowUpdate={handleUpdateRow}
-            onCellKeyDown={handleCellKeyDown}
-            onProcessRowUpdateError={/* istanbul ignore next */ (err: unknown) => console.error(err)}
-            localeText={{ noRowsLabel: txt.grid.noRowsLabel }}
-            slots={{ toolbar: Toolbar }}
-            slotProps={{
-                toolbar: {
-                    showQuickFilter: true,
-                    quickFilterProps: {
-                        debounceMs: 300,
+                }}
+                pageSizeOptions={[10, 25, 50, 100]}
+                rows={rows}
+                getRowId={row => row.id}
+                columns={columns}
+                editMode="row"
+                rowModesModel={rowModesModel}
+                loading={processing}
+                onRowModesModelChange={handleRowModesModelChange}
+                processRowUpdate={handleUpdateRow}
+                onCellKeyDown={handleCellKeyDown}
+                onProcessRowUpdateError={/* istanbul ignore next */ (err: unknown) => console.error(err)}
+                localeText={{ noRowsLabel: txt.grid.noRowsLabel }}
+                slots={{ toolbar: Toolbar }}
+                slotProps={{
+                    toolbar: {
+                        showQuickFilter: true,
+                        quickFilterProps: {
+                            debounceMs: 300,
+                        },
                     },
-                },
-            }}
-            sx={{
-                border: 0,
-                '& .cell-styled': {
-                    lineHeight: 1.43,
-                    alignContent: 'center',
-                },
-                '&.MuiDataGrid-root .MuiDataGrid-cell:focus-within': {
-                    outline: 'none !important',
-                },
-            }}
-            disableDensitySelector
-            disableColumnMenu
-            disableColumnFilter
-            disableColumnSelector
-            disableRowSelectionOnClick
-        />
+                }}
+                sx={{
+                    border: 0,
+                    '& .cell-styled': {
+                        lineHeight: 1.43,
+                        alignContent: 'center',
+                    },
+                    '&.MuiDataGrid-root .MuiDataGrid-cell:focus-within': {
+                        outline: 'none !important',
+                    },
+                }}
+                disableDensitySelector
+                disableColumnMenu
+                disableColumnFilter
+                disableColumnSelector
+                disableRowSelectionOnClick
+            />
+        </>
     );
-};
+};;;;;;;
 
 export default React.memo(DataGrid);

@@ -4520,19 +4520,25 @@ export default {
             grid: {
                 noRowsLabel: 'No lists to display',
                 columns: {
-                    link: {
-                        title: 'Link',
-                    },
                     label: {
                         title: 'Label',
                     },
                     isPublic: {
-                        title: 'Is public',
+                        title: 'Is sharable',
                     },
-                    items: {
-                        title: 'Items',
-                        link: {
-                            title: 'Click to manage view Items',
+                    sharableLink: {
+                        title: 'Sharing Link',
+                        copyLink: {
+                            title: (
+                                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                                    Copy list's sharing link <Link />
+                                </span>
+                            ),
+                        },
+                    },
+                    actions: {
+                        items: {
+                            title: 'Manage Items',
                         },
                     },
                 },
