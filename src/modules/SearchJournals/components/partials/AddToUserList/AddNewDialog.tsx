@@ -13,6 +13,7 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { DecoratedField } from 'modules/SharedComponents/Toolbox/ReactHookForm/components/Controller';
 import { validation } from 'config';
 import { useForm } from 'hooks';
+import { locale } from 'locale';
 
 export type FormValues = {
     label: string;
@@ -28,6 +29,7 @@ export type CreateListDialogProps = {
 };
 
 const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate, paperRef }) => {
+    const txt = locale.components.searchJournals.partials.addNewDialog;
     const {
         control,
         reset,
@@ -41,7 +43,7 @@ const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate
             isPublic: false,
         },
     });
-    const error = validationErrors.label?.message || (serverError ? 'Failed to create list, please try again.' : '');
+    const error = validationErrors.label?.message || (serverError ? txt.serverError : '');
 
     useEffect(() => {
         if (open) reset();
@@ -76,7 +78,7 @@ const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate
                     fontSize: '1rem',
                 }}
             >
-                New favourites list
+                {txt.title}
                 <IconButton
                     data-testid="add-to-user-list-dialog-close-button"
                     onClick={handleClose}
@@ -115,7 +117,7 @@ const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate
                                     disabled={isSubmitting}
                                 />
                             }
-                            label="Make this list public"
+                            label={txt.isPublicButtonLabel}
                         />
                     )}
                 />

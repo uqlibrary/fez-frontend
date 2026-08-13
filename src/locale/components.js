@@ -4,10 +4,8 @@ import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
-
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
+import Link from '@mui/icons-material/Link';
+import _ from 'lodash';
 
 export default {
     components: {
@@ -1536,11 +1534,11 @@ export default {
             },
         },
         authorsList: suffix => ({
-            title: `${capitalizeFirstLetter(suffix)}s`,
+            title: `${_.upperFirst(suffix)}s`,
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameAsPublishedLabel: `${_.upperFirst(suffix)}'s name as published`,
                         nameAsPublishedHint: 'Enter the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
                         externalIdentifierLabel: 'External identifier',
@@ -1582,7 +1580,7 @@ export default {
                 header: {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameColumn: `${_.upperFirst(suffix)}'s name as published`,
                         identifierColumn: 'UQ identifiers',
                         externalIdentifierColumn: 'External identifier',
                         externalIdentifierTypeColumn: 'External identifier type',
@@ -4545,6 +4543,11 @@ export default {
                 message: 'Search results updated',
             },
             partials: {
+                addNewDialog: {
+                    title: 'New favourites list',
+                    isPublicButtonLabel: 'Make this list sharable?',
+                    serverError: 'Failed to create list, please try again.',
+                },
                 addToSelectedSubjects: {
                     button: {
                         title: 'Add a subject to broaden results',
