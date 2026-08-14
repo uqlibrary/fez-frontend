@@ -1,7 +1,6 @@
 import React from 'react';
 import { render as defaultRender, screen, userEvent } from 'test-utils';
 import ListSelect from './ListSelect';
-import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 
 const lists = [
     {
@@ -10,7 +9,7 @@ const lists = [
     },
     {
         id: 2,
-        label: JOURNAL_FAVOURITE_LIST_LABEL,
+        label: 'Favourites',
     },
 ];
 

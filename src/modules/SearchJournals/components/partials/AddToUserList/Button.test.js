@@ -4,7 +4,6 @@ import { render as defaultRender, userEvent, act } from 'test-utils';
 import { useDispatch, useSelector } from 'react-redux';
 import { addListItems, createList, loadLists } from '../../../../../actions/journalUserLists';
 import Button from './Button';
-import { JOURNAL_FAVOURITE_LIST_LABEL } from '../../../../../config/general';
 import { useDispatchOnce } from 'hooks/useDispatchOnce';
 
 jest.mock('react-redux', () => ({
@@ -75,7 +74,7 @@ const defaultListData = [
     },
     {
         id: 2,
-        label: JOURNAL_FAVOURITE_LIST_LABEL,
+        label: 'Favourites',
     },
 ];
 

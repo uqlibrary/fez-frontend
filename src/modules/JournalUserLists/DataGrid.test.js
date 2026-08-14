@@ -9,7 +9,6 @@ import {
 } from 'test-utils';
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
-import { JOURNAL_FAVOURITE_LIST_LABEL } from '../../config/general';
 import { createListUrl, createListSharingUrl } from './useColumns';
 
 const mockDispatch = jest.fn();
@@ -52,7 +51,7 @@ const deleteAction = jest.fn();
 const data = [
     { id: 1, label: 'List one', is_public: true },
     { id: 2, label: 'List two', is_public: false },
-    { id: 3, label: JOURNAL_FAVOURITE_LIST_LABEL, is_public: true },
+    { id: 3, label: 'Favourites', is_public: true },
 ];
 
 const setup = (testProps = {}, render = defaultRender) => {

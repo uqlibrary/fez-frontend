@@ -10,7 +10,6 @@ import ListSplitButtonMenu, {
 import { FezJournalUserList } from 'types/models/FezJournalUserList';
 import AddNewDialog, { FormValues } from './AddNewDialog';
 import { AnyAction } from 'redux';
-import { JOURNAL_FAVOURITE_LIST_LABEL } from 'config/general';
 import { useDispatchOnce } from 'hooks/useDispatchOnce';
 
 // eslint-disable-next-line camelcase
@@ -140,7 +139,7 @@ const Button: React.FC<{
             <ListSplitButtonMenu
                 id="add-to-list-menu"
                 items={list}
-                placeholder={`Add to ${JOURNAL_FAVOURITE_LIST_LABEL}`}
+                placeholder={`Add to favourites`}
                 selectedIndex={selectedIndex}
                 onItemSelect={setSelectedIndex}
                 onClick={handleMainClick}
