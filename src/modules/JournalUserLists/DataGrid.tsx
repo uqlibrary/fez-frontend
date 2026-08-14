@@ -5,6 +5,8 @@ import {
     GridToolbarContainer,
     GridRowModesModel,
     GridToolbarQuickFilter,
+    GridCellParams,
+    useGridApiRef,
 } from '@mui/x-data-grid';
 import Add from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
@@ -25,6 +27,7 @@ interface DataGridProps {
 
 export const DataGrid = ({ data, createAction, updateAction, deleteAction }: DataGridProps) => {
     const txt = locale.components.journalUserLists;
+    const apiRef = useGridApiRef();
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_, copyToClipboard] = useCopyToClipboard();
     const [linkToBeCopied, setLinkToBeCopied] = useState('');
@@ -98,13 +101,26 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
     );
 
     const handleCellKeyDown = React.useCallback(
-        (
-            params: { id: number | string; row?: Row },
-            event: React.KeyboardEvent & { defaultMuiPrevented?: boolean },
-        ) => {
-            if (event.key === 'Escape' && params.row?.isNew) {
+        (params: GridCellParams, event: React.KeyboardEvent & { defaultMuiPrevented?: boolean }) => {
+            // for new rows only - the grid already take care of the below for existing rows
+            if (!params.row.isNew) return;
+
+            // cancel row adding on esc key
+            if (event.key === 'Escape') {
                 event.defaultMuiPrevented = true;
                 onCancelClick(Number(params.id))();
+                return;
+            }
+
+            // avoid empty rows from being added
+            /* istanbul ignore else */
+            if (event.key === 'Enter') {
+                // apiRef has to be used, as `params.row` is stale
+                const row = apiRef.current.getRowWithUpdatedValues(params.id, '');
+                /* istanbul ignore else */
+                if (!row.label?.trim?.()) {
+                    event.defaultMuiPrevented = true;
+                }
             }
         },
         [onCancelClick],
@@ -116,7 +132,6 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
     };
 
     const onCopiedLink = async () => {
-        // @ts-ignore
         await copyToClipboard(linkToBeCopied);
         setIsCopyLinkDialogOpen(false);
     };
@@ -187,6 +202,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                 onClose={onCloseCopyLinkDialog}
             />
             <MuiDataGrid
+                apiRef={apiRef}
                 data-testid="journal-user-lists-grid"
                 rowHeight={38}
                 initialState={{
@@ -207,6 +223,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                 onRowModesModelChange={handleRowModesModelChange}
                 processRowUpdate={handleUpdateRow}
                 onCellKeyDown={handleCellKeyDown}
+                onCellDoubleClick={(_, event) => event.stopPropagation()}
                 onProcessRowUpdateError={/* istanbul ignore next */ (err: unknown) => console.error(err)}
                 localeText={{ noRowsLabel: txt.grid.noRowsLabel }}
                 slots={{ toolbar: Toolbar }}
@@ -236,6 +253,6 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
             />
         </>
     );
-};;;;;;;
+};
 
 export default React.memo(DataGrid);

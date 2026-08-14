@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    assertDisabled,
     assertEnabled,
     assertToBeInTheDocument,
     render as defaultRender,
@@ -51,7 +52,6 @@ const deleteAction = jest.fn();
 const data = [
     { id: 1, label: 'List one', is_public: true },
     { id: 2, label: 'List two', is_public: false },
-    { id: 3, label: 'Favourites', is_public: true },
 ];
 
 const setup = (testProps = {}, render = defaultRender) => {
@@ -74,56 +74,190 @@ describe('DataGrid', () => {
         jest.clearAllMocks();
     });
 
+    const getRowCount = () => document.querySelectorAll('[data-rowindex]').length;
+    const assertRowCount = expected => expect(getRowCount(expected)).toBe(expected);
+
     it('should render rows from data', () => {
         const { getByTestId } = setup();
 
+        assertRowCount(2);
         expect(getByTestId('fjl-label-1')).toHaveTextContent('List one');
         expect(getByTestId('fjl-label-2')).toHaveTextContent('List two');
         expect(getByTestId('fjl-view-link-1')).toHaveAttribute('href', createListUrl(1));
         expect(getByTestId('fjl-view-link-2')).toHaveAttribute('href', createListUrl(2));
+        expect(getByTestId('fjl-sharable-link-1').href).toContain(
+            createListSharingUrl(1).replace('http://localhost/', ''),
+        );
+        expect(getByTestId('fjl-sharable-link-2')).toHaveAttribute('href', '');
+        expect(getByTestId('fjl-sharable-link-2')).toHaveStyle({ pointerEvents: 'none', opacity: 0.5 });
         assertToBeInTheDocument('journal-user-lists-quicksearch');
         assertEnabled('journal-user-lists-add');
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
     });
 
-    it('should add a new row in edit mode when clicking add', async () => {
+    it('should add a new row', async () => {
+        const newRow = { id: 3, label: 'New list', is_public: false };
+        mockDispatch.mockResolvedValue({ data: newRow });
         const { getByTestId } = setup();
+        assertRowCount(2);
 
         await userEvent.click(getByTestId('journal-user-lists-add'));
-        expect(getByTestId('fjl-label--4-input')).toHaveFocus();
 
-        expect(getByTestId('journal-user-lists-item-0-save')).toBeInTheDocument();
-        expect(getByTestId('journal-user-lists-item-0-cancel')).toBeInTheDocument();
+        const input = getByTestId('fjl-label--3-input');
+        const saveButton = getByTestId('journal-user-lists-item-0-save');
+
+        assertRowCount(3);
+        expect(input).toHaveFocus();
+        assertDisabled(saveButton);
+        assertEnabled('journal-user-lists-item-0-cancel');
+
+        await userEvent.type(input, newRow.label);
+        await userEvent.click(saveButton);
+
+        assertRowCount(3);
+        expect(createAction).toHaveBeenCalledWith({ is_public: false, label: 'New list' });
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
     });
 
-    it('should focus on `label` field and disable buttons on edit mode', async () => {
+    it('should cancel new row', async () => {
         const { getByTestId, queryByTestId } = setup();
+        assertRowCount(2);
+        expect(queryByTestId('fjl-label--3-input')).not.toBeInTheDocument();
 
-        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
-        expect(getByTestId('fjl-label-1-input')).toHaveFocus();
+        await userEvent.click(getByTestId('journal-user-lists-add'));
 
-        expect(getByTestId('journal-user-lists-add')).toBeDisabled();
-        expect(getByTestId('journal-user-lists-item-0-save')).toBeInTheDocument();
-        expect(queryByTestId('journal-user-lists-item-0-edit')).not.toBeInTheDocument();
-    });
+        assertRowCount(3);
+        expect(getByTestId('fjl-label--3-input')).toHaveFocus();
 
-    it('should cancel edit mode and revert row', async () => {
-        const { getByTestId, queryByTestId } = setup();
-
-        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
         await userEvent.click(getByTestId('journal-user-lists-item-0-cancel'));
 
-        expect(getByTestId('journal-user-lists-item-0-edit')).toBeInTheDocument();
+        assertRowCount(2);
+        expect(queryByTestId('fjl-label--3-input')).not.toBeInTheDocument();
+    });
+
+    it('should not add empty row on enter', async () => {
+        const { getByTestId, queryByTestId } = setup();
+        assertRowCount(2);
+        expect(queryByTestId('fjl-label--3-input')).not.toBeInTheDocument();
+
+        await userEvent.click(getByTestId('journal-user-lists-add'));
+
+        assertRowCount(3);
+        expect(getByTestId('fjl-label--3-input')).toHaveFocus();
+        expect(getByTestId('journal-user-lists-item-0-save')).toBeDisabled();
+        expect(getByTestId('journal-user-lists-item-0-cancel')).toBeEnabled();
+
+        await userEvent.keyboard('{Enter}');
+
+        assertRowCount(3);
+        expect(getByTestId('fjl-label--3-input')).toHaveFocus();
+        expect(getByTestId('journal-user-lists-item-0-save')).toBeDisabled();
+        expect(getByTestId('journal-user-lists-item-0-cancel')).toBeEnabled();
+
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
+    });
+
+    it('should remove newly added row on Escape', async () => {
+        const { getByTestId, queryByTestId } = setup();
+        assertRowCount(2);
+
+        await userEvent.click(getByTestId('journal-user-lists-add'));
+
+        assertRowCount(3);
+        expect(getByTestId('fjl-label--3-input')).toHaveFocus();
+
+        await userEvent.keyboard('{Escape}');
+
+        assertRowCount(2);
+        expect(queryByTestId('journal-user-lists-item-0-cancel')).not.toBeInTheDocument();
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
+    });
+
+    it('should edit a row', async () => {
+        const updatedRow = { ...data[0], label: `${data[0].label} updated` };
+        mockDispatch.mockResolvedValue({ data: updatedRow });
+        const { getByTestId } = setup();
+        assertRowCount(2);
+
+        const saveButton = getByTestId('journal-user-lists-item-0-edit');
+        await userEvent.click(saveButton);
+
+        const input = getByTestId('fjl-label-1-input');
+        expect(input).toHaveFocus();
+        assertEnabled(saveButton);
+        assertEnabled('journal-user-lists-item-0-cancel');
+
+        await userEvent.type(input, updatedRow.label);
+        await userEvent.click(saveButton);
+
+        assertRowCount(2);
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
+    });
+
+    it('should edit a row on double-click', async () => {
+        const { getByText, queryByTestId } = setup();
+        assertRowCount(2);
+
+        await userEvent.dblClick(getByText(data[0].label));
+
+        expect(queryByTestId('fjl-label-1-input')).not.toBeInTheDocument();
         expect(queryByTestId('journal-user-lists-item-0-save')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-user-lists-item-0-cancel')).not.toBeInTheDocument();
+        assertRowCount(2);
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
     });
 
-    it('should remove newly added row on cancel', async () => {
-        const { getByTestId, queryByTestId } = setup();
+    it('should revert changes on cancel', async () => {
+        const { getByTestId, getByText, queryByTestId } = setup();
+        assertRowCount(2);
+        expect(getByText(data[0].label)).toBeInTheDocument();
 
-        await userEvent.click(getByTestId('journal-user-lists-add'));
+        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
+
+        expect(getByTestId('fjl-label-1-input')).toHaveFocus();
+        expect(getByTestId('fjl-label-1-input')).toHaveValue(data[0].label);
+
+        await userEvent.type(getByTestId('fjl-label-1-input'), `${data[0].label} updated`);
         await userEvent.click(getByTestId('journal-user-lists-item-0-cancel'));
 
-        expect(queryByTestId('fjl-label-new')).not.toBeInTheDocument();
-        expect(getByTestId('fjl-label-1')).toBeInTheDocument();
+        expect(getByText(data[0].label)).toBeInTheDocument();
+        expect(queryByTestId('fjl-label-1-input')).not.toBeInTheDocument();
+        assertRowCount(2);
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
+    });
+
+    it('should revert changes on Escape', async () => {
+        const { getByTestId, getByText, queryByTestId } = setup();
+        assertRowCount(2);
+        expect(getByText(data[0].label)).toBeInTheDocument();
+
+        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
+
+        expect(getByTestId('fjl-label-1-input')).toHaveFocus();
+        expect(getByTestId('fjl-label-1-input')).toHaveValue(data[0].label);
+
+        await userEvent.type(getByTestId('fjl-label-1-input'), `${data[0].label} updated`);
+        await userEvent.keyboard('{Escape}');
+
+        expect(getByText(data[0].label)).toBeInTheDocument();
+        expect(queryByTestId('fjl-label-1-input')).not.toBeInTheDocument();
+        assertRowCount(2);
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
+        expect(deleteAction).not.toHaveBeenCalled();
     });
 
     it('should call deleteAction when confirming delete of existing row', async () => {
@@ -134,6 +268,8 @@ describe('DataGrid', () => {
         await userEvent.click(getByTestId('journal-user-lists-item-0-delete'));
         await userEvent.click(getByTestId('journal-user-lists-item-0-save'));
 
+        expect(createAction).not.toHaveBeenCalled();
+        expect(updateAction).not.toHaveBeenCalled();
         expect(deleteAction).toHaveBeenCalledWith(1);
     });
 
@@ -156,38 +292,6 @@ describe('DataGrid', () => {
 
         expect(deleteAction).not.toHaveBeenCalled();
         expect(queryByTestId('fjl-label-new')).not.toBeInTheDocument();
-    });
-
-    it('should cancel new row when pressing Escape in a cell', async () => {
-        const { getByTestId, queryByTestId } = setup();
-
-        await userEvent.click(getByTestId('journal-user-lists-add'));
-        const input = getByTestId('journal-user-lists-item-0-cancel')
-            .closest('.MuiDataGrid-row')
-            .querySelector('input');
-
-        input.focus();
-        await userEvent.keyboard('{Escape}');
-
-        expect(queryByTestId('journal-user-lists-item-0-cancel')).not.toBeInTheDocument();
-        expect(deleteAction).not.toHaveBeenCalled();
-    });
-
-    it('should not cancel existing row when pressing Escape', async () => {
-        const { getByTestId } = setup();
-
-        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
-
-        const saveButton = getByTestId('journal-user-lists-item-0-save');
-        const row = saveButton.closest('.MuiDataGrid-row');
-        const input = within(row).getByRole('textbox');
-
-        input.focus();
-        await userEvent.keyboard('{Escape}');
-
-        // handleCellKeyDown only intercepts Escape for new rows; for existing
-        // rows MUI's default cell-edit-exit behavior applies instead
-        expect(getByTestId('journal-user-lists-item-0-edit')).toBeInTheDocument();
     });
 
     it('should switch row back to view mode on save click', async () => {
@@ -235,14 +339,6 @@ describe('DataGrid', () => {
         await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
 
         expect(getByTestId('fjl-view-link-1')).toHaveAttribute('href', '');
-    });
-
-    it('should disable share link for a non-public list', () => {
-        const { getByTestId } = setup();
-
-        const shareLink = getByTestId('fjl-sharable-link-2');
-        expect(shareLink).toHaveAttribute('href', createListUrl(2));
-        expect(shareLink).toHaveStyle({ pointerEvents: 'none', opacity: 0.5 });
     });
 
     it('should not open share dialog when clicking share link on non-public list', async () => {

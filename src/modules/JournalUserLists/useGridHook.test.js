@@ -22,6 +22,16 @@ describe('useGrid', () => {
     });
 
     describe('handleUpdateRow', () => {
+        it('should validate', async () => {
+            const { result } = setupHook();
+
+            await expect(
+                act(async () => {
+                    await result.current.handleUpdateRow({ label: '' }, { label: '' });
+                }),
+            ).rejects.toThrow('Label field is required.');
+        });
+
         it('should replace only the matching row when creating succeeds, leaving others untouched', async () => {
             createAction.mockReturnValue({ type: 'CREATE' });
             mockDispatch.mockResolvedValue({ data: { id: '2', label: 'New list', is_public: false } });

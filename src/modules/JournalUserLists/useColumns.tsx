@@ -129,10 +129,6 @@ export const useColumns = ({
                         sx={{ alignSelf: 'center' }}
                     />
                 ),
-                preProcessEditCellProps: (params: GridPreProcessEditCellProps) => ({
-                    ...params.props,
-                    error: params.props.value === '',
-                }),
                 maxWidth: 110,
                 flex: 1,
                 cellClassName: 'cell-styled',
@@ -146,7 +142,7 @@ export const useColumns = ({
                 headerAlign: 'center',
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => {
-                    const disabled = isAnyInEditMode;
+                    const disabled = isAnyInEditMode || deleteRowId;
                     const isSharable = props.row.is_public;
                     const url = disabled ? '' : createListUrl(props.value);
 
@@ -155,7 +151,7 @@ export const useColumns = ({
                             <Grid spacing={3} container alignItems="center" justifyContent="center" sx={{ pt: 1 }}>
                                 <Link
                                     data-testid={`fjl-view-link-${props.id}`}
-                                    to={url}
+                                    to={disabled ? '' : url}
                                     style={{
                                         color: disabled ? 'inherit' : '',
                                         pointerEvents: disabled ? 'none' : 'auto',
@@ -166,7 +162,7 @@ export const useColumns = ({
                                 </Link>
                                 <Link
                                     data-testid={`fjl-sharable-link-${props.id}`}
-                                    to={url}
+                                    to={disabled || !isSharable ? '' : url}
                                     style={{
                                         color: disabled || !isSharable ? 'inherit' : '',
                                         pointerEvents: disabled || !isSharable ? 'none' : 'auto',

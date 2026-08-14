@@ -33,30 +33,40 @@ export const useGrid = ({ createAction, updateAction, deleteAction }: UseGridPar
     }, []);
 
     const handleUpdateRow = useCallback(
-        async (newRow: Row, oldData: Row): Promise<Row> =>
+        async (newData: Row, oldData: Row): Promise<Row> =>
             withProcessing(async () => {
                 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                const { tableData, isNew, ...updates } = newRow;
+                const { tableData, isNew, ...data } = newData;
+                // validation
+                if (!data?.label?.trim?.()) {
+                    throw new Error('Label field is required.');
+                }
+
                 // update
                 if (!isNew) {
+                    // ignore unchanged data updates
+                    if (!(Object.keys(data) as (keyof FezJournalUserList)[]).find(key => data[key] !== oldData[key])) {
+                        return oldData;
+                    }
+
                     return (
-                        dispatch(updateAction(updates) as AnyAction)
-                            .then(() => updates as Row)
+                        dispatch(updateAction(data) as AnyAction)
+                            .then(() => data as Row)
                             // rollback updates
                             .catch(() => oldData)
                     );
                 }
 
                 // eslint-disable-next-line @typescript-eslint/no-unused-vars,camelcase
-                const { id, ...payload } = updates;
+                const { id, ...payload } = data;
                 // add new
                 return dispatch(createAction(payload) as AnyAction)
                     .then((created: unknown) => {
                         // @ts-expect-error TODO fix when adding response type
-                        const newRow = created?.data;
+                        const newData = created?.data;
                         // replace temp row with definitive one
-                        setRows(prev => prev.map(row => (row.id === oldData.id ? newRow : row)));
-                        return newRow;
+                        setRows(prev => prev.map(row => (row.id === oldData.id ? newData : row)));
+                        return newData;
                     })
                     .catch(() => {
                         // rollback new row addition
