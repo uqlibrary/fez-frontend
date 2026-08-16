@@ -7,6 +7,7 @@ import {
     userEvent,
     within,
     WithRouter,
+    waitFor,
 } from 'test-utils';
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
@@ -77,8 +78,8 @@ describe('DataGrid', () => {
     const getRowCount = () => document.querySelectorAll('[data-rowindex]').length;
     const assertRowCount = expected => expect(getRowCount(expected)).toBe(expected);
 
-    it('should render rows from data', () => {
-        const { getByTestId } = setup();
+    it('should render rows from data', async () => {
+        const { getByTestId, queryByTestId } = setup();
 
         assertRowCount(2);
         expect(getByTestId('fjl-label-1')).toHaveTextContent('List one');
@@ -95,6 +96,9 @@ describe('DataGrid', () => {
         expect(createAction).not.toHaveBeenCalled();
         expect(updateAction).not.toHaveBeenCalled();
         expect(deleteAction).not.toHaveBeenCalled();
+
+        await userEvent.type(getByTestId('journal-user-lists-quicksearch-input'), 'List one');
+        await waitFor(() => expect(queryByTestId('fjl-label-2')).not.toBeInTheDocument());
     });
 
     it('should add a new row', async () => {
@@ -117,7 +121,7 @@ describe('DataGrid', () => {
         await userEvent.click(saveButton);
 
         assertRowCount(3);
-        expect(createAction).toHaveBeenCalledWith({ is_public: false, label: 'New list' });
+        await waitFor(() => expect(createAction).toHaveBeenCalledWith({ is_public: false, label: 'New list' }));
         expect(updateAction).not.toHaveBeenCalled();
         expect(deleteAction).not.toHaveBeenCalled();
     });
@@ -186,20 +190,20 @@ describe('DataGrid', () => {
         const { getByTestId } = setup();
         assertRowCount(2);
 
-        const saveButton = getByTestId('journal-user-lists-item-0-edit');
-        await userEvent.click(saveButton);
+        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
 
+        const saveButton = getByTestId('journal-user-lists-item-0-save');
         const input = getByTestId('fjl-label-1-input');
         expect(input).toHaveFocus();
         assertEnabled(saveButton);
         assertEnabled('journal-user-lists-item-0-cancel');
 
-        await userEvent.type(input, updatedRow.label);
+        await userEvent.type(input, ' updated');
         await userEvent.click(saveButton);
 
         assertRowCount(2);
         expect(createAction).not.toHaveBeenCalled();
-        expect(updateAction).not.toHaveBeenCalled();
+        await waitFor(() => expect(updateAction).toHaveBeenCalledWith(updatedRow));
         expect(deleteAction).not.toHaveBeenCalled();
     });
 
@@ -270,7 +274,7 @@ describe('DataGrid', () => {
 
         expect(createAction).not.toHaveBeenCalled();
         expect(updateAction).not.toHaveBeenCalled();
-        expect(deleteAction).toHaveBeenCalledWith(1);
+        await waitFor(() => expect(deleteAction).toHaveBeenCalledWith(1));
     });
 
     it('should call save (not delete) when confirming an edit, not a pending delete', async () => {

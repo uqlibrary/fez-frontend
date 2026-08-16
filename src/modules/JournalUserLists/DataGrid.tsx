@@ -169,6 +169,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                 sx={{
                     width: { xs: '100%', sm: 240 },
                 }}
+                slotProps={{ htmlInput: { 'data-testid': 'journal-user-lists-quicksearch-input' } }}
             />
 
             <Box sx={{ flexGrow: 1 }} />
