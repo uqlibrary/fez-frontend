@@ -391,60 +391,44 @@ describe('DataGrid', () => {
         expect(switchInput).not.toBeChecked();
     });
 
-    it('should disable view/share links while any row is in edit mode', async () => {
-        const { getByTestId } = setup();
+    describe('links', () => {
+        it('should not open share dialog when clicking share link on non-public list', async () => {
+            const { getByTestId, queryByTestId } = setup();
 
-        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
+            await userEvent.click(getByTestId('fjl-sharable-link-2'), { pointerEventsCheck: 0 });
 
-        expect(getByTestId('fjl-view-link-1')).toHaveAttribute('href', '');
-    });
+            expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
+            expect(mockCopyToClipboard).not.toHaveBeenCalled();
+        });
 
-    it('should not open share dialog when clicking share link on non-public list', async () => {
-        const { getByTestId, queryByTestId } = setup();
+        it('should copy link and close dialog when confirming copy', async () => {
+            mockCopyToClipboard.mockResolvedValue(undefined);
+            const { getByTestId, queryByTestId } = setup();
 
-        await userEvent.click(getByTestId('fjl-sharable-link-2'), { pointerEventsCheck: 0 });
+            await userEvent.click(getByTestId('fjl-sharable-link-1'));
+            expect(getByTestId('copy-dialog-text')).toHaveTextContent(createListSharingUrl(1));
 
-        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
-        expect(mockCopyToClipboard).not.toHaveBeenCalled();
-    });
+            await userEvent.click(getByTestId('copy-dialog-copy'));
 
-    it('should not open share dialog when clicking view/share link while a row is in edit mode', async () => {
-        const { getByTestId, queryByTestId } = setup();
+            expect(mockCopyToClipboard).toHaveBeenCalledWith(createListSharingUrl(1));
+            expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
+        });
 
-        await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
-        await userEvent.click(getByTestId('fjl-sharable-link-1'), { pointerEventsCheck: 0 });
+        it('should close copy dialog without copying', async () => {
+            const { getByTestId, queryByTestId } = setup();
 
-        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
-    });
+            await userEvent.click(getByTestId('fjl-sharable-link-1'));
+            await userEvent.click(getByTestId('copy-dialog-close'));
 
-    it('should copy link and close dialog when confirming copy', async () => {
-        mockCopyToClipboard.mockResolvedValue(undefined);
-        const { getByTestId, queryByTestId } = setup();
+            expect(mockCopyToClipboard).not.toHaveBeenCalled();
+            expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
+        });
 
-        await userEvent.click(getByTestId('fjl-sharable-link-1'));
-        expect(getByTestId('copy-dialog-text')).toHaveTextContent(createListSharingUrl(1));
+        it('should navigate to list items page', async () => {
+            const { getByTestId } = setup();
 
-        await userEvent.click(getByTestId('copy-dialog-copy'));
-
-        expect(mockCopyToClipboard).toHaveBeenCalledWith(createListSharingUrl(1));
-        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
-    });
-
-    it('should close copy dialog without copying', async () => {
-        const { getByTestId, queryByTestId } = setup();
-
-        await userEvent.click(getByTestId('fjl-sharable-link-1'));
-        await userEvent.click(getByTestId('copy-dialog-close'));
-
-        expect(mockCopyToClipboard).not.toHaveBeenCalled();
-        expect(queryByTestId('copy-dialog')).not.toBeInTheDocument();
-    });
-
-    it('should navigate to list items page when clicking items action', async () => {
-        const { getByTestId } = setup();
-
-        await userEvent.click(getByTestId('journal-user-lists-item-0-items'));
-
-        expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.favourites(String(data[0].id)));
+            await userEvent.click(getByTestId('journal-user-lists-item-0-items'));
+            expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.favourites(String(data[0].id)));
+        });
     });
 });

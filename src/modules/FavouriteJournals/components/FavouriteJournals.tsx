@@ -52,7 +52,7 @@ export const FavouriteJournals: React.FC = () => {
         countSelectedJournals,
         handleToggleSelectAllJournals,
     } = useSelectedJournals({ available: response?.data });
-    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites());
+    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites(listId));
     /* istanbul ignore next */
     const { pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
         params => {

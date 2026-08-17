@@ -640,7 +640,7 @@ export const setup = () => {
         .reply(404, { data: 'Not Found' })
         .onGet(/journals\/(?!lists).*/)
         .reply(200, { ...mockData.journalDetails })
-        .onGet(new RegExp(escapeRegExp(routes.JOURNAL_USE_LISTS_API().apiUrl)))
+        .onGet('/journals/lists/')
         .reply(200, {
             total: 2,
             took: 0,
@@ -676,9 +676,22 @@ export const setup = () => {
         .reply(200)
         .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_USE_LISTS_API('.*').apiUrl)))
         .reply(200)
-        .onPost(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API().apiUrl)))
+        .onGet(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API({ id: '.*' }).apiUrl)))
+        .reply(config => {
+            if (config.url.includes(routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1 }).apiUrl)) {
+                return [200, { ...journalsSearch.favourites }];
+            }
+
+            return [
+                200,
+                {
+                    total: 0,
+                },
+            ];
+        })
+        .onPost(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API({ id: '.*' }).apiUrl)))
         .reply(200)
-        .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API().apiUrl)))
+        .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API({ id: '.*' }).apiUrl)))
         .reply(200)
 
         .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
