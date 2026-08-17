@@ -153,6 +153,7 @@ export const useColumns = ({
                         <span>
                             <Grid spacing={3} container alignItems="center" justifyContent="center" sx={{ pt: 1 }}>
                                 <Link
+                                    aria-label="click to view items in this list"
                                     data-testid={`fjl-view-link-${props.id}`}
                                     to={viewDisabled ? '' : url}
                                     className={classNames('fjl-link', { disabled: viewDisabled })}
@@ -160,6 +161,7 @@ export const useColumns = ({
                                     <Visibility style={{ width: 16 }} />
                                 </Link>
                                 <Link
+                                    aria-label="click to copy view link"
                                     data-testid={`fjl-sharable-link-${props.id}`}
                                     to={shareDisabled ? '' : url}
                                     className={classNames('fjl-link', { disabled: shareDisabled })}
