@@ -47,6 +47,14 @@ jest.mock(
         ) : null,
 );
 
+const mockLoadList = jest.fn();
+jest.mock('actions/journalUserLists', () => ({
+    loadLists: mockLoadList,
+    createList: jest.fn(),
+    updateList: jest.fn(),
+    deleteList: jest.fn(),
+}));
+
 const createAction = jest.fn();
 const updateAction = jest.fn();
 const deleteAction = jest.fn();
@@ -74,6 +82,10 @@ const setup = (testProps = {}, render = defaultRender) => {
 describe('DataGrid', () => {
     beforeEach(() => {
         jest.clearAllMocks();
+    });
+
+    afterEach(() => {
+        expect(mockLoadList).not.toHaveBeenCalled();
     });
 
     const getRowCount = () => document.querySelectorAll('[data-rowindex]').length;
