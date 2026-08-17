@@ -36,27 +36,6 @@ jest.mock('hooks/useDispatchOnce', () => ({
     useDispatchOnce: jest.fn(),
 }));
 
-jest.mock('modules/FavouriteJournals/components/ListSelect', () => ({
-    __esModule: true,
-    default: jest.fn(({ loading, lists, value, disabled, onChange }) => (
-        <select
-            data-testid="list-select"
-            data-loading={String(!!loading)}
-            data-lists-count={lists?.length || 0}
-            value={value || ''}
-            disabled={disabled}
-            onChange={onChange}
-        >
-            <option value="">-</option>
-            {(lists || []).map(l => (
-                <option key={l.id} value={l.id}>
-                    {l.name}
-                </option>
-            ))}
-        </select>
-    )),
-}));
-
 const setup = ({ state = {}, listsState = {}, listId = '123' } = {}) => {
     mockParams.mockReturnValue({ id: listId });
     return render(
@@ -203,29 +182,32 @@ describe('FavouriteJournals', () => {
     it('should pass loading and lists data down to ListSelect', () => {
         const { getByTestId } = setup({
             listId: '123',
-            listsState: { loading: true, data: { data: [{ id: '123', name: 'List A' }] } },
+            listsState: { loading: true, data: { data: [{ id: '123', label: 'List A' }] } },
         });
 
-        const select = getByTestId('list-select');
-        expect(select.dataset.loading).toBe('true');
-        expect(select.dataset.listsCount).toBe('1');
+        expect(getByTestId('favourte-list-select-input')).toBeDisabled();
     });
 
     it('should switch the active list when a new one is selected', async () => {
-        const { getByTestId } = setup({
+        const { getByTestId, getByText, getByRole } = setup({
             listId: '123',
             listsState: {
                 data: {
                     data: [
-                        { id: '123', name: 'List A' },
-                        { id: '456', name: 'List B' },
+                        { id: 123, label: 'List A' },
+                        { id: 456, label: 'List B' },
                     ],
                 },
             },
         });
 
-        await userEvent.selectOptions(getByTestId('list-select'), '456');
+        expect(getByText('List A')).toBeInTheDocument();
+        expect(getByTestId('favourte-list-select-input')).toHaveValue('123');
 
+        await userEvent.click(getByRole('combobox'));
+        await userEvent.click(getByRole('option', { name: 'List B' }));
+
+        expect(getByText('List B')).toBeInTheDocument();
         expect(loadListItems).toHaveBeenLastCalledWith(expect.objectContaining({ id: '456' }));
     });
 

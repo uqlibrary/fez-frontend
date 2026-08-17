@@ -17,11 +17,14 @@ const ListSelect: React.FC<ListSelectProps> = ({ lists, loading, ...props }) => 
         <FormControl variant="standard" fullWidth>
             <Select
                 {...props}
-                value={props.value || ''}
+                value={props.value}
                 variant="standard"
-                labelId="sort-by-label"
+                inputProps={{
+                    'aria-label': 'Favourite list',
+                    'data-testid': 'favourte-list-select-input',
+                }}
+                data-testid="favourte-list-select"
                 disabled={loading}
-                data-testid="publication-list-sorting-sort-by"
                 MenuProps={{
                     PaperProps: {
                         sx: {
