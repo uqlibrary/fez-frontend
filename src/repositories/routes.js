@@ -617,7 +617,7 @@ export const JOURNAL_USE_LISTS_API = (id = null) => ({
     apiUrl: `journals/lists/${id ?? ''}`,
 });
 
-export const JOURNAL_USER_LIST_ITEMS_API = ({ id, query } = {}) => {
+export const JOURNAL_USER_LIST_ITEMS_API = ({ id, query }) => {
     const { pageSize } = {
         ...locale.components.favouriteJournals.sortingDefaults,
         ...query,
