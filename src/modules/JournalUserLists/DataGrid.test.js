@@ -8,6 +8,7 @@ import {
     within,
     WithRouter,
     waitFor,
+    screen,
 } from 'test-utils';
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
@@ -78,19 +79,53 @@ describe('DataGrid', () => {
     const getRowCount = () => document.querySelectorAll('[data-rowindex]').length;
     const assertRowCount = expected => expect(getRowCount(expected)).toBe(expected);
 
+    const getLinkTestIds = () => [
+        ...screen.getAllByTestId(/^fjl-view-link-/),
+        ...screen.getAllByTestId(/^fjl-sharable-link-/),
+    ];
+
+    const assertDisabledLink = element => {
+        expect(element).toHaveAttribute('href', '');
+        expect(element).toHaveClass('fjl-link disabled');
+    };
+
+    const assertDisabledLinks = () => {
+        getLinkTestIds().forEach(assertDisabledLink);
+    };
+
+    const assertEnabledLink = (element, url = false) => {
+        const isSharable = element.getAttribute('data-testid').includes('fjl-sharable-link-');
+        if (isSharable) {
+            const row = element.closest('[role="row"]');
+            if (row.querySelector('[data-testid^="fjl-is-public-"]')?.textContent === '-') {
+                return assertDisabledLink(element);
+            }
+        }
+
+        if (url) {
+            expect(element.href).toContain(url);
+        } else {
+            expect(element).toHaveAttribute('href', expect.not.stringMatching(/^$/));
+        }
+        expect(element).not.toHaveClass('fjl-link disabled');
+    };
+
+    const assertEnabledLinks = () => {
+        getLinkTestIds().forEach(el => assertEnabledLink(el));
+    };
+
     it('should render rows from data', async () => {
         const { getByTestId, queryByTestId } = setup();
 
         assertRowCount(2);
         expect(getByTestId('fjl-label-1')).toHaveTextContent('List one');
         expect(getByTestId('fjl-label-2')).toHaveTextContent('List two');
-        expect(getByTestId('fjl-view-link-1')).toHaveAttribute('href', createListUrl(1));
-        expect(getByTestId('fjl-view-link-2')).toHaveAttribute('href', createListUrl(2));
-        expect(getByTestId('fjl-sharable-link-1').href).toContain(
-            createListSharingUrl(1).replace('http://localhost/', ''),
-        );
-        expect(getByTestId('fjl-sharable-link-2')).toHaveAttribute('href', '');
-        expect(getByTestId('fjl-sharable-link-2')).toHaveStyle({ pointerEvents: 'none', opacity: 0.5 });
+        expect(within(getByTestId('fjl-is-public-1')).getByTestId('DoneIcon')).toBeInTheDocument();
+        expect(within(getByTestId('fjl-is-public-2')).queryByTestId('DoneIcon')).not.toBeInTheDocument();
+        assertEnabledLink(getByTestId('fjl-view-link-1'), createListUrl(1));
+        assertEnabledLink(getByTestId('fjl-view-link-2'), createListUrl(2));
+        assertEnabledLink(getByTestId('fjl-sharable-link-1'), createListSharingUrl(1).replace('http://localhost/', ''));
+        assertDisabledLink(getByTestId('fjl-sharable-link-2'));
         assertToBeInTheDocument('journal-user-lists-quicksearch');
         assertEnabled('journal-user-lists-add');
         expect(createAction).not.toHaveBeenCalled();
@@ -106,8 +141,10 @@ describe('DataGrid', () => {
         mockDispatch.mockResolvedValue({ data: newRow });
         const { getByTestId } = setup();
         assertRowCount(2);
+        assertEnabledLinks();
 
         await userEvent.click(getByTestId('journal-user-lists-add'));
+        assertDisabledLinks();
 
         const input = getByTestId('fjl-label--3-input');
         const saveButton = getByTestId('journal-user-lists-item-0-save');
@@ -120,6 +157,7 @@ describe('DataGrid', () => {
         await userEvent.type(input, newRow.label);
         await userEvent.click(saveButton);
 
+        assertEnabledLinks();
         assertRowCount(3);
         await waitFor(() => expect(createAction).toHaveBeenCalledWith({ is_public: false, label: 'New list' }));
         expect(updateAction).not.toHaveBeenCalled();
@@ -185,12 +223,14 @@ describe('DataGrid', () => {
     });
 
     it('should edit a row', async () => {
-        const updatedRow = { ...data[0], label: `${data[0].label} updated` };
+        const updatedRow = { ...data[0], label: `${data[0].label} updated`, is_public: !data[0].is_public };
         mockDispatch.mockResolvedValue({ data: updatedRow });
         const { getByTestId } = setup();
         assertRowCount(2);
+        assertEnabledLinks();
 
         await userEvent.click(getByTestId('journal-user-lists-item-0-edit'));
+        assertDisabledLinks();
 
         const saveButton = getByTestId('journal-user-lists-item-0-save');
         const input = getByTestId('fjl-label-1-input');
@@ -199,8 +239,10 @@ describe('DataGrid', () => {
         assertEnabled('journal-user-lists-item-0-cancel');
 
         await userEvent.type(input, ' updated');
+        await userEvent.click(getByTestId('fjl-is-public-1-input').querySelector('input'));
         await userEvent.click(saveButton);
 
+        assertEnabledLinks();
         assertRowCount(2);
         expect(createAction).not.toHaveBeenCalled();
         await waitFor(() => expect(updateAction).toHaveBeenCalledWith(updatedRow));

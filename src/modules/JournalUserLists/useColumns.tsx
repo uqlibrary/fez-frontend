@@ -23,6 +23,7 @@ import Share from '@mui/icons-material/Share';
 import Visibility from '@mui/icons-material/Visibility';
 import Done from '@mui/icons-material/Done';
 import Grid from '@mui/material/Grid';
+import classNames from 'classnames';
 
 interface UseColumnsParams {
     txt: typeof locale.components.journalUserLists.grid;
@@ -145,31 +146,25 @@ export const useColumns = ({
                     const disabled = isAnyInEditMode || deleteRowId;
                     const isSharable = props.row.is_public;
                     const url = disabled ? '' : createListUrl(props.value);
+                    const viewDisabled = disabled;
+                    const shareDisabled = disabled || !isSharable;
 
                     return (
                         <span>
                             <Grid spacing={3} container alignItems="center" justifyContent="center" sx={{ pt: 1 }}>
                                 <Link
                                     data-testid={`fjl-view-link-${props.id}`}
-                                    to={disabled ? '' : url}
-                                    style={{
-                                        color: disabled ? 'inherit' : '',
-                                        pointerEvents: disabled ? 'none' : 'auto',
-                                        opacity: disabled ? 0.5 : 1,
-                                    }}
+                                    to={viewDisabled ? '' : url}
+                                    className={classNames('fjl-link', { disabled: viewDisabled })}
                                 >
                                     <Visibility style={{ width: 16 }} />
                                 </Link>
                                 <Link
                                     data-testid={`fjl-sharable-link-${props.id}`}
-                                    to={disabled || !isSharable ? '' : url}
-                                    style={{
-                                        color: disabled || !isSharable ? 'inherit' : '',
-                                        pointerEvents: disabled || !isSharable ? 'none' : 'auto',
-                                        opacity: disabled || !isSharable ? 0.5 : 1,
-                                    }}
+                                    to={shareDisabled ? '' : url}
+                                    className={classNames('fjl-link', { disabled: shareDisabled })}
                                     onClick={e => {
-                                        if (disabled || !isSharable) return;
+                                        if (shareDisabled) return;
                                         e.preventDefault();
                                         onShareListClick(createListSharingUrl(props.value));
                                     }}
