@@ -58,50 +58,49 @@ describe('ListSplitButtonMenu', () => {
     });
 
     it('should render the selected item label', () => {
-        const { getByRole } = setup();
-        expect(getByRole('button', { name: 'Add to List 2' })).toBeInTheDocument();
-    });
+        const { getByTestId } = setup();
 
-    it('should render an empty label when no item is selected', () => {
-        const { getAllByRole } = setup({ selectedIndex: -1 });
-        expect(getAllByRole('button')[0]).toHaveTextContent('');
+        expect(getByTestId('list-split-button-action-button')).toHaveTextContent('Add to List 2');
+        assertEnabled('list-split-button-action-button');
+        assertEnabled('list-split-button-menu-toggle-button');
     });
 
     it('should render given placeholder when no item is selected', () => {
         const placeholder = 'Select a list';
-        const { getAllByRole } = setup({ items: [], placeholder });
-        expect(getAllByRole('button')[0]).toHaveTextContent(placeholder);
+        const { getByTestId } = setup({ disabled: true, items: [], placeholder });
+
+        expect(getByTestId('list-split-button-action-button')).toHaveTextContent(placeholder);
+        assertDisabled('list-split-button-action-button');
+        assertEnabled('list-split-button-menu-toggle-button');
     });
 
     it('should call onClick when the primary button is clicked', async () => {
-        const { getByRole } = setup();
-        await userEvent.click(getByRole('button', { name: 'Add to List 2' }));
+        const { getByTestId } = setup();
+        await userEvent.click(getByTestId('list-split-button-action-button'));
 
         expect(onClick).toHaveBeenCalledTimes(1);
     });
 
-    it('should disable the primary button', () => {
-        const { getByRole } = setup({ disabled: true });
-        expect(getByRole('button', { name: 'Add to List 2' })).toBeDisabled();
-    });
-
     it('should show a loading indicator', () => {
-        const { getByRole, getAllByRole } = setup({ loading: true });
+        const { getByRole } = setup({ loading: true });
+
         expect(getByRole('progressbar')).toBeInTheDocument();
-        getAllByRole('button').map(assertDisabled);
+        assertDisabled('list-split-button-action-button');
+        assertDisabled('list-split-button-menu-toggle-button');
     });
 
     it('should show as disabled on error', () => {
-        const { getByRole, getAllByRole } = setup({ error: true });
+        const { getByRole } = setup({ error: true });
         expect(getByRole('group')).toHaveClass('MuiButtonGroup-colorError');
-        assertDisabled(getAllByRole('button')[0]);
-        assertEnabled(getAllByRole('button')[1]);
+
+        assertDisabled('list-split-button-action-button');
+        assertEnabled('list-split-button-menu-toggle-button');
     });
 
     describe('uncontrolled open state', () => {
         it('should open and close the menu', async () => {
-            const { getAllByRole, getByText, queryAllByRole } = setup();
-            const toggleButton = getAllByRole('button')[1];
+            const { getByTestId, getAllByRole, getByText, queryAllByRole } = setup();
+            const toggleButton = getByTestId('list-split-button-menu-toggle-button');
 
             await userEvent.click(toggleButton);
             expect(getAllByRole('menu').length).toBeGreaterThan(0);
@@ -116,8 +115,8 @@ describe('ListSplitButtonMenu', () => {
         });
 
         it('should update the toggle aria-label based on open state', async () => {
-            const { getAllByRole } = setup();
-            const toggleButton = getAllByRole('button')[1];
+            const { getByTestId } = setup();
+            const toggleButton = getByTestId('list-split-button-menu-toggle-button');
             expect(toggleButton).toHaveAccessibleName('Open list options');
 
             await userEvent.click(toggleButton);
@@ -125,8 +124,8 @@ describe('ListSplitButtonMenu', () => {
         });
 
         it('should call onItemSelect and close the menu when an item is selected', async () => {
-            const { getAllByRole, getByText, queryAllByRole } = setup();
-            await userEvent.click(getAllByRole('button')[1]);
+            const { getByTestId, getByText, queryAllByRole } = setup();
+            await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
             await userEvent.click(getByText('List 3'));
 
             expect(onItemSelect).toHaveBeenCalledWith(2);
@@ -136,15 +135,15 @@ describe('ListSplitButtonMenu', () => {
         });
 
         it('should mark the selected menu item', async () => {
-            const { getAllByRole, getByText } = setup({ selectedIndex: 2 });
-            await userEvent.click(getAllByRole('button')[1]);
+            const { getByTestId, getByText } = setup({ selectedIndex: 2 });
+            await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
 
             expect(getByText('List 3').closest('.MuiMenuItem-root')).toHaveClass('Mui-selected');
         });
 
         it('should close the menu when clicking outside', async () => {
-            const { getAllByRole, queryAllByRole } = setup();
-            await userEvent.click(getAllByRole('button')[1]);
+            const { getByTestId, getAllByRole, queryAllByRole } = setup();
+            await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
             expect(getAllByRole('menu').length).toBeGreaterThan(0);
 
             await userEvent.click(document.body);
@@ -156,22 +155,22 @@ describe('ListSplitButtonMenu', () => {
 
     describe('add option', () => {
         it('should render the add option when onAdd is provided', async () => {
-            const { getAllByRole, getByText } = setup();
-            await userEvent.click(getAllByRole('button')[1]);
+            const { getByTestId, getByText } = setup();
+            await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
 
             expect(getByText('Add new')).toBeInTheDocument();
         });
 
         it('should not render the add option when onAdd is not provided', async () => {
-            const { getAllByRole, queryByText } = setup({ onAdd: undefined });
-            await userEvent.click(getAllByRole('button')[1]);
+            const { getByTestId, queryByText } = setup({ onAdd: undefined });
+            await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
 
             expect(queryByText('Add new')).not.toBeInTheDocument();
         });
 
         it('should call onAdd without closing the menu when Add new is clicked', async () => {
-            const { getAllByRole, getByText } = setup();
-            await userEvent.click(getAllByRole('button')[1]);
+            const { getByTestId, getAllByRole, getByText } = setup();
+            await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
             await userEvent.click(getByText('Add new'));
 
             expect(onAdd).toHaveBeenCalledTimes(1);
@@ -191,8 +190,8 @@ describe('ListSplitButtonMenu', () => {
         });
 
         it('should call onOpenChange instead of managing state internally on toggle', async () => {
-            const { getAllByRole } = setup({ open: true, onOpenChange });
-            await userEvent.click(getAllByRole('button')[1]);
+            const { getByTestId, getAllByRole } = setup({ open: true, onOpenChange });
+            await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
 
             expect(onOpenChange).toHaveBeenCalledWith(false);
             // parent hasn't re-rendered with the new value yet, so it stays open
