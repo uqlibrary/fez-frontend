@@ -129,6 +129,7 @@
     "jsdom": "^30.0.1",
     "mini-css-extract-plugin": "^2.7.2",
     "mockdate": "^3.0.5",
+    "postcss": "^8.5.26",
     "postcss-loader": "^8.2.1",
     "prettier": "^3.6.2",
     "prettier-eslint": "^17.1.0",
