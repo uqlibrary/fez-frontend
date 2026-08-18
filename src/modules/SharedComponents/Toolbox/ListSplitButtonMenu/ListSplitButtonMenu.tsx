@@ -104,6 +104,7 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                     disabled={error || loading || disabled}
                     onClick={onClick}
                     aria-label={selectedItem ? undefined : 'Add to list'}
+                    data-testid="list-split-button-action-button"
                     sx={{
                         flex: 1,
                         justifyContent: 'flex-start',
@@ -129,6 +130,7 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                     aria-expanded={open ? 'true' : undefined}
                     aria-controls={open ? id : undefined}
                     aria-label={open ? 'Close list options' : 'Open list options'}
+                    data-testid="list-split-button-menu-toggle-button"
                 >
                     {loading ? (
                         <CircularProgress aria-label="Loading..." size={20} />
