@@ -81,6 +81,17 @@ describe('ListSplitButtonMenu', () => {
         expect(onClick).toHaveBeenCalledTimes(1);
     });
 
+    it('should close menu when the primary button is clicked', async () => {
+        const { getByTestId, queryAllByRole } = setup();
+
+        await userEvent.click(getByTestId('list-split-button-menu-toggle-button'));
+        expect(queryAllByRole('menu').length).toBeGreaterThan(0);
+
+        await userEvent.click(getByTestId('list-split-button-action-button'));
+        expect(queryAllByRole('menu').length).toBe(0);
+        expect(onClick).toHaveBeenCalledTimes(1);
+    });
+
     it('should show a loading indicator', () => {
         const { getByRole } = setup({ loading: true });
 
