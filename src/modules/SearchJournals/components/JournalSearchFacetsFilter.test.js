@@ -47,10 +47,40 @@ describe('Search Journals Facets component', () => {
         useLocation.mockClear();
     });
 
-    it('should render favourite facets if no facets are provided by the api', () => {
-        const { getByText } = setup(emptyFacets);
+    it('should not render favourite facets if no facets are provided by the api', () => {
+        const { queryByText } = setup(emptyFacets);
+
+        expect(queryByText('Favourite Journals')).not.toBeInTheDocument();
+    });
+
+    it('should remove the favourite journals filter when deselected', async () => {
+        const onFacetsChangedHandler = jest.fn();
+
+        useLocation.mockImplementationOnce(() => ({
+            pathname: '/',
+            search: `?${param({
+                activeFacets: {
+                    filters: {
+                        [showFavouritedOnlyFacet.facetTitle]: 1,
+                    },
+                },
+            })}`,
+        }));
+
+        const { getByText } = setup({
+            facets,
+            onFacetsChangedHandler,
+        });
 
         expect(getByText('Favourite Journals')).toBeInTheDocument();
+        await userEvent.click(
+            screen.getByTestId('clear-facet-filter-nested-item-showfavouritedonly-show-journals-favourited'),
+        );
+
+        expect(onFacetsChangedHandler).toHaveBeenCalledWith({
+            filters: {},
+            ranges: {},
+        });
     });
 
     it('should render the component categories and nested items that match the input data', () => {

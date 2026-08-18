@@ -241,6 +241,7 @@
     "terra-draw-google-maps-adapter": "^1.6.1",
     "throttle-debounce": "^5.0.0",
     "timezones.json": "^1.2.1",
+    "usehooks-ts": "^3.1.1",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
   },
   "optionalDependencies": {
@@ -474,5 +475,13 @@
       "src/modules/SharedComponents/Toolbox/MenuDrawer/components/MenuDrawer.tsx"
     ],
     "all": true
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.1": true,
+    "@sentry/cli@2.58.6": true,
+    "core-js@3.45.1": true,
+    "core-js-pure@3.49.0": true,
+    "jss@9.8.7": true,
+    "unrs-resolver@1.12.2": true
   }
 }
