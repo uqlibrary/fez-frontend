@@ -41,9 +41,12 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
         deleteRowId,
         setDeleteRowId,
         editingLabel,
+        paginationModel,
+        setPaginationModel,
         setEditingLabel,
         handleUpdateRow,
         handleDeleteRow,
+        handleResetPagination,
     } = useGrid({ createAction, updateAction, deleteAction });
 
     React.useEffect(() => {
@@ -68,6 +71,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
             ...prev,
             [newRow.id]: { mode: GridRowModes.Edit, fieldToFocus: 'label' },
         }));
+        handleResetPagination();
     }, [rows]);
 
     const onEditClick = React.useCallback(
@@ -206,14 +210,8 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                 apiRef={apiRef}
                 data-testid="journal-user-lists-grid"
                 rowHeight={38}
-                initialState={{
-                    pagination: {
-                        paginationModel: {
-                            page: 0,
-                            pageSize: 10,
-                        },
-                    },
-                }}
+                paginationModel={paginationModel}
+                onPaginationModelChange={setPaginationModel}
                 pageSizeOptions={[10, 25, 50, 100]}
                 rows={rows}
                 getRowId={row => row.id}

@@ -9,6 +9,7 @@ import {
     WithRouter,
     waitFor,
     screen,
+    waitForText,
 } from 'test-utils';
 import { DataGrid } from './DataGrid';
 import { pathConfig } from '../../config';
@@ -174,6 +175,30 @@ describe('DataGrid', () => {
         await waitFor(() => expect(createAction).toHaveBeenCalledWith({ is_public: false, label: 'New list' }));
         expect(updateAction).not.toHaveBeenCalled();
         expect(deleteAction).not.toHaveBeenCalled();
+    });
+
+    it('should reset pagination when adding a new row', async () => {
+        const newRow = { id: 3, label: 'New list', is_public: false };
+        mockDispatch.mockResolvedValue({ data: newRow });
+        const { getByTestId, getByLabelText, getByText } = setup({
+            data: {
+                data: Array.from({ length: 11 }, (_, index) => ({
+                    id: index + 3,
+                    label: `New list ${index + 3}`,
+                    is_public: false,
+                })),
+            },
+        });
+        assertRowCount(10);
+        expect(getByText('1–10 of 11')).toBeVisible();
+
+        await userEvent.click(getByLabelText('Go to next page'));
+        assertRowCount(1);
+        await waitForText('11–11 of 11');
+
+        await userEvent.click(getByTestId('journal-user-lists-add'));
+        assertRowCount(10);
+        await waitForText('1–10 of 12');
     });
 
     it('should cancel new row', async () => {

@@ -22,6 +22,14 @@ export const useGrid = ({ createAction, updateAction, deleteAction }: UseGridPar
     const [rowModesModel, setRowModesModel] = useState<GridRowModesModel>({});
     const [deleteRowId, setDeleteRowId] = useState<number | null>(null);
     const [editingLabel, setEditingLabel] = useState('');
+    const [paginationModel, setPaginationModel] = useState({
+        page: 0,
+        pageSize: 10,
+    });
+
+    const handleResetPagination = () => {
+        setPaginationModel(prev => ({ ...prev, page: 0 }));
+    };
 
     const withProcessing = useCallback(async <T>(fn: () => Promise<T>): Promise<T> => {
         setProcessing(true);
@@ -106,7 +114,10 @@ export const useGrid = ({ createAction, updateAction, deleteAction }: UseGridPar
         setDeleteRowId,
         editingLabel,
         setEditingLabel,
+        paginationModel,
+        setPaginationModel,
         handleUpdateRow,
         handleDeleteRow,
+        handleResetPagination,
     };
 };
