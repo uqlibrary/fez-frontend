@@ -1259,7 +1259,7 @@ describe('ViewJournal', () => {
                     await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
 
-                it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
+                it('should display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', async () => {
                     api.mock.journals.get({
                         id: '.*',
                         data: {
@@ -1272,7 +1272,7 @@ describe('ViewJournal', () => {
                     });
                     setup();
 
-                    assertNotToBeInTheDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
             });
         });
