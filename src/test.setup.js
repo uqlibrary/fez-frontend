@@ -88,7 +88,6 @@ global.renderComponent = (component, props, args = {}) => {
     );
 };
 
-// required to avoid CKEditor errors during tests
 global.ResizeObserver = ResizeObserverModule.default;
 
 global.componentToString = component => {
@@ -121,6 +120,7 @@ class ResizeObserver {
     unobserve() {}
     disconnect() {}
 }
+
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 
 class IntersectionObserver {
@@ -137,7 +137,6 @@ function canBeSpread(variable) {
     return typeof variable?.[Symbol.iterator] === 'function';
 }
 
-// jsdom v20 is unable to parse CKEditor 5 v41 css files
 // suppressing the CSS parsing error messages as they dont really break the tests
 const originalConsoleError = console.error;
 const jsDomCssError = 'Error: Could not parse CSS stylesheet';

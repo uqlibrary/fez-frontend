@@ -52,7 +52,7 @@ describe('AdminSection component', () => {
         allFields = simpleFields.concat(composedFields);
         fieldIds = allFields
             .filter(props => props.name.includes('adminSection.'))
-            .map(props => props.id || props.textFieldId || props.richEditorId || props.genericSelectFieldId)
+            .map(props => props.id || props.textFieldId || props.genericSelectFieldId)
             .map(id => (id === 'jnl_advisory_statement_type' || id === 'jnl_is_refereed' ? `${id}-input` : id));
     });
 
@@ -88,7 +88,11 @@ describe('AdminSection component', () => {
         // only test actual input fields
         const { getByTestId } = setup({ values: { journal: { ...journalDoaj.data } }, disabled: true });
         fieldIds.forEach(id => {
-            expect(getByTestId(`${id}-input`)).toHaveAttribute('disabled');
+            if (id !== 'jnl-advisory-statement') {
+                expect(getByTestId(`${id}-input`)).toHaveAttribute('disabled');
+            } else {
+                expect(getByTestId(id)).toHaveAttribute('contenteditable', 'false');
+            }
         });
     });
 });

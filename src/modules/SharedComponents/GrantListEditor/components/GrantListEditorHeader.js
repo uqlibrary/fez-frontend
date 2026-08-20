@@ -14,7 +14,7 @@ import { useWidth } from 'hooks';
 export const GrantListEditorHeader = ({
     onDeleteAll,
     locale = {
-        GrantAgencyName: 'Grant name',
+        GrantAgencyName: 'Grant agency',
         GrantID: 'Funder/sponsor ID',
         GrantAgencyType: 'Funder/sponsor type',
         reorderColumn: 'Reorder entries',
