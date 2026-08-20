@@ -17,7 +17,6 @@ import Section from './Section';
 import { parseHtmlToJSX, silentTryCatch } from 'helpers/general';
 
 import { userIsAdmin } from 'hooks';
-import { default as globalLocale } from 'locale/global';
 import { default as pagesLocale } from 'locale/pages';
 import { default as viewJournalLocale } from 'locale/viewJournal';
 import { viewJournalConfig } from 'config/viewJournal';
@@ -142,12 +141,6 @@ export const ViewJournal = () => {
     const journalLoading = useSelector(state => state.get('viewJournalReducer').loadingJournalToView);
     const journalDetails = useSelector(state => state.get('viewJournalReducer').journalToView);
     const journalLoadingError = useSelector(state => state.get('viewJournalReducer').journalToViewError);
-    const [favouriteUpdateError, setUpdateFavouriteError] = React.useState(false);
-    const alertProps = favouriteUpdateError && {
-        ...txt.errorAlert,
-        message: txt.errorAlert.message(globalLocale.global.errorMessages.generic),
-    };
-
     const journalDetailsLength = (!!journalDetails && Object.keys(journalDetails)?.length) || 0;
 
     React.useEffect(() => {
@@ -192,10 +185,9 @@ export const ViewJournal = () => {
                     <TitleWithFavouriteButton
                         journal={journalDetails}
                         actions={{
-                            addFavourite: actions.addToFavourites,
-                            removeFavourite: actions.removeFromFavourites,
+                            addFavourite: actions.addListItems,
+                            removeFavourite: actions.deleteListItems,
                         }}
-                        handlers={{ errorUpdatingFavourite: setUpdateFavouriteError }}
                         tooltips={{
                             favourite: txt.favouriteTooltip.isFavourite,
                             notFavourite: txt.favouriteTooltip.isNotFavourite,
@@ -226,16 +218,6 @@ export const ViewJournal = () => {
                 }}
             >
                 <Grid container spacing={3}>
-                    {favouriteUpdateError && (
-                        <Grid item xs={12}>
-                            <Alert
-                                pushToTop
-                                {...alertProps}
-                                allowDismiss
-                                dismissAction={() => setUpdateFavouriteError(false)}
-                            />
-                        </Grid>
-                    )}
                     {Object.keys(journalDetails).length > 0 && journalDetails.jnl_advisory_statement && (
                         <Grid item xs={12}>
                             <Alert

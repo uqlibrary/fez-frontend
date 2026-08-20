@@ -1329,6 +1329,10 @@ export default {
             title: 'My editorial appointments',
             loadingMessage: 'Loading editorial appointments',
         },
+        journalUserLists: {
+            title: 'Favourite Journals Lists',
+            loadingMessage: 'Loading lists',
+        },
         journal: {
             view: {
                 title: 'Journal details',
