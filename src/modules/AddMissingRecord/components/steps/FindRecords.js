@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { locale } from 'locale';
 import { validation } from 'config';
@@ -52,12 +52,12 @@ export const FindRecords = () => {
         <StandardCard title={txt.title} help={txt.help}>
             <form onSubmit={safelyHandleSubmit}>
                 <Grid container spacing={2} alignItems={'center'}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Typography gutterBottom id="search-description">
                             {txt.text}
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm>
+                    <Grid size={{ xs: 12, sm: 'grow' }}>
                         <Field
                             control={control}
                             component={TextField}
@@ -73,7 +73,7 @@ export const FindRecords = () => {
                             textFieldId="search-query"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={'auto'}>
+                    <Grid size={{ xs: 12, sm: 'auto' }}>
                         <Button
                             type="submit"
                             variant={'contained'}
@@ -85,7 +85,7 @@ export const FindRecords = () => {
                         />
                     </Grid>
                     {onSkipSearch && (
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 variant={'text'}
                                 children={txt.skip}

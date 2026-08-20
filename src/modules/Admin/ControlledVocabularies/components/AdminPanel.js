@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Controller, useForm } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -87,7 +87,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                 }}
                             >
                                 <Grid container padding={0} spacing={2}>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <label htmlFor="cvo_title">{locale.form.title}</label>
                                         <Controller
                                             name="cvo_title"
@@ -113,7 +113,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                             )}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <label htmlFor="cvo_desc">{locale.form.description}</label>
                                         <Controller
                                             name="cvo_desc"
@@ -132,7 +132,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                             )}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <label htmlFor="cvo_external_id" style={{ display: 'block' }}>
                                             {locale.form.externalId}
                                         </label>
@@ -150,7 +150,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                             )}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <label htmlFor="cvo_hide" style={{ display: 'block' }}>
                                             {locale.form.inactive}
                                         </label>
@@ -177,7 +177,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                                 data-testid={`${rootId}-actions`}
                                 sx={{ marginTop: 2 }}
                             >
-                                <Grid item xs={12} justifyContent="flex-end" display={'flex'}>
+                                <Grid size={12} justifyContent="flex-end" display={'flex'}>
                                     <Button
                                         variant={'outlined'}
                                         onClick={_onCancelAction}
@@ -214,7 +214,7 @@ const AdminPanel = ({ action, locale, isOpen, title, id, onCancelAction, onClose
                             </Grid>
                             {!!apiError && (
                                 <Grid container>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <Alert
                                             alertId={`${rootId}-alert`}
                                             title={locale.form.error.title}
