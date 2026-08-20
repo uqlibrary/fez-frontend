@@ -22,7 +22,7 @@ import {
 } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { doesListContainItem } from 'helpers/general';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import WorkNotFound from 'modules/NotFound/components/WorkNotFound';
 import * as actions from 'actions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -238,20 +238,16 @@ const DeleteRecord = () => {
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
-                                <Grid xs={12}>
+                                <Grid size={12}>
                                     <StandardCard title={formTxt.notes.title}>
                                         <Grid container spacing={2}>
                                             <Grid size={12}>
                                                 <Field
                                                     control={control}
-                                                    component={RichEditorField}
+                                                    component={RichTextEditorField}
                                                     name="publication.fez_record_search_key_deletion_notes.rek_deletion_notes"
-                                                    textFieldId="rek-deletion-notes-text"
-                                                    richEditorId="rek-deletion-notes"
+                                                    id="rek-deletion-notes"
                                                     disabled={isSubmitting}
-                                                    fullWidth
-                                                    multiline
-                                                    rows={5}
                                                     validate={[validation.maxListEditorTextLength2000]}
                                                     maxValue={2000}
                                                 />

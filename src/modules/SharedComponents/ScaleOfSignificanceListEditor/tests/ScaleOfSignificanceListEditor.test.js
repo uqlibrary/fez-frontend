@@ -1,22 +1,6 @@
 import React from 'react';
 import ScaleOfSignificanceListEditor from '../ScaleOfSignificanceListEditor';
-import { render, WithReduxStore, fireEvent, within } from 'test-utils';
-
-/* eslint react/prop-types: 0 */
-jest.mock('modules/SharedComponents/RichEditor', () => ({
-    RichEditorField: props => {
-        const TextField = require('@mui/material/TextField').default;
-
-        return (
-            <TextField
-                id={props.richEditorId}
-                onChange={e => props.onChange({ plainText: e.target.value })}
-                inputProps={{ 'aria-label': 'contribution-statement', 'data-testid': props.richEditorId }}
-                inputRef={props.inputRef}
-            />
-        );
-    },
-}));
+import { render, WithReduxStore, fireEvent, within, setRichTextEditorValue } from 'test-utils';
 
 const defaultProps = {
     className: 'testClass',
@@ -136,14 +120,14 @@ describe('ScaleOfSignificanceListEditor tests', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should update an object item in the list', () => {
+    it('should update an object item in the list', async () => {
         const { container, getByTestId, getByRole } = setup();
         expect(within(getByTestId('test-list-editor-list-row-0')).queryByText('Major')).not.toBeInTheDocument();
 
         fireEvent.click(getByTestId('test-list-editor-list-row-0-edit'));
         fireEvent.mouseDown(getByTestId('rek-significance-select'));
         fireEvent.click(getByRole('option', { name: 'Major' }));
-        fireEvent.change(getByTestId('rek-creator-contribution-statement'), { target: { value: 'test' } });
+        await setRichTextEditorValue('rek-creator-contribution-statement', 'test');
         fireEvent.click(getByTestId('rek-significance-add'));
 
         expect(within(getByTestId('test-list-editor-list-row-0')).queryByText('Major')).toBeInTheDocument();

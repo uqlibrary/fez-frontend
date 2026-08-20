@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/GridLegacy';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { SIGNIFICANCE } from 'config/general';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -179,11 +179,9 @@ export const ScaleOfSignificanceForm = ({
                 />
             </Grid>
             <Grid item xs={12}>
-                <RichEditorField
-                    richEditorId="rek-creator-contribution-statement"
-                    name="value"
+                <RichTextEditorField
+                    id="rek-creator-contribution-statement"
                     onChange={handleContributionStatement}
-                    onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled || emptySignificance}
                     title={contributionStatementInputFieldLabel}

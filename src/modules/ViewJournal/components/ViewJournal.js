@@ -24,7 +24,6 @@ import { viewJournalConfig } from 'config/viewJournal';
 
 import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
 import { getIndicatorProps, status, types } from '../../SharedComponents/JournalsList/components/partials/utils';
-import moment from 'moment';
 import { buildJournalSearchQueryParams, getKeywordKey } from '../../SearchJournals/hooks';
 import { pathConfig } from '../../../config';
 import param from 'can-param';
@@ -34,21 +33,6 @@ import Button from '@mui/material/Button';
 
 export const getAdvisoryStatement = html => {
     return !!html ? parseHtmlToJSX(html) : '';
-};
-
-/**
- * @param {object} data
- * @return {boolean}
- */
-const isEmbargoDateMoreThanOnYearAway = data => {
-    const units = data?.fez_journal_issn?.[0]?.fez_sherpa_romeo?.srm_max_embargo_units;
-    const amount = Number(data?.fez_journal_issn?.[0]?.fez_sherpa_romeo?.srm_max_embargo_amount);
-    /* istanbul ignore next */
-    if (!['days', 'weeks', 'months', 'years'].includes(units) || !Number.isFinite(amount)) return false;
-
-    const now = moment().utc();
-    const embargoDate = silentTryCatch(() => now.clone().add(amount, units), now.clone());
-    return embargoDate.isSameOrAfter(now.add(12, 'months'));
 };
 
 /**
@@ -62,11 +46,7 @@ const shouldShowPublishAsOAButton = (location, data) =>
         if (qsParams?.fromSearch !== 'true') return false;
 
         const publishedStatus = getIndicatorProps({ type: types.published, data });
-        const acceptedStatus = getIndicatorProps({ type: types.accepted, data });
-        return (
-            publishedStatus?.status === status.fee &&
-            (acceptedStatus?.status !== status.embargo || isEmbargoDateMoreThanOnYearAway(data))
-        );
+        return publishedStatus?.status === status.fee;
     }, false);
 
 /**
