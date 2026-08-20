@@ -68,6 +68,7 @@ const data = [
 const setup = (testProps = {}, render = defaultRender) => {
     const props = {
         data: { data: data },
+        loading: false,
         createAction,
         updateAction,
         deleteAction,
@@ -127,9 +128,19 @@ describe('DataGrid', () => {
         getLinkTestIds().forEach(el => assertEnabledLink(el));
     };
 
-    it('should render rows from data', async () => {
-        const { getByTestId, queryByTestId } = setup();
+    it('should render with loading state', async () => {
+        const { getByRole } = setup({ loading: true });
+        assertDisabled('journal-user-lists-quicksearch-input');
+        assertDisabled('journal-user-lists-add');
+        expect(getByRole('progressbar')).toBeInTheDocument();
+    });
 
+    it('should render rows from data', async () => {
+        const { getByTestId, queryByTestId, queryByRole } = setup();
+
+        expect(queryByRole('progressbar')).not.toBeInTheDocument();
+        assertEnabled('journal-user-lists-quicksearch-input');
+        assertEnabled('journal-user-lists-add');
         assertRowCount(2);
         expect(getByTestId('fjl-label-1')).toHaveTextContent('List one');
         expect(getByTestId('fjl-label-2')).toHaveTextContent('List two');
@@ -139,8 +150,6 @@ describe('DataGrid', () => {
         assertEnabledLink(getByTestId('fjl-view-link-2'), createListUrl(2));
         assertEnabledLink(getByTestId('fjl-sharable-link-1'), createListSharingUrl(1).replace('http://localhost/', ''));
         assertDisabledLink(getByTestId('fjl-sharable-link-2'));
-        assertToBeInTheDocument('journal-user-lists-quicksearch');
-        assertEnabled('journal-user-lists-add');
         expect(createAction).not.toHaveBeenCalled();
         expect(updateAction).not.toHaveBeenCalled();
         expect(deleteAction).not.toHaveBeenCalled();
