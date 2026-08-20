@@ -12,7 +12,7 @@ import * as Sentry from '@sentry/react';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Badge from '@mui/material/Badge';
 import Typography from '@mui/material/Typography';
@@ -211,7 +211,7 @@ export const AdminInterface = ({
         return (
             <StandardPage>
                 <Grid container>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             message={txt.current.notSupportedMessage.replace('[pubType]', selectedPublicationType)}
                             type="info"
@@ -276,7 +276,7 @@ export const AdminInterface = ({
 
     const renderButtonBar = (placement = '') => (
         <React.Fragment>
-            <Grid item xs={12} sm={2}>
+            <Grid size={{ xs: 12, sm: 2 }}>
                 <Button
                     id={`admin-work-cancel${placement}`}
                     data-analyticsid={`admin-work-cancel${placement}`}
@@ -294,7 +294,7 @@ export const AdminInterface = ({
                 record.rek_status !== RETRACTED &&
                 objectType !== RECORD_TYPE_COMMUNITY &&
                 objectType !== RECORD_TYPE_COLLECTION && (
-                    <Grid item xs={12} sm={3}>
+                    <Grid size={{ xs: 12, sm: 3 }}>
                         <Button
                             id={`admin-work-retract${placement}`}
                             data-analyticsid={`retract-admin${placement}`}
@@ -309,7 +309,7 @@ export const AdminInterface = ({
                     </Grid>
                 )}
             {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status !== PUBLISHED && !isDeleted && (
-                <Grid item xs={12} sm={3}>
+                <Grid size={{ xs: 12, sm: 3 }}>
                     <Button
                         id={`admin-work-publish${placement}`}
                         data-analyticsid={`publish-admin${placement}`}
@@ -328,7 +328,7 @@ export const AdminInterface = ({
                 </Grid>
             )}
             {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status === PUBLISHED && !isDeleted && (
-                <Grid item xs={12} sm={3}>
+                <Grid size={{ xs: 12, sm: 3 }}>
                     <Button
                         id={`admin-work-unpublish${placement}`}
                         data-analyticsid={`unpublish-admin${placement}`}
@@ -346,7 +346,7 @@ export const AdminInterface = ({
                     />
                 </Grid>
             )}
-            <Grid item xs={12} sm>
+            <Grid size={{ xs: 12, sm: 'grow' }}>
                 <Button
                     id={`admin-work-submit${placement}`}
                     data-analyticsid={`submit-admin${placement}`}
@@ -370,7 +370,7 @@ export const AdminInterface = ({
     const renderSaveStatusAlert = (
         <React.Fragment>
             {alertProps.current && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <div style={{ height: 16 }} />
                     <Alert
                         {...alertProps.current}
@@ -398,7 +398,7 @@ export const AdminInterface = ({
                         locale={saveConfirmationLocale}
                         onCancelAction={() => navigateToViewRecord(record.rek_pid)}
                     />
-                    <Grid item xs style={{ marginBottom: 12 }}>
+                    <Grid size="grow" style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 18, fontWeight: 400 }}>
                             {!createMode
                                 ? parseHtmlToJSX(
@@ -407,7 +407,7 @@ export const AdminInterface = ({
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
-                    <Grid item xs="auto" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Grid size="auto" sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <FormViewToggler />
                     </Grid>
                     {record.rek_status === RETRACTED && (
@@ -418,15 +418,15 @@ export const AdminInterface = ({
                             alignItems="center"
                             style={{ marginBottom: 12 }}
                         >
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Alert message={txt.current.retractedMessage} type="warning" />
                             </Grid>
                         </Grid>
                     )}
                     {/* Admin lock alert */}
                     {!!locked && <LockedAlert />}
-                    <Grid container spacing={1}>
-                        <Grid item xs={12}>
+                    <Grid container spacing={1} sx={{ width: '100%' }}>
+                        <Grid size={12}>
                             <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
                                 {renderButtonBar('-top')}
                             </Grid>
@@ -434,7 +434,7 @@ export const AdminInterface = ({
                     </Grid>
                     <Grid container spacing={0} direction="row" sx={{ display: { xs: 'none', sm: 'flex' } }}>
                         {tabbed && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <StyledTabs
                                     value={currentTabValue}
                                     onChange={handleTabChange}
@@ -469,7 +469,7 @@ export const AdminInterface = ({
                     </Grid>
                     <Grid container spacing={1}>
                         {renderSaveStatusAlert}
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Grid container spacing={1} style={{ marginTop: 8 }}>
                                 {renderButtonBar()}
                             </Grid>
