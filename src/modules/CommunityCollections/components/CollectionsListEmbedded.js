@@ -17,7 +17,7 @@ import { useQueryStringParams, useCommunityCollectionControls } from '../hooks';
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 import param from 'can-param';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 const moment = require('moment');
 
@@ -32,7 +32,7 @@ const classes = {
 
 const returnDateField = (date, conf, classes) => {
     return (
-        <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
+        <Grid size={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
             <Typography variant="body2">{moment(date).local().format(conf.dateFormat)}</Typography>
         </Grid>
     );
@@ -220,21 +220,16 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                 container
                                                 data-testid="embedded-collections-primary-header"
                                                 spacing={0}
-                                                sx={{ fontWeight: 400, padding: '15px 0px' }}
+                                                sx={{ width: '100%', fontWeight: 400, padding: '15px 0px' }}
                                             >
                                                 <Grid
-                                                    item
-                                                    xs={10}
-                                                    sm={adminUser ? 8 : 9}
-                                                    md={adminUser ? 6 : 7}
+                                                    size={{ xs: 10, sm: adminUser ? 8 : 9, md: adminUser ? 6 : 7 }}
                                                     sx={{ ...classes.dateField }}
                                                 >
                                                     {labels.title}
                                                 </Grid>
                                                 <Grid
-                                                    item
-                                                    sm={2}
-                                                    md={1}
+                                                    size={{ sm: 2, md: 1 }}
                                                     sx={{
                                                         ...classes.centerAlign,
                                                         display: { xs: 'none', sm: 'block' },
@@ -243,24 +238,20 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                     {communityCollectionsConfig.viewCommunityTitle}
                                                 </Grid>
                                                 <Grid
-                                                    item
-                                                    xs={2}
+                                                    size={2}
                                                     sx={{ ...classes.dateField, display: { xs: 'none', md: 'block' } }}
                                                 >
                                                     {labels.creation_date}
                                                 </Grid>
                                                 <Grid
-                                                    item
-                                                    xs={2}
+                                                    size={2}
                                                     sx={{ ...classes.dateField, display: { xs: 'none', md: 'block' } }}
                                                 >
                                                     {labels.updated_date}
                                                 </Grid>
                                                 {!!adminUser && (
                                                     <Grid
-                                                        item
-                                                        xs={2}
-                                                        md={1}
+                                                        size={{ sm: 2, md: 1 }}
                                                         sx={{
                                                             ...classes.dateField,
                                                             ...classes.centerAlign,
@@ -271,8 +262,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                     </Grid>
                                                 )}
                                                 <Grid
-                                                    item
-                                                    xs={2}
+                                                    size={2}
                                                     sx={{
                                                         ...classes.centerAlign,
                                                         display: { xs: 'block', sm: 'none' },
@@ -285,6 +275,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                 {finalList.data.map(row => (
                                                     <Grid
                                                         sx={{
+                                                            width: '100%',
                                                             boxSizing: 'border-box',
                                                             boxShadow: '0 -1px 0 #eaeaea',
                                                             padding: '15px 0px',
@@ -295,10 +286,11 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         data-testid={`row-${row.rek_pid}`}
                                                     >
                                                         <Grid
-                                                            item
-                                                            xs={10}
-                                                            sm={adminUser ? 8 : 9}
-                                                            md={adminUser ? 6 : 7}
+                                                            size={{
+                                                                xs: 10,
+                                                                sm: adminUser ? 8 : 9,
+                                                                md: adminUser ? 6 : 7,
+                                                            }}
                                                             sx={{ ...classes.dateField }}
                                                         >
                                                             <Typography variant="body2">
@@ -350,9 +342,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                             </Box>
                                                         </Grid>
                                                         <Grid
-                                                            item
-                                                            xs={2}
-                                                            md={1}
+                                                            size={{ xs: 2, md: 1 }}
                                                             sx={{
                                                                 ...classes.centerAlign,
                                                                 display: { xs: 'none', sm: 'block' },
@@ -366,8 +356,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         {returnDateField(row.rek_updated_date, conf, classes.dateField)}
 
                                                         <Grid
-                                                            item
-                                                            xs={2}
+                                                            size={2}
                                                             sx={{
                                                                 ...classes.centerAlign,
                                                                 display: { xs: 'block', sm: 'none' },
@@ -388,9 +377,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         </Grid>
                                                         {!!adminUser && (
                                                             <Grid
-                                                                item
-                                                                xs={2}
-                                                                md={1}
+                                                                size={{ xs: 2, md: 1 }}
                                                                 sx={{
                                                                     ...classes.dateField,
                                                                     ...classes.centerAlign,

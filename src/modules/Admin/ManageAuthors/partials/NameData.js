@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';
@@ -75,7 +75,7 @@ export const NameData = () => {
                     data-testid="aut-name-overridden"
                     name="aut_name_overridden"
                 />
-                <Grid xs={12} sx={{ mx: 2 }}>
+                <Grid size={12} sx={{ mx: 2 }}>
                     <Divider />
                 </Grid>
                 <Field

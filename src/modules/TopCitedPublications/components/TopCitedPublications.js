@@ -8,7 +8,7 @@ import { styled } from '@mui/material/styles';
 import locale from 'locale/components';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -62,11 +62,11 @@ export const TopCitedPublications = () => {
     if (loadingTopCitedPublications) {
         return (
             <Grid container>
-                <Grid item xs />
-                <Grid item>
+                <Grid size="grow" />
+                <Grid>
                     <InlineLoader message={txt.loading} />
                 </Grid>
-                <Grid item xs />
+                <Grid size="grow" />
             </Grid>
         );
     }
@@ -127,16 +127,16 @@ export const TopCitedPublications = () => {
                                     key={key}
                                     style={{ marginTop: 24 }}
                                 >
-                                    <Grid item xs>
+                                    <Grid size="grow">
                                         <Typography key={key} variant={'h6'} color={'primary'}>
                                             <div key={key} className={`fez-icon ${key} xxlarge`} />
                                             {txt[key].heading}
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={'auto'} style={{ marginTop: -12 }}>
+                                    <Grid size="auto" style={{ marginTop: -12 }}>
                                         <HelpIcon {...locale.components.trendingPublicationHelp} />
                                     </Grid>
-                                    <Grid item xs={12} style={{ paddingTop: 24 }} id={'topCitedPublications'}>
+                                    <Grid size={12} style={{ paddingTop: 24 }} id={'topCitedPublications'}>
                                         <PublicationsList
                                             key={key}
                                             publicationsList={values}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 
@@ -25,7 +25,7 @@ export const ThirdPartyLookupFormResult = ({
     };
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.thisForm.lookupLabel}>
                     <p>
                         {txt.thisForm.primaryFieldHeading} - {primaryValue}
@@ -47,7 +47,7 @@ export const ThirdPartyLookupFormResult = ({
                             </Fragment>
                         )}
                         {lookupResults.length === 0 && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <StandardCard>
                                     {locale.noResultsFound && locale.noResultsFound.text
                                         ? locale.noResultsFound.text

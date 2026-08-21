@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H, SYSTEM_ALERT_ACTION, getFormattedServerDate } from '../config';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -148,7 +148,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                     )}
                     <StyledDivider />
                     <Grid container spacing={1}>
-                        <Grid item xs={4}>
+                        <Grid size={4}>
                             <Typography
                                 data-testid={`${rootId}-id-label`}
                                 sx={{
@@ -158,7 +158,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 {txt.alertId}
                             </Typography>
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid size={8}>
                             <Typography
                                 data-testid={`${rootId}-id`}
                                 sx={{
@@ -168,7 +168,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 {row.sat_id}
                             </Typography>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid size={4}>
                             <Typography
                                 data-testid={`${rootId}-date-created-label`}
                                 sx={{
@@ -178,7 +178,7 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 {txt.received}
                             </Typography>
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid size={8}>
                             <Typography
                                 data-testid={`${rootId}-date-created`}
                                 sx={{
@@ -188,12 +188,12 @@ const SystemAlertsDrawer = ({ locale, row, open, onCloseDrawer, onSystemAlertUpd
                                 {getFormattedServerDate(row.sat_created_date, DEFAULT_DATE_FORMAT_WITH_TIME_24H)}
                             </Typography>
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid size={4}>
                             <Typography fontWeight={400} data-testid={`${rootId}-creator-label`}>
                                 {txt.creator}
                             </Typography>
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid size={8}>
                             <Typography fontWeight={'normal'} data-testid={`${rootId}-creator`}>
                                 {renderCreatorsUsername(row)}
                             </Typography>

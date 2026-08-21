@@ -3,10 +3,10 @@
 exports[`Component ThirdPartyLookupForm should display form in minimised view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -21,10 +21,10 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -34,7 +34,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -67,10 +67,10 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
 exports[`Component ThirdPartyLookupForm should display form without a secondary field 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -85,10 +85,10 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -98,7 +98,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -170,10 +170,10 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
 exports[`Component ThirdPartyLookupForm should show form with non-minimised form 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -188,10 +188,10 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -201,7 +201,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -295,10 +295,10 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -313,10 +313,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -326,7 +326,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -359,10 +359,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -377,10 +377,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -390,7 +390,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -484,10 +484,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
 exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -502,10 +502,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -515,7 +515,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -548,10 +548,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
 exports[`Component ThirdPartyLookupForm should use defaults when locale values are not provided 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -566,10 +566,10 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -579,7 +579,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -675,10 +675,10 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
 exports[`Component ThirdPartyLookupForm should use locale values when provided 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -693,10 +693,10 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
           id="standard-card-content"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
               <h5
@@ -706,7 +706,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
               </h5>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
