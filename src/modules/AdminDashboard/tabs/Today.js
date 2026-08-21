@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import * as actions from 'actions';
@@ -40,7 +40,7 @@ const Today = () => {
     return (
         <StandardCard noHeader>
             {alertIsVisible && (
-                <Grid item xs={12} sx={{ mb: 1 }}>
+                <Grid size={12} sx={{ mb: 1 }}>
                     <Alert
                         type="error_outline"
                         title={txt.quicklinks.error.title}
@@ -53,9 +53,9 @@ const Today = () => {
                 </Grid>
             )}
             <Grid container spacing={2} minHeight={300}>
-                <Grid item xs={12} lg={7}>
+                <Grid size={{ xs: 12, lg: 7 }}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} marginBlockEnd={4}>
+                        <Grid size={12} marginBlockEnd={4}>
                             {!!adminDashboardTodayData && adminDashboardTodaySuccess && (
                                 <RibbonChartContainer
                                     data={adminDashboardTodayData?.systemalerts}
@@ -82,7 +82,7 @@ const Today = () => {
                                 </RibbonChartContainer>
                             )}
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <ChartBlock
                                 loading={adminDashboardTodayLoading}
                                 success={adminDashboardTodaySuccess}
@@ -130,7 +130,7 @@ const Today = () => {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <ChartBlock
                                 loading={adminDashboardTodayLoading}
                                 success={adminDashboardTodaySuccess}
@@ -167,7 +167,7 @@ const Today = () => {
                         </Grid>
                     </Grid>
                     <Grid container rowSpacing={4} spacing={5} sx={{ pt: 2 }}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <ChartBlock
                                 loading={adminDashboardTodayLoading}
                                 success={adminDashboardTodaySuccess}
@@ -195,7 +195,7 @@ const Today = () => {
                                 )}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <ChartBlock
                                 loading={adminDashboardTodayLoading}
                                 success={adminDashboardTodaySuccess}
@@ -222,7 +222,7 @@ const Today = () => {
                         </Grid>
                     </Grid>
                     <Grid container rowSpacing={4} spacing={5} sx={{ pt: 2 }}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <ChartBlock
                                 loading={adminDashboardTodayLoading}
                                 success={adminDashboardTodaySuccess}
@@ -262,7 +262,7 @@ const Today = () => {
                         </Typography>
                     )}
                 </Grid>
-                <Grid item xs={12} lg={5}>
+                <Grid size={{ xs: 12, lg: 5 }}>
                     <QuickLinkContainer locale={txt.quicklinks} />
                 </Grid>
             </Grid>

@@ -7,7 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
@@ -73,13 +73,13 @@ export const ThirdPartyLookupForm = ({
 
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard noHeader>
                     <Grid container spacing={3}>
-                        <Grid item style={{ flexGrow: 1, width: 1 }}>
+                        <Grid style={{ flexGrow: 1, width: 1 }}>
                             <Typography variant="h5">{lookupLabel}</Typography>
                         </Grid>
-                        <Grid item>
+                        <Grid>
                             <IconButton
                                 onClick={_toggleMinimise}
                                 tooltip={!!state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`}

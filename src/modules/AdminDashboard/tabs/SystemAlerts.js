@@ -6,7 +6,7 @@ import locale from 'locale/components';
 
 import * as actions from 'actions';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -150,7 +150,7 @@ const SystemAlerts = () => {
                 )}
             </Typography>
             {alertIsVisible && (
-                <Grid item xs={12} sx={{ mb: 1 }}>
+                <Grid size={12} sx={{ mb: 1 }}>
                     <Alert
                         type="error_outline"
                         title={txt.error.title}
@@ -176,7 +176,7 @@ const SystemAlerts = () => {
                 />
             )}
             <Grid container>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {!!adminDashboardSystemAlertsData && (
                         <>
                             {selectionModel.length > 0 && (
