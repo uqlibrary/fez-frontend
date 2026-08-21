@@ -23,9 +23,10 @@ interface DataGridProps {
     createAction: (payload: Partial<Row>) => unknown;
     updateAction: (payload: Partial<FezJournalUserList>) => unknown;
     deleteAction: (id: number) => unknown;
+    loading: boolean;
 }
 
-export const DataGrid = ({ data, createAction, updateAction, deleteAction }: DataGridProps) => {
+export const DataGrid = ({ data, loading, createAction, updateAction, deleteAction }: DataGridProps) => {
     const txt = locale.components.journalUserLists;
     const apiRef = useGridApiRef();
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -174,6 +175,7 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                     width: { xs: '100%', sm: 240 },
                 }}
                 slotProps={{ htmlInput: { 'data-testid': 'journal-user-lists-quicksearch-input' } }}
+                disabled={processing || loading}
             />
 
             <Box sx={{ flexGrow: 1 }} />
@@ -189,7 +191,10 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                 }}
                 data-testid="journal-user-lists-add"
                 disabled={
-                    Object.values(rowModesModel).some(rowMode => rowMode.mode === GridRowModes.Edit) || !!deleteRowId
+                    Object.values(rowModesModel).some(rowMode => rowMode.mode === GridRowModes.Edit) ||
+                    !!deleteRowId ||
+                    processing ||
+                    loading
                 }
             >
                 Add new list
@@ -218,7 +223,9 @@ export const DataGrid = ({ data, createAction, updateAction, deleteAction }: Dat
                 columns={columns}
                 editMode="row"
                 rowModesModel={rowModesModel}
-                loading={processing}
+                loading={processing || loading}
+                disableColumnResize={processing || loading}
+                disableColumnSorting={processing || loading}
                 onRowModesModelChange={handleRowModesModelChange}
                 processRowUpdate={handleUpdateRow}
                 onCellKeyDown={handleCellKeyDown}
