@@ -1,30 +1,28 @@
-import { createExtensions } from './createExtensions';
-import { PlainTextPaste } from './extensions';
 import { BulletList, OrderedList } from '@tiptap/extension-list';
 
+import { createExtensions } from './createExtensions';
+
 describe('createExtensions', () => {
-    it('should enable plain text paste by default', () => {
+    const getFlattenPasteExtension = extensions => extensions.find(extension => extension.name === 'flattenPaste');
+
+    it('should include FlattenPasteExtension by default', () => {
         const extensions = createExtensions({});
 
-        expect(extensions).toContain(PlainTextPaste);
+        expect(getFlattenPasteExtension(extensions)).toBeDefined();
     });
 
-    it('should include PlainTextPaste when textOnlyOnPaste is true', () => {
+    it('should preserve paste formatting when configured', () => {
         const extensions = createExtensions({
-            singleLine: false,
-            textOnlyOnPaste: true,
+            preservePasteFormatting: true,
         });
 
-        expect(extensions).toContain(PlainTextPaste);
+        expect(getFlattenPasteExtension(extensions).options.preserveFormatting).toBe(true);
     });
 
-    it('should not include PlainTextPaste when textOnlyOnPaste is false', () => {
-        const extensions = createExtensions({
-            singleLine: false,
-            textOnlyOnPaste: false,
-        });
+    it('should not preserve paste formatting by default', () => {
+        const extensions = createExtensions({});
 
-        expect(extensions).not.toContain(PlainTextPaste);
+        expect(getFlattenPasteExtension(extensions).options.preserveFormatting).toBe(false);
     });
 
     it('should exclude list extensions for single line editor', () => {
