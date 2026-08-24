@@ -4,10 +4,8 @@ import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
 import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
-
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
+import Link from '@mui/icons-material/Link';
+import _ from 'lodash';
 
 export default {
     components: {
@@ -1536,11 +1534,11 @@ export default {
             },
         },
         authorsList: suffix => ({
-            title: `${capitalizeFirstLetter(suffix)}s`,
+            title: `${_.upperFirst(suffix)}s`,
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameAsPublishedLabel: `${_.upperFirst(suffix)}'s name as published`,
                         nameAsPublishedHint: 'Enter the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
                         externalIdentifierLabel: 'External identifier',
@@ -1582,7 +1580,7 @@ export default {
                 header: {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameColumn: `${_.upperFirst(suffix)}'s name as published`,
                         identifierColumn: 'UQ identifiers',
                         externalIdentifierColumn: 'External identifier',
                         externalIdentifierTypeColumn: 'External identifier type',
@@ -4477,16 +4475,24 @@ export default {
             },
         },
         favouriteJournals: {
-            title: 'My Favourite Journals',
+            title: 'Favourite Journals List',
             buttons: {
-                removeFromFavourites: {
-                    title: 'REMOVE FROM FAVOURITES',
-                    aria: 'Remove from favourites',
+                delete: {
+                    title: 'REMOVE FROM LIST',
+                    aria: 'Remove from LIST',
+                },
+                toJournalSearch: {
+                    title: 'SEARCH JOURNALS',
+                    aria: 'Search Journals',
                 },
                 returnToSearch: {
                     title: 'RETURN TO JOURNAL SEARCH',
                     aria: 'Return to Journal Search',
                 },
+            },
+            favouriteLists: {
+                noneSelected: 'Please select a list above to display items.',
+                empty: 'You haven\'t created any favourite lists yet. Use the "Add to favourites" button on the results page to add favourites.',
             },
             favouriteJournalsList: {
                 loading: 'Loading ...',
@@ -4510,11 +4516,44 @@ export default {
                 empty: 'No journals were selected for comparison',
             },
         },
+        journalUserLists: {
+            grid: {
+                noRowsLabel: 'No lists to display',
+                columns: {
+                    label: {
+                        title: 'Label',
+                    },
+                    isPublic: {
+                        title: 'Is sharable',
+                    },
+                    sharableLink: {
+                        title: 'Sharing Link',
+                        copyLink: {
+                            title: (
+                                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                                    Copy list's sharing link <Link />
+                                </span>
+                            ),
+                        },
+                    },
+                    actions: {
+                        items: {
+                            title: 'Manage Items',
+                        },
+                    },
+                },
+            },
+        },
         searchJournals: {
             snackbar: {
                 message: 'Search results updated',
             },
             partials: {
+                addNewDialog: {
+                    title: 'New favourites list',
+                    isPublicButtonLabel: 'Make this list sharable?',
+                    serverError: 'Failed to create list, please try again.',
+                },
                 addToSelectedSubjects: {
                     button: {
                         title: 'Add a subject to broaden results',
@@ -4801,10 +4840,13 @@ export default {
                         </ul>
                     </React.Fragment>
                 ),
+                errors: {
+                    addList: 'Failed to create list. Please try again.',
+                },
                 buttons: {
                     myFavouriteJournals: {
-                        title: 'My favourite journals',
-                        aria: 'My favourite journals',
+                        title: 'My Favourites Lists',
+                        aria: 'My Favourites Lists',
                     },
                     browseAllJournals: {
                         title: 'Browse all journals',
@@ -4818,13 +4860,9 @@ export default {
                         title: 'COMPARE SELECTED',
                         aria: 'Compare Selected',
                     },
-                    addToFavourites: {
-                        title: 'ADD TO FAVOURITES',
-                        aria: 'Add to favourites',
-                    },
                 },
                 confirmations: {
-                    addToFavourites: {
+                    addToList: {
                         confirmationMessage: 'COUNT item(s) have been added.',
                     },
                 },
@@ -4880,10 +4918,6 @@ export default {
             journalFacetsFilter: {
                 title: 'Refine results',
                 resetButtonText: 'Clear all filters',
-                favoriteFilter: {
-                    displayTitle: 'Favourite Journals',
-                    activeFilter: 'Show journals favourited',
-                },
                 help: {
                     title: 'Refine results',
                     text: (

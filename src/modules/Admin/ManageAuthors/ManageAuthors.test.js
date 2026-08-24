@@ -13,7 +13,7 @@ import {
     api,
     waitForText,
     screen,
-    assertNotInTheDocument,
+    assertNotToBeInTheDocument,
     waitForTextToBeRemoved,
     waitToHaveBeenLastCalledWith,
 } from 'test-utils';
@@ -1480,7 +1480,7 @@ describe('ManageAuthors', () => {
             await selectAuthor('student 1');
             await waitToBeEnabled('authors-merge-button');
 
-            assertNotInTheDocument('cancel-authors-merge-confirmation');
+            assertNotToBeInTheDocument('cancel-authors-merge-confirmation');
             await userEvent.click(getByTestId('authors-merge-button'));
             await waitForText(locale.components.manageAuthors.form.mergeConfirmationLocale.confirmationTitle);
 
@@ -1501,8 +1501,8 @@ describe('ManageAuthors', () => {
             });
             assertNotSelected('staff 1');
             assertNotSelected('student 1');
-            assertNotInTheDocument(queryByText('student 1'));
-            assertNotInTheDocument('cancel-authors-merge-confirmation');
+            assertNotToBeInTheDocument(queryByText('student 1'));
+            assertNotToBeInTheDocument('cancel-authors-merge-confirmation');
         });
 
         it('should display error from server on merge failure', async () => {
@@ -1516,7 +1516,7 @@ describe('ManageAuthors', () => {
             await selectAuthor('student 1');
             await waitToBeEnabled('authors-merge-button');
 
-            assertNotInTheDocument('cancel-authors-merge-confirmation');
+            assertNotToBeInTheDocument('cancel-authors-merge-confirmation');
             await userEvent.click(getByTestId('authors-merge-button'));
             await waitForText(locale.components.manageAuthors.form.mergeConfirmationLocale.confirmationTitle);
             await userEvent.click(getByTestId('confirm-authors-merge-confirmation'));

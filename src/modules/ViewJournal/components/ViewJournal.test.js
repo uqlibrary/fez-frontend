@@ -7,11 +7,10 @@ import {
     waitForElementToBeRemoved,
     WithReduxStore,
     WithRouter,
-    act,
     fireEvent,
     createMatchMedia,
     waitForTextToBeRemoved,
-    assertNotInTheDocument,
+    assertNotToBeInTheDocument,
     api,
     waitElementToBeInTheDocument,
     userEvent,
@@ -843,39 +842,6 @@ describe('ViewJournal', () => {
         expect(queryByTestId('journal-details-journal-details-qualityByRanking-header')).not.toBeInTheDocument();
     });
 
-    describe('Favouriting', () => {
-        it('should display an error message if the journal "favourite" action fails', async () => {
-            window.matchMedia = createMatchMedia(1600);
-            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-                data: {
-                    ...journalDetails.data,
-                },
-            });
-            mockApi.onPost(new RegExp(repositories.routes.JOURNAL_FAVOURITES_API().apiUrl)).reply(500, { data: '' });
-            const { getByTestId, getByText, queryByTestId } = setup();
-
-            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-            expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
-            expect(queryByTestId('alert-error')).not.toBeInTheDocument();
-
-            await act(async () => {
-                fireEvent.click(getByTestId('favourite-journal-notsaved'));
-
-                // need some time to pass for the api call to return
-                await new Promise(r => setTimeout(r, 500));
-            });
-            expect(getByTestId('alert-error')).toBeInTheDocument();
-            expect(getByTestId('dismiss')).toBeInTheDocument();
-
-            await act(async () => {
-                fireEvent.click(getByTestId('dismiss'));
-            });
-
-            expect(queryByTestId('alert-error')).not.toBeInTheDocument();
-        });
-    });
-
     it('should display journal with advisory statement', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
@@ -1064,7 +1030,7 @@ describe('ViewJournal', () => {
             setup();
 
             await waitForTextToBeRemoved('Loading journal data');
-            assertNotInTheDocument('publish-as-oa-button');
+            assertNotToBeInTheDocument('publish-as-oa-button');
         });
 
         describe('search workflows', () => {
@@ -1085,7 +1051,7 @@ describe('ViewJournal', () => {
                 setup();
 
                 await waitForTextToBeRemoved('Loading journal data');
-                assertNotInTheDocument('publish-as-oa-button');
+                assertNotToBeInTheDocument('publish-as-oa-button');
             });
 
             describe("should display button for search workflows when OA status = `fee` and it's not embargoed", () => {
@@ -1293,7 +1259,7 @@ describe('ViewJournal', () => {
                     await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
 
-                it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
+                it('should display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', async () => {
                     api.mock.journals.get({
                         id: '.*',
                         data: {
@@ -1306,7 +1272,7 @@ describe('ViewJournal', () => {
                     });
                     setup();
 
-                    assertNotInTheDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
             });
         });

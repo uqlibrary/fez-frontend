@@ -8,7 +8,7 @@ import {
     WithReduxStore,
     waitToBeEnabled,
     waitToBeDisabled,
-    assertNotInTheDocument,
+    assertNotToBeInTheDocument,
     waitForText,
     api,
 } from 'test-utils';
@@ -536,7 +536,7 @@ describe('ManageAuthorsList', () => {
             await waitForText('staff 1');
 
             // should not allow staff authors to be merged
-            assertNotInTheDocument('authors-merge-button');
+            assertNotToBeInTheDocument('authors-merge-button');
             await selectAuthor('staff 1');
             await waitToBeDisabled('authors-merge-button');
             await selectAuthor('staff 2');
@@ -545,7 +545,7 @@ describe('ManageAuthorsList', () => {
             await userEvent.click(getByText(/clear selection/i));
 
             // should not allow student authors to be merged
-            assertNotInTheDocument('authors-merge-button');
+            assertNotToBeInTheDocument('authors-merge-button');
             await selectAuthor('student 1');
             await waitToBeDisabled('authors-merge-button');
             await selectAuthor('student 2');
@@ -554,7 +554,7 @@ describe('ManageAuthorsList', () => {
             await userEvent.click(getByText(/clear selection/i));
 
             // should allow student author to be merged with staff author
-            assertNotInTheDocument('authors-merge-button');
+            assertNotToBeInTheDocument('authors-merge-button');
             await selectAuthor('student 1');
             await waitToBeDisabled('authors-merge-button');
             await selectAuthor('staff 1');
