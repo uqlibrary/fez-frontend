@@ -30,17 +30,6 @@ describe('JournalUserLists', () => {
         jest.clearAllMocks();
     });
 
-    it('should show the loader', () => {
-        mockUseSelector.mockReturnValue({ loading: true, data: null, error: '' });
-        loadLists.mockReturnValue(() => Promise.resolve());
-
-        const { getByText } = setup();
-
-        expect(getByText(/loading/i)).toBeInTheDocument();
-        assertNotToBeInTheDocument('journal-user-lists-error');
-        assertNotToBeInTheDocument('mock-data-grid');
-    });
-
     it('should dispatch loadLists on mount', async () => {
         mockUseSelector.mockReturnValue({ loading: false, data: null, error: '' });
         const thunk = jest.fn(() => Promise.resolve());

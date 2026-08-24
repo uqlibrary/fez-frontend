@@ -1331,7 +1331,6 @@ export default {
         },
         journalUserLists: {
             title: 'Favourite Journals Lists',
-            loadingMessage: 'Loading lists',
         },
         journal: {
             view: {
