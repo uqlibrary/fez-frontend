@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 export default function TabContainer({ value, children, tabbed, currentTab }) {
     if ((tabbed && currentTab === value) || !tabbed) {
-        return (
-            <Grid item xs={12}>
-                {children}
-            </Grid>
-        );
+        return <Grid size={12}>{children}</Grid>;
     } else {
         return null;
     }
