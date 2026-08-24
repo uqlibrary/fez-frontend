@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -109,22 +109,22 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
 
     return (
         <Grid container spacing={2} id={`${id}-container`} data-testid={`${id}-container`}>
-            <Grid item xs sm md={9}>
+            <Grid size={{ xs: 'grow', sm: 'grow', md: 9 }}>
                 <StandardCard noHeader>
                     <Grid container spacing={2}>
                         {!!journalsListLoading && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <InlineLoader message={txt.journalSearchResult.loadingMessage} />
                             </Grid>
                         )}
                         {!!journalsListError && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Alert {...journalsListError} />
                             </Grid>
                         )}
                         {!!journalsList && (
                             <>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <PublicationsListSorting
                                         canUseExport
                                         exportData={txt.export}
@@ -139,7 +139,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         sortingDefaults={sortingDefaults}
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <PublicationsListPaging
                                         disabled={!journalsListLoaded}
                                         loading={!journalsListLoaded}
@@ -148,7 +148,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         pagingId="search-journals-paging-top"
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <JournalsList
                                         journals={journalsList.data}
                                         selected={selectedJournals}
@@ -157,7 +157,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         onToggleSelectAll={handleToggleSelectAllJournals}
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <PublicationsListPaging
                                         pagingData={journalsList}
                                         onPageChanged={pageChanged}
@@ -168,9 +168,9 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                         )}
                     </Grid>
                     {!!journalsList && (
-                        <Grid style={{ paddingTop: 20 }} item xs={12}>
+                        <Grid style={{ paddingTop: 20 }} size={12}>
                             <Grid container spacing={2}>
-                                <StyledGridButtonContainer item xs={12} sm={6} md={3}>
+                                <StyledGridButtonContainer size={{ xs: 12, sm: 6, md: 3 }}>
                                     <Button
                                         disabled={countSelectedJournals() < 2}
                                         onClick={handleJournalsComparisonClick}
@@ -197,7 +197,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                 </StandardCard>
             </Grid>
             {!!journalsList && (
-                <Grid item xs={12} md={3}>
+                <Grid size={{ xs: 12, md: 3 }}>
                     <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                         <JournalSearchFacetsFilter
                             key={'journal-search-facets-filter'}

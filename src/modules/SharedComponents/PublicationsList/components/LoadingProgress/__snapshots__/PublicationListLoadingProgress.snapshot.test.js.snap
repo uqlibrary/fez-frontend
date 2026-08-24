@@ -6,10 +6,10 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     class="MuiBox-root css-130f8nx"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -18,7 +18,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="eSpace loading"
@@ -43,10 +43,10 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -55,7 +55,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
@@ -67,10 +67,10 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -79,7 +79,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
@@ -91,10 +91,10 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -103,7 +103,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
@@ -115,10 +115,10 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -127,7 +127,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
@@ -139,10 +139,10 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -151,7 +151,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="OpenAlex loading"
@@ -197,10 +197,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     class="MuiBox-root css-130f8nx"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -209,7 +209,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="eSpace loading"
@@ -234,10 +234,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -246,7 +246,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="Web of science loading"
@@ -271,10 +271,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -283,7 +283,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="Scopus loading"
@@ -308,10 +308,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -320,7 +320,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="PubMed loading"
@@ -345,10 +345,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -357,7 +357,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="Crossref loading"
@@ -382,10 +382,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -394,7 +394,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="OpenAlex loading"
@@ -440,10 +440,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     class="MuiBox-root css-130f8nx"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -452,7 +452,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="eSpace loading"
@@ -477,10 +477,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -489,7 +489,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
@@ -501,10 +501,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -513,7 +513,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
@@ -525,10 +525,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -537,7 +537,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-7sqihh-MuiTypography-root"
@@ -549,10 +549,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -561,7 +561,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="Crossref loading"
@@ -586,10 +586,10 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
@@ -598,7 +598,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <span
           aria-label="OpenAlex loading"

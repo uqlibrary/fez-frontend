@@ -6,7 +6,7 @@ import * as actions from 'actions';
 
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
@@ -546,19 +546,15 @@ export class ContributorsEditor extends PureComponent {
             <div className={'contributorEditor'} id={`${contributorEditorId}-list-editor`}>
                 <Grid container spacing={1}>
                     {errorMessage && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert title={this.props.locale.errorTitle} message={errorMessage} type="warning" />
                         </Grid>
                     )}
-                    {!editMode && (
-                        <Grid item xs={12}>
-                            {this.renderContributorForm()}
-                        </Grid>
-                    )}
+                    {!editMode && <Grid size={12}>{this.renderContributorForm()}</Grid>}
                 </Grid>
                 {contributors.length > 0 && (
                     <Grid container spacing={1}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <List style={{ marginBottom: 0 }}>
                                 <ContributorRowHeader
                                     {...(this.props.locale.header || {})}

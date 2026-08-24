@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -23,16 +23,16 @@ export const JournalComparison = () => {
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3}>
-                <Grid item xs>
+                <Grid size="grow">
                     <Grid container spacing={2}>
-                        <Grid item xs sm md={12}>
+                        <Grid size={{ xs: 'grow', sm: 'grow', md: 12 }}>
                             <StandardCard noHeader>
                                 <Grid container spacing={2}>
                                     <JournalComparisonList journals={location?.state?.journals} />
                                 </Grid>
                                 <Grid style={{ paddingTop: location?.state?.journals ? 20 : 25 }} item xs={12}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs={12} sm="auto">
+                                        <Grid size={{ xs: 12, sm: 'auto' }}>
                                             <StyledBackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
