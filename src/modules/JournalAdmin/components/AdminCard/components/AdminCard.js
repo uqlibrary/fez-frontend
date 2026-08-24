@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 const AdminCard = ({ title, children, classes }) => {
     return (
         <Grid container spacing={0} sx={{ mt: '8px' }} className={`${classes?.card} AdminCard`}>
-            <Grid item xs={12}>
-                <Grid item xs={12}>
+            <Grid size={12}>
+                <Grid size={12}>
                     <Grid container spacing={1}>
-                        <Grid item xs>
+                        <Grid size="grow">
                             <Box
                                 component={'hr'}
                                 sx={{
@@ -22,7 +22,7 @@ const AdminCard = ({ title, children, classes }) => {
                                 className={classes?.divider}
                             />
                         </Grid>
-                        <Grid item xs={'auto'} sx={{ ml: '-4px' }} className={classes?.titlePortion}>
+                        <Grid size="auto" sx={{ ml: '-4px' }} className={classes?.titlePortion}>
                             <Typography
                                 component={'h4'}
                                 sx={{
@@ -39,9 +39,7 @@ const AdminCard = ({ title, children, classes }) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12}>
-                {children}
-            </Grid>
+            <Grid size={12}>{children}</Grid>
         </Grid>
     );
 };

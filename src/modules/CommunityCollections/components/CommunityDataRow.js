@@ -12,14 +12,14 @@ import Box from '@mui/material/Box';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { communityCollectionsConfig } from 'config';
 const moment = require('moment');
 
 const returnDateField = (date, conf, classes) => {
     return (
-        <Grid item xs={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
+        <Grid size={2} sx={{ ...classes, display: { xs: 'none', md: 'block' } }}>
             <Typography variant="body2">{moment(date).local().format(conf.dateFormat)}</Typography>
         </Grid>
     );
@@ -46,11 +46,11 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
             container
             key={row.rek_pid}
             data-testid={`row-${row.rek_pid}`}
-            sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
+            sx={{ width: '100%', boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
             <React.Fragment key={row.rek_pid}>
-                <Grid container sx={{ paddingBottom: '10px' }}>
-                    <Grid item xs={10} sm={11} md={adminUser ? 7 : 8}>
+                <Grid container sx={{ width: '100%', paddingBottom: '10px' }}>
+                    <Grid size={{ xs: 10, sm: 11, md: adminUser ? 7 : 8 }}>
                         <Box sx={{ float: 'left', width: '24px' }}>
                             <IconButton
                                 sx={{ paddingTop: '5px' }}
@@ -108,7 +108,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                     {returnDateField(row.rek_created_date, conf, { paddingTop: '10px' })}
                     {returnDateField(row.rek_updated_date, conf, { paddingTop: '10px' })}
                     {!!adminUser && (
-                        <Grid item xs={2} sm={1} sx={{ textAlign: 'center' }}>
+                        <Grid size={{ xs: 2, sm: 1 }} sx={{ textAlign: 'center' }}>
                             <AdminActions
                                 record={row.rek_pid}
                                 id={`admin-actions-${row.rek_pid}`}
@@ -119,7 +119,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                 </Grid>
                 {!!open && (
                     <Grid container>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <CollectionsListEmbedded
                                 title={row.rek_title}
                                 key={row.rek_pid}

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { formatPublicationDate } from 'modules/ViewRecord/components/AdditionalInformation';
@@ -14,7 +14,7 @@ export const renderAuthors = (authors, field) => {
     return (
         <Grid container spacing={2} data-testid={`${testId}-list`}>
             {authors.map((author, index) => (
-                <Grid item xs={12} key={author[`${subKey}_id`]}>
+                <Grid size={12} key={author[`${subKey}_id`]}>
                     <span data-testid={`${testId}-${index}`}>{author[subKey]}</span>
                     {!!author.aut_orcid_id && (
                         <React.Fragment>
@@ -147,12 +147,12 @@ export const DoiField = ({ data, field, label, displayTypeLookup }) => {
             spacing={2}
             sx={{ borderBottom: '1px solid secondary.light', marginBottom: '1rem' }}
         >
-            <Grid item xs={12} sm={3}>
+            <Grid size={{ xs: 12, sm: 3 }}>
                 <Typography variant="body2" component={'span'} data-testid={`${testId}-label`}>
                     {label}
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={9}>
+            <Grid size={{ xs: 12, sm: 9 }}>
                 <Typography variant="body2" component={'span'} data-testid={`${testId}`}>
                     {value}
                 </Typography>

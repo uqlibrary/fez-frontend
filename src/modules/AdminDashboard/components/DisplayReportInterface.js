@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import moment from 'moment';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
@@ -113,7 +113,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
     return (
         <Box id={id} data-testid={id}>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={4}>
+                <Grid size={{ xs: 12, sm: 4 }}>
                     <Autocomplete
                         disablePortal
                         id={id}
@@ -154,7 +154,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid size={{ xs: 12, sm: 4 }}>
                     <Box data-testid={`${id}-date-from`}>
                         <DatePicker
                             label={txt.label.dateFrom}
@@ -196,7 +196,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                         />
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid size={{ xs: 12, sm: 4 }}>
                     <Box data-testid={`${id}-date-to`}>
                         <DatePicker
                             label={txt.label.dateTo}
@@ -241,7 +241,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                 </Grid>
                 {actionState.report?.value === 'systemalertlog' && (
                     <>
-                        <Grid item xs={12} sm={4}>
+                        <Grid size={{ xs: 12, sm: 4 }}>
                             <Box data-testid={`${id}-system-alert-id`}>
                                 <TextField
                                     label={txt.label.systemId}
@@ -269,7 +269,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 />
                             </Box>
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid size={{ xs: 12, sm: 4 }}>
                             <Box data-testid={`${id}-requestor-id`}>
                                 <TextField
                                     label={txt.label.requestorId}
@@ -297,7 +297,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                 />
                             </Box>
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid size={{ xs: 12, sm: 4 }}>
                             <Box data-testid={`${id}-pid`}>
                                 <TextField
                                     label={txt.label.pid}
@@ -327,7 +327,7 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                         </Grid>
                     </>
                 )}
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Button
                         id={`${id}-button`}
                         data-testid={`${id}-button`}

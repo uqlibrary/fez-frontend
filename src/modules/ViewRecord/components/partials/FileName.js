@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled, useTheme } from '@mui/material/styles';
 
 import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import GetAppIcon from '@mui/icons-material/GetApp';
 
@@ -91,7 +91,7 @@ const FileName = ({
 
     return (
         <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
-            <Grid item xs sm={allowDownload && !downloadLicence && isAudio(mimeType) ? 8 : 12}>
+            <Grid size={{ xs: 'grow', sm: allowDownload && !downloadLicence && isAudio(mimeType) ? 8 : 12 }}>
                 <ConfirmationBox
                     confirmationBoxId="file-download-accept-licence"
                     isOpen={isOpen}
@@ -147,7 +147,7 @@ const FileName = ({
                             </Tooltip>
                         </StyledWithBody2>
                         {!disabled && !!downloadLicence && (
-                            <Grid item xs="auto" sx={{ textAlign: 'right' }}>
+                            <Grid size="auto" sx={{ textAlign: 'right' }}>
                                 <IconButton
                                     aria-label={txt.downloadButtonLabel}
                                     onClick={showConfirmation}
@@ -164,7 +164,7 @@ const FileName = ({
                 )}
             </Grid>
             {allowDownload && !downloadLicence && isAudio(mimeType) && (
-                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid size={{ sm: 4 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     <AudioPlayer
                         pid={pid}
                         fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -48,11 +48,11 @@ export const FavouriteSearch = () => {
             {!!favouriteSearchList && (
                 <Grid container spacing={2}>
                     {!!existingAliasCheckError && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert {...existingAliasCheckError} />
                         </Grid>
                     )}
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <FavouriteSearchList
                             handleRowDelete={handleRowDelete}
                             handleRowUpdate={handleRowUpdate}

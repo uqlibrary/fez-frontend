@@ -9,7 +9,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import locale from 'locale/components';
 import { isReadonlyVocab } from 'config/general';
 
@@ -33,7 +33,7 @@ export const VocabDataRow = ({ row }) => {
             container
             key={row.cvo_id}
             data-testid={`row-em-${row.cvo_id}`}
-            sx={{ boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
+            sx={{ width: '100%', boxSizing: 'border-box', boxShadow: '0 -1px 0 #eaeaea', padding: '15px 0px 0px' }}
         >
             <React.Fragment key={row.cvo_id}>
                 <Box
@@ -51,7 +51,7 @@ export const VocabDataRow = ({ row }) => {
                             ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}),
                         }}
                     >
-                        <Grid item xs={12} sm={1}>
+                        <Grid size={{ xs: 12, sm: 1 }}>
                             <IconButton
                                 sx={{ paddingTop: '5px' }}
                                 aria-label="expand row"
@@ -69,7 +69,7 @@ export const VocabDataRow = ({ row }) => {
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
                         </Grid>
-                        <Grid item xs={12} sm={4}>
+                        <Grid size={{ xs: 12, sm: 4 }}>
                             {row.cvo_title}
                             {row.cvo_hide === 1 && (
                                 <Tooltip title={txt.admin.tooltip.hidden} data-testid={`row-hidden-icon-${row.cvo_id}`}>
@@ -89,18 +89,14 @@ export const VocabDataRow = ({ row }) => {
                             )}
                         </Grid>
                         <Grid
-                            item
-                            xs={12}
-                            sm={5}
+                            size={{ xs: 12, sm: 5 }}
                             data-testid={`child-row-desc-${row.cvo_id}`}
                             sx={{ wordBreak: 'break-word' }}
                         >
                             {row.cvo_desc}
                         </Grid>
-                        <Grid item xs={12} sm={1}>
-                            {row.cvo_external_id}
-                        </Grid>
-                        <Grid item xs={12} sm={1}>
+                        <Grid size={{ xs: 12, sm: 1 }}>{row.cvo_external_id}</Grid>
+                        <Grid size={{ xs: 12, sm: 1 }}>
                             {!locked && (
                                 <IconButton
                                     id={`admin-edit-button-${row.cvo_id}`}
@@ -119,7 +115,7 @@ export const VocabDataRow = ({ row }) => {
                 )}
                 {!!open && state.cvo_id !== row.cvo_id && (
                     <Grid container>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <ChildVocabTable parentRow={row} locked={locked} />
                         </Grid>
                     </Grid>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { useJournalContext } from 'context';
 import { fieldConfig } from 'config/journalAdmin';
@@ -29,7 +29,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
             }
         });
         return (
-            <Grid item xs={12} md={12 / group.length}>
+            <Grid size={{ xs: 12, md: 12 / group.length }}>
                 <config.component {...config.componentProps} disabled={disabled} />
             </Grid>
         );
@@ -43,7 +43,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
     };
     const error = methods.getFieldState(componentProps.name).error;
     return (
-        <Grid item xs={12} md={12 / group.length}>
+        <Grid size={{ xs: 12, md: 12 / group.length }}>
             <Field
                 name={componentProps.name}
                 control={methods.control}

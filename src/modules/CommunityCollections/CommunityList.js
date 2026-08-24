@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -188,7 +188,7 @@ export const CommunityList = () => {
                             </Typography>
                         )}
 
-                        <Grid item xs={12} style={{ marginBottom: 10 }}>
+                        <Grid size={12} style={{ marginBottom: 10 }}>
                             <PublicationsListSorting
                                 data-testid="community-collections-sorting-top"
                                 exportData={txt.export}
@@ -205,7 +205,7 @@ export const CommunityList = () => {
                                 disabled={isLoadingOrExporting}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <PublicationsListPaging
                                 loading={false}
                                 pagingData={PagindData}
@@ -235,7 +235,7 @@ export const CommunityList = () => {
                                 }
                             />
                         )}
-                        <Grid item xs={12} style={{ marginTop: 10 }}>
+                        <Grid size={12} style={{ marginTop: 10 }}>
                             <PublicationsListPaging
                                 loading={false}
                                 pagingData={PagindData}
@@ -249,7 +249,7 @@ export const CommunityList = () => {
                 </React.Fragment>
             )}
             {!!loadingCommunitiesError && (
-                <Grid item xs={12} style={{ marginTop: 10 }}>
+                <Grid size={12} style={{ marginTop: 10 }}>
                     <Alert
                         title="An error has occurred"
                         message={loadingCommunitiesError.message}

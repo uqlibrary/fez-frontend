@@ -5,7 +5,7 @@ import JournalAdvisoryStatementTypeField from '../../SharedComponents/LookupFiel
 import { RichTextEditorField } from '../../SharedComponents/RichTextEditor';
 import { Field } from '../../SharedComponents/Toolbox/ReactHookForm';
 import { useFormContext, useWatch } from 'react-hook-form';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { useControlledVocabs } from '../../../hooks/useControlledVocabs';
 import { JOURNAL_ADVISORY_STATEMENT_TYPE as cvoId } from '../../../config/general';
 import get from 'lodash/get';
@@ -95,7 +95,7 @@ export const AdvisoryStatementFields = props => {
 
     return (
         <>
-            <Grid item xs={12} md={12}>
+            <Grid size={{ xs: 12, md: 12 }}>
                 <Field
                     control={control}
                     component={JournalAdvisoryStatementTypeField}
@@ -106,7 +106,7 @@ export const AdvisoryStatementFields = props => {
                     {...((isPrePopulated && { key: `${props.name}-${cvoList.itemsLoaded}` }) || {})}
                 />
             </Grid>
-            <Grid item xs={12} md={12}>
+            <Grid size={{ xs: 12, md: 12 }}>
                 <Field control={control} component={RichTextEditorField} disabled={props.disabled} {...props.text} />
             </Grid>
         </>

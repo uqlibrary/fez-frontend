@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { useIsMobileView } from 'hooks';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import AdminActions from './AdminActions';
 
@@ -12,11 +12,9 @@ const TitleWithFavouriteButton = props => {
 
     return (
         <Grid container padding={0} spacing={0}>
-            <Grid item xs={showAdminActions ? 10 : 12} sm={showAdminActions ? 11 : 12}>
-                {journal.jnl_title}
-            </Grid>
+            <Grid size={{ xs: showAdminActions ? 10 : 12, sm: showAdminActions ? 11 : 12 }}>{journal.jnl_title}</Grid>
             {!!showAdminActions && (
-                <Grid item xs={2} sm={1} sx={{ display: 'flex', alignItems: 'center' }}>
+                <Grid size={{ xs: 2, sm: 1 }} sx={{ display: 'flex', alignItems: 'center' }}>
                     <AdminActions
                         journal={journal}
                         navigatedFrom={

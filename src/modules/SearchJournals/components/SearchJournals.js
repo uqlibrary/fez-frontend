@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import JournalSearchInterface from './JournalSearchInterface';
@@ -220,13 +220,13 @@ export const SearchJournals = () => {
         <StandardPage title={txt.journalSearchInterface.title} standardPageId="journal-search-page">
             <Grid container spacing={3}>
                 {!!showInputControls && (
-                    <Grid item xs>
+                    <Grid size="grow">
                         <StandardCard noHeader standardCardId="journal-search-intro-card">
                             {txt.journalSearchInterface.intro}
                         </StandardCard>
                     </Grid>
                 )}
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <JournalSearchInterface
                         onSearch={handleSearchJournalsClick}
                         onSearchAll={handleSearchAllJournalsClick}
@@ -242,7 +242,7 @@ export const SearchJournals = () => {
                         }}
                     />
                 </Grid>
-                <Grid item xs>
+                <Grid size="grow">
                     {!showInputControls && (
                         <JournalSearchResult
                             onSearch={handleSearch}

@@ -3,7 +3,7 @@
 exports[`FieldGridItem should render default view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-11uceyq-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
   >
     <div
       data-analyticsid="rek-title-container"
@@ -417,7 +417,7 @@ exports[`FieldGridItem should render default view 1`] = `
 exports[`FieldGridItem should render default view for a composed field 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-11uceyq-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
   >
     <div
       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -481,7 +481,7 @@ exports[`FieldGridItem should render default view for a composed field 1`] = `
 exports[`FieldGridItem should render with correct props 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-11uceyq-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
   >
     <div
       class="MuiBox-root css-10q552o"
@@ -626,10 +626,10 @@ exports[`FieldGridItem should render with correct props 1`] = `
                         class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item css-1apgbce-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
                           >
                             <svg
                               aria-hidden="true"
@@ -644,7 +644,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                             </svg>
                           </div>
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                           >
                             <span
                               class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -816,7 +816,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
 exports[`FieldGridItem without record should render default view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-11uceyq-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
   >
     <div
       data-analyticsid="rek-title-container"

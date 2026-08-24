@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -40,15 +40,13 @@ export const DetailedHistory = ({ record }) => {
                     <AccordionDetails>
                         <Grid container data-testid={'detailed-history-grid'}>
                             <Grid
-                                item
-                                xs={4}
+                                size={4}
                                 sx={{ padding: '5px', color: '#fff', backgroundColor: '#51247A', paddingLeft: '5px' }}
                             >
                                 <span>Date</span>
                             </Grid>
                             <Grid
-                                item
-                                xs={8}
+                                size={8}
                                 sx={{ padding: '5px', color: '#fff', backgroundColor: '#51247A', paddingLeft: '5px' }}
                             >
                                 <span>Event</span>
@@ -68,7 +66,7 @@ export const DetailedHistory = ({ record }) => {
                                                 },
                                             }}
                                         >
-                                            <Grid item xs={4} style={{ padding: '5px' }}>
+                                            <Grid size={4} style={{ padding: '5px' }}>
                                                 <Typography
                                                     variant="body2"
                                                     component={'span'}
@@ -78,7 +76,7 @@ export const DetailedHistory = ({ record }) => {
                                                     {historyEventDate(histItem)}
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs={8} style={{ padding: '5px' }}>
+                                            <Grid size={8} style={{ padding: '5px' }}>
                                                 <Typography variant="body2" component={'span'}>
                                                     {histItem.pre_detail}
                                                 </Typography>

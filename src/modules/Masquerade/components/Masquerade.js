@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/GridLegacy';
 
 import Cookies from 'js-cookie';
 
+import Grid from '@mui/material/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
@@ -50,7 +50,7 @@ const Masquerade = ({ account }) => {
                     <Typography>{txt.description.full}</Typography>
                 )}
                 <Grid container spacing={3} alignItems={'flex-end'} style={{ marginTop: 12 }}>
-                    <Grid item xs>
+                    <Grid size="grow">
                         <TextField
                             variant="standard"
                             fullWidth
@@ -63,7 +63,7 @@ const Masquerade = ({ account }) => {
                             }}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={'auto'}>
+                    <Grid size={{ xs: 12, sm: 'auto' }}>
                         <Button
                             variant="contained"
                             id="submitMasquerade"
