@@ -112,7 +112,7 @@ export default {
                 required: true,
                 id: 'rek-title',
                 singleLine: true,
-                textOnlyOnPaste: false,
+                preservePasteFormatting: true,
             },
         },
         internalNotes: {
@@ -249,7 +249,7 @@ export default {
                     },
                 },
                 id: 'rek-description',
-                textOnlyOnPaste: false,
+                preservePasteFormatting: true,
             },
         },
         rek_date: {

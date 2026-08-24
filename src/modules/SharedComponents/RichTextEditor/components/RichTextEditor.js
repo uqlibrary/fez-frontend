@@ -39,7 +39,7 @@ const RichTextEditor = ({
     className = '',
     required = false,
     singleLine = false,
-    textOnlyOnPaste = true,
+    preservePasteFormatting = false,
     value,
     onChange,
     state,
@@ -104,9 +104,9 @@ const RichTextEditor = ({
         () =>
             createExtensions({
                 singleLine,
-                textOnlyOnPaste,
+                preservePasteFormatting,
             }),
-        [singleLine, textOnlyOnPaste],
+        [singleLine, preservePasteFormatting],
     );
 
     /*
@@ -234,7 +234,7 @@ RichTextEditor.propTypes = {
     id: PropTypes.string,
     required: PropTypes.bool,
     singleLine: PropTypes.bool,
-    textOnlyOnPaste: PropTypes.bool,
+    preservePasteFormatting: PropTypes.bool,
     description: PropTypes.string,
     error: PropTypes.bool,
     errorText: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
