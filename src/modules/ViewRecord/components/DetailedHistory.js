@@ -61,6 +61,7 @@ export const DetailedHistory = ({ record }) => {
                                             id={`detailed-history-row-${histItem.pre_id}`}
                                             data-testid={`detailed-history-row-${histItem.pre_id}`}
                                             sx={{
+                                                width: '100%',
                                                 '&:nth-child(even)': {
                                                     backgroundColor: '#efefef',
                                                 },
