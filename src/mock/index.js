@@ -613,21 +613,6 @@ export const setup = () => {
             }
             return [200, { ...journalsSearch.keywords.none }];
         })
-        .onGet(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({}).apiUrl)))
-        .reply(config => {
-            if (config.params.export_to && config.params.export_to === 'excel') {
-                return [
-                    200,
-                    'Exported',
-                    { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
-                ];
-            }
-            return [200, { ...journalsSearch.favourites }];
-        })
-        .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
-        .reply(200)
-        .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
-        .reply(200)
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
         .reply(config => {
             console.log('Returning lookup data for config:', config);
@@ -653,8 +638,61 @@ export const setup = () => {
         .reply(200, { ...mockData.journalDetails })
         .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: 999 }).apiUrl)))
         .reply(404, { data: 'Not Found' })
-        .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
+        .onGet(/journals\/(?!lists).*/)
         .reply(200, { ...mockData.journalDetails })
+        .onGet('/journals/lists/')
+        .reply(200, {
+            total: 2,
+            took: 0,
+            per_page: 20,
+            current_page: 1,
+            from: 1,
+            to: 2,
+            data: [
+                {
+                    id: 1,
+                    usr_id: 1000000406,
+                    label: 'List one',
+                    is_public: true,
+                },
+                {
+                    id: 2,
+                    usr_id: 1000000406,
+                    label: 'List two',
+                    is_public: false,
+                },
+            ],
+        })
+        .onPost(new RegExp(escapeRegExp(routes.JOURNAL_USE_LISTS_API().apiUrl)))
+        .reply(config => {
+            return [
+                200,
+                {
+                    data: { ...JSON.parse(config.data), id: 3 },
+                },
+            ];
+        })
+        .onPut(new RegExp(escapeRegExp(routes.JOURNAL_USE_LISTS_API('.*').apiUrl)))
+        .reply(200)
+        .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_USE_LISTS_API('.*').apiUrl)))
+        .reply(200)
+        .onGet(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API({ id: '.*' }).apiUrl)))
+        .reply(config => {
+            if (config.url.includes(routes.JOURNAL_USER_LIST_ITEMS_API({ id: 1 }).apiUrl)) {
+                return [200, { ...journalsSearch.favourites }];
+            }
+
+            return [
+                200,
+                {
+                    total: 0,
+                },
+            ];
+        })
+        .onPost(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API({ id: '.*' }).apiUrl)))
+        .reply(200)
+        .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_USER_LIST_ITEMS_API({ id: '.*' }).apiUrl)))
+        .reply(200)
 
         .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
         .reply(200, { ...mockData.userList })

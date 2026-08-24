@@ -1,8 +1,8 @@
-import { destroy, get, post, put } from 'repositories/generic';
+import { get, post, put } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
-    JOURNAL_FAVOURITES_API,
+    JOURNAL_USER_LIST_ITEMS_API,
     JOURNAL_KEYWORDS_LOOKUP_API,
     JOURNAL_LOOKUP_API,
     JOURNAL_SEARCH_API,
@@ -208,7 +208,7 @@ export const exportJournals =
             delete searchQuery.keywords;
         }
         const requestParams = favourites
-            ? JOURNAL_FAVOURITES_API({ query: searchQuery })
+            ? JOURNAL_USER_LIST_ITEMS_API({ query: searchQuery })
             : JOURNAL_SEARCH_API(searchQuery);
         const exportConfig = {
             format: requestParams.options.params.export_to,
@@ -234,66 +234,6 @@ export const exportJournals =
             });
         }
     };
-
-/**
- * @param searchQuery
- * @returns {AnyAction}
- */
-export const retrieveFavouriteJournals = searchQuery => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
-    return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
-        response => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
-            return Promise.resolve(response);
-        },
-        error => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: error });
-            return Promise.reject(error.message);
-        },
-    );
-};
-
-const randomWait = async (min, max) => {
-    // add a rand delay of 200ms max to avoid requests hitting the api at the exact same time
-    const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-    await new Promise(resolve => {
-        setTimeout(resolve, 100 + random(min, max));
-    });
-};
-
-export const addToFavourites = ids => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_REQUESTING });
-    await randomWait(50, 100);
-    return post(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
-        response => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_SUCCESS });
-            return Promise.resolve(response);
-        },
-        error => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_FAILED, payload: error });
-            return Promise.reject(error.message);
-        },
-    );
-};
-
-/**
- * @param ids: string[]
- * @returns {AnyAction}
- */
-export const removeFromFavourites = ids => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
-    await randomWait(50, 100);
-    return destroy(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
-        response => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS });
-            return Promise.resolve(response);
-        },
-        error => {
-            dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_FAILED, payload: error });
-            return Promise.reject(error.message);
-        },
-    );
-};
 
 const getAdminJournalRequest = data => {
     // delete extra form values from request object

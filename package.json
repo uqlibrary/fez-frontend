@@ -242,6 +242,7 @@
     "terra-draw-google-maps-adapter": "^1.6.1",
     "throttle-debounce": "^5.0.0",
     "timezones.json": "^1.2.1",
+    "usehooks-ts": "^3.1.1",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
   },
   "optionalDependencies": {

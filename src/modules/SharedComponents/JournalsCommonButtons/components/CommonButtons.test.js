@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, WithRouter, fireEvent } from 'test-utils';
 import { CommonButtons } from '../index';
+import { pathConfig } from '../../../../config';
 
 const mockUseNavigate = jest.fn();
 const mockUseLocation = { pathname: '/' };
@@ -41,7 +42,9 @@ describe('CommonButtons', () => {
 
         fireEvent.click(queryByTestId('journal-search-favourite-journals-button'));
 
-        expect(mockUseNavigate).toHaveBeenCalledWith('/journals/favourites/', { state: { prevLocation: { pathname: '/' } } });
+        expect(mockUseNavigate).toHaveBeenCalledWith(pathConfig.journals.lists, {
+            state: { prevLocation: { pathname: '/' } },
+        });
     });
 
     it('should call supplied function when Search All Journals button pressed', () => {

@@ -210,6 +210,7 @@ export const pathConfig = {
     journals: {
         search: '/journals/search/',
         compare: '/journals/compare/',
-        favourites: '/journals/favourites/',
+        lists: '/journals/userLists/',
+        favourites: id => `/journals/favourites/${id}`,
     },
 };

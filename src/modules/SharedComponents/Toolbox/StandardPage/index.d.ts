@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface StandardPageProps {
-    title?: React.ReactNode;
+    title?: React.ReactNode | React.JSX.Element;
     help?: Record<string, unknown> | null;
     children?: React.ReactNode;
     standardPageId?: string;

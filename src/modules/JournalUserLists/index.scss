@@ -1,0 +1,7 @@
+@use "sass:color";
+
+.MuiDataGrid-cell .fjl-link.disabled {
+  color: inherit;
+  pointer-events: none;
+  opacity: 0.5;
+}
