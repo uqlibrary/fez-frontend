@@ -641,10 +641,10 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                   style="display: none;"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                     >
                       <div
                         style="padding: 8px;"
@@ -1423,10 +1423,10 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                   style=""
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                     >
                       <div
                         style="padding: 8px;"
@@ -2442,10 +2442,10 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                   style="display: none;"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                     >
                       <div
                         style="padding: 8px;"
@@ -4066,10 +4066,10 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                   style="display: none;"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                     >
                       <div
                         style="padding: 8px;"
@@ -5298,10 +5298,10 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                   style="display: none;"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                     >
                       <div
                         style="padding: 8px;"

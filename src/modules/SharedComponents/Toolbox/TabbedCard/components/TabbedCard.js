@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 
@@ -28,12 +28,8 @@ const TabbedCard = ({ cardId, cardTitle, common, contentRenderer, tabs }) => {
     return (
         <StandardCard standardCardId={cardId} title={cardTitle} key={cardId}>
             <Grid container spacing={2}>
-                {common && (
-                    <Grid item xs={12}>
-                        {contentRenderer(common, cardId)}
-                    </Grid>
-                )}
-                <Grid item xs={12}>
+                {common && <Grid size={12}>{contentRenderer(common, cardId)}</Grid>}
+                <Grid size={12}>
                     <Tabs
                         indicatorColor="primary"
                         onChange={handleTabChange}

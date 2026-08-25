@@ -1003,7 +1003,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         id="rek-author-id-row-0"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -1102,7 +1102,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         id="rek-contributor-id-row-0"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -1796,7 +1796,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         id="rek-author-id-row-0"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -2521,7 +2521,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-contributor-id-row-0"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3293,7 +3293,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-0"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3343,7 +3343,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-1"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3392,7 +3392,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-2"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3442,7 +3442,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-3"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3492,7 +3492,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-4"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3542,7 +3542,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-5"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3592,7 +3592,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-6"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3641,7 +3641,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-7"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -3691,7 +3691,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         id="rek-author-id-row-8"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4615,7 +4615,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-0"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4665,7 +4665,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-1"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4714,7 +4714,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-2"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4764,7 +4764,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-3"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4814,7 +4814,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-4"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4864,7 +4864,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-5"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4914,7 +4914,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-6"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -4963,7 +4963,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-7"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"
@@ -5013,7 +5013,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         id="rek-author-id-row-8"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1cdr628-MuiButtonBase-root-MuiButton-root"

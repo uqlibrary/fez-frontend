@@ -3,11 +3,11 @@
 exports[`Component SocialShare should fire print method on click 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     id="social-share"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
@@ -39,7 +39,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       </a>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
@@ -77,11 +77,11 @@ exports[`Component SocialShare should fire print method on click 1`] = `
 exports[`Component SocialShare should render component 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     id="social-share"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
@@ -113,7 +113,7 @@ exports[`Component SocialShare should render component 1`] = `
       </a>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
