@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
-
+import Grid from '@mui/material/Grid';
 import { loadAuthorStatsByAuthorId } from 'actions';
 import {
     AuthorsPublicationsPerYearChart,
@@ -37,7 +36,7 @@ const AuthorStatisticsView = ({ authorId }) => {
     return (
         <Grid container spacing={3} sx={{ mt: 0 }}>
             {authorStatsByYear && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard
                         title={txt.publicationsByYearChart.title}
                         customBackgroundColor={theme.graphs.color2}
@@ -52,7 +51,7 @@ const AuthorStatisticsView = ({ authorId }) => {
                 </Grid>
             )}
             {authorStatsPerType && authorStatsPerType.length > 0 && (
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     <StandardCard
                         title={txt.publicationTypesCountChart.title}
                         customBackgroundColor={theme.graphs.color1}
@@ -67,7 +66,7 @@ const AuthorStatisticsView = ({ authorId }) => {
             )}
             {authorStats &&
                 (authorStats.thomson_citation_count_i?.count > 0 || authorStats.scopus_citation_count_i?.count > 0) && (
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <StandardCard noPadding noHeader fullHeight>
                             <PublicationStats publicationsStats={authorStats} />
                         </StandardCard>

@@ -84,7 +84,7 @@ exports[`AttachedFilesField component should render default view when files prov
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-3835508"
                 id="file-name-3835508"
               >
@@ -251,7 +251,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-3835508"
                 id="file-name-3835508"
               >

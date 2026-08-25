@@ -90,7 +90,7 @@ const FileName = ({
     const txt = componentsLocale.components.attachedFiles;
 
     return (
-        <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
+        <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id} sx={{ width: '100%' }}>
             <Grid size={{ xs: 'grow', sm: allowDownload && !downloadLicence && isAudio(mimeType) ? 8 : 12 }}>
                 <ConfirmationBox
                     confirmationBoxId="file-download-accept-licence"

@@ -602,7 +602,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -796,7 +796,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -1004,7 +1004,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -1114,7 +1114,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -1367,7 +1367,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -1477,7 +1477,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -1728,7 +1728,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -1838,7 +1838,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -2075,7 +2075,7 @@ exports[`Files Component  should render an image as the original filename with n
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -2269,7 +2269,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -2428,7 +2428,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -2685,7 +2685,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -2795,7 +2795,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -3065,7 +3065,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -3203,7 +3203,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -3327,7 +3327,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-dsid-2"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-2"
                 id="file-name-2"
               >
@@ -3451,7 +3451,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-dsid-3"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-3"
                 id="file-name-3"
               >
@@ -3575,7 +3575,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-dsid-4"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-4"
                 id="file-name-4"
               >
@@ -3685,7 +3685,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-dsid-5"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-5"
                 id="file-name-5"
               >
@@ -3946,7 +3946,7 @@ exports[`Files Component  should render component for public users 1`] = `
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -4145,7 +4145,7 @@ exports[`Files Component  should render files based on security policy correctly
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -4367,7 +4367,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -4475,7 +4475,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -4611,7 +4611,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-2"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-2"
                 id="file-name-2"
               >
@@ -4733,7 +4733,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-3"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-3"
                 id="file-name-3"
               >
@@ -4855,7 +4855,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-4"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-4"
                 id="file-name-4"
               >
@@ -5032,7 +5032,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-5"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-5"
                 id="file-name-5"
               >
@@ -5168,7 +5168,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-6"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-6"
                 id="file-name-6"
               >
@@ -5417,7 +5417,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -5527,7 +5527,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -5778,7 +5778,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
@@ -5888,7 +5888,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-dsid-1"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-1"
                 id="file-name-1"
               >
@@ -6125,7 +6125,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               data-testid="dsi-dsid-0"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-1wunaxq-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-0"
                 id="file-name-0"
               >
