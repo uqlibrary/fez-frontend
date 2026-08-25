@@ -8,7 +8,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { clearJournalSearchKeywords, loadJournalSearchKeywords } from 'actions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import locale from 'locale/components';
 import { VoiceToText } from './partials/voiceToText';
@@ -65,12 +65,12 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
 
     return (
         <Grid container spacing={0}>
-            <Grid item xs={12} style={{ padding: '10px 0 0 0' }}>
+            <Grid size={12} style={{ padding: '10px 0 0 0' }}>
                 <Typography>
                     <b>{txt.journalSearchInput.titlePrefix}</b>&nbsp;{txt.journalSearchInput.title}
                 </Typography>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <TextField
                     autoFocus
                     textFieldId="journal-search-keywords"
