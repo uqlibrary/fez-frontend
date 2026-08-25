@@ -7,7 +7,7 @@ import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
 import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
 import { Alert } from '../../Alert';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import * as config from '../config';
 import locale from '../locale';
@@ -376,7 +376,7 @@ export class FileUploader extends PureComponent {
 
         return (
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Typography variant="body2" gutterBottom>
                         {instructionsDisplay}
                     </Typography>
@@ -398,26 +398,26 @@ export class FileUploader extends PureComponent {
                 </Grid>
                 {filesInQueue.length > 0 && (
                     <Fragment>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert
                                 title={successTitle}
                                 message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
                                 type="done"
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert title={delayNotice} message={delayMessage} type="warning" />
                         </Grid>
                     </Fragment>
                 )}
                 {errorMessage.length > 0 && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert title={errorTitle} message={errorMessage} type="error" />
                     </Grid>
                 )}
                 {filesInQueue.length > 0 && (
                     <Fragment>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <FileUploadRowHeader
                                 onDeleteAll={this._deleteAllFiles}
                                 requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
@@ -425,12 +425,12 @@ export class FileUploader extends PureComponent {
                                 isAdmin={this.props.isAdmin}
                             />
                         </Grid>
-                        <Grid item xs={12} data-testid="fez-datastream-info-list">
+                        <Grid size={12} data-testid="fez-datastream-info-list">
                             {filesInQueueRow}
                         </Grid>
                         {requireOpenAccessStatus &&
                             (this.isAnyOpenAccess(filesInQueue) || this.isAnySecurityPolicyPublic(filesInQueue)) && (
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <FileUploadTermsAndConditions
                                         onAcceptTermsAndConditions={this._acceptTermsAndConditions}
                                         accessTermsAndConditions={accessTermsAndConditions}

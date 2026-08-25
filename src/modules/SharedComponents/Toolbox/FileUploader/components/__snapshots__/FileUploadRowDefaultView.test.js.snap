@@ -6,10 +6,10 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1j2ekt5-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-8 css-kfiyyp-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-8 MuiGrid-grid-sm-8 css-519j7u-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
@@ -22,7 +22,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -46,7 +46,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -85,10 +85,10 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1j2ekt5-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-2 css-nwngbi-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
@@ -101,7 +101,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -125,7 +125,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -173,7 +173,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-2 css-1qw8ze4-MuiGrid-root"
       >
         <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
@@ -183,7 +183,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -222,10 +222,10 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1j2ekt5-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-2 css-nwngbi-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
@@ -238,7 +238,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -262,7 +262,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -318,7 +318,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-2 css-1qw8ze4-MuiGrid-root"
       >
         <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
@@ -328,7 +328,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -367,10 +367,10 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1j2ekt5-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-2 css-nwngbi-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
@@ -383,7 +383,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -407,7 +407,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 MuiGridLegacy-grid-md-3 css-1jslkfe-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-1bynuuy-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
@@ -467,7 +467,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-2 css-1qw8ze4-MuiGrid-root"
       >
         <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
@@ -477,7 +477,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
@@ -516,10 +516,10 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1j2ekt5-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-2 css-nwngbi-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
@@ -532,7 +532,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -556,7 +556,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -604,7 +604,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-2 css-1qw8ze4-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
@@ -650,7 +650,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"
