@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Snackbar from '@mui/material/Snackbar';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Link from '@mui/icons-material/Link';
 import LinkOff from '@mui/icons-material/LinkOff';
 import locale from 'locale/global';
@@ -26,12 +26,10 @@ export const OfflineSnackbar = () => {
     const renderMessage = (message, icon) => {
         return (
             <Grid container alignItems={'center'} justifyContent={'center'} alignContent={'center'}>
-                <Grid item xs />
-                <Grid item style={{ marginRight: 24 }}>
-                    {icon}
-                </Grid>
-                <Grid item>{message}</Grid>
-                <Grid item xs />
+                <Grid size="grow" />
+                <Grid style={{ marginRight: 24 }}>{icon}</Grid>
+                <Grid>{message}</Grid>
+                <Grid size="grow" />
             </Grid>
         );
     };

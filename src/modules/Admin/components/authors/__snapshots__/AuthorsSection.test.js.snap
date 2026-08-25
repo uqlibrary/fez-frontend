@@ -170,7 +170,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -582,7 +582,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -1025,7 +1025,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -1410,7 +1410,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -1794,7 +1794,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -2169,7 +2169,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -2553,7 +2553,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -2928,7 +2928,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                                   >
                                     <div
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"

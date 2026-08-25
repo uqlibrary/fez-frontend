@@ -10,7 +10,7 @@ import { locale } from 'locale';
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
 import Close from '@mui/icons-material/Close';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
@@ -77,10 +77,10 @@ export const AdvancedSearchRow = props => {
     return (
         <React.Fragment>
             <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs: 12, md: 6 }}>
                     {/* Select and combiner */}
                     <Grid container spacing={2}>
-                        <Grid item sx={{ flexGrow: 1, width: '1px', minWidth: 200 }}>
+                        <Grid sx={{ flexGrow: 1, width: '1px', minWidth: 200 }}>
                             <FormControl
                                 variant="standard"
                                 fullWidth
@@ -142,7 +142,7 @@ export const AdvancedSearchRow = props => {
                                 </FormHelperText>
                             </FormControl>
                         </Grid>
-                        <Grid item xs={'auto'}>
+                        <Grid size="auto">
                             <Typography
                                 sx={{
                                     mt: '6px',
@@ -154,16 +154,15 @@ export const AdvancedSearchRow = props => {
                     </Grid>
                     {/* Select and combiner */}
                 </Grid>
-                <StyledGridMobileInput item xs={12} md={6}>
+                <StyledGridMobileInput size={{ xs: 12, md: 6 }}>
                     <Grid container spacing={2}>
                         <Grid
-                            item
                             sx={{
+                                minWidth: 0,
                                 flexGrow: 1,
                                 width: 1,
                                 '& .MuiAutocomplete-inputRoot': { marginTop: 0 },
                             }}
-                            zeroMinWidth
                         >
                             <AdvancedSearchRowInput
                                 {...props}
@@ -176,7 +175,6 @@ export const AdvancedSearchRow = props => {
                         </Grid>
                         {rowIndex !== 0 && (
                             <Grid
-                                item
                                 sx={{
                                     margin: '-6px',
                                     opacity: 0.33,
@@ -199,7 +197,7 @@ export const AdvancedSearchRow = props => {
                                 </IconButton>
                             </Grid>
                         )}
-                        <Grid item xs={12} sx={{ display: { xs: 'block', md: 'none' } }}>
+                        <Grid size={12} sx={{ display: { xs: 'block', md: 'none' } }}>
                             <Divider sx={{ margin: '12px -18px' }} />
                         </Grid>
                     </Grid>

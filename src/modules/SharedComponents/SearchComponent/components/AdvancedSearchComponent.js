@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import AdvancedSearchRow from './AdvancedSearchRow';
@@ -111,11 +111,11 @@ export const AdvancedSearchComponent = ({
     return (
         <form id="advancedSearchForm" data-testid="advanced-search-form" onSubmit={_handleAdvancedSearch}>
             <Grid container spacing={0}>
-                <Grid container spacing={5} alignItems={'center'}>
-                    <Grid item style={{ flexGrow: 1, width: 1 }}>
+                <Grid container spacing={5} alignItems={'center'} sx={{ width: '100%' }}>
+                    <Grid style={{ flexGrow: 1, width: 1 }}>
                         <Typography variant="h5">{txt.advancedSearch.title}</Typography>
                     </Grid>
-                    <Grid item>
+                    <Grid>
                         <IconButton
                             aria-label={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
                             onClick={_toggleMinimise}
@@ -131,8 +131,8 @@ export const AdvancedSearchComponent = ({
                 </Grid>
                 {!isMinimised && (
                     <Fragment>
-                        <Grid container>
-                            <Grid item xs={12} md={8}>
+                        <Grid container sx={{ width: '100%' }}>
+                            <Grid size={{ xs: 12, md: 8 }}>
                                 {fieldRows
                                     .filter(item => {
                                         return (
@@ -152,16 +152,16 @@ export const AdvancedSearchComponent = ({
                                         />
                                     ))}
                             </Grid>
-                            <Grid item xs={12} md={4} sx={{ paddingLeft: { md: 4 }, marginTop: { md: '-16px' } }}>
+                            <Grid size={{ xs: 12, md: 4 }} sx={{ paddingLeft: { md: 4 }, marginTop: { md: '-16px' } }}>
                                 <Grid container spacing={2}>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <DocumentTypeMultipleField
                                             docTypes={docTypes}
                                             updateDocTypeValues={updateDocTypeValues}
                                             disabled={isLoading}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <PublicationYearRangeField
                                             yearFilter={yearFilter}
                                             updateYearRangeFilter={updateYearRangeFilter}
@@ -171,7 +171,7 @@ export const AdvancedSearchComponent = ({
                                     </Grid>
                                     {showUnpublishedFields && (
                                         <React.Fragment>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <DateRangeField
                                                     id="created-range"
                                                     onChange={_handleDateRangeChange('rek_created_date')}
@@ -184,7 +184,7 @@ export const AdvancedSearchComponent = ({
                                                     {...createdRange}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <DateRangeField
                                                     id="updated-range"
                                                     onChange={_handleDateRangeChange('rek_updated_date')}
@@ -199,7 +199,7 @@ export const AdvancedSearchComponent = ({
                                             </Grid>
                                         </React.Fragment>
                                     )}
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <FormControlLabel
                                             control={
                                                 <Checkbox
@@ -220,8 +220,8 @@ export const AdvancedSearchComponent = ({
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid container spacing={2} style={{ marginTop: 24 }}>
-                            <Grid item xs={12} sm={'auto'}>
+                        <Grid container spacing={2} sx={{ width: '100%', mt: 3 }}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     variant={'contained'}
                                     sx={{
@@ -241,7 +241,7 @@ export const AdvancedSearchComponent = ({
                                     fullWidth
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     id="reset-advanced-search"
                                     data-analyticsid="advanced-search-reset"
@@ -254,7 +254,7 @@ export const AdvancedSearchComponent = ({
                                     color={'default'}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     id="toggle-to-simple-search-mode"
                                     data-analyticsid="toggle-to-simple-search"
@@ -265,13 +265,9 @@ export const AdvancedSearchComponent = ({
                                     fullWidth
                                 />
                             </Grid>
-                            <Grid
-                                item
-                                style={{ flexGrow: 1, width: 1 }}
-                                sx={{ display: { xs: 'none', md: 'block' } }}
-                            />
+                            <Grid style={{ flexGrow: 1, width: 1 }} sx={{ display: { xs: 'none', md: 'block' } }} />
 
-                            <Grid item xs={12} md={4} sx={{ paddingLeft: { sm: 4 } }}>
+                            <Grid size={{ xs: 12, md: 4 }} sx={{ paddingLeft: { sm: 4 } }}>
                                 <Button
                                     variant={'contained'}
                                     children={txt.searchButtonText}
@@ -289,7 +285,7 @@ export const AdvancedSearchComponent = ({
                     </Fragment>
                 )}
                 <Grid container>
-                    <Grid item style={{ paddingTop: 24 }}>
+                    <Grid style={{ paddingTop: 24 }}>
                         <AdvancedSearchCaption {..._captionProps()} />
                     </Grid>
                 </Grid>

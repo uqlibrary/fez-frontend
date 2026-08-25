@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import validationLocale from 'locale/validationErrors';
 import { RelatedServiceIdField } from 'modules/SharedComponents/LookupFields/containers/RelatedServiceIdField';
@@ -105,7 +105,7 @@ export const RelatedServiceListEditorForm = ({
         <React.Fragment>
             {description}
             <Grid container spacing={1} style={{ marginTop: 8 }}>
-                <Grid item xs={12} sm={12} md>
+                <Grid size={{ xs: 12, sm: 12, md: 'grow' }}>
                     <RelatedServiceIdField
                         key={key}
                         fullWidth
@@ -126,7 +126,7 @@ export const RelatedServiceListEditorForm = ({
                         }
                     />
                 </Grid>
-                <Grid item xs={12} sm={12} md={4}>
+                <Grid size={{ xs: 12, sm: 12, md: 4 }}>
                     <TextField
                         fullWidth
                         name="relatedServiceDesc"
@@ -139,7 +139,7 @@ export const RelatedServiceListEditorForm = ({
                         disabled={disabled}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Button
                         id={
                             (!!relatedServiceSelectedToEdit && 'rek-related-service-update') ||

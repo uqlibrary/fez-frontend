@@ -21,7 +21,7 @@ export const StandardRighthandCard = ({ children, title, testId, help }) => {
                 )}
             </Grid>
             {help && help.text && (
-                <Grid item sx={{ marginTop: '-8px' }}>
+                <Grid sx={{ marginTop: '-8px' }}>
                     <HelpIcon {...help} />
                 </Grid>
             )}

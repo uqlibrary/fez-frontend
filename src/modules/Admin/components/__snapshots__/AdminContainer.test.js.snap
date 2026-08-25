@@ -1490,10 +1490,10 @@ exports[`AdminContainer component should render default view 1`] = `
                               id="rek-isbn-list-editor"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-9gsx30-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                   style="flex-grow: 1;"
                                 >
                                   <div
@@ -1524,7 +1524,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
                                     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
@@ -1602,12 +1602,12 @@ exports[`AdminContainer component should render default view 1`] = `
                               id="rek-issn-list-editor"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-9gsx30-MuiGrid-root"
                                 data-testid="rek-issn-form-add"
                                 id="rek-issn-form-add"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                   style="flex-grow: 1;"
                                 >
                                   <div
@@ -1638,7 +1638,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
                                     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
@@ -2688,10 +2688,10 @@ exports[`AdminContainer component should render default view 1`] = `
                               id="rek-raid-list-editor"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-9gsx30-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                   style="flex-grow: 1;"
                                 >
                                   <div
@@ -2722,7 +2722,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
                                     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
@@ -2800,12 +2800,12 @@ exports[`AdminContainer component should render default view 1`] = `
                               id="rek-keywords-list-editor"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-9gsx30-MuiGrid-root"
                                 data-testid="rek-keywords-form-add"
                                 id="rek-keywords-form-add"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                   style="flex-grow: 1;"
                                 >
                                   <div
@@ -2836,7 +2836,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
                                     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
@@ -3415,7 +3415,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                               >
                                                 <div
-                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
+                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
                                                 >
                                                   <div
                                                     class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -3610,7 +3610,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           data-index="1"
                                         >
                                           <div
-                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
+                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
                                           >
                                             <div
                                               class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -3808,7 +3808,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           data-index="1"
                                         >
                                           <div
-                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
+                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
                                           >
                                             <div
                                               class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -4172,7 +4172,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                               >
                                                 <div
-                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
+                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
                                                 >
                                                   <div
                                                     class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -4527,10 +4527,10 @@ exports[`AdminContainer component should render default view 1`] = `
                               id="rek-link-list-editor"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-9gsx30-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-ggfz-MuiGrid-root"
                                   style="flex-grow: 1;"
                                 >
                                   <div
@@ -4566,7 +4566,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-ggfz-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -4600,7 +4600,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-2 css-7rpxqs-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-kg4boa-MuiGrid-root"
                                 >
                                   <button
                                     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
@@ -4714,11 +4714,11 @@ exports[`AdminContainer component should render default view 1`] = `
                             <div>
                               Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-cbx0m9-MuiGrid-root"
                                 style="margin-top: 8px;"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-grow css-ffbs5s-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -4754,7 +4754,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-1xgbul4-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -4795,7 +4795,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-1xgbul4-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -4849,7 +4849,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                 >
                                   <button
                                     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
@@ -4954,11 +4954,11 @@ exports[`AdminContainer component should render default view 1`] = `
                             <div>
                               Add the Related Service's ID and description - then click the ADD RELATED SERVICE button to add to the list
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-cbx0m9-MuiGrid-root"
                                 style="margin-top: 8px;"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-grow css-ffbs5s-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-1w98mmc-MuiAutocomplete-root"
@@ -4999,7 +4999,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-ikwroe-MuiGrid-root"
                                 >
                                   <div
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -5034,7 +5034,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                 >
                                   <button
                                     class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
@@ -5050,10 +5050,10 @@ exports[`AdminContainer component should render default view 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-cbx0m9-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                 >
                                   <ul
                                     class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -5066,16 +5066,16 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
                                     >
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-go990i-MuiGrid-root"
                                       >
                                         <div
-                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 MuiGridLegacy-grid-md-9 css-1m59ukm-MuiGridLegacy-root"
+                                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-o29b5-MuiGrid-root"
                                         >
                                           <div
-                                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-evortb-MuiGrid-root"
                                           >
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-awoo3k-MuiGrid-root"
                                             >
                                               <div
                                                 class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -5089,7 +5089,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                               </div>
                                             </div>
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1jfjz2t-MuiGrid-root"
                                             >
                                               <div
                                                 class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -5105,17 +5105,17 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </div>
                                         </div>
                                         <div
-                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 MuiGridLegacy-grid-md-3 css-yuldl1-MuiGridLegacy-root"
+                                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-15hqcy7-MuiGrid-root"
                                         >
                                           <div
                                             class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
                                             style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
                                           >
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-evortb-MuiGrid-root"
                                             >
                                               <div
-                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-8 css-tuaig4-MuiGridLegacy-root"
+                                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-ls0azi-MuiGrid-root"
                                               >
                                                 <div
                                                   class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
@@ -5129,7 +5129,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 </div>
                                               </div>
                                               <div
-                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                                 style="text-align: right;"
                                               >
                                                 <div
@@ -5166,7 +5166,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </ul>
                                 </div>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                   style="margin-top: -8px;"
                                 >
                                   <ul
@@ -5182,17 +5182,17 @@ exports[`AdminContainer component should render default view 1`] = `
                                       style="padding: 8px 0px 8px 0px;"
                                     >
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-go990i-MuiGrid-root"
                                         data-testid="related-service-list-row-0"
                                       >
                                         <div
-                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 MuiGridLegacy-grid-md-9 css-1m59ukm-MuiGridLegacy-root"
+                                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-o29b5-MuiGrid-root"
                                         >
                                           <div
-                                            class="MuiGridLegacy-root MuiGridLegacy-container css-1ok6en4-MuiGridLegacy-root"
+                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1vq9z9h-MuiGrid-root"
                                           >
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 css-1h9qchl-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-awoo3k-MuiGrid-root"
                                             >
                                               <div
                                                 class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5209,7 +5209,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                               </div>
                                             </div>
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 css-1oeuqeq-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-nn7rw5-MuiGrid-root"
                                             >
                                               <div
                                                 class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
@@ -5228,17 +5228,17 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </div>
                                         </div>
                                         <div
-                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 MuiGridLegacy-grid-md-3 css-yuldl1-MuiGridLegacy-root"
+                                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-15hqcy7-MuiGrid-root"
                                         >
                                           <div
                                             class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
                                             style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
                                           >
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-evortb-MuiGrid-root"
                                             >
                                               <div
-                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-8 css-gh8ekv-MuiGridLegacy-root"
+                                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-ghage7-MuiGrid-root"
                                               >
                                                 <div
                                                   aria-label="Move entry up the order"
@@ -5322,7 +5322,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 </span>
                                               </div>
                                               <div
-                                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-5mkhff-MuiGridLegacy-root"
+                                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-a64zhg-MuiGrid-root"
                                               >
                                                 <div
                                                   aria-label="Remove this entry"

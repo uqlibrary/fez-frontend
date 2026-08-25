@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
@@ -42,7 +42,7 @@ export default function NonUqOrgAffiliationFormSection({
 
     return (
         <Grid container spacing={1}>
-            <Grid item xs={fullWidthFields ? 12 : 6} sm={6}>
+            <Grid size={{ xs: fullWidthFields ? 12 : 6, sm: 6 }}>
                 <TextField
                     variant="standard"
                     required
@@ -65,7 +65,7 @@ export default function NonUqOrgAffiliationFormSection({
                     }}
                 />
             </Grid>
-            <Grid item xs={fullWidthFields ? 12 : 6} sm={6}>
+            <Grid size={{ xs: fullWidthFields ? 12 : 6, sm: 6 }}>
                 <FormControl variant="standard" required fullWidth error={orgAffiliationTypeError}>
                     <InputLabel id="org-affiliation-type-label" data-testid="org-affiliation-type-label">
                         {locale.fields.organisationType.inputLabel}
