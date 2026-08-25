@@ -11,10 +11,10 @@ exports[`Component MyTrendingPublications should not render trending publication
 exports[`Component MyTrendingPublications should render loading indicator 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
     >
       <div
         style="padding: 8px;"
@@ -74,17 +74,17 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
 exports[`Component MyTrendingPublications should render trending publications 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
     id="myTrendingPublications"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
             class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
@@ -101,7 +101,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </h6>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Click for more information"
@@ -130,7 +130,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-ay4hr2-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15h7t0k-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -434,10 +434,10 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
             class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
@@ -454,7 +454,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </h6>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Click for more information"
@@ -483,7 +483,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-ay4hr2-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15h7t0k-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-0"
@@ -802,10 +802,10 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
             class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
@@ -822,7 +822,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </h6>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Click for more information"
@@ -851,7 +851,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-ay4hr2-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15h7t0k-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-0"

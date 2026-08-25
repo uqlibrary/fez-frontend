@@ -3,7 +3,7 @@
 exports[`Application component Should display mobile correctly 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -13,7 +13,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-p7wo8x-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
@@ -23,7 +23,7 @@ exports[`Application component Should display mobile correctly 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-10ubrsp-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -172,10 +172,10 @@ exports[`Application component Should display mobile correctly 1`] = `
           tabindex="-1"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1qnqg4l-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-isl6k7-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-12 css-gc29ga-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1hbyh4q-MuiGrid-root"
             >
               <a
                 class="noHover css-1oqhn84"
@@ -197,7 +197,7 @@ exports[`Application component Should display mobile correctly 1`] = `
               </a>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 css-123wywt-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-1q71y3e-MuiGrid-root"
             >
               <button
                 aria-label="Close menu"
@@ -803,7 +803,7 @@ exports[`Application component redirects user to login if going to a secure file
 exports[`Application component should render alert if user is not fez author 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -813,7 +813,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-p7wo8x-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
@@ -861,7 +861,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -1371,7 +1371,7 @@ exports[`Application component should render alert if user is not fez author 1`]
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -1381,7 +1381,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-p7wo8x-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
@@ -1429,7 +1429,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -1875,7 +1875,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -1885,7 +1885,7 @@ exports[`Application component should render app for account with fez author wit
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-p7wo8x-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
@@ -1933,7 +1933,7 @@ exports[`Application component should render app for account with fez author wit
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -2379,7 +2379,7 @@ exports[`Application component should render app for account with fez author wit
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -2389,7 +2389,7 @@ exports[`Application component should render application with routing for the us
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-p7wo8x-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
@@ -2437,7 +2437,7 @@ exports[`Application component should render application with routing for the us
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -2670,7 +2670,7 @@ exports[`Application component should render application with routing for the us
 exports[`Application component should render for anon user 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -2680,7 +2680,7 @@ exports[`Application component should render for anon user 1`] = `
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-p7wo8x-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
@@ -2728,7 +2728,7 @@ exports[`Application component should render for anon user 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -3177,7 +3177,7 @@ exports[`Application component should render loading screen while account is loa
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-1502633-MuiGrid-root"
     >
       <div
         class="MuiGridLegacy-root MuiGridLegacy-container css-1tn8p30-MuiGridLegacy-root"

@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import InputLabel from '@mui/material/InputLabel';
 import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
@@ -9,7 +9,7 @@ import { sanitiseId } from 'helpers/general';
 const JournalsListHeaderCol2Full = ({ journal }) => {
     const id = sanitiseId(`journal-list-header-full-${journal.key}`);
     return (
-        <Grid item key={journal.key} id={id} data-testid={id} style={{ width: journal.size, height: 34 }}>
+        <Grid key={journal.key} id={id} data-testid={id} style={{ width: journal.size, height: 34 }}>
             <Tooltip title={journal.titleTooltip || ''}>
                 <InputLabel
                     shrink
@@ -26,8 +26,7 @@ const JournalsListHeaderCol2Full = ({ journal }) => {
             </Tooltip>
             {!!journal.titleHelp && (
                 <Grid
-                    item
-                    xs={2}
+                    size={2}
                     style={{
                         marginTop: -37,
                         marginRight: journal.size < 250 ? 10 : 0,

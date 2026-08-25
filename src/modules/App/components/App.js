@@ -162,7 +162,7 @@ const AppClass = ({
     if (accountLoading) {
         return (
             <StyledGrid container>
-                <Grid size={12}>
+                <Grid size={12} sx={{ minWidth: 0 }}>
                     <AppLoader title={locale.global.title} logoImage="largeLogo" logoText={locale.global.logo.label} />
                 </Grid>
             </StyledGrid>
@@ -265,7 +265,7 @@ const AppClass = ({
         false;
 
     return (
-        <StyledGrid container>
+        <StyledGrid container sx={{ width: '100%' }}>
             <Meta routesConfig={routesConfig} />
             <AppBar className="AppBar" color="primary" position="fixed">
                 <Toolbar sx={{ height: '70px' }}>
@@ -276,6 +276,7 @@ const AppClass = ({
                         direction="row"
                         wrap="nowrap"
                         justifyContent="flex-start"
+                        sx={{ width: '100%' }}
                     >
                         {!docked && !menuDrawerOpen && !isThesisSubmissionPage && (
                             <Grid>
@@ -316,7 +317,7 @@ const AppClass = ({
                                         </div>
                                     </Grid>
                                 )}
-                                <Grid style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                <Grid size="auto" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                     <StyledAppTitle variant="h5" component={'h1'} noWrap indentTitle={docked}>
                                         {locale.global.appTitle}
                                     </StyledAppTitle>

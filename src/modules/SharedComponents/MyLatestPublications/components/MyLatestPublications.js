@@ -9,7 +9,7 @@ import * as actions from 'actions';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
 export const openAccessibleProps = navigate => {
@@ -77,8 +77,8 @@ export const MyLatestPublications = ({ isAdmin = false }) => {
                 {...openAccessibleProps(navigate)}
             />
             <Grid container>
-                <Grid item xs />
-                <Grid item xs={12} sm="auto">
+                <Grid size="grow" />
+                <Grid size={{ xs: 12, sm: 'auto' }}>
                     <Button
                         variant="contained"
                         onClick={_viewMyResearch}
