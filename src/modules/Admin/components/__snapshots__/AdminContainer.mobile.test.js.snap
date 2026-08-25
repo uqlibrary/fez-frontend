@@ -3,13 +3,13 @@
 exports[`Mobile AdminContainer component should render mobile view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-evortb-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-1jfcuzt-MuiGrid-root"
     >
       <form>
         <div
@@ -7725,10 +7725,10 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-19uf3t8-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                               >
                                 <p
                                   class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-ytim1c-MuiTypography-root"
@@ -7736,10 +7736,10 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                   You may add up to 10 files (max 5GB each)
                                 </p>
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-evortb-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                   >
                                     <div
                                       id="FileUploadDropZone"
@@ -7758,10 +7758,10 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         type="file"
                                       />
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-container FileUploadTermsAndConditions-root css-cid41t-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-1xk6skd-MuiGrid-root"
                                       >
                                         <div
-                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+                                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-3li1wj-MuiGrid-root"
                                         >
                                           <p
                                             class="MuiTypography-root MuiTypography-body1 css-10z3iel-MuiTypography-root"
@@ -7801,13 +7801,13 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           </div>
                                         </div>
                                         <div
-                                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+                                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-3li1wj-MuiGrid-root"
                                         >
                                           <div
-                                            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-v3yw6j-MuiGridLegacy-root"
+                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1xyfcnq-MuiGrid-root"
                                           >
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                             >
                                               <svg
                                                 aria-hidden="true"
@@ -7822,7 +7822,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                               </svg>
                                             </div>
                                             <div
-                                              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                                              class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                             >
                                               <p>
                                                 Click here to select files,
