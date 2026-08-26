@@ -90,12 +90,12 @@ describe('RichTextEditor', () => {
 
     it('should pass textOnlyOnPaste option to createExtensions', () => {
         setup({
-            textOnlyOnPaste: false,
+            preservePasteFormatting: false,
         });
 
         expect(createExtensions).toHaveBeenCalledWith({
             singleLine: false,
-            textOnlyOnPaste: false,
+            preservePasteFormatting: false,
         });
     });
 
