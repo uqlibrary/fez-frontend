@@ -14,7 +14,7 @@ import History from '@tiptap/extension-history';
 import HardBreak from '@tiptap/extension-hard-break';
 import { LinkBubbleMenuHandler } from 'mui-tiptap';
 
-import { LetterCase, PlainTextPaste } from './extensions';
+import { LetterCase, FlattenPasteExtension } from './extensions';
 
 // Prevent newly typed text at the start or end of a link from
 // automatically becoming part of the hyperlink.
@@ -22,7 +22,7 @@ const CustomLinkExtension = Link.extend({
     inclusive: false,
 });
 
-export const createExtensions = ({ singleLine = false, textOnlyOnPaste = true }) => [
+export const createExtensions = ({ singleLine = false, preservePasteFormatting = false }) => [
     Document,
     Paragraph,
     Text,
@@ -43,7 +43,7 @@ export const createExtensions = ({ singleLine = false, textOnlyOnPaste = true })
 
     History,
 
-    ...(textOnlyOnPaste ? [PlainTextPaste] : []),
+    FlattenPasteExtension.configure({ preserveFormatting: preservePasteFormatting }),
 
     LinkBubbleMenuHandler,
 ];
