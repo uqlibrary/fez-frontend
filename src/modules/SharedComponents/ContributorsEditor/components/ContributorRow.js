@@ -243,7 +243,7 @@ export const ContributorRow = ({
                 id={`${contributorRowId}-${index}`}
                 data-testid={`${contributorRowId}-${index}`}
             >
-                <Grid container p={0} id="contributor-row">
+                <Grid container p={0} id="contributor-row" sx={{ width: '100%' }}>
                     <ListItemIcon sx={{ display: { xs: 'none', sm: 'block' }, ...selectedClass }}>
                         {getRowIcon()}
                     </ListItemIcon>

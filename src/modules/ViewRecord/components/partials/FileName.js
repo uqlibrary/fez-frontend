@@ -131,7 +131,7 @@ const FileName = ({
                 )}
                 {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
-                        <StyledWithBody2 as={Grid} item xs>
+                        <StyledWithBody2 as={Grid} size="grow">
                             <Tooltip
                                 title={!!tooltip ? tooltip : ''}
                                 id={`${id}-tooltip`}

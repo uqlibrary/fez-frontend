@@ -195,7 +195,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1t54cff-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-ylnelu-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-mm5x4a-MuiGrid-root"
         />
       </div>
     </div>
@@ -342,7 +342,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1t54cff-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-direction-xs-column css-ylnelu-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-mm5x4a-MuiGrid-root"
         />
       </div>
     </div>

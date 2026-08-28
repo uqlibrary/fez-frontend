@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import JournalFieldsMap from './JournalFieldsMap';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Checkbox from '@mui/material/Checkbox';
@@ -101,7 +101,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                 <StyledTableCell size="small" isSelectable={isSelectable}>
                     <Grid container sx={{ alignItems: 'center' }}>
                         {isSelectable && (
-                            <Grid xs={6} item>
+                            <Grid size={6}>
                                 <Checkbox
                                     size="small"
                                     id={`journal-list-data-col-1-checkbox-${index}`}
@@ -115,7 +115,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                 />
                             </Grid>
                         )}
-                        <Grid xs={6} item>
+                        <Grid size={6}>
                             <IconButton
                                 aria-label="expand row"
                                 size="small"
@@ -138,8 +138,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         data-testid={`journal-list-data-col-1-${index}`}
                     >
                         <Grid
-                            sm={7}
-                            item
+                            size={{ sm: 7 }}
                             id={`journal-list-data-col-1-title-${index}`}
                             data-testid={`journal-list-data-col-1-title-${index}`}
                         >
@@ -166,8 +165,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                             return (
                                 <React.Fragment key={`${field.key}_${index}`}>
                                     <Grid
-                                        item
-                                        {...field.collapsibleComponent?.sizeHeader}
+                                        size={{ ...field.collapsibleComponent?.sizeHeader }}
                                         sx={theme => ({
                                             ...(!!field.collapsibleComponent?.hiddenData
                                                 ? field.collapsibleComponent?.hiddenData
@@ -180,8 +178,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                                         {field.collapsibleComponent?.translateFn(field, index, classesInternal)}
                                     </Grid>
                                     <Grid
-                                        item
-                                        {...field.collapsibleComponent?.sizeData}
+                                        size={{ ...field.collapsibleComponent?.sizeData }}
                                         sx={theme => ({
                                             [theme.breakpoints.down('sm')]: {
                                                 paddingBottom: theme.spacing(1),

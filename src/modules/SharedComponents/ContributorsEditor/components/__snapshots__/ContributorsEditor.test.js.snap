@@ -293,7 +293,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -570,7 +570,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -678,7 +678,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1061,7 +1061,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1196,7 +1196,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1358,7 +1358,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1628,7 +1628,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1763,7 +1763,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2033,7 +2033,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2141,7 +2141,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2384,7 +2384,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2492,7 +2492,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3193,7 +3193,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3328,7 +3328,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3490,7 +3490,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3652,7 +3652,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3814,7 +3814,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3976,7 +3976,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4138,7 +4138,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4300,7 +4300,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4462,7 +4462,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4624,7 +4624,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4786,7 +4786,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4948,7 +4948,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5110,7 +5110,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5272,7 +5272,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5434,7 +5434,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5596,7 +5596,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5758,7 +5758,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5920,7 +5920,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6082,7 +6082,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6244,7 +6244,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6406,7 +6406,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6662,7 +6662,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8677,7 +8677,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8780,7 +8780,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             tabindex="0"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div

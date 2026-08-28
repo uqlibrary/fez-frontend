@@ -114,7 +114,7 @@ export const VocabDataRow = ({ row }) => {
                     </Box>
                 )}
                 {!!open && state.cvo_id !== row.cvo_id && (
-                    <Grid container>
+                    <Grid container sx={{ width: '100%' }}>
                         <Grid size={12}>
                             <ChildVocabTable parentRow={row} locked={locked} />
                         </Grid>

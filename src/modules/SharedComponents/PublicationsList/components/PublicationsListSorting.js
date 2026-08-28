@@ -5,7 +5,7 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import ListSubheader from '@mui/material/ListSubheader';
 
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
@@ -119,7 +119,7 @@ const PublicationsListSorting = ({
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                 <FormControl variant="standard" fullWidth>
                     <InputLabel id="sort-by-label" shrink>
                         {sortingData.sortLabel}
@@ -147,7 +147,7 @@ const PublicationsListSorting = ({
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6} md={canUseExport ? dropDownWidth : dropDownWidth + 1}>
+            <Grid size={{ xs: 12, sm: 6, md: canUseExport ? dropDownWidth : dropDownWidth + 1 }}>
                 <FormControl variant="standard" fullWidth>
                     <InputLabel id="sort-order-label" shrink>
                         {txt.sortDirectionLabel}
@@ -175,7 +175,7 @@ const PublicationsListSorting = ({
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid item xs={12} sm={canUseExport ? 6 : 12} md={canUseExport ? dropDownWidth : dropDownWidth + 1}>
+            <Grid size={{ xs: 12, sm: canUseExport ? 6 : 12, md: canUseExport ? dropDownWidth : dropDownWidth + 1 }}>
                 <FormControl variant="standard" fullWidth>
                     <InputLabel id="page-size-label" shrink>
                         {sortingData.pageSize}
@@ -219,7 +219,9 @@ const PublicationsListSorting = ({
                 </FormControl>
             </Grid>
             {!!showDisplayAs && (
-                <Grid item xs={12} sm={canUseExport ? 6 : 12} md={canUseExport ? dropDownWidth : dropDownWidth + 1}>
+                <Grid
+                    size={{ xs: 12, sm: canUseExport ? 6 : 12, md: canUseExport ? dropDownWidth : dropDownWidth + 1 }}
+                >
                     <FormControl variant="standard" fullWidth>
                         <InputLabel id="display-records-as-label" shrink>
                             {sortingData.displayRecordsAsLabel}
@@ -249,7 +251,7 @@ const PublicationsListSorting = ({
                 </Grid>
             )}
             {canUseExport && (
-                <Grid item sm={6} md={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid size={{ sm: 6, md: 3 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     <ExportPublications
                         onChange={exportPublicationsFormatChanged}
                         disabled={disabled}

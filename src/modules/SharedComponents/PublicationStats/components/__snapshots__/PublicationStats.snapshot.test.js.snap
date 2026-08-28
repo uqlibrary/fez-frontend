@@ -3,10 +3,10 @@
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-1tjcl1k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
@@ -15,7 +15,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -25,7 +25,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -36,10 +36,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     </div>
   </div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -48,7 +48,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -58,7 +58,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -72,10 +72,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -84,7 +84,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -94,7 +94,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -108,10 +108,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -120,7 +120,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -130,7 +130,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -144,10 +144,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -156,7 +156,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -166,7 +166,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -180,10 +180,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -192,7 +192,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -202,7 +202,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -218,10 +218,10 @@ exports[`PublicationStats component should render 1 for hindex because they roun
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-1tjcl1k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
@@ -230,7 +230,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -240,7 +240,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -251,10 +251,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     </div>
   </div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -263,7 +263,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -273,7 +273,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -287,10 +287,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -299,7 +299,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -309,7 +309,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -323,10 +323,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -335,7 +335,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -345,7 +345,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -359,10 +359,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -371,7 +371,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -381,7 +381,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -395,10 +395,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -407,7 +407,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -417,7 +417,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -433,10 +433,10 @@ exports[`PublicationStats component should render N/A for hindex because it is n
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-1tjcl1k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
@@ -445,7 +445,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -455,7 +455,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -466,10 +466,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     </div>
   </div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -478,7 +478,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -488,7 +488,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -502,10 +502,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -514,7 +514,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -524,7 +524,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -538,10 +538,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -550,7 +550,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -560,7 +560,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -574,10 +574,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -586,7 +586,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -596,7 +596,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -610,10 +610,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -622,7 +622,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -632,7 +632,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -648,10 +648,10 @@ exports[`PublicationStats component should render N/A for hindex because it is u
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-1tjcl1k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
@@ -660,7 +660,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -670,7 +670,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -681,10 +681,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     </div>
   </div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -693,7 +693,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -703,7 +703,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -717,10 +717,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -729,7 +729,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -739,7 +739,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -753,10 +753,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -765,7 +765,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -775,7 +775,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -789,10 +789,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -801,7 +801,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -811,7 +811,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -825,10 +825,10 @@ exports[`PublicationStats component should render N/A for hindex because they eq
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -837,7 +837,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -847,7 +847,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -871,10 +871,10 @@ exports[`PublicationStats component should render an empty component 1`] = `
 exports[`PublicationStats component should render statistics with table and data 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-1tjcl1k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
@@ -883,7 +883,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -893,7 +893,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -904,10 +904,10 @@ exports[`PublicationStats component should render statistics with table and data
     </div>
   </div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -916,7 +916,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -926,7 +926,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -940,10 +940,10 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -952,7 +952,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -962,7 +962,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -976,10 +976,10 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -988,7 +988,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -998,7 +998,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -1012,10 +1012,10 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1024,7 +1024,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -1034,7 +1034,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p
@@ -1048,10 +1048,10 @@ exports[`PublicationStats component should render statistics with table and data
     class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
   />
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-12udcuk-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1060,7 +1060,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: center;"
     >
       <p
@@ -1070,7 +1070,7 @@ exports[`PublicationStats component should render statistics with table and data
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-3 css-1jvzq8k-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
       style="text-align: right;"
     >
       <p

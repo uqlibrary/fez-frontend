@@ -6730,7 +6730,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-evortb-MuiGrid-root"
                                     >
                                       <div
-                                        class="MuiGrid-root MuiGrid-direction-xs-row css-1lqx1cx-MuiGrid-root"
+                                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1snsjf1-MuiGrid-root"
                                       >
                                         <p
                                           aria-label=""

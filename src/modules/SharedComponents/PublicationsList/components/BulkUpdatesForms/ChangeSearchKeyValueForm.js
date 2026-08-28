@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useValidatedForm } from 'hooks';
 import { Field } from '../../../Toolbox/ReactHookForm';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -50,7 +50,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
     return (
         <form data-testid="change-search-key-value-form" id="change-search-key-value-form">
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Field
                         control={control}
                         component={SearchKeyField}
@@ -64,7 +64,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                 </Grid>
                 {!!searchKey && (
                     <React.Fragment>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={getSearchKeyValueField(searchKey).component}
@@ -76,7 +76,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                                 {...getSearchKeyValueField(searchKey).componentProps}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -91,7 +91,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                         </Grid>
                     </React.Fragment>
                 )}
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
                         children={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
@@ -104,7 +104,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}
                         children={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}
@@ -118,7 +118,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {!!isSubmitting && (
                         <Alert
                             alertId="alert-info-change-search-key-value"

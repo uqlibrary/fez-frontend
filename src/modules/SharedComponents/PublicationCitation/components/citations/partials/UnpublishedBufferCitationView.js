@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import CitationView from './CitationView';
 import DateCitationView from './DateCitationView';
@@ -11,7 +11,7 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 export const UnpublishedBufferCitationView = ({ publication }) => {
     return (
         <Grid container alignItems="center">
-            <Grid item xs="auto" style={{ flexGrow: 1, width: '100%' }}>
+            <Grid size="auto" style={{ flexGrow: 1, width: '100%' }}>
                 <Typography
                     component={'div'}
                     variant="caption"

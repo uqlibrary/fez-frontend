@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { locale } from 'locale';
@@ -34,17 +34,17 @@ export const PublicationStats = ({ publicationsStats }) => {
         <React.Fragment>
             {/* Header */}
             <StyledGridHeader container>
-                <Grid item xs={6}>
+                <Grid size={6}>
                     <Typography variant={'body2'} color={'inherit'} gutterBottom>
                         {txt.publicationStatsTitle1}
                     </Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'center' }}>
+                <Grid size={3} style={{ textAlign: 'center' }}>
                     <Typography variant={'body2'} color={'inherit'} gutterBottom>
                         {txt.publicationStatsTitle2}
                     </Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'right' }}>
+                <Grid size={3} style={{ textAlign: 'right' }}>
                     <Typography variant={'body2'} color={'inherit'} gutterBottom>
                         {txt.publicationStatsTitle3}
                     </Typography>
@@ -54,13 +54,13 @@ export const PublicationStats = ({ publicationsStats }) => {
 
             {/* Total pubs */}
             <Grid container spacing={2} sx={{ ...classes.data }}>
-                <Grid item xs={6}>
+                <Grid size={6}>
                     <Typography variant={'body2'}>{txt.publicationStatsRowTitle4}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'center' }}>
+                <Grid size={3} style={{ textAlign: 'center' }}>
                     <Typography variant={'body2'}>{pubStats.thomson_citation_count_i.count}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'right' }}>
+                <Grid size={3} style={{ textAlign: 'right' }}>
                     <Typography variant={'body2'}>{pubStats.scopus_citation_count_i.count}</Typography>
                 </Grid>
             </Grid>
@@ -69,13 +69,13 @@ export const PublicationStats = ({ publicationsStats }) => {
 
             {/* Range */}
             <Grid container spacing={2} sx={{ ...classes.data }}>
-                <Grid item xs={6}>
+                <Grid size={6}>
                     <Typography variant={'body2'}>{txt.publicationStatsRowTitle5}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'center' }}>
+                <Grid size={3} style={{ textAlign: 'center' }}>
                     <Typography variant={'body2'}>{pubStats.thomson_citation_count_i.years}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'right' }}>
+                <Grid size={3} style={{ textAlign: 'right' }}>
                     <Typography variant={'body2'}>{pubStats.scopus_citation_count_i.years}</Typography>
                 </Grid>
             </Grid>
@@ -84,10 +84,10 @@ export const PublicationStats = ({ publicationsStats }) => {
 
             {/* hindex */}
             <Grid container spacing={2} sx={{ ...classes.data }}>
-                <Grid item xs={6}>
+                <Grid size={6}>
                     <Typography variant={'body2'}>{txt.publicationStatsRowTitle1}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'center' }}>
+                <Grid size={3} style={{ textAlign: 'center' }}>
                     <Typography variant={'body2'}>
                         {!pubStats.thomson_citation_count_i.hindex ||
                         pubStats.thomson_citation_count_i.hindex === '' ||
@@ -97,7 +97,7 @@ export const PublicationStats = ({ publicationsStats }) => {
                             : pubStats.thomson_citation_count_i.hindex.toFixed(0)}
                     </Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'right' }}>
+                <Grid size={3} style={{ textAlign: 'right' }}>
                     <Typography variant={'body2'}>
                         {!pubStats.scopus_citation_count_i.hindex ||
                         pubStats.scopus_citation_count_i.hindex === '' ||
@@ -113,15 +113,15 @@ export const PublicationStats = ({ publicationsStats }) => {
 
             {/* Average */}
             <Grid container spacing={2} sx={{ ...classes.data }}>
-                <Grid item xs={6}>
+                <Grid size={6}>
                     <Typography variant={'body2'}>{txt.publicationStatsRowTitle2}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'center' }}>
+                <Grid size={3} style={{ textAlign: 'center' }}>
                     <Typography variant={'body2'}>
                         {pubStats.thomson_citation_count_i.avg && pubStats.thomson_citation_count_i.avg.toFixed(1)}
                     </Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'right' }}>
+                <Grid size={3} style={{ textAlign: 'right' }}>
                     <Typography variant={'body2'}>
                         {pubStats.scopus_citation_count_i.avg && pubStats.scopus_citation_count_i.avg.toFixed(1)}
                     </Typography>
@@ -132,13 +132,13 @@ export const PublicationStats = ({ publicationsStats }) => {
 
             {/* Total citations */}
             <Grid container spacing={2} sx={{ ...classes.data }}>
-                <Grid item xs={6}>
+                <Grid size={6}>
                     <Typography variant={'body2'}>{txt.publicationStatsRowTitle3}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'center' }}>
+                <Grid size={3} style={{ textAlign: 'center' }}>
                     <Typography variant={'body2'}>{pubStats.thomson_citation_count_i.sum}</Typography>
                 </Grid>
-                <Grid item xs={3} style={{ textAlign: 'right' }}>
+                <Grid size={3} style={{ textAlign: 'right' }}>
                     <Typography variant={'body2'}>{pubStats.scopus_citation_count_i.sum}</Typography>
                 </Grid>
             </Grid>

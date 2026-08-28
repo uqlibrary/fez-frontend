@@ -52,7 +52,7 @@ const StyledGridCard = styled(Grid)(({ theme }) => ({
 const StyledAppTitle = styled(Typography, {
     shouldForwardProp: prop => prop !== 'indentTitle',
 })(({ theme, indentTitle }) => ({
-    ...(indentTitle ? { textIndent: '290px' } : {}),
+    ...(indentTitle ? { textIndent: '282px' } : {}),
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     color: theme.palette.common.white,
