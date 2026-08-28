@@ -136,7 +136,7 @@ export const useColumns = ({
             },
             {
                 field: 'id',
-                headerName: txt.columns.sharableLink.title,
+                headerName: txt.columns.links.title,
                 editable: false,
                 sortable: false,
                 resizable: false,
@@ -153,7 +153,8 @@ export const useColumns = ({
                         <span>
                             <Grid spacing={3} container alignItems="center" justifyContent="center" sx={{ pt: 1 }}>
                                 <Link
-                                    aria-label="click to view items in this list"
+                                    title={txt.columns.links.view.title}
+                                    aria-label={txt.columns.links.view.title}
                                     data-testid={`fjl-view-link-${props.id}`}
                                     to={viewDisabled ? '' : url}
                                     className={classNames('fjl-link', { disabled: viewDisabled })}
@@ -161,13 +162,14 @@ export const useColumns = ({
                                     <Visibility style={{ width: 16 }} />
                                 </Link>
                                 <Link
-                                    aria-label="click to copy view link"
+                                    title={shareDisabled ? '' : txt.columns.links.sharable.title}
+                                    aria-label={txt.columns.links.sharable.title}
                                     data-testid={`fjl-sharable-link-${props.id}`}
                                     to={shareDisabled ? '' : url}
                                     className={classNames('fjl-link', { disabled: shareDisabled })}
                                     onClick={e => {
-                                        if (shareDisabled) return;
                                         e.preventDefault();
+                                        if (shareDisabled) return;
                                         onShareListClick(createListSharingUrl(props.value));
                                     }}
                                 >
@@ -197,7 +199,8 @@ export const useColumns = ({
                         return [
                             <GridActionsCellItem
                                 icon={<Check />}
-                                label="Save"
+                                title={isDeleting ? 'Delete' : 'Save'}
+                                label={isDeleting ? 'Delete' : 'Save'}
                                 sx={{ color: 'primary.main' }}
                                 disabled={isInEditMode && !editingLabel.trim()}
                                 onClick={!isDeleting ? onSaveClick(rowId) : () => handleDeleteRow(rowId)}
@@ -205,6 +208,7 @@ export const useColumns = ({
                             />,
                             <GridActionsCellItem
                                 icon={<Clear />}
+                                title="Cancel"
                                 label="Cancel"
                                 className="textPrimary"
                                 onClick={onCancelClick(rowId)}
@@ -227,7 +231,8 @@ export const useColumns = ({
                         />,
                         <GridActionsCellItem
                             icon={<Edit />}
-                            label="Edit"
+                            title={txt.columns.actions.edit.title}
+                            label="edit"
                             className="textPrimary"
                             onClick={onEditClick(rowId)}
                             color="inherit"
@@ -236,7 +241,8 @@ export const useColumns = ({
                         />,
                         <GridActionsCellItem
                             icon={<Delete />}
-                            label="Delete"
+                            title={txt.columns.actions.delete.title}
+                            label="delete"
                             onClick={onDeleteClick(rowId)}
                             color="inherit"
                             data-testid={`journal-user-lists-item-${index}-delete`}
