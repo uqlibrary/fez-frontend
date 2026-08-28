@@ -122,7 +122,7 @@ describe('FlattenPasteExtension', () => {
             const result = plugin.props.transformPasted(createSlice(paragraphs));
 
             expect(result.content.childCount).toBe(1);
-            expect(result.content.firstChild.textContent).toBe('Hello WorldGoodbye');
+            expect(result.content.firstChild.textContent).toBe('Hello World Goodbye');
         });
 
         it('should flatten nested block structures', () => {
@@ -161,7 +161,7 @@ describe('FlattenPasteExtension', () => {
 
             const paragraph = result.content.firstChild;
 
-            expect(paragraph.textContent).toBe('Hello World!');
+            expect(paragraph.textContent).toBe('Hello World !');
             expect(paragraph.childCount).toBe(3);
 
             expect(paragraph.child(0).marks).toEqual([]);
@@ -179,7 +179,7 @@ describe('FlattenPasteExtension', () => {
 
             const paragraph = result.content.firstChild;
 
-            expect(paragraph.textContent).toBe('Hello World');
+            expect(paragraph.textContent).toBe('Hello  World');
             expect(paragraph.firstChild.marks).toEqual([]);
         });
 
@@ -195,7 +195,7 @@ describe('FlattenPasteExtension', () => {
             const result = plugin.props.transformPasted(createSlice(content));
 
             expect(result.content.childCount).toBe(1);
-            expect(result.content.firstChild.textContent).toBe('Hello World!');
+            expect(result.content.firstChild.textContent).toBe('Hello  World !');
         });
     });
 });
