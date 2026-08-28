@@ -43,7 +43,7 @@ describe('FlattenPasteExtension', () => {
 
             expect(result.content.childCount).toBe(1);
             expect(result.content.firstChild.textContent).toBe(
-                'Alert ID14804Received29th January 2026 15:12Requester IDuqdstew1',
+                'Alert ID14804 Received29th January 2026 15:12 Requester IDuqdstew1',
             );
         });
 
@@ -60,7 +60,7 @@ describe('FlattenPasteExtension', () => {
 
             const paragraph = result.content.firstChild;
 
-            expect(paragraph.textContent).toBe('HelloWorld');
+            expect(paragraph.textContent).toBe('Hello World');
             expect(paragraph.firstChild.marks).toEqual([bold]);
         });
 
@@ -77,7 +77,7 @@ describe('FlattenPasteExtension', () => {
 
             const paragraph = result.content.firstChild;
 
-            expect(paragraph.textContent).toBe('HelloWorld');
+            expect(paragraph.textContent).toBe('Hello World');
             expect(paragraph.firstChild.marks).toEqual([]);
         });
 
@@ -93,7 +93,7 @@ describe('FlattenPasteExtension', () => {
 
             expect(result.content.childCount).toBe(1);
             expect(result.content.firstChild.type.name).toBe('paragraph');
-            expect(result.content.firstChild.textContent).toBe('HelloWorld');
+            expect(result.content.firstChild.textContent).toBe('Hello World');
         });
 
         it('should flatten direct text nodes', () => {
