@@ -5,16 +5,23 @@ import { Fragment, Slice } from '@tiptap/pm/model';
 const flattenPastedContent = (slice, schema, preservePasteFormatting) => {
     const content = [];
 
-    const addContent = node => {
-        if (node.isText) {
-            content.push(preservePasteFormatting ? node : schema.text(node.text));
-            return;
+    slice.content.forEach((node, offset, index) => {
+        if (index > 0) {
+            content.push(schema.text(' '));
         }
 
-        node.forEach(addContent);
-    };
+        node.forEach(child => {
+            if (preservePasteFormatting) {
+                content.push(child);
+                return;
+            }
 
-    slice.content.forEach(addContent);
+            /* istanbul ignore else */
+            if (child.isText) {
+                content.push(schema.text(child.text));
+            }
+        });
+    });
 
     const paragraph = schema.nodes.paragraph.create(null, Fragment.from(content));
 
