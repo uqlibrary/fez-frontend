@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
@@ -58,14 +58,14 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
     return (
         <form data-testid={`${idText}-collection-form`} id={`${idText}-collection-form`}>
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Alert
                         alertId={`alert-info-${idText}-collection`}
                         {...txt.copyToOrRemoveFromCollectionForm.alert(isRemoveFrom)}
                     />
                 </Grid>
                 {hasACollectionSelected && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             alertId={`alert-info-${idText}-collection-notallowed`}
                             {...txt.copyToOrRemoveFromCollectionForm.onlyRecordsAllowed}
@@ -73,7 +73,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                     </Grid>
                 )}
                 {!!alertUser && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             alertId={`alert-warning-${idText}-collection`}
                             {...txt.copyToOrRemoveFromCollectionForm.warningAlert}
@@ -81,7 +81,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                     </Grid>
                 )}
                 {!hasACollectionSelected && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Field
                             control={control}
                             component={CollectionField}
@@ -96,7 +96,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                         />
                     </Grid>
                 )}
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
@@ -109,7 +109,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}
@@ -125,7 +125,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {isSubmitting && (
                         <Alert
                             alertId={`alert-info-${idText}-collection`}

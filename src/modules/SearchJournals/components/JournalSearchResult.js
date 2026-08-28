@@ -184,7 +184,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         fullWidth
                                     />
                                 </StyledGridButtonContainer>
-                                <StyledGridButtonContainer item xs={12} sm={6} md={4}>
+                                <StyledGridButtonContainer size={{ xs: 12, sm: 6, md: 4 }}>
                                     <AddToListButton
                                         clearSelectedJournals={clearSelectedJournals}
                                         selectedJournals={selectedJournals}

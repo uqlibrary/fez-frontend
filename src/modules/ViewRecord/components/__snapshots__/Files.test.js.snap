@@ -1240,16 +1240,16 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1265,7 +1265,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b />
                   <span
@@ -1601,16 +1601,16 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1626,7 +1626,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b />
                   <span
@@ -1962,16 +1962,16 @@ exports[`Files Component  should render an image as the original filename with n
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1987,7 +1987,7 @@ exports[`Files Component  should render an image as the original filename with n
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b />
                   <span
@@ -2919,19 +2919,19 @@ exports[`Files Component  should render component 2`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
             data-analyticsid="login-info-alert"
             data-testid="login-info-alert"
             id="login-info-alert"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-j1d1nm-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -2947,7 +2947,7 @@ exports[`Files Component  should render component 2`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b>
                     You are not logged in - 
@@ -2961,7 +2961,7 @@ exports[`Files Component  should render component 2`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
@@ -3696,7 +3696,7 @@ exports[`Files Component  should render component 2`] = `
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row css-x2kh95-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-ua42ud-MuiGrid-root"
                     >
                       <p
                         aria-label=""
@@ -3814,19 +3814,19 @@ exports[`Files Component  should render component for public users 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
             data-analyticsid="login-info-alert"
             data-testid="login-info-alert"
             id="login-info-alert"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-j1d1nm-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -3842,7 +3842,7 @@ exports[`Files Component  should render component for public users 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b>
                     You are not logged in - 
@@ -3856,7 +3856,7 @@ exports[`Files Component  should render component for public users 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
             >
               <button
                 class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
@@ -3957,7 +3957,7 @@ exports[`Files Component  should render component for public users 1`] = `
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row css-x2kh95-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-ua42ud-MuiGrid-root"
                     >
                       <p
                         aria-label=""
@@ -4156,7 +4156,7 @@ exports[`Files Component  should render files based on security policy correctly
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row css-x2kh95-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-ua42ud-MuiGrid-root"
                     >
                       <p
                         aria-label=""
@@ -5290,16 +5290,16 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -5315,7 +5315,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b />
                   <span
@@ -5651,16 +5651,16 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -5676,7 +5676,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b />
                   <span
@@ -6012,16 +6012,16 @@ exports[`Files Component  should show a blacklisted collection member when the u
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -6037,7 +6037,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                 >
                   <b />
                   <span

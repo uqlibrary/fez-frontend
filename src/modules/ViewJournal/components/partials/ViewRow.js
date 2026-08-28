@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import ViewField from './ViewField';
 
 export const ViewRow = ({ viewRowId, fields }) => {
@@ -10,8 +10,7 @@ export const ViewRow = ({ viewRowId, fields }) => {
             {fields.map((field, index) => (
                 <Grid
                     key={`${field.fieldId}`}
-                    item
-                    xs={12 / fields.length}
+                    size={12 / fields.length}
                     id={`${viewRowId}-item-${index}`}
                     data-testid={`${viewRowId}-item-${index}`}
                 >

@@ -244,19 +244,19 @@ exports[`AdminInterface component should disabled button and render alert for fo
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
                 data-analyticsid="alert-info"
                 data-testid="alert-info"
                 id="alert-info"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                     >
                       <span
                         class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-1jjkwrz-MuiCircularProgress-root"
@@ -281,7 +281,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       </span>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                     >
                       <b>
                         Saving - 
@@ -381,16 +381,16 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -406,7 +406,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
                     </svg>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                   >
                     <b />
                     <span
@@ -961,19 +961,19 @@ exports[`AdminInterface component should display job created alert 2`] = `
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-1dx371l-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
                 data-analyticsid="alert-done"
                 data-testid="alert-done"
                 id="alert-done"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -989,7 +989,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       </svg>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                     >
                       <b>
                         Success - 
@@ -1600,19 +1600,19 @@ exports[`AdminInterface component should display successful alert 2`] = `
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-1dx371l-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
                 data-analyticsid="alert-done"
                 data-testid="alert-done"
                 id="alert-done"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
@@ -1628,7 +1628,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       </svg>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                     >
                       <b>
                         Success - 
@@ -2986,19 +2986,19 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                 style="margin-top: 5px;"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container css-1q04yrf-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
                   data-analyticsid="alert-error"
                   data-testid="alert-error"
                   id="alert-error"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-1hyd9k4-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-6v8acz-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
@@ -3014,7 +3014,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                         </svg>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                       >
                         <b>
                           THIS WORK IS LOCKED - 
@@ -3028,7 +3028,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
@@ -3374,19 +3374,19 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                 style="margin-top: 5px;"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container css-1q04yrf-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
                   data-analyticsid="alert-error"
                   data-testid="alert-error"
                   id="alert-error"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-1hyd9k4-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-6v8acz-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
@@ -3402,7 +3402,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                         </svg>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                       >
                         <b>
                           THIS WORK IS LOCKED - 
@@ -3416,7 +3416,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"

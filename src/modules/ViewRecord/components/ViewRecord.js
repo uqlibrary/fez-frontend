@@ -328,7 +328,7 @@ export const ViewRecord = () => {
                 )}
                 {/* eslint-disable-next-line camelcase */}
                 {!!recordToView.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
-                    <Grid xs={12} style={{ marginBottom: 24 }}>
+                    <Grid size={12} style={{ marginBottom: 24 }}>
                         <Alert
                             allowDismiss
                             type={'info'}

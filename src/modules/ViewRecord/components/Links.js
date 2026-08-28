@@ -49,13 +49,7 @@ const Links = ({ publication, isAdmin }) => {
                 }),
             ]}
         >
-            <Grid
-                data-testid={`${linkId}-link`}
-                size={{
-                    xs: 12,
-                    sm: 6,
-                }}
-            >
+            <Grid data-testid={`${linkId}-link`} size={{ xs: 12, sm: 6 }}>
                 <Typography variant={'body2'} component={'span'}>
                     {link}
                 </Typography>
@@ -63,10 +57,7 @@ const Links = ({ publication, isAdmin }) => {
             <Grid
                 data-analyticsid={`${linkId}-description`}
                 data-testid={`${linkId}-description`}
-                size={{
-                    xs: 11,
-                    sm: 4,
-                }}
+                size={{ xs: 11, sm: 4 }}
                 sx={{
                     whiteSpace: 'nowrap',
                     textOverflow: 'ellipsis',
@@ -77,14 +68,7 @@ const Links = ({ publication, isAdmin }) => {
                     {description}
                 </Typography>
             </Grid>
-            <Grid
-                style={{ textAlign: 'right' }}
-                data-testid={`${linkId}-oa-status`}
-                size={{
-                    xs: 1,
-                    sm: 2,
-                }}
-            >
+            <Grid style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`} size={{ xs: 1, sm: 2 }}>
                 <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: '-5px' }} />
             </Grid>
         </Grid>
@@ -316,9 +300,7 @@ const Links = ({ publication, isAdmin }) => {
                     <Grid
                         data-testid="description-label"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
-                        size={{
-                            sm: 4,
-                        }}
+                        size={{ sm: 4 }}
                     >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.description}

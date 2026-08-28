@@ -10,7 +10,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -116,7 +116,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -222,7 +222,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -308,7 +308,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -394,7 +394,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -554,7 +554,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -640,7 +640,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -726,7 +726,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -832,7 +832,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -933,7 +933,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1034,7 +1034,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1147,7 +1147,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
     tabindex="-1"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1234,7 +1234,7 @@ exports[`Component ContributorRow should render contributor row linked class for
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1348,7 +1348,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1434,7 +1434,7 @@ exports[`Component ContributorRow should render with default props 1`] = `
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
@@ -1520,7 +1520,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     tabindex="0"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-jl57sx-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
       id="contributor-row"
     >
       <div
