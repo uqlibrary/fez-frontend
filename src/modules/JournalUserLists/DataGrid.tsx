@@ -205,7 +205,7 @@ export const DataGrid = ({ data, loading, createAction, updateAction, deleteActi
     return (
         <>
             <CopyToClipboardDialog
-                title={txt.grid.columns.sharableLink.copyLink.title}
+                title={txt.grid.columns.links.sharable.copyLink.title}
                 open={isCopyLinkDialogOpen}
                 text={linkToBeCopied}
                 onCopy={onCopiedLink}

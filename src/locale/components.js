@@ -4526,19 +4526,34 @@ export default {
                     isPublic: {
                         title: 'Is sharable',
                     },
-                    sharableLink: {
-                        title: 'Sharing Link',
-                        copyLink: {
-                            title: (
-                                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                                    Copy list's sharing link <Link />
-                                </span>
-                            ),
+                    viewLink: {
+                        title: 'See list',
+                    },
+                    links: {
+                        title: 'Links',
+                        view: {
+                            title: 'See list',
+                        },
+                        sharable: {
+                            title: 'Sharing link',
+                            copyLink: {
+                                title: (
+                                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                                        Copy list's sharing link <Link />
+                                    </span>
+                                ),
+                            },
                         },
                     },
                     actions: {
                         items: {
                             title: 'Manage Items',
+                        },
+                        edit: {
+                            title: 'Edit properties',
+                        },
+                        delete: {
+                            title: 'Delete list',
                         },
                     },
                 },
