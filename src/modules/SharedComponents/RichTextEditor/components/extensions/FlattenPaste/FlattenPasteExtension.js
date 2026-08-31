@@ -2,16 +2,20 @@ import { Extension } from '@tiptap/core';
 import { Plugin } from '@tiptap/pm/state';
 import { Fragment, Slice } from '@tiptap/pm/model';
 
-const flattenPastedContent = (slice, schema, preservePasteFormatting) => {
+const flattenPastedContent = (slice, schema, preserveFormatting) => {
+    if (preserveFormatting) {
+        return slice;
+    }
+
     const content = [];
 
-    const addContent = node => {
+    const addText = node => {
         if (node.isText) {
-            content.push(preservePasteFormatting ? node : schema.text(node.text));
+            content.push(schema.text(node.text));
             return;
         }
 
-        node.forEach(addContent);
+        node.forEach(addText);
     };
 
     slice.content.forEach((node, index) => {
@@ -19,7 +23,7 @@ const flattenPastedContent = (slice, schema, preservePasteFormatting) => {
             content.push(schema.text(' '));
         }
 
-        addContent(node);
+        addText(node);
     });
 
     const paragraph = schema.nodes.paragraph.create(null, Fragment.from(content));
