@@ -9,7 +9,7 @@ exports[`DateRangeField component should render with default props 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-f4iabq-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1rrkofq-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       />
     </div>
@@ -24,7 +24,7 @@ exports[`DateRangeField component should render with default props 1`] = `
         class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
       >
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-fmjne0-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15lgwpk-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -42,7 +42,7 @@ exports[`DateRangeField component should render with default props 1`] = `
           >
             <button
               aria-label="Choose date"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
             >
@@ -89,7 +89,7 @@ exports[`DateRangeField component should render with default props 1`] = `
         class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
       >
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-fmjne0-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15lgwpk-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -107,7 +107,7 @@ exports[`DateRangeField component should render with default props 1`] = `
           >
             <button
               aria-label="Choose date"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
             >

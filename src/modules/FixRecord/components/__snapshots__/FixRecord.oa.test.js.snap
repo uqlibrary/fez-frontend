@@ -111,7 +111,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -120,7 +120,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -419,7 +419,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                         data-testid="comments"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="comments-label"
                           for="comments-input"
@@ -428,7 +428,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                           Type changes or comments here
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-glkc0l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
                         >
                           <textarea
                             aria-invalid="false"
@@ -460,7 +460,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                         data-testid="rek_link"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek_link-label"
                           for="rek_link-input"
@@ -469,7 +469,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                           Link (URL)
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="false"
@@ -649,7 +649,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -674,7 +674,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
                     >
                       <b>
                         Validation - 
@@ -707,7 +707,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-15rrvmf-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1p0ctx9-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -718,7 +718,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-qh3gja-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1548di-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               disabled=""
@@ -944,7 +944,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -953,7 +953,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -1252,7 +1252,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                         data-testid="comments"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="comments-label"
                           for="comments-input"
@@ -1261,7 +1261,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                           Type changes or comments here
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-glkc0l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
                         >
                           <textarea
                             aria-invalid="false"
@@ -1293,7 +1293,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                         data-testid="rek_link"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek_link-label"
                           for="rek_link-input"
@@ -1302,7 +1302,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                           Link (URL)
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="false"
@@ -1482,7 +1482,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1507,7 +1507,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
                     >
                       <b>
                         Validation - 
@@ -1540,7 +1540,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-15rrvmf-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1p0ctx9-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1551,7 +1551,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-qh3gja-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1548di-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               disabled=""

@@ -33,7 +33,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -68,7 +68,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -103,7 +103,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -140,7 +140,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -175,7 +175,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -208,7 +208,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -237,7 +237,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -266,7 +266,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -295,7 +295,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -346,7 +346,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -375,7 +375,7 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -458,7 +458,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -493,7 +493,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -528,7 +528,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -565,7 +565,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -600,7 +600,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -631,7 +631,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -670,7 +670,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -699,7 +699,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -728,7 +728,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -757,7 +757,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -808,7 +808,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -837,7 +837,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -920,7 +920,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -955,7 +955,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -990,7 +990,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1027,7 +1027,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1062,7 +1062,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1093,7 +1093,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1126,7 +1126,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1165,7 +1165,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1194,7 +1194,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1223,7 +1223,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1252,7 +1252,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1303,7 +1303,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1332,7 +1332,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1415,7 +1415,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1450,7 +1450,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1485,7 +1485,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1522,7 +1522,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1557,7 +1557,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1588,7 +1588,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1621,7 +1621,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1650,7 +1650,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1679,7 +1679,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1708,7 +1708,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1759,7 +1759,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1788,7 +1788,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1817,7 +1817,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1900,7 +1900,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1935,7 +1935,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -1970,7 +1970,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2007,7 +2007,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2042,7 +2042,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2073,7 +2073,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2106,7 +2106,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2135,7 +2135,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2164,7 +2164,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2193,7 +2193,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2244,7 +2244,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2273,7 +2273,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2302,7 +2302,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2385,7 +2385,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2420,7 +2420,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2455,7 +2455,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2492,7 +2492,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2527,7 +2527,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2558,7 +2558,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2591,7 +2591,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2620,7 +2620,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2649,7 +2649,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2678,7 +2678,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2729,7 +2729,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2758,7 +2758,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2841,7 +2841,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2876,7 +2876,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2911,7 +2911,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2946,7 +2946,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -2981,7 +2981,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3012,7 +3012,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3045,7 +3045,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3074,7 +3074,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3103,7 +3103,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3132,7 +3132,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3183,7 +3183,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3212,7 +3212,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3295,7 +3295,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3330,7 +3330,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3365,7 +3365,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3400,7 +3400,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3431,7 +3431,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3464,7 +3464,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3493,7 +3493,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3522,7 +3522,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3551,7 +3551,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3602,7 +3602,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3631,7 +3631,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3714,7 +3714,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3749,7 +3749,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3784,7 +3784,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3821,7 +3821,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3856,7 +3856,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3887,7 +3887,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3920,7 +3920,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3949,7 +3949,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -3978,7 +3978,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4007,7 +4007,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4058,7 +4058,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4087,7 +4087,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4170,7 +4170,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4205,7 +4205,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4240,7 +4240,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4275,7 +4275,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4310,7 +4310,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4345,7 +4345,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4380,7 +4380,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4409,7 +4409,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4438,7 +4438,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4469,7 +4469,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4502,7 +4502,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4531,7 +4531,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4560,7 +4560,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4589,7 +4589,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4640,7 +4640,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4669,7 +4669,7 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4754,7 +4754,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4789,7 +4789,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4824,7 +4824,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4861,7 +4861,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4896,7 +4896,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4927,7 +4927,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4960,7 +4960,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -4989,7 +4989,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5018,7 +5018,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5047,7 +5047,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5076,7 +5076,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5105,7 +5105,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5156,7 +5156,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5185,7 +5185,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5270,7 +5270,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5305,7 +5305,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5340,7 +5340,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5377,7 +5377,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5412,7 +5412,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5441,7 +5441,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5474,7 +5474,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5503,7 +5503,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5532,7 +5532,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5561,7 +5561,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5612,7 +5612,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5641,7 +5641,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5726,7 +5726,7 @@ exports[`NtroDetails  should render component with record 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5761,7 +5761,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5796,7 +5796,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5831,7 +5831,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5868,7 +5868,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5897,7 +5897,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5928,7 +5928,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -5967,7 +5967,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6006,7 +6006,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6035,7 +6035,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6064,7 +6064,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6093,7 +6093,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6122,7 +6122,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6151,7 +6151,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6202,7 +6202,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6231,7 +6231,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6260,7 +6260,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6343,7 +6343,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6378,7 +6378,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6413,7 +6413,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6442,7 +6442,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6471,7 +6471,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6500,7 +6500,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6529,7 +6529,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6558,7 +6558,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6587,7 +6587,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6670,7 +6670,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
         id="standard-card-non-traditional-research-output-metadata-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6705,7 +6705,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6740,7 +6740,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6775,7 +6775,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6812,7 +6812,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6841,7 +6841,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6872,7 +6872,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6911,7 +6911,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6950,7 +6950,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -6979,7 +6979,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -7008,7 +7008,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -7037,7 +7037,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -7066,7 +7066,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -7095,7 +7095,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -7146,7 +7146,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -7175,7 +7175,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
@@ -7204,7 +7204,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css-16jwan5"
         >
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"

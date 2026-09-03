@@ -84,7 +84,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
       id="standard-card-content"
     >
       <div
-        class="MuiTabs-root css-1lco6rl-MuiTabs-root"
+        class="MuiTabs-root css-jltyli-MuiTabs-root"
       >
         <div
           class="MuiTabs-scroller MuiTabs-fixed css-s2t35c-MuiTabs-scroller"
@@ -156,7 +156,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
         >
           <button
             aria-label="Click for more information"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
@@ -165,7 +165,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"
@@ -489,7 +489,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-19q8l9l-MuiGrid-root"
       data-analyticsid="alert-error"
       data-testid="alert-error"
       id="alert-error"
@@ -517,7 +517,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
           >
             <b>
               There has been an error - 
@@ -550,7 +550,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
       id="standard-card-content"
     >
       <div
-        class="MuiTabs-root css-1lco6rl-MuiTabs-root"
+        class="MuiTabs-root css-jltyli-MuiTabs-root"
       >
         <div
           class="MuiTabs-scroller MuiTabs-fixed css-s2t35c-MuiTabs-scroller"
@@ -616,7 +616,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
         >
           <button
             aria-label="Click for more information"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
             data-testid="help-icon"
@@ -625,7 +625,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             type="button"
           >
             <svg
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               role="img"

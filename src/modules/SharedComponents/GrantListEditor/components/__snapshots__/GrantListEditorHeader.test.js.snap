@@ -84,7 +84,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -208,7 +208,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -332,7 +332,7 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -456,7 +456,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -580,7 +580,7 @@ exports[`GrantListEditorHeader should render with default props 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -706,7 +706,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >

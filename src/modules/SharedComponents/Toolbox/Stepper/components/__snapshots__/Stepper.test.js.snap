@@ -16,7 +16,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -57,7 +57,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -81,7 +81,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -108,7 +108,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -132,7 +132,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -161,7 +161,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -185,7 +185,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -212,7 +212,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -236,7 +236,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -263,7 +263,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -287,7 +287,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -316,7 +316,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -340,7 +340,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -367,7 +367,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -391,7 +391,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -420,7 +420,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -444,7 +444,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -471,7 +471,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -495,7 +495,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -522,7 +522,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -546,7 +546,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -575,7 +575,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -589,7 +589,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -616,7 +616,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -640,7 +640,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -667,7 +667,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -691,7 +691,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -720,7 +720,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -734,7 +734,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -761,7 +761,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             data-testid="CheckCircleIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -775,7 +775,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -802,7 +802,7 @@ exports[`Add record stepper tests should render steps with specific active step 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -826,7 +826,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
           >
             <span>
               Step 3

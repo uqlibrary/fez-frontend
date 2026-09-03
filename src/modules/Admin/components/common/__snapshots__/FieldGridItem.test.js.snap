@@ -387,7 +387,7 @@ exports[`FieldGridItem should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-13kfccc-MuiTiptap-RichTextContent-root"
+          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
         >
           <div
             class="tiptap ProseMirror"
@@ -423,7 +423,7 @@ exports[`FieldGridItem should render default view for a composed field 1`] = `
       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         data-testid="rek-sensitive-handling-note-id-label"
         id="rek-sensitive-handling-note-id-label"
@@ -431,7 +431,7 @@ exports[`FieldGridItem should render default view for a composed field 1`] = `
         Sensitive Handling Note
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       >
         <div
           aria-expanded="false"
@@ -543,7 +543,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
           >
             <button
               aria-label="Add editor"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
               data-mui-internal-clone-element="true"
               data-testid="rek-contributor-add-editor"
               id="rek-contributor-add-editor"
@@ -633,7 +633,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                           >
                             <svg
                               aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                               data-testid="PeopleIcon"
                               focusable="false"
                               viewBox="0 0 24 24"
@@ -647,7 +647,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                           >
                             <span
-                              class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                             >
                               Editor's name as published
                             </span>
@@ -708,7 +708,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                         class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                         >
                           UQ identifiers
                         </span>
@@ -1200,7 +1200,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-13kfccc-MuiTiptap-RichTextContent-root"
+          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
         >
           <div
             class="tiptap ProseMirror"

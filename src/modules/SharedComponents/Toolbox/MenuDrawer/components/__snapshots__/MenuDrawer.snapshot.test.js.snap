@@ -44,7 +44,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
           >
             <button
               aria-label="close"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-grb5j8-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
             >
@@ -139,7 +139,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
         tabindex="-1"
       />
       <div
-        class="MuiBox-root css-n5zwdn"
+        class="MuiBox-root css-i37fop"
       >
         CRICOS Provider No: 
         <a

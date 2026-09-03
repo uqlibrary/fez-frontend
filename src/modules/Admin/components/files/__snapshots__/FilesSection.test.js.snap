@@ -689,7 +689,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-13kfccc-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -765,7 +765,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-sensitive-handling-note-id-label"
                   id="rek-sensitive-handling-note-id-label"
@@ -773,7 +773,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   Sensitive Handling Note
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
@@ -892,7 +892,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-1pdno6g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-15u1gxo-MuiTypography-root"
                   data-testid="rek-copyright-label"
                   id="rek-copyright-label"
                 >
@@ -1616,7 +1616,7 @@ exports[`FilesSection component should render default view for Files on a public
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-13kfccc-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -1692,7 +1692,7 @@ exports[`FilesSection component should render default view for Files on a public
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-sensitive-handling-note-id-label"
                   id="rek-sensitive-handling-note-id-label"
@@ -1700,7 +1700,7 @@ exports[`FilesSection component should render default view for Files on a public
                   Sensitive Handling Note
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
@@ -1819,7 +1819,7 @@ exports[`FilesSection component should render default view for Files on a public
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-1pdno6g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-15u1gxo-MuiTypography-root"
                   data-testid="rek-copyright-label"
                   id="rek-copyright-label"
                 >

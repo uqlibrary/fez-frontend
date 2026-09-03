@@ -131,7 +131,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-19q8l9l-MuiGrid-root"
           data-analyticsid="alert-error"
           data-testid="alert-error"
           id="alert-error"
@@ -159,7 +159,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Error - 
@@ -382,7 +382,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
                               data-analyticsid="publication-action-UQ1-primary"
                               data-testid="publication-action-UQ1-primary"
                               tabindex="0"
@@ -395,7 +395,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ1-secondary"
                               tabindex="0"
                               type="button"
@@ -504,7 +504,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
                               data-analyticsid="publication-action-UQ2-primary"
                               data-testid="publication-action-UQ2-primary"
                               tabindex="0"
@@ -517,7 +517,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ2-secondary"
                               tabindex="0"
                               type="button"
@@ -626,7 +626,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
                               data-analyticsid="publication-action-UQ3-primary"
                               data-testid="publication-action-UQ3-primary"
                               tabindex="0"
@@ -639,7 +639,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ3-secondary"
                               tabindex="0"
                               type="button"
