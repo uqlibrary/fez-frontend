@@ -4,7 +4,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MicIcon from '@mui/icons-material/Mic';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { PropTypes } from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 export const id = 'journal-search-keywords-voice-record';
 export const VoiceToText = ({ sendHandler }) => {
@@ -29,7 +29,7 @@ export const VoiceToText = ({ sendHandler }) => {
     return (
         <Grid container spacing={0} style={{ marginRight: -10 }} id={id} data-testid={id}>
             {!listening && (
-                <Grid item xs={'auto'}>
+                <Grid size="auto">
                     <Tooltip title={'Use your microphone to search'} id={`${id}-tooltip`} data-testid={`${id}-tooltip`}>
                         <IconButton
                             onClick={SpeechRecognition.startListening}
@@ -44,7 +44,7 @@ export const VoiceToText = ({ sendHandler }) => {
                 </Grid>
             )}
             {listening && (
-                <Grid item xs={'auto'}>
+                <Grid size="auto">
                     <Tooltip title={'Stop recording'} id={`${id}-voice-stop`} data-testid={`${id}-voice-stop`}>
                         <IconButton
                             onClick={sendTranscript}

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { UqIdField } from 'modules/SharedComponents/LookupFields';
@@ -70,11 +70,11 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
     return (
         <form data-testid="change-author-id-form" id="change-author-id-form">
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.alert} />
                 </Grid>
                 {searchAuthorBy === SEARCH_BY_AUTHOR_NAME && !!searchAuthorByName && !!authorNameNoMatchCount && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             alertId="alert-warning-change-author-id"
                             {...txt.changeAuthorIdForm.warningAlert}
@@ -84,7 +84,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         />
                     </Grid>
                 )}
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Field
                         control={control}
                         component={NewGenericSelectField}
@@ -99,7 +99,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                     />
                 </Grid>
                 {searchAuthorBy === SEARCH_BY_AUTHOR_NAME && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Field
                             control={control}
                             component={GenericTextField}
@@ -114,7 +114,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                     </Grid>
                 )}
                 {searchAuthorBy === SEARCH_BY_AUTHOR_ID && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Field
                             control={control}
                             component={UqIdField}
@@ -132,7 +132,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         />
                     </Grid>
                 )}
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Field
                         control={control}
                         component={UqIdField}
@@ -149,7 +149,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         onClear={handleClear('rek_author_id')}
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.changeAuthorIdForm.formLabels.cancelButtonLabel}
                         children={txt.changeAuthorIdForm.formLabels.cancelButtonLabel}
@@ -162,7 +162,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.changeAuthorIdForm.formLabels.submitButtonLabel}
                         children={txt.changeAuthorIdForm.formLabels.submitButtonLabel}
@@ -176,7 +176,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {isSubmitting && (
                         <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.submittingAlert} />
                     )}

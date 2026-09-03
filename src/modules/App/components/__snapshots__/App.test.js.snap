@@ -3,7 +3,7 @@
 exports[`Application component Should display mobile correctly 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -13,21 +13,21 @@ exports[`Application component Should display mobile correctly 1`] = `
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             style="padding-left: 284px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-10ubrsp-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-1smtakq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-aosuxw-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -52,16 +52,16 @@ exports[`Application component Should display mobile correctly 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-b5cenf-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -76,7 +76,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -128,7 +128,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             </form>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <div
               class="auth-button-wrapper"
@@ -172,10 +172,10 @@ exports[`Application component Should display mobile correctly 1`] = `
           tabindex="-1"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1qnqg4l-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-isl6k7-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-12 css-gc29ga-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1hbyh4q-MuiGrid-root"
             >
               <a
                 class="noHover css-1oqhn84"
@@ -197,7 +197,7 @@ exports[`Application component Should display mobile correctly 1`] = `
               </a>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 css-123wywt-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-1q71y3e-MuiGrid-root"
             >
               <button
                 aria-label="Close menu"
@@ -453,30 +453,30 @@ exports[`Application component Should display mobile correctly 1`] = `
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-1qimuh2-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-mg25pn-MuiGrid-root"
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-fflnia-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-10fhdhm-MuiGrid-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
               data-analyticsid="login"
               data-testid="login"
               id="login"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-j1d1nm-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -492,7 +492,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                   >
                     <b>
                       You are not logged in - 
@@ -506,7 +506,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-auto css-m0iw5t-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
                   class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
@@ -524,40 +524,40 @@ exports[`Application component Should display mobile correctly 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -582,7 +582,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -593,24 +593,24 @@ exports[`Application component Should display mobile correctly 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -650,7 +650,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -693,7 +693,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -733,7 +733,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -803,7 +803,7 @@ exports[`Application component redirects user to login if going to a secure file
 exports[`Application component should render alert if user is not fez author 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -813,10 +813,10 @@ exports[`Application component should render alert if user is not fez author 1`]
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
               aria-label="Click to open the main navigation"
@@ -843,14 +843,14 @@ exports[`Application component should render alert if user is not fez author 1`]
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-10ubrsp-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-gc7fn-MuiGrid-root"
               >
                 <div
                   class="smallLogo"
@@ -861,7 +861,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -890,16 +890,16 @@ exports[`Application component should render alert if user is not fez author 1`]
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-b5cenf-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -914,7 +914,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -966,7 +966,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             </form>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <div
               class="auth-button-wrapper"
@@ -1034,30 +1034,30 @@ exports[`Application component should render alert if user is not fez author 1`]
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-1qimuh2-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-mg25pn-MuiGrid-root"
         style="margin-bottom: 12px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-fflnia-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-10fhdhm-MuiGrid-root"
         >
           <div
             data-testid="alert"
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
               data-analyticsid="not-registered-author"
               data-testid="not-registered-author"
               id="not-registered-author"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -1073,7 +1073,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                     </svg>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
                   >
                     <b>
                       You are not registered in UQ eSpace as an author - 
@@ -1098,40 +1098,40 @@ exports[`Application component should render alert if user is not fez author 1`]
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -1156,7 +1156,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -1167,24 +1167,24 @@ exports[`Application component should render alert if user is not fez author 1`]
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1224,7 +1224,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1267,7 +1267,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1307,7 +1307,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1371,7 +1371,7 @@ exports[`Application component should render alert if user is not fez author 1`]
 exports[`Application component should render app for HDR with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -1381,10 +1381,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
               aria-label="Click to open the main navigation"
@@ -1411,14 +1411,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-10ubrsp-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-gc7fn-MuiGrid-root"
               >
                 <div
                   class="smallLogo"
@@ -1429,7 +1429,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -1458,16 +1458,16 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-b5cenf-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1482,7 +1482,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1534,7 +1534,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             </form>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <div
               class="auth-button-wrapper"
@@ -1602,40 +1602,40 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -1660,7 +1660,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -1671,24 +1671,24 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1728,7 +1728,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1771,7 +1771,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1811,7 +1811,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1875,7 +1875,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
 exports[`Application component should render app for account with fez author with ORCID ID 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -1885,10 +1885,10 @@ exports[`Application component should render app for account with fez author wit
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
               aria-label="Click to open the main navigation"
@@ -1915,14 +1915,14 @@ exports[`Application component should render app for account with fez author wit
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-10ubrsp-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-gc7fn-MuiGrid-root"
               >
                 <div
                   class="smallLogo"
@@ -1933,7 +1933,7 @@ exports[`Application component should render app for account with fez author wit
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -1962,16 +1962,16 @@ exports[`Application component should render app for account with fez author wit
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-b5cenf-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -1986,7 +1986,7 @@ exports[`Application component should render app for account with fez author wit
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2038,7 +2038,7 @@ exports[`Application component should render app for account with fez author wit
             </form>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <div
               class="auth-button-wrapper"
@@ -2106,40 +2106,40 @@ exports[`Application component should render app for account with fez author wit
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -2164,7 +2164,7 @@ exports[`Application component should render app for account with fez author wit
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -2175,24 +2175,24 @@ exports[`Application component should render app for account with fez author wit
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -2232,7 +2232,7 @@ exports[`Application component should render app for account with fez author wit
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -2275,7 +2275,7 @@ exports[`Application component should render app for account with fez author wit
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -2315,7 +2315,7 @@ exports[`Application component should render app for account with fez author wit
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -2379,7 +2379,7 @@ exports[`Application component should render app for account with fez author wit
 exports[`Application component should render application with routing for the user and display loading screen while loading author 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -2389,10 +2389,10 @@ exports[`Application component should render application with routing for the us
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
               aria-label="Click to open the main navigation"
@@ -2419,14 +2419,14 @@ exports[`Application component should render application with routing for the us
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-10ubrsp-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-gc7fn-MuiGrid-root"
               >
                 <div
                   class="smallLogo"
@@ -2437,7 +2437,7 @@ exports[`Application component should render application with routing for the us
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -2466,16 +2466,16 @@ exports[`Application component should render application with routing for the us
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-b5cenf-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -2490,7 +2490,7 @@ exports[`Application component should render application with routing for the us
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2542,7 +2542,7 @@ exports[`Application component should render application with routing for the us
             </form>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <div
               class="auth-button-wrapper"
@@ -2613,13 +2613,13 @@ exports[`Application component should render application with routing for the us
         style="padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
             style="text-align: center;"
           >
             <span
@@ -2644,7 +2644,7 @@ exports[`Application component should render application with routing for the us
             </span>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
             style="text-align: center;"
           >
             <span
@@ -2655,7 +2655,7 @@ exports[`Application component should render application with routing for the us
             </span>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
           />
         </div>
       </div>
@@ -2670,7 +2670,7 @@ exports[`Application component should render application with routing for the us
 exports[`Application component should render for anon user 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
@@ -2680,10 +2680,10 @@ exports[`Application component should render for anon user 1`] = `
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g7rp8r-MuiToolbar-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-14ffgos-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-18aqrr7-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
               aria-label="Click to open the main navigation"
@@ -2710,14 +2710,14 @@ exports[`Application component should render for anon user 1`] = `
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             style="padding-left: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 MuiGridLegacy-wrap-xs-nowrap css-1r3rcmk-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-10ubrsp-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-dr85pc-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-gc7fn-MuiGrid-root"
               >
                 <div
                   class="smallLogo"
@@ -2728,7 +2728,7 @@ exports[`Application component should render for anon user 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
@@ -2757,16 +2757,16 @@ exports[`Application component should render for anon user 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-4 css-znka4g-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
               style="margin: 8px;"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-910rr7-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-b5cenf-MuiGrid-root"
                 >
                   <svg
                     aria-hidden="true"
@@ -2781,7 +2781,7 @@ exports[`Application component should render for anon user 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2833,7 +2833,7 @@ exports[`Application component should render for anon user 1`] = `
             </form>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <div
               class="auth-button-wrapper"
@@ -2901,40 +2901,40 @@ exports[`Application component should render for anon user 1`] = `
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                 >
                   <div
                     style="padding: 8px;"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -2959,7 +2959,7 @@ exports[`Application component should render for anon user 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                         style="text-align: center;"
                       >
                         <span
@@ -2970,24 +2970,24 @@ exports[`Application component should render for anon user 1`] = `
                         </span>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 />
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -3027,7 +3027,7 @@ exports[`Application component should render for anon user 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -3070,7 +3070,7 @@ exports[`Application component should render for anon user 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -3110,7 +3110,7 @@ exports[`Application component should render for anon user 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -3174,16 +3174,16 @@ exports[`Application component should render for anon user 1`] = `
 exports[`Application component should render loading screen while account is loading 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-3v7gdf-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-kb9ca6-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-12 css-81rso6-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-1502633-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-1tn8p30-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-8spuev-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
         >
           <span
             class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jb97hd-MuiCircularProgress-root"
@@ -3206,7 +3206,7 @@ exports[`Application component should render loading screen while account is loa
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
         >
           <div
             alt="The University of Queensland"
@@ -3214,7 +3214,7 @@ exports[`Application component should render loading screen while account is loa
           />
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
         >
           <h6
             class="MuiTypography-root MuiTypography-h6 css-12tzrfb-MuiTypography-root"

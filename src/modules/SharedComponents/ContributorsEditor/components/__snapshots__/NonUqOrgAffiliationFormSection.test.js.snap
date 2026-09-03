@@ -3,10 +3,10 @@
 exports[`NonUqOrgAffiliationFormSection tests  should render component with both values 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -43,7 +43,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -109,10 +109,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
 exports[`NonUqOrgAffiliationFormSection tests  should render component with defaults 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -149,7 +149,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -220,10 +220,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
 exports[`NonUqOrgAffiliationFormSection tests  should render component with organisation affiliation type value 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -260,7 +260,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -326,10 +326,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
 exports[`NonUqOrgAffiliationFormSection tests  should render component with organisation affiliation value 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -366,7 +366,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 MuiGridLegacy-grid-sm-6 css-klsmha-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 css-150lvos-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -437,10 +437,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
 exports[`NonUqOrgAffiliationFormSection tests  should render full width input fields 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -477,7 +477,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 css-b2h8ea-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"

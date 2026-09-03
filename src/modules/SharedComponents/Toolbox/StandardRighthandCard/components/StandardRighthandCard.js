@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { HelpIcon } from '../../HelpDrawer';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
 export const StandardRighthandCard = ({ children, title, testId, help }) => {
     return (
         <Grid container {...(testId ? { 'data-testid': testId } : {})}>
-            <Grid item xs sx={{ minWidth: '1px' }}>
+            <Grid size="grow" sx={{ minWidth: '1px' }}>
                 {title && (
                     <Typography
                         variant={'h6'}
@@ -21,16 +21,14 @@ export const StandardRighthandCard = ({ children, title, testId, help }) => {
                 )}
             </Grid>
             {help && help.text && (
-                <Grid item sx={{ marginTop: '-8px' }}>
+                <Grid sx={{ marginTop: '-8px' }}>
                     <HelpIcon {...help} />
                 </Grid>
             )}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <Divider sx={{ marginTop: '6px', marginBottom: '12px' }} />
             </Grid>
-            <Grid item xs={12}>
-                {children}
-            </Grid>
+            <Grid size={12}>{children}</Grid>
         </Grid>
     );
 };

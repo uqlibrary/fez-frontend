@@ -10,7 +10,7 @@ import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export const GenericDocumentForm = ({ control, isSubmitting }) => {
@@ -18,10 +18,10 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
     const txt = formLocale.generic;
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -37,7 +37,7 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -49,7 +49,7 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -61,7 +61,7 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -76,7 +76,7 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
                                 floatingTitleRequired
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -92,7 +92,7 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
@@ -112,10 +112,10 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -128,7 +128,7 @@ export const GenericDocumentForm = ({ control, isSubmitting }) => {
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

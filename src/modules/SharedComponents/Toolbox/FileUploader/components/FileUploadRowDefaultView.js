@@ -8,7 +8,7 @@ import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_P
 import { selectFields } from 'locale/selectFields';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
@@ -49,12 +49,12 @@ export const FileUploadRowDefaultView = ({
             }}
         >
             <Grid container direction="row" alignItems="center" spacing={1}>
-                <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
+                <Grid size={{ md: !requireOpenAccessStatus ? 8 : 3, sm: !requireOpenAccessStatus ? 8 : 2 }}>
                     <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                         {name} ({size})
                     </Typography>
                 </Grid>
-                <Grid item sm={3} md={3}>
+                <Grid size={{ sm: 3, md: 3 }}>
                     <TextField
                         fullWidth
                         onChange={onFileDescriptionChange}
@@ -69,7 +69,7 @@ export const FileUploadRowDefaultView = ({
                     />
                 </Grid>
                 {!!isAdmin && requireOpenAccessStatus && (
-                    <Grid item md={3} sm={4}>
+                    <Grid size={{ sm: 4, md: 3 }}>
                         <PolicyDropdown
                             fieldName={name}
                             hideLabel
@@ -96,7 +96,7 @@ export const FileUploadRowDefaultView = ({
                     </Grid>
                 )}
                 {!!!isAdmin && requireOpenAccessStatus && (
-                    <Grid item md={3} sm={3}>
+                    <Grid size={{ sm: 3, md: 3 }}>
                         <NewGenericSelectField
                             value={accessConditionId || ''}
                             onChange={onAccessConditionChange}
@@ -131,7 +131,7 @@ export const FileUploadRowDefaultView = ({
                     </Grid>
                 )}
                 {requireOpenAccessStatus && (
-                    <Grid item sm={2}>
+                    <Grid size={{ sm: 2 }}>
                         {((isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||
                             (!isAdmin && accessConditionId !== FILE_ACCESS_CONDITION_OPEN)) && (
                             <Typography
@@ -155,7 +155,7 @@ export const FileUploadRowDefaultView = ({
                         )}
                     </Grid>
                 )}
-                <Grid item xs={1} sx={{ textAlign: 'center' }}>
+                <Grid size={{ xs: 1 }} sx={{ textAlign: 'center' }}>
                     <FileUploadRowStatus
                         disabled={disabled}
                         onDelete={onDelete}

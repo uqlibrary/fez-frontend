@@ -7,7 +7,7 @@ import { OrcidSyncContext } from 'context';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import {
     AuthorsPublicationsPerYearChart,
@@ -209,7 +209,7 @@ const Dashboard = ({
     };
 
     const renderAuthorProfile = () => (
-        <Grid item xs={12}>
+        <Grid size={12}>
             <OrcidSyncContext.Provider
                 value={{
                     orcidSyncProps: {
@@ -368,17 +368,17 @@ const Dashboard = ({
             <Grid container spacing={3}>
                 {loading && (
                     <React.Fragment>
-                        <Grid item xs />
-                        <Grid item>
+                        <Grid size="grow" />
+                        <Grid>
                             <InlineLoader message={txt.loading} />
                         </Grid>
-                        <Grid item xs />
+                        <Grid size="grow" />
                     </React.Fragment>
                 )}
                 {!loading && authorDetails && (
                     <React.Fragment>
                         {showOaComplianceAlert && (
-                            <Grid item xs={12} style={{ marginTop: -27 }}>
+                            <Grid size={12} style={{ marginTop: -27 }}>
                                 <Alert
                                     title={txt.oacomplianceRecordLure.title}
                                     message={txt.oacomplianceRecordLure.message.replace(
@@ -399,7 +399,7 @@ const Dashboard = ({
                             !incomplete.loadingPublicationsList &&
                             incomplete.publicationsListPagingData &&
                             incomplete.publicationsListPagingData.total > 0 && (
-                                <Grid item xs={12} style={{ marginTop: -27 }}>
+                                <Grid size={12} style={{ marginTop: -27 }}>
                                     <Alert
                                         title={txt.incompleteRecordLure.title}
                                         message={txt.incompleteRecordLure.message
@@ -414,7 +414,7 @@ const Dashboard = ({
                             )}
                         {renderAuthorProfile()}
                         {showCreativeWorkOaAlert && (
-                            <Grid item xs={12} style={{ marginTop: -27 }}>
+                            <Grid size={12} style={{ marginTop: -27 }}>
                                 <Alert
                                     title={txt.oacomplianceCreativeWorkRecordLure.title}
                                     message={txt.oacomplianceCreativeWorkRecordLure.message}
@@ -429,7 +429,7 @@ const Dashboard = ({
                         {!hidePossiblyYourPublicationsLure &&
                         !possiblyYourPublicationsCountLoading &&
                         possiblyYourPublicationsCount > 0 ? (
-                            <Grid item xs={12} style={{ marginTop: -27 }}>
+                            <Grid size={12} style={{ marginTop: -27 }}>
                                 <Alert
                                     title={txt.possiblePublicationsLure.title}
                                     message={txt.possiblePublicationsLure.message.replace(
@@ -447,7 +447,7 @@ const Dashboard = ({
                             !possiblyYourPublicationsCountLoading &&
                             !hidePossiblyYourPublicationsLure &&
                             !possiblyYourPublicationsCount && (
-                                <Grid item xs={12} style={{ marginTop: -27 }}>
+                                <Grid size={12} style={{ marginTop: -27 }}>
                                     <Alert {...txt.nothingToClaimLure} action={_addPublication} />
                                 </Grid>
                             )
@@ -458,7 +458,7 @@ const Dashboard = ({
                 {author?.aut_orcid_id &&
                     String(author?.aut_is_orcid_sync_enabled) !== '1' &&
                     !hideTurnOnOrcidSyncReminder && (
-                        <Grid item xs={12} style={{ marginTop: -27 }}>
+                        <Grid size={12} style={{ marginTop: -27 }}>
                             <Alert
                                 title={txt.enableOrcidSyncLure.title}
                                 message={txt.enableOrcidSyncLure.message}
@@ -473,40 +473,26 @@ const Dashboard = ({
                     )}
                 {/* render charts/stats depending on availability of data */}
                 {barChart && (publicationStats || (!donutChart && !publicationStats)) && (
-                    <Grid item xs={12}>
-                        {barChart}
-                    </Grid>
+                    <Grid size={12}>{barChart}</Grid>
                 )}
                 {/* render publication stats full width if donut chart not available */}
-                {publicationStats && !donutChart && (
-                    <Grid item xs={12}>
-                        {publicationStats}
-                    </Grid>
-                )}
+                {publicationStats && !donutChart && <Grid size={12}>{publicationStats}</Grid>}
                 {/* render bar chart next to donut chart if publication stats not available */}
                 {barChart && donutChart && !publicationStats && (
                     <React.Fragment>
-                        <Grid item xs={12} sm={8}>
-                            {barChart}
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
-                            {donutChart}
-                        </Grid>
+                        <Grid size={{ xs: 12, sm: 8 }}>{barChart}</Grid>
+                        <Grid size={{ xs: 12, sm: 4 }}>{donutChart}</Grid>
                     </React.Fragment>
                 )}
                 {/* render donut chart next to publication stats if both available */}
                 {donutChart && publicationStats && (
                     <React.Fragment>
-                        <Grid item xs={12} sm={4}>
-                            {donutChart}
-                        </Grid>
-                        <Grid item xs={12} sm={8}>
-                            {publicationStats}
-                        </Grid>
+                        <Grid size={{ xs: 12, sm: 4 }}>{donutChart}</Grid>
+                        <Grid size={{ xs: 12, sm: 8 }}>{publicationStats}</Grid>
                     </React.Fragment>
                 )}
                 {!loading && userHasPublications && (showLatestPublicationsTab || showTrendingPublicationsTab) && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <StandardCard noHeader>
                             <StyledTabs
                                 value={dashboardPubsTabs}
@@ -525,12 +511,12 @@ const Dashboard = ({
                             </StyledTabs>
                             <Grid container spacing={3} style={{ marginTop: 24 }}>
                                 {showLatestPublicationsTab && (
-                                    <Grid item xs={12} style={dashboardPubsTabs !== 1 ? { display: 'none' } : {}}>
+                                    <Grid size={12} style={dashboardPubsTabs !== 1 ? { display: 'none' } : {}}>
                                         <MyLatestPublications isAdmin={!!isAdmin} />
                                     </Grid>
                                 )}
                                 {showTrendingPublicationsTab && (
-                                    <Grid item xs={12} style={dashboardPubsTabs !== 2 ? { display: 'none' } : {}}>
+                                    <Grid size={12} style={dashboardPubsTabs !== 2 ? { display: 'none' } : {}}>
                                         <MyTrendingPublications />
                                     </Grid>
                                 )}

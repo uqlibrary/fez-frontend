@@ -6,7 +6,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -404,7 +404,7 @@ export const exportReportFilters = {
             const hasDependantBinding = !!state.report?.sel_bindings?.includes(':date_to');
 
             return (
-                <Grid item xs={12} sm={4} key={`${id}-date-from`}>
+                <Grid size={{ xs: 12, sm: 4 }} key={`${id}-date-from`}>
                     <Box data-testid={`${id}-date-from`}>
                         <DatePicker
                             label={locale.label.dateFrom}
@@ -506,7 +506,7 @@ export const exportReportFilters = {
             const hasBinding = !!state.report?.sel_bindings?.includes(':date_to');
             const exportReport = state.report || defaultLegacyReportOption;
             return (
-                <Grid item xs={12} sm={4} key={`${id}-date-to`}>
+                <Grid size={{ xs: 12, sm: 4 }} key={`${id}-date-to`}>
                     <Box data-testid={`${id}-date-to`}>
                         <DatePicker
                             label={locale.label.dateTo}

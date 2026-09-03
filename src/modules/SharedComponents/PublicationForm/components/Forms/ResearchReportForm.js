@@ -18,7 +18,7 @@ import {
     NTRO_SUBTYPE_RREB_OTHER,
     NTRO_RESEARCH_REPORT_SUBTYPES,
 } from 'config/general';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
 import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
@@ -36,7 +36,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
         <>
             {showCommissionedConfirmation && (
                 <Grid container spacing={3}>
-                    <Grid item xs={12} sx={{ mx: 2, mt: -1, mb: 2 }}>
+                    <Grid size={12} sx={{ mx: 2, mt: -1, mb: 2 }}>
                         <CommissionedResearchReportField
                             control={control}
                             disabled={isSubmitting}
@@ -46,10 +46,10 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                 </Grid>
             )}
             <Grid container spacing={3}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={txt.information.title} help={txt.information.help}>
                         <Grid container spacing={2}>
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -66,7 +66,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                 />
                             </Grid>
 
-                            <Grid item xs={12} sm={4}>
+                            <Grid size={{ xs: 12, sm: 4 }}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -83,7 +83,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     }
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4}>
+                            <Grid size={{ xs: 12, sm: 4 }}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -100,7 +100,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     }
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={4}>
+                            <Grid size={{ xs: 12, sm: 4 }}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -112,7 +112,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     validate={[validation.maxLength255Validator]}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid size={{ xs: 12, sm: 6 }}>
                                 <Field
                                     control={control}
                                     component={OrgUnitNameField}
@@ -123,7 +123,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                 />
                             </Grid>
                             {!isNtro && (
-                                <Grid item xs={12} sm={4}>
+                                <Grid size={{ xs: 12, sm: 4 }}>
                                     <Field
                                         control={control}
                                         component={TextField}
@@ -138,7 +138,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     />
                                 </Grid>
                             )}
-                            <Grid item xs={12} sm={isNtro ? 6 : 4}>
+                            <Grid size={{ xs: 12, sm: isNtro ? 6 : 4 }}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -150,7 +150,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     {...txt.information.fieldLabels.doi}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={isNtro ? 6 : 4}>
+                            <Grid size={{ xs: 12, sm: isNtro ? 6 : 4 }}>
                                 <Field
                                     control={control}
                                     component={PartialDateField}
@@ -166,7 +166,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                 />
                             </Grid>
                             {!isNtro && (
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Field
                                         control={control}
                                         component={SeriesField}
@@ -180,7 +180,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                         </Grid>
                     </StandardCard>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
                         <Typography>{txt.authors.description}</Typography>
                         <Field
@@ -202,7 +202,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                     </StandardCard>
                 </Grid>
                 {isNtro && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <NtroFields
                             control={control}
                             canEdit
@@ -221,7 +221,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                         />
                     </Grid>
                 )}
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>
                         <Field
@@ -238,7 +238,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                         />
                     </StandardCard>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                         <Typography>{locale.components.issnForm.text}</Typography>
                         <Field
@@ -256,11 +256,11 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                         />
                     </StandardCard>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={txt.other.title} help={txt.other.help}>
                         <Grid container spacing={2}>
                             {!isNtro && (
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Field
                                         control={control}
                                         component={TextField}
@@ -274,7 +274,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     />
                                 </Grid>
                             )}
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -286,7 +286,7 @@ export const ResearchReportForm = ({ isSubmitting, isNtro, isAuthorSelected, con
                                     {...txt.other.fieldLabels.notes}
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Field
                                     control={control}
                                     component={TextField}

@@ -84,12 +84,12 @@ exports[`AttachedFilesField component should render default view when files prov
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-3835508"
                 id="file-name-3835508"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
@@ -251,12 +251,12 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-3835508"
                 id="file-name-3835508"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"

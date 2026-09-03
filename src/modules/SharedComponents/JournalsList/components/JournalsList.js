@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 
 // import Collapse from '@mui/material/Collapse';
@@ -20,7 +20,7 @@ const JournalsList = ({
 }) => {
     return (
         <Grid container spacing={0} id="journal-list" data-testid="journal-list">
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <TableContainer component={Paper} sx={{ boxShadow: 'none' }}>
                     <Table
                         aria-label="collapsible table"

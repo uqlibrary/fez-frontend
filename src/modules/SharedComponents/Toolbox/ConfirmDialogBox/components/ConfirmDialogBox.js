@@ -6,7 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 export const createConfirmDialogBoxRefAssigner = refObject => ref => {
@@ -99,10 +99,10 @@ export class ConfirmDialogBox extends Component {
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
-                        <Grid container spacing={1}>
-                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                        <Grid container spacing={1} sx={{ width: '100%' }}>
+                            <Grid size="grow" sx={{ display: { xs: 'none', sm: 'block' } }} />
 
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     children={this.props.locale.confirmButtonLabel}
                                     autoFocus
@@ -115,7 +115,7 @@ export class ConfirmDialogBox extends Component {
                             </Grid>
                             {this.props.showAlternateActionButton && (
                                 // an optional middle button that will display in a warning colour
-                                <Grid item xs={12} sm={'auto'}>
+                                <Grid size={{ xs: 12, sm: 'auto' }}>
                                     <Button
                                         variant={'contained'}
                                         data-analyticsid={`alternate-${this.props.confirmDialogBoxId}`}
@@ -134,7 +134,7 @@ export class ConfirmDialogBox extends Component {
                                 </Grid>
                             )}
                             {!this.props.hideCancelButton && (
-                                <Grid item xs={12} sm={'auto'}>
+                                <Grid size={{ xs: 12, sm: 'auto' }}>
                                     <Button
                                         variant={'contained'}
                                         color={'primary'}

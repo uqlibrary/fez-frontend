@@ -3,40 +3,40 @@
 exports[`Index page should render placeholders 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             />
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               <div
                 style="padding: 8px;"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                   />
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                     style="text-align: center;"
                   >
                     <span
@@ -61,7 +61,7 @@ exports[`Index page should render placeholders 1`] = `
                     </span>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                     style="text-align: center;"
                   >
                     <span
@@ -72,24 +72,24 @@ exports[`Index page should render placeholders 1`] = `
                     </span>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             />
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -129,7 +129,7 @@ exports[`Index page should render placeholders 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -172,7 +172,7 @@ exports[`Index page should render placeholders 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -212,7 +212,7 @@ exports[`Index page should render placeholders 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"

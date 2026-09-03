@@ -5,7 +5,7 @@ import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useNavigate } from 'react-router';
 import { useFormContext } from 'react-hook-form';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -74,10 +74,10 @@ export const AddSection = ({ onCreate, disabled = false }) => {
         <form>
             <StandardPage title={locale.pages.adminAdd.title}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={locale.pages.adminAdd.step1} help={locale.pages.adminAdd.help}>
                             <Grid container spacing={3}>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Field
                                         name="adminSection.collections"
                                         collectionFieldId="rek-ismemberof"
@@ -100,7 +100,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                             : {})}
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Field
                                         name="rek_display_type"
                                         selectFieldId="rek-display-type"
@@ -122,9 +122,9 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                         {publicationTypeItems}
                                     </Field>
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     {(hasSubtypes || hasDefaultDocTypeSubType) && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 id="rek-subtype"
                                                 name="adminSection.rek_subtype"
@@ -150,10 +150,10 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                         </Grid>
                                     )}
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Grid container spacing={1}>
-                                        <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
-                                        <Grid item xs={12} sm={'auto'}>
+                                        <Grid size="grow" sx={{ display: { xs: 'none', sm: 'block' } }} />
+                                        <Grid size={{ xs: 12, sm: 'auto' }}>
                                             <Button
                                                 id="cancel-work"
                                                 data-analyticsid="cancel-work"
@@ -165,7 +165,7 @@ export const AddSection = ({ onCreate, disabled = false }) => {
                                                 onClick={handleCancel}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={'auto'}>
+                                        <Grid size={{ xs: 12, sm: 'auto' }}>
                                             <Button
                                                 id="submit-work"
                                                 data-analyticsid="submit-work"

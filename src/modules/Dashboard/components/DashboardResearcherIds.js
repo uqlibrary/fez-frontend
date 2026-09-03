@@ -8,7 +8,7 @@ import DashboardOrcidSync from '../containers/DashboardOrcidSync';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
 import { getOrcidURL } from 'helpers/general';
@@ -76,7 +76,7 @@ export const renderButton = args => {
     const internalIconClassName = `fez-icon ${item} dashboard ${authenticated[item] ? 'ok' : 'error'}`;
 
     return (
-        <Grid item key={index}>
+        <Grid key={index}>
             {/* external URLs */}
             <OrcidSyncContext.Consumer>
                 {({ orcidSyncProps }) =>
@@ -133,7 +133,7 @@ const DashboardResearcherIds = props => {
                 })}
 
             {props.values.orcid && (
-                <Grid item>
+                <Grid>
                     <a
                         href={getOrcidURL(props.values.orcid)}
                         id={'orcid'}

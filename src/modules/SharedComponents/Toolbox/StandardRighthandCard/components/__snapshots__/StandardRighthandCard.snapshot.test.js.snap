@@ -3,10 +3,10 @@
 exports[`Snapshot tests for StandardRighthandCard component renders with title and help button 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
         class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
@@ -15,7 +15,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-1g0dg8r-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-i283p7-MuiGrid-root"
     >
       <button
         aria-label="Click for more information"
@@ -44,14 +44,14 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       </button>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <hr
         class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
       />
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
   </div>
 </div>
@@ -60,10 +60,10 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
 exports[`Snapshot tests for StandardRighthandCard component renders with title and help button and some content 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
         class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
@@ -72,7 +72,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-1g0dg8r-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-i283p7-MuiGrid-root"
     >
       <button
         aria-label="Click for more information"
@@ -101,14 +101,14 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       </button>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <hr
         class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
       />
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       Some content
     </div>
@@ -119,10 +119,10 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
 exports[`Snapshot tests for StandardRighthandCard component renders with title and no help icon 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
         class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
@@ -131,14 +131,14 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <hr
         class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
       />
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
   </div>
 </div>
@@ -147,11 +147,11 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
 exports[`Snapshot tests for StandardRighthandCard component renders with title, help button, testid and some content 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     data-testid="testid"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
         class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
@@ -160,7 +160,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-1g0dg8r-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-i283p7-MuiGrid-root"
     >
       <button
         aria-label="Click for more information"
@@ -189,14 +189,14 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
       </button>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <hr
         class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
       />
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       Some content
     </div>

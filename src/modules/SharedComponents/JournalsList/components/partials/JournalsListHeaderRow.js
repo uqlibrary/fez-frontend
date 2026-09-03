@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
@@ -74,7 +74,7 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                 <StyledTableCell size="small" isSelectable={isSelectable}>
                     <Grid container>
                         {isSelectable && (
-                            <Grid item size="small" xs={6}>
+                            <Grid size={6}>
                                 <Checkbox
                                     id="journal-list-header-col-1-select-all"
                                     onChange={onChange}
@@ -104,8 +104,7 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                             return (
                                 <Grid
                                     key={`${header.key}_${index}`}
-                                    item
-                                    {...header.collapsibleComponent?.sizeHeader}
+                                    size={{ ...header.collapsibleComponent?.sizeHeader }}
                                     id={id}
                                     data-testid={id}
                                     sx={{

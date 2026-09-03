@@ -6,7 +6,7 @@ import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { useActiveFacetFilters, useJournalSearch } from '../hooks';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { isNumeric, sanitiseId } from 'helpers/general';
 
@@ -283,7 +283,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
                 </List>
                 {activeFacetsFilters && Object.keys(activeFacetsFilters).length > 0 && (
                     <Grid container justifyContent="flex-end">
-                        <Grid item>
+                        <Grid>
                             <Button
                                 variant="contained"
                                 arial-label="rest facet filters"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useJournalContext, useAccountContext } from 'context';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import pageLocale from 'locale/pages';
 import { adminUnlockJournal } from 'actions';
@@ -24,7 +24,7 @@ export const LockedAlert = () => {
 
     return (
         <Grid container style={{ marginTop: 12, marginBottom: 12 }}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <Alert
                     {...alert.current}
                     action={handleAction}

@@ -7,10 +7,10 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -20,12 +20,12 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -60,7 +60,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
@@ -131,11 +131,11 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -150,7 +150,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -168,10 +168,10 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -203,10 +203,10 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -219,7 +219,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-4 css-1tmlgzn-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-8rtno-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-y2splu-MuiListItemText-root"
@@ -232,7 +232,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -293,7 +293,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -313,7 +313,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -333,7 +333,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-5 css-65iimg-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-5 css-xt44ss-MuiGrid-root"
                 data-testid="test-list-row-0-uq-details"
                 id="test-list-row-0-uq-details"
               >
@@ -428,13 +428,13 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -480,10 +480,10 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -496,7 +496,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-4 css-1tmlgzn-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-8rtno-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-y2splu-MuiListItemText-root"
@@ -509,7 +509,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -570,7 +570,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -589,7 +589,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -678,7 +678,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -697,7 +697,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-1-name-as-published"
                 id="test-list-row-1-name-as-published"
               >
@@ -792,10 +792,10 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -805,12 +805,12 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -845,7 +845,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
@@ -897,11 +897,11 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -917,7 +917,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -936,10 +936,10 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -971,10 +971,10 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -987,7 +987,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-4 css-1tmlgzn-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-8rtno-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-y2splu-MuiListItemText-root"
@@ -1000,7 +1000,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -1061,7 +1061,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1080,7 +1080,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -1196,7 +1196,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1215,7 +1215,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-1-name-as-published"
                 id="test-list-row-1-name-as-published"
               >
@@ -1358,7 +1358,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1377,7 +1377,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-2-name-as-published"
                 id="test-list-row-2-name-as-published"
               >
@@ -1499,13 +1499,13 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -1551,10 +1551,10 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -1567,7 +1567,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -1628,7 +1628,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1647,7 +1647,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -1763,7 +1763,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -1782,7 +1782,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-1-name-as-published"
                 id="test-list-row-1-name-as-published"
               >
@@ -1904,13 +1904,13 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -1956,10 +1956,10 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -1972,7 +1972,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -2033,7 +2033,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2052,7 +2052,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -2141,7 +2141,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2160,7 +2160,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-1-name-as-published"
                 id="test-list-row-1-name-as-published"
               >
@@ -2255,13 +2255,13 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -2307,10 +2307,10 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -2323,7 +2323,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -2384,7 +2384,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2403,7 +2403,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -2492,7 +2492,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -2511,7 +2511,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-1-name-as-published"
                 id="test-list-row-1-name-as-published"
               >
@@ -2744,10 +2744,10 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                       class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item css-1apgbce-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
                         >
                           <svg
                             aria-hidden="true"
@@ -2762,7 +2762,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                           </svg>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                         >
                           <span
                             class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -2937,10 +2937,10 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -2950,12 +2950,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2990,7 +2990,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
@@ -3042,11 +3042,11 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -3062,7 +3062,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -3081,10 +3081,10 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -3116,10 +3116,10 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -3132,7 +3132,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -3193,7 +3193,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3212,7 +3212,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -3328,7 +3328,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3347,7 +3347,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-1-name-as-published"
                 id="test-list-row-1-name-as-published"
               >
@@ -3490,7 +3490,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3509,7 +3509,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-2-name-as-published"
                 id="test-list-row-2-name-as-published"
               >
@@ -3652,7 +3652,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3671,7 +3671,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-3-name-as-published"
                 id="test-list-row-3-name-as-published"
               >
@@ -3814,7 +3814,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3833,7 +3833,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-4-name-as-published"
                 id="test-list-row-4-name-as-published"
               >
@@ -3976,7 +3976,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -3995,7 +3995,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-5-name-as-published"
                 id="test-list-row-5-name-as-published"
               >
@@ -4138,7 +4138,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4157,7 +4157,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-6-name-as-published"
                 id="test-list-row-6-name-as-published"
               >
@@ -4300,7 +4300,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4319,7 +4319,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-7-name-as-published"
                 id="test-list-row-7-name-as-published"
               >
@@ -4462,7 +4462,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4481,7 +4481,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-8-name-as-published"
                 id="test-list-row-8-name-as-published"
               >
@@ -4624,7 +4624,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4643,7 +4643,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-9-name-as-published"
                 id="test-list-row-9-name-as-published"
               >
@@ -4786,7 +4786,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4805,7 +4805,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-10-name-as-published"
                 id="test-list-row-10-name-as-published"
               >
@@ -4948,7 +4948,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -4967,7 +4967,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-11-name-as-published"
                 id="test-list-row-11-name-as-published"
               >
@@ -5110,7 +5110,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5129,7 +5129,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-12-name-as-published"
                 id="test-list-row-12-name-as-published"
               >
@@ -5272,7 +5272,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5291,7 +5291,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-13-name-as-published"
                 id="test-list-row-13-name-as-published"
               >
@@ -5434,7 +5434,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5453,7 +5453,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-14-name-as-published"
                 id="test-list-row-14-name-as-published"
               >
@@ -5596,7 +5596,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5615,7 +5615,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-15-name-as-published"
                 id="test-list-row-15-name-as-published"
               >
@@ -5758,7 +5758,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5777,7 +5777,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-16-name-as-published"
                 id="test-list-row-16-name-as-published"
               >
@@ -5920,7 +5920,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -5939,7 +5939,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-17-name-as-published"
                 id="test-list-row-17-name-as-published"
               >
@@ -6082,7 +6082,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6101,7 +6101,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-18-name-as-published"
                 id="test-list-row-18-name-as-published"
               >
@@ -6244,7 +6244,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6263,7 +6263,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-19-name-as-published"
                 id="test-list-row-19-name-as-published"
               >
@@ -6406,7 +6406,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6425,7 +6425,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-20-name-as-published"
                 id="test-list-row-20-name-as-published"
               >
@@ -6547,13 +6547,13 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -6585,10 +6585,10 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -6601,7 +6601,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -6662,7 +6662,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -6681,7 +6681,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -6771,10 +6771,10 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -6784,12 +6784,12 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -6824,7 +6824,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
@@ -6876,11 +6876,11 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -6896,7 +6896,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -6925,10 +6925,10 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -6938,12 +6938,12 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -6978,7 +6978,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
@@ -7030,11 +7030,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -7050,7 +7050,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-6 css-klsmha-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -7793,7 +7793,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 />
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-17pf2nr-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1bc17nn-MuiTableCell-root"
                 data-index="3"
               >
                 <div
@@ -7942,10 +7942,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -7955,12 +7955,12 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -8019,7 +8019,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8055,7 +8055,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
@@ -8109,11 +8109,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -8142,10 +8142,10 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -8155,12 +8155,12 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8196,11 +8196,11 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -8229,10 +8229,10 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -8242,12 +8242,12 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8282,7 +8282,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-3 css-15l26de-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
@@ -8336,11 +8336,11 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -8369,10 +8369,10 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -8382,12 +8382,12 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8422,7 +8422,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-5 css-2v8532-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-5 css-1vd5aiz-MuiGrid-root"
           >
             <div
               class="MuiAutocomplete-root MuiAutocomplete-fullWidth css-1w98mmc-MuiAutocomplete-root"
@@ -8455,11 +8455,11 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -8488,10 +8488,10 @@ exports[`ContributorsEditor should get contributors from props and input value s
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -8501,12 +8501,12 @@ exports[`ContributorsEditor should get contributors from props and input value s
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8542,11 +8542,11 @@ exports[`ContributorsEditor should get contributors from props and input value s
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -8565,10 +8565,10 @@ exports[`ContributorsEditor should get contributors from props and input value s
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <ul
           class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
@@ -8600,10 +8600,10 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
                 >
                   <div
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -8616,7 +8616,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
                 />
               </div>
               <div
@@ -8677,7 +8677,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8696,7 +8696,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-0-name-as-published"
                 id="test-list-row-0-name-as-published"
               >
@@ -8780,7 +8780,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             tabindex="0"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-13yzope-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1y9nvhb-MuiGrid-root"
               id="contributor-row"
             >
               <div
@@ -8799,7 +8799,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 </svg>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-md-3 css-cpq5ae-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1qn18gn-MuiGrid-root"
                 data-testid="test-list-row-1-name-as-published"
                 id="test-list-row-1-name-as-published"
               >
@@ -8889,10 +8889,10 @@ exports[`ContributorsEditor should render error as html 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -8902,12 +8902,12 @@ exports[`ContributorsEditor should render error as html 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -8943,11 +8943,11 @@ exports[`ContributorsEditor should render error as html 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -8984,10 +8984,10 @@ exports[`ContributorsEditor should render error as one child 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -8997,12 +8997,12 @@ exports[`ContributorsEditor should render error as one child 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -9038,11 +9038,11 @@ exports[`ContributorsEditor should render error as one child 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button
@@ -9077,10 +9077,10 @@ exports[`ContributorsEditor should show given validation error 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <div>
           Please 
@@ -9090,12 +9090,12 @@ exports[`ContributorsEditor should show given validation error 1`] = `
           , in the format and order that they are published.
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           id="contributorForm"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
           >
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -9131,11 +9131,11 @@ exports[`ContributorsEditor should show given validation error 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           style="margin-top: 8px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             style="margin-bottom: 8px;"
           >
             <button

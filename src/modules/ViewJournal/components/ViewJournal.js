@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useParams, useHref } from 'react-router';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -219,7 +219,7 @@ export const ViewJournal = () => {
             >
                 <Grid container spacing={3}>
                     {Object.keys(journalDetails).length > 0 && journalDetails.jnl_advisory_statement && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert
                                 type={
                                     journalDetails?.jnl_advisory_statement_type_lookup?.trim?.().toLowerCase() || 'info'
@@ -234,7 +234,7 @@ export const ViewJournal = () => {
                         </Grid>
                     )}
                     {(capped === 'approaching' || capped === 'exceeded') && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert
                                 type={'warning'}
                                 title={viewJournalTxt.readAndPublish.alert.title}
@@ -249,7 +249,7 @@ export const ViewJournal = () => {
                         </Grid>
                     )}
                     {capped === 'nodeal' && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert
                                 type={'info'}
                                 title={viewJournalTxt.readAndPublish.alert.title}

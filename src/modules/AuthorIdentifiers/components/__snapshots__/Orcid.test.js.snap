@@ -3,10 +3,10 @@
 exports[`Component Orcid  should render if account doesnt have first name and last name 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -18,23 +18,23 @@ exports[`Component Orcid  should render if account doesnt have first name and la
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <span
         class="MuiBox-root css-0"
         data-testid="confirmDialogBox"
       />
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -69,13 +69,13 @@ exports[`Component Orcid  should render if account doesnt have first name and la
                 This option enables you to link your existing ORCID iD to UQ.
               </span>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                 />
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                 >
                   <button
                     aria-label="Link your existing ORCID iD"
@@ -91,7 +91,7 @@ exports[`Component Orcid  should render if account doesnt have first name and la
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -131,13 +131,13 @@ exports[`Component Orcid  should render if account doesnt have first name and la
                 </p>
               </span>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                 />
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                 >
                   <button
                     aria-label="Create a new ORCID iD"

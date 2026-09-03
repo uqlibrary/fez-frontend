@@ -3,10 +3,10 @@
 exports[`MyRecords test gets publications when user clicks back and state is not set 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -18,16 +18,16 @@ exports[`MyRecords test gets publications when user clicks back and state is not
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -84,10 +84,10 @@ exports[`MyRecords test gets publications when user clicks back and state is not
 exports[`MyRecords test gets publications when user clicks back and state is set 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -99,16 +99,16 @@ exports[`MyRecords test gets publications when user clicks back and state is set
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -165,10 +165,10 @@ exports[`MyRecords test gets publications when user clicks back and state is set
 exports[`MyRecords test renders active filters 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -180,16 +180,16 @@ exports[`MyRecords test renders active filters 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -238,13 +238,13 @@ exports[`MyRecords test renders active filters 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-lvb8h-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
             >
               <div
                 class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
@@ -253,14 +253,14 @@ exports[`MyRecords test renders active filters 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <hr
                 class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
               />
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <span
                 class="facetsFilter empty"
@@ -279,10 +279,10 @@ exports[`MyRecords test renders active filters 1`] = `
 exports[`MyRecords test renders list of publications no facets 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -294,16 +294,16 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -321,10 +321,10 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                 Displaying works 1 to 20 of 147 total works. 
               </span>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span>
                     Add to this list by 
@@ -344,13 +344,13 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   </span>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-3 css-h1hp2v-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-17hq2y0-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -398,7 +398,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -446,7 +446,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -496,17 +496,17 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-top"
                     id="my-records-paging-top"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -529,7 +529,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
                         data-analyticsid="my-records-paging-top-desktop-controls"
                         data-testid="my-records-paging-top-desktop-controls"
                         id="my-records-paging-top-desktop-controls"
@@ -603,7 +603,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         data-analyticsid="my-records-paging-top-mobile-controls"
                         data-testid="my-records-paging-top-mobile-controls"
                         id="my-records-paging-top-mobile-controls"
@@ -621,7 +621,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -646,7 +646,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiBox-root css-0"
@@ -654,7 +654,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   />
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiBox-root css-0"
@@ -670,16 +670,16 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         id="publication-citation-parent-UQ:1"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                                 style="min-width: 1px;"
                               >
                                 <h6
@@ -694,26 +694,26 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                 </h6>
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
                                 </div>
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                                     >
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
@@ -737,7 +737,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                         />
                                       </div>
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                                       />
                                     </div>
                                   </div>
@@ -747,13 +747,13 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-185v6aw-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                           />
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
                               class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
@@ -773,17 +773,17 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-bottom"
                     id="my-records-paging-bottom"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -806,7 +806,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
                         data-analyticsid="my-records-paging-bottom-desktop-controls"
                         data-testid="my-records-paging-bottom-desktop-controls"
                         id="my-records-paging-bottom-desktop-controls"
@@ -880,7 +880,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         data-analyticsid="my-records-paging-bottom-mobile-controls"
                         data-testid="my-records-paging-bottom-mobile-controls"
                         id="my-records-paging-bottom-mobile-controls"
@@ -898,7 +898,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -935,10 +935,10 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
 exports[`MyRecords test renders list of publications with custom actions 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -950,16 +950,16 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -977,10 +977,10 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                 Displaying works 1 to 20 of 147 total works. 
               </span>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span>
                     Add to this list by 
@@ -1000,13 +1000,13 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   </span>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-3 css-h1hp2v-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-17hq2y0-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1054,7 +1054,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1102,7 +1102,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1152,17 +1152,17 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-top"
                     id="my-records-paging-top"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -1185,7 +1185,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
                         data-analyticsid="my-records-paging-top-desktop-controls"
                         data-testid="my-records-paging-top-desktop-controls"
                         id="my-records-paging-top-desktop-controls"
@@ -1259,7 +1259,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         data-analyticsid="my-records-paging-top-mobile-controls"
                         data-testid="my-records-paging-top-mobile-controls"
                         id="my-records-paging-top-mobile-controls"
@@ -1277,7 +1277,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -1302,7 +1302,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiBox-root css-0"
@@ -1310,7 +1310,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   />
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiBox-root css-0"
@@ -1326,16 +1326,16 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         id="publication-citation-parent-UQ:1"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                                 style="min-width: 1px;"
                               >
                                 <h6
@@ -1350,26 +1350,26 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                 </h6>
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
                                 </div>
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                                     >
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
@@ -1393,7 +1393,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                         />
                                       </div>
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                                       />
                                     </div>
                                   </div>
@@ -1403,13 +1403,13 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-185v6aw-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                           />
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
                               class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
@@ -1429,17 +1429,17 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-bottom"
                     id="my-records-paging-bottom"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -1462,7 +1462,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
                         data-analyticsid="my-records-paging-bottom-desktop-controls"
                         data-testid="my-records-paging-bottom-desktop-controls"
                         id="my-records-paging-bottom-desktop-controls"
@@ -1536,7 +1536,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         data-analyticsid="my-records-paging-bottom-mobile-controls"
                         data-testid="my-records-paging-bottom-mobile-controls"
                         id="my-records-paging-bottom-mobile-controls"
@@ -1554,7 +1554,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -1591,10 +1591,10 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
 exports[`MyRecords test renders list of publications with facets 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -1606,16 +1606,16 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -1633,10 +1633,10 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                 Displaying works 1 to 20 of 147 total works. 
               </span>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span>
                     Add to this list by 
@@ -1656,13 +1656,13 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   </span>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-3 css-h1hp2v-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-17hq2y0-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1710,7 +1710,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1758,7 +1758,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1808,17 +1808,17 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-top"
                     id="my-records-paging-top"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -1841,7 +1841,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
                         data-analyticsid="my-records-paging-top-desktop-controls"
                         data-testid="my-records-paging-top-desktop-controls"
                         id="my-records-paging-top-desktop-controls"
@@ -1915,7 +1915,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         data-analyticsid="my-records-paging-top-mobile-controls"
                         data-testid="my-records-paging-top-mobile-controls"
                         id="my-records-paging-top-mobile-controls"
@@ -1933,7 +1933,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -1958,7 +1958,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiBox-root css-0"
@@ -1966,7 +1966,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   />
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="MuiBox-root css-0"
@@ -1982,16 +1982,16 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         id="publication-citation-parent-UQ:1"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                                 style="min-width: 1px;"
                               >
                                 <h6
@@ -2006,26 +2006,26 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                 </h6>
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
                                 </div>
                               </div>
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                                     >
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
@@ -2049,7 +2049,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                         />
                                       </div>
                                       <div
-                                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                                       />
                                     </div>
                                   </div>
@@ -2059,13 +2059,13 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-185v6aw-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                           />
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
                               class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
@@ -2085,17 +2085,17 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-bottom"
                     id="my-records-paging-bottom"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -2118,7 +2118,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
                         data-analyticsid="my-records-paging-bottom-desktop-controls"
                         data-testid="my-records-paging-bottom-desktop-controls"
                         id="my-records-paging-bottom-desktop-controls"
@@ -2192,7 +2192,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         data-analyticsid="my-records-paging-bottom-mobile-controls"
                         data-testid="my-records-paging-bottom-mobile-controls"
                         id="my-records-paging-bottom-mobile-controls"
@@ -2210,7 +2210,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                       >
                         <button
                           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -2239,13 +2239,13 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-lvb8h-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
             >
               <div
                 class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
@@ -2254,14 +2254,14 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <hr
                 class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
               />
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="facetsFilter"
@@ -2429,10 +2429,10 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
 exports[`MyRecords test renders loading screen while export publications loading 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -2444,16 +2444,16 @@ exports[`MyRecords test renders loading screen while export publications loading
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -2468,10 +2468,10 @@ exports[`MyRecords test renders loading screen while export publications loading
               id="standard-card-content"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span>
                     Add to this list by 
@@ -2491,13 +2491,13 @@ exports[`MyRecords test renders loading screen while export publications loading
                   </span>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-3 css-h1hp2v-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-17hq2y0-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2546,7 +2546,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2595,7 +2595,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2646,7 +2646,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-top"
@@ -2654,7 +2654,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                   />
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiBox-root css-0"
@@ -2662,7 +2662,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                   />
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="is-centered"
@@ -2671,13 +2671,13 @@ exports[`MyRecords test renders loading screen while export publications loading
                       style="padding: 8px;"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         />
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                           style="text-align: center;"
                         >
                           <span
@@ -2702,7 +2702,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                           </span>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                           style="text-align: center;"
                         >
                           <span
@@ -2713,14 +2713,14 @@ exports[`MyRecords test renders loading screen while export publications loading
                           </span>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-bottom"
@@ -2742,10 +2742,10 @@ exports[`MyRecords test renders loading screen while loading account data 1`] = 
 exports[`MyRecords test renders loading screen while loading publications  1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -2757,28 +2757,28 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             style="padding: 8px;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
               />
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="text-align: center;"
               >
                 <span
@@ -2803,7 +2803,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="text-align: center;"
               >
                 <span
@@ -2814,7 +2814,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
               />
             </div>
           </div>
@@ -2828,10 +2828,10 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
 exports[`MyRecords test renders loading screen while loading publications while filtering 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -2843,16 +2843,16 @@ exports[`MyRecords test renders loading screen while loading publications while 
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -2867,10 +2867,10 @@ exports[`MyRecords test renders loading screen while loading publications while 
               id="standard-card-content"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span>
                     Add to this list by 
@@ -2890,13 +2890,13 @@ exports[`MyRecords test renders loading screen while loading publications while 
                   </span>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
                   >
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-3 css-h1hp2v-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 css-17hq2y0-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2945,7 +2945,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-4 css-1i39z9w-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2994,7 +2994,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                       </div>
                     </div>
                     <div
-                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-4 css-gbgr3-MuiGridLegacy-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4 css-s6c5hx-MuiGrid-root"
                     >
                       <div
                         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -3045,7 +3045,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-top"
@@ -3053,7 +3053,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                   />
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiBox-root css-0"
@@ -3061,7 +3061,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                   />
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     class="is-centered"
@@ -3070,13 +3070,13 @@ exports[`MyRecords test renders loading screen while loading publications while 
                       style="padding: 8px;"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         />
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                           style="text-align: center;"
                         >
                           <span
@@ -3101,7 +3101,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                           </span>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                           style="text-align: center;"
                         >
                           <span
@@ -3112,14 +3112,14 @@ exports[`MyRecords test renders loading screen while loading publications while 
                           </span>
                         </div>
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
                     data-testid="my-records-paging-bottom"
@@ -3139,10 +3139,10 @@ exports[`MyRecords test renders loading screen while loading publications while 
 exports[`MyRecords test renders loading screen while pub loading 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -3154,28 +3154,28 @@ exports[`MyRecords test renders loading screen while pub loading 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             style="padding: 8px;"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
               />
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="text-align: center;"
               >
                 <span
@@ -3200,7 +3200,7 @@ exports[`MyRecords test renders loading screen while pub loading 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 style="text-align: center;"
               >
                 <span
@@ -3211,7 +3211,7 @@ exports[`MyRecords test renders loading screen while pub loading 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
               />
             </div>
           </div>
@@ -3225,10 +3225,10 @@ exports[`MyRecords test renders loading screen while pub loading 1`] = `
 exports[`MyRecords test renders no results 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -3240,16 +3240,16 @@ exports[`MyRecords test renders no results 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"

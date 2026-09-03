@@ -3,10 +3,10 @@
 exports[`FormViewToggler component should render default view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
     >
       <span
         class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
@@ -32,7 +32,7 @@ exports[`FormViewToggler component should render default view 1`] = `
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
     >
       <button
         aria-label="Learn about keyboard shortcuts"
@@ -67,10 +67,10 @@ exports[`FormViewToggler component should render default view 1`] = `
 exports[`FormViewToggler component should render tooltip for full form 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
     >
       <span
         class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
@@ -97,7 +97,7 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
     >
       <button
         aria-label="Learn about keyboard shortcuts"

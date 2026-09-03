@@ -3,32 +3,32 @@
 exports[`GrantInformationSection should render default view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -41,22 +41,22 @@ exports[`GrantInformationSection should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div>
                 Add the grant's name, ID and type - then click the ADD GRANT button to add each to the list
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
                   style="margin-top: 8px;"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-grow css-1w2mcj5-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -92,7 +92,7 @@ exports[`GrantInformationSection should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-d949ub-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -133,7 +133,7 @@ exports[`GrantInformationSection should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-d949ub-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -187,7 +187,7 @@ exports[`GrantInformationSection should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -215,32 +215,32 @@ exports[`GrantInformationSection should render default view 1`] = `
 exports[`GrantInformationSection should render disabled view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -253,22 +253,22 @@ exports[`GrantInformationSection should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div>
                 Add the grant's name, ID and type - then click the ADD GRANT button to add each to the list
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
                   style="margin-top: 8px;"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-grow css-1w2mcj5-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -305,7 +305,7 @@ exports[`GrantInformationSection should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-d949ub-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -346,7 +346,7 @@ exports[`GrantInformationSection should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-d949ub-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -400,7 +400,7 @@ exports[`GrantInformationSection should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"

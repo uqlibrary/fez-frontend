@@ -3,10 +3,10 @@
 exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -18,16 +18,16 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -105,10 +105,10 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
 exports[`Component ThirdPartyLookupTool renders loading screen while loading data 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -120,22 +120,22 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
         style="padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
             style="text-align: center;"
           >
             <span
@@ -160,7 +160,7 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
             </span>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
             style="text-align: center;"
           >
             <span
@@ -171,7 +171,7 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
             </span>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
           />
         </div>
       </div>
@@ -183,10 +183,10 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
 exports[`Component ThirdPartyLookupTool should render a form ready for input 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -198,16 +198,16 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -222,10 +222,10 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
               id="standard-card-content"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   style="flex-grow: 1; width: 1px;"
                 >
                   <h5
@@ -235,7 +235,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                   </h5>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                 >
                   <button
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
@@ -333,10 +333,10 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
 exports[`Component ThirdPartyLookupTool should set state with submitted data 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container StandardPage css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
         class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
@@ -348,16 +348,16 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
       </h2>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     />
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-sxhaxy-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
@@ -372,10 +372,10 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
               id="standard-card-content"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   style="flex-grow: 1; width: 1px;"
                 >
                   <h5
@@ -385,7 +385,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                   </h5>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                 >
                   <button
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"

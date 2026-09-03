@@ -6,7 +6,7 @@ import RelatedServiceListEditorForm from './RelatedServiceListEditorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { useFormContext } from 'react-hook-form';
 
 const getRelatedServicesFromProps = (name, value) => (name && value) || [];
@@ -171,7 +171,7 @@ const RelatedServiceListEditor = ({
             />
             {relatedServices?.length > 0 && (
                 <Grid container spacing={1}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <List>
                             <RelatedServiceListEditorHeader
                                 onDeleteAll={deleteAllRelatedServices}
@@ -180,7 +180,7 @@ const RelatedServiceListEditor = ({
                             />
                         </List>
                     </Grid>
-                    <Grid item xs={12} style={{ marginTop: -8 }}>
+                    <Grid size={12} style={{ marginTop: -8 }}>
                         <List
                             sx={{
                                 width: '100%',

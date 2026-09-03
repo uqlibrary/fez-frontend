@@ -11,7 +11,7 @@ import { validation } from 'config';
 import { locale } from 'locale';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config/general';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { hasAtLeastOneItemSelected } from 'helpers/general';
 
@@ -28,10 +28,10 @@ export const BookForm = ({
     const isEditorSelected = hasAtLeastOneItemSelected(values.editors);
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -49,7 +49,7 @@ export const BookForm = ({
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={!isNtro ? 4 : 6}>
+                        <Grid size={{ xs: 12, sm: !isNtro ? 4 : 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -64,7 +64,7 @@ export const BookForm = ({
                                 validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={!isNtro ? 4 : 6}>
+                        <Grid size={{ xs: 12, sm: !isNtro ? 4 : 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -80,7 +80,7 @@ export const BookForm = ({
                             />
                         </Grid>
                         {!isNtro && (
-                            <Grid item xs={12} sm={4}>
+                            <Grid size={{ xs: 12, sm: 4 }}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -95,7 +95,7 @@ export const BookForm = ({
                                 />
                             </Grid>
                         )}
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -108,7 +108,7 @@ export const BookForm = ({
                                 {...txt.information.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -127,7 +127,7 @@ export const BookForm = ({
                 </StandardCard>
             </Grid>
             {subtype !== SUBTYPE_EDITED_BOOK && !values.editors?.length && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
                         <Field
                             control={control}
@@ -148,7 +148,7 @@ export const BookForm = ({
                 </Grid>
             )}
             {!values.authors?.length && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={txt.editors.title} help={txt.editors.help}>
                         <Field
                             control={control}
@@ -169,7 +169,7 @@ export const BookForm = ({
                 </Grid>
             )}
             {isNtro && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <NtroFields
                         control={control}
                         canEdit
@@ -188,7 +188,7 @@ export const BookForm = ({
                     />
                 </Grid>
             )}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                     <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
@@ -205,7 +205,7 @@ export const BookForm = ({
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                     <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
@@ -223,10 +223,10 @@ export const BookForm = ({
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -239,7 +239,7 @@ export const BookForm = ({
                                 label={txt.optional.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

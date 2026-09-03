@@ -15,7 +15,7 @@ import { validation } from 'config';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { numbersOnly } from 'helpers/general';
 
@@ -24,10 +24,10 @@ export const ThesisForm = ({ isSubmitting, control }) => {
     const authorTxt = formLocale.journalArticle;
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert
                                 message={txt.information.message}
                                 type="warning"
@@ -36,7 +36,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -53,7 +53,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={OrgUnitNameField}
@@ -64,7 +64,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 {...txt.information.fieldLabels.orgUnitName}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={OrgNameField}
@@ -75,7 +75,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 {...txt.information.fieldLabels.orgName}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={ThesisSubtypeSelectField}
@@ -86,7 +86,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 required
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -105,10 +105,10 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                 </StandardCard>
             </Grid>
             {/* New Authors field */}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={authorTxt.authors.title} help={authorTxt.authors.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Typography>{authorTxt.authors.description}</Typography>
                             <Field
                                 control={control}
@@ -129,7 +129,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.supervisors.title} help={txt.supervisors.help}>
                     <Field
                         control={control}
@@ -146,7 +146,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.fieldOfResearch.title} help={txt.fieldOfResearch.help}>
                     <Typography>{txt.fieldOfResearch.description}</Typography>
                     <Field
@@ -161,10 +161,10 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -177,7 +177,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 {...txt.optional.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -191,7 +191,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -204,7 +204,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 {...txt.optional.fieldLabels.abstract}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

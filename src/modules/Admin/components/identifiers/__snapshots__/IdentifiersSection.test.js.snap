@@ -3,32 +3,32 @@
 exports[`IdentifiersSection component should render correct identifiers fields for Book - Creative Work - Musical Composition 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -41,13 +41,13 @@ exports[`IdentifiersSection component should render correct identifiers fields f
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -83,7 +83,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="undefined"
@@ -91,10 +91,10 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                 id="rek-ismn-list-editor"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                     style="flex-grow: 1;"
                   >
                     <div
@@ -126,7 +126,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -153,7 +153,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -189,7 +189,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -249,7 +249,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -285,7 +285,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -345,7 +345,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -381,7 +381,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -441,7 +441,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -477,7 +477,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -541,29 +541,29 @@ exports[`IdentifiersSection component should render correct identifiers fields f
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -576,13 +576,13 @@ exports[`IdentifiersSection component should render correct identifiers fields f
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="undefined"
@@ -590,10 +590,10 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                 id="rek-link-list-editor"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                     style="flex-grow: 1;"
                   >
                     <div
@@ -630,7 +630,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -665,7 +665,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-2 css-7rpxqs-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-u22910-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -702,32 +702,32 @@ exports[`IdentifiersSection component should render correct identifiers fields f
 exports[`IdentifiersSection component should render correct identifiers fields for Creative Work - Creative Work - Musical Composition 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -740,13 +740,13 @@ exports[`IdentifiersSection component should render correct identifiers fields f
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -782,7 +782,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="undefined"
@@ -790,10 +790,10 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                 id="rek-ismn-list-editor"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                     style="flex-grow: 1;"
                   >
                     <div
@@ -825,7 +825,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -856,29 +856,29 @@ exports[`IdentifiersSection component should render correct identifiers fields f
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -891,13 +891,13 @@ exports[`IdentifiersSection component should render correct identifiers fields f
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="undefined"
@@ -905,10 +905,10 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                 id="rek-link-list-editor"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                     style="flex-grow: 1;"
                   >
                     <div
@@ -945,7 +945,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -980,7 +980,7 @@ exports[`IdentifiersSection component should render correct identifiers fields f
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-2 css-7rpxqs-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-u22910-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -1017,32 +1017,32 @@ exports[`IdentifiersSection component should render correct identifiers fields f
 exports[`IdentifiersSection component should render default view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -1055,13 +1055,13 @@ exports[`IdentifiersSection component should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1096,7 +1096,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1131,7 +1131,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1190,7 +1190,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1225,7 +1225,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1284,7 +1284,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1319,7 +1319,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1378,7 +1378,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1413,7 +1413,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1472,7 +1472,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1511,29 +1511,29 @@ exports[`IdentifiersSection component should render default view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -1546,13 +1546,13 @@ exports[`IdentifiersSection component should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="undefined"
@@ -1560,10 +1560,10 @@ exports[`IdentifiersSection component should render default view 1`] = `
                 id="rek-link-list-editor"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                     style="flex-grow: 1;"
                   >
                     <div
@@ -1599,7 +1599,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1633,7 +1633,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-2 css-7rpxqs-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-u22910-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -1670,32 +1670,32 @@ exports[`IdentifiersSection component should render default view 1`] = `
 exports[`IdentifiersSection component should render disabled view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -1708,13 +1708,13 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1750,7 +1750,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1786,7 +1786,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1846,7 +1846,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1882,7 +1882,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1942,7 +1942,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1978,7 +1978,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2038,7 +2038,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2074,7 +2074,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2134,7 +2134,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2174,29 +2174,29 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container undefined AdminCard css-vnjdcj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
                   class="MuiBox-root css-1a7sacs"
                 />
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-1aoi7x3-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
                   class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
@@ -2209,13 +2209,13 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
             >
               <div
                 class="undefined"
@@ -2223,10 +2223,10 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
                 id="rek-link-list-editor"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
                 >
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                     style="flex-grow: 1;"
                   >
                     <div
@@ -2263,7 +2263,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-5 css-1i6p88v-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-5 css-1lrsfhg-MuiGrid-root"
                   >
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2298,7 +2298,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-2 css-7rpxqs-MuiGridLegacy-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-u22910-MuiGrid-root"
                   >
                     <button
                       class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"

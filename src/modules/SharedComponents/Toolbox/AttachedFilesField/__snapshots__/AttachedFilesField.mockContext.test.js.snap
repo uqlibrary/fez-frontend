@@ -92,12 +92,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-11"
                 id="file-name-11"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"
@@ -207,12 +207,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-15"
                 id="file-name-15"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"
@@ -322,12 +322,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-16"
                 id="file-name-16"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"
@@ -437,12 +437,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-17"
                 id="file-name-17"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"
@@ -552,12 +552,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-13"
                 id="file-name-13"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"
@@ -667,12 +667,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-14"
                 id="file-name-14"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"
@@ -782,12 +782,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-31"
                 id="file-name-31"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"
@@ -897,12 +897,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-1e5ur9r-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
                 data-testid="file-name-32"
                 id="file-name-32"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-12 css-6x3qim-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
                     class="css-za9t3z"

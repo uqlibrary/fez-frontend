@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { useForm, Controller } from 'react-hook-form';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -50,8 +50,8 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
 
     return (
         <form onSubmit={handleSubmit(onSubmitClick)} className="formAddQuickLink" data-testid={`${rootId}-form`}>
-            <Grid container mt={2} spacing={2}>
-                <Grid item xs={12}>
+            <Grid container spacing={2} sx={{ mt: 2 }}>
+                <Grid size={12}>
                     <Box data-testid="qlk_title">
                         <Controller
                             render={({ field }) => (
@@ -88,7 +88,7 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                         )}
                     </Box>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Box data-testid="qlk_link">
                         <Controller
                             render={({ field }) => (
@@ -126,7 +126,7 @@ const QuickLinkAdmin = ({ locale, item, action, onSubmitClick, onCancelClick, bu
                     </Box>
                 </Grid>
                 {buttons.map((button, index) => (
-                    <Grid item xs={12} key={index}>
+                    <Grid size={12} key={index}>
                         {button}
                     </Grid>
                 ))}

@@ -8,10 +8,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -41,7 +41,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -58,10 +58,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -70,7 +70,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -79,7 +79,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -122,10 +122,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -134,13 +134,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -172,7 +172,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -209,10 +209,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -221,13 +221,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -257,7 +257,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -289,7 +289,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -326,10 +326,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -338,13 +338,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -374,7 +374,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -406,7 +406,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -443,10 +443,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -455,13 +455,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -491,7 +491,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -523,7 +523,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -560,10 +560,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -572,13 +572,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -608,7 +608,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -640,7 +640,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -677,10 +677,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -689,13 +689,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -725,7 +725,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -757,7 +757,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -794,10 +794,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -806,13 +806,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -842,7 +842,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -874,7 +874,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -911,10 +911,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -923,13 +923,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -959,7 +959,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -991,7 +991,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1028,10 +1028,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1040,13 +1040,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1076,7 +1076,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1108,7 +1108,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1145,10 +1145,10 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1157,13 +1157,13 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1195,7 +1195,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1242,10 +1242,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -1275,7 +1275,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -1292,10 +1292,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -1304,7 +1304,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -1313,7 +1313,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -1354,10 +1354,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1366,13 +1366,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1404,7 +1404,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1441,10 +1441,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1453,13 +1453,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1489,7 +1489,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1521,7 +1521,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1558,10 +1558,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1570,13 +1570,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1606,7 +1606,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1638,7 +1638,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1675,10 +1675,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1687,13 +1687,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1723,7 +1723,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1755,7 +1755,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1792,10 +1792,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1804,13 +1804,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1840,7 +1840,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1872,7 +1872,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -1909,10 +1909,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -1921,13 +1921,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -1957,7 +1957,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -1989,7 +1989,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2026,10 +2026,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2038,13 +2038,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2074,7 +2074,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2106,7 +2106,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2143,10 +2143,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2155,13 +2155,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2191,7 +2191,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2223,7 +2223,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2260,10 +2260,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2272,13 +2272,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2308,7 +2308,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2340,7 +2340,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2377,10 +2377,10 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2389,13 +2389,13 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2427,7 +2427,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2474,10 +2474,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -2507,7 +2507,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -2524,10 +2524,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -2536,7 +2536,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -2545,7 +2545,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -2586,10 +2586,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2598,13 +2598,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2636,7 +2636,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2673,10 +2673,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2685,13 +2685,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2721,7 +2721,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2753,7 +2753,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2790,10 +2790,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2802,13 +2802,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2838,7 +2838,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2870,7 +2870,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -2907,10 +2907,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -2919,13 +2919,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -2955,7 +2955,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -2987,7 +2987,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3024,10 +3024,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3036,13 +3036,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -3072,7 +3072,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -3104,7 +3104,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3141,10 +3141,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3153,13 +3153,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -3189,7 +3189,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -3221,7 +3221,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3258,10 +3258,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3270,13 +3270,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -3306,7 +3306,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -3338,7 +3338,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3375,10 +3375,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3387,13 +3387,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -3423,7 +3423,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -3455,7 +3455,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3492,10 +3492,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3504,13 +3504,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -3540,7 +3540,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -3572,7 +3572,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3609,10 +3609,10 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3621,13 +3621,13 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -3659,7 +3659,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3743,10 +3743,10 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 css-68fu20-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -3755,7 +3755,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -3796,10 +3796,10 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3808,14 +3808,14 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             />
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -3899,10 +3899,10 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-11 css-68fu20-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -3911,7 +3911,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -3952,10 +3952,10 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -3964,14 +3964,14 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             />
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -4044,10 +4044,10 @@ exports[`ListEditor tests should move down an item 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -4077,7 +4077,7 @@ exports[`ListEditor tests should move down an item 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -4094,10 +4094,10 @@ exports[`ListEditor tests should move down an item 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -4106,7 +4106,7 @@ exports[`ListEditor tests should move down an item 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -4115,7 +4115,7 @@ exports[`ListEditor tests should move down an item 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -4156,10 +4156,10 @@ exports[`ListEditor tests should move down an item 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -4168,13 +4168,13 @@ exports[`ListEditor tests should move down an item 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -4206,7 +4206,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -4243,10 +4243,10 @@ exports[`ListEditor tests should move down an item 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -4255,13 +4255,13 @@ exports[`ListEditor tests should move down an item 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -4291,7 +4291,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -4323,7 +4323,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -4360,10 +4360,10 @@ exports[`ListEditor tests should move down an item 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -4372,13 +4372,13 @@ exports[`ListEditor tests should move down an item 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -4410,7 +4410,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -4457,10 +4457,10 @@ exports[`ListEditor tests should move up an item 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -4490,7 +4490,7 @@ exports[`ListEditor tests should move up an item 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -4507,10 +4507,10 @@ exports[`ListEditor tests should move up an item 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -4519,7 +4519,7 @@ exports[`ListEditor tests should move up an item 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -4528,7 +4528,7 @@ exports[`ListEditor tests should move up an item 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -4569,10 +4569,10 @@ exports[`ListEditor tests should move up an item 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -4581,13 +4581,13 @@ exports[`ListEditor tests should move up an item 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -4619,7 +4619,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -4656,10 +4656,10 @@ exports[`ListEditor tests should move up an item 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -4668,13 +4668,13 @@ exports[`ListEditor tests should move up an item 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -4704,7 +4704,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -4736,7 +4736,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -4773,10 +4773,10 @@ exports[`ListEditor tests should move up an item 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -4785,13 +4785,13 @@ exports[`ListEditor tests should move up an item 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -4823,7 +4823,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -4940,10 +4940,10 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -4952,7 +4952,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -4961,7 +4961,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -5002,10 +5002,10 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -5014,13 +5014,13 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -5052,7 +5052,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -5089,10 +5089,10 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -5101,13 +5101,13 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -5139,7 +5139,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -5192,10 +5192,10 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -5204,7 +5204,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -5213,7 +5213,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -5254,10 +5254,10 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -5266,13 +5266,13 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -5304,7 +5304,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -5341,10 +5341,10 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -5353,13 +5353,13 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -5391,7 +5391,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -5438,10 +5438,10 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -5471,7 +5471,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -5488,10 +5488,10 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -5500,7 +5500,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -5509,7 +5509,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -5550,10 +5550,10 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -5562,13 +5562,13 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -5627,7 +5627,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -5664,10 +5664,10 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -5676,13 +5676,13 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -5741,7 +5741,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -5788,10 +5788,10 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
     id="test-list-editor"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-153e7at-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
@@ -5821,7 +5821,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-2 css-1vwyvuc-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
@@ -5838,10 +5838,10 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-nofpn4-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1a07py8-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 css-28o34x-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -5850,7 +5850,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 css-vzojd3-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
             class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
@@ -5859,7 +5859,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
           </span>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
         >
           <span
             aria-label="Remove all items"
@@ -5900,10 +5900,10 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -5912,13 +5912,13 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -5977,7 +5977,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -6014,10 +6014,10 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -6026,13 +6026,13 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -6062,7 +6062,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                 </span>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item down the order"
@@ -6121,7 +6121,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"
@@ -6158,10 +6158,10 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1sh733u-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-eukr08-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-6 MuiGridLegacy-grid-md-9 css-13ylua5-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
               class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -6170,13 +6170,13 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-5 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-2 css-1qg20ba-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 css-1fku77z-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container css-1gtb4jl-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1rbwukc-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Move item up the order"
@@ -6235,7 +6235,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             </div>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 MuiGridLegacy-grid-sm-1 css-1p4ueyk-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 css-qt0s09-MuiGrid-root"
           >
             <span
               aria-label="Remove this item"

@@ -28,7 +28,7 @@ test.describe('Claim possible work', () => {
             );
             await expect(page.locator('[class*="StandardRighthandCard-title"]')).toHaveText(/Refine results/);
             await expect(
-                page.locator('[class*="MuiGridLegacy-grid-sm-3"] .facetsFilter [class*="MuiListItem-root"]'),
+                page.locator('[class*="MuiGrid-grid-sm-3"] .facetsFilter [class*="MuiListItem-root"]'),
             ).toHaveCount(6);
         });
 

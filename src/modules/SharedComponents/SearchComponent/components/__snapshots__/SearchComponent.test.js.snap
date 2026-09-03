@@ -6,10 +6,10 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1oq8nvt-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-mwb7rv-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -43,7 +43,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to search eSpace"
@@ -58,7 +58,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to switch to Advanced search"
@@ -83,10 +83,10 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1oq8nvt-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-mwb7rv-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -120,7 +120,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to search eSpace"
@@ -135,7 +135,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to switch to Advanced search"
@@ -160,10 +160,10 @@ exports[`SearchComponent should display simple search with query string 1`] = `
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1oq8nvt-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-mwb7rv-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -197,7 +197,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to search eSpace"
@@ -212,7 +212,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to switch to Advanced search"
@@ -237,10 +237,10 @@ exports[`SearchComponent should display simple search with query string 2`] = `
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1oq8nvt-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-mwb7rv-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -274,7 +274,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to search eSpace"
@@ -289,7 +289,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to switch to Advanced search"
@@ -314,10 +314,10 @@ exports[`SearchComponent should render default view 1`] = `
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1oq8nvt-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-mwb7rv-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -351,7 +351,7 @@ exports[`SearchComponent should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to search eSpace"
@@ -366,7 +366,7 @@ exports[`SearchComponent should render default view 1`] = `
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to switch to Advanced search"
@@ -392,13 +392,13 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -408,7 +408,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -435,22 +435,22 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -501,7 +501,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -510,13 +510,13 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -543,7 +543,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -554,13 +554,13 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -615,13 +615,13 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -631,10 +631,10 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -657,7 +657,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -678,7 +678,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -704,7 +704,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -744,11 +744,10 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -764,7 +763,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -779,7 +778,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -794,11 +793,11 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -814,10 +813,10 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -842,13 +841,13 @@ exports[`SearchComponent should render in advanced search and take in considerat
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -858,7 +857,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -885,22 +884,22 @@ exports[`SearchComponent should render in advanced search and take in considerat
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -951,7 +950,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -960,13 +959,13 @@ exports[`SearchComponent should render in advanced search and take in considerat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -993,7 +992,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -1004,13 +1003,13 @@ exports[`SearchComponent should render in advanced search and take in considerat
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1065,13 +1064,13 @@ exports[`SearchComponent should render in advanced search and take in considerat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -1081,10 +1080,10 @@ exports[`SearchComponent should render in advanced search and take in considerat
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -1107,7 +1106,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -1128,7 +1127,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -1154,7 +1153,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -1194,11 +1193,10 @@ exports[`SearchComponent should render in advanced search and take in considerat
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -1214,7 +1212,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -1229,7 +1227,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -1244,11 +1242,11 @@ exports[`SearchComponent should render in advanced search and take in considerat
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -1264,10 +1262,10 @@ exports[`SearchComponent should render in advanced search and take in considerat
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -1314,10 +1312,10 @@ exports[`SearchComponent should render simple search even if it says is advanced
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1376,10 +1374,10 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 MuiGridLegacy-wrap-xs-nowrap css-u2adcn-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1uyzkin-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-cvf7hw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1j5z8y-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -1439,13 +1437,13 @@ exports[`SearchComponent should reset advanced search 1`] = `
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -1455,7 +1453,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -1482,22 +1480,22 @@ exports[`SearchComponent should reset advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1548,7 +1546,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -1557,13 +1555,13 @@ exports[`SearchComponent should reset advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -1590,7 +1588,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -1601,13 +1599,13 @@ exports[`SearchComponent should reset advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -1662,13 +1660,13 @@ exports[`SearchComponent should reset advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -1678,10 +1676,10 @@ exports[`SearchComponent should reset advanced search 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -1704,7 +1702,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -1725,7 +1723,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -1751,7 +1749,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -1792,11 +1790,10 @@ exports[`SearchComponent should reset advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -1812,7 +1809,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -1827,7 +1824,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -1842,11 +1839,11 @@ exports[`SearchComponent should reset advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -1862,10 +1859,10 @@ exports[`SearchComponent should reset advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -1890,13 +1887,13 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -1906,7 +1903,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Show advanced search"
@@ -1933,10 +1930,10 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -1961,13 +1958,13 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -1977,7 +1974,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -2004,22 +2001,22 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2070,7 +2067,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -2079,13 +2076,13 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -2112,7 +2109,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -2123,13 +2120,13 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2184,13 +2181,13 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -2200,10 +2197,10 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -2226,7 +2223,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -2247,7 +2244,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -2273,7 +2270,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -2313,11 +2310,10 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -2333,7 +2329,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -2348,7 +2344,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -2363,11 +2359,11 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -2383,10 +2379,10 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -2433,10 +2429,10 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1oq8nvt-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-mwb7rv-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -2470,7 +2466,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to search eSpace"
@@ -2485,7 +2481,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to switch to Advanced search"
@@ -2511,13 +2507,13 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -2527,7 +2523,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -2554,22 +2550,22 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2617,7 +2613,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -2628,13 +2624,13 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Type a value to search all fields for"
@@ -2660,7 +2656,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -2671,13 +2667,13 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -2732,13 +2728,13 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -2748,10 +2744,10 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -2774,7 +2770,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -2795,7 +2791,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -2821,7 +2817,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -2861,11 +2857,10 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -2880,7 +2875,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -2895,7 +2890,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -2910,11 +2905,11 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -2930,10 +2925,10 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -2984,13 +2979,13 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -3000,7 +2995,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -3027,22 +3022,22 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -3093,7 +3088,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -3102,13 +3097,13 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -3135,7 +3130,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -3146,13 +3141,13 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -3207,13 +3202,13 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -3223,10 +3218,10 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -3249,7 +3244,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -3270,7 +3265,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -3296,7 +3291,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -3336,11 +3331,10 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -3356,7 +3350,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -3371,7 +3365,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -3386,11 +3380,11 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -3406,10 +3400,10 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -3433,10 +3427,10 @@ exports[`SearchComponent should toggle to simple search 1`] = `
     style="margin: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-1oq8nvt-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-mwb7rv-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -3470,7 +3464,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to search eSpace"
@@ -3485,7 +3479,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
       >
         <button
           aria-label="Click to switch to Advanced search"
@@ -3511,13 +3505,13 @@ exports[`SearchComponent should update advanced search row on search text change
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -3527,7 +3521,7 @@ exports[`SearchComponent should update advanced search row on search text change
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -3554,22 +3548,22 @@ exports[`SearchComponent should update advanced search row on search text change
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -3617,7 +3611,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -3628,13 +3622,13 @@ exports[`SearchComponent should update advanced search row on search text change
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Type a value to search all fields for"
@@ -3660,7 +3654,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -3671,13 +3665,13 @@ exports[`SearchComponent should update advanced search row on search text change
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -3732,13 +3726,13 @@ exports[`SearchComponent should update advanced search row on search text change
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -3748,10 +3742,10 @@ exports[`SearchComponent should update advanced search row on search text change
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -3774,7 +3768,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -3795,7 +3789,7 @@ exports[`SearchComponent should update advanced search row on search text change
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -3821,7 +3815,7 @@ exports[`SearchComponent should update advanced search row on search text change
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -3861,11 +3855,10 @@ exports[`SearchComponent should update advanced search row on search text change
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -3880,7 +3873,7 @@ exports[`SearchComponent should update advanced search row on search text change
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -3895,7 +3888,7 @@ exports[`SearchComponent should update advanced search row on search text change
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -3910,11 +3903,11 @@ exports[`SearchComponent should update advanced search row on search text change
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -3930,10 +3923,10 @@ exports[`SearchComponent should update advanced search row on search text change
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -3984,13 +3977,13 @@ exports[`SearchComponent should update date range filter 1`] = `
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -4000,7 +3993,7 @@ exports[`SearchComponent should update date range filter 1`] = `
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -4027,22 +4020,22 @@ exports[`SearchComponent should update date range filter 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -4093,7 +4086,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -4102,13 +4095,13 @@ exports[`SearchComponent should update date range filter 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -4135,7 +4128,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -4146,13 +4139,13 @@ exports[`SearchComponent should update date range filter 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -4207,13 +4200,13 @@ exports[`SearchComponent should update date range filter 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -4223,10 +4216,10 @@ exports[`SearchComponent should update date range filter 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -4249,7 +4242,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -4270,7 +4263,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -4296,13 +4289,13 @@ exports[`SearchComponent should update date range filter 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-f4iabq-MuiFormLabel-root-MuiInputLabel-root"
@@ -4313,10 +4306,10 @@ exports[`SearchComponent should update date range filter 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -4361,7 +4354,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -4381,7 +4374,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -4428,13 +4421,13 @@ exports[`SearchComponent should update date range filter 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-f4iabq-MuiFormLabel-root-MuiInputLabel-root"
@@ -4445,10 +4438,10 @@ exports[`SearchComponent should update date range filter 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -4493,7 +4486,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -4513,7 +4506,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -4560,7 +4553,7 @@ exports[`SearchComponent should update date range filter 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -4600,11 +4593,10 @@ exports[`SearchComponent should update date range filter 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -4619,7 +4611,7 @@ exports[`SearchComponent should update date range filter 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -4634,7 +4626,7 @@ exports[`SearchComponent should update date range filter 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -4649,11 +4641,11 @@ exports[`SearchComponent should update date range filter 1`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -4669,10 +4661,10 @@ exports[`SearchComponent should update date range filter 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div
@@ -4723,13 +4715,13 @@ exports[`SearchComponent should update date range filter 2`] = `
     id="advancedSearchForm"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-m0hngw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-usf91y-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
           <h5
@@ -4739,7 +4731,7 @@ exports[`SearchComponent should update date range filter 2`] = `
           </h5>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
         >
           <button
             aria-label="Hide advanced search"
@@ -4766,22 +4758,22 @@ exports[`SearchComponent should update date range filter 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-8 css-18qjr85-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-q5srq4-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-djgst8-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item css-1ol5640-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-184jllw-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -4832,7 +4824,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
@@ -4841,13 +4833,13 @@ exports[`SearchComponent should update date range filter 2`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-6 css-te93a-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-q59a05-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-c5a19u-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-j25avv-MuiGrid-root"
                 >
                   <div
                     aria-label="Select a field to search on"
@@ -4874,7 +4866,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1kiilzt-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-111w1y9-MuiGrid-root"
                 >
                   <hr
                     class="MuiDivider-root MuiDivider-fullWidth css-jq5j2p-MuiDivider-root"
@@ -4885,13 +4877,13 @@ exports[`SearchComponent should update date range filter 2`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-fdgbno-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-imrbrd-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -4946,13 +4938,13 @@ exports[`SearchComponent should update date range filter 2`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
                     class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
@@ -4962,10 +4954,10 @@ exports[`SearchComponent should update date range filter 2`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search from"
@@ -4988,7 +4980,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -5009,7 +5001,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     aria-label="Enter a year to search to"
@@ -5035,13 +5027,13 @@ exports[`SearchComponent should update date range filter 2`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-f4iabq-MuiFormLabel-root-MuiInputLabel-root"
@@ -5052,10 +5044,10 @@ exports[`SearchComponent should update date range filter 2`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -5100,7 +5092,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -5120,7 +5112,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -5167,13 +5159,13 @@ exports[`SearchComponent should update date range filter 2`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-f4iabq-MuiFormLabel-root-MuiInputLabel-root"
@@ -5184,10 +5176,10 @@ exports[`SearchComponent should update date range filter 2`] = `
                 </div>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
               >
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -5232,7 +5224,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1nrld1q-MuiFormControl-root-MuiTextField-root"
@@ -5252,7 +5244,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth css-1oat0wr-MuiGridLegacy-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-zad234-MuiGrid-root"
                 >
                   <div
                     class="MuiFormControl-root MuiTextField-root css-1b1fjlj-MuiFormControl-root-MuiTextField-root"
@@ -5299,7 +5291,7 @@ exports[`SearchComponent should update date range filter 2`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <label
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
@@ -5339,11 +5331,10 @@ exports[`SearchComponent should update date range filter 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
-        style="margin-top: 24px;"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-18lvv5e-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to add another advanced search field"
@@ -5358,7 +5349,7 @@ exports[`SearchComponent should update date range filter 2`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to reset the advanced search"
@@ -5373,7 +5364,7 @@ exports[`SearchComponent should update date range filter 2`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
             aria-label="Click to return to the simple search"
@@ -5388,11 +5379,11 @@ exports[`SearchComponent should update date range filter 2`] = `
           </button>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-umaafh-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-1cfoiu9-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         />
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-4 css-s9nk8c-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1rwtssx-MuiGrid-root"
         >
           <button
             aria-label="Click to search eSpace"
@@ -5408,10 +5399,10 @@ exports[`SearchComponent should update date range filter 2`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-j0o5il-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           style="padding-top: 24px;"
         >
           <div

@@ -30,10 +30,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         </svg>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -46,7 +46,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-4 css-1tmlgzn-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-8rtno-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-y2splu-MuiListItemText-root"
@@ -59,7 +59,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
         />
       </div>
       <div
@@ -136,10 +136,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         </svg>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -152,7 +152,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
         />
       </div>
       <div
@@ -230,10 +230,10 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         </svg>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -246,7 +246,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
         />
       </div>
       <div
@@ -323,10 +323,10 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -339,7 +339,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-y2splu-MuiListItemText-root"
@@ -426,10 +426,10 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -442,7 +442,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
         />
       </div>
       <div
@@ -519,10 +519,10 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
         </svg>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -535,7 +535,7 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
         />
       </div>
       <div
@@ -614,10 +614,10 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-3 css-vahuxy-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
         >
           <div
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
@@ -630,7 +630,7 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-5 MuiGridLegacy-grid-md-4 css-vgxmiq-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
         />
       </div>
       <div
