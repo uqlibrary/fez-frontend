@@ -30,7 +30,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-xf048y-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1rzwek4-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >
@@ -69,7 +69,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-1pdno6g-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-15u1gxo-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >

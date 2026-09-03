@@ -6,7 +6,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -65,7 +65,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-193b874-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -107,7 +107,7 @@ exports[`Application component Should display mobile correctly 1`] = `
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
@@ -135,7 +135,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             >
               <button
                 aria-label="Log in"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
@@ -201,7 +201,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             >
               <button
                 aria-label="Close menu"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-grb5j8-MuiButtonBase-root-MuiIconButton-root"
                 tabindex="0"
                 type="button"
               >
@@ -226,7 +226,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             tabindex="1"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-1k7sra0-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-1w20pzz-MuiButtonBase-root-MuiButton-root"
               tabindex="-1"
               type="button"
             >
@@ -395,7 +395,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           tabindex="-1"
         />
         <div
-          class="MuiBox-root css-n5zwdn"
+          class="MuiBox-root css-i37fop"
         >
           CRICOS Provider No: 
           <a
@@ -421,7 +421,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -464,7 +464,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
               data-analyticsid="login"
               data-testid="login"
               id="login"
@@ -492,7 +492,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
                   >
                     <b>
                       You are not logged in - 
@@ -509,7 +509,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -806,7 +806,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -820,7 +820,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -903,7 +903,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-193b874-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -945,7 +945,7 @@ exports[`Application component should render alert if user is not fez author 1`]
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
@@ -973,7 +973,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             >
               <button
                 aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
@@ -1002,7 +1002,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -1045,7 +1045,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
               data-analyticsid="not-registered-author"
               data-testid="not-registered-author"
               id="not-registered-author"
@@ -1073,7 +1073,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
                   >
                     <b>
                       You are not registered in UQ eSpace as an author - 
@@ -1374,7 +1374,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -1388,7 +1388,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -1471,7 +1471,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-193b874-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1513,7 +1513,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
@@ -1541,7 +1541,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             >
               <button
                 aria-label="Log out - J RHD Student"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
@@ -1570,7 +1570,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -1878,7 +1878,7 @@ exports[`Application component should render app for account with fez author wit
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -1892,7 +1892,7 @@ exports[`Application component should render app for account with fez author wit
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -1975,7 +1975,7 @@ exports[`Application component should render app for account with fez author wit
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-193b874-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2017,7 +2017,7 @@ exports[`Application component should render app for account with fez author wit
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
@@ -2045,7 +2045,7 @@ exports[`Application component should render app for account with fez author wit
             >
               <button
                 aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
@@ -2074,7 +2074,7 @@ exports[`Application component should render app for account with fez author wit
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2382,7 +2382,7 @@ exports[`Application component should render application with routing for the us
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -2396,7 +2396,7 @@ exports[`Application component should render application with routing for the us
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -2479,7 +2479,7 @@ exports[`Application component should render application with routing for the us
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-193b874-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2521,7 +2521,7 @@ exports[`Application component should render application with routing for the us
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
@@ -2549,7 +2549,7 @@ exports[`Application component should render application with routing for the us
             >
               <button
                 aria-label="Log out - undefined"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
@@ -2578,7 +2578,7 @@ exports[`Application component should render application with routing for the us
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2673,7 +2673,7 @@ exports[`Application component should render for anon user 1`] = `
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -2687,7 +2687,7 @@ exports[`Application component should render for anon user 1`] = `
           >
             <button
               aria-label="Click to open the main navigation"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="main-menu-button"
               data-mui-internal-clone-element="true"
               id="main-menu-button"
@@ -2770,7 +2770,7 @@ exports[`Application component should render for anon user 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-16nhll4-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-193b874-MuiSvgIcon-root"
                     data-testid="SearchIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2812,7 +2812,7 @@ exports[`Application component should render for anon user 1`] = `
               >
                 <button
                   aria-label="Click to search eSpace"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
                   type="button"
@@ -2840,7 +2840,7 @@ exports[`Application component should render for anon user 1`] = `
             >
               <button
                 aria-label="Log in"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
@@ -2869,7 +2869,7 @@ exports[`Application component should render for anon user 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-y8819u-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"

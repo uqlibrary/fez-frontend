@@ -30,7 +30,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
       </svg>
     </span>
     <p
-      class="MuiTypography-root MuiTypography-body1 css-1a33fq3-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1szyxb6-MuiTypography-root"
     />
   </label>
 </div>
@@ -65,7 +65,7 @@ exports[`Component FileUploadTermsAndConditions should render default view 1`] =
       </svg>
     </span>
     <p
-      class="MuiTypography-root MuiTypography-body1 css-14cyzb0-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-80clbu-MuiTypography-root"
     />
   </label>
 </div>

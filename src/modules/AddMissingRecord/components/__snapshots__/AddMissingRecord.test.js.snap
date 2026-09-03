@@ -37,7 +37,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -61,7 +61,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -86,7 +86,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -110,7 +110,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -135,7 +135,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -159,7 +159,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -210,7 +210,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 data-testid="CheckCircleIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -224,7 +224,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -249,7 +249,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -273,7 +273,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -298,7 +298,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -322,7 +322,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -373,7 +373,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 data-testid="CheckCircleIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -387,7 +387,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -412,7 +412,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 data-testid="CheckCircleIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -426,7 +426,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -451,7 +451,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -475,7 +475,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -526,7 +526,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -550,7 +550,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -575,7 +575,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -599,7 +599,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -624,7 +624,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-out4ix-MuiSvgIcon-root-MuiStepIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-ccei8p-MuiSvgIcon-root-MuiStepIcon-root"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -648,7 +648,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-12r59sk-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
               >
                 <span />
               </span>

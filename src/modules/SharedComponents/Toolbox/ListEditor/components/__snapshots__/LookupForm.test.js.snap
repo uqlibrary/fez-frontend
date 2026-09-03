@@ -6,7 +6,7 @@ exports[`LookupForm tests  should render lookup form 1`] = `
     class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-17swcrx-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-dhnex9-MuiInputBase-root-MuiOutlinedInput-root"
     >
       <input
         aria-invalid="false"

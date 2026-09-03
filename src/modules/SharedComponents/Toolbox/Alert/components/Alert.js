@@ -57,9 +57,13 @@ const StyledGridWithIcon = styled(Grid, {
     shouldForwardProp: prop => prop !== 'type',
 })(({ theme, type }) => {
     const _type = paletteIndex[type] ?? 'error';
+    // DS "page" alert (from theme.palette.alert): flat (no border-radius/box-shadow), light $*-50 tint
+    // background + $grey-900 text/icon. Matches the DS Storybook page alert exactly. Degrades to the standard
+    // palette if rendered under a theme that lacks the custom `alert` section (e.g. MUI's default theme).
+    const alertColors = theme.palette.alert;
+    const alertText = alertColors?.text ?? theme.palette.text?.primary;
+    const alertBg = alertColors?.[_type]?.background ?? theme.palette[_type]?.light ?? theme.palette[_type]?.main;
     return {
-        borderRadius: '5px',
-        boxShadow: theme.shadows[1],
         padding: '12px',
         marginTop: '5px',
         '&:first-of-type': {
@@ -67,15 +71,15 @@ const StyledGridWithIcon = styled(Grid, {
         },
 
         '& a:link, & a:hover, & a:visited': {
-            color: theme.palette.white?.main,
+            color: alertText,
             textDecoration: 'underline',
         },
 
-        color: theme.palette.white?.main,
-        backgroundColor: type !== 'done' ? theme.palette[_type].main : theme.palette[_type].light,
+        color: alertText,
+        backgroundColor: alertBg,
 
         '& .spinner, & .icon, & button.dismiss': {
-            color: theme.palette[_type].dark,
+            color: alertText,
         },
         '& button.action': {
             color: theme.palette.white?.main,
@@ -87,7 +91,6 @@ const StyledGridWithIcon = styled(Grid, {
 const StyledGridTitle = styled(Grid)(({ theme }) => ({
     alignSelf: 'center',
     padding: '6px 0',
-    textShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
 
     '& ul, & ol': {
         [theme.breakpoints.down('sm')]: {

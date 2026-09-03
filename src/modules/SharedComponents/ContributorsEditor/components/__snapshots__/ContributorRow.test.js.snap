@@ -80,7 +80,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -186,7 +186,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -272,7 +272,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -358,7 +358,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -464,7 +464,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Move record up the order"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-move-up"
             data-testid="test-list-row-0-move-up"
             id="test-list-row-move-up-0"
@@ -491,7 +491,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Move record down the order"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-move-down"
             data-testid="test-list-row-0-move-down"
             id="test-list-row-move-down-0"
@@ -518,7 +518,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -548,7 +548,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1x5nxq4-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -604,7 +604,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -634,7 +634,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1x5nxq4-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -690,7 +690,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -796,7 +796,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -826,7 +826,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1x5nxq4-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -897,7 +897,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -927,7 +927,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 <div>
   <li
     aria-label="Select this record (J. Smith) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1wati88-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1x5nxq4-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -998,7 +998,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1084,7 +1084,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         >
           <button
             aria-label="Edit this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-2-edit"
             data-testid="test-list-row-2-edit"
             id="test-list-row-edit-2"
@@ -1111,7 +1111,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-2-delete"
             data-testid="test-list-row-2-delete"
             id="test-list-row-delete-2"
@@ -1198,7 +1198,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1228,7 +1228,7 @@ exports[`Component ContributorRow should render contributor row linked class for
 <div>
   <li
     aria-label="Select this record (Test) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1fm2ijt-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-7o01qa-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -1285,7 +1285,7 @@ exports[`Component ContributorRow should render contributor row linked class for
         >
           <button
             aria-label="Edit this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-edit"
             data-testid="test-list-row-0-edit"
             id="test-list-row-edit-0"
@@ -1312,7 +1312,7 @@ exports[`Component ContributorRow should render contributor row linked class for
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1398,7 +1398,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1484,7 +1484,7 @@ exports[`Component ContributorRow should render with default props 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1568,7 +1568,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"

@@ -267,7 +267,12 @@ const AppClass = ({
     return (
         <StyledGrid container sx={{ width: '100%' }}>
             <Meta routesConfig={routesConfig} />
-            <AppBar className="AppBar" color="primary" position="fixed">
+            <AppBar
+                className="AppBar"
+                color="primary"
+                position="fixed"
+                sx={{ background: 'linear-gradient(90deg, #51247a 0%, 87%, #962a8b 100%)' }}
+            >
                 <Toolbar sx={{ height: '70px' }}>
                     <Grid
                         container

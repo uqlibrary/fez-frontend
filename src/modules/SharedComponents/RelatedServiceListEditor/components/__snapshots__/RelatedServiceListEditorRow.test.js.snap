@@ -77,7 +77,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               >
                 <button
                   aria-label="Move entry up the order"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-up=0"
                   disabled=""
                   tabindex="-1"
@@ -104,7 +104,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               >
                 <button
                   aria-label="Move entry down the order"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-down=0"
                   disabled=""
                   tabindex="-1"
@@ -135,7 +135,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               >
                 <button
                   aria-label="Remove this entry"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -238,7 +238,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               >
                 <button
                   aria-label="Move entry up the order"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-up=0"
                   disabled=""
                   tabindex="-1"
@@ -265,7 +265,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               >
                 <button
                   aria-label="Move entry down the order"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-down=0"
                   disabled=""
                   tabindex="-1"
@@ -296,7 +296,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
               >
                 <button
                   aria-label="Remove this entry"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -399,7 +399,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               >
                 <button
                   aria-label="Move up"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-up=0"
                   disabled=""
                   tabindex="-1"
@@ -426,7 +426,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               >
                 <button
                   aria-label="Move down"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-down=0"
                   disabled=""
                   tabindex="-1"
@@ -457,7 +457,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               >
                 <button
                   aria-label="Delete hint"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -560,7 +560,7 @@ exports[`GrantListEditorRow should render given related service data 1`] = `
               >
                 <button
                   aria-label="Move up"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-up=0"
                   disabled=""
                   tabindex="-1"
@@ -587,7 +587,7 @@ exports[`GrantListEditorRow should render given related service data 1`] = `
               >
                 <button
                   aria-label="Move down"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-down=0"
                   disabled=""
                   tabindex="-1"
@@ -618,7 +618,7 @@ exports[`GrantListEditorRow should render given related service data 1`] = `
               >
                 <button
                   aria-label="Delete hint"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -723,7 +723,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               >
                 <button
                   aria-label="Move entry up the order"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-up=0"
                   disabled=""
                   tabindex="-1"
@@ -750,7 +750,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               >
                 <button
                   aria-label="Move entry down the order"
-                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-testid="related-service-list-move-down=0"
                   disabled=""
                   tabindex="-1"
@@ -781,7 +781,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               >
                 <button
                   aria-label="Remove this entry"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >

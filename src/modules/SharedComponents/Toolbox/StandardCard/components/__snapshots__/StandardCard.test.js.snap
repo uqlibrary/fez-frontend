@@ -139,7 +139,7 @@ exports[`StandardCard component renders with square top and accent header 1`] = 
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-1mu3a8e-MuiCardHeader-root"
+      class="MuiCardHeader-root css-gyx2pk-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -190,7 +190,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
       >
         <button
           aria-label="Click for more information"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="help-icon"
           data-mui-internal-clone-element="true"
           data-testid="help-icon"
@@ -199,7 +199,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
           type="button"
         >
           <svg
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
             data-testid="HelpOutlineIcon"
             focusable="false"
             role="img"
