@@ -1848,7 +1848,7 @@ exports[`Alert should render warning outline type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
@@ -1873,7 +1873,7 @@ exports[`Alert should render warning outline type of alert 1`] = `
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
           >
             <b>
               Title - 
@@ -1889,7 +1889,7 @@ exports[`Alert should render warning outline type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1916,7 +1916,7 @@ exports[`Alert should render warning outline type of alert 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1931,7 +1931,7 @@ exports[`Alert should render warning outline type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"

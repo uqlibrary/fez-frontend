@@ -3664,7 +3664,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
@@ -3689,7 +3689,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
                   >
                     <b>
                       Open Access Required - 
@@ -3706,7 +3706,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -3893,7 +3893,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                         >
                           <button
                             aria-label="Information about uploading your UQ eSpace works to ORCID"
-                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
+                            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-grb5j8-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
                             data-testid="help-icon-orcid"
@@ -3957,7 +3957,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
             style="margin-top: 5px;"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
             >
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
@@ -3982,7 +3982,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                     </svg>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
                   >
                     <b>
                       Add your work to UQ eSpace - 
@@ -3999,7 +3999,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
