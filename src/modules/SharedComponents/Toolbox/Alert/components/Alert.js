@@ -63,7 +63,7 @@ const StyledGridWithIcon = styled(Grid, {
     // palette if rendered under a theme that lacks the custom `alert` section (e.g. MUI's default theme).
     const alertColors = theme.palette.alert;
     const alertText = alertColors?.text ?? theme.palette.text?.primary;
-    const alertBg = alertColors?.[_type]?.background ?? theme.palette[_type]?.light ?? theme.palette[_type]?.main;
+    const alertBg = alertColors?.[_type]?.background ?? theme.palette[_type]?.light;
     return {
         padding: '12px',
         marginTop: '5px',
