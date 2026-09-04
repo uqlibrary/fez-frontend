@@ -32,6 +32,7 @@ const paletteIndex = {
     error: 'error',
     error_outline: 'error',
     warning: 'warning',
+    warning_outline: 'warning',
     help: 'secondary',
     help_outline: 'secondary',
     info: 'accent',
