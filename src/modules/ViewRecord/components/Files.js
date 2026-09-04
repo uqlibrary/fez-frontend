@@ -374,7 +374,7 @@ const Files = props => {
             <StandardCard title={locale.viewRecord.sections.files.title}>
                 {/* eslint-disable-next-line camelcase */}
                 {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
-                    <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
+                    <Alert allowDismiss type={'warning'} message={getSensitiveHandlingNote(publication)} />
                 )}
                 {
                     /* istanbul ignore next */ !!fileData.filter(

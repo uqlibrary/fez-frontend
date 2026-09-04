@@ -331,7 +331,7 @@ export const ViewRecord = () => {
                     <Grid size={12} style={{ marginBottom: 24 }}>
                         <Alert
                             allowDismiss
-                            type={'info'}
+                            type={'warning'}
                             message={stripHtml(
                                 recordToView.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             )}
