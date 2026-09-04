@@ -1240,7 +1240,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1254,13 +1254,13 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="InfoIcon"
+                    data-testid="WarningIcon"
                     focusable="false"
-                    id="info-icon"
+                    id="warning-icon"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                      d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                     />
                   </svg>
                 </div>
@@ -1601,7 +1601,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1615,13 +1615,13 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="InfoIcon"
+                    data-testid="WarningIcon"
                     focusable="false"
-                    id="info-icon"
+                    id="warning-icon"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                      d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                     />
                   </svg>
                 </div>
@@ -1962,7 +1962,7 @@ exports[`Files Component  should render an image as the original filename with n
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1976,13 +1976,13 @@ exports[`Files Component  should render an image as the original filename with n
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="InfoIcon"
+                    data-testid="WarningIcon"
                     focusable="false"
-                    id="info-icon"
+                    id="warning-icon"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                      d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                     />
                   </svg>
                 </div>
@@ -5290,7 +5290,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -5304,13 +5304,13 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="InfoIcon"
+                    data-testid="WarningIcon"
                     focusable="false"
-                    id="info-icon"
+                    id="warning-icon"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                      d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                     />
                   </svg>
                 </div>
@@ -5651,7 +5651,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -5665,13 +5665,13 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="InfoIcon"
+                    data-testid="WarningIcon"
                     focusable="false"
-                    id="info-icon"
+                    id="warning-icon"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                      d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                     />
                   </svg>
                 </div>
@@ -6012,7 +6012,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           style="margin-top: 5px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-198272c-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -6026,13 +6026,13 @@ exports[`Files Component  should show a blacklisted collection member when the u
                   <svg
                     aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                    data-testid="InfoIcon"
+                    data-testid="WarningIcon"
                     focusable="false"
-                    id="info-icon"
+                    id="warning-icon"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                      d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
                     />
                   </svg>
                 </div>

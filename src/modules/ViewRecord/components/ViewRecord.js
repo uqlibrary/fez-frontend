@@ -330,14 +330,8 @@ export const ViewRecord = () => {
                 {!!recordToView.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
                     <Grid size={12} style={{ marginBottom: 24 }}>
                         <Alert
-                            sx={{
-                                backgroundColor: '#fef8e8',
-                                color: '#3b383e',
-                                '& .MuiSvgIcon-root': {
-                                    color: '#3a383e',
-                                },
-                            }}
-                            type={'warning_outline'}
+                            allowDismiss
+                            type={'warning'}
                             message={stripHtml(
                                 recordToView.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             )}

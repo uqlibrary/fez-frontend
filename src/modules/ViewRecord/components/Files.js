@@ -373,7 +373,7 @@ const Files = props => {
         <Grid size={12}>
             <StandardCard title={locale.viewRecord.sections.files.title}>
                 {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
-                    <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
+                    <Alert allowDismiss type={'warning'} message={getSensitiveHandlingNote(publication)} />
                 )}
                 {
                     /* istanbul ignore next */ !!fileData.filter(
