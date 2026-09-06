@@ -19,7 +19,9 @@ const RibbonChartContainer = ({ data, locale, colours, label, id, children, ...r
         <React.Fragment>
             <SectionTitle data-testid={`${id}-title`}>{label}</SectionTitle>
             {!!data && (
-                <TableContainer data-testid={`${id}-table`} {...rest}>
+                // tabIndex makes the horizontally-scrollable TableContainer keyboard-operable (arrow-key
+                // scroll), satisfying axe scrollable-region-focusable / WCAG 2.1.1 when the table overflows
+                <TableContainer data-testid={`${id}-table`} tabIndex={0} {...rest}>
                     <Table aria-label="table">
                         <TableHead>
                             <TableRow>
