@@ -17,7 +17,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-d6c1k5-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -73,7 +73,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                   >
                     <div
                       aria-label="Click to select a field to search from the list - Select a field currently selected"
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-expanded="false"
@@ -109,7 +109,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                       </svg>
                     </div>
                     <p
-                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-1g2spw3-MuiFormHelperText-root"
+                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-csh52s-MuiFormHelperText-root"
                     >
                       Please select a field to search
                     </p>
@@ -119,7 +119,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 css-aww24l-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-1qta56x-MuiTypography-root"
                   />
                 </div>
               </div>
@@ -139,7 +139,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                     data-testid="initial"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -181,14 +181,14 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                 >
                   Work type
                 </label>
                 <div
                   aria-label="Select work types to search on"
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiSelect-root css-170azzi-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiSelect-root css-v3qr78-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                   data-testid="document-type-selector"
                 >
                   <div
@@ -239,7 +239,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                   >
                     Published year range
                   </span>
@@ -256,7 +256,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-describedby="from-helper-text"
@@ -271,7 +271,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                       />
                     </div>
                     <p
-                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-1g2spw3-MuiFormHelperText-root"
+                      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-csh52s-MuiFormHelperText-root"
                       id="from-helper-text"
                     >
                       Invalid year range
@@ -286,7 +286,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                   >
                     <div
                       aria-labelledby="combiner-label"
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-hc0tq9-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl css-15au5hp-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -308,7 +308,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="true"
@@ -356,7 +356,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                 >
                   Open access
                 </span>
@@ -373,7 +373,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
         >
           <button
             aria-label="Click to add another advanced search field"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-124q8ic-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-oydpg5-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-row-add"
             data-testid="advanced-search-row-add"
             disabled=""
@@ -389,7 +389,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
         >
           <button
             aria-label="Click to reset the advanced search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1pkdsq6-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1o898es-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search-reset"
             data-testid="advanced-search-reset"
             id="reset-advanced-search"
@@ -404,7 +404,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
         >
           <button
             aria-label="Click to return to the simple search"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-nue4yf-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="toggle-to-simple-search"
             data-testid="toggle-to-simple-search"
             id="toggle-to-simple-search-mode"
@@ -423,7 +423,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
         >
           <button
             aria-label="Click to search eSpace"
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
             disabled=""

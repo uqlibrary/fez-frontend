@@ -12,7 +12,7 @@ exports[`FieldGridItem should render default view 1`] = `
     >
       <span>
         <span
-          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           style="opacity: 0.666;"
         >
           Formatted title
@@ -51,7 +51,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + B"
                         aria-label="Bold"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Bold"
@@ -81,7 +81,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + I"
                         aria-label="Italic"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Italic"
@@ -111,7 +111,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + U"
                         aria-label="Underline"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Underline"
@@ -141,7 +141,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + Shift + S"
                         aria-label="Strikethrough"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Strikethrough"
@@ -171,7 +171,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + ,"
                         aria-label="Subscript"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Subscript"
@@ -201,7 +201,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + ."
                         aria-label="Superscript"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Superscript"
@@ -235,7 +235,7 @@ exports[`FieldGridItem should render default view 1`] = `
                       <button
                         aria-label="Change case"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Change case"
@@ -271,7 +271,7 @@ exports[`FieldGridItem should render default view 1`] = `
                       <button
                         aria-label="Remove inline formatting"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Remove inline formatting"
@@ -301,7 +301,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         <button
                           aria-label="Insert special character"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Insert special character"
@@ -331,7 +331,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + Z"
                         aria-label="Undo"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Undo"
@@ -361,7 +361,7 @@ exports[`FieldGridItem should render default view 1`] = `
                         aria-description="Ctrl + Shift + Z"
                         aria-label="Redo"
                         aria-pressed="false"
-                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -387,7 +387,7 @@ exports[`FieldGridItem should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
         >
           <div
             class="tiptap ProseMirror"
@@ -423,7 +423,7 @@ exports[`FieldGridItem should render default view for a composed field 1`] = `
       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         data-testid="rek-sensitive-handling-note-id-label"
         id="rek-sensitive-handling-note-id-label"
@@ -431,7 +431,7 @@ exports[`FieldGridItem should render default view for a composed field 1`] = `
         Sensitive Handling Note
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       >
         <div
           aria-expanded="false"
@@ -507,7 +507,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
               >
                 <div
-                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                   role="alert"
                   style="--Paper-shadow: none;"
                 >
@@ -533,7 +533,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
             style="opacity: 0; visibility: hidden;"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
             >
               Drop to group by 
             </p>
@@ -577,7 +577,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
           class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
         >
           <table
-            class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+            class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
             style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
           >
             <thead
@@ -588,7 +588,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
               >
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                   colspan="1"
                   data-index="0"
                   scope="col"
@@ -610,7 +610,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 </th>
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                   colspan="1"
                   data-can-sort="true"
                   data-index="1"
@@ -647,7 +647,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                           >
                             <span
-                              class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                             >
                               Editor's name as published
                             </span>
@@ -679,7 +679,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                          class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                         >
                           0
                         </span>
@@ -692,7 +692,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 </th>
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                   colspan="1"
                   data-can-sort="true"
                   data-index="2"
@@ -708,7 +708,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                         class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                         >
                           UQ identifiers
                         </span>
@@ -738,7 +738,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                          class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                         >
                           0
                         </span>
@@ -751,7 +751,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                 </th>
                 <th
                   aria-sort="none"
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                   colspan="1"
                   data-index="3"
                   scope="col"
@@ -786,7 +786,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                   style="display: grid;"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                   >
                     No records to display
                   </p>
@@ -825,7 +825,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
     >
       <span>
         <span
-          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           style="opacity: 0.666;"
         >
           Formatted title
@@ -864,7 +864,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + B"
                         aria-label="Bold"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Bold"
@@ -894,7 +894,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + I"
                         aria-label="Italic"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Italic"
@@ -924,7 +924,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + U"
                         aria-label="Underline"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Underline"
@@ -954,7 +954,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + Shift + S"
                         aria-label="Strikethrough"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Strikethrough"
@@ -984,7 +984,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + ,"
                         aria-label="Subscript"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Subscript"
@@ -1014,7 +1014,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + ."
                         aria-label="Superscript"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Superscript"
@@ -1048,7 +1048,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                       <button
                         aria-label="Change case"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Change case"
@@ -1084,7 +1084,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                       <button
                         aria-label="Remove inline formatting"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Remove inline formatting"
@@ -1114,7 +1114,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         <button
                           aria-label="Insert special character"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Insert special character"
@@ -1144,7 +1144,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + Z"
                         aria-label="Undo"
                         aria-pressed="false"
-                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         tabindex="0"
                         type="button"
                         value="Undo"
@@ -1174,7 +1174,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
                         aria-description="Ctrl + Shift + Z"
                         aria-label="Redo"
                         aria-pressed="false"
-                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                         disabled=""
                         tabindex="-1"
                         type="button"
@@ -1200,7 +1200,7 @@ exports[`FieldGridItem without record should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
         >
           <div
             class="tiptap ProseMirror"

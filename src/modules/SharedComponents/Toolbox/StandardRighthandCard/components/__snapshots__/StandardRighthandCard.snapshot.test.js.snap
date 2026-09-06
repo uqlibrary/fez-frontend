@@ -9,7 +9,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1r6qgwy-MuiTypography-root"
       >
         Title
       </div>
@@ -66,7 +66,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1r6qgwy-MuiTypography-root"
       >
         Title
       </div>
@@ -125,7 +125,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1r6qgwy-MuiTypography-root"
       >
         card title
       </div>
@@ -154,7 +154,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1r6qgwy-MuiTypography-root"
       >
         Title
       </div>

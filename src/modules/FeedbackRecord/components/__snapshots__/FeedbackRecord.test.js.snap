@@ -9,7 +9,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -31,13 +31,13 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -72,13 +72,13 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -112,7 +112,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -123,7 +123,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -251,19 +251,19 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-your-details"
               id="standard-card-your-details"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -288,7 +288,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="share-details-label"
                       />
                       <div
@@ -340,7 +340,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my details with UQ Library
                           </span>
@@ -388,7 +388,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my feedback anonymously
                           </span>
@@ -404,7 +404,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       data-testid="first-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="first-name-label"
                         for="first-name-input"
@@ -413,7 +413,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         Given Name
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -438,7 +438,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       data-testid="last-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="last-name-label"
                         for="last-name-input"
@@ -454,7 +454,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="last-name-helper-text"
@@ -472,7 +472,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
                       >
@@ -488,7 +488,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       data-testid="contact-detail"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="contact-detail-label"
                         for="contact-detail-input"
@@ -504,7 +504,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="contact-detail-helper-text"
@@ -522,7 +522,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
                       >
@@ -538,7 +538,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       data-testid="community"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="community-label"
                         for="community-input"
@@ -547,7 +547,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         Community
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -568,7 +568,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
                     </h6>
@@ -577,7 +577,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="indigenous-identity-label"
                       />
                       <div
@@ -628,7 +628,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Aboriginal
                           </span>
@@ -676,7 +676,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Torres Strait Islander
                           </span>
@@ -724,7 +724,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Both, Aboriginal and Torres Strait Islander
                           </span>
@@ -772,7 +772,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -784,7 +784,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
                     </h6>
@@ -793,7 +793,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="has-kinship-connection-label"
                       />
                       <div
@@ -844,7 +844,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -892,7 +892,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -904,7 +904,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
                       <button
@@ -939,7 +939,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="is-icip-holder-label"
                       />
                       <div
@@ -990,7 +990,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -1038,7 +1038,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -1054,19 +1054,19 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-i-would-like-to"
               id="standard-card-i-would-like-to"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
@@ -1085,7 +1085,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-365cyv-MuiFormLabel-root"
+                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-g2x96m-MuiFormLabel-root"
                     id="feedback-types-label"
                   />
                   <div
@@ -1142,7 +1142,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           </span>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Provide feedback / suggestion /information for this record
                         </span>
@@ -1179,7 +1179,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Share a story about this material
                         </span>
@@ -1216,7 +1216,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Advise of cultural sensitivity / make a takedown request
                         </span>
@@ -1231,13 +1231,13 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -1256,7 +1256,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you have more information on this item?
                     </h6>
@@ -1265,7 +1265,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       data-testid="community-info"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-6n10m0-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-yme33r-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="community-info-label"
                         for="community-info-input"
@@ -1274,7 +1274,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         This may include Country, Community, or Language, found in the item.
                       </label>
                       <div
-                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1qh5ias-MuiInputBase-root-MuiOutlinedInput-root"
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1e3s1hw-MuiInputBase-root-MuiOutlinedInput-root"
                       >
                         <textarea
                           aria-invalid="false"
@@ -1314,7 +1314,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Have you identified any people, language and/or place in this item?
                     </h6>
@@ -1323,7 +1323,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       data-testid="related-people"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-6n10m0-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-yme33r-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="related-people-label"
                         for="related-people-input"
@@ -1332,7 +1332,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         If yes, please provide their name and any known information.
                       </label>
                       <div
-                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1qh5ias-MuiInputBase-root-MuiOutlinedInput-root"
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1e3s1hw-MuiInputBase-root-MuiOutlinedInput-root"
                       >
                         <textarea
                           aria-invalid="false"
@@ -1376,13 +1376,13 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -1401,7 +1401,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
                     </h6>
@@ -1410,7 +1410,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="acknowledgement-label"
                       />
                       <div
@@ -1461,7 +1461,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Public Acknowledgement of my name on the record
                           </span>
@@ -1509,7 +1509,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Private Acknowledgement of my name in the Library’s records
                           </span>
@@ -1557,7 +1557,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Anonymous information provided by a guest
                           </span>
@@ -1569,7 +1569,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                     >
                       The personal information on this form is requested in order to obtain your consent for the use as outlined above. The information will be used by UQ for the purpose of verifying that proper consent has been provided in accordance with the Information Privacy Act 2009 and UQ’s Privacy Management Policy and Procedures (PPL1.60.02). 
                     </p>
@@ -1647,7 +1647,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1pkdsq6-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1o898es-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1658,7 +1658,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="feedback-submit"
               data-testid="feedback-submit"
               disabled=""
@@ -1717,7 +1717,7 @@ exports[`Component FeedbackRecord should render loader when record is loading 1`
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
@@ -1740,7 +1740,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1762,13 +1762,13 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -1803,13 +1803,13 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -1843,7 +1843,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -1854,7 +1854,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -1977,19 +1977,19 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-your-details"
               id="standard-card-your-details"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -2014,7 +2014,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="share-details-label"
                       />
                       <div
@@ -2066,7 +2066,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my details with UQ Library
                           </span>
@@ -2114,7 +2114,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my feedback anonymously
                           </span>
@@ -2130,7 +2130,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       data-testid="first-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="first-name-label"
                         for="first-name-input"
@@ -2139,7 +2139,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         Given Name
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -2164,7 +2164,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       data-testid="last-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="last-name-label"
                         for="last-name-input"
@@ -2180,7 +2180,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="last-name-helper-text"
@@ -2198,7 +2198,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
                       >
@@ -2214,7 +2214,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       data-testid="contact-detail"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="contact-detail-label"
                         for="contact-detail-input"
@@ -2230,7 +2230,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="contact-detail-helper-text"
@@ -2248,7 +2248,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
                       >
@@ -2264,7 +2264,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       data-testid="community"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="community-label"
                         for="community-input"
@@ -2273,7 +2273,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         Community
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -2294,7 +2294,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
                     </h6>
@@ -2303,7 +2303,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="indigenous-identity-label"
                       />
                       <div
@@ -2354,7 +2354,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Aboriginal
                           </span>
@@ -2402,7 +2402,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Torres Strait Islander
                           </span>
@@ -2450,7 +2450,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Both, Aboriginal and Torres Strait Islander
                           </span>
@@ -2498,7 +2498,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -2510,7 +2510,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
                     </h6>
@@ -2519,7 +2519,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="has-kinship-connection-label"
                       />
                       <div
@@ -2570,7 +2570,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -2618,7 +2618,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -2630,7 +2630,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
                       <button
@@ -2665,7 +2665,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="is-icip-holder-label"
                       />
                       <div
@@ -2716,7 +2716,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -2764,7 +2764,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -2780,19 +2780,19 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-i-would-like-to"
               id="standard-card-i-would-like-to"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
@@ -2811,7 +2811,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                    class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                     id="feedback-types-label"
                   />
                   <div
@@ -2848,7 +2848,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Provide feedback / suggestion /information for this record
                         </span>
@@ -2885,7 +2885,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Share a story about this material
                         </span>
@@ -2922,7 +2922,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Advise of cultural sensitivity / make a takedown request
                         </span>
@@ -2937,13 +2937,13 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -2962,7 +2962,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
                     </h6>
@@ -2971,7 +2971,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="acknowledgement-label"
                       />
                       <div
@@ -3022,7 +3022,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Public Acknowledgement of my name on the record
                           </span>
@@ -3070,7 +3070,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Private Acknowledgement of my name in the Library’s records
                           </span>
@@ -3118,7 +3118,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Anonymous information provided by a guest
                           </span>
@@ -3130,7 +3130,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                     >
                       The personal information on this form is requested in order to obtain your consent for the use as outlined above. The information will be used by UQ for the purpose of verifying that proper consent has been provided in accordance with the Information Privacy Act 2009 and UQ’s Privacy Management Policy and Procedures (PPL1.60.02). 
                     </p>
@@ -3208,7 +3208,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1pkdsq6-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1o898es-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -3219,7 +3219,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="feedback-submit"
               data-testid="feedback-submit"
               disabled=""
@@ -3246,7 +3246,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -3268,13 +3268,13 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -3309,13 +3309,13 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -3349,7 +3349,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -3360,7 +3360,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -3488,19 +3488,19 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-your-details"
               id="standard-card-your-details"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -3525,7 +3525,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="share-details-label"
                       />
                       <div
@@ -3577,7 +3577,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my details with UQ Library
                           </span>
@@ -3625,7 +3625,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my feedback anonymously
                           </span>
@@ -3641,7 +3641,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       data-testid="first-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="first-name-label"
                         for="first-name-input"
@@ -3650,7 +3650,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         Given Name
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -3675,7 +3675,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       data-testid="last-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="last-name-label"
                         for="last-name-input"
@@ -3691,7 +3691,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="last-name-helper-text"
@@ -3709,7 +3709,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
                       >
@@ -3725,7 +3725,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       data-testid="contact-detail"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="contact-detail-label"
                         for="contact-detail-input"
@@ -3741,7 +3741,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="contact-detail-helper-text"
@@ -3759,7 +3759,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
                       >
@@ -3775,7 +3775,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       data-testid="community"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="community-label"
                         for="community-input"
@@ -3784,7 +3784,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         Community
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -3805,7 +3805,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
                     </h6>
@@ -3814,7 +3814,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="indigenous-identity-label"
                       />
                       <div
@@ -3865,7 +3865,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Aboriginal
                           </span>
@@ -3913,7 +3913,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Torres Strait Islander
                           </span>
@@ -3961,7 +3961,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Both, Aboriginal and Torres Strait Islander
                           </span>
@@ -4009,7 +4009,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -4021,7 +4021,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
                     </h6>
@@ -4030,7 +4030,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="has-kinship-connection-label"
                       />
                       <div
@@ -4081,7 +4081,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -4129,7 +4129,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -4141,7 +4141,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
                       <button
@@ -4176,7 +4176,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="is-icip-holder-label"
                       />
                       <div
@@ -4227,7 +4227,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -4275,7 +4275,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -4291,19 +4291,19 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-i-would-like-to"
               id="standard-card-i-would-like-to"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
@@ -4322,7 +4322,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-365cyv-MuiFormLabel-root"
+                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-g2x96m-MuiFormLabel-root"
                     id="feedback-types-label"
                   />
                   <div
@@ -4359,7 +4359,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Provide feedback / suggestion /information for this record
                         </span>
@@ -4416,7 +4416,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           </span>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Share a story about this material
                         </span>
@@ -4453,7 +4453,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Advise of cultural sensitivity / make a takedown request
                         </span>
@@ -4468,13 +4468,13 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -4487,7 +4487,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                 id="standard-card-content"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                 >
                   Would you like to share a story or provide more context about this item?
                 </h6>
@@ -4496,7 +4496,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   data-testid="story"
                 >
                   <div
-                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1qh5ias-MuiInputBase-root-MuiOutlinedInput-root"
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1e3s1hw-MuiInputBase-root-MuiOutlinedInput-root"
                   >
                     <textarea
                       aria-invalid="false"
@@ -4539,13 +4539,13 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -4564,7 +4564,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
                     </h6>
@@ -4573,7 +4573,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="acknowledgement-label"
                       />
                       <div
@@ -4624,7 +4624,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Public Acknowledgement of my name on the record
                           </span>
@@ -4672,7 +4672,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Private Acknowledgement of my name in the Library’s records
                           </span>
@@ -4720,7 +4720,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Anonymous information provided by a guest
                           </span>
@@ -4732,7 +4732,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                     >
                       The personal information on this form is requested in order to obtain your consent for the use as outlined above. The information will be used by UQ for the purpose of verifying that proper consent has been provided in accordance with the Information Privacy Act 2009 and UQ’s Privacy Management Policy and Procedures (PPL1.60.02). 
                     </p>
@@ -4810,7 +4810,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1pkdsq6-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1o898es-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -4821,7 +4821,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="feedback-submit"
               data-testid="feedback-submit"
               disabled=""
@@ -4848,7 +4848,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -4870,13 +4870,13 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -4911,13 +4911,13 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -4951,7 +4951,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -4962,7 +4962,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -5090,19 +5090,19 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-your-details"
               id="standard-card-your-details"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -5127,7 +5127,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="share-details-label"
                       />
                       <div
@@ -5179,7 +5179,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my details with UQ Library
                           </span>
@@ -5227,7 +5227,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             I’d like to share my feedback anonymously
                           </span>
@@ -5243,7 +5243,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       data-testid="first-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="first-name-label"
                         for="first-name-input"
@@ -5252,7 +5252,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         Given Name
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -5277,7 +5277,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       data-testid="last-name"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="last-name-label"
                         for="last-name-input"
@@ -5293,7 +5293,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="last-name-helper-text"
@@ -5311,7 +5311,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
                       >
@@ -5327,7 +5327,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       data-testid="contact-detail"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="contact-detail-label"
                         for="contact-detail-input"
@@ -5343,7 +5343,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-describedby="contact-detail-helper-text"
@@ -5361,7 +5361,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         />
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-csh52s-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
                       >
@@ -5377,7 +5377,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       data-testid="community"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="community-label"
                         for="community-input"
@@ -5386,7 +5386,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         Community
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -5407,7 +5407,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
                     </h6>
@@ -5416,7 +5416,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="indigenous-identity-label"
                       />
                       <div
@@ -5467,7 +5467,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Aboriginal
                           </span>
@@ -5515,7 +5515,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes, Torres Strait Islander
                           </span>
@@ -5563,7 +5563,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Both, Aboriginal and Torres Strait Islander
                           </span>
@@ -5611,7 +5611,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -5623,7 +5623,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
                     </h6>
@@ -5632,7 +5632,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="has-kinship-connection-label"
                       />
                       <div
@@ -5683,7 +5683,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -5731,7 +5731,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -5743,7 +5743,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
                       <button
@@ -5778,7 +5778,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="is-icip-holder-label"
                       />
                       <div
@@ -5829,7 +5829,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Yes
                           </span>
@@ -5877,7 +5877,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             No
                           </span>
@@ -5893,19 +5893,19 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-i-would-like-to"
               id="standard-card-i-would-like-to"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
@@ -5924,7 +5924,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-365cyv-MuiFormLabel-root"
+                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-g2x96m-MuiFormLabel-root"
                     id="feedback-types-label"
                   />
                   <div
@@ -5961,7 +5961,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Provide feedback / suggestion /information for this record
                         </span>
@@ -5998,7 +5998,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           </svg>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Share a story about this material
                         </span>
@@ -6055,7 +6055,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           </span>
                         </span>
                         <span
-                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                         >
                           Advise of cultural sensitivity / make a takedown request
                         </span>
@@ -6070,13 +6070,13 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -6095,7 +6095,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Does the item contain cultural information that is secret/sacred or sensitive?
                     </h6>
@@ -6104,7 +6104,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="cultural-info-label"
                       />
                       <div
@@ -6141,7 +6141,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Mens Business
                             </span>
@@ -6178,7 +6178,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Womens Business
                             </span>
@@ -6215,7 +6215,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Sacred sites
                             </span>
@@ -6252,7 +6252,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Ceremonies
                             </span>
@@ -6289,7 +6289,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Other
                             </span>
@@ -6298,7 +6298,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
                           >
                             <div
-                              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-15lgwpk-MuiInputBase-root-MuiInput-root"
+                              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-g00p23-MuiInputBase-root-MuiInput-root"
                             >
                               <input
                                 aria-invalid="false"
@@ -6320,7 +6320,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       Does the item need to be managed with special care?
                     </h6>
@@ -6329,7 +6329,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="special-care-label"
                       />
                       <div
@@ -6366,7 +6366,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               No - The item does not contain sensitive material
                             </span>
@@ -6403,7 +6403,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Yes - A warning should be added
                             </span>
@@ -6440,7 +6440,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Yes - Only Men should view
                             </span>
@@ -6477,7 +6477,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Yes - Only Women should view
                             </span>
@@ -6514,7 +6514,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Yes - Community must approve access to view this item
                             </span>
@@ -6551,7 +6551,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                             >
                               Other
                             </span>
@@ -6560,7 +6560,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
                           >
                             <div
-                              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-15lgwpk-MuiInputBase-root-MuiInput-root"
+                              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-g00p23-MuiInputBase-root-MuiInput-root"
                             >
                               <input
                                 aria-invalid="false"
@@ -6586,13 +6586,13 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -6611,7 +6611,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
                     </h6>
@@ -6620,7 +6620,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
                         id="acknowledgement-label"
                       />
                       <div
@@ -6671,7 +6671,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Public Acknowledgement of my name on the record
                           </span>
@@ -6719,7 +6719,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Private Acknowledgement of my name in the Library’s records
                           </span>
@@ -6767,7 +6767,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             </span>
                           </span>
                           <span
-                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
                           >
                             Anonymous information provided by a guest
                           </span>
@@ -6779,7 +6779,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                     >
                       The personal information on this form is requested in order to obtain your consent for the use as outlined above. The information will be used by UQ for the purpose of verifying that proper consent has been provided in accordance with the Information Privacy Act 2009 and UQ’s Privacy Management Policy and Procedures (PPL1.60.02). 
                     </p>
@@ -6857,7 +6857,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1pkdsq6-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1o898es-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -6868,7 +6868,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="feedback-submit"
               data-testid="feedback-submit"
               disabled=""

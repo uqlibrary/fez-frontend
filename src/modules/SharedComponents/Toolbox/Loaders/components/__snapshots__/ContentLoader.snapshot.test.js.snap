@@ -56,7 +56,7 @@ exports[`ContentLoader snapshots tests renders loader 1`] = `
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Waiting to load...

@@ -31,7 +31,7 @@ exports[`NotesSection component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Additional notes
@@ -56,7 +56,7 @@ exports[`NotesSection component should render default view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-lfi7cf-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-hl82h6-MuiTypography-root"
                     style="font-weight: 600;"
                   >
                     Additional notes (public)
@@ -92,7 +92,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bold"
@@ -122,7 +122,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Italic"
@@ -152,7 +152,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Underline"
@@ -182,7 +182,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Strikethrough"
@@ -212,7 +212,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Subscript"
@@ -242,7 +242,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Superscript"
@@ -277,7 +277,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Link"
@@ -307,7 +307,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Ordered list"
@@ -337,7 +337,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bulleted list"
@@ -371,7 +371,7 @@ exports[`NotesSection component should render default view 1`] = `
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Change case"
@@ -407,7 +407,7 @@ exports[`NotesSection component should render default view 1`] = `
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Remove inline formatting"
@@ -437,7 +437,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                     tabindex="0"
                                     type="button"
                                     value="Insert special character"
@@ -467,7 +467,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Undo"
@@ -497,7 +497,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -523,7 +523,7 @@ exports[`NotesSection component should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -577,7 +577,7 @@ exports[`NotesSection component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Internal notes
@@ -602,7 +602,7 @@ exports[`NotesSection component should render default view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Internal notes (admin)
@@ -638,7 +638,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bold"
@@ -668,7 +668,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Italic"
@@ -698,7 +698,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Underline"
@@ -728,7 +728,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Strikethrough"
@@ -758,7 +758,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Subscript"
@@ -788,7 +788,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Superscript"
@@ -823,7 +823,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Link"
@@ -853,7 +853,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Ordered list"
@@ -883,7 +883,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bulleted list"
@@ -917,7 +917,7 @@ exports[`NotesSection component should render default view 1`] = `
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Change case"
@@ -953,7 +953,7 @@ exports[`NotesSection component should render default view 1`] = `
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Remove inline formatting"
@@ -983,7 +983,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                     tabindex="0"
                                     type="button"
                                     value="Insert special character"
@@ -1013,7 +1013,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Undo"
@@ -1043,7 +1043,7 @@ exports[`NotesSection component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1069,7 +1069,7 @@ exports[`NotesSection component should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -1123,7 +1123,7 @@ exports[`NotesSection component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Cultural Institute (CI) Notice
@@ -1143,7 +1143,7 @@ exports[`NotesSection component should render default view 1`] = `
             >
               <div>
                 <span
-                  class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                 >
                   Determines if the record or collection is to be CI labelled Attribution Incomplete.
                 </span>
@@ -1175,7 +1175,7 @@ exports[`NotesSection component should render default view 1`] = `
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
                   data-testid="attributionIncomplete-label"
                   id="attributionIncomplete-label"
                 >
@@ -1222,7 +1222,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Additional notes
@@ -1247,7 +1247,7 @@ exports[`NotesSection component should render disabled view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-lfi7cf-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-hl82h6-MuiTypography-root"
                     style="font-weight: 600;"
                   >
                     Additional notes (public)
@@ -1283,7 +1283,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1314,7 +1314,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1345,7 +1345,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1376,7 +1376,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1407,7 +1407,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1438,7 +1438,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1474,7 +1474,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1505,7 +1505,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1536,7 +1536,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1571,7 +1571,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1608,7 +1608,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1639,7 +1639,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                     disabled=""
                                     tabindex="-1"
                                     type="button"
@@ -1670,7 +1670,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1701,7 +1701,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1727,7 +1727,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-1tgcem7-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -1780,7 +1780,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Internal notes
@@ -1805,7 +1805,7 @@ exports[`NotesSection component should render disabled view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Internal notes (admin)
@@ -1841,7 +1841,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1872,7 +1872,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1903,7 +1903,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1934,7 +1934,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1965,7 +1965,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1996,7 +1996,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2032,7 +2032,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2063,7 +2063,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2094,7 +2094,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2129,7 +2129,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2166,7 +2166,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2197,7 +2197,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                     disabled=""
                                     tabindex="-1"
                                     type="button"
@@ -2228,7 +2228,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2259,7 +2259,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2285,7 +2285,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-1tgcem7-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -2338,7 +2338,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Cultural Institute (CI) Notice
@@ -2358,7 +2358,7 @@ exports[`NotesSection component should render disabled view 1`] = `
             >
               <div>
                 <span
-                  class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                 >
                   Determines if the record or collection is to be CI labelled Attribution Incomplete.
                 </span>
@@ -2393,7 +2393,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
                   data-testid="attributionIncomplete-label"
                   id="attributionIncomplete-label"
                 >

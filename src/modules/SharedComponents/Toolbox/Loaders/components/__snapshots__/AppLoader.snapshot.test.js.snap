@@ -9,7 +9,7 @@ exports[`Component AppLoader should render as expected 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
     >
       <span
-        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jb97hd-MuiCircularProgress-root"
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-oy58ok-MuiCircularProgress-root"
         role="progressbar"
         style="width: 80px; height: 80px;"
       >
@@ -40,7 +40,7 @@ exports[`Component AppLoader should render as expected 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
     >
       <h6
-        class="MuiTypography-root MuiTypography-h6 css-12tzrfb-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h6 css-170tbda-MuiTypography-root"
       >
         Fez frontend
       </h6>

@@ -39,7 +39,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Name as published
             </span>
@@ -52,7 +52,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             class="MuiListItemText-root css-y2splu-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               UQ identifier / Organisation
             </span>
@@ -69,7 +69,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           class="MuiListItemText-root css-12763ss-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -145,7 +145,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Name as published
             </span>
@@ -162,7 +162,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           class="MuiListItemText-root css-12763ss-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -239,7 +239,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Name as published
             </span>
@@ -256,7 +256,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
           class="MuiListItemText-root css-12763ss-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -332,7 +332,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Name as published
             </span>
@@ -345,7 +345,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
             class="MuiListItemText-root css-y2splu-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Role
             </span>
@@ -359,7 +359,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
           class="MuiListItemText-root css-12763ss-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -435,7 +435,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Name as published
             </span>
@@ -452,7 +452,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
           class="MuiListItemText-root css-1ojqf4x-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -528,7 +528,7 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Name as published
             </span>
@@ -545,7 +545,7 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
           class="MuiListItemText-root css-omnkj0-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -623,7 +623,7 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
             class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
             >
               Name as published
             </span>
@@ -640,7 +640,7 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
           class="MuiListItemText-root css-12763ss-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
           >
             Reorder records
           </span>

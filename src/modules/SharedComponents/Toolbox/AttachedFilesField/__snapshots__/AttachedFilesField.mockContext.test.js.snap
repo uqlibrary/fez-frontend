@@ -6,19 +6,19 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h4
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -47,21 +47,21 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-1il8lwd-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-dgnj0v-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-3xfxpg-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
           </div>
@@ -100,7 +100,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-11-download-link"
                     data-testid="file-name-11-download-link"
                     href="http://localhost/view/UQ:252236/MyUQeSpace_Researcher_Guidelines_current.pdf"
@@ -131,7 +131,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Full text (open access)
               </p>
@@ -140,7 +140,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 487.57 KB
               </p>
@@ -215,7 +215,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-15-download-link"
                     data-testid="file-name-15-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
@@ -246,7 +246,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Full text (open access)
               </p>
@@ -255,7 +255,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 1.03 MB
               </p>
@@ -330,7 +330,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-16-download-link"
                     data-testid="file-name-16-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
@@ -361,7 +361,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 UPO Guide v.3
               </p>
@@ -370,7 +370,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 1.27 MB
               </p>
@@ -445,7 +445,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-17-download-link"
                     data-testid="file-name-17-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
@@ -476,7 +476,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 UPO Guide v.4
               </p>
@@ -485,7 +485,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 573.25 KB
               </p>
@@ -560,7 +560,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-13-download-link"
                     data-testid="file-name-13-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
@@ -591,7 +591,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 My UQ eSpace - Researcher Guide
               </p>
@@ -600,7 +600,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 1.05 MB
               </p>
@@ -675,7 +675,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-14-download-link"
                     data-testid="file-name-14-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
@@ -706,7 +706,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 My UQ eSpace - Researcher Guide
               </p>
@@ -715,7 +715,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 267.44 KB
               </p>
@@ -790,7 +790,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-31-download-link"
                     data-testid="file-name-31-download-link"
                     href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
@@ -821,7 +821,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 UPO Guide - v.1
               </p>
@@ -830,7 +830,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 902.51 KB
               </p>
@@ -905,7 +905,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-32-download-link"
                     data-testid="file-name-32-download-link"
                     href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
@@ -936,7 +936,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Full text
               </p>
@@ -945,7 +945,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 84.36 KB
               </p>

@@ -24,13 +24,13 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 Oral Presentations – Thursday 11 July 2019
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -167,7 +167,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-rc8kub-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-undefined-primary"
             data-testid="publication-action-undefined-primary"
             disabled=""
@@ -201,7 +201,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-nue4yf-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-undefined-secondary"
             tabindex="0"
             type="button"
@@ -233,7 +233,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-nue4yf-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-undefined-secondary"
             tabindex="0"
             type="button"
@@ -294,7 +294,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -305,7 +305,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -425,7 +425,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -446,7 +446,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -478,7 +478,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -502,7 +502,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-rc8kub-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-UQ41878-primary"
             data-testid="publication-action-UQ41878-primary"
             disabled=""
@@ -536,7 +536,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-nue4yf-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -568,7 +568,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-nue4yf-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -629,7 +629,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -640,7 +640,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <div>
                 Citation display not available for 
@@ -664,7 +664,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -685,7 +685,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
-                        class="scopusCitationCount css-si3g8d"
+                        class="scopusCitationCount css-1h1gyme"
                         data-analyticsid="scopus-citation-count-link"
                         data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -706,7 +706,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
-                        class="altmetricCitationCount css-si3g8d"
+                        class="altmetricCitationCount css-1h1gyme"
                         data-analyticsid="altmetric-citation-count-link"
                         data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
@@ -727,7 +727,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -788,7 +788,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -799,7 +799,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <div>
                 Citation display not available for 
@@ -822,7 +822,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -843,7 +843,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
-                        class="scopusCitationCount css-si3g8d"
+                        class="scopusCitationCount css-1h1gyme"
                         data-analyticsid="scopus-citation-count-link"
                         data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -864,7 +864,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
-                        class="altmetricCitationCount css-si3g8d"
+                        class="altmetricCitationCount css-1h1gyme"
                         data-analyticsid="altmetric-citation-count-link"
                         data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
@@ -885,7 +885,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -946,7 +946,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -957,7 +957,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -1077,7 +1077,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -1098,7 +1098,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -1130,7 +1130,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -1176,7 +1176,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1187,7 +1187,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -1307,7 +1307,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -1328,7 +1328,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -1360,7 +1360,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -1384,7 +1384,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-nue4yf-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -1425,7 +1425,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1436,7 +1436,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -1556,7 +1556,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -1577,7 +1577,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -1609,7 +1609,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -1659,7 +1659,7 @@ exports[`PublicationCitation  should render component with default item with ima
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-1ywz4fm-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-1ikfvis-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
@@ -1692,7 +1692,7 @@ exports[`PublicationCitation  should render component with default item with ima
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1703,7 +1703,7 @@ exports[`PublicationCitation  should render component with default item with ima
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -1886,7 +1886,7 @@ exports[`PublicationCitation  should render component with default item with ima
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -1907,7 +1907,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
-                        class="scopusCitationCount css-si3g8d"
+                        class="scopusCitationCount css-1h1gyme"
                         data-analyticsid="scopus-citation-count-link"
                         data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -1928,7 +1928,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
-                        class="altmetricCitationCount css-si3g8d"
+                        class="altmetricCitationCount css-1h1gyme"
                         data-analyticsid="altmetric-citation-count-link"
                         data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
@@ -1949,7 +1949,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -2012,7 +2012,7 @@ exports[`PublicationCitation  should render component with default item with ima
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-815vs4-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-18m0nz7-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
@@ -2047,7 +2047,7 @@ exports[`PublicationCitation  should render component with default item with ima
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2058,7 +2058,7 @@ exports[`PublicationCitation  should render component with default item with ima
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -2241,7 +2241,7 @@ exports[`PublicationCitation  should render component with default item with ima
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -2262,7 +2262,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
-                        class="scopusCitationCount css-si3g8d"
+                        class="scopusCitationCount css-1h1gyme"
                         data-analyticsid="scopus-citation-count-link"
                         data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -2283,7 +2283,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
-                        class="altmetricCitationCount css-si3g8d"
+                        class="altmetricCitationCount css-1h1gyme"
                         data-analyticsid="altmetric-citation-count-link"
                         data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
@@ -2304,7 +2304,7 @@ exports[`PublicationCitation  should render component with default item with ima
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -2365,7 +2365,7 @@ exports[`PublicationCitation  should render component with default item without 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2376,7 +2376,7 @@ exports[`PublicationCitation  should render component with default item without 
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -2559,7 +2559,7 @@ exports[`PublicationCitation  should render component with default item without 
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -2580,7 +2580,7 @@ exports[`PublicationCitation  should render component with default item without 
                       </a>
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
-                        class="scopusCitationCount css-si3g8d"
+                        class="scopusCitationCount css-1h1gyme"
                         data-analyticsid="scopus-citation-count-link"
                         data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -2601,7 +2601,7 @@ exports[`PublicationCitation  should render component with default item without 
                       </a>
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
-                        class="altmetricCitationCount css-si3g8d"
+                        class="altmetricCitationCount css-1h1gyme"
                         data-analyticsid="altmetric-citation-count-link"
                         data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
@@ -2622,7 +2622,7 @@ exports[`PublicationCitation  should render component with default item without 
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -2683,13 +2683,13 @@ exports[`PublicationCitation  should render component with default item without 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -2809,7 +2809,7 @@ exports[`PublicationCitation  should render component with default item without 
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -2830,7 +2830,7 @@ exports[`PublicationCitation  should render component with default item without 
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -2862,7 +2862,7 @@ exports[`PublicationCitation  should render component with default item without 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -2908,7 +2908,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2935,7 +2935,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -2956,7 +2956,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -2988,7 +2988,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -3034,7 +3034,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3045,7 +3045,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -3165,7 +3165,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -3186,7 +3186,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -3218,7 +3218,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -3264,7 +3264,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3275,7 +3275,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -3395,7 +3395,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -3416,7 +3416,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -3448,7 +3448,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -3494,7 +3494,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3505,7 +3505,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -3625,7 +3625,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -3646,7 +3646,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -3678,7 +3678,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -3731,7 +3731,7 @@ exports[`PublicationCitation  should render component with publication from mult
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3742,7 +3742,7 @@ exports[`PublicationCitation  should render component with publication from mult
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -3862,7 +3862,7 @@ exports[`PublicationCitation  should render component with publication from mult
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -3883,7 +3883,7 @@ exports[`PublicationCitation  should render component with publication from mult
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -3913,7 +3913,7 @@ exports[`PublicationCitation  should render component with publication from mult
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Found in: 
                 <a
@@ -3950,7 +3950,7 @@ exports[`PublicationCitation  should render component with publication from mult
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -3995,7 +3995,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             />
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -4115,7 +4115,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -4136,7 +4136,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -4166,7 +4166,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Found in: 
                 <a
@@ -4203,7 +4203,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -4252,7 +4252,7 @@ exports[`PublicationCitation  should render component without image if whitelist
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-815vs4-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-18m0nz7-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
@@ -4287,7 +4287,7 @@ exports[`PublicationCitation  should render component without image if whitelist
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4298,7 +4298,7 @@ exports[`PublicationCitation  should render component without image if whitelist
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -4481,7 +4481,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -4502,7 +4502,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                       </a>
                       <a
                         aria-label="Full citation in Scopus will open in a new window"
-                        class="scopusCitationCount css-si3g8d"
+                        class="scopusCitationCount css-1h1gyme"
                         data-analyticsid="scopus-citation-count-link"
                         data-testid="scopus-citation-count-link"
                         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -4523,7 +4523,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                       </a>
                       <a
                         aria-label="Full citation in Altmetric will open in a new window"
-                        class="altmetricCitationCount css-si3g8d"
+                        class="altmetricCitationCount css-1h1gyme"
                         data-analyticsid="altmetric-citation-count-link"
                         data-testid="altmetric-citation-count-link"
                         href="https://queensland.altmetric.com/details/20711411"
@@ -4544,7 +4544,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -4605,7 +4605,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4616,7 +4616,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -4736,7 +4736,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -4757,7 +4757,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -4789,7 +4789,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -4813,7 +4813,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-rc8kub-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-UQ41878-primary"
             data-testid="publication-action-UQ41878-primary"
             tabindex="0"
@@ -4855,7 +4855,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4890,7 +4890,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       class="fez-icon altmetric xxxlarge"
                     />
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
                     >
                       23
                     </h6>
@@ -4899,7 +4899,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                     class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
                       title="Difference in social media activities"
                     >
                       +
@@ -4910,7 +4910,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
               </a>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -5030,7 +5030,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -5051,7 +5051,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -5083,7 +5083,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -5129,7 +5129,7 @@ exports[`PublicationCitation  should render publication citation metric without 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -5161,7 +5161,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                     class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 count css-15rj26v-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
                     >
                       23
                     </h6>
@@ -5170,7 +5170,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                     class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
                       title="Difference in social media activities"
                     >
                       +
@@ -5181,7 +5181,7 @@ exports[`PublicationCitation  should render publication citation metric without 
               </a>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -5301,7 +5301,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -5322,7 +5322,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -5354,7 +5354,7 @@ exports[`PublicationCitation  should render publication citation metric without 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >
@@ -5400,7 +5400,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -5411,7 +5411,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               </h6>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
             >
               <span
                 class="citationContent citationJournalArticle"
@@ -5525,7 +5525,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   style="flex-grow: 1; width: 100%;"
                 >
                   <div
-                    class="MuiTypography-root MuiTypography-caption css-lajqbs-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-fy7r9h-MuiTypography-root"
                   >
                     <i>
                       <span
@@ -5567,7 +5567,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                     >
                       <a
                         aria-label="Full citation in Web of science will open in a new window"
-                        class="wosCitationCount css-si3g8d"
+                        class="wosCitationCount css-1h1gyme"
                         data-analyticsid="wos-citation-count-link"
                         data-testid="wos-citation-count-link"
                         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -5588,7 +5588,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                       </a>
                       <a
                         aria-label="Full citation in Google scholar will open in a new window"
-                        class="googleCitationCount css-si3g8d"
+                        class="googleCitationCount css-1h1gyme"
                         data-analyticsid="google-citation-count-link"
                         data-testid="google-citation-count-link"
                         href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -5620,7 +5620,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
             data-testid="rek-content-indicator"
             id="rek-content-indicator"
           >

@@ -6,13 +6,13 @@ exports[`AttachedFilesField component should render default view when files prov
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card"
       id="standard-card"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -39,21 +39,21 @@ exports[`AttachedFilesField component should render default view when files prov
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-1il8lwd-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-dgnj0v-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-3xfxpg-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
           </div>
@@ -92,10 +92,10 @@ exports[`AttachedFilesField component should render default view when files prov
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-3835508-preview"
                       id="file-name-3835508-preview"
                     >
@@ -109,7 +109,7 @@ exports[`AttachedFilesField component should render default view when files prov
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 new file test description
               </p>
@@ -118,7 +118,7 @@ exports[`AttachedFilesField component should render default view when files prov
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 218.15 KB
               </p>
@@ -173,13 +173,13 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card"
       id="standard-card"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -206,21 +206,21 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-1il8lwd-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-dgnj0v-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-3xfxpg-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               />
             </div>
           </div>
@@ -259,10 +259,10 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-3835508-preview"
                       id="file-name-3835508-preview"
                     >
@@ -276,7 +276,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 new file test description
               </p>
@@ -285,7 +285,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 218.15 KB
               </p>

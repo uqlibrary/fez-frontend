@@ -9,7 +9,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
       >
         Restrictions for file upload
       </p>

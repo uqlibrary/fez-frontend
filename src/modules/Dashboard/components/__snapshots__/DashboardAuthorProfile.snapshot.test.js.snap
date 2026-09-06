@@ -14,7 +14,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
       >
         <div
           aria-label="Photograph of  Professor J Researcher"
-          class="MuiAvatar-root MuiAvatar-circular css-1sguapy-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular css-n0xaog-MuiAvatar-root"
           title="Professor J Researcher"
         >
           <img
@@ -39,7 +39,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1s8t1s1-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
                 >
                   Professor
                    
@@ -52,7 +52,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
                 >
                   <b>
                     Affiliate Professor
@@ -60,7 +60,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   , Institute for Molecular Bioscience
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
                 >
                   <b>
                     Affiliate Professorial Res Fellow
@@ -68,7 +68,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   , School of Chemistry and Molecular Biosciences
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
                 >
                   <b>
                     ARC Australian Laureate Fellow
@@ -181,7 +181,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   title="Click to visit your ORCID profile"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-cj8z3c-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
                   >
                     orcid.org/0000-0001-1111-1111
                   </span>
@@ -217,7 +217,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
       >
         <div
           aria-label="Photograph of    "
-          class="MuiAvatar-root MuiAvatar-circular css-1sguapy-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular css-n0xaog-MuiAvatar-root"
           title="  "
         >
           <img
@@ -242,7 +242,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1s8t1s1-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
                 >
                    
                    

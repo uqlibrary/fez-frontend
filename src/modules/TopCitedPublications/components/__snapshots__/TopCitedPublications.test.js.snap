@@ -50,7 +50,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading trending works
@@ -72,7 +72,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
 exports[`Component TopCitedPublications should render tabs larger than xs width properly 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
     data-testid="standard-card"
     id="standard-card"
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
@@ -96,7 +96,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           >
             <button
               aria-selected="true"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-f9od2c-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="0"
               type="button"
@@ -107,7 +107,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-f9od2c-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -118,7 +118,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-f9od2c-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -142,7 +142,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1r6qgwy-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -212,7 +212,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -244,7 +244,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
@@ -255,7 +255,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                       >
                         <span
                           class="citationContent citationJournalArticle"
@@ -377,7 +377,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount css-si3g8d"
+                                  class="wosCitationCount css-1h1gyme"
                                   data-analyticsid="wos-citation-count-link"
                                   data-testid="wos-citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -398,7 +398,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount css-si3g8d"
+                                  class="scopusCitationCount css-1h1gyme"
                                   data-analyticsid="scopus-citation-count-link"
                                   data-testid="scopus-citation-count-link"
                                   href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -419,7 +419,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount css-si3g8d"
+                                  class="altmetricCitationCount css-1h1gyme"
                                   data-analyticsid="altmetric-citation-count-link"
                                   data-testid="altmetric-citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -440,7 +440,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount css-si3g8d"
+                                  class="googleCitationCount css-1h1gyme"
                                   data-analyticsid="google-citation-count-link"
                                   data-testid="google-citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
@@ -538,7 +538,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
 exports[`Component TopCitedPublications should render top cited publications with default width xs 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
     data-testid="standard-card"
     id="standard-card"
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
@@ -562,7 +562,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
           >
             <button
               aria-selected="true"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth Mui-selected css-f9od2c-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="0"
               type="button"
@@ -571,7 +571,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-f9od2c-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -580,7 +580,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
             </button>
             <button
               aria-selected="false"
-              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-1ib8lk2-MuiButtonBase-root-MuiTab-root"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit MuiTab-fullWidth css-f9od2c-MuiButtonBase-root-MuiTab-root"
               role="tab"
               tabindex="-1"
               type="button"
@@ -602,7 +602,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1r6qgwy-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -672,7 +672,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -704,7 +704,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
@@ -715,7 +715,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                       >
                         <span
                           class="citationContent citationJournalArticle"
@@ -837,7 +837,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount css-si3g8d"
+                                  class="wosCitationCount css-1h1gyme"
                                   data-analyticsid="wos-citation-count-link"
                                   data-testid="wos-citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -858,7 +858,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount css-si3g8d"
+                                  class="scopusCitationCount css-1h1gyme"
                                   data-analyticsid="scopus-citation-count-link"
                                   data-testid="scopus-citation-count-link"
                                   href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -879,7 +879,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount css-si3g8d"
+                                  class="altmetricCitationCount css-1h1gyme"
                                   data-analyticsid="altmetric-citation-count-link"
                                   data-testid="altmetric-citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -900,7 +900,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount css-si3g8d"
+                                  class="googleCitationCount css-1h1gyme"
                                   data-analyticsid="google-citation-count-link"
                                   data-testid="google-citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"

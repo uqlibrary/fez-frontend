@@ -32,7 +32,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
                 data-testid="test-label"
                 for="test-input"
@@ -41,7 +41,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -69,7 +69,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="true"
                   for="test-aut-id"
                   id="test-aut-id-label"
@@ -77,7 +77,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   UQ Author ID
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -139,7 +139,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               id="test-add"
@@ -154,7 +154,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               id="test-cancel"
@@ -212,7 +212,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Contributor's name as published
                     </span>
@@ -225,7 +225,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                     class="MuiListItemText-root css-y2splu-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       UQ identifier / Organisation
                     </span>
@@ -242,7 +242,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   class="MuiListItemText-root css-omnkj0-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -297,7 +297,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
@@ -321,12 +321,12 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
                   >
                     Researcher, J
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -341,12 +341,12 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6067zb-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-kn6yrc-MuiTypography-root"
                   >
                     Professor J Researcher
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-34evj5-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-hs4nh8-MuiTypography-root"
                   >
                     The University of Queensland (uqresearcher - 410)
                   </span>
@@ -373,7 +373,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="EditIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -400,7 +400,7 @@ exports[`ContributorsEditor can edit a selected contributor 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="DeleteIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -489,7 +489,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Contributor's name as published
                     </span>
@@ -502,7 +502,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                     class="MuiListItemText-root css-y2splu-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       UQ identifier / Organisation
                     </span>
@@ -519,7 +519,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   class="MuiListItemText-root css-12763ss-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -597,12 +597,12 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     test 1
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -682,7 +682,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
@@ -705,12 +705,12 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
                   >
                     test 2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -737,7 +737,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="KeyboardArrowUpIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -764,7 +764,7 @@ exports[`ContributorsEditor can edit a selected contributor and reset other cont
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="DeleteIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -817,7 +817,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -826,7 +826,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 Name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -854,7 +854,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   for="test-aut-id"
                   id="test-aut-id-label"
@@ -862,7 +862,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   UQ Author ID
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -905,7 +905,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -921,7 +921,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -980,7 +980,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Name as published
                     </span>
@@ -993,7 +993,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                     class="MuiListItemText-root css-y2splu-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       UQ identifier / Organisation
                     </span>
@@ -1010,7 +1010,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root css-omnkj0-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder records
                   </span>
@@ -1088,12 +1088,12 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     test
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -1200,7 +1200,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
@@ -1223,12 +1223,12 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
                   >
                     Test 2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -1255,7 +1255,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="KeyboardArrowUpIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1282,7 +1282,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="KeyboardArrowDownIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1309,7 +1309,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="EditIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1336,7 +1336,7 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="DeleteIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1385,12 +1385,12 @@ exports[`ContributorsEditor can not edit and add contributor with same id 1`] = 
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     EditedContributorAuthorIdNOTInTheList
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Third  listed contributor
                   </span>
@@ -1560,7 +1560,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Contributor's name as published
                     </span>
@@ -1577,7 +1577,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   class="MuiListItemText-root css-omnkj0-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -1632,7 +1632,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               id="contributor-row"
             >
               <div
-                class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+                class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
               >
                 <svg
                   aria-hidden="true"
@@ -1655,12 +1655,12 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
                   >
                     test 1
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -1687,7 +1687,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="KeyboardArrowDownIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1714,7 +1714,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="EditIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1741,7 +1741,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                       data-testid="DeleteIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -1790,12 +1790,12 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     test 2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -1965,7 +1965,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Contributor's name as published
                     </span>
@@ -1982,7 +1982,7 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   class="MuiListItemText-root css-12763ss-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -2060,12 +2060,12 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     test 2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -2168,12 +2168,12 @@ exports[`ContributorsEditor moves down a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     test 1
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -2316,7 +2316,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Contributor's name as published
                     </span>
@@ -2333,7 +2333,7 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   class="MuiListItemText-root css-12763ss-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -2411,12 +2411,12 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     test 2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -2519,12 +2519,12 @@ exports[`ContributorsEditor moves up a contributor 1`] = `
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     test 1
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -2625,7 +2625,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                 role="alert"
                 style="--Paper-shadow: none;"
               >
@@ -2651,7 +2651,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
           style="opacity: 0; visibility: hidden;"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
           >
             Drop to group by 
           </p>
@@ -2695,7 +2695,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
         class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+          class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
           style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
@@ -2706,7 +2706,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -2728,7 +2728,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -2765,7 +2765,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                           class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                           >
                             Rek-author's name as published
                           </span>
@@ -2797,7 +2797,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                         </svg>
                       </span>
                       <span
-                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                       >
                         0
                       </span>
@@ -2810,7 +2810,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -2826,7 +2826,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                       class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                       >
                         UQ identifiers
                       </span>
@@ -2856,7 +2856,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                         </svg>
                       </span>
                       <span
-                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                       >
                         0
                       </span>
@@ -2869,7 +2869,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -2904,7 +2904,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                 style="display: grid;"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                 >
                   No records to display
                 </p>
@@ -2962,7 +2962,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -2971,7 +2971,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -2999,7 +2999,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   for="test-aut-id"
                   id="test-aut-id-label"
@@ -3007,7 +3007,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   UQ Author ID
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -3050,7 +3050,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -3066,7 +3066,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -3125,7 +3125,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Contributor's name as published
                     </span>
@@ -3142,7 +3142,7 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root css-omnkj0-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -3220,12 +3220,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     1
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -3355,12 +3355,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     2
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -3517,12 +3517,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     3
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Third  listed contributor
                   </span>
@@ -3679,12 +3679,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     4
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Fourth  listed contributor
                   </span>
@@ -3841,12 +3841,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     5
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Fifth  listed contributor
                   </span>
@@ -4003,12 +4003,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     6
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Sixth  listed contributor
                   </span>
@@ -4165,12 +4165,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     7
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Seventh  listed contributor
                   </span>
@@ -4327,12 +4327,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     8
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Eighth  listed contributor
                   </span>
@@ -4489,12 +4489,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     9
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Ninth  listed contributor
                   </span>
@@ -4651,12 +4651,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     10
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Tenth  listed contributor
                   </span>
@@ -4813,12 +4813,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     11
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Eleventh  listed contributor
                   </span>
@@ -4975,12 +4975,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     12
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Twelfth  listed contributor
                   </span>
@@ -5137,12 +5137,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     3
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Thirteenth  listed contributor
                   </span>
@@ -5299,12 +5299,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     14
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Fourteenth  listed contributor
                   </span>
@@ -5461,12 +5461,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     15
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Fifteenth  listed contributor
                   </span>
@@ -5623,12 +5623,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     16
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Sixteenth  listed contributor
                   </span>
@@ -5785,12 +5785,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     17
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Seventeenth  listed contributor
                   </span>
@@ -5947,12 +5947,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     18
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Eighteenth  listed contributor
                   </span>
@@ -6109,12 +6109,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     19
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Nineteenth  listed contributor
                   </span>
@@ -6271,12 +6271,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     20
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Twentieth  listed contributor
                   </span>
@@ -6433,12 +6433,12 @@ exports[`ContributorsEditor renders 21 contributor rows wrapped in an infinite s
                   class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
                   >
                     21
                   </p>
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Twenty-first  listed contributor
                   </span>
@@ -6594,7 +6594,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Name as published
                     </span>
@@ -6611,7 +6611,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                   class="MuiListItemText-root css-omnkj0-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder records
                   </span>
@@ -6689,7 +6689,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
                   class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -6796,7 +6796,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -6805,7 +6805,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                 Name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6833,7 +6833,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   for="test-aut-id"
                   id="test-aut-id-label"
@@ -6841,7 +6841,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
                   UQ Author ID
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -6884,7 +6884,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -6900,7 +6900,7 @@ exports[`ContributorsEditor renders component with no locale 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -6950,7 +6950,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -6959,7 +6959,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6987,7 +6987,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   for="test-aut-id"
                   id="test-aut-id-label"
@@ -6995,7 +6995,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                   UQ Author ID
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -7038,7 +7038,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -7054,7 +7054,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-cancel"
               data-testid="test-cancel"
               disabled=""
@@ -7098,7 +7098,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                 role="alert"
                 style="--Paper-shadow: none;"
               >
@@ -7124,7 +7124,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
           style="opacity: 0; visibility: hidden;"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
           >
             Drop to group by 
           </p>
@@ -7172,7 +7172,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
         class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root MuiTable-stickyHeader css-1dllymj-MuiTable-root"
+          class="MuiTable-root MuiTable-stickyHeader css-1siqyiz-MuiTable-root"
           style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
@@ -7183,7 +7183,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lsstzm-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-a0ao22-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -7205,7 +7205,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-aez360-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ohzejf-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -7242,7 +7242,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                           class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                           >
                             Contributor's name as published
                           </span>
@@ -7274,7 +7274,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                         </svg>
                       </span>
                       <span
-                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                       >
                         0
                       </span>
@@ -7287,7 +7287,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rnckva-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10z0bd3-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7303,7 +7303,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                       class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                       >
                         UQ identifier / Organisation
                       </span>
@@ -7333,7 +7333,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                         </svg>
                       </span>
                       <span
-                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                       >
                         0
                       </span>
@@ -7346,7 +7346,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1mz8gjm-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-s3j1z4-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -7378,7 +7378,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
                 colspan="4"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                 >
                   No records to display
                 </p>
@@ -7430,7 +7430,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                 role="alert"
                 style="--Paper-shadow: none;"
               >
@@ -7456,7 +7456,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
           style="opacity: 0; visibility: hidden;"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
           >
             Drop to group by 
           </p>
@@ -7504,7 +7504,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
         class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root MuiTable-stickyHeader css-1dllymj-MuiTable-root"
+          class="MuiTable-root MuiTable-stickyHeader css-1siqyiz-MuiTable-root"
           style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
@@ -7515,7 +7515,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lsstzm-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-a0ao22-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -7537,7 +7537,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-aez360-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ohzejf-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -7574,7 +7574,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                           class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                           >
                             Contributor's name as published
                           </span>
@@ -7606,7 +7606,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                         </svg>
                       </span>
                       <span
-                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                       >
                         0
                       </span>
@@ -7619,7 +7619,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rnckva-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10z0bd3-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7635,7 +7635,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                       class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                       >
                         UQ identifier / Organisation
                       </span>
@@ -7665,7 +7665,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                         </svg>
                       </span>
                       <span
-                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                        class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                       >
                         0
                       </span>
@@ -7678,7 +7678,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-1mz8gjm-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-s3j1z4-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -7712,7 +7712,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               id="test-list-row-0"
             >
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1weeygr-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1loir7x-MuiTableCell-root"
                 data-index="0"
               >
                 <span
@@ -7744,7 +7744,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 </span>
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1mm2626-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-2k2q4r-MuiTableCell-root"
                 data-index="1"
               >
                 <div
@@ -7770,12 +7770,12 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     class="MuiGrid-root MuiGrid-direction-xs-row css-1ut8og2-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-1rm8jtj-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1efvlc3-MuiTypography-root"
                       data-testid="test-list-row-0-name-as-published"
                       id="test-list-row-0-name-as-published"
                     />
                     <span
-                      class="MuiTypography-root MuiTypography-caption css-1jelr2f-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption css-u0rhrj-MuiTypography-root"
                     >
                       First  listed contributor
                     </span>
@@ -7783,17 +7783,17 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 </div>
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1996tex-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-138fxh8-MuiTableCell-root"
                 data-index="2"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                   data-testid="test-list-row-0-uq-identifiers"
                   id="test-list-row-0-uq-identifiers"
                 />
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1bc17nn-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rk4eo5-MuiTableCell-root"
                 data-index="3"
               >
                 <div
@@ -7911,7 +7911,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               id="test-list-row-0-detailPanel"
             >
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-3f53dw-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-12iq70z-MuiTableCell-root"
                 colspan="4"
               />
             </tr>
@@ -7966,7 +7966,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="org-affiliation-label"
                 id="org-affiliation-label"
@@ -7974,7 +7974,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                 Org affiliation
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
               >
                 <div
@@ -8026,7 +8026,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -8035,7 +8035,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8064,7 +8064,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   for="test-aut-id"
                   id="test-aut-id-label"
@@ -8072,7 +8072,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                   UQ Author ID
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -8117,7 +8117,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8167,7 +8167,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -8176,7 +8176,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8204,7 +8204,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8254,7 +8254,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -8263,7 +8263,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8291,7 +8291,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   for="test-aut-id"
                   id="test-aut-id-label"
@@ -8299,7 +8299,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
                   UQ Author ID
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -8344,7 +8344,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8394,7 +8394,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -8403,7 +8403,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8431,7 +8431,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
               >
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-autocomplete="list"
@@ -8463,7 +8463,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8513,7 +8513,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -8522,7 +8522,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8550,7 +8550,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8609,7 +8609,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                     class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                   >
                     <span
-                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                     >
                       Contributor's name as published
                     </span>
@@ -8626,7 +8626,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                   class="MuiListItemText-root css-12763ss-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                   >
                     Reorder items
                   </span>
@@ -8704,7 +8704,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                   class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     First  listed contributor
                   </span>
@@ -8807,7 +8807,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
                   class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
                 >
                   <span
-                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
                   >
                     Second  listed contributor
                   </span>
@@ -8914,7 +8914,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -8923,7 +8923,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8951,7 +8951,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -8966,7 +8966,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
       </div>
     </div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-12980t6-MuiTypography-root"
       data-testid="test-error"
     >
       <span>
@@ -9009,7 +9009,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -9018,7 +9018,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -9046,7 +9046,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -9061,7 +9061,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
       </div>
     </div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-12980t6-MuiTypography-root"
       data-testid="test-error"
     >
       test
@@ -9102,7 +9102,7 @@ exports[`ContributorsEditor should show given validation error 1`] = `
               data-testid="test"
             >
               <label
-                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="test-label"
                 for="test-input"
@@ -9111,7 +9111,7 @@ exports[`ContributorsEditor should show given validation error 1`] = `
                 Contributor's name as published
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -9139,7 +9139,7 @@ exports[`ContributorsEditor should show given validation error 1`] = `
             style="margin-bottom: 8px;"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="test-add"
               data-testid="test-add"
               disabled=""
@@ -9154,7 +9154,7 @@ exports[`ContributorsEditor should show given validation error 1`] = `
       </div>
     </div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-12980t6-MuiTypography-root"
       data-testid="test-error"
     >
       This is a test error

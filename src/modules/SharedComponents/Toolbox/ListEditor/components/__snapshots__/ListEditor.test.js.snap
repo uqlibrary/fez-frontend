@@ -18,7 +18,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for="test-input"
             id="test-input-label"
@@ -26,7 +26,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -44,7 +44,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -64,7 +64,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -73,7 +73,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -128,7 +128,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               one
             </p>
@@ -215,7 +215,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               two
             </p>
@@ -332,7 +332,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               three
             </p>
@@ -449,7 +449,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               four
             </p>
@@ -566,7 +566,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               five
             </p>
@@ -683,7 +683,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               six
             </p>
@@ -800,7 +800,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               seven
             </p>
@@ -917,7 +917,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               eight
             </p>
@@ -1034,7 +1034,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               nine
             </p>
@@ -1151,7 +1151,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               ten
             </p>
@@ -1228,7 +1228,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -1252,7 +1252,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for="test-input"
             id="test-input-label"
@@ -1260,7 +1260,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -1278,7 +1278,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -1298,7 +1298,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -1307,7 +1307,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -1360,7 +1360,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               one
             </p>
@@ -1447,7 +1447,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               two
             </p>
@@ -1564,7 +1564,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               three
             </p>
@@ -1681,7 +1681,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               four
             </p>
@@ -1798,7 +1798,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               five
             </p>
@@ -1915,7 +1915,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               six
             </p>
@@ -2032,7 +2032,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               seven
             </p>
@@ -2149,7 +2149,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               eight
             </p>
@@ -2266,7 +2266,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               nine
             </p>
@@ -2383,7 +2383,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               ten
             </p>
@@ -2460,7 +2460,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -2484,7 +2484,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for="test-input"
             id="test-input-label"
@@ -2492,7 +2492,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -2510,7 +2510,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -2530,7 +2530,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -2539,7 +2539,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -2592,7 +2592,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               one
             </p>
@@ -2679,7 +2679,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               two
             </p>
@@ -2796,7 +2796,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               three
             </p>
@@ -2913,7 +2913,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               four
             </p>
@@ -3030,7 +3030,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               five
             </p>
@@ -3147,7 +3147,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               six
             </p>
@@ -3264,7 +3264,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               seven
             </p>
@@ -3381,7 +3381,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               eight
             </p>
@@ -3498,7 +3498,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               nine
             </p>
@@ -3615,7 +3615,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               ten
             </p>
@@ -3692,7 +3692,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -3707,7 +3707,7 @@ exports[`ListEditor tests should add an item with id and set state 1`] = `
   >
     <div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-16ahcq-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-z2rnpc-MuiButtonBase-root-MuiButton-root"
         data-testid="test-button"
         tabindex="0"
         type="button"
@@ -3718,7 +3718,7 @@ exports[`ListEditor tests should add an item with id and set state 1`] = `
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -3733,7 +3733,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
   >
     <div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-16ahcq-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-z2rnpc-MuiButtonBase-root-MuiButton-root"
         data-testid="test-button"
         tabindex="0"
         type="button"
@@ -3749,7 +3749,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -3802,7 +3802,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test
             </p>
@@ -3848,7 +3848,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -3863,7 +3863,7 @@ exports[`ListEditor tests should add item with key and set state 1`] = `
   >
     <div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-16ahcq-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-z2rnpc-MuiButtonBase-root-MuiButton-root"
         data-testid="test-button"
         tabindex="0"
         type="button"
@@ -3874,7 +3874,7 @@ exports[`ListEditor tests should add item with key and set state 1`] = `
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -3889,7 +3889,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
   >
     <div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-16ahcq-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-z2rnpc-MuiButtonBase-root-MuiButton-root"
         data-testid="test-button"
         tabindex="0"
         type="button"
@@ -3905,7 +3905,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -3958,7 +3958,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test
             </p>
@@ -4004,7 +4004,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -4019,7 +4019,7 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
   >
     <div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-16ahcq-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-z2rnpc-MuiButtonBase-root-MuiButton-root"
         data-testid="test-button"
         tabindex="0"
         type="button"
@@ -4030,7 +4030,7 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -4054,7 +4054,7 @@ exports[`ListEditor tests should move down an item 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for="test-input"
             id="test-input-label"
@@ -4062,7 +4062,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -4080,7 +4080,7 @@ exports[`ListEditor tests should move down an item 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -4100,7 +4100,7 @@ exports[`ListEditor tests should move down an item 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -4109,7 +4109,7 @@ exports[`ListEditor tests should move down an item 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -4162,7 +4162,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               one
             </p>
@@ -4249,7 +4249,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               three
             </p>
@@ -4366,7 +4366,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               two
             </p>
@@ -4443,7 +4443,7 @@ exports[`ListEditor tests should move down an item 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -4467,7 +4467,7 @@ exports[`ListEditor tests should move up an item 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for="test-input"
             id="test-input-label"
@@ -4475,7 +4475,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -4493,7 +4493,7 @@ exports[`ListEditor tests should move up an item 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -4513,7 +4513,7 @@ exports[`ListEditor tests should move up an item 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -4522,7 +4522,7 @@ exports[`ListEditor tests should move up an item 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -4575,7 +4575,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               two
             </p>
@@ -4662,7 +4662,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               one
             </p>
@@ -4779,7 +4779,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               three
             </p>
@@ -4856,7 +4856,7 @@ exports[`ListEditor tests should move up an item 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -4877,7 +4877,7 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -4899,7 +4899,7 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -4920,7 +4920,7 @@ exports[`ListEditor tests should render full component with a defined className 
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -4946,7 +4946,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -4955,7 +4955,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -5008,7 +5008,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test 1
             </p>
@@ -5095,7 +5095,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test 2
             </p>
@@ -5172,7 +5172,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -5198,7 +5198,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -5207,7 +5207,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -5260,7 +5260,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test 1
             </p>
@@ -5347,7 +5347,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test 2
             </p>
@@ -5424,7 +5424,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -5448,7 +5448,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -5456,7 +5456,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5474,7 +5474,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -5494,7 +5494,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -5503,7 +5503,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -5556,7 +5556,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               1234-1234
             </p>
@@ -5670,7 +5670,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               1234-2222
             </p>
@@ -5774,7 +5774,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>
@@ -5798,7 +5798,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -5806,7 +5806,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             NoLabel
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5824,7 +5824,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -5844,7 +5844,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -5853,7 +5853,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -5906,7 +5906,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               one
             </p>
@@ -6020,7 +6020,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               four
             </p>
@@ -6164,7 +6164,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               three
             </p>
@@ -6268,7 +6268,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </div>

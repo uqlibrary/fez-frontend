@@ -29,7 +29,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-15u1gxo-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1ttqb5n-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >

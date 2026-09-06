@@ -9,19 +9,19 @@ exports[`DesignForm component 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-design-information"
         id="standard-card-design-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -46,7 +46,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="rek_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="true"
                   data-testid="rek_title-label"
                   for="rek_title-input"
@@ -62,7 +62,7 @@ exports[`DesignForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -96,7 +96,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="fez_record_search_key_project_name.rek_project_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_project_name.rek_project_name-label"
                   for="fez_record_search_key_project_name.rek_project_name-input"
@@ -105,7 +105,7 @@ exports[`DesignForm component 1`] = `
                   Project name
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -131,7 +131,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="fez_record_search_key_location[0].rek_location"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_location[0].rek_location-label"
                   for="fez_record_search_key_location[0].rek_location-input"
@@ -140,7 +140,7 @@ exports[`DesignForm component 1`] = `
                   Location
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -166,7 +166,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="fez_record_search_key_publisher.rek_publisher"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_publisher.rek_publisher-label"
                   for="fez_record_search_key_publisher.rek_publisher-input"
@@ -182,7 +182,7 @@ exports[`DesignForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -209,7 +209,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-label"
                   for="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
@@ -225,7 +225,7 @@ exports[`DesignForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -252,7 +252,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="rek-doi"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-doi-label"
                   for="rek-doi-input"
@@ -261,7 +261,7 @@ exports[`DesignForm component 1`] = `
                   DOI
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -290,7 +290,7 @@ exports[`DesignForm component 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Project start date
@@ -317,7 +317,7 @@ exports[`DesignForm component 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -335,7 +335,7 @@ exports[`DesignForm component 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Year required
                       </p>
@@ -344,7 +344,7 @@ exports[`DesignForm component 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -394,7 +394,7 @@ exports[`DesignForm component 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -427,7 +427,7 @@ exports[`DesignForm component 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     End date
@@ -447,7 +447,7 @@ exports[`DesignForm component 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -465,7 +465,7 @@ exports[`DesignForm component 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Invalid date
                       </p>
@@ -474,7 +474,7 @@ exports[`DesignForm component 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -524,7 +524,7 @@ exports[`DesignForm component 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -554,19 +554,19 @@ exports[`DesignForm component 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-designer-name"
         id="standard-card-designer-name"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -610,7 +610,7 @@ exports[`DesignForm component 1`] = `
           id="standard-card-designer-name-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
           >
             Please provide a list of designers and then select your name from the list.
           </p>
@@ -651,7 +651,7 @@ exports[`DesignForm component 1`] = `
                       style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="authors-label"
                         for="authors-input"
@@ -667,7 +667,7 @@ exports[`DesignForm component 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
@@ -698,7 +698,7 @@ exports[`DesignForm component 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-add"
                       data-testid="authors-add"
                       disabled=""
@@ -714,7 +714,7 @@ exports[`DesignForm component 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-cancel"
                       data-testid="authors-cancel"
                       disabled=""
@@ -729,7 +729,7 @@ exports[`DesignForm component 1`] = `
               </div>
             </div>
             <span
-              class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-12980t6-MuiTypography-root"
               data-testid="authors-error"
             >
               <span>
@@ -752,19 +752,19 @@ exports[`DesignForm component 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-optional-information"
         id="standard-card-optional-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -789,7 +789,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="comments"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="comments-label"
                   for="comments-input"
@@ -798,7 +798,7 @@ exports[`DesignForm component 1`] = `
                   Notes (not publicly viewable)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -831,7 +831,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="rek_link"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link-label"
                   for="rek_link-input"
@@ -840,7 +840,7 @@ exports[`DesignForm component 1`] = `
                   Link
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -866,7 +866,7 @@ exports[`DesignForm component 1`] = `
                 data-testid="rek_link_description"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link_description-label"
                   for="rek_link_description-input"
@@ -875,7 +875,7 @@ exports[`DesignForm component 1`] = `
                   Link description
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -909,19 +909,19 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-design-information"
         id="standard-card-design-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -946,7 +946,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="rek_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_title-label"
                   for="rek_title-input"
@@ -962,7 +962,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -996,7 +996,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="fez_record_search_key_project_name.rek_project_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_project_name.rek_project_name-label"
                   for="fez_record_search_key_project_name.rek_project_name-input"
@@ -1005,7 +1005,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   Project name
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -1031,7 +1031,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="fez_record_search_key_location[0].rek_location"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_location[0].rek_location-label"
                   for="fez_record_search_key_location[0].rek_location-input"
@@ -1040,7 +1040,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   Location
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -1066,7 +1066,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="fez_record_search_key_publisher.rek_publisher"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_publisher.rek_publisher-label"
                   for="fez_record_search_key_publisher.rek_publisher-input"
@@ -1082,7 +1082,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -1109,7 +1109,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-label"
                   for="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
@@ -1125,7 +1125,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -1152,7 +1152,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="rek-doi"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-doi-label"
                   for="rek-doi-input"
@@ -1161,7 +1161,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   DOI
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -1190,7 +1190,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Project start date
@@ -1217,7 +1217,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -1235,7 +1235,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Year required
                       </p>
@@ -1244,7 +1244,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -1294,7 +1294,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -1327,7 +1327,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     End date
@@ -1347,7 +1347,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -1365,7 +1365,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Invalid date
                       </p>
@@ -1374,7 +1374,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -1424,7 +1424,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -1454,19 +1454,19 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-designer-name"
         id="standard-card-designer-name"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -1510,7 +1510,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
           id="standard-card-designer-name-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
           >
             Please provide a list of designers and then select your name from the list.
           </p>
@@ -1549,7 +1549,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="org-affiliation-label"
                         id="org-affiliation-label"
@@ -1557,7 +1557,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         Org affiliation
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -1611,7 +1611,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="authors-label"
                         for="authors-input"
@@ -1627,7 +1627,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -1658,7 +1658,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           for="authors-aut-id"
                           id="authors-aut-id-label"
@@ -1666,7 +1666,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                           UQ Author ID
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-autocomplete="list"
@@ -1709,7 +1709,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-add"
                       data-testid="authors-add"
                       disabled=""
@@ -1725,7 +1725,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-cancel"
                       data-testid="authors-cancel"
                       disabled=""
@@ -1740,7 +1740,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
               </div>
             </div>
             <span
-              class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-12980t6-MuiTypography-root"
               data-testid="authors-error"
             >
               <span>
@@ -1769,19 +1769,19 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-ntro-data"
             id="standard-card-ntro-data"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -1837,7 +1837,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   >
                     <span>
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
                       >
                         <span>
                           Abstract/Description* 
@@ -1849,7 +1849,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         </span>
                       </p>
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                       >
                         Enter a brief description of the work - 800 character limit is no longer applicable
                       </span>
@@ -1884,7 +1884,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + B"
                                       aria-label="Bold"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Bold"
@@ -1914,7 +1914,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + I"
                                       aria-label="Italic"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Italic"
@@ -1944,7 +1944,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + U"
                                       aria-label="Underline"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Underline"
@@ -1974,7 +1974,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + Shift + S"
                                       aria-label="Strikethrough"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Strikethrough"
@@ -2004,7 +2004,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + ,"
                                       aria-label="Subscript"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Subscript"
@@ -2034,7 +2034,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + ."
                                       aria-label="Superscript"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Superscript"
@@ -2069,7 +2069,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + Shift + U"
                                       aria-label="Link"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Link"
@@ -2099,7 +2099,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + Shift + 7"
                                       aria-label="Ordered list"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Ordered list"
@@ -2129,7 +2129,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + Shift + 8"
                                       aria-label="Bulleted list"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Bulleted list"
@@ -2163,7 +2163,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                     <button
                                       aria-label="Change case"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Change case"
@@ -2199,7 +2199,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                     <button
                                       aria-label="Remove inline formatting"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Remove inline formatting"
@@ -2229,7 +2229,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       <button
                                         aria-label="Insert special character"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Insert special character"
@@ -2259,7 +2259,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + Z"
                                       aria-label="Undo"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Undo"
@@ -2289,7 +2289,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                                       aria-description="Ctrl + Shift + Z"
                                       aria-label="Redo"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       disabled=""
                                       tabindex="-1"
                                       type="button"
@@ -2315,7 +2315,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -2349,7 +2349,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         for="rek-series"
                         id="rek-series-label"
@@ -2357,7 +2357,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         Series
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-autocomplete="list"
@@ -2387,7 +2387,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     data-testid="rek-total-pages"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-total-pages-label"
                       for="rek-total-pages-input"
@@ -2403,7 +2403,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2430,7 +2430,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     data-testid="rek-original-format"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-original-format-label"
                       for="rek-original-format-input"
@@ -2439,7 +2439,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       Physical description
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2464,7 +2464,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-language-label"
                       id="rek-language-label"
@@ -2472,7 +2472,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       Language
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-expanded="false"
@@ -2523,7 +2523,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-quality-indicator-label"
                       id="rek-quality-indicator-label"
@@ -2538,7 +2538,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-expanded="false"
@@ -2592,19 +2592,19 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-v2j61i-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-grant-details"
             id="standard-card-grant-details"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -2632,7 +2632,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       data-testid="rek-grant-agency"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-grant-agency-label"
                         for="rek-grant-agency-input"
@@ -2641,7 +2641,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         Grant Agency
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -2668,7 +2668,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       data-testid="rek-grant-id"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-grant-id-label"
                         for="rek-grant-id-input"
@@ -2677,7 +2677,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         Grant ID
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -2696,7 +2696,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+                      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
                     >
                       Accepts IDs or full URLs
                     </div>
@@ -2708,14 +2708,14 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                         style="margin-bottom: -3px;"
                       >
                          
                          
                       </span>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-disabled="true"
@@ -2759,7 +2759,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-grant-add"
                       data-testid="rek-grant-add"
                       disabled=""
@@ -2781,19 +2781,19 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-optional-information"
         id="standard-card-optional-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -2818,7 +2818,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="comments"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="comments-label"
                   for="comments-input"
@@ -2827,7 +2827,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   Notes (not publicly viewable)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -2860,7 +2860,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="rek_link"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link-label"
                   for="rek_link-input"
@@ -2869,7 +2869,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   Link
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -2895,7 +2895,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 data-testid="rek_link_description"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link_description-label"
                   for="rek_link_description-input"
@@ -2904,7 +2904,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                   Link description
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -2938,19 +2938,19 @@ exports[`DesignForm component with all fields disabled 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-design-information"
         id="standard-card-design-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -2975,7 +2975,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="rek_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_title-label"
                   for="rek_title-input"
@@ -2991,7 +2991,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -3026,7 +3026,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_project_name.rek_project_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_project_name.rek_project_name-label"
                   for="fez_record_search_key_project_name.rek_project_name-input"
@@ -3035,7 +3035,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   Project name
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3062,7 +3062,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_location[0].rek_location"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_location[0].rek_location-label"
                   for="fez_record_search_key_location[0].rek_location-input"
@@ -3071,7 +3071,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   Location
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3098,7 +3098,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_publisher.rek_publisher"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_publisher.rek_publisher-label"
                   for="fez_record_search_key_publisher.rek_publisher-input"
@@ -3114,7 +3114,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3142,7 +3142,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-label"
                   for="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
@@ -3158,7 +3158,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3186,7 +3186,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="rek-doi"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-doi-label"
                   for="rek-doi-input"
@@ -3195,7 +3195,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   DOI
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3225,7 +3225,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Project start date
@@ -3252,7 +3252,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -3271,7 +3271,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Year required
                       </p>
@@ -3280,7 +3280,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-disabled="true"
@@ -3331,7 +3331,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -3365,7 +3365,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     End date
@@ -3385,7 +3385,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -3404,7 +3404,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Invalid date
                       </p>
@@ -3413,7 +3413,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-disabled="true"
@@ -3464,7 +3464,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -3495,19 +3495,19 @@ exports[`DesignForm component with all fields disabled 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-designer-name"
         id="standard-card-designer-name"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -3551,7 +3551,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
           id="standard-card-designer-name-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
           >
             Please provide a list of designers and then select your name from the list.
           </p>
@@ -3592,7 +3592,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                       style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="authors-label"
                         for="authors-input"
@@ -3608,7 +3608,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
@@ -3640,7 +3640,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-add"
                       data-testid="authors-add"
                       disabled=""
@@ -3656,7 +3656,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-cancel"
                       data-testid="authors-cancel"
                       disabled=""
@@ -3671,7 +3671,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
               </div>
             </div>
             <span
-              class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-12980t6-MuiTypography-root"
               data-testid="authors-error"
             >
               <span>
@@ -3694,19 +3694,19 @@ exports[`DesignForm component with all fields disabled 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-optional-information"
         id="standard-card-optional-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -3731,7 +3731,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="comments"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="comments-label"
                   for="comments-input"
@@ -3740,7 +3740,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   Notes (not publicly viewable)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -3774,7 +3774,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="rek_link"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link-label"
                   for="rek_link-input"
@@ -3783,7 +3783,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   Link
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3810,7 +3810,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                 data-testid="rek_link_description"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link_description-label"
                   for="rek_link_description-input"
@@ -3819,7 +3819,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                   Link description
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3854,19 +3854,19 @@ exports[`DesignForm should show architectural content correctly 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-design-information"
         id="standard-card-design-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -3891,7 +3891,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="rek_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_title-label"
                   for="rek_title-input"
@@ -3907,7 +3907,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -3941,7 +3941,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="fez_record_search_key_project_name.rek_project_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_project_name.rek_project_name-label"
                   for="fez_record_search_key_project_name.rek_project_name-input"
@@ -3950,7 +3950,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   Project name
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -3976,7 +3976,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="fez_record_search_key_location[0].rek_location"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_location[0].rek_location-label"
                   for="fez_record_search_key_location[0].rek_location-input"
@@ -3985,7 +3985,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   Location
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -4011,7 +4011,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="fez_record_search_key_publisher.rek_publisher"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_publisher.rek_publisher-label"
                   for="fez_record_search_key_publisher.rek_publisher-input"
@@ -4027,7 +4027,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -4054,7 +4054,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-label"
                   for="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
@@ -4070,7 +4070,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -4097,7 +4097,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="rek-doi"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-doi-label"
                   for="rek-doi-input"
@@ -4106,7 +4106,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   DOI
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -4135,7 +4135,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Project start date
@@ -4162,7 +4162,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -4180,7 +4180,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Year required
                       </p>
@@ -4189,7 +4189,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -4239,7 +4239,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -4272,7 +4272,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1pnn20d-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-15i8g49-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     End date
@@ -4292,7 +4292,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -4310,7 +4310,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
                       >
                         Invalid date
                       </p>
@@ -4319,7 +4319,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-8ka78b-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -4369,7 +4369,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
@@ -4399,19 +4399,19 @@ exports[`DesignForm should show architectural content correctly 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-designer-name"
         id="standard-card-designer-name"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -4455,7 +4455,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
           id="standard-card-designer-name-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
           >
             Please provide a list of designers and then select your name from the list.
           </p>
@@ -4494,7 +4494,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="org-affiliation-label"
                         id="org-affiliation-label"
@@ -4502,7 +4502,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         Org affiliation
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -4556,7 +4556,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="authors-label"
                         for="authors-input"
@@ -4572,7 +4572,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -4603,7 +4603,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           for="authors-aut-id"
                           id="authors-aut-id-label"
@@ -4611,7 +4611,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                           UQ Author ID
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-autocomplete="list"
@@ -4654,7 +4654,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-add"
                       data-testid="authors-add"
                       disabled=""
@@ -4670,7 +4670,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-enhc8j-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-cancel"
                       data-testid="authors-cancel"
                       disabled=""
@@ -4685,7 +4685,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
               </div>
             </div>
             <span
-              class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-12980t6-MuiTypography-root"
               data-testid="authors-error"
             >
               <span>
@@ -4714,19 +4714,19 @@ exports[`DesignForm should show architectural content correctly 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-ntro-data"
             id="standard-card-ntro-data"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -4782,7 +4782,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   >
                     <span>
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-t4ynyp-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
                       >
                         <span>
                           Abstract/Description* 
@@ -4794,7 +4794,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         </span>
                       </p>
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                       >
                         Enter a brief description of the work - 800 character limit is no longer applicable
                       </span>
@@ -4829,7 +4829,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + B"
                                       aria-label="Bold"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Bold"
@@ -4859,7 +4859,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + I"
                                       aria-label="Italic"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Italic"
@@ -4889,7 +4889,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + U"
                                       aria-label="Underline"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Underline"
@@ -4919,7 +4919,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + Shift + S"
                                       aria-label="Strikethrough"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Strikethrough"
@@ -4949,7 +4949,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + ,"
                                       aria-label="Subscript"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Subscript"
@@ -4979,7 +4979,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + ."
                                       aria-label="Superscript"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Superscript"
@@ -5014,7 +5014,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + Shift + U"
                                       aria-label="Link"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Link"
@@ -5044,7 +5044,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + Shift + 7"
                                       aria-label="Ordered list"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Ordered list"
@@ -5074,7 +5074,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + Shift + 8"
                                       aria-label="Bulleted list"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Bulleted list"
@@ -5108,7 +5108,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                     <button
                                       aria-label="Change case"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Change case"
@@ -5144,7 +5144,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                     <button
                                       aria-label="Remove inline formatting"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Remove inline formatting"
@@ -5174,7 +5174,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       <button
                                         aria-label="Insert special character"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Insert special character"
@@ -5204,7 +5204,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + Z"
                                       aria-label="Undo"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       tabindex="0"
                                       type="button"
                                       value="Undo"
@@ -5234,7 +5234,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                                       aria-description="Ctrl + Shift + Z"
                                       aria-label="Redo"
                                       aria-pressed="false"
-                                      class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                      class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                       disabled=""
                                       tabindex="-1"
                                       type="button"
@@ -5260,7 +5260,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -5294,7 +5294,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         for="rek-series"
                         id="rek-series-label"
@@ -5302,7 +5302,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         Series
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-autocomplete="list"
@@ -5332,7 +5332,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     data-testid="rek-total-pages"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-total-pages-label"
                       for="rek-total-pages-input"
@@ -5348,7 +5348,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -5375,7 +5375,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     data-testid="rek-original-format"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-original-format-label"
                       for="rek-original-format-input"
@@ -5384,7 +5384,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       Physical description
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -5409,7 +5409,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-language-label"
                       id="rek-language-label"
@@ -5417,7 +5417,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       Language
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-expanded="false"
@@ -5468,7 +5468,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="false"
                       data-testid="rek-quality-indicator-label"
                       id="rek-quality-indicator-label"
@@ -5483,7 +5483,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
                         aria-expanded="false"
@@ -5537,19 +5537,19 @@ exports[`DesignForm should show architectural content correctly 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-v2j61i-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
             data-testid="standard-card-grant-details"
             id="standard-card-grant-details"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -5577,7 +5577,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       data-testid="rek-grant-agency"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-grant-agency-label"
                         for="rek-grant-agency-input"
@@ -5586,7 +5586,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         Grant Agency
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -5613,7 +5613,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       data-testid="rek-grant-id"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-grant-id-label"
                         for="rek-grant-id-input"
@@ -5622,7 +5622,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         Grant ID
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
@@ -5641,7 +5641,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+                      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
                     >
                       Accepts IDs or full URLs
                     </div>
@@ -5653,14 +5653,14 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                         style="margin-bottom: -3px;"
                       >
                          
                          
                       </span>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-disabled="true"
@@ -5704,7 +5704,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-grant-add"
                       data-testid="rek-grant-add"
                       disabled=""
@@ -5726,19 +5726,19 @@ exports[`DesignForm should show architectural content correctly 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
         data-testid="standard-card-optional-information"
         id="standard-card-optional-information"
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -5763,7 +5763,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="comments"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="comments-label"
                   for="comments-input"
@@ -5772,7 +5772,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   Notes (not publicly viewable)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1ewj2t8-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1dltgd6-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
@@ -5805,7 +5805,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="rek_link"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link-label"
                   for="rek_link-input"
@@ -5814,7 +5814,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   Link
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
@@ -5840,7 +5840,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 data-testid="rek_link_description"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link_description-label"
                   for="rek_link_description-input"
@@ -5849,7 +5849,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                   Link description
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"

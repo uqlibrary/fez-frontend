@@ -26,7 +26,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -48,19 +48,19 @@ exports[`Component FixRecord should render fix record form 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-amended"
               id="standard-card-work-to-be-amended"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-work-to-be-amended-header"
                     id="standard-card-work-to-be-amended-header"
                   >
@@ -96,7 +96,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -107,7 +107,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -227,7 +227,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-si3g8d"
+                                      class="wosCitationCount css-1h1gyme"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -248,7 +248,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
+                                      class="googleCitationCount css-1h1gyme"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -280,7 +280,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
@@ -304,7 +304,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     id="fix-action-label"
                   >
@@ -318,7 +318,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     data-testid="fix-action"
                     required=""
                   >
@@ -377,7 +377,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1p0ctx9-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-4oo2og-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -432,7 +432,7 @@ exports[`Component FixRecord should render loader when author is loading 1`] = `
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
@@ -487,7 +487,7 @@ exports[`Component FixRecord should render loader when record is loading 1`] = `
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
@@ -510,7 +510,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -532,19 +532,19 @@ exports[`Component FixRecord should render record citation, two actions in selec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-amended"
               id="standard-card-work-to-be-amended"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-work-to-be-amended-header"
                     id="standard-card-work-to-be-amended-header"
                   >
@@ -580,7 +580,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -591,7 +591,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -711,7 +711,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-si3g8d"
+                                      class="wosCitationCount css-1h1gyme"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -732,7 +732,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
+                                      class="googleCitationCount css-1h1gyme"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -764,7 +764,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
@@ -788,7 +788,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     id="fix-action-label"
                   >
@@ -802,7 +802,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     data-testid="fix-action"
                     required=""
                   >
@@ -861,7 +861,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1p0ctx9-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-4oo2og-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -884,7 +884,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -906,19 +906,19 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-amended"
               id="standard-card-work-to-be-amended"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-work-to-be-amended-header"
                     id="standard-card-work-to-be-amended-header"
                   >
@@ -954,7 +954,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -965,7 +965,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -1085,7 +1085,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-si3g8d"
+                                      class="wosCitationCount css-1h1gyme"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -1106,7 +1106,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-si3g8d"
+                                      class="googleCitationCount css-1h1gyme"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -1138,7 +1138,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
@@ -1162,7 +1162,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                   style="width: 100%;"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                     id="fix-action-label"
                   >
@@ -1176,7 +1176,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     data-testid="fix-action"
                     required=""
                   >
@@ -1226,19 +1226,19 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-remove-this-work-from-my-profile"
               id="standard-card-remove-this-work-from-my-profile"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                     data-testid="standard-card-remove-this-work-from-my-profile-header"
                     id="standard-card-remove-this-work-from-my-profile-header"
                   >
@@ -1312,7 +1312,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-1p0ctx9-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-4oo2og-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1323,7 +1323,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1548di-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ffrq4f-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               id="fixSubmit"

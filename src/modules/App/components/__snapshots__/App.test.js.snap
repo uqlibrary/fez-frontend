@@ -27,7 +27,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-aosuxw-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-lvrim3-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -83,7 +83,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-opg4o2-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -226,7 +226,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             tabindex="1"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-1w20pzz-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-1ppjz24-MuiButtonBase-root-MuiButton-root"
               tabindex="-1"
               type="button"
             >
@@ -243,11 +243,11 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
                 id="menu-itemText-0"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
                 >
                   Home
                 </span>
@@ -264,16 +264,16 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
                 id="menu-itemText-1"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
                 >
                   Search eSpace
                 </span>
                 <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1jei0z3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-cvkt6l-MuiTypography-root"
                 />
               </div>
             </div>
@@ -288,11 +288,11 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
                 id="menu-itemText-2"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
                 >
                   Browse
                 </span>
@@ -309,11 +309,11 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
                 id="menu-itemText-3"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
                 >
                   Help
                 </span>
@@ -330,16 +330,16 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
                 id="menu-itemText-4"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
                 >
                   About
                 </span>
                 <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1jei0z3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-cvkt6l-MuiTypography-root"
                 />
               </div>
             </div>
@@ -354,11 +354,11 @@ exports[`Application component Should display mobile correctly 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+                class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
                 id="menu-itemText-5"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
                 >
                   <a
                     class="noHover css-1maagub"
@@ -421,7 +421,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ftjwpa-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -509,7 +509,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -586,7 +586,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
@@ -613,19 +613,19 @@ exports[`Application component Should display mobile correctly 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -640,7 +640,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -653,19 +653,19 @@ exports[`Application component Should display mobile correctly 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -680,7 +680,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -696,19 +696,19 @@ exports[`Application component Should display mobile correctly 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -723,7 +723,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -736,19 +736,19 @@ exports[`Application component Should display mobile correctly 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -771,7 +771,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -865,7 +865,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-ee40te-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -921,7 +921,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-opg4o2-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1002,7 +1002,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ftjwpa-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -1160,7 +1160,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
@@ -1187,19 +1187,19 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1214,7 +1214,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -1227,19 +1227,19 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1254,7 +1254,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -1270,19 +1270,19 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -1297,7 +1297,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -1310,19 +1310,19 @@ exports[`Application component should render alert if user is not fez author 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1345,7 +1345,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -1433,7 +1433,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-ee40te-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1489,7 +1489,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-opg4o2-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1570,7 +1570,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ftjwpa-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -1664,7 +1664,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
@@ -1691,19 +1691,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1718,7 +1718,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -1731,19 +1731,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1758,7 +1758,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -1774,19 +1774,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -1801,7 +1801,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -1814,19 +1814,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1849,7 +1849,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -1937,7 +1937,7 @@ exports[`Application component should render app for account with fez author wit
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-ee40te-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1993,7 +1993,7 @@ exports[`Application component should render app for account with fez author wit
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-opg4o2-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2074,7 +2074,7 @@ exports[`Application component should render app for account with fez author wit
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ftjwpa-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2168,7 +2168,7 @@ exports[`Application component should render app for account with fez author wit
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
@@ -2195,19 +2195,19 @@ exports[`Application component should render app for account with fez author wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -2222,7 +2222,7 @@ exports[`Application component should render app for account with fez author wit
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -2235,19 +2235,19 @@ exports[`Application component should render app for account with fez author wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -2262,7 +2262,7 @@ exports[`Application component should render app for account with fez author wit
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -2278,19 +2278,19 @@ exports[`Application component should render app for account with fez author wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -2305,7 +2305,7 @@ exports[`Application component should render app for account with fez author wit
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -2318,19 +2318,19 @@ exports[`Application component should render app for account with fez author wit
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -2353,7 +2353,7 @@ exports[`Application component should render app for account with fez author wit
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -2441,7 +2441,7 @@ exports[`Application component should render application with routing for the us
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-ee40te-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2497,7 +2497,7 @@ exports[`Application component should render application with routing for the us
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-opg4o2-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2578,7 +2578,7 @@ exports[`Application component should render application with routing for the us
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ftjwpa-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2648,7 +2648,7 @@ exports[`Application component should render application with routing for the us
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading account
@@ -2732,7 +2732,7 @@ exports[`Application component should render for anon user 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-16qo8ib-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-ee40te-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2788,7 +2788,7 @@ exports[`Application component should render for anon user 1`] = `
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-u5cuqz-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-opg4o2-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2869,7 +2869,7 @@ exports[`Application component should render for anon user 1`] = `
     >
       <button
         aria-label="Scroll to top of page"
-        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-1lyz4x1-MuiButtonBase-root-MuiFab-root"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-secondary css-ftjwpa-MuiButtonBase-root-MuiFab-root"
         id="scrolltopbtn"
         tabindex="0"
         title="Scroll to top of page"
@@ -2963,7 +2963,7 @@ exports[`Application component should render for anon user 1`] = `
                         style="text-align: center;"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
                           style="font-size: 1.33rem;"
                         >
                           Loading trending works
@@ -2990,19 +2990,19 @@ exports[`Application component should render for anon user 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-acknowledgement-of-country"
                     id="standard-card-acknowledgement-of-country"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -3017,7 +3017,7 @@ exports[`Application component should render for anon user 1`] = `
                       id="standard-card-acknowledgement-of-country-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
@@ -3030,19 +3030,19 @@ exports[`Application component should render for anon user 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-cultural-advice"
                     id="standard-card-cultural-advice"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -3057,7 +3057,7 @@ exports[`Application component should render for anon user 1`] = `
                       id="standard-card-cultural-advice-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
@@ -3073,19 +3073,19 @@ exports[`Application component should render for anon user 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-restrictions-on-use"
                     id="standard-card-restrictions-on-use"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -3100,7 +3100,7 @@ exports[`Application component should render for anon user 1`] = `
                       id="standard-card-restrictions-on-use-content"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                       >
                         <span>
                           You must use our digital collections in compliance with all UQ policies, copyright, and UQ’s commercial licences with resource providers. You may not share, re-publish, copy or enter into AI technologies any part of an object accessed from our digital collections, unless expressly permitted in the licence terms for that digital object. Data/text mining, distribution, systematic copying and downloading of objects may also be prohibited. More information may be available in the rights statement located in an item's record.
@@ -3113,19 +3113,19 @@ exports[`Application component should render for anon user 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
                     data-testid="standard-card-open-to-collaborate"
                     id="standard-card-open-to-collaborate"
                     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                   >
                     <div
-                      class="MuiCardHeader-root css-1r0nfk0-MuiCardHeader-root"
+                      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
                     >
                       <div
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -3148,7 +3148,7 @@ exports[`Application component should render for anon user 1`] = `
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                         >
                           <span>
                             The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
@@ -3186,7 +3186,7 @@ exports[`Application component should render loading screen while account is loa
           class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
         >
           <span
-            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jb97hd-MuiCircularProgress-root"
+            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-oy58ok-MuiCircularProgress-root"
             role="progressbar"
             style="width: 80px; height: 80px;"
           >
@@ -3217,7 +3217,7 @@ exports[`Application component should render loading screen while account is loa
           class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-12tzrfb-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-170tbda-MuiTypography-root"
           >
             UQ eSpace 
           </h6>

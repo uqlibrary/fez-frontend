@@ -34,7 +34,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Files
@@ -59,7 +59,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
                   >
                     You may add up to 10 files (max 5GB each)
                   </p>
@@ -92,7 +92,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
                             >
                               File upload restrictions
                             </p>
@@ -197,7 +197,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Advisory statement
@@ -222,7 +222,7 @@ exports[`FilesSection component should render default view for Files on a Data C
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Advisory statement
@@ -258,7 +258,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bold"
@@ -288,7 +288,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Italic"
@@ -318,7 +318,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Underline"
@@ -348,7 +348,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Strikethrough"
@@ -378,7 +378,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Subscript"
@@ -408,7 +408,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Superscript"
@@ -443,7 +443,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Link"
@@ -473,7 +473,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Ordered list"
@@ -503,7 +503,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bulleted list"
@@ -537,7 +537,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Change case"
@@ -573,7 +573,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Remove inline formatting"
@@ -603,7 +603,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                     tabindex="0"
                                     type="button"
                                     value="Insert special character"
@@ -633,7 +633,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Undo"
@@ -663,7 +663,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -689,7 +689,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -743,7 +743,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Sensitive Handling Note
@@ -765,7 +765,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-sensitive-handling-note-id-label"
                   id="rek-sensitive-handling-note-id-label"
@@ -773,7 +773,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   Sensitive Handling Note
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
@@ -847,7 +847,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Deposit agreement
@@ -892,7 +892,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-15u1gxo-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1ttqb5n-MuiTypography-root"
                   data-testid="rek-copyright-label"
                   id="rek-copyright-label"
                 >
@@ -961,7 +961,7 @@ exports[`FilesSection component should render default view for Files on a public
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Files
@@ -986,7 +986,7 @@ exports[`FilesSection component should render default view for Files on a public
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
                   >
                     You may add up to 10 files (max 5GB each)
                   </p>
@@ -1019,7 +1019,7 @@ exports[`FilesSection component should render default view for Files on a public
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
                             >
                               File upload restrictions
                             </p>
@@ -1124,7 +1124,7 @@ exports[`FilesSection component should render default view for Files on a public
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Advisory statement
@@ -1149,7 +1149,7 @@ exports[`FilesSection component should render default view for Files on a public
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Advisory statement
@@ -1185,7 +1185,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bold"
@@ -1215,7 +1215,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Italic"
@@ -1245,7 +1245,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Underline"
@@ -1275,7 +1275,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Strikethrough"
@@ -1305,7 +1305,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Subscript"
@@ -1335,7 +1335,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Superscript"
@@ -1370,7 +1370,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Link"
@@ -1400,7 +1400,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Ordered list"
@@ -1430,7 +1430,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bulleted list"
@@ -1464,7 +1464,7 @@ exports[`FilesSection component should render default view for Files on a public
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Change case"
@@ -1500,7 +1500,7 @@ exports[`FilesSection component should render default view for Files on a public
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Remove inline formatting"
@@ -1530,7 +1530,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                     tabindex="0"
                                     type="button"
                                     value="Insert special character"
@@ -1560,7 +1560,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Undo"
@@ -1590,7 +1590,7 @@ exports[`FilesSection component should render default view for Files on a public
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-19q5u3q-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1616,7 +1616,7 @@ exports[`FilesSection component should render default view for Files on a public
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1r6ahwo-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -1670,7 +1670,7 @@ exports[`FilesSection component should render default view for Files on a public
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Sensitive Handling Note
@@ -1692,7 +1692,7 @@ exports[`FilesSection component should render default view for Files on a public
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-sensitive-handling-note-id-label"
                   id="rek-sensitive-handling-note-id-label"
@@ -1700,7 +1700,7 @@ exports[`FilesSection component should render default view for Files on a public
                   Sensitive Handling Note
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
@@ -1774,7 +1774,7 @@ exports[`FilesSection component should render default view for Files on a public
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Copyright agreement
@@ -1819,7 +1819,7 @@ exports[`FilesSection component should render default view for Files on a public
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-15u1gxo-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-1ttqb5n-MuiTypography-root"
                   data-testid="rek-copyright-label"
                   id="rek-copyright-label"
                 >

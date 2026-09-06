@@ -18,7 +18,7 @@ exports[`NewListEditorField component should render new list editor component wi
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -26,7 +26,7 @@ exports[`NewListEditorField component should render new list editor component wi
             Item name
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -45,7 +45,7 @@ exports[`NewListEditorField component should render new list editor component wi
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -67,7 +67,7 @@ exports[`NewListEditorField component should render new list editor component wi
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -76,7 +76,7 @@ exports[`NewListEditorField component should render new list editor component wi
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -129,7 +129,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test
             </p>
@@ -216,7 +216,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               testing
             </p>
@@ -293,7 +293,7 @@ exports[`NewListEditorField component should render new list editor component wi
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
     >
       test1
     </p>
@@ -319,7 +319,7 @@ exports[`NewListEditorField component should render new list editor component wi
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -327,7 +327,7 @@ exports[`NewListEditorField component should render new list editor component wi
             Item name
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -346,7 +346,7 @@ exports[`NewListEditorField component should render new list editor component wi
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -368,7 +368,7 @@ exports[`NewListEditorField component should render new list editor component wi
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-16qkvzu-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Name
           </span>
@@ -377,7 +377,7 @@ exports[`NewListEditorField component should render new list editor component wi
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 css-h9xzs1-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
           >
             Reorder items
           </span>
@@ -430,7 +430,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               test
             </p>
@@ -517,7 +517,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-176lfdm-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               testing
             </p>
@@ -594,7 +594,7 @@ exports[`NewListEditorField component should render new list editor component wi
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error css-csh52s-MuiFormHelperText-root"
     >
       test1
     </p>
@@ -620,7 +620,7 @@ exports[`NewListEditorField component should render new list editor component wi
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -628,7 +628,7 @@ exports[`NewListEditorField component should render new list editor component wi
             Item name
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-286073-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -647,7 +647,7 @@ exports[`NewListEditorField component should render new list editor component wi
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-rc8kub-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-add"
           data-testid="test-add"
           disabled=""
@@ -664,7 +664,7 @@ exports[`NewListEditorField component should render new list editor component wi
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-csh52s-MuiFormHelperText-root"
     />
   </div>
 </DocumentFragment>

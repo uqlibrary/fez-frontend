@@ -28,12 +28,12 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
               >
                 1234
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -45,12 +45,12 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-6sa4r2-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-ssndl0-MuiTypography-root"
               >
                 desc
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -189,12 +189,12 @@ exports[`GrantListEditorRow should render default view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
               >
                 1234
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -206,12 +206,12 @@ exports[`GrantListEditorRow should render default view 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
               >
                 desc
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -350,12 +350,12 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
               >
                 1234
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -367,12 +367,12 @@ exports[`GrantListEditorRow should render given locale 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
               >
                 desc
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -511,12 +511,12 @@ exports[`GrantListEditorRow should render given related service data 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
               >
                 1234
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -528,12 +528,12 @@ exports[`GrantListEditorRow should render given related service data 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
               >
                 desc
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -568,7 +568,7 @@ exports[`GrantListEditorRow should render given related service data 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                     data-testid="KeyboardArrowUpIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -595,7 +595,7 @@ exports[`GrantListEditorRow should render given related service data 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
                     data-testid="KeyboardArrowDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -674,12 +674,12 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
               >
                 1234
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>
@@ -691,12 +691,12 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
               style="padding: 0px;"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
               >
                 desc
               </p>
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1wlhsw4-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-uj4mda-MuiTypography-root"
               />
             </div>
           </div>

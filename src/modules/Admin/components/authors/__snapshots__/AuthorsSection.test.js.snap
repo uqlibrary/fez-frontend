@@ -31,7 +31,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Designers
@@ -73,7 +73,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -99,7 +99,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -143,7 +143,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-orgaff-size: 250; --col-orgaff-size: 250; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -154,7 +154,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="0"
@@ -191,7 +191,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Designer's name as published
                                       </span>
@@ -223,7 +223,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -236,7 +236,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -252,7 +252,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -282,7 +282,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -295,7 +295,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-mvbtcw-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qqsuh1-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -311,7 +311,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     Organisation/Organisation type
                                   </span>
@@ -341,7 +341,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -354,7 +354,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -389,7 +389,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>
@@ -443,7 +443,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Consultants
@@ -485,7 +485,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -511,7 +511,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -555,7 +555,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-orgaff-size: 250; --col-orgaff-size: 250; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -566,7 +566,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="0"
@@ -603,7 +603,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Contributor's name as published
                                       </span>
@@ -635,7 +635,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -648,7 +648,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -664,7 +664,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -694,7 +694,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -707,7 +707,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-mvbtcw-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qqsuh1-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -723,7 +723,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     Organisation/Organisation type
                                   </span>
@@ -753,7 +753,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -766,7 +766,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -801,7 +801,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>
@@ -864,7 +864,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Authors
@@ -906,7 +906,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -932,7 +932,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -976,7 +976,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -987,7 +987,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                             colspan="1"
                             data-index="0"
                             scope="col"
@@ -1009,7 +1009,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -1046,7 +1046,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Author's name as published
                                       </span>
@@ -1078,7 +1078,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -1091,7 +1091,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -1107,7 +1107,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -1137,7 +1137,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -1150,7 +1150,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -1185,7 +1185,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>
@@ -1248,7 +1248,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Authors
@@ -1290,7 +1290,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -1316,7 +1316,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -1361,7 +1361,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -1372,7 +1372,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                             colspan="1"
                             data-index="0"
                             scope="col"
@@ -1394,7 +1394,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -1431,7 +1431,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Author's name as published
                                       </span>
@@ -1463,7 +1463,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -1476,7 +1476,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -1492,7 +1492,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -1522,7 +1522,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -1535,7 +1535,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -1570,7 +1570,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>
@@ -1633,7 +1633,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Authors
@@ -1675,7 +1675,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -1701,7 +1701,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -1745,7 +1745,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -1756,7 +1756,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                             colspan="1"
                             data-index="0"
                             scope="col"
@@ -1778,7 +1778,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -1815,7 +1815,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Author's name as published
                                       </span>
@@ -1847,7 +1847,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -1860,7 +1860,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -1876,7 +1876,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -1906,7 +1906,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -1919,7 +1919,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -1954,7 +1954,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>
@@ -2008,7 +2008,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Editors
@@ -2050,7 +2050,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -2076,7 +2076,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -2120,7 +2120,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -2131,7 +2131,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                             colspan="1"
                             data-index="0"
                             scope="col"
@@ -2153,7 +2153,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -2190,7 +2190,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Editor's name as published
                                       </span>
@@ -2222,7 +2222,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -2235,7 +2235,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -2251,7 +2251,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -2281,7 +2281,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -2294,7 +2294,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -2329,7 +2329,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>
@@ -2392,7 +2392,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Designers
@@ -2434,7 +2434,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -2460,7 +2460,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -2504,7 +2504,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -2515,7 +2515,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                             colspan="1"
                             data-index="0"
                             scope="col"
@@ -2537,7 +2537,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -2574,7 +2574,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Designer's name as published
                                       </span>
@@ -2606,7 +2606,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -2619,7 +2619,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -2635,7 +2635,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -2665,7 +2665,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -2678,7 +2678,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -2713,7 +2713,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>
@@ -2767,7 +2767,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-16hbzx4-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
                 >
                    
                   Contributors
@@ -2809,7 +2809,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
                         >
                           <div
-                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1yeztip-MuiPaper-root-MuiAlert-root"
+                            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-12mrit2-MuiPaper-root-MuiAlert-root"
                             role="alert"
                             style="--Paper-shadow: none;"
                           >
@@ -2835,7 +2835,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                       style="opacity: 0; visibility: hidden;"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body1 css-1b4kk4l-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-1lm52vt-MuiTypography-root"
                       >
                         Drop to group by 
                       </p>
@@ -2879,7 +2879,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                     class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                   >
                     <table
-                      class="MuiTable-root MuiTable-stickyHeader css-15jeajy-MuiTable-root"
+                      class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
                       style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
@@ -2890,7 +2890,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                         >
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-zf0lkp-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
                             colspan="1"
                             data-index="0"
                             scope="col"
@@ -2912,7 +2912,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1o6eu5g-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="1"
@@ -2949,7 +2949,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                       >
                                         Contributor's name as published
                                       </span>
@@ -2981,7 +2981,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -2994,7 +2994,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1nhjb21-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
@@ -3010,7 +3010,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1ss7gmw-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -3040,7 +3040,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                     </svg>
                                   </span>
                                   <span
-                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-1yept64-MuiBadge-badge"
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
                                   >
                                     0
                                   </span>
@@ -3053,7 +3053,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-163o9rt-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
                             data-index="3"
                             scope="col"
@@ -3088,7 +3088,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                             style="display: grid;"
                           >
                             <p
-                              class="MuiTypography-root MuiTypography-body1 css-17hs15-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
                             >
                               No records to display
                             </p>

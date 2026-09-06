@@ -6,19 +6,19 @@ exports[`Related publications Component  should not render data with empty looku
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-"
       id="standard-card-"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card--header"
             id="standard-card--header"
           />
@@ -35,7 +35,7 @@ exports[`Related publications Component  should not render data with empty looku
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-0"
             >
               <a
@@ -48,7 +48,7 @@ exports[`Related publications Component  should not render data with empty looku
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-1"
             >
               <a
@@ -72,19 +72,19 @@ exports[`Related publications Component  should render component 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-title"
       id="standard-card-title"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -103,7 +103,7 @@ exports[`Related publications Component  should render component 1`] = `
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-0"
             >
               <a
@@ -116,7 +116,7 @@ exports[`Related publications Component  should render component 1`] = `
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-1"
             >
               <a
@@ -140,19 +140,19 @@ exports[`Related publications Component  should render with a publication title 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-a-test-title"
       id="standard-card-a-test-title"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-a-test-title-header"
             id="standard-card-a-test-title-header"
           >
@@ -171,7 +171,7 @@ exports[`Related publications Component  should render with a publication title 
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="undefined-current"
             >
               Data collection mock testing record
@@ -182,7 +182,7 @@ exports[`Related publications Component  should render with a publication title 
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-0"
             >
               <a
@@ -195,7 +195,7 @@ exports[`Related publications Component  should render with a publication title 
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-1"
             >
               <a
@@ -219,19 +219,19 @@ exports[`Related publications Component  should render without a child search ke
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-title"
       id="standard-card-title"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -250,7 +250,7 @@ exports[`Related publications Component  should render without a child search ke
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-0"
             >
               <a
@@ -263,7 +263,7 @@ exports[`Related publications Component  should render without a child search ke
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-1"
             >
               <a
@@ -287,19 +287,19 @@ exports[`Related publications Component  should render without a parent search k
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-title"
       id="standard-card-title"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -318,7 +318,7 @@ exports[`Related publications Component  should render without a parent search k
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-isderivationof-0"
             >
               <a

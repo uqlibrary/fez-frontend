@@ -55,7 +55,7 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading your trending works
@@ -87,7 +87,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
           >
             <div
               class="fez-icon scopus xxlarge"
@@ -95,7 +95,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Scopus citation count
           </h6>
           <h6
-            class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
           >
             The + (plus) value indicates how much the citation count has increased in the last three months.
           </h6>
@@ -159,7 +159,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -191,7 +191,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
                               >
                                 13
                               </h6>
@@ -200,7 +200,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
@@ -211,7 +211,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                       >
                         <span
                           class="citationContent citationJournalArticle"
@@ -333,7 +333,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount css-si3g8d"
+                                  class="wosCitationCount css-1h1gyme"
                                   data-analyticsid="wos-citation-count-link"
                                   data-testid="wos-citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -354,7 +354,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount css-si3g8d"
+                                  class="scopusCitationCount css-1h1gyme"
                                   data-analyticsid="scopus-citation-count-link"
                                   data-testid="scopus-citation-count-link"
                                   href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -375,7 +375,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount css-si3g8d"
+                                  class="altmetricCitationCount css-1h1gyme"
                                   data-analyticsid="altmetric-citation-count-link"
                                   data-testid="altmetric-citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -396,7 +396,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount css-si3g8d"
+                                  class="googleCitationCount css-1h1gyme"
                                   data-analyticsid="google-citation-count-link"
                                   data-testid="google-citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"
@@ -440,7 +440,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
           >
             <div
               class="fez-icon thomson xxlarge"
@@ -448,7 +448,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Web of Science citation count
           </h6>
           <h6
-            class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
           >
             The + (plus) value indicates how much the citation count has increased in the last three months.
           </h6>
@@ -512,7 +512,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -544,7 +544,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
                               >
                                 83
                               </h6>
@@ -553,7 +553,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
@@ -564,7 +564,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                       >
                         <span
                           class="citationContent citationJournalArticle"
@@ -701,7 +701,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount css-si3g8d"
+                                  class="wosCitationCount css-1h1gyme"
                                   data-analyticsid="wos-citation-count-link"
                                   data-testid="wos-citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000240470000014"
@@ -722,7 +722,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount css-si3g8d"
+                                  class="scopusCitationCount css-1h1gyme"
                                   data-analyticsid="scopus-citation-count-link"
                                   data-testid="scopus-citation-count-link"
                                   href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-33747892383%26origin%3Dinward"
@@ -743,7 +743,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount css-si3g8d"
+                                  class="altmetricCitationCount css-1h1gyme"
                                   data-analyticsid="altmetric-citation-count-link"
                                   data-testid="altmetric-citation-count-link"
                                   href="https://queensland.altmetric.com/details/5488391"
@@ -764,7 +764,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount css-si3g8d"
+                                  class="googleCitationCount css-1h1gyme"
                                   data-analyticsid="google-citation-count-link"
                                   data-testid="google-citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Prophylactic%20HPV%20vaccines:%20Underlying%20mechanisms"
@@ -808,7 +808,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -816,7 +816,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             Altmetric score
           </h6>
           <h6
-            class="MuiTypography-root MuiTypography-subtitle1 css-1jy5k9y-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
           >
             The +plus score indicates recent increase in social media activity
           </h6>
@@ -880,7 +880,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -912,7 +912,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
                               >
                                 5
                               </h6>
@@ -921,7 +921,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-15rj26v-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
@@ -932,7 +932,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         </a>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                       >
                         <span
                           class="citationContent citationJournalArticle"
@@ -1054,7 +1054,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               >
                                 <a
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  class="wosCitationCount css-si3g8d"
+                                  class="wosCitationCount css-1h1gyme"
                                   data-analyticsid="wos-citation-count-link"
                                   data-testid="wos-citation-count-link"
                                   href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000334672800003"
@@ -1075,7 +1075,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  class="scopusCitationCount css-si3g8d"
+                                  class="scopusCitationCount css-1h1gyme"
                                   data-analyticsid="scopus-citation-count-link"
                                   data-testid="scopus-citation-count-link"
                                   href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-84899524861%26origin%3Dinward"
@@ -1096,7 +1096,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  class="altmetricCitationCount css-si3g8d"
+                                  class="altmetricCitationCount css-1h1gyme"
                                   data-analyticsid="altmetric-citation-count-link"
                                   data-testid="altmetric-citation-count-link"
                                   href="https://queensland.altmetric.com/details/2291601"
@@ -1117,7 +1117,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                 </a>
                                 <a
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  class="googleCitationCount css-si3g8d"
+                                  class="googleCitationCount css-1h1gyme"
                                   data-analyticsid="google-citation-count-link"
                                   data-testid="google-citation-count-link"
                                   href="https://scholar.google.com/scholar?q=intitle:Development%20and%20implementation%20of%20papillomavirus%20prophylactic%20vaccines"

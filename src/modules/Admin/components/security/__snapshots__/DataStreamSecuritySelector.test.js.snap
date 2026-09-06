@@ -3,7 +3,7 @@
 exports[`DataStreamSecuritySelector component should hide derivative datastreams 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
   />
   <div
     style="margin-top: 8px; padding: 16px;"
@@ -22,7 +22,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
         </a>
         <br />
         <span
-          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
         >
           Overridden
         </span>
@@ -35,7 +35,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
@@ -48,7 +48,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -112,7 +112,7 @@ Compared values have no visual difference."
 exports[`DataStreamSecuritySelector component should render default view 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
   />
   <div
     style="margin-top: 8px; padding: 16px;"
@@ -131,7 +131,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
         </a>
         <br />
         <span
-          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
         >
           Overridden
         </span>
@@ -144,7 +144,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1s24tch-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="dsi-security-policy-0-label"
           >
@@ -157,7 +157,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -211,7 +211,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
 exports[`DataStreamSecuritySelector component should show non-derivative datastreams 1`] = `
 <DocumentFragment>
   <h6
-    class="MuiTypography-root MuiTypography-h6 css-xgkcgd-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
   />
   <div
     style="margin-top: 8px; padding: 16px;"
@@ -230,7 +230,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
         </a>
         <br />
         <span
-          class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
         >
           Overridden
         </span>
@@ -243,7 +243,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
@@ -256,7 +256,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1lgc302-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;

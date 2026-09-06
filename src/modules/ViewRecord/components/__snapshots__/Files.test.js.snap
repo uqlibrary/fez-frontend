@@ -487,19 +487,19 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -529,7 +529,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -539,7 +539,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -549,7 +549,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -610,10 +610,10 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -628,7 +628,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -638,7 +638,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -695,19 +695,19 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -737,7 +737,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -747,7 +747,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -757,7 +757,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -804,10 +804,10 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -822,7 +822,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -832,7 +832,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -889,19 +889,19 @@ exports[`Files Component  should not render advisory statement 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -931,7 +931,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -941,7 +941,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -951,7 +951,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -1012,10 +1012,10 @@ exports[`Files Component  should not render advisory statement 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -1030,7 +1030,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -1040,7 +1040,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -1122,10 +1122,10 @@ exports[`Files Component  should not render advisory statement 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -1140,7 +1140,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 staffdata.pdf
               </p>
@@ -1150,7 +1150,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.06 KB
               </p>
@@ -1209,19 +1209,19 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1294,7 +1294,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -1304,7 +1304,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -1314,7 +1314,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -1375,10 +1375,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -1393,7 +1393,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -1403,7 +1403,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -1485,10 +1485,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -1503,7 +1503,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 staffdata.pdf
               </p>
@@ -1513,7 +1513,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.06 KB
               </p>
@@ -1570,19 +1570,19 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1655,7 +1655,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -1665,7 +1665,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -1675,7 +1675,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -1736,10 +1736,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -1754,7 +1754,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -1764,7 +1764,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -1846,10 +1846,10 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -1864,7 +1864,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 staffdata.pdf
               </p>
@@ -1874,7 +1874,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.06 KB
               </p>
@@ -1931,19 +1931,19 @@ exports[`Files Component  should render an image as the original filename with n
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2016,7 +2016,7 @@ exports[`Files Component  should render an image as the original filename with n
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -2026,7 +2026,7 @@ exports[`Files Component  should render an image as the original filename with n
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -2036,7 +2036,7 @@ exports[`Files Component  should render an image as the original filename with n
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -2083,10 +2083,10 @@ exports[`Files Component  should render an image as the original filename with n
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -2101,7 +2101,7 @@ exports[`Files Component  should render an image as the original filename with n
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -2111,7 +2111,7 @@ exports[`Files Component  should render an image as the original filename with n
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -2168,19 +2168,19 @@ exports[`Files Component  should render audio files with _xt in their filename f
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2210,7 +2210,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -2220,7 +2220,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -2230,7 +2230,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -2277,7 +2277,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 css-1colmms-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-0-download-link"
                     data-testid="file-name-0-download-link"
                     href="http://localhost/view/UQ:676287/audio.wav"
@@ -2344,7 +2344,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -2354,7 +2354,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -2436,7 +2436,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 css-1colmms-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-1-download-link"
                     data-testid="file-name-1-download-link"
                     href="http://localhost/view/UQ:676287/audiotest_xt.mp3"
@@ -2503,7 +2503,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -2513,7 +2513,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -2570,19 +2570,19 @@ exports[`Files Component  should render component 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2612,7 +2612,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -2622,7 +2622,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -2632,7 +2632,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -2693,10 +2693,10 @@ exports[`Files Component  should render component 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -2711,7 +2711,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -2721,7 +2721,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -2803,10 +2803,10 @@ exports[`Files Component  should render component 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -2821,7 +2821,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 staffdata.pdf
               </p>
@@ -2831,7 +2831,7 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.06 KB
               </p>
@@ -2888,19 +2888,19 @@ exports[`Files Component  should render component 2`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2964,7 +2964,7 @@ exports[`Files Component  should render component 2`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
             >
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
                 data-analyticsid="action-button"
                 data-testid="action-button"
                 id="action-button"
@@ -2992,7 +2992,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -3002,7 +3002,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -3012,7 +3012,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -3073,7 +3073,7 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-0-download-link"
                     data-testid="file-name-0-download-link"
                     href="http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb"
@@ -3105,7 +3105,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Movie 1
               </p>
@@ -3115,7 +3115,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 2.86 MB
               </p>
@@ -3211,10 +3211,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -3229,7 +3229,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Movie 2
               </p>
@@ -3239,7 +3239,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 2.62 MB
               </p>
@@ -3335,10 +3335,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-2-preview"
                       id="file-name-2-preview"
                     >
@@ -3353,7 +3353,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-label-2"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Movie 3
               </p>
@@ -3363,7 +3363,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-size-2"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 2.86 MB
               </p>
@@ -3459,10 +3459,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-3-preview"
                       id="file-name-3-preview"
                     >
@@ -3477,7 +3477,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-label-3"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Movie 4
               </p>
@@ -3487,7 +3487,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-size-3"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 4.29 MB
               </p>
@@ -3583,10 +3583,10 @@ exports[`Files Component  should render component 2`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-4-preview"
                       id="file-name-4-preview"
                     >
@@ -3601,7 +3601,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-label-4"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Movie 5
               </p>
@@ -3611,7 +3611,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-size-4"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 1.12 MB
               </p>
@@ -3696,11 +3696,11 @@ exports[`Files Component  should render component 2`] = `
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-ua42ud-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1lrfuq0-MuiGrid-root"
                     >
                       <p
                         aria-label=""
-                        class="css-17zaxj"
+                        class="css-iqioka"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-5-tooltip"
                       >
@@ -3716,7 +3716,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-label-5"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Technical report PDF file
               </p>
@@ -3726,7 +3726,7 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-size-5"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 6.67 MB
               </p>
@@ -3783,19 +3783,19 @@ exports[`Files Component  should render component for public users 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -3859,7 +3859,7 @@ exports[`Files Component  should render component for public users 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
             >
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
                 data-analyticsid="action-button"
                 data-testid="action-button"
                 id="action-button"
@@ -3887,7 +3887,7 @@ exports[`Files Component  should render component for public users 1`] = `
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -3897,7 +3897,7 @@ exports[`Files Component  should render component for public users 1`] = `
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -3907,7 +3907,7 @@ exports[`Files Component  should render component for public users 1`] = `
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -3957,11 +3957,11 @@ exports[`Files Component  should render component for public users 1`] = `
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-ua42ud-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1lrfuq0-MuiGrid-root"
                     >
                       <p
                         aria-label=""
-                        class="css-17zaxj"
+                        class="css-iqioka"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-0-tooltip"
                       >
@@ -3977,7 +3977,7 @@ exports[`Files Component  should render component for public users 1`] = `
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 Technical report PDF file
               </p>
@@ -3987,7 +3987,7 @@ exports[`Files Component  should render component for public users 1`] = `
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 6.67 MB
               </p>
@@ -4044,19 +4044,19 @@ exports[`Files Component  should render files based on security policy correctly
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -4086,7 +4086,7 @@ exports[`Files Component  should render files based on security policy correctly
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -4096,7 +4096,7 @@ exports[`Files Component  should render files based on security policy correctly
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -4106,7 +4106,7 @@ exports[`Files Component  should render files based on security policy correctly
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -4156,11 +4156,11 @@ exports[`Files Component  should render files based on security policy correctly
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-ua42ud-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1lrfuq0-MuiGrid-root"
                     >
                       <p
                         aria-label=""
-                        class="css-17zaxj"
+                        class="css-iqioka"
                         data-mui-internal-clone-element="true"
                         data-testid="file-name-0-tooltip"
                       >
@@ -4201,7 +4201,7 @@ exports[`Files Component  should render files based on security policy correctly
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -4209,7 +4209,7 @@ exports[`Files Component  should render files based on security policy correctly
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 573.25 KB
               </p>
@@ -4266,19 +4266,19 @@ exports[`Files Component  should render icon for mimeType 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -4308,7 +4308,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -4318,7 +4318,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -4328,7 +4328,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -4375,10 +4375,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -4393,7 +4393,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -4401,7 +4401,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 NaN undefined
               </p>
@@ -4483,7 +4483,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-1-download-link"
                     data-testid="file-name-1-download-link"
                     href="http://localhost/view/UQ:1/random.txt"
@@ -4515,7 +4515,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -4523,7 +4523,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 NaN undefined
               </p>
@@ -4619,10 +4619,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-2-preview"
                       id="file-name-2-preview"
                     >
@@ -4637,7 +4637,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-2"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -4645,7 +4645,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-2"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 NaN undefined
               </p>
@@ -4741,10 +4741,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-3-preview"
                       id="file-name-3-preview"
                     >
@@ -4759,7 +4759,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-3"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -4767,7 +4767,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-3"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 NaN undefined
               </p>
@@ -4863,7 +4863,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 css-1colmms-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-4-download-link"
                     data-testid="file-name-4-download-link"
                     href="http://localhost/view/UQ:1/test.mp3"
@@ -4930,7 +4930,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-4"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -4938,7 +4938,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-4"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 NaN undefined
               </p>
@@ -5040,7 +5040,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <a
-                    class="css-za9t3z"
+                    class="css-2489rw"
                     data-analyticsid="file-name-5-download-link"
                     data-testid="file-name-5-download-link"
                     href="http://localhost/view/UQ:1/test.pdf"
@@ -5072,7 +5072,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-5"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -5080,7 +5080,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-5"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 NaN undefined
               </p>
@@ -5176,10 +5176,10 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-6-preview"
                       id="file-name-6-preview"
                     >
@@ -5194,7 +5194,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-label-6"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               />
             </div>
             <div
@@ -5202,7 +5202,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-size-6"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 NaN undefined
               </p>
@@ -5259,19 +5259,19 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -5344,7 +5344,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -5354,7 +5354,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -5364,7 +5364,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -5425,10 +5425,10 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -5443,7 +5443,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -5453,7 +5453,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -5535,10 +5535,10 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -5553,7 +5553,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 staffdata.pdf
               </p>
@@ -5563,7 +5563,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.06 KB
               </p>
@@ -5620,19 +5620,19 @@ exports[`Files Component  should render sensitive handling note 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -5705,7 +5705,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -5715,7 +5715,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -5725,7 +5725,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -5786,10 +5786,10 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -5804,7 +5804,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -5814,7 +5814,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>
@@ -5896,10 +5896,10 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-1-preview"
                       id="file-name-1-preview"
                     >
@@ -5914,7 +5914,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-label-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 staffdata.pdf
               </p>
@@ -5924,7 +5924,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-size-1"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.06 KB
               </p>
@@ -5981,19 +5981,19 @@ exports[`Files Component  should show a blacklisted collection member when the u
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -6066,7 +6066,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               data-testid="dsi-dsid-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 File name
               </span>
@@ -6076,7 +6076,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               data-testid="dsi-label-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Description
               </span>
@@ -6086,7 +6086,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               data-testid="dsi-size-label"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
               >
                 Size
               </span>
@@ -6133,10 +6133,10 @@ exports[`Files Component  should show a blacklisted collection member when the u
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-7skhgx-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-9z1if1-MuiTypography-root"
                   >
                     <a
-                      class="css-gkvags"
+                      class="css-33jb9x"
                       data-testid="file-name-0-preview"
                       id="file-name-0-preview"
                     >
@@ -6151,7 +6151,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               data-testid="dsi-label-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 testing image description
               </p>
@@ -6161,7 +6161,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
               data-testid="dsi-size-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1m7vkmh-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
               >
                 95.49 KB
               </p>

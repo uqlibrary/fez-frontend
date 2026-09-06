@@ -9,7 +9,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -47,7 +47,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -61,7 +61,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -96,7 +96,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -110,7 +110,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -145,7 +145,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -159,7 +159,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [0
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -182,7 +182,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -224,7 +224,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -259,7 +259,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -273,7 +273,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -308,7 +308,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -322,7 +322,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [1
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -345,7 +345,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -387,7 +387,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -426,7 +426,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-completed css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -461,7 +461,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -475,7 +475,7 @@ exports[`Component AddMissingRecord method getStepperIndex should return step [2
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -498,7 +498,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-10k4br5-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -536,7 +536,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -550,7 +550,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -585,7 +585,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -599,7 +599,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>
@@ -634,7 +634,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
                   r="12"
                 />
                 <text
-                  class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+                  class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
                   dominant-baseline="central"
                   text-anchor="middle"
                   x="12"
@@ -648,7 +648,7 @@ exports[`Component AddMissingRecord should return 0 when landing on invalid loca
               class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
             >
               <span
-                class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+                class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
               >
                 <span />
               </span>

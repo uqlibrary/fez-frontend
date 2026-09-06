@@ -31,7 +31,7 @@ exports[`Component FileUploadDropzone should render component with default props
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
             />
           </div>
           <div
@@ -98,7 +98,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-17kn7d-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
             />
           </div>
           <div

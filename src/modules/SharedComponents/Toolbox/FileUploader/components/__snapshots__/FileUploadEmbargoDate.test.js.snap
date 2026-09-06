@@ -6,7 +6,7 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
     class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-hc0tq9-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
@@ -53,7 +53,7 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
     class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-adornedEnd css-hc0tq9-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
@@ -102,7 +102,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
     class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-hc0tq9-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
@@ -149,7 +149,7 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
     class="MuiFormControl-root MuiTextField-root css-14gqc9w-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-hc0tq9-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
@@ -196,7 +196,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
     class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-hc0tq9-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
@@ -243,7 +243,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
     class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-hc0tq9-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >

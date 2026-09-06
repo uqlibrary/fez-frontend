@@ -29,7 +29,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -40,7 +40,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -359,7 +359,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount css-si3g8d"
+                          class="wosCitationCount css-1h1gyme"
                           data-analyticsid="wos-citation-count-link"
                           data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000406854800009"
@@ -380,7 +380,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount css-si3g8d"
+                          class="scopusCitationCount css-1h1gyme"
                           data-analyticsid="scopus-citation-count-link"
                           data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026769370%26origin%3Dinward"
@@ -401,7 +401,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount css-si3g8d"
+                          class="altmetricCitationCount css-1h1gyme"
                           data-analyticsid="altmetric-citation-count-link"
                           data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/23460021"
@@ -422,7 +422,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount css-si3g8d"
+                          class="googleCitationCount css-1h1gyme"
                           data-analyticsid="google-citation-count-link"
                           data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long%20noncoding%20RNAs%20CUPID1%20and%20CUPID2%20mediate%20breast%20cancer%20risk%20at%2011q13%20by%20modulating%20the%20response%20to%20DNA%20damage"
@@ -461,7 +461,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ678947 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-nue4yf-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ678947-secondary"
               tabindex="0"
               type="button"
@@ -497,7 +497,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -508,7 +508,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
               >
                 <span
                   class="citationContent citationDesign"
@@ -611,7 +611,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount css-si3g8d"
+                          class="googleCitationCount css-1h1gyme"
                           data-analyticsid="google-citation-count-link"
                           data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conf%20A%20proceedings"
@@ -650,7 +650,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792104 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-nue4yf-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792104-secondary"
               tabindex="0"
               type="button"
@@ -686,7 +686,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -697,7 +697,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
               >
                 <span
                   class="citationContent citationBook"
@@ -774,7 +774,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount css-si3g8d"
+                          class="googleCitationCount css-1h1gyme"
                           data-analyticsid="google-citation-count-link"
                           data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Testing%20book%20with%20cache"
@@ -813,7 +813,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792110 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-nue4yf-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792110-secondary"
               tabindex="0"
               type="button"
@@ -849,7 +849,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -860,7 +860,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
               >
                 <span
                   class="citationContent citationConferencePaper"
@@ -940,7 +940,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount css-si3g8d"
+                          class="googleCitationCount css-1h1gyme"
                           data-analyticsid="google-citation-count-link"
                           data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Conference%20paper%20with%20caching"
@@ -979,7 +979,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ792111 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-nue4yf-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ792111-secondary"
               tabindex="0"
               type="button"
@@ -1015,7 +1015,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -1026,7 +1026,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 </h6>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-ycwy5c-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
               >
                 <span
                   class="citationContent citationJournalArticle"
@@ -1268,7 +1268,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount css-si3g8d"
+                          class="wosCitationCount css-1h1gyme"
                           data-analyticsid="wos-citation-count-link"
                           data-testid="wos-citation-count-link"
                           href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000393077300011"
@@ -1289,7 +1289,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount css-si3g8d"
+                          class="scopusCitationCount css-1h1gyme"
                           data-analyticsid="scopus-citation-count-link"
                           data-testid="scopus-citation-count-link"
                           href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85014391875%26origin%3Dinward"
@@ -1310,7 +1310,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount css-si3g8d"
+                          class="altmetricCitationCount css-1h1gyme"
                           data-analyticsid="altmetric-citation-count-link"
                           data-testid="altmetric-citation-count-link"
                           href="https://queensland.altmetric.com/details/9271343"
@@ -1331,7 +1331,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount css-si3g8d"
+                          class="googleCitationCount css-1h1gyme"
                           data-analyticsid="google-citation-count-link"
                           data-testid="google-citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer"
@@ -1363,7 +1363,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
               data-testid="rek-content-indicator"
               id="rek-content-indicator"
             >
@@ -1387,7 +1387,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1r3xi0i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ396321 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-nue4yf-MuiButtonBase-root-MuiButton-root"
               data-testid="publication-action-UQ396321-secondary"
               tabindex="0"
               type="button"
@@ -1412,7 +1412,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary css-1n8zpoj-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary css-10bxqdl-MuiButtonBase-root-MuiButton-root"
         tabindex="0"
         type="button"
       >
@@ -1470,7 +1470,7 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
               style="text-align: center;"
             >
               <span
-                class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
                 style="font-size: 1.33rem;"
               >
                 Loading your latest works
@@ -1527,7 +1527,7 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading your latest works

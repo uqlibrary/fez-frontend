@@ -7,7 +7,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-g2x96m-MuiFormLabel-root"
       id="test-label"
     >
       text
@@ -60,7 +60,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
         >
           Option A
         </span>
@@ -108,7 +108,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
         >
           Option B
         </span>
@@ -125,7 +125,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-365cyv-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-g2x96m-MuiFormLabel-root"
       id="test-label"
     >
       text
@@ -178,7 +178,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
         >
           Option A
         </span>
@@ -226,14 +226,14 @@ exports[`RadioGroupField tests renders an error 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
         >
           Option B
         </span>
       </label>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-1g2spw3-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-csh52s-MuiFormHelperText-root"
     >
       Something bad happened
     </p>

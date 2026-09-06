@@ -30,7 +30,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -67,7 +67,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -81,7 +81,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -118,7 +118,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -132,7 +132,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -171,7 +171,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -185,7 +185,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -222,7 +222,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -236,7 +236,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -273,7 +273,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -287,7 +287,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -326,7 +326,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -340,7 +340,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -377,7 +377,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -391,7 +391,7 @@ exports[`Add record stepper tests should properly detect if component needs upda
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -430,7 +430,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -444,7 +444,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -481,7 +481,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -495,7 +495,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -532,7 +532,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -546,7 +546,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -589,7 +589,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -626,7 +626,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -640,7 +640,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -677,7 +677,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -691,7 +691,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-disabled css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-disabled css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 3
@@ -734,7 +734,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 1
@@ -775,7 +775,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-completed css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-completed css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 2
@@ -812,7 +812,7 @@ exports[`Add record stepper tests should render steps with specific active step 
               r="12"
             />
             <text
-              class="MuiStepIcon-text css-1g86afo-MuiStepIcon-text"
+              class="MuiStepIcon-text css-19wed6k-MuiStepIcon-text"
               dominant-baseline="central"
               text-anchor="middle"
               x="12"
@@ -826,7 +826,7 @@ exports[`Add record stepper tests should render steps with specific active step 
           class="MuiStepLabel-labelContainer css-p8xe3-MuiStepLabel-labelContainer"
         >
           <span
-            class="MuiStepLabel-label Mui-active css-azjd2r-MuiStepLabel-label"
+            class="MuiStepLabel-label Mui-active css-mxemje-MuiStepLabel-label"
           >
             <span>
               Step 3

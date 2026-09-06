@@ -3,13 +3,13 @@
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         UQ eSpace works
       </p>
@@ -19,7 +19,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Web of science
       </p>
@@ -29,7 +29,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Scopus
       </p>
@@ -42,7 +42,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total works
       </p>
@@ -52,7 +52,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         301
       </p>
@@ -62,7 +62,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         210
       </p>
@@ -78,7 +78,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Works year range
       </p>
@@ -88,7 +88,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -98,7 +98,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -114,7 +114,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         h-index
       </p>
@@ -124,7 +124,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1
       </p>
@@ -134,7 +134,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1
       </p>
@@ -150,7 +150,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Average citation count per work
       </p>
@@ -160,7 +160,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         24.5
       </p>
@@ -170,7 +170,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         25.2
       </p>
@@ -186,7 +186,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total citations
       </p>
@@ -196,7 +196,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         7374
       </p>
@@ -206,7 +206,7 @@ exports[`PublicationStats component should render 1 for hindex because they roun
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         5297
       </p>
@@ -218,13 +218,13 @@ exports[`PublicationStats component should render 1 for hindex because they roun
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         UQ eSpace works
       </p>
@@ -234,7 +234,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Web of science
       </p>
@@ -244,7 +244,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Scopus
       </p>
@@ -257,7 +257,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total works
       </p>
@@ -267,7 +267,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         301
       </p>
@@ -277,7 +277,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         210
       </p>
@@ -293,7 +293,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Works year range
       </p>
@@ -303,7 +303,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -313,7 +313,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -329,7 +329,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         h-index
       </p>
@@ -339,7 +339,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -349,7 +349,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -365,7 +365,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Average citation count per work
       </p>
@@ -375,7 +375,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         24.5
       </p>
@@ -385,7 +385,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         25.2
       </p>
@@ -401,7 +401,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total citations
       </p>
@@ -411,7 +411,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         7374
       </p>
@@ -421,7 +421,7 @@ exports[`PublicationStats component should render N/A for hindex because it is n
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         5297
       </p>
@@ -433,13 +433,13 @@ exports[`PublicationStats component should render N/A for hindex because it is n
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         UQ eSpace works
       </p>
@@ -449,7 +449,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Web of science
       </p>
@@ -459,7 +459,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Scopus
       </p>
@@ -472,7 +472,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total works
       </p>
@@ -482,7 +482,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         301
       </p>
@@ -492,7 +492,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         210
       </p>
@@ -508,7 +508,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Works year range
       </p>
@@ -518,7 +518,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -528,7 +528,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -544,7 +544,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         h-index
       </p>
@@ -554,7 +554,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -564,7 +564,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -580,7 +580,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Average citation count per work
       </p>
@@ -590,7 +590,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         24.5
       </p>
@@ -600,7 +600,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         25.2
       </p>
@@ -616,7 +616,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total citations
       </p>
@@ -626,7 +626,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         7374
       </p>
@@ -636,7 +636,7 @@ exports[`PublicationStats component should render N/A for hindex because it is u
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         5297
       </p>
@@ -648,13 +648,13 @@ exports[`PublicationStats component should render N/A for hindex because it is u
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         UQ eSpace works
       </p>
@@ -664,7 +664,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Web of science
       </p>
@@ -674,7 +674,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Scopus
       </p>
@@ -687,7 +687,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total works
       </p>
@@ -697,7 +697,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         301
       </p>
@@ -707,7 +707,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         210
       </p>
@@ -723,7 +723,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Works year range
       </p>
@@ -733,7 +733,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -743,7 +743,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -759,7 +759,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         h-index
       </p>
@@ -769,7 +769,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -779,7 +779,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -795,7 +795,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Average citation count per work
       </p>
@@ -805,7 +805,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         24.5
       </p>
@@ -815,7 +815,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         25.2
       </p>
@@ -831,7 +831,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total citations
       </p>
@@ -841,7 +841,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         7374
       </p>
@@ -851,7 +851,7 @@ exports[`PublicationStats component should render N/A for hindex because they eq
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         5297
       </p>
@@ -871,13 +871,13 @@ exports[`PublicationStats component should render an empty component 1`] = `
 exports[`PublicationStats component should render statistics with table and data 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-fy4stf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         UQ eSpace works
       </p>
@@ -887,7 +887,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Web of science
       </p>
@@ -897,7 +897,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1hmfv8s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
       >
         Scopus
       </p>
@@ -910,7 +910,7 @@ exports[`PublicationStats component should render statistics with table and data
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total works
       </p>
@@ -920,7 +920,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         301
       </p>
@@ -930,7 +930,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         210
       </p>
@@ -946,7 +946,7 @@ exports[`PublicationStats component should render statistics with table and data
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Works year range
       </p>
@@ -956,7 +956,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -966,7 +966,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         1992-2017
       </p>
@@ -982,7 +982,7 @@ exports[`PublicationStats component should render statistics with table and data
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         h-index
       </p>
@@ -992,7 +992,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -1002,7 +1002,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         N/A
       </p>
@@ -1018,7 +1018,7 @@ exports[`PublicationStats component should render statistics with table and data
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Average citation count per work
       </p>
@@ -1028,7 +1028,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         24.5
       </p>
@@ -1038,7 +1038,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         25.2
       </p>
@@ -1054,7 +1054,7 @@ exports[`PublicationStats component should render statistics with table and data
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         Total citations
       </p>
@@ -1064,7 +1064,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         7374
       </p>
@@ -1074,7 +1074,7 @@ exports[`PublicationStats component should render statistics with table and data
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
       >
         5297
       </p>

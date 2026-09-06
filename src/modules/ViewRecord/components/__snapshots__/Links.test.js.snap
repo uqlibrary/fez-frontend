@@ -6,19 +6,19 @@ exports[`Component Links  Full mount render 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -40,7 +40,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -50,7 +50,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -60,7 +60,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -74,7 +74,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-pubmed-central-id-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
@@ -110,7 +110,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-pubmed-central-id-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from PubMed Central
             </span>
@@ -143,7 +143,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-doi-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <span
                 data-testid="rek-doi"
@@ -183,7 +183,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-doi-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from publisher
             </span>
@@ -207,7 +207,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -242,7 +242,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -275,7 +275,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -310,7 +310,7 @@ exports[`Component Links  Full mount render 1`] = `
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -347,19 +347,19 @@ exports[`Component Links  Rendering due to a doi 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -381,7 +381,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -391,7 +391,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -401,7 +401,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -415,7 +415,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             data-testid="rek-doi-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <span
                 data-testid="rek-doi"
@@ -455,7 +455,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
             data-testid="rek-doi-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from publisher
             </span>
@@ -483,19 +483,19 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -517,7 +517,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -527,7 +527,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -537,7 +537,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -551,7 +551,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             data-testid="rek-pubmed-central-id-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
@@ -587,7 +587,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             data-testid="rek-pubmed-central-id-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from PubMed Central
             </span>
@@ -624,19 +624,19 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -658,7 +658,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -668,7 +668,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -678,7 +678,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -700,19 +700,19 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -734,7 +734,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -744,7 +744,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -754,7 +754,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -768,7 +768,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -803,7 +803,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -836,7 +836,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -871,7 +871,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Another link to publication
             </span>
@@ -904,7 +904,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="rek-link-2-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -939,7 +939,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             data-testid="rek-link-2-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -976,19 +976,19 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -1010,7 +1010,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -1020,7 +1020,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -1030,7 +1030,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -1044,7 +1044,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-pubmed-central-id-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
@@ -1080,7 +1080,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-pubmed-central-id-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from PubMed Central
             </span>
@@ -1113,7 +1113,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-doi-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <span
                 data-testid="rek-doi"
@@ -1153,7 +1153,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-doi-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from publisher
             </span>
@@ -1186,7 +1186,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1221,7 +1221,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -1245,7 +1245,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1280,7 +1280,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Another link to publication
             </span>
@@ -1304,7 +1304,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-link-2-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1339,7 +1339,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             data-testid="rek-link-2-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -1367,19 +1367,19 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -1401,7 +1401,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -1411,7 +1411,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -1421,7 +1421,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -1435,7 +1435,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-pubmed-central-id-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
@@ -1471,7 +1471,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-pubmed-central-id-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from PubMed Central
             </span>
@@ -1504,7 +1504,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-doi-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <span
                 data-testid="rek-doi"
@@ -1544,7 +1544,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-doi-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from publisher
             </span>
@@ -1568,7 +1568,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1603,7 +1603,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -1627,7 +1627,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1662,7 +1662,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Another link to publication
             </span>
@@ -1686,7 +1686,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-link-2-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1721,7 +1721,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             data-testid="rek-link-2-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -1749,19 +1749,19 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -1783,7 +1783,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -1793,7 +1793,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -1803,7 +1803,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -1817,7 +1817,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-pubmed-central-id-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
@@ -1853,7 +1853,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-pubmed-central-id-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from PubMed Central
             </span>
@@ -1886,7 +1886,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1921,7 +1921,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -1945,7 +1945,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -1980,7 +1980,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Another link to publication
             </span>
@@ -2004,7 +2004,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-link-2-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -2039,7 +2039,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             data-testid="rek-link-2-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -2067,19 +2067,19 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2101,7 +2101,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -2111,7 +2111,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -2121,7 +2121,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -2135,7 +2135,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-pubmed-central-id-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
@@ -2171,7 +2171,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-pubmed-central-id-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from PubMed Central
             </span>
@@ -2204,7 +2204,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-doi-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <span
                 data-testid="rek-doi"
@@ -2244,7 +2244,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-doi-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from publisher
             </span>
@@ -2268,7 +2268,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -2303,7 +2303,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -2327,7 +2327,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -2362,7 +2362,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Another link to publication
             </span>
@@ -2386,7 +2386,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-link-2-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -2421,7 +2421,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             data-testid="rek-link-2-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -2449,19 +2449,19 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2483,7 +2483,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -2493,7 +2493,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -2503,7 +2503,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -2517,7 +2517,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-pubmed-central-id-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 aria-label="Full text via Pubmed Central (open access)"
@@ -2553,7 +2553,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-pubmed-central-id-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from PubMed Central
             </span>
@@ -2586,7 +2586,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-doi-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <span
                 data-testid="rek-doi"
@@ -2626,7 +2626,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-doi-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from publisher
             </span>
@@ -2650,7 +2650,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -2685,7 +2685,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -2709,7 +2709,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -2744,7 +2744,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Another link to publication
             </span>
@@ -2768,7 +2768,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-link-2-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -2803,7 +2803,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             data-testid="rek-link-2-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -2831,19 +2831,19 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2865,7 +2865,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -2875,7 +2875,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -2885,7 +2885,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -2899,7 +2899,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-doi-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <span
                 data-testid="rek-doi"
@@ -2939,7 +2939,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-doi-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Full text from publisher
             </span>
@@ -2972,7 +2972,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3007,7 +3007,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Link to publication
             </span>
@@ -3031,7 +3031,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3066,7 +3066,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Another link to publication
             </span>
@@ -3090,7 +3090,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-link-2-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3125,7 +3125,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             data-testid="rek-link-2-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -3153,19 +3153,19 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3187,7 +3187,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -3197,7 +3197,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -3207,7 +3207,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -3221,7 +3221,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3256,7 +3256,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Access this dataset
             </span>
@@ -3298,19 +3298,19 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3332,7 +3332,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -3342,7 +3342,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -3352,7 +3352,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -3366,7 +3366,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3401,7 +3401,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Access this dataset
             </span>
@@ -3429,19 +3429,19 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3463,7 +3463,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -3473,7 +3473,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -3483,7 +3483,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -3497,7 +3497,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3532,7 +3532,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Click to open link in a new window
             </span>
@@ -3569,19 +3569,19 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3603,7 +3603,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -3613,7 +3613,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -3623,7 +3623,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -3637,7 +3637,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3672,7 +3672,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Access this dataset
             </span>
@@ -3709,19 +3709,19 @@ exports[`Component Links  should render oa icon for past embargo date open acces
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3743,7 +3743,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -3753,7 +3753,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -3763,7 +3763,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -3777,7 +3777,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3812,7 +3812,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Access this dataset
             </span>
@@ -3849,19 +3849,19 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3883,7 +3883,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -3893,7 +3893,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -3903,7 +3903,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -3917,7 +3917,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             data-testid="rek-title-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -3952,7 +3952,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
             data-testid="rek-title-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Search Google Scholar for this open access article
             </span>
@@ -3980,19 +3980,19 @@ exports[`Component Links  should use special default description if the link has
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-links"
       id="standard-card-links"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -4014,7 +4014,7 @@ exports[`Component Links  should use special default description if the link has
             data-testid="link-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Link (will open in a new window)
             </span>
@@ -4024,7 +4024,7 @@ exports[`Component Links  should use special default description if the link has
             data-testid="description-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
               Description
             </span>
@@ -4034,7 +4034,7 @@ exports[`Component Links  should use special default description if the link has
             data-testid="oa-status-label"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
             >
                
             </span>
@@ -4048,7 +4048,7 @@ exports[`Component Links  should use special default description if the link has
             data-testid="rek-link-0-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -4083,7 +4083,7 @@ exports[`Component Links  should use special default description if the link has
             data-testid="rek-link-0-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Provided description
             </span>
@@ -4107,7 +4107,7 @@ exports[`Component Links  should use special default description if the link has
             data-testid="rek-link-1-link"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               <a
                 class="css-1oqhn84"
@@ -4142,7 +4142,7 @@ exports[`Component Links  should use special default description if the link has
             data-testid="rek-link-1-description"
           >
             <span
-              class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             >
               Access this dataset
             </span>

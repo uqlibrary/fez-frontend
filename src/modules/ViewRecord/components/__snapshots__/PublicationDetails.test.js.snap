@@ -10,19 +10,19 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-type-&-community"
       id="standard-card-type-&-community"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-type-&-community-header"
             id="standard-card-type-&-community-header"
           >
@@ -46,7 +46,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type-label"
               >
                 Type of work
@@ -56,7 +56,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type"
               >
                 Collection
@@ -74,7 +74,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator-label"
               >
                 Content Indicators
@@ -84,7 +84,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator"
               >
                 <span
@@ -115,7 +115,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof-label"
               >
                 Communities
@@ -125,11 +125,11 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof"
               >
                 <ul
-                  class="MuiBox-root css-csbpup"
+                  class="MuiBox-root css-1qoow"
                 >
                   <li
                     data-analyticsid="rek-ismemberof-0"
@@ -170,19 +170,19 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-type-&-community"
       id="standard-card-type-&-community"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-type-&-community-header"
             id="standard-card-type-&-community-header"
           >
@@ -206,7 +206,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type-label"
               >
                 Type of work
@@ -216,7 +216,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type"
               >
                 Collection
@@ -234,7 +234,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator-label"
               >
                 Content Indicators
@@ -244,7 +244,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator"
               >
                 <span
@@ -275,7 +275,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof-label"
               >
                 Community
@@ -285,11 +285,11 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof"
               >
                 <ul
-                  class="MuiBox-root css-csbpup"
+                  class="MuiBox-root css-1qoow"
                 >
                   <li
                     data-analyticsid="rek-ismemberof-0"
@@ -319,19 +319,19 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-type"
       id="standard-card-type"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-type-header"
             id="standard-card-type-header"
           >
@@ -355,7 +355,7 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type-label"
               >
                 Type of work
@@ -365,7 +365,7 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type"
               >
                 Community
@@ -383,7 +383,7 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator-label"
               >
                 Content Indicators
@@ -393,7 +393,7 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator"
               >
                 <span
@@ -428,19 +428,19 @@ exports[`Publication Details Component  should render component 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-type-&-collection"
       id="standard-card-type-&-collection"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-type-&-collection-header"
             id="standard-card-type-&-collection-header"
           >
@@ -464,7 +464,7 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type-label"
               >
                 Type of work
@@ -474,7 +474,7 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type"
               >
                 Journal Article
@@ -492,7 +492,7 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-subtype-label"
               >
                 Sub-type
@@ -502,7 +502,7 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-subtype"
               >
                 Article (original research)
@@ -520,7 +520,7 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator-label"
               >
                 Content Indicators
@@ -530,7 +530,7 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator"
               >
                 <span
@@ -561,7 +561,7 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof-label"
               >
                 Collections
@@ -571,11 +571,11 @@ exports[`Publication Details Component  should render component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof"
               >
                 <ul
-                  class="MuiBox-root css-csbpup"
+                  class="MuiBox-root css-1qoow"
                 >
                   <li
                     data-analyticsid="rek-ismemberof-0"
@@ -660,19 +660,19 @@ exports[`Publication Details Component  should render with publication without c
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-type-&-collection"
       id="standard-card-type-&-collection"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-type-&-collection-header"
             id="standard-card-type-&-collection-header"
           >
@@ -696,7 +696,7 @@ exports[`Publication Details Component  should render with publication without c
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type-label"
               >
                 Type of work
@@ -706,7 +706,7 @@ exports[`Publication Details Component  should render with publication without c
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type"
               >
                 Journal Article
@@ -724,7 +724,7 @@ exports[`Publication Details Component  should render with publication without c
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator-label"
               >
                 Content Indicators
@@ -734,7 +734,7 @@ exports[`Publication Details Component  should render with publication without c
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator"
               >
                 <span
@@ -767,19 +767,19 @@ exports[`Publication Details Component  should render with publication without s
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-type-&-collection"
       id="standard-card-type-&-collection"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
             data-testid="standard-card-type-&-collection-header"
             id="standard-card-type-&-collection-header"
           >
@@ -803,7 +803,7 @@ exports[`Publication Details Component  should render with publication without s
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type-label"
               >
                 Type of work
@@ -813,7 +813,7 @@ exports[`Publication Details Component  should render with publication without s
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-display-type"
               >
                 Journal Article
@@ -831,7 +831,7 @@ exports[`Publication Details Component  should render with publication without s
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator-label"
               >
                 Content Indicators
@@ -841,7 +841,7 @@ exports[`Publication Details Component  should render with publication without s
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-content-indicator"
               >
                 <span
@@ -872,7 +872,7 @@ exports[`Publication Details Component  should render with publication without s
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof-label"
               >
                 Collections
@@ -882,11 +882,11 @@ exports[`Publication Details Component  should render with publication without s
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
                 data-testid="rek-ismemberof"
               >
                 <ul
-                  class="MuiBox-root css-csbpup"
+                  class="MuiBox-root css-1qoow"
                 >
                   <li
                     data-analyticsid="rek-ismemberof-0"
