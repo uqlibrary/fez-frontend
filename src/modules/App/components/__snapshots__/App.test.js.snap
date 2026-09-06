@@ -6,7 +6,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -806,7 +806,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -1374,7 +1374,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -1878,7 +1878,7 @@ exports[`Application component should render app for account with fez author wit
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -2382,7 +2382,7 @@ exports[`Application component should render application with routing for the us
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
@@ -2673,7 +2673,7 @@ exports[`Application component should render for anon user 1`] = `
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1er5hoq-MuiGrid-root"
   >
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-1jlanqt-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-143xtdc-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
     >
       <div
