@@ -156,6 +156,12 @@ export const mui1theme = createTheme({
         MuiButton: {
             styleOverrides: {
                 root: {
+                    // UQ Design System button focus ring (packages/button/_component.scss): 2px solid
+                    // $utility-500 (#0d6dcd), no offset. Keyboard-only via :focus-visible (WCAG 2.4.7).
+                    '&:focus-visible': {
+                        outline: '2px solid #0d6dcd',
+                        outlineOffset: 0,
+                    },
                     variants: [
                         {
                             props: { variant: 'contained', color: 'default' }, // restore button default style to mui5
@@ -188,6 +194,12 @@ export const mui1theme = createTheme({
                     },
                     '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
                         outline: 'none',
+                    },
+                    // Restore a visible focus indicator for keyboard users (WCAG 2.4.7): the UQDS focus
+                    // ring ($utility-500 #0d6dcd) on :focus-visible only, so mouse focus stays ringless.
+                    '& .MuiDataGrid-columnHeader:focus-visible, .MuiDataGrid-cell:focus-visible': {
+                        outline: '2px solid #0d6dcd',
+                        outlineOffset: '-2px',
                     },
                 },
             },
