@@ -106,7 +106,6 @@ MediaPreviewButtons.propTypes = {
 
 export const MediaPreview = ({ ...props }) => {
     const {
-        mediaUrl,
         previewMediaUrl,
         mimeType,
         videoErrorMsg,
@@ -194,7 +193,7 @@ export const MediaPreview = ({ ...props }) => {
                             data-analyticsid="image-preview"
                             data-testid="image-preview"
                             src={previewMediaUrl}
-                            alt={mediaUrl}
+                            alt={imageTitle}
                             onLoad={MediaPreviewUtils.scrollToPreview(mediaPreviewRef)}
                             style={{ border: '5px solid black', maxWidth: '100%', marginTop: 32, marginBottom: 32 }}
                             onError={onImageFailed}
