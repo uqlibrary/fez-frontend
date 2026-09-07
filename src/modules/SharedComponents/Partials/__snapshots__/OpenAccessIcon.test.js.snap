@@ -3,17 +3,20 @@
 exports[`Journal Name Component test  should pass style to child component 1`] = `
 <div>
   <svg
-    aria-hidden="true"
     aria-label="Open Access - undefined - Free to read"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-11ilgiz-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="oa-icon"
     focusable="false"
+    role="img"
     viewBox="0 0 24 24"
   >
     <path
       d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12z"
     />
+    <title>
+      Open Access - undefined - Free to read
+    </title>
   </svg>
 </div>
 `;
@@ -30,17 +33,20 @@ exports[`Journal Name Component test  should render closed access 1`] = `
 exports[`Journal Name Component test  should render embargoed 1`] = `
 <div>
   <svg
-    aria-hidden="true"
     aria-label="Link (no DOI) - Open access after 2019-01-01"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="embargoed-oa-icon"
     focusable="false"
+    role="img"
     viewBox="0 0 24 24"
   >
     <path
       d="m14.5 14.2 2.9 1.7-.8 1.3L13 15v-5h1.5zM22 14c0 4.41-3.59 8-8 8-2.02 0-3.86-.76-5.27-2H4c-1.15 0-2-.85-2-2V9c0-1.12.89-1.96 2-2v-.5C4 4.01 6.01 2 8.5 2c2.34 0 4.24 1.79 4.46 4.08.34-.05.69-.08 1.04-.08 4.41 0 8 3.59 8 8M6 7h5v-.74C10.88 4.99 9.8 4 8.5 4 7.12 4 6 5.12 6 6.5zm14 7c0-3.31-2.69-6-6-6s-6 2.69-6 6 2.69 6 6 6 6-2.69 6-6"
     />
+    <title>
+      Link (no DOI) - Open access after 2019-01-01
+    </title>
   </svg>
 </div>
 `;
@@ -53,17 +59,20 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
     Open access after 2019-01-01 
   </span>
   <svg
-    aria-hidden="true"
     aria-label="Link (no DOI) - Open access after 2019-01-01"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="embargoed-oa-icon"
     focusable="false"
+    role="img"
     viewBox="0 0 24 24"
   >
     <path
       d="m14.5 14.2 2.9 1.7-.8 1.3L13 15v-5h1.5zM22 14c0 4.41-3.59 8-8 8-2.02 0-3.86-.76-5.27-2H4c-1.15 0-2-.85-2-2V9c0-1.12.89-1.96 2-2v-.5C4 4.01 6.01 2 8.5 2c2.34 0 4.24 1.79 4.46 4.08.34-.05.69-.08 1.04-.08 4.41 0 8 3.59 8 8M6 7h5v-.74C10.88 4.99 9.8 4 8.5 4 7.12 4 6 5.12 6 6.5zm14 7c0-3.31-2.69-6-6-6s-6 2.69-6 6 2.69 6 6 6 6-2.69 6-6"
     />
+    <title>
+      Link (no DOI) - Open access after 2019-01-01
+    </title>
   </svg>
 </div>
 `;
@@ -71,17 +80,20 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
 exports[`Journal Name Component test  should render locked 1`] = `
 <div>
   <svg
-    aria-hidden="true"
     aria-label="You do not have access to this file"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="no-oa-icon"
     focusable="false"
+    role="img"
     viewBox="0 0 24 24"
   >
     <path
       d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1z"
     />
+    <title>
+      You do not have access to this file
+    </title>
   </svg>
 </div>
 `;
@@ -98,17 +110,20 @@ exports[`Journal Name Component test  should render no icon 1`] = `
 exports[`Journal Name Component test  should render open access 1`] = `
 <div>
   <svg
-    aria-hidden="true"
     aria-label="Open Access - undefined - Free to read"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="oa-icon"
     focusable="false"
+    role="img"
     viewBox="0 0 24 24"
   >
     <path
       d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12z"
     />
+    <title>
+      Open Access - undefined - Free to read
+    </title>
   </svg>
 </div>
 `;
@@ -116,17 +131,20 @@ exports[`Journal Name Component test  should render open access 1`] = `
 exports[`Journal Name Component test  should render open access with OPEN_ACCESS_ID_LINK_NO_DOI 1`] = `
 <div>
   <svg
-    aria-hidden="true"
     aria-label="Open Access - Free to read"
     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
     data-mui-internal-clone-element="true"
     data-testid="oa-icon"
     focusable="false"
+    role="img"
     viewBox="0 0 24 24"
   >
     <path
       d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m0 12H6V10h12z"
     />
+    <title>
+      Open Access - Free to read
+    </title>
   </svg>
 </div>
 `;
