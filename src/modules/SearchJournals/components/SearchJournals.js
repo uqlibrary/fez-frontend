@@ -216,10 +216,15 @@ export const SearchJournals = () => {
     }, [showInputControls, hasAnySelectedKeywords, JSON.stringify(journalSearchQueryParams)]);
 
     const txt = locale.components.searchJournals;
+    // Safety net: no selected keywords means we are in the initial (search-input) view, full stop.
+    // Deriving the render from this - rather than relying only on the async showInputControls effects -
+    // makes the "showInputControls=false with no keywords" stuck-state impossible (it only ever arose
+    // from an effect-ordering race under CI load; every normal false state has keywords).
+    const shouldShowInputControls = showInputControls || !hasAnySelectedKeywords;
     return (
         <StandardPage title={txt.journalSearchInterface.title} standardPageId="journal-search-page">
             <Grid container spacing={3}>
-                {!!showInputControls && (
+                {!!shouldShowInputControls && (
                     <Grid size="grow">
                         <StandardCard noHeader standardCardId="journal-search-intro-card">
                             {txt.journalSearchInterface.intro}
@@ -238,12 +243,12 @@ export const SearchJournals = () => {
                             handleKeywordAdd,
                             handleKeywordUpdate,
                             hasAnySelectedKeywords,
-                            showInputControls,
+                            showInputControls: shouldShowInputControls,
                         }}
                     />
                 </Grid>
                 <Grid size="grow">
-                    {!showInputControls && (
+                    {!shouldShowInputControls && (
                         <JournalSearchResult
                             onSearch={handleSearch}
                             onSearchAll={handleSearchAllJournalsClick}
