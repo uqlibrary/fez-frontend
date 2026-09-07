@@ -7805,7 +7805,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     data-mui-internal-clone-element="true"
                   >
                     <button
-                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                       data-testid="test-list-row-0-delete"
                       id="test-list-row-0-delete"
                       tabindex="0"
@@ -7830,7 +7830,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     data-mui-internal-clone-element="true"
                   >
                     <button
-                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                       data-testid="test-list-row-0-edit"
                       id="test-list-row-0-edit"
                       tabindex="0"
@@ -7855,7 +7855,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     data-mui-internal-clone-element="true"
                   >
                     <button
-                      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                       data-testid="test-list-row-0-move-down"
                       disabled=""
                       id="test-list-row-0-move-down"
@@ -7881,7 +7881,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                     data-mui-internal-clone-element="true"
                   >
                     <button
-                      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                       data-testid="test-list-row-0-move-up"
                       disabled=""
                       id="test-list-row-0-move-up"

@@ -232,7 +232,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                                 )}
                             </Grid>
                             <Grid size={2} sx={{ display: { xs: 'block', sm: 'none' } }}>
-                                <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel} size="small">
+                                <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel} size="medium">
                                     <KeyboardArrowLeft sx={{ color: 'white.main' }} />
                                 </IconButton>
                             </Grid>

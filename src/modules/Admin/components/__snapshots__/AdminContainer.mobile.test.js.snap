@@ -3668,7 +3668,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           >
                                             <button
                                               aria-label="Move item up the order"
-                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-0-move-up"
                                               disabled=""
@@ -3690,7 +3690,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                             </button>
                                             <button
                                               aria-label="Move item down the order"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-0-move-down"
                                               id="rek-author-list-row-0-move-down"
@@ -3711,7 +3711,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                             </button>
                                             <button
                                               aria-label="Edit this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-0-edit"
                                               id="rek-author-list-row-0-edit"
@@ -3732,7 +3732,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                             </button>
                                             <button
                                               aria-label="Remove this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-0-delete"
                                               id="rek-author-list-row-0-delete"
@@ -3866,7 +3866,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                           >
                                             <button
                                               aria-label="Move item up the order"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-1-move-up"
                                               id="rek-author-list-row-1-move-up"
@@ -3887,7 +3887,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                             </button>
                                             <button
                                               aria-label="Move item down the order"
-                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-1-move-down"
                                               disabled=""
@@ -3909,7 +3909,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                             </button>
                                             <button
                                               aria-label="Edit this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-1-edit"
                                               id="rek-author-list-row-1-edit"
@@ -3930,7 +3930,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                             </button>
                                             <button
                                               aria-label="Remove this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1l6x2hu-MuiButtonBase-root-MuiIconButton-root"
                                               data-mui-internal-clone-element="true"
                                               data-testid="rek-author-list-row-1-delete"
                                               id="rek-author-list-row-1-delete"
