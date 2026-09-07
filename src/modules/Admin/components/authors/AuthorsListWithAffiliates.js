@@ -105,7 +105,7 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
                             <IconButton
                                 aria-label="delete"
                                 onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
-                                size={'small'}
+                                size={'medium'}
                                 id={`affiliationEditBtn-${rowData.aut_id}`}
                                 data-testid={`affiliationEditBtn-${rowData.aut_id}`}
                             >
@@ -648,7 +648,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-delete`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <tableIcons.Delete />
@@ -672,7 +672,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-edit`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <tableIcons.Edit />
@@ -704,7 +704,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-move-down`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <KeyboardArrowDown />
@@ -735,7 +735,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-move-up`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <KeyboardArrowUp />

@@ -42,7 +42,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                                               id={`${columnDataId}-copy-text`}
                                               data-analyticsid={`${columnDataId}-copy-text`}
                                               data-testid={`${columnDataId}-copy-text`}
-                                              size="small"
+                                              size="medium"
                                               disabled={!copyEnabled}
                                           >
                                               <Copy color={copyEnabled ? 'secondary' : 'disabled'} fontSize="small" />

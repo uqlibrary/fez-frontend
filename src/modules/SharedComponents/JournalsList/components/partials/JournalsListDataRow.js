@@ -118,7 +118,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         <Grid size={6}>
                             <IconButton
                                 aria-label="expand row"
-                                size="small"
+                                size="medium"
                                 onClick={() => setOpen(!open)}
                                 id={`journal-list-expander-btn-${index}`}
                                 data-analyticsid={`journal-list-expander-btn-${index}`}
