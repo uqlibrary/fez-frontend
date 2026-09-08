@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App';
 import { customRedirectors } from '../containers/App';
-import { accounts, authorDetails, currentAuthor } from 'mock/data';
+import { accounts, authorDetails, currentAuthor } from 'mock/data/account';
 import { pathConfig } from 'config';
 import Cookies from 'js-cookie';
 import {

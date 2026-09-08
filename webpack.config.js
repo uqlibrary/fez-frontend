@@ -16,8 +16,14 @@ const port = process.env.PORT || 3000;
 const url = process.env.URL || 'localhost';
 const useMock = !!process.env.USE_MOCK || false;
 const publicPath = '';
+// Disable React Fast Refresh under Playwright e2e (PW_IS_RUNNING): the HMR/error overlay iframe
+// (#react-refresh-overlay) can intercept pointer events and cause flaky click timeouts. e2e never
+// hot-reloads, so this is inert for tests and only affects the e2e/mock dev-server.
 const enableFastRefresh =
-    process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc' && process.env.NODE_ENV !== 'production';
+    process.env.NODE_ENV !== 'test' &&
+    process.env.NODE_ENV !== 'cc' &&
+    process.env.NODE_ENV !== 'production' &&
+    !process.env.PW_IS_RUNNING;
 
 const orcidUrl = 'https://sandbox.orcid.org';
 const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
@@ -47,6 +53,8 @@ module.exports = {
         },
         client: {
             logging: 'info',
+            // No dev-server error overlay under e2e so it can't intercept clicks.
+            overlay: !process.env.PW_IS_RUNNING,
         },
         devMiddleware: {
             publicPath: `/${publicPath}`,
