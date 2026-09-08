@@ -261,7 +261,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -294,7 +294,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -970,7 +970,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -1003,7 +1003,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -1713,7 +1713,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -1746,7 +1746,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -2062,7 +2062,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -2095,7 +2095,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -2542,18 +2542,21 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="WarningIcon"
+                      data-testid="WarningAmberIcon"
                       focusable="false"
                       id="warning-icon"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                        d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                      />
+                      <path
+                        d="M13 16h-2v2h2zm0-6h-2v5h2z"
                       />
                     </svg>
                   </div>
@@ -2575,7 +2578,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -2835,7 +2838,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -2868,7 +2871,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -2919,18 +2922,21 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                      data-testid="WarningIcon"
+                      data-testid="WarningAmberIcon"
                       focusable="false"
                       id="warning-icon"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                        d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                      />
+                      <path
+                        d="M13 16h-2v2h2zm0-6h-2v5h2z"
                       />
                     </svg>
                   </div>
@@ -2952,7 +2958,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -3212,7 +3218,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -3245,7 +3251,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -3296,7 +3302,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-6v8acz-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-e0h2kd-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -3329,7 +3335,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -3589,7 +3595,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -3622,7 +3628,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -3902,7 +3908,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -3935,7 +3941,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -4395,7 +4401,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -4428,7 +4434,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -4816,7 +4822,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -4849,7 +4855,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -5201,7 +5207,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -5234,7 +5240,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -5876,7 +5882,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -5909,7 +5915,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -6438,7 +6444,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -6471,7 +6477,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -6792,7 +6798,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -6825,7 +6831,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -7354,7 +7360,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -7387,7 +7393,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -7844,7 +7850,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -7877,7 +7883,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -8334,7 +8340,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -8367,7 +8373,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -9212,7 +9218,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -9245,7 +9251,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -9525,7 +9531,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -9558,7 +9564,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -9918,7 +9924,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -9951,7 +9957,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -10192,7 +10198,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -10225,7 +10231,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"
@@ -10466,7 +10472,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                   >
                     <svg
                       aria-hidden="true"
@@ -10499,7 +10505,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-nue4yf-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-16qjzx9-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="action-button"
                   data-testid="action-button"
                   id="action-button"

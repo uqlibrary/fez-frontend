@@ -58,18 +58,21 @@ exports[`ThesisForm component 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                          data-testid="WarningIcon"
+                          data-testid="WarningAmberIcon"
                           focusable="false"
                           id="warning-icon"
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                            d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                          />
+                          <path
+                            d="M13 16h-2v2h2zm0-6h-2v5h2z"
                           />
                         </svg>
                       </div>
@@ -635,7 +638,7 @@ exports[`ThesisForm component 1`] = `
                         style="margin-bottom: 8px;"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="authors-add"
                           data-testid="authors-add"
                           disabled=""
@@ -651,7 +654,7 @@ exports[`ThesisForm component 1`] = `
                         style="margin-bottom: 8px;"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="authors-cancel"
                           data-testid="authors-cancel"
                           disabled=""
@@ -795,7 +798,7 @@ exports[`ThesisForm component 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="supervisors-add"
                       data-testid="supervisors-add"
                       disabled=""
@@ -811,7 +814,7 @@ exports[`ThesisForm component 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="supervisors-cancel"
                       data-testid="supervisors-cancel"
                       disabled=""
@@ -1195,18 +1198,21 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                          data-testid="WarningIcon"
+                          data-testid="WarningAmberIcon"
                           focusable="false"
                           id="warning-icon"
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                            d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                          />
+                          <path
+                            d="M13 16h-2v2h2zm0-6h-2v5h2z"
                           />
                         </svg>
                       </div>
@@ -1780,7 +1786,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                         style="margin-bottom: 8px;"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="authors-add"
                           data-testid="authors-add"
                           disabled=""
@@ -1796,7 +1802,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                         style="margin-bottom: 8px;"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="authors-cancel"
                           data-testid="authors-cancel"
                           disabled=""
@@ -1941,7 +1947,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="supervisors-add"
                       data-testid="supervisors-add"
                       disabled=""
@@ -1957,7 +1963,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1ub5gn2-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-pihbkp-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="supervisors-cancel"
                       data-testid="supervisors-cancel"
                       disabled=""

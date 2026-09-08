@@ -658,18 +658,21 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                        data-testid="WarningIcon"
+                        data-testid="WarningAmberIcon"
                         focusable="false"
                         id="warning-icon"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                          d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                        />
+                        <path
+                          d="M13 16h-2v2h2zm0-6h-2v5h2z"
                         />
                       </svg>
                     </div>
@@ -707,7 +710,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-4oo2og-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-esmtlg-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -718,7 +721,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ffrq4f-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1sluox-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               disabled=""
@@ -1491,18 +1494,21 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                        data-testid="WarningIcon"
+                        data-testid="WarningAmberIcon"
                         focusable="false"
                         id="warning-icon"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                          d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                        />
+                        <path
+                          d="M13 16h-2v2h2zm0-6h-2v5h2z"
                         />
                       </svg>
                     </div>
@@ -1540,7 +1546,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-4oo2og-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-esmtlg-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1551,7 +1557,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ffrq4f-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1sluox-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               disabled=""

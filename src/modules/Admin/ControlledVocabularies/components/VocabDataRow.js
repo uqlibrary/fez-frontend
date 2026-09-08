@@ -55,7 +55,7 @@ export const VocabDataRow = ({ row }) => {
                             <IconButton
                                 sx={{ paddingTop: '5px' }}
                                 aria-label="expand row"
-                                size="small"
+                                size="medium"
                                 id={`expand-row-${row.cvo_id}`}
                                 data-analyticsid={`expand-row-${row.cvo_id}`}
                                 data-testid={`expand-row-${row.cvo_id}`}

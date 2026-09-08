@@ -167,7 +167,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-rc8kub-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-pgtirv-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-undefined-primary"
             data-testid="publication-action-undefined-primary"
             disabled=""
@@ -201,7 +201,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-nue4yf-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-16qjzx9-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-undefined-secondary"
             tabindex="0"
             type="button"
@@ -233,7 +233,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-nue4yf-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-16qjzx9-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-undefined-secondary"
             tabindex="0"
             type="button"
@@ -502,7 +502,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-rc8kub-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-pgtirv-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-UQ41878-primary"
             data-testid="publication-action-UQ41878-primary"
             disabled=""
@@ -536,7 +536,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-nue4yf-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-16qjzx9-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -568,7 +568,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-nue4yf-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder2 css-16qjzx9-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -1384,7 +1384,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-nue4yf-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-16qjzx9-MuiButtonBase-root-MuiButton-root"
             data-testid="publication-action-UQ41878-secondary"
             tabindex="0"
             type="button"
@@ -1659,7 +1659,7 @@ exports[`PublicationCitation  should render component with default item with ima
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-1ikfvis-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-ld27sf-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
@@ -2012,7 +2012,7 @@ exports[`PublicationCitation  should render component with default item with ima
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-18m0nz7-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-1lhrvpe-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
@@ -4252,7 +4252,7 @@ exports[`PublicationCitation  should render component without image if whitelist
           width="150"
         />
         <div
-          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-18m0nz7-MuiImageListItemBar-root"
+          class="MuiImageListItemBar-root MuiImageListItemBar-positionTop MuiImageListItemBar-actionPositionRight css-1h3fbr-MuiImageListItemBar-root"
           data-testid="image-gallery-item-UQ:676287-alert"
           id="image-gallery-item-UQ:676287-alert"
         >
@@ -4813,7 +4813,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-rc8kub-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ41878 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-pgtirv-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="publication-action-UQ41878-primary"
             data-testid="publication-action-UQ41878-primary"
             tabindex="0"

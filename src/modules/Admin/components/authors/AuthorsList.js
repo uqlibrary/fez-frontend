@@ -914,7 +914,7 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-move-up`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
                             <KeyboardArrowUp />
@@ -943,7 +943,7 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-move-down`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
                             <KeyboardArrowDown />
@@ -966,7 +966,7 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-edit`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
                             <tableIcons.Edit />
@@ -984,7 +984,7 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-delete`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
                             <tableIcons.Delete />
