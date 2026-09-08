@@ -16,18 +16,18 @@ exports[`Alert should dismiss alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
@@ -132,18 +132,21 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
@@ -248,7 +251,7 @@ exports[`Alert should display loader 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <span
               class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-1jjkwrz-MuiCircularProgress-root"
@@ -374,18 +377,21 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
@@ -490,18 +496,21 @@ exports[`Alert should not fire an action when user clicks on the message text an
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
@@ -592,18 +601,18 @@ exports[`Alert should render clickable action button 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
@@ -708,7 +717,7 @@ exports[`Alert should render custom alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-6v8acz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-e0h2kd-MuiGrid-root"
           >
             test
           </div>
@@ -813,18 +822,21 @@ exports[`Alert should render default view 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
@@ -929,7 +941,7 @@ exports[`Alert should render done type of alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
@@ -1045,7 +1057,7 @@ exports[`Alert should render error outline type of alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
@@ -1161,18 +1173,18 @@ exports[`Alert should render error type of alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
@@ -1277,18 +1289,18 @@ exports[`Alert should render error type of alert by default 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
@@ -1393,7 +1405,7 @@ exports[`Alert should render help outline type of alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
@@ -1509,7 +1521,7 @@ exports[`Alert should render help type of alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
@@ -1625,7 +1637,7 @@ exports[`Alert should render info outline type of alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
@@ -1741,18 +1753,18 @@ exports[`Alert should render info type of alert 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="InfoIcon"
+              data-testid="InfoOutlinedIcon"
               focusable="false"
               id="info-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>

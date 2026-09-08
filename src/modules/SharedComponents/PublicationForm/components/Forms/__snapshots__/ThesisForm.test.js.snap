@@ -58,18 +58,21 @@ exports[`ThesisForm component 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                          data-testid="WarningIcon"
+                          data-testid="WarningAmberIcon"
                           focusable="false"
                           id="warning-icon"
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                            d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                          />
+                          <path
+                            d="M13 16h-2v2h2zm0-6h-2v5h2z"
                           />
                         </svg>
                       </div>
@@ -1195,18 +1198,21 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
                       >
                         <svg
                           aria-hidden="true"
                           class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                          data-testid="WarningIcon"
+                          data-testid="WarningAmberIcon"
                           focusable="false"
                           id="warning-icon"
                           viewBox="0 0 24 24"
                         >
                           <path
-                            d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                            d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                          />
+                          <path
+                            d="M13 16h-2v2h2zm0-6h-2v5h2z"
                           />
                         </svg>
                       </div>
