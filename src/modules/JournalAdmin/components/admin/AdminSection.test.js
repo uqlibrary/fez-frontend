@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, WithReduxStore, FormProviderWrapper } from 'test-utils';
 import AdminSection from './AdminSection';
-import { journalDoaj } from 'mock/data';
+import { journalDoaj } from 'mock/data/journalDoaj';
 import { fieldConfig } from 'config/journalAdmin';
 
 import { ADMIN_JOURNAL } from 'config/general';

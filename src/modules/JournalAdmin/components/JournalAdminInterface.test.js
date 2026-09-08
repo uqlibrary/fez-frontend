@@ -2,7 +2,7 @@ import React from 'react';
 import { getQueryStringValue, JournalAdminInterface, navigateToSearchResult } from './JournalAdminInterface';
 import { useAccountContext, useJournalContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
-import { journalDoaj } from 'mock/data';
+import { journalDoaj } from 'mock/data/journalDoaj';
 import * as redux from 'react-redux';
 
 import { render, WithReduxStore, WithRouter, FormProviderWrapper, fireEvent, act, userEvent } from 'test-utils';

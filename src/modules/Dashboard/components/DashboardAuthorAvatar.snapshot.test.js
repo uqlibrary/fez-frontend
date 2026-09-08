@@ -1,6 +1,6 @@
 import React from 'react';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
-import { authorDetails } from 'mock/data';
+import { authorDetails } from 'mock/data/account';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {
