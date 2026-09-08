@@ -1,5 +1,5 @@
 import * as actions from 'actions/actionTypes';
-// import { record } from 'mock/data';
+// import record from 'mock/data/records/record';
 
 export const initialState = {
     communityList: [],

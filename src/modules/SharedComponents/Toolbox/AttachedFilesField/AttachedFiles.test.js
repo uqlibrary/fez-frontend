@@ -1,6 +1,6 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes, getFilenameId } from './AttachedFiles';
-import { recordWithDatastreams } from 'mock/data';
+import recordWithDatastreams from 'mock/data/records/recordWithDatastreams';
 import {
     rtlRender,
     WithReduxStore,
