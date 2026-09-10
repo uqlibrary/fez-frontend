@@ -378,10 +378,11 @@ const AppClass = ({
                         skipNavAriaLabel: locale.global.skipNav.ariaLabel,
                         skipNavTitle: locale.global.skipNav.title,
                         closeMenuLabel: locale.global.mainNavButton.closeMenuLabel,
+                        mainNavAriaLabel: locale.global.mainNavButton.ariaLabel,
                     }}
                 />
             )}
-            <div className="content-container" id="content-container" style={containerStyle}>
+            <div className="content-container" id="content-container" role="main" style={containerStyle}>
                 <ScrollTop show containerId="content-container" />
 
                 <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>

@@ -2407,6 +2407,10 @@ export default {
             searchBoxPlaceholder: 'Search eSpace',
             searchBoxHint: 'Enter your search query to search all fields in eSpace',
             ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
+            // Accessible names for the search landmarks (role="search"), kept distinct so screen-reader
+            // users can tell the header search apart from the search-page one. WCAG 1.3.1 / 2.4.1.
+            siteSearchAriaLabel: 'Site search',
+            simpleSearchAriaLabel: 'eSpace search',
             searchButtonHint: 'Search eSpace',
             mobileSearchButtonAriaLabel: 'Click to search eSpace',
             advancedSearchButtonText: 'Advanced search',
@@ -2416,6 +2420,8 @@ export default {
             simpleSearchToggle: 'Simple search',
             advancedSearch: {
                 title: 'Advanced search',
+                // Accessible name for the advanced-search landmark (role="search"). WCAG 1.3.1 / 2.4.1.
+                ariaLabel: 'Advanced eSpace search',
                 mode: 'advanced',
                 tooltip: {
                     show: 'Show advanced search',

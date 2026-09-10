@@ -32,6 +32,7 @@ interface MenuDrawerLocale {
     skipNavTitle: string;
     skipNavAriaLabel: string;
     closeMenuLabel: string;
+    mainNavAriaLabel: string;
 }
 
 interface MenuDrawerProps {
@@ -195,6 +196,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                     <List
                         component="nav"
                         id="mainMenu"
+                        aria-label={locale.mainNavAriaLabel}
                         sx={{ outline: 'none', flexGrow: 1, paddingTop: 0 }}
                         tabIndex={-1}
                     >

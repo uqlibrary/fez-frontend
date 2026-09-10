@@ -61,6 +61,8 @@ export default {
             tooltip: 'Main navigation',
             aria: 'Click to open the main navigation',
             closeMenuLabel: 'Close menu',
+            // Accessible name for the <nav> landmark itself (screen-reader landmark navigation). WCAG 1.3.1 / 2.4.1.
+            ariaLabel: 'Main menu',
         },
         authentication: {
             signInText: 'Log in',
