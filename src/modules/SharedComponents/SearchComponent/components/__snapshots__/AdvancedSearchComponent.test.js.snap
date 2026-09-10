@@ -3,8 +3,10 @@
 exports[`AdvancedSearchComponent should render with default props 1`] = `
 <div>
   <form
+    aria-label="Advanced eSpace search"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"

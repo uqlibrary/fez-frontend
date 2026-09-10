@@ -109,7 +109,13 @@ export const AdvancedSearchComponent = ({
     const alreadyAddedFields = fieldRows.map(item => item.searchField);
 
     return (
-        <form id="advancedSearchForm" data-testid="advanced-search-form" onSubmit={_handleAdvancedSearch}>
+        <form
+            id="advancedSearchForm"
+            data-testid="advanced-search-form"
+            onSubmit={_handleAdvancedSearch}
+            role="search"
+            aria-label={txt.advancedSearch.ariaLabel}
+        >
             <Grid container spacing={0}>
                 <Grid container spacing={5} alignItems={'center'} sx={{ width: '100%' }}>
                     <Grid style={{ flexGrow: 1, width: 1 }}>

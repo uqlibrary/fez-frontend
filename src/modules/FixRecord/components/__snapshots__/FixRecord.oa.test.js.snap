@@ -645,7 +645,9 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div
@@ -1481,7 +1483,9 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div

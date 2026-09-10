@@ -94,7 +94,12 @@ export const SimpleSearchComponent = ({
     const ariaLabel = { 'aria-label': txt.ariaInputLabel };
     return (
         <React.Fragment>
-            <form style={{ margin: 8 }} onSubmit={_handleSubmit}>
+            <form
+                style={{ margin: 8 }}
+                onSubmit={_handleSubmit}
+                role="search"
+                aria-label={isInHeader ? txt.siteSearchAriaLabel : txt.simpleSearchAriaLabel}
+            >
                 {isInHeader ? (
                     <React.Fragment>
                         {/* DESKTOP in header */}

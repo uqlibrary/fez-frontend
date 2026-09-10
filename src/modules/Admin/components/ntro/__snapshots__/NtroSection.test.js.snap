@@ -120,10 +120,11 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
+                          aria-describedby="rek-significance-helper-text"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-significance-select"
+                          aria-labelledby="rek-significance-label rek-significance-select"
                           aria-required="true"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
@@ -828,7 +829,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"
@@ -995,10 +996,11 @@ exports[`NtroSection component should render default view 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
+                          aria-describedby="rek-significance-helper-text"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-significance-select"
+                          aria-labelledby="rek-significance-label rek-significance-select"
                           aria-required="true"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
@@ -1703,7 +1705,7 @@ exports[`NtroSection component should render default view 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"
@@ -1870,10 +1872,11 @@ exports[`NtroSection component should render design form fields 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
+                          aria-describedby="rek-significance-helper-text"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-significance-select"
+                          aria-labelledby="rek-significance-label rek-significance-select"
                           aria-required="true"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
@@ -2578,7 +2581,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"
@@ -2745,11 +2748,12 @@ exports[`NtroSection component should render disabled view 1`] = `
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
+                          aria-describedby="rek-significance-helper-text"
                           aria-disabled="true"
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-significance-select"
+                          aria-labelledby="rek-significance-label rek-significance-select"
                           aria-required="true"
                           class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
@@ -3469,7 +3473,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"

@@ -29,6 +29,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
       tabindex="-1"
     >
       <nav
+        aria-label="Main menu"
         class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
         id="mainMenu"
         tabindex="-1"

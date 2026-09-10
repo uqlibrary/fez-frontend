@@ -24,6 +24,7 @@ function setup(testProps = {}) {
             skipNavTitle: 'skip-nav',
             skipNavAriaLabel: 'skip-nav',
             closeMenuLabel: 'close',
+            mainNavAriaLabel: 'Main menu',
         },
         menuItems: testProps.menuItems || defaultMenuItems,
     };

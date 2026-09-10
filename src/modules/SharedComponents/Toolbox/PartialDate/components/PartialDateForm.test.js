@@ -21,6 +21,14 @@ describe('PartialDateForm component', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should give day, month and year fields accessible names (AD-1294)', () => {
+        const { getByRole } = setup();
+        expect(getByRole('textbox', { name: 'Day' })).toBeInTheDocument();
+        // the month combobox is named by the hidden label plus its current value ("Month …")
+        expect(getByRole('combobox', { name: /Month/ })).toBeInTheDocument();
+        expect(getByRole('textbox', { name: 'Year' })).toBeInTheDocument();
+    });
+
     it('should render comp as a required field', () => {
         const { container, getByTestId } = setup({ required: true, onChange: jest.fn() });
         fireEvent.change(getByTestId('test-day-input'), { target: { value: '1' } });

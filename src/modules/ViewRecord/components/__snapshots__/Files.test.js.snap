@@ -1236,7 +1236,9 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div
@@ -1597,7 +1599,9 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div
@@ -1958,7 +1962,9 @@ exports[`Files Component  should render an image as the original filename with n
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div
@@ -2915,7 +2921,9 @@ exports[`Files Component  should render component 2`] = `
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div
@@ -3810,7 +3818,9 @@ exports[`Files Component  should render component for public users 1`] = `
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div
@@ -5286,7 +5296,9 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div
@@ -5647,7 +5659,9 @@ exports[`Files Component  should render sensitive handling note 1`] = `
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div
@@ -6008,7 +6022,9 @@ exports[`Files Component  should show a blacklisted collection member when the u
         id="standard-card-files-content"
       >
         <div
+          aria-live="polite"
           data-testid="alert"
+          role="alert"
           style="margin-top: 5px;"
         >
           <div

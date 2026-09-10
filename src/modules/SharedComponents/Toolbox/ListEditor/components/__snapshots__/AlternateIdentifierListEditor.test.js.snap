@@ -52,7 +52,7 @@ exports[`AlternateIdentifierListEditor component should render default view 1`] 
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-labelledby="rek-alternate-identifier-type-select"
+              aria-labelledby="rek-alternate-identifier-type-label rek-alternate-identifier-type-select"
               class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-alternate-identifier-type-select"
               id="rek-alternate-identifier-type-select"

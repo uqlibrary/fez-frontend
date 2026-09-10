@@ -16,6 +16,12 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
     const hideLabel = !!filteredProps.hideLabel;
+    // WCAG 4.1.2 / 3.3.1: MUI labels the combobox display element from `labelId` + the display id.
+    // Without labelId it points the combobox at its own id, leaving it with no accessible name, so
+    // pass the InputLabel's id (or an aria-label when the label is hidden). helperTextId ties the
+    // error message to the control via aria-describedby.
+    const labelId = `${props.selectFieldId}-label`;
+    const helperTextId = `${props.selectFieldId}-helper-text`;
     const formHelperTextProps = filteredProps.formHelperTextProps ?? {};
     delete filteredProps.formHelperTextProps;
     delete filteredProps.hideLabel;
@@ -44,9 +50,16 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
                         'data-testid': `${props.selectFieldId}-options`,
                     }}
                     {...filteredProps}
+                    {...(!hideLabel && { labelId })}
+                    {...(hideLabel && filteredProps.label && { 'aria-label': filteredProps.label })}
+                    {...(error && { 'aria-describedby': helperTextId })}
                     autoWidth
                 />
-                {helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>}
+                {helperText && (
+                    <FormHelperText id={helperTextId} {...formHelperTextProps}>
+                        {helperText}
+                    </FormHelperText>
+                )}
             </FormControl>
         </React.Fragment>
     );

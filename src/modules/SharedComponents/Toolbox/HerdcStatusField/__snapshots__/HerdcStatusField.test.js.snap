@@ -17,7 +17,7 @@ exports[`HerdcStatusField component should render default view 1`] = `
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-labelledby="rek-herdc-status-select"
+        aria-labelledby="rek-herdc-status-label rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"
@@ -75,10 +75,11 @@ exports[`HerdcStatusField component should render immutable list as selected val
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-describedby="rek-herdc-status-helper-text"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-invalid="true"
-        aria-labelledby="rek-herdc-status-select"
+        aria-labelledby="rek-herdc-status-label rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"
@@ -145,7 +146,7 @@ exports[`HerdcStatusField component should render when given a default value fie
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-labelledby="rek-herdc-status-select"
+        aria-labelledby="rek-herdc-status-label rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"
@@ -203,10 +204,11 @@ exports[`HerdcStatusField component should render with given field props 1`] = `
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-1s35b77-MuiInputBase-root-MuiInput-root-MuiSelect-root"
     >
       <div
+        aria-describedby="rek-herdc-status-helper-text"
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-invalid="true"
-        aria-labelledby="rek-herdc-status-select"
+        aria-labelledby="rek-herdc-status-label rek-herdc-status-select"
         class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="rek-herdc-status-select"
         id="rek-herdc-status-select"

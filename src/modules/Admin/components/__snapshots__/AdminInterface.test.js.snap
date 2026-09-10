@@ -240,7 +240,9 @@ exports[`AdminInterface component should disabled button and render alert for fo
               style="height: 16px;"
             />
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div
@@ -377,7 +379,9 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -957,7 +961,9 @@ exports[`AdminInterface component should display job created alert 2`] = `
               style="height: 16px;"
             />
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div
@@ -1596,7 +1602,9 @@ exports[`AdminInterface component should display successful alert 2`] = `
               style="height: 16px;"
             />
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div
@@ -2982,7 +2990,9 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
+                aria-live="polite"
                 data-testid="alert"
+                role="alert"
                 style="margin-top: 5px;"
               >
                 <div
@@ -3370,7 +3380,9 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
+                aria-live="polite"
                 data-testid="alert"
+                role="alert"
                 style="margin-top: 5px;"
               >
                 <div

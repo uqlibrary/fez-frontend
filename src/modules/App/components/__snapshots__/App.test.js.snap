@@ -55,6 +55,8 @@ exports[`Application component Should display mobile correctly 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -167,6 +169,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         style="--Paper-shadow: none;"
       >
         <nav
+          aria-label="Main menu"
           class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
           id="mainMenu"
           tabindex="-1"
@@ -417,6 +420,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     <div
       class="content-container"
       id="content-container"
+      role="main"
       style="padding-left: 260px;"
     >
       <button
@@ -460,7 +464,9 @@ exports[`Application component Should display mobile correctly 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-10fhdhm-MuiGrid-root"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -893,6 +899,8 @@ exports[`Application component should render alert if user is not fez author 1`]
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -999,6 +1007,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     <div
       class="content-container"
       id="content-container"
+      role="main"
     >
       <button
         aria-label="Scroll to top of page"
@@ -1041,7 +1050,9 @@ exports[`Application component should render alert if user is not fez author 1`]
           class="MuiGrid-root MuiGrid-direction-xs-row css-10fhdhm-MuiGrid-root"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -1461,6 +1472,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -1567,6 +1580,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     <div
       class="content-container"
       id="content-container"
+      role="main"
     >
       <button
         aria-label="Scroll to top of page"
@@ -1965,6 +1979,8 @@ exports[`Application component should render app for account with fez author wit
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2071,6 +2087,7 @@ exports[`Application component should render app for account with fez author wit
     <div
       class="content-container"
       id="content-container"
+      role="main"
     >
       <button
         aria-label="Scroll to top of page"
@@ -2469,6 +2486,8 @@ exports[`Application component should render application with routing for the us
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2575,6 +2594,7 @@ exports[`Application component should render application with routing for the us
     <div
       class="content-container"
       id="content-container"
+      role="main"
     >
       <button
         aria-label="Scroll to top of page"
@@ -2760,6 +2780,8 @@ exports[`Application component should render for anon user 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-1w0uwig-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2866,6 +2888,7 @@ exports[`Application component should render for anon user 1`] = `
     <div
       class="content-container"
       id="content-container"
+      role="main"
     >
       <button
         aria-label="Scroll to top of page"

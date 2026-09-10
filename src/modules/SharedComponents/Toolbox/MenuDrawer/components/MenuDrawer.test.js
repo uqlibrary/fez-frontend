@@ -22,6 +22,7 @@ const defaultLocale = {
     skipNavTitle: 'Skip navigation',
     skipNavAriaLabel: 'Skip navigation',
     closeMenuLabel: 'Close menu',
+    mainNavAriaLabel: 'Main menu',
 };
 
 const mockUseNavigate = jest.fn();
@@ -63,6 +64,11 @@ describe('Component MenuDrawer', () => {
     it('should render opened drawer with menus, divider', () => {
         const { baseElement } = setup({ drawerOpen: true });
         expect(baseElement).toMatchSnapshot();
+    });
+
+    it('should label the navigation landmark for screen readers (AD-1291)', () => {
+        const { getByRole } = setup({ drawerOpen: true });
+        expect(getByRole('navigation', { name: 'Main menu' })).toBeInTheDocument();
     });
 
     it('should render opened drawer with menus, divider and skip nav button', () => {

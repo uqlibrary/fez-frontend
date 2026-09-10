@@ -42,12 +42,14 @@ describe('AdvancedSearchComponent', () => {
     });
 
     it('should render default view', () => {
-        const { getByTestId, getByText } = setup();
+        const { getByTestId, getByText, getByRole } = setup();
         expect(getByText(/advanced search/i)).toBeInTheDocument();
         expect(getByText(/please select a field to search/i)).toBeInTheDocument();
         expect(getByTestId('advanced-search-row-add').disabled).toBeTruthy();
         expect(getByTestId('initial-input').disabled).toBeTruthy();
         expect(getByTestId('advanced-search')).toBeInTheDocument();
+        // AD-1291: the advanced form is a distinctly labelled search landmark
+        expect(getByRole('search', { name: 'Advanced eSpace search' })).toBeInTheDocument();
     });
 
     it('should render minimised view', () => {

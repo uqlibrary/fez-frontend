@@ -17,7 +17,7 @@ exports[`NewGenericSelectField should render with default props 1`] = `
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-labelledby="test-select"
+        aria-labelledby="test-label test-select"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="test-select"
         id="test-select"

@@ -21,6 +21,12 @@ describe('NewGenericSelectField', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should give the combobox an accessible name from its label (AD-1294)', () => {
+        const { getByRole } = setup({ label: 'Content indicators' });
+        const combobox = getByRole('combobox');
+        expect(combobox.getAttribute('aria-labelledby')).toContain('rek-test-label');
+    });
+
     it('should render select field', () => {
         const { getByTestId } = setup({
             itemsList: [

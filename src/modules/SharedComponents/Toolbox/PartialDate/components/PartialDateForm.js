@@ -322,7 +322,8 @@ const PartialDateForm = props => {
                             value={state?.day || ''}
                             slotProps={{
                                 htmlInput: {
-                                    label: 'day',
+                                    // AD-1294: accessible name for the day field (was placeholder-only).
+                                    'aria-label': locale.dayLabel,
                                     maxLength: 2,
                                     id: `${partialDateFormId}-day-input`,
                                     'data-analyticsid': `${partialDateFormId}-day-input`,
@@ -333,10 +334,16 @@ const PartialDateForm = props => {
                         {isError && <FormHelperText error>{isError}</FormHelperText>}
                     </Grid>
                     <Grid size="grow">
+                        {/* AD-1294: visually-hidden label so MUI gives the month combobox an accessible
+                            name (labelId) instead of self-referencing its own display id. */}
+                        <InputLabel id={`${partialDateFormId}-month-label`} sx={{ display: 'none' }}>
+                            {locale.monthLabel}
+                        </InputLabel>
                         <Select
                             name="month"
                             variant="standard"
                             id={`${partialDateFormId}-month`}
+                            labelId={`${partialDateFormId}-month-label`}
                             fullWidth
                             error={!!isError}
                             disabled={disabled}
@@ -344,7 +351,6 @@ const PartialDateForm = props => {
                             placeholder={locale.monthLabel}
                             onChange={_onDateChanged('month')}
                             inputProps={{
-                                label: 'month',
                                 maxLength: 2,
                                 'data-analyticsid': `${partialDateFormId}-month-input`,
                                 'data-testid': `${partialDateFormId}-month-input`,
@@ -383,7 +389,8 @@ const PartialDateForm = props => {
                             value={state?.year || ''}
                             slotProps={{
                                 htmlInput: {
-                                    label: 'year',
+                                    // AD-1294: accessible name for the year field (was placeholder-only).
+                                    'aria-label': locale.yearLabel,
                                     maxLength: 4,
                                     id: `${partialDateFormId}-year-input`,
                                     'data-analyticsid': `${partialDateFormId}-year-input`,

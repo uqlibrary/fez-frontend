@@ -3,6 +3,8 @@
 exports[`SimpleSearchComponent should render default view 1`] = `
 <div>
   <form
+    aria-label="eSpace search"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -80,6 +82,8 @@ exports[`SimpleSearchComponent should render default view 1`] = `
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
 <div>
   <form
+    aria-label="eSpace search"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -157,6 +161,8 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
 exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
 <div>
   <form
+    aria-label="Site search"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -219,6 +225,8 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
 exports[`SimpleSearchComponent should render with default onSearch callback 1`] = `
 <div>
   <form
+    aria-label="eSpace search"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -296,6 +304,8 @@ exports[`SimpleSearchComponent should render with default onSearch callback 1`] 
 exports[`SimpleSearchComponent should set search value from prop 1`] = `
 <div>
   <form
+    aria-label="eSpace search"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -373,6 +383,8 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
 exports[`SimpleSearchComponent should show prefix icon when in header 1`] = `
 <div>
   <form
+    aria-label="Site search"
+    role="search"
     style="margin: 8px;"
   >
     <div

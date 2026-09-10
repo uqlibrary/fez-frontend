@@ -35,6 +35,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       tabindex="-1"
     >
       <nav
+        aria-label="Main menu"
         class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
         id="mainMenu"
         tabindex="-1"
@@ -189,6 +190,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         style="--Paper-shadow: none;"
       >
         <nav
+          aria-label="Main menu"
           class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
           id="mainMenu"
           tabindex="-1"

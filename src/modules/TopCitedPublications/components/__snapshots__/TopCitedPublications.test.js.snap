@@ -485,7 +485,9 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
 exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
 <div>
   <div
+    aria-live="polite"
     data-testid="alert"
+    role="alert"
     style="margin-top: 5px;"
   >
     <div

@@ -22,6 +22,16 @@ describe('SimpleSearchComponent', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should expose a distinctly labelled search landmark (AD-1291)', () => {
+        // on the search page (not in header) -> "eSpace search"
+        const { getByRole, unmount } = setup();
+        expect(getByRole('search', { name: 'eSpace search' })).toBeInTheDocument();
+        unmount();
+        // in the header -> "Site search"
+        const { getByRole: getByRoleHeader } = setup({ isInHeader: true });
+        expect(getByRoleHeader('search', { name: 'Site search' })).toBeInTheDocument();
+    });
+
     it('should render mobile view', () => {
         const { container, getByRole } = setup({
             showMobileSearchButton: true,
