@@ -168,7 +168,11 @@ export const Alert = ({
     const convertedType = type === 'success' ? 'done' : type;
     const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
     return (
-        <div data-testid="alert" style={{ marginTop: '5px' }}>
+        // WCAG 4.1.3 (status messages): announce the alert to screen readers the moment it appears.
+        // role="alert" fires on insertion; aria-live="polite" keeps it from cutting off the current
+        // utterance (role="alert" would otherwise be assertive). aria-atomic (default true for the
+        // role) means the title and message are read together.
+        <div data-testid="alert" role="alert" aria-live="polite" style={{ marginTop: '5px' }}>
             <StyledGridWithIcon
                 container
                 type={!!customIcon ? customType : convertedType}

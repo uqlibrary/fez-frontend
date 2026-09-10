@@ -42,7 +42,9 @@ exports[`ThesisForm component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
+                aria-live="polite"
                 data-testid="alert"
+                role="alert"
                 style="margin-top: 5px;"
               >
                 <div
@@ -1182,7 +1184,9 @@ exports[`ThesisForm component with all fields disabled 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <div
+                aria-live="polite"
                 data-testid="alert"
+                role="alert"
                 style="margin-top: 5px;"
               >
                 <div

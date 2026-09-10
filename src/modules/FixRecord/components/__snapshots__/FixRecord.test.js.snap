@@ -1253,7 +1253,9 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 id="standard-card-remove-this-work-from-my-profile-content"
               >
                 <div
+                  aria-live="polite"
                   data-testid="alert"
+                  role="alert"
                   style="margin-top: 5px;"
                 >
                   <div

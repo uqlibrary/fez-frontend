@@ -1582,7 +1582,9 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div
@@ -3146,7 +3148,9 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div
@@ -4751,7 +4755,9 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div
@@ -6801,7 +6807,9 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           >
             <div
+              aria-live="polite"
               data-testid="alert"
+              role="alert"
               style="margin-top: 5px;"
             >
               <div

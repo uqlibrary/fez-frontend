@@ -464,7 +464,9 @@ exports[`Application component Should display mobile correctly 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-10fhdhm-MuiGrid-root"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -1048,7 +1050,9 @@ exports[`Application component should render alert if user is not fez author 1`]
           class="MuiGrid-root MuiGrid-direction-xs-row css-10fhdhm-MuiGrid-root"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
