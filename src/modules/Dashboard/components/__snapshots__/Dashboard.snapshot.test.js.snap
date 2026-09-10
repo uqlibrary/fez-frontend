@@ -248,7 +248,9 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -983,7 +985,9 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -1752,7 +1756,9 @@ exports[`Dashboard test Should only render barChart 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -2101,7 +2107,9 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -2607,7 +2615,9 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -2900,7 +2910,9 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -2984,7 +2996,9 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -3277,7 +3291,9 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -3361,7 +3377,9 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -3654,7 +3672,9 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -3967,7 +3987,9 @@ exports[`Dashboard test does render latest and trending publications tabs correc
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -4460,7 +4482,9 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -4881,7 +4905,9 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -5266,7 +5292,9 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -5941,7 +5969,9 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -6503,7 +6533,9 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -6857,7 +6889,9 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -7445,7 +7479,9 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -7961,7 +7997,9 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -8477,7 +8515,9 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -9407,7 +9447,9 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -9720,7 +9762,9 @@ exports[`Dashboard test renders dashboard header only 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -10113,7 +10157,9 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -10387,7 +10433,9 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div
@@ -10661,7 +10709,9 @@ exports[`Dashboard test should get styles for full render 1`] = `
           style="margin-top: -27px;"
         >
           <div
+            aria-live="polite"
             data-testid="alert"
+            role="alert"
             style="margin-top: 5px;"
           >
             <div

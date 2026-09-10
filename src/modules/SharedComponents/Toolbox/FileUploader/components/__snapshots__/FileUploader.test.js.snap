@@ -119,7 +119,9 @@ exports[`Component FileUploader should alphabetically order files as they are ad
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -168,7 +170,9 @@ exports[`Component FileUploader should alphabetically order files as they are ad
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -564,7 +568,9 @@ exports[`Component FileUploader should alphabetically order files as they are ad
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -613,7 +619,9 @@ exports[`Component FileUploader should alphabetically order files as they are ad
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -1207,7 +1215,9 @@ exports[`Component FileUploader should delete first file 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -1256,7 +1266,9 @@ exports[`Component FileUploader should delete first file 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -1573,7 +1585,9 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -1622,7 +1636,9 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -2272,7 +2288,9 @@ exports[`Component FileUploader should not render rows for uploaded files with a
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -2321,7 +2339,9 @@ exports[`Component FileUploader should not render rows for uploaded files with a
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -2836,7 +2856,9 @@ exports[`Component FileUploader should not reset file access or embargo date inf
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -2885,7 +2907,9 @@ exports[`Component FileUploader should not reset file access or embargo date inf
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -3971,7 +3995,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -4020,7 +4046,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -4566,7 +4594,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -4615,7 +4645,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -5153,7 +5185,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -5202,7 +5236,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -5923,7 +5959,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -5972,7 +6010,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -6487,7 +6527,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -6536,7 +6578,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -7090,7 +7134,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -7139,7 +7185,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -7687,7 +7735,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -7736,7 +7786,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -8469,7 +8521,9 @@ exports[`Component FileUploader should set max files error message 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -8518,7 +8572,9 @@ exports[`Component FileUploader should set max files error message 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -8567,7 +8623,9 @@ exports[`Component FileUploader should set max files error message 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -8884,7 +8942,9 @@ exports[`Component FileUploader should update file description 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div
@@ -8933,7 +8993,9 @@ exports[`Component FileUploader should update file description 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
+        aria-live="polite"
         data-testid="alert"
+        role="alert"
         style="margin-top: 5px;"
       >
         <div

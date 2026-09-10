@@ -30,6 +30,13 @@ describe('Alert', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should be a polite live region so screen readers announce it (AD-1292)', () => {
+        const { getByTestId } = setup();
+        const alert = getByTestId('alert');
+        expect(alert).toHaveAttribute('role', 'alert');
+        expect(alert).toHaveAttribute('aria-live', 'polite');
+    });
+
     it('should render error type of alert', () => {
         const { container, getByText, getByTestId } = setup({
             title: 'This is an error title',
