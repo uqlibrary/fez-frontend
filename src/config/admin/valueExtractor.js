@@ -913,7 +913,8 @@ export default {
                 rek_order: identifier.rek_alternate_identifier_order,
             }));
 
-            delete record.fez_record_search_key_subject;
+            delete record.fez_record_search_key_alternate_identifier;
+            delete record.fez_record_search_key_alternate_identifier_type;
 
             return returnValue;
         },
