@@ -30,7 +30,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-labelledby="test-policy-select"
+        aria-labelledby="test-policy-label test-policy-select"
         aria-required="true"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="test-policy-select"
@@ -104,7 +104,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
-        aria-labelledby="test-policy-select"
+        aria-labelledby="test-policy-label test-policy-select"
         aria-required="true"
         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="test-policy-select"

@@ -251,11 +251,11 @@ exports[`CreativeWorkForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             id="rek-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -273,6 +273,12 @@ exports[`CreativeWorkForm component 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -280,7 +286,7 @@ exports[`CreativeWorkForm component 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-date-month-select"
+                          aria-labelledby="rek-date-month-label rek-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
@@ -297,7 +303,6 @@ exports[`CreativeWorkForm component 1`] = `
                           data-analyticsid="rek-date-month-input"
                           data-testid="rek-date-month-input"
                           id="rek-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -328,11 +333,11 @@ exports[`CreativeWorkForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             id="rek-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -1005,12 +1010,12 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             disabled=""
                             id="rek-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -1028,6 +1033,12 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -1036,7 +1047,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-date-month-select"
+                          aria-labelledby="rek-date-month-label rek-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
@@ -1053,7 +1064,6 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                           data-testid="rek-date-month-input"
                           disabled=""
                           id="rek-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -1084,12 +1094,12 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             disabled=""
                             id="rek-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -1764,11 +1774,11 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             id="rek-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -1786,6 +1796,12 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -1793,7 +1809,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-date-month-select"
+                          aria-labelledby="rek-date-month-label rek-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
@@ -1810,7 +1826,6 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                           data-analyticsid="rek-date-month-input"
                           data-testid="rek-date-month-input"
                           id="rek-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -1841,11 +1856,11 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             id="rek-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -1894,11 +1909,11 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-day-input"
                             data-testid="rek-end-date-day-input"
                             id="rek-end-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -1916,6 +1931,12 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-end-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -1923,7 +1944,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-end-date-month-select"
+                          aria-labelledby="rek-end-date-month-label rek-end-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-end-date-month-select"
                           data-testid="rek-end-date-month-select"
@@ -1940,7 +1961,6 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                           data-analyticsid="rek-end-date-month-input"
                           data-testid="rek-end-date-month-input"
                           id="rek-end-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -1971,11 +1991,11 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-year-input"
                             data-testid="rek-end-date-year-input"
                             id="rek-end-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -3028,7 +3048,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-audience-size-select"
+                        aria-labelledby="rek-audience-size-label rek-audience-size-select"
                         aria-required="true"
                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-audience-size-select"
@@ -3090,7 +3110,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-language-select"
+                        aria-labelledby="rek-language-label rek-language-select"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-language-select"
                         id="rek-language-select"
@@ -3156,7 +3176,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-quality-indicator-select"
+                        aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                         aria-required="true"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-quality-indicator-select"
@@ -3757,11 +3777,11 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             id="rek-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -3779,6 +3799,12 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -3786,7 +3812,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-date-month-select"
+                          aria-labelledby="rek-date-month-label rek-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
@@ -3803,7 +3829,6 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                           data-analyticsid="rek-date-month-input"
                           data-testid="rek-date-month-input"
                           id="rek-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -3834,11 +3859,11 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             id="rek-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -3887,11 +3912,11 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-day-input"
                             data-testid="rek-end-date-day-input"
                             id="rek-end-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -3909,6 +3934,12 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-end-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -3916,7 +3947,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-end-date-month-select"
+                          aria-labelledby="rek-end-date-month-label rek-end-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-end-date-month-select"
                           data-testid="rek-end-date-month-select"
@@ -3933,7 +3964,6 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                           data-analyticsid="rek-end-date-month-input"
                           data-testid="rek-end-date-month-input"
                           id="rek-end-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -3964,11 +3994,11 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-year-input"
                             data-testid="rek-end-date-year-input"
                             id="rek-end-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -4986,7 +5016,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-audience-size-select"
+                        aria-labelledby="rek-audience-size-label rek-audience-size-select"
                         aria-required="true"
                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-audience-size-select"
@@ -5048,7 +5078,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-language-select"
+                        aria-labelledby="rek-language-label rek-language-select"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-language-select"
                         id="rek-language-select"
@@ -5114,7 +5144,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-quality-indicator-select"
+                        aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                         aria-required="true"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-quality-indicator-select"

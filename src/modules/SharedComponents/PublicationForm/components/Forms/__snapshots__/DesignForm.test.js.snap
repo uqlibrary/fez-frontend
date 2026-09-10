@@ -321,11 +321,11 @@ exports[`DesignForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-day-input"
                             data-testid="rek-project-start-date-day-input"
                             id="rek-project-start-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -343,6 +343,12 @@ exports[`DesignForm component 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-project-start-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -350,7 +356,7 @@ exports[`DesignForm component 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-project-start-date-month-select"
+                          aria-labelledby="rek-project-start-date-month-label rek-project-start-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-project-start-date-month-select"
                           data-testid="rek-project-start-date-month-select"
@@ -367,7 +373,6 @@ exports[`DesignForm component 1`] = `
                           data-analyticsid="rek-project-start-date-month-input"
                           data-testid="rek-project-start-date-month-input"
                           id="rek-project-start-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -398,11 +403,11 @@ exports[`DesignForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-year-input"
                             data-testid="rek-project-start-date-year-input"
                             id="rek-project-start-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -451,11 +456,11 @@ exports[`DesignForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-day-input"
                             data-testid="rek-end-date-day-input"
                             id="rek-end-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -473,6 +478,12 @@ exports[`DesignForm component 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-end-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -480,7 +491,7 @@ exports[`DesignForm component 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-end-date-month-select"
+                          aria-labelledby="rek-end-date-month-label rek-end-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-end-date-month-select"
                           data-testid="rek-end-date-month-select"
@@ -497,7 +508,6 @@ exports[`DesignForm component 1`] = `
                           data-analyticsid="rek-end-date-month-input"
                           data-testid="rek-end-date-month-input"
                           id="rek-end-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -528,11 +538,11 @@ exports[`DesignForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-year-input"
                             data-testid="rek-end-date-year-input"
                             id="rek-end-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -1221,11 +1231,11 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-day-input"
                             data-testid="rek-project-start-date-day-input"
                             id="rek-project-start-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -1243,6 +1253,12 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-project-start-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -1250,7 +1266,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-project-start-date-month-select"
+                          aria-labelledby="rek-project-start-date-month-label rek-project-start-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-project-start-date-month-select"
                           data-testid="rek-project-start-date-month-select"
@@ -1267,7 +1283,6 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                           data-analyticsid="rek-project-start-date-month-input"
                           data-testid="rek-project-start-date-month-input"
                           id="rek-project-start-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -1298,11 +1313,11 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-year-input"
                             data-testid="rek-project-start-date-year-input"
                             id="rek-project-start-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -1351,11 +1366,11 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-day-input"
                             data-testid="rek-end-date-day-input"
                             id="rek-end-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -1373,6 +1388,12 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-end-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -1380,7 +1401,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-end-date-month-select"
+                          aria-labelledby="rek-end-date-month-label rek-end-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-end-date-month-select"
                           data-testid="rek-end-date-month-select"
@@ -1397,7 +1418,6 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                           data-analyticsid="rek-end-date-month-input"
                           data-testid="rek-end-date-month-input"
                           id="rek-end-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -1428,11 +1448,11 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-year-input"
                             data-testid="rek-end-date-year-input"
                             id="rek-end-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -2477,7 +2497,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-language-select"
+                        aria-labelledby="rek-language-label rek-language-select"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-language-select"
                         id="rek-language-select"
@@ -2543,7 +2563,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-quality-indicator-select"
+                        aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                         aria-required="true"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-quality-indicator-select"
@@ -3256,12 +3276,12 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-day-input"
                             data-testid="rek-project-start-date-day-input"
                             disabled=""
                             id="rek-project-start-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -3279,6 +3299,12 @@ exports[`DesignForm component with all fields disabled 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-project-start-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -3287,7 +3313,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-project-start-date-month-select"
+                          aria-labelledby="rek-project-start-date-month-label rek-project-start-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-project-start-date-month-select"
                           data-testid="rek-project-start-date-month-select"
@@ -3304,7 +3330,6 @@ exports[`DesignForm component with all fields disabled 1`] = `
                           data-testid="rek-project-start-date-month-input"
                           disabled=""
                           id="rek-project-start-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -3335,12 +3360,12 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-year-input"
                             data-testid="rek-project-start-date-year-input"
                             disabled=""
                             id="rek-project-start-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -3389,12 +3414,12 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-day-input"
                             data-testid="rek-end-date-day-input"
                             disabled=""
                             id="rek-end-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -3412,6 +3437,12 @@ exports[`DesignForm component with all fields disabled 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-end-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -3420,7 +3451,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-end-date-month-select"
+                          aria-labelledby="rek-end-date-month-label rek-end-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-end-date-month-select"
                           data-testid="rek-end-date-month-select"
@@ -3437,7 +3468,6 @@ exports[`DesignForm component with all fields disabled 1`] = `
                           data-testid="rek-end-date-month-input"
                           disabled=""
                           id="rek-end-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -3468,12 +3498,12 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-year-input"
                             data-testid="rek-end-date-year-input"
                             disabled=""
                             id="rek-end-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -4166,11 +4196,11 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-day-input"
                             data-testid="rek-project-start-date-day-input"
                             id="rek-project-start-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -4188,6 +4218,12 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-project-start-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -4195,7 +4231,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-project-start-date-month-select"
+                          aria-labelledby="rek-project-start-date-month-label rek-project-start-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-project-start-date-month-select"
                           data-testid="rek-project-start-date-month-select"
@@ -4212,7 +4248,6 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                           data-analyticsid="rek-project-start-date-month-input"
                           data-testid="rek-project-start-date-month-input"
                           id="rek-project-start-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -4243,11 +4278,11 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-project-start-date-year-input"
                             data-testid="rek-project-start-date-year-input"
                             id="rek-project-start-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -4296,11 +4331,11 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-day-input"
                             data-testid="rek-end-date-day-input"
                             id="rek-end-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -4318,6 +4353,12 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-oc5r55-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-end-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-5svcd3-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -4325,7 +4366,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-end-date-month-select"
+                          aria-labelledby="rek-end-date-month-label rek-end-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-end-date-month-select"
                           data-testid="rek-end-date-month-select"
@@ -4342,7 +4383,6 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                           data-analyticsid="rek-end-date-month-input"
                           data-testid="rek-end-date-month-input"
                           id="rek-end-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -4373,11 +4413,11 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-end-date-year-input"
                             data-testid="rek-end-date-year-input"
                             id="rek-end-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -5422,7 +5462,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-language-select"
+                        aria-labelledby="rek-language-label rek-language-select"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-language-select"
                         id="rek-language-select"
@@ -5488,7 +5528,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                       <div
                         aria-expanded="false"
                         aria-haspopup="listbox"
-                        aria-labelledby="rek-quality-indicator-select"
+                        aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                         aria-required="true"
                         class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-quality-indicator-select"

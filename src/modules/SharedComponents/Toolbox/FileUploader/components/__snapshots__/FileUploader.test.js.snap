@@ -3113,13 +3113,28 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                data-testid="dsi-open-access-0-label"
+                hidden=""
+                id="dsi-open-access-0-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="dsi-open-access-0-select"
+                  aria-labelledby="dsi-open-access-0-label dsi-open-access-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
@@ -3286,14 +3301,30 @@ exports[`Component FileUploader should not reset file access or embargo date inf
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                data-testid="dsi-open-access-1-label"
+                hidden=""
+                id="dsi-open-access-1-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-describedby="dsi-open-access-1-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-open-access-1-select"
+                  aria-labelledby="dsi-open-access-1-label dsi-open-access-1-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
@@ -4255,14 +4286,30 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                data-testid="dsi-open-access-0-label"
+                hidden=""
+                id="dsi-open-access-0-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-describedby="dsi-open-access-0-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-open-access-0-select"
+                  aria-labelledby="dsi-open-access-0-label dsi-open-access-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
@@ -4400,14 +4447,30 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                data-testid="dsi-open-access-1-label"
+                hidden=""
+                id="dsi-open-access-1-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-describedby="dsi-open-access-1-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-open-access-1-select"
+                  aria-labelledby="dsi-open-access-1-label dsi-open-access-1-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
@@ -4857,13 +4920,28 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                data-testid="dsi-open-access-0-label"
+                hidden=""
+                id="dsi-open-access-0-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="dsi-open-access-0-select"
+                  aria-labelledby="dsi-open-access-0-label dsi-open-access-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
@@ -4994,14 +5072,30 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1md1qvc-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                data-testid="dsi-open-access-1-label"
+                hidden=""
+                id="dsi-open-access-1-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-describedby="dsi-open-access-1-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-open-access-1-select"
+                  aria-labelledby="dsi-open-access-1-label dsi-open-access-1-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
@@ -5451,13 +5545,28 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                data-testid="dsi-open-access-0-label"
+                hidden=""
+                id="dsi-open-access-0-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="dsi-open-access-0-select"
+                  aria-labelledby="dsi-open-access-0-label dsi-open-access-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"
@@ -5588,13 +5697,28 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                data-testid="dsi-open-access-1-label"
+                hidden=""
+                id="dsi-open-access-1-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="dsi-open-access-1-select"
+                  aria-labelledby="dsi-open-access-1-label dsi-open-access-1-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-1-select"
@@ -6801,6 +6925,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
+                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-iyqvaf-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -6808,6 +6933,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
 }"
               >
                 <div
+                  aria-describedby="dsi-security-policy-0-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
@@ -6848,6 +6974,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               </div>
               <p
                 class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-1d0q6ai-MuiFormHelperText-root"
+                id="dsi-security-policy-0-helper-text"
               >
                 This field is required
               </p>
@@ -6950,6 +7077,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
+                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-iyqvaf-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -6957,6 +7085,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
 }"
               >
                 <div
+                  aria-describedby="dsi-security-policy-1-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
@@ -6997,6 +7126,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               </div>
               <p
                 class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d0q6ai-MuiFormHelperText-root"
+                id="dsi-security-policy-1-helper-text"
               >
                 This field is required
               </p>
@@ -7411,6 +7541,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
+                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-iyqvaf-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -7554,6 +7685,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
+                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-iyqvaf-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -7561,6 +7693,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
 }"
               >
                 <div
+                  aria-describedby="dsi-security-policy-1-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
@@ -7601,6 +7734,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               </div>
               <p
                 class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d0q6ai-MuiFormHelperText-root"
+                id="dsi-security-policy-1-helper-text"
               >
                 This field is required
               </p>
@@ -8015,6 +8149,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
+                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-iyqvaf-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -8158,6 +8293,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               style="width: 100%;"
             >
               <div
+                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-iyqvaf-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -9226,14 +9362,30 @@ exports[`Component FileUploader should update file description 1`] = `
             <div
               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1ux71vi-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                data-testid="dsi-open-access-0-label"
+                hidden=""
+                id="dsi-open-access-0-label"
+              >
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-ts3ig9-MuiInputBase-root-MuiInput-root"
               >
                 <div
+                  aria-describedby="dsi-open-access-0-helper-text"
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-open-access-0-select"
+                  aria-labelledby="dsi-open-access-0-label dsi-open-access-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-open-access-0-select"

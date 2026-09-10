@@ -523,7 +523,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          aria-labelledby="rek-content-indicator-select"
+                          aria-labelledby="rek-content-indicator-label rek-content-indicator-select"
                           class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"
@@ -2048,7 +2048,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          aria-labelledby="rek-content-indicator-select"
+                          aria-labelledby="rek-content-indicator-label rek-content-indicator-select"
                           class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"
@@ -3944,7 +3944,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          aria-labelledby="rek-content-indicator-select"
+                          aria-labelledby="rek-content-indicator-label rek-content-indicator-select"
                           class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"
@@ -5266,7 +5266,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
-                          aria-labelledby="rek-content-indicator-select"
+                          aria-labelledby="rek-content-indicator-label rek-content-indicator-select"
                           class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"

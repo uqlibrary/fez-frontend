@@ -325,7 +325,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="fix-action-select"
+                      aria-labelledby="fix-action-label fix-action-select"
                       aria-required="true"
                       class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                       data-testid="fix-action-select"
@@ -809,7 +809,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="fix-action-select"
+                      aria-labelledby="fix-action-label fix-action-select"
                       aria-required="true"
                       class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                       data-testid="fix-action-select"
@@ -1183,7 +1183,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="fix-action-select"
+                      aria-labelledby="fix-action-label fix-action-select"
                       aria-required="true"
                       class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                       data-testid="fix-action-select"

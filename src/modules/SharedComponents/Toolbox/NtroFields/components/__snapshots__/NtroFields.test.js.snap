@@ -889,7 +889,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
+                    aria-labelledby="rek-language-label rek-language-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-language-select"
                     id="rek-language-select"
@@ -955,7 +955,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
@@ -1298,7 +1298,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-significance-select"
+                    aria-labelledby="rek-significance-label rek-significance-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-significance-select"
@@ -1643,7 +1643,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-significance-select"
+                    aria-labelledby="rek-significance-label rek-significance-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-significance-select"
@@ -3241,7 +3241,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-audience-size-select"
+                    aria-labelledby="rek-audience-size-label rek-audience-size-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-audience-size-select"
@@ -3304,7 +3304,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
+                    aria-labelledby="rek-language-label rek-language-select"
                     class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-language-select"
                     id="rek-language-select"
@@ -3371,7 +3371,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
@@ -3715,7 +3715,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-significance-select"
+                    aria-labelledby="rek-significance-label rek-significance-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-significance-select"
@@ -5279,7 +5279,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-audience-size-select"
+                    aria-labelledby="rek-audience-size-label rek-audience-size-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-audience-size-select"
@@ -5341,7 +5341,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
+                    aria-labelledby="rek-language-label rek-language-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-language-select"
                     id="rek-language-select"
@@ -5407,7 +5407,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
@@ -6642,7 +6642,7 @@ exports[`Component NtroFields should render default view 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-audience-size-select"
+                    aria-labelledby="rek-audience-size-label rek-audience-size-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-audience-size-select"
@@ -6704,7 +6704,7 @@ exports[`Component NtroFields should render default view 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
+                    aria-labelledby="rek-language-label rek-language-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-language-select"
                     id="rek-language-select"
@@ -6770,7 +6770,7 @@ exports[`Component NtroFields should render default view 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
@@ -7113,7 +7113,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-significance-select"
+                    aria-labelledby="rek-significance-label rek-significance-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-significance-select"
@@ -8677,7 +8677,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-audience-size-select"
+                    aria-labelledby="rek-audience-size-label rek-audience-size-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-audience-size-select"
@@ -8739,7 +8739,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
+                    aria-labelledby="rek-language-label rek-language-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-language-select"
                     id="rek-language-select"
@@ -8805,7 +8805,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
@@ -8961,7 +8961,7 @@ exports[`Component NtroFields should show significance field even if contributio
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-significance-select"
+                    aria-labelledby="rek-significance-label rek-significance-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-significance-select"
@@ -10001,7 +10001,7 @@ exports[`Component NtroFields should show significance field even if contributio
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-audience-size-select"
+                    aria-labelledby="rek-audience-size-label rek-audience-size-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-audience-size-select"
@@ -10063,7 +10063,7 @@ exports[`Component NtroFields should show significance field even if contributio
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-language-select"
+                    aria-labelledby="rek-language-label rek-language-select"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-language-select"
                     id="rek-language-select"
@@ -10129,7 +10129,7 @@ exports[`Component NtroFields should show significance field even if contributio
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="rek-quality-indicator-select"
+                    aria-labelledby="rek-quality-indicator-label rek-quality-indicator-select"
                     aria-required="true"
                     class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
