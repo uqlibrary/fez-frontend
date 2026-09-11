@@ -31,7 +31,7 @@ const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 module.exports = {
     mode: 'development',
     context: resolve(__dirname),
-    devtool: 'source-map',
+    devtool: process.env.PW_IS_RUNNING ? false : 'source-map',
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         index: join(__dirname, 'src', 'index.js'),
