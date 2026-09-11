@@ -1,6 +1,25 @@
 import React from 'react';
-import { render, WithReduxStore, WithRouter, waitFor, userEvent, within, waitForElementToBeRemoved } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    waitFor,
+    userEvent,
+    within,
+    waitForElementToBeRemoved,
+    screen,
+} from 'test-utils';
 import * as mockData from 'mock/data';
+
+// A page/child loading indicator can be removed before we look for it when mock responses resolve
+// quickly, which makes waitForElementToBeRemoved(getByTestId(...)) throw "unable to find". Only wait
+// for removal if it is actually present (matches the guarded pattern already used in this file).
+const waitForLoadingRemoved = async testId => {
+    const el = screen.queryByTestId(testId);
+    if (el) {
+        await waitForElementToBeRemoved(el);
+    }
+};
 import * as UserIsAdmin from 'hooks/userIsAdmin';
 import ControlledVocabularies from './ControlledVocabularies';
 import * as repositories from 'repositories';
@@ -40,7 +59,7 @@ describe('ControlledVocabularies', () => {
 
     it('should render as expected', async () => {
         const { getByText, getByTestId } = setup();
-        await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+        await waitForLoadingRemoved('vocab-page-loading');
 
         expect(getByText('Displaying 42 total controlled vocabularies')).toBeInTheDocument();
         // check sorting is working
@@ -171,10 +190,10 @@ describe('ControlledVocabularies', () => {
         describe('child vocab', () => {
             it('should render and save when button clicked', async () => {
                 const { getByTestId, queryByTestId } = setup();
-                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+                await waitForLoadingRemoved('vocab-page-loading');
 
                 await userEvent.click(getByTestId('expand-row-453669'));
-                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+                await waitForLoadingRemoved('childControlledVocab-page-loading');
 
                 await userEvent.click(getByTestId('admin-edit-button-453670'));
 
@@ -191,15 +210,15 @@ describe('ControlledVocabularies', () => {
 
                 queryByTestId('update_dialog-controlledVocabulary') &&
                     (await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary')));
-                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+                await waitForLoadingRemoved('childControlledVocab-page-loading');
                 expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
             });
             it('should close the opened dialog when page changes', async () => {
                 const { getByTestId, getByRole, getByText } = setup();
-                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+                await waitForLoadingRemoved('vocab-page-loading');
 
                 await userEvent.click(getByTestId('expand-row-453669'));
-                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+                await waitForLoadingRemoved('childControlledVocab-page-loading');
 
                 await userEvent.click(getByTestId('admin-edit-button-453670'));
 
@@ -218,7 +237,7 @@ describe('ControlledVocabularies', () => {
             });
             it('should close the opened dialog when rows-per-page changes', async () => {
                 const { getByTestId, getByRole, getByText } = setup();
-                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+                await waitForLoadingRemoved('vocab-page-loading');
 
                 await userEvent.click(getByTestId('expand-row-453669'));
 

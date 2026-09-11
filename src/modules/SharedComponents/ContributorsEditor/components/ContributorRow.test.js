@@ -1,7 +1,7 @@
 import React from 'react';
 import ContributorRow from './ContributorRow';
 import { createMatchMedia } from 'test-utils';
-import { authorsSearch } from 'mock/data';
+import { authorsSearch } from 'mock/data/account';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 import { rtlRender, fireEvent, waitFor } from 'test-utils';
 

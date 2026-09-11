@@ -2,7 +2,7 @@ import React from 'react';
 import { rtlRender, WithRouter } from 'test-utils';
 
 import ImageGallery, { getItemUrl, getItemsPerRow } from './ImageGallery';
-import { collectionSearchResultsImages } from 'mock/data';
+import collectionSearchResultsImages from 'mock/data/records/collectionSearchResultsImages';
 
 const setup = (props = {}, render = rtlRender) => {
     const testProps = {

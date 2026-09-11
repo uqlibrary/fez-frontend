@@ -6,7 +6,7 @@ import DashboardResearcherIds from './DashboardResearcherIds';
 
 import { AllTheProviders, render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 
-import { currentAuthor } from 'mock/data';
+import { currentAuthor } from 'mock/data/account';
 
 jest.mock('../../../context');
 import { OrcidSyncContext } from 'context';
