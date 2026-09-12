@@ -16,7 +16,19 @@ import { default as locale } from 'locale/components';
 
 jest.mock('@mui/material/Popper', () => ({
     __esModule: true,
-    default: ({ children }) => <div data-testid="popper-mock">{children}</div>,
+    // Popper supports a transition render-function child: MUI's PickersPopper passes
+    // ({ TransitionProps, placement }) => node. Call it like the real Popper so the popup content
+    // renders (rendering the function directly would trip "Functions are not valid as a React child").
+    default: ({ children }) => (
+        <div data-testid="popper-mock">
+            {typeof children === 'function'
+                ? children({
+                      TransitionProps: { in: true, appear: false, onEnter: () => {}, onExited: () => {} },
+                      placement: 'bottom',
+                  })
+                : children}
+        </div>
+    ),
 }));
 
 jest.mock('@mui/material/Tooltip', () => ({

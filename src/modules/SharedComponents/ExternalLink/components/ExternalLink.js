@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import { locale } from 'locale';
+// Import the global locale leaf, not the `locale` barrel: the barrel pulls this component back in
+// (locale/pages embeds ExternalLink), a cycle that only resolved by import-order luck.
+import globalLocale from 'locale/global';
 import OpenInNew from '@mui/icons-material/OpenInNew';
 
 const StyledLink = styled('a', {
@@ -68,7 +70,7 @@ const ExternalLink = ({
             tabIndex={0}
             title={
                 rest.title ||
-                (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) ||
+                (openInNewIcon && globalLocale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) ||
                 undefined
             }
             inline={inline}

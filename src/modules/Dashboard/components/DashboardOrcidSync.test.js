@@ -5,17 +5,16 @@ import DashboardOrcidSyncContainer, {
     getOnSyncPreferenceChangeHandler,
 } from './DashboardOrcidSync';
 import { pathConfig } from '../../../config';
-import React, { useState } from 'react';
+import React from 'react';
 import * as actions from '../../../actions/actionTypes';
 import { debounce } from 'throttle-debounce';
 import { updateCurrentAuthor } from '../../../actions';
 
-const setIsSyncEnabledMock = jest.fn();
+// Mock react's useState as a PASS-THROUGH spy (calls the real hook by default) so MUI/react-router
+// hooks keep working across the file; a single test overrides it to observe a setter, then restores.
 jest.mock('react', () => {
-    return {
-        ...jest.requireActual('react'),
-        useState: jest.fn(),
-    };
+    const actual = jest.requireActual('react');
+    return { ...actual, useState: jest.fn(actual.useState) };
 });
 
 const debounceCalls = [];
@@ -64,9 +63,6 @@ function setup(
 }
 
 describe('DashboardOrcidSync', () => {
-    beforeEach(() => {
-        useState.mockImplementation(initialState => [initialState, setIsSyncEnabledMock]);
-    });
     afterEach(() => jest.clearAllMocks());
 
     describe('Container', () => {
@@ -127,11 +123,25 @@ describe('DashboardOrcidSync', () => {
             expect(container).toMatchSnapshot();
         });
 
-        it('should update local state variable isSyncEnabled when author sync preferences change', async () => {
-            const { rerender } = setup({ author: { aut_is_orcid_sync_enabled: 0 } });
-            expect(setIsSyncEnabledMock).toHaveBeenCalledWith(false);
-            setup({ author: { aut_is_orcid_sync_enabled: 1 } }, pathConfig.dashboard, [pathConfig.dashboard], rerender);
-            expect(setIsSyncEnabledMock).toHaveBeenCalledWith(true);
+        it('should update local state variable isSyncEnabled when author sync preferences change', () => {
+            // The sync toggle is rendered in a redux-driven help drawer that isn't mounted here, so the
+            // effect that mirrors the author preference into isSyncEnabled is observed via its setter.
+            // Scope the useState spy to this test so it doesn't break MUI hooks in the rest of the file.
+            const setIsSyncEnabled = jest.fn();
+            React.useState.mockImplementation(init => [init, setIsSyncEnabled]);
+            try {
+                const { rerender } = setup({ author: { aut_is_orcid_sync_enabled: 0 } });
+                expect(setIsSyncEnabled).toHaveBeenCalledWith(false);
+                setup(
+                    { author: { aut_is_orcid_sync_enabled: 1 } },
+                    pathConfig.dashboard,
+                    [pathConfig.dashboard],
+                    rerender,
+                );
+                expect(setIsSyncEnabled).toHaveBeenCalledWith(true);
+            } finally {
+                React.useState.mockImplementation(jest.requireActual('react').useState);
+            }
         });
 
         it('should display confirmation dialog when route state variable `showOrcidLinkingConfirmation` is set to true', async () => {

@@ -611,10 +611,9 @@ export const viewJournalConfig = {
                     templateProps: {
                         href: item =>
                             item.count > 0
-                                ? viewJournalLocale.viewJournal.uqConnections.authorPublications.externalUrl.replace(
-                                      '[id]',
-                                      item.id,
-                                  )
+                                ? viewJournalLocale.viewJournal.uqConnections.authorPublications
+                                      .externalUrl()
+                                      .replace('[id]', item.id)
                                 : '',
                         text: item =>
                             item.count > 0

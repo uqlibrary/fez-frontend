@@ -9,14 +9,20 @@ import {
     SESSION_USER_GROUP_COOKIE_NAME,
     TOKEN_NAME,
 } from './general';
-import { store } from 'config/store';
-import { logout } from 'actions/account';
-import { showAppAlert } from 'actions/app';
-import locale from 'locale/global';
-import * as Sentry from '@sentry/react';
-import param from 'can-param';
-import { pathConfig } from 'config/pathConfig';
 import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
+
+// The redux store, actions, locale and Sentry are only referenced inside the interceptor callbacks
+// below, which run per request. Loading them lazily means importing this module for the `api`/`sessionApi`
+// instances (as the jest global setup does for every test file) no longer eagerly builds the whole store
+// or pulls Sentry/locale. They are all created at app startup regardless, so first use finds them ready.
+// It also breaks the config/axios -> config/store import cycle.
+const lazyStore = () => require('config/store').store;
+const lazyLogout = () => require('actions/account').logout;
+const lazyShowAppAlert = () => require('actions/app').showAppAlert;
+const lazyLocale = () => require('locale/global').default;
+const lazySentry = () => require('@sentry/react');
+const lazyParam = () => require('can-param');
+const lazyPathConfig = () => require('config/pathConfig').pathConfig;
 
 let apiClient = axios.create({
     baseURL: API_URL,
@@ -110,7 +116,7 @@ api.interceptors.request.use(request => {
         !!request.params.mode &&
         request.params.mode === 'advanced'
     ) {
-        request.paramsSerializer = { serialize: params => param(params) };
+        request.paramsSerializer = { serialize: params => lazyParam()(params) };
     }
     return request;
 });
@@ -125,6 +131,7 @@ const reportToSentry = error => {
         detailedError = `Something happened in setting up the request that triggered an Error: ${error.message}`;
     }
 
+    const Sentry = lazySentry();
     Sentry.withScope(scope => {
         scope.setExtras({ error: detailedError });
         Sentry.captureException(error);
@@ -157,7 +164,7 @@ api.interceptors.response.use(
         // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
         const handlesErrorsInternally =
             !error?.config ||
-            (error.config.url && error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1)));
+            (error.config.url && error.config.url.includes(lazyPathConfig().admin.thirdPartyTools.slice(1)));
 
         const reportHttpStatusToSentry = [422];
         if (!!error?.response?.status && reportHttpStatusToSentry.includes(error.response.status)) {
@@ -183,22 +190,23 @@ api.interceptors.response.use(
                 }
 
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
-                    global.mockActionsStore.dispatch(logout());
+                    global.mockActionsStore.dispatch(lazyLogout()());
                 } else {
-                    store.dispatch(logout());
+                    lazyStore().dispatch(lazyLogout()());
                 }
             }
 
             if (!!error.message && errorStatus === 500) {
                 errorMessage =
-                    ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+                    ((error.response || {}).data || {}).message ||
+                    lazyLocale().global.errorMessages[error.response.status];
                 if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
-                    global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+                    global.mockActionsStore.dispatch(lazyShowAppAlert()(error.response.data));
                 } else {
-                    store.dispatch(showAppAlert(error.response.data));
+                    lazyStore().dispatch(lazyShowAppAlert()(error.response.data));
                 }
             } else if (!!error.response && !!error.response.status) {
-                const statusMessages = locale.global.errorMessages;
+                const statusMessages = lazyLocale().global.errorMessages;
                 errorMessage = statusMessages.hasOwnProperty(errorStatus)
                     ? statusMessages[errorStatus]
                     : statusMessages.generic;

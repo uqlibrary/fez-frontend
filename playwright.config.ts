@@ -1,7 +1,12 @@
 import { defineConfig, devices } from '@playwright/test';
 import { Config as IstanbulMergerConfig } from './playwright/lib/coverage/istanbul/ReportMerger';
-import { baseURL, istanbulReportPartialsDir } from './playwright/lib/constants';
+import { baseURL, istanbulReportPartialsDir, istanbulStructureDir } from './playwright/lib/constants';
 import * as process from 'node:process';
+import * as os from 'node:os';
+
+// CI runs at '50%' (2 workers on the 4-vCPU pipe). Local dev is capped at 4 workers (the lesser of the
+// machine's 50% and 4) to limit local memory and CPU use.
+const localWorkers = Math.min(4, Math.max(1, Math.floor(os.cpus().length / 2)));
 
 export default defineConfig({
     outputDir: `playwright/.results/${process.env.PW_SHARD_INDEX || ''}`,
@@ -14,7 +19,9 @@ export default defineConfig({
     failOnFlakyTests: !process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
     retries: process.env.CI_BRANCH ? 2 : 0,
-    workers: '50%',
+    workers: process.env.CI_BRANCH ? '50%' : localWorkers,
+    // e2e istanbul coverage: the collector (playwright/test.ts, NODE_ENV=cc) writes per-test counts
+    // partials + write-once structures; this reporter rejoins and merges them into coverage/playwright.
     reporter: [
         ['list'],
         [
@@ -22,13 +29,14 @@ export default defineConfig({
             {
                 outputDir: 'coverage/playwright',
                 jsonPartialsDir: istanbulReportPartialsDir,
+                structureDir: istanbulStructureDir,
                 jsonReportFilename: process.env.PW_CC_REPORT_FILENAME,
             } as IstanbulMergerConfig,
         ],
     ],
     use: {
         baseURL,
-        trace: 'retain-on-failure',
+        trace: 'on-first-retry',
         headless: process.env.PW_HEADED === 'true' ? false : true,
         ignoreHTTPSErrors: true,
         bypassCSP: true,
