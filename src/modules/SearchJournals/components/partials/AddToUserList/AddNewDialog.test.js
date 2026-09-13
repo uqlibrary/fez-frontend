@@ -1,5 +1,5 @@
 import React from 'react';
-import { render as defaultRender, userEvent, waitFor } from 'test-utils';
+import { render as defaultRender, userEvent, waitFor, setTextField } from 'test-utils';
 import AddNewDialog from './AddNewDialog';
 
 const onClose = jest.fn();
@@ -90,7 +90,7 @@ describe('AddNewDialog', () => {
 
         const { findByText, getByTestId } = setup();
 
-        await userEvent.type(getByTestId('add-to-user-list-dialog-label-input'), 'My list');
+        setTextField(getByTestId('add-to-user-list-dialog-label-input'), 'My list');
         await userEvent.click(getByTestId('add-to-user-list-dialog-add-button'));
 
         expect(await findByText('Failed to create list, please try again.')).toBeInTheDocument();

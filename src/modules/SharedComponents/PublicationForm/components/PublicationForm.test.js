@@ -19,6 +19,7 @@ import {
     WithRouter,
     expectApiRequestCountToBe,
     api,
+    setTextField,
 } from 'test-utils';
 import { screen } from '@testing-library/react';
 import publicationForm from '../../../../locale/publicationForm';
@@ -176,11 +177,11 @@ describe('PublicationForm', () => {
             await selectSubtype('Other');
 
             const pageRangeError = ['Please provide a valid start/end page range'];
-            await userEvent.type(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'), '20');
-            await userEvent.type(screen.getByTestId('fez_record_search_key_end_page.rek_end_page-input'), '10');
+            setTextField(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'), '20');
+            setTextField(screen.getByTestId('fez_record_search_key_end_page.rek_end_page-input'), '10');
             await assertValidationErrorSummary(pageRangeError);
             await userEvent.clear(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'));
-            await userEvent.type(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'), '9');
+            setTextField(screen.getByTestId('fez_record_search_key_start_page.rek_start_page-input'), '9');
             await assertMissingValidationErrorSummary(pageRangeError);
         });
 
@@ -190,12 +191,12 @@ describe('PublicationForm', () => {
 
             const pageRangeError = ['Publication start/end dates are invalid'];
             await assertMissingValidationErrorSummary(pageRangeError);
-            await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '80');
+            setTextField(screen.getByTestId('rek-project-start-date-year-input'), '80');
             await assertMissingValidationErrorSummary(pageRangeError);
-            await userEvent.type(screen.getByTestId('rek-end-date-year-input'), '70');
+            setTextField(screen.getByTestId('rek-end-date-year-input'), '70');
             await assertValidationErrorSummary(pageRangeError);
             await userEvent.clear(screen.getByTestId('rek-project-start-date-year-input'));
-            await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '60');
+            setTextField(screen.getByTestId('rek-project-start-date-year-input'), '60');
             await assertMissingValidationErrorSummary(pageRangeError);
         });
 
@@ -206,12 +207,12 @@ describe('PublicationForm', () => {
 
             const pageRangeError = ['Publication start/end dates are invalid'];
             await assertMissingValidationErrorSummary(pageRangeError);
-            await userEvent.type(screen.getByTestId('rek-date-year-input'), '80');
+            setTextField(screen.getByTestId('rek-date-year-input'), '80');
             await assertMissingValidationErrorSummary(pageRangeError);
-            await userEvent.type(screen.getByTestId('rek-end-date-year-input'), '70');
+            setTextField(screen.getByTestId('rek-end-date-year-input'), '70');
             await assertValidationErrorSummary(pageRangeError);
             await userEvent.clear(screen.getByTestId('rek-date-year-input'));
-            await userEvent.type(screen.getByTestId('rek-date-year-input'), '60');
+            setTextField(screen.getByTestId('rek-date-year-input'), '60');
             await assertMissingValidationErrorSummary(pageRangeError);
         });
 
@@ -277,7 +278,7 @@ describe('PublicationForm', () => {
             ]);
 
             // fill up form
-            await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
+            setTextField(screen.getByTestId('rek_title-input'), 'title');
             await userEvent.type(
                 screen.getByTestId('fez_record_search_key_publisher.rek_publisher-input'),
                 'publisher',
@@ -286,9 +287,9 @@ describe('PublicationForm', () => {
                 screen.getByTestId('fez_record_search_key_place_of_publication.rek_place_of_publication-input'),
                 'place of publication',
             );
-            await userEvent.type(screen.getByTestId('rek-project-start-date-year-input'), '1980');
+            setTextField(screen.getByTestId('rek-project-start-date-year-input'), '1980');
             await addAndSelectItemUsingNamesPopoverForm('authors');
-            await userEvent.type(screen.getByTestId('rek-total-pages-input'), '123');
+            setTextField(screen.getByTestId('rek-total-pages-input'), '123');
             await selectDropDownOption(
                 'rek-quality-indicator-select',
                 'Disseminated via nationally recognised outlet or entity',
@@ -320,8 +321,8 @@ describe('PublicationForm', () => {
             await selectDisplayType('Image');
 
             // fill up form
-            await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
-            await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
+            setTextField(screen.getByTestId('rek_title-input'), 'title');
+            setTextField(screen.getByTestId('rek-date-year-input'), '1980');
             await addAndSelectItemUsingNamesPopoverForm('creators');
             // fill up DOI
             // invalid
@@ -362,8 +363,8 @@ describe('PublicationForm', () => {
                 await selectDisplayType('Image');
 
                 // fill up form
-                await userEvent.type(screen.getByTestId('rek_title-input'), 'title');
-                await userEvent.type(screen.getByTestId('rek-date-year-input'), '1980');
+                setTextField(screen.getByTestId('rek_title-input'), 'title');
+                setTextField(screen.getByTestId('rek-date-year-input'), '1980');
                 await addAndSelectItemUsingNamesPopoverForm('creators');
 
                 await submitForm();
