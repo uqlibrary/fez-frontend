@@ -38,7 +38,7 @@
     "posttest:e2e:cc": "rm -rf .nyc_output",
     "test:unit": "cross-env NODE_ENV=test jest --workerIdleMemoryLimit=512MB",
     "test:unit:serial": "npm run test:unit -- --runInBand --coverageDirectory=coverage/jest-serial",
-    "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --maxWorkers=2 --testPathIgnorePatterns=\"$(node -p \"require('./package.json').jest.testPathIgnorePatterns.join('|')\")|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
+    "test:unit:ci": "npm run test:unit -- --ci --silent --no-warnings --maxWorkers=3 --testPathIgnorePatterns=\"$(node -p \"require('./package.json').jest.testPathIgnorePatterns.join('|')\")|$(paste -sd'|' jest-serial.txt | sed 's/[.[\\\\]*^$/\\\\\\\\&/g')\"",
     "test:unit:ci:nocoverage": "npm run test:unit:ci -- --no-coverage",
     "test:unit:ci:serial": "npm run test:unit:serial -- --ci --silent --no-warnings $(paste -sd' ', jest-serial.txt)",
     "test:unit:ci:serial:nocoverage": "npm run test:unit:ci:serial -- --no-coverage",
