@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithReduxStore, within, waitFor, userEvent } from 'test-utils';
+import { render, WithReduxStore, within, waitFor, userEvent, setTextField } from 'test-utils';
 import * as DashboardActions from 'actions/adminDashboard';
 import * as repositories from 'repositories';
 import * as Utils from '../utils';
@@ -128,8 +128,8 @@ describe('Reports tab', () => {
         expect(getByTestId('report-display-export-system-alert-id-input')).toBeInTheDocument();
 
         // either dates or system id is required
-        // await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2023');
-        // await userEvent.type(getByTestId('report-display-export-date-to-input'), '12/04/2023');
+        // setTextField(getByTestId('report-display-export-date-from-input'), '02/04/2023');
+        // setTextField(getByTestId('report-display-export-date-to-input'), '12/04/2023');
 
         expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
         await userEvent.click(getByRole('button', { name: 'Run report' }));
@@ -174,8 +174,8 @@ describe('Reports tab', () => {
         expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
-        await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
+        setTextField(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        setTextField(getByTestId('report-display-export-date-to-input'), '03/05/2024');
 
         await userEvent.click(getByRole('button', { name: 'Run report' }));
         expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
@@ -230,10 +230,10 @@ describe('Reports tab', () => {
         expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
-        await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
+        setTextField(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        setTextField(getByTestId('report-display-export-date-to-input'), '03/05/2024');
         // defining a system alert should disable dates and only send system id in request
-        await userEvent.type(getByTestId('report-display-export-system-alert-id-input'), '123');
+        setTextField(getByTestId('report-display-export-system-alert-id-input'), '123');
 
         await userEvent.click(getByRole('button', { name: 'Run report' }));
         expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
@@ -286,8 +286,8 @@ describe('Reports tab', () => {
         expect(getByRole('button', { name: 'Run report' })).not.toHaveAttribute('disabled');
         expect(getByRole('button', { name: 'Export' })).toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
-        await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
+        setTextField(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        setTextField(getByTestId('report-display-export-date-to-input'), '03/05/2024');
 
         await userEvent.click(getByRole('button', { name: 'Run report' }));
         expect(within(getByRole('button', { name: 'Run report' })).getByRole('progressbar')).toBeInTheDocument();
@@ -322,8 +322,8 @@ describe('Reports tab', () => {
         await userEvent.click(getByTestId('report-display-export-input'));
         await userEvent.click(getByRole('option', { name: 'System alert log' }));
 
-        // await userEvent.type(getByTestId('report-display-export-date-from-input'), '02/04/2024');
-        // await userEvent.type(getByTestId('report-display-export-date-to-input'), '03/05/2024');
+        // setTextField(getByTestId('report-display-export-date-from-input'), '02/04/2024');
+        // setTextField(getByTestId('report-display-export-date-to-input'), '03/05/2024');
         await userEvent.click(getByRole('button', { name: 'Run report' }));
 
         await waitFor(() => expect(getByTestId('alert-report-display-export')).toBeInTheDocument());

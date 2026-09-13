@@ -104,7 +104,8 @@ const webpackConfig = {
         port: port,
         host: '0.0.0.0',
         static: {
-            publicPath: resolve(__dirname, './dist/', config.basePath),
+            directory: resolve(__dirname, './dist/', config.basePath),
+            publicPath: config.basePath ? `/${config.basePath}${config.publicPath}` : config.publicPath,
         },
     },
     module: {

@@ -166,7 +166,10 @@ export default {
                 heading: 'UQ Authored Publications',
                 ariaLabel: 'View articles published in the past 5 years in UQ eSpace in a new tab',
                 linkText: 'View these articles in UQ eSpace',
-                externalUrl:
+                // Function, not a string: compute the year range when the link renders, not at
+                // module-eval, so the value is deterministic (follows the test clock) and not
+                // dependent on when this module first loads.
+                externalUrl: () =>
                     APP_URL +
                     'records/search?activeFacets[ranges][Year+published][from]=' +
                     (new Date().getFullYear() - 5) +

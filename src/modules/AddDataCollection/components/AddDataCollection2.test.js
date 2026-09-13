@@ -1,6 +1,6 @@
 import React from 'react';
 import AddDataCollection from './AddDataCollection';
-import { render, WithReduxStore, WithRouter, waitFor, screen } from 'test-utils';
+import { render, WithReduxStore, WithRouter, waitFor, screen, setTextField } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 import * as repository from 'repositories';
 import { vocabsFieldResearch } from 'mock/data/vocabsFieldResearch.js';
@@ -30,10 +30,10 @@ jest.mock('actions', () => ({
 }));
 async function inputText(getByTestId, settings) {
     for (const [testId, value] of settings) {
-        const input = getByTestId(testId);
-        await userEvent.click(input);
-        await userEvent.type(input, value);
-        await userEvent.tab();
+        // setTextField sets the value in a single change event (+ blur) rather than char-by-char
+        // (userEvent.type), which re-renders the whole RHF form on every keystroke. These are plain
+        // controlled text fields, so one change drives the same onChange/validation far more cheaply.
+        const input = setTextField(getByTestId(testId), value);
         expect(input).toHaveValue(value);
     }
 }
@@ -52,6 +52,8 @@ async function clickSelect(getByTestId, selects) {
 async function inputAndSelect(getByTestId, selects) {
     for (const [testId, typeValue, selectValue] of selects) {
         const input = getByTestId(testId);
+        // Autocomplete/lookup fields need the per-keystroke input events to trigger their search, so
+        // these stay on userEvent.type (fireEvent.change does not fire the lookup).
         await userEvent.click(input);
         await userEvent.type(input, typeValue);
         const option = await screen.findByText(selectValue);
@@ -95,9 +97,7 @@ async function inputRequired(getByTestId) {
 const typeAndSubmit = async (value, expectedError, getByTestId, queryByText) => {
     const doiInput = getByTestId('rek-doi-input');
     const submitButton = getByTestId('submit-data-collection');
-    await userEvent.clear(doiInput);
-    await userEvent.type(doiInput, value);
-    await userEvent.tab();
+    setTextField(doiInput, value);
 
     await waitFor(() => expect(submitButton).toBeEnabled());
     await userEvent.click(submitButton);
@@ -146,8 +146,7 @@ describe('AddDataCollection test', () => {
         const { getByTestId } = setup();
         const doi = getByTestId('rek-doi-input');
 
-        await userEvent.type(doi, 'Test');
-        await userEvent.tab();
+        setTextField(doi, 'Test');
         expect(doi).toHaveValue('Test');
         await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });
