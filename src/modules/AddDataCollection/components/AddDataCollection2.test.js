@@ -97,9 +97,7 @@ async function inputRequired(getByTestId) {
 const typeAndSubmit = async (value, expectedError, getByTestId, queryByText) => {
     const doiInput = getByTestId('rek-doi-input');
     const submitButton = getByTestId('submit-data-collection');
-    await userEvent.clear(doiInput);
-    await userEvent.type(doiInput, value);
-    await userEvent.tab();
+    setTextField(doiInput, value);
 
     await waitFor(() => expect(submitButton).toBeEnabled());
     await userEvent.click(submitButton);
@@ -148,8 +146,7 @@ describe('AddDataCollection test', () => {
         const { getByTestId } = setup();
         const doi = getByTestId('rek-doi-input');
 
-        await userEvent.type(doi, 'Test');
-        await userEvent.tab();
+        setTextField(doi, 'Test');
         expect(doi).toHaveValue('Test');
         await waitFor(() => expect(screen.getByText('DOI is not valid')).toBeInTheDocument());
     });

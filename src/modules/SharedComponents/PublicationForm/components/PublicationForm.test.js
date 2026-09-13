@@ -279,11 +279,8 @@ describe('PublicationForm', () => {
 
             // fill up form
             setTextField(screen.getByTestId('rek_title-input'), 'title');
-            await userEvent.type(
-                screen.getByTestId('fez_record_search_key_publisher.rek_publisher-input'),
-                'publisher',
-            );
-            await userEvent.type(
+            setTextField(screen.getByTestId('fez_record_search_key_publisher.rek_publisher-input'), 'publisher');
+            setTextField(
                 screen.getByTestId('fez_record_search_key_place_of_publication.rek_place_of_publication-input'),
                 'place of publication',
             );
