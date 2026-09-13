@@ -8,6 +8,7 @@ import {
     within,
     waitForElementToBeRemoved,
     screen,
+    setTextField,
 } from 'test-utils';
 import * as mockData from 'mock/data';
 
@@ -105,7 +106,7 @@ describe('ControlledVocabularies', () => {
 
         it('should render and save when button clicked', async () => {
             await showAddForm().then(async ({ getByTestId, queryByTestId }) => {
-                await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                setTextField(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 queryByTestId('update_dialog-controlledVocabulary') &&
                     (await waitForElementToBeRemoved(queryByTestId('update_dialog-controlledVocabulary')));
@@ -115,7 +116,7 @@ describe('ControlledVocabularies', () => {
             const message = 'Test error message';
             mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(422, { message });
             await showAddForm().then(async ({ getByTestId }) => {
-                await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                setTextField(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
                 await waitFor(() => {
@@ -148,7 +149,7 @@ describe('ControlledVocabularies', () => {
                     return Promise.resolve(rendered);
                 };
                 await showAddForm2().then(async ({ getByTestId, queryByTestId }) => {
-                    await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                    setTextField(getByTestId('cvo-title-input'), 'Test title');
                     await userEvent.click(getByTestId('update_dialog-action-button'));
                     queryByTestId('update_dialog-controlledVocabulary') &&
                         (await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary')));
@@ -181,7 +182,7 @@ describe('ControlledVocabularies', () => {
         });
         it('should render and save when button clicked', async () => {
             await showEditForm().then(async ({ getByTestId, queryByTestId }) => {
-                await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
+                setTextField(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 queryByTestId('update_dialog-controlledVocabulary') &&
                     (await waitForElementToBeRemoved(queryByTestId('update_dialog-controlledVocabulary')));
@@ -205,7 +206,7 @@ describe('ControlledVocabularies', () => {
                     within(getByTestId('update_dialog-controlledVocabulary')).getByTestId('cvo-title-input'),
                 ).toHaveAttribute('value', 'Yukulta / Ganggalidda language G34');
 
-                await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
+                setTextField(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
                 queryByTestId('update_dialog-controlledVocabulary') &&

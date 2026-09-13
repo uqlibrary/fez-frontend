@@ -16,6 +16,7 @@ import {
     assertNotToBeInTheDocument,
     waitForTextToBeRemoved,
     waitToHaveBeenLastCalledWith,
+    setTextField,
 } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
@@ -833,11 +834,11 @@ describe('ManageAuthors', () => {
 
         await userEvent.type(getByTestId('aut-fname-input'), 'Test');
         await userEvent.type(getByTestId('aut-lname-input'), 'Name');
-        await userEvent.type(getByTestId('aut-scopus-id-input'), '1234-543');
-        await userEvent.type(getByTestId('aut-org-student-id-input'), '1234564');
+        setTextField(getByTestId('aut-scopus-id-input'), '1234-543');
+        setTextField(getByTestId('aut-org-student-id-input'), '1234564');
 
         await userEvent.type(getByTestId('aut-display-name-input'), 'Test, Name');
-        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtname');
+        setTextField(getByTestId('aut-org-username-input'), 'uqtname');
         await userEvent.click(getByTestId('aut-name-overridden'));
 
         fireEvent.click(getByTestId('aut-is-orcid-sync-enabled'));
@@ -1029,9 +1030,11 @@ describe('ManageAuthors', () => {
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
-        await waitFor(() => expect(getByTestId('aut-display-name-0')).toBeInTheDocument());
-        await new Promise(r => setTimeout(r, 2000));
-        expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Vishal, Desai');
+        // Wait for the post-delete list reload (component re-fetches after a 1s setTimeout) by polling
+        // for the new row-0 value, instead of a fixed 2s sleep — resolves as soon as the reload lands.
+        await waitFor(() => expect(getByTestId('aut-display-name-0')).toHaveAttribute('value', 'Vishal, Desai'), {
+            timeout: 3000,
+        });
         expect(getByTestId('aut-org-username-0')).toHaveAttribute('value', 'uqvdesai');
     });
 
@@ -1424,7 +1427,7 @@ describe('ManageAuthors', () => {
         await waitFor(() => expect(loadAuthorListFn).toHaveBeenCalled());
         await waitToBeEnabled('authors-search-input');
 
-        await userEvent.type(getByTestId('authors-search-input'), 'test search');
+        setTextField(getByTestId('authors-search-input'), 'test search');
 
         await waitFor(() =>
             expect(loadAuthorListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: 'test search' }),

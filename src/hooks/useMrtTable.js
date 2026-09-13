@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
-import { useConfirmationState } from './index';
+import { useConfirmationState } from './useConfirmationState';
 import { useDispatch } from 'react-redux';
 
 /**

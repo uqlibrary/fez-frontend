@@ -20,6 +20,7 @@ import {
     expectApiRequestToMatchSnapshot,
     assertInstanceOfFile,
     setRichTextEditorValue,
+    setTextField,
 } from 'test-utils';
 import { waitFor } from '@testing-library/dom';
 
@@ -224,7 +225,7 @@ describe('MyIncompleteRecord', () => {
             const { getByTestId, getAllByText } = setup({ publication: mockRecordToFix });
             await assertValidationErrorSummary();
 
-            await userEvent.type(getByTestId('rek-grant-agency-input'), 'grant');
+            setTextField(getByTestId('rek-grant-agency-input'), 'grant');
             await waitFor(() => getAllByText(validationErrors.validationErrorsSummary.grants)[0], waitForOptions);
         });
 
@@ -302,7 +303,7 @@ describe('MyIncompleteRecord', () => {
                 const { getByTestId } = setup({ publication: mockRecordToFix });
                 await assertValidationErrorSummary();
                 await fillUpForm({ waitForValidationSummaryRemoval: true });
-                await userEvent.type(getByTestId('comments-input'), 'comments');
+                setTextField(getByTestId('comments-input'), 'comments');
                 await submitForm();
                 assertDisabled(submitButtonId);
                 await waitForText(pageLocale.successWorkflowConfirmation.confirmationTitle, waitForOptions);
