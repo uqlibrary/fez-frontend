@@ -11,6 +11,7 @@ import {
     assertNotToBeInTheDocument,
     waitForText,
     api,
+    setTextField,
 } from 'test-utils';
 import * as repository from 'repositories';
 
@@ -86,7 +87,7 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtest');
+        setTextField(getByTestId('aut-org-username-input'), 'uqtest');
 
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 
@@ -102,8 +103,7 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
-        userEvent.clear(getByTestId('aut-org-username-input'));
-        userEvent.type(getByTestId('aut-org-username-input'), 'uqtesta');
+        setTextField(getByTestId('aut-org-username-input'), 'uqtesta');
 
         await waitFor(() => {
             expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
@@ -260,7 +260,7 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('aut-org-student-id-input'), '12345678');
+        setTextField(getByTestId('aut-org-student-id-input'), '12345678');
 
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 

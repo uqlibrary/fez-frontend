@@ -185,12 +185,7 @@ exports[`AdminSection component should render default view 1`] = `
                     role="combobox"
                     tabindex="0"
                   >
-                    <span
-                      aria-hidden="true"
-                      class="notranslate"
-                    >
-                      ​
-                    </span>
+                    Creative Work - Design/Architectural
                   </div>
                   <input
                     aria-hidden="true"
@@ -1581,12 +1576,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     id="rek-subtype-select"
                     role="combobox"
                   >
-                    <span
-                      aria-hidden="true"
-                      class="notranslate"
-                    >
-                      ​
-                    </span>
+                    Creative Work - Design/Architectural
                   </div>
                   <input
                     aria-hidden="true"

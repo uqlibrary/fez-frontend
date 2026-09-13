@@ -271,8 +271,9 @@ test.describe('Claim possible work', () => {
             await expect(page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article')).toBeVisible();
 
             await page.goBack();
-            await page.waitForTimeout(10000);
 
+            // The auto-retrying expects below poll until the post-goBack state settles, so no fixed wait
+            // is needed (was waitForTimeout(10000)).
             await expect(page.getByText('Journal Article (2)')).toBeVisible(); // facet should still be visible
             await expect(
                 page.getByTestId('clear-facet-filter-nested-item-display-type-journal-article'),
@@ -285,7 +286,6 @@ test.describe('Claim possible work', () => {
             await page.getByTestId('from').fill('2020');
             await page.getByTestId('to').fill('2031');
             await page.getByText('Go').click();
-            await page.waitForTimeout(500);
             await expect(page.getByText('2020 - 2031')).toBeVisible();
         });
     });

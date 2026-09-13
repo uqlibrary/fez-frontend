@@ -10,13 +10,26 @@ import {
     createMatchMedia,
     within,
     selectDropDownOption,
+    setTextField,
 } from 'test-utils';
 
 import { default as locale } from 'locale/components';
 
 jest.mock('@mui/material/Popper', () => ({
     __esModule: true,
-    default: ({ children }) => <div data-testid="popper-mock">{children}</div>,
+    // Popper supports a transition render-function child: MUI's PickersPopper passes
+    // ({ TransitionProps, placement }) => node. Call it like the real Popper so the popup content
+    // renders (rendering the function directly would trip "Functions are not valid as a React child").
+    default: ({ children }) => (
+        <div data-testid="popper-mock">
+            {typeof children === 'function'
+                ? children({
+                      TransitionProps: { in: true, appear: false, onEnter: () => {}, onExited: () => {} },
+                      placement: 'bottom',
+                  })
+                : children}
+        </div>
+    ),
 }));
 
 jest.mock('@mui/material/Tooltip', () => ({
@@ -100,7 +113,7 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'testing');
         await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2009');
@@ -130,7 +143,7 @@ describe('MyEditorialAppointmentsList', () => {
         fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
         // Fill required fields except years
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'Journal of Testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'Journal of Testing');
         await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
 
         // Input start year
@@ -161,7 +174,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         fireEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'testing');
         await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2020');
@@ -182,7 +195,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         await userEvent.click(getByTestId('my-editorial-appointments-add-new-editorial-appointment'));
 
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'testing');
         await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2020');
@@ -232,11 +245,11 @@ describe('MyEditorialAppointmentsList', () => {
         await userEvent.clear(getByTestId('eap-end-year-input'));
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'testing');
         await selectDropDownOption('eap-role-cvo-id-input', 'Other');
 
         expect(getByTestId('eap-role-name-input')).toBeInTheDocument();
-        await userEvent.type(getByTestId('eap-role-name-input'), 'Testing other role');
+        setTextField(getByTestId('eap-role-name-input'), 'Testing other role');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
@@ -274,7 +287,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'testing');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
@@ -299,7 +312,7 @@ describe('MyEditorialAppointmentsList', () => {
 
         await userEvent.click(getByTestId('my-editorial-appointments-list-row-0-edit-this-editorial-appointment'));
 
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'testing');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
         await userEvent.type(getByTestId('eap-end-year-input'), '2020');
 
@@ -383,7 +396,7 @@ describe('MyEditorialAppointmentsList', () => {
         expect(getByTestId('eap-start-year-input')).toHaveAttribute('aria-invalid', 'true');
         expect(getByTestId('eap-end-year-input')).toHaveAttribute('aria-invalid', 'true');
 
-        await userEvent.type(getByTestId('eap-journal-name-input'), 'testing');
+        setTextField(getByTestId('eap-journal-name-input'), 'testing');
         await selectDropDownOption('eap-role-cvo-id-input', 'Guest Editor');
         await userEvent.type(getByTestId('eap-start-year-input'), '2010');
 

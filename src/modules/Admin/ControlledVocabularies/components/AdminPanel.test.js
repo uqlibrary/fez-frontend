@@ -1,5 +1,14 @@
 import React from 'react';
-import { createMatchMedia, fireEvent, render, userEvent, waitFor, WithReduxStore, WithRouter } from 'test-utils';
+import {
+    createMatchMedia,
+    fireEvent,
+    render,
+    userEvent,
+    waitFor,
+    WithReduxStore,
+    WithRouter,
+    setTextField,
+} from 'test-utils';
 import AdminPanel from './AdminPanel';
 import locale from 'locale/components';
 
@@ -82,8 +91,8 @@ describe('AdminPanel', () => {
         });
 
         // Simulate typing valid inputs
-        await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
-        await userEvent.type(getByTestId('cvo-desc-input'), 'Test description');
+        setTextField(getByTestId('cvo-title-input'), 'Test title');
+        setTextField(getByTestId('cvo-desc-input'), 'Test description');
 
         // Ensure the submit button becomes enabled
         await waitFor(() => expect(getByTestId('update_dialog-action-button')).toBeEnabled());
@@ -136,7 +145,7 @@ describe('AdminPanel', () => {
         expect(getByTestId('update_dialog-action-button')).toHaveAttribute('disabled');
 
         // Simulate typing into the title input
-        await userEvent.type(getByTestId('cvo-title-input'), 'T');
+        setTextField(getByTestId('cvo-title-input'), 'T');
 
         // Wait for the submit button to become enabled
         await waitFor(() => expect(getByTestId('update_dialog-action-button')).not.toHaveAttribute('disabled'));

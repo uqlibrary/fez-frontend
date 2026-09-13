@@ -31,6 +31,8 @@ const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 module.exports = {
     mode: 'development',
     context: resolve(__dirname),
+    // Source maps off under e2e (PW_IS_RUNNING) to save webServer memory; istanbul coverage maps to
+    // source via the instrumentation itself, so no webpack source map is needed under NODE_ENV=cc.
     devtool: process.env.PW_IS_RUNNING ? false : 'source-map',
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
@@ -116,14 +118,17 @@ module.exports = {
         ],
     },
     plugins: [
-        // this plugin is required for highlighting TS errors, please do not remove it
-        new ForkTsCheckerWebpackPlugin({
-            typescript: {
-                configFile: 'tsconfig.webpack.json',
-            },
-            async: true,
-            devServer: true, // required for webpack-dev-server to display TS errors
-        }),
+        // this plugin is required for highlighting TS errors, please do not remove it.
+        // Skip the type-check worker under Playwright e2e (PW_IS_RUNNING): e2e doesn't need type
+        // checking (that runs in the jest/tsc pipes) and the worker only adds to the dev-server's memory.
+        !process.env.PW_IS_RUNNING &&
+            new ForkTsCheckerWebpackPlugin({
+                typescript: {
+                    configFile: 'tsconfig.webpack.json',
+                },
+                async: true,
+                devServer: true, // required for webpack-dev-server to display TS errors
+            }),
         new webpack.ProvidePlugin({
             Buffer: ['buffer', 'Buffer'],
         }),
@@ -172,7 +177,8 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
-        process.env.NODE_ENV === 'cc' && new ESLintPlugin({ quiet: true }),
+        // Also skip eslint during the e2e compile (same reason: linting runs in its own pipe).
+        process.env.NODE_ENV === 'cc' && !process.env.PW_IS_RUNNING && new ESLintPlugin({ quiet: true }),
         new Dotenv(),
     ].filter(Boolean),
     resolve: {

@@ -18,6 +18,7 @@ import {
     assertInstanceOfFile,
     addItemUsingNamesPopoverForm,
     setRichTextEditorValue,
+    setTextField,
     spyOnWindowLocationMethod,
 } from 'test-utils';
 import { useAccountContext } from 'context';
@@ -102,7 +103,9 @@ describe('ThesisSubmission', () => {
         await setRichTextEditorValue('rek-description', 'abstract');
         await userEvent.click(screen.getByTestId('rek-genre-type-select'));
         await userEvent.click(screen.getByText('PhD Thesis'));
-        await userEvent.type(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
+        // The test keeps the typed org-unit text (no suggestion is selected), so set it in one change
+        // event rather than typing 28 characters char-by-char (was ~40% of this form-fill helper).
+        setTextField(screen.getByTestId('rek-org-unit-name-input'), 'Art, Design and Architecture');
         await addItemUsingNamesPopoverForm('rek-supervisor', 'James', 'Smith');
         await userEvent.type(screen.getByTestId('rek-subject-input'), '01');
         await waitForText('0101 Pure Mathematics');
@@ -157,7 +160,7 @@ describe('ThesisSubmission', () => {
     describe('HDR submission', () => {
         describe('form', () => {
             it('should display error summary according to invalid fields', async () => {
-                const { getByTestId, queryByText, getByRole } = setup({ isHdrThesis: true });
+                const { getByTestId, queryByText } = setup({ isHdrThesis: true });
                 await assertValidationErrorSummary();
 
                 await waitForText('Thesis title is required');
@@ -311,7 +314,7 @@ describe('ThesisSubmission', () => {
         };
         describe('form', () => {
             it('should display error summary according to invalid fields', async () => {
-                const { getByTestId, queryByText, getByRole } = setup();
+                const { getByTestId, queryByText } = setup();
                 await assertValidationErrorSummary();
 
                 await waitForText('Thesis title is required');

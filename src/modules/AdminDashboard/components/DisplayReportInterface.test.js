@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { within, render, userEvent } from 'test-utils';
+import { within, render, userEvent, setTextField } from 'test-utils';
 
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
@@ -82,11 +82,11 @@ describe('DisplayReportInterface', () => {
 
             const { getByTestId } = accessors;
 
-            await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
+            setTextField(getByTestId('testForm-date-from-input'), '02/04/2023');
 
             expect(getByTestId('testForm-date-from-input')).toHaveValue('02/04/2023');
 
-            await userEvent.type(getByTestId('testForm-date-to-input'), '01/05/2023');
+            setTextField(getByTestId('testForm-date-to-input'), '01/05/2023');
             expect(getByTestId('testForm-date-to-input')).toHaveValue('01/05/2023');
         });
 
@@ -98,8 +98,8 @@ describe('DisplayReportInterface', () => {
             await selectReport('Works history', accessors);
 
             const { getByTestId, getByRole } = accessors;
-            await userEvent.type(getByTestId('testForm-date-from-input'), '01/01/2023');
-            await userEvent.type(getByTestId('testForm-date-to-input'), '02/04/2023');
+            setTextField(getByTestId('testForm-date-from-input'), '01/01/2023');
+            setTextField(getByTestId('testForm-date-to-input'), '02/04/2023');
 
             await userEvent.click(getByRole('button', { name: 'Run report' }));
             expect(onReportClickFn).toHaveBeenCalledWith(
@@ -123,7 +123,7 @@ describe('DisplayReportInterface', () => {
                 await selectReport('Works history', accessors);
                 const { getByRole, getByTestId } = accessors;
 
-                await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
+                setTextField(getByTestId('testForm-date-from-input'), '02/04/2023');
                 expect(within(getByTestId('testForm-date-to')).getByText('Required')).toBeInTheDocument();
 
                 expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
@@ -134,7 +134,7 @@ describe('DisplayReportInterface', () => {
                 await selectReport('Works history', accessors);
                 const { getByRole, getByTestId } = accessors;
 
-                await userEvent.type(getByTestId('testForm-date-to-input'), '02/04/2023');
+                setTextField(getByTestId('testForm-date-to-input'), '02/04/2023');
                 expect(within(getByTestId('testForm-date-from')).getByText('Required')).toBeInTheDocument();
 
                 expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
@@ -145,8 +145,8 @@ describe('DisplayReportInterface', () => {
                 await selectReport('Works history', accessors);
                 const { getByRole, getByTestId } = accessors;
 
-                await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
-                await userEvent.type(getByTestId('testForm-date-to-input'), '01/01/2023');
+                setTextField(getByTestId('testForm-date-from-input'), '02/04/2023');
+                setTextField(getByTestId('testForm-date-to-input'), '01/01/2023');
 
                 expect(
                     within(getByTestId('testForm-date-from')).getByText('Must not be after "to" date'),
@@ -211,11 +211,11 @@ describe('DisplayReportInterface', () => {
 
             const { getByTestId } = accessors;
 
-            await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
+            setTextField(getByTestId('testForm-date-from-input'), '02/04/2023');
 
             expect(getByTestId('testForm-date-from-input')).toHaveValue('02/04/2023');
 
-            await userEvent.type(getByTestId('testForm-date-to-input'), '01/05/2023');
+            setTextField(getByTestId('testForm-date-to-input'), '01/05/2023');
             expect(getByTestId('testForm-date-to-input')).toHaveValue('01/05/2023');
         });
 
@@ -227,8 +227,8 @@ describe('DisplayReportInterface', () => {
             await selectReport('System alert log', accessors);
 
             const { getByTestId, getByRole } = accessors;
-            await userEvent.type(getByTestId('testForm-date-from-input'), '01/01/2023');
-            await userEvent.type(getByTestId('testForm-date-to-input'), '02/04/2023');
+            setTextField(getByTestId('testForm-date-from-input'), '01/01/2023');
+            setTextField(getByTestId('testForm-date-to-input'), '02/04/2023');
 
             await userEvent.click(getByRole('button', { name: 'Run report' }));
             expect(onReportClickFn).toHaveBeenCalledWith(
@@ -251,7 +251,7 @@ describe('DisplayReportInterface', () => {
             const accessors = setup();
             await selectReport('System alert log', accessors);
             const { getByTestId } = accessors;
-            await userEvent.type(getByTestId('testForm-requestor-id-input'), '123');
+            setTextField(getByTestId('testForm-requestor-id-input'), '123');
             expect(getByTestId('testForm-requestor-id-input')).not.toHaveAttribute('disabled');
             expect(getByTestId('testForm-date-to-input')).not.toHaveAttribute('disabled');
             expect(getByTestId('testForm-date-from-input')).not.toHaveAttribute('disabled');
@@ -261,7 +261,7 @@ describe('DisplayReportInterface', () => {
             const accessors = setup();
             await selectReport('System alert log', accessors);
             const { getByTestId } = accessors;
-            await userEvent.type(getByTestId('testForm-pid-input'), 'uq:123');
+            setTextField(getByTestId('testForm-pid-input'), 'uq:123');
             expect(getByTestId('testForm-requestor-id-input')).not.toHaveAttribute('disabled');
             expect(getByTestId('testForm-date-to-input')).not.toHaveAttribute('disabled');
             expect(getByTestId('testForm-date-from-input')).not.toHaveAttribute('disabled');
@@ -273,7 +273,7 @@ describe('DisplayReportInterface', () => {
                 await selectReport('System alert log', accessors);
                 const { getByRole, getByTestId } = accessors;
 
-                await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
+                setTextField(getByTestId('testForm-date-from-input'), '02/04/2023');
                 expect(within(getByTestId('testForm-date-to')).getByText('Required')).toBeInTheDocument();
 
                 expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
@@ -284,7 +284,7 @@ describe('DisplayReportInterface', () => {
                 await selectReport('System alert log', accessors);
                 const { getByRole, getByTestId } = accessors;
 
-                await userEvent.type(getByTestId('testForm-date-to-input'), '02/04/2023');
+                setTextField(getByTestId('testForm-date-to-input'), '02/04/2023');
                 expect(within(getByTestId('testForm-date-from')).getByText('Required')).toBeInTheDocument();
 
                 expect(getByRole('button', { name: 'Run report' })).toHaveAttribute('disabled');
@@ -295,8 +295,8 @@ describe('DisplayReportInterface', () => {
                 await selectReport('System alert log', accessors);
                 const { getByRole, getByTestId } = accessors;
 
-                await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
-                await userEvent.type(getByTestId('testForm-date-to-input'), '01/01/2023');
+                setTextField(getByTestId('testForm-date-from-input'), '02/04/2023');
+                setTextField(getByTestId('testForm-date-to-input'), '01/01/2023');
 
                 expect(
                     within(getByTestId('testForm-date-from')).getByText('Must not be after "to" date'),
