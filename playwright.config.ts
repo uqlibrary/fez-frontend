@@ -4,8 +4,8 @@ import { baseURL, istanbulReportPartialsDir, istanbulStructureDir } from './play
 import * as process from 'node:process';
 import * as os from 'node:os';
 
-// CI runs at '50%' (2 workers on the 4-vCPU pipe). Local dev is capped at 4 workers (the lesser of the
-// machine's 50% and 4) to limit local memory and CPU use.
+// CI runs at '75%' (3 workers on the 4-vCPU pipe; peaks ~6.2GB, under the 8GB cap). Local dev is capped
+// at 4 workers (the lesser of the machine's 50% and 4) to limit local memory and CPU use.
 const localWorkers = Math.min(4, Math.max(1, Math.floor(os.cpus().length / 2)));
 
 export default defineConfig({
@@ -19,7 +19,7 @@ export default defineConfig({
     failOnFlakyTests: !process.env.CI_BRANCH,
     forbidOnly: !!process.env.CI_BRANCH,
     retries: process.env.CI_BRANCH ? 2 : 0,
-    workers: process.env.CI_BRANCH ? '50%' : localWorkers,
+    workers: process.env.CI_BRANCH ? '75%' : localWorkers,
     // e2e istanbul coverage: the collector (playwright/test.ts, NODE_ENV=cc) writes per-test counts
     // partials + write-once structures; this reporter rejoins and merges them into coverage/playwright.
     reporter: [

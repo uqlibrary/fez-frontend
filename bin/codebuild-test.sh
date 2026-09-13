@@ -6,7 +6,7 @@ export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"
 export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%B")
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
-export PWTEST_SHARD_WEIGHTS=50:50 # ENV VAR name expected by PW, please don't rename it. Weight count must equal PW_SHARD_COUNT
+export PWTEST_SHARD_WEIGHTS=40:60 # ENV VAR name expected by PW, please don't rename it. Weight count must equal PW_SHARD_COUNT. 40:60 (not 50:50) because shard 1's tests are slower: a 50:50 count split left shard 1 ~11.9m vs shard 2 ~7.2m, so shard 1 sheds ~20% of its test count to balance duration.
 export PW_SHARD_COUNT=2
 
 # Put the write-heavy test scratch on tmpfs (RAM) so it doesn't hit the slow CI disk: coverage/ (V8 raw
