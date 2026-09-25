@@ -170,6 +170,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
             return;
         }
 
+        prevActiveFiltersQuerystringPart.current = activeFiltersQuerystringPart;
         setActiveFacetsFilters({ ...journalSearchQueryParams.activeFacets?.filters });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeFiltersQuerystringPart]);
@@ -182,6 +183,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
             return;
         }
 
+        prevKeywordsQuerystringPart.current = keywordsQuerystringPart;
         setActiveFacetsFilters({});
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [keywordsQuerystringPart]);
