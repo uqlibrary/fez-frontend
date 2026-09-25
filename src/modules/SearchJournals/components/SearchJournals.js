@@ -30,7 +30,6 @@ export const SearchJournals = () => {
     const location = useLocation();
     const dispatch = useDispatch();
     const { journalSearchQueryParams, handleSearch } = useJournalSearch();
-    const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords));
     const {
         selectedKeywords,
         setSelectedKeywords,
@@ -39,26 +38,13 @@ export const SearchJournals = () => {
         handleKeywordDelete,
         hasAnySelectedKeywords,
     } = useSelectedKeywords(journalSearchQueryParams?.keywords);
+    const isBrowsingAllJournals = !!journalSearchQueryParams?.keywords?.[KEYWORD_ALL_JOURNALS_ID];
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
     const fromHandleKeywordDelete = React.useRef(false);
     const fromHandleKeywordClear = React.useRef(false);
     const fromHandleAllJournals = React.useRef(false);
-    const [showingAllJournals, setShowingAllJournals] = React.useState(false);
-    const allJournalsPageRefresh = React.useRef(!!initialKeywords.current[KEYWORD_ALL_JOURNALS_ID]);
-
-    /**
-     * On mount, check if we're arriving from a page refresh and
-     * need to run the All Journals search - indicated
-     * by the state of "showingAllJournals" being false while
-     * the 'all keywords' keyword is actually in the URL
-     */
-    React.useEffect(() => {
-        if (!!allJournalsPageRefresh.current) {
-            setShowingAllJournals(true);
-        }
-        return () => dispatch(clearJournalSearchKeywords());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    const fromLocationChange = React.useRef(false);
+    const [showingAllJournals, setShowingAllJournals] = React.useState(isBrowsingAllJournals);
 
     const handleKeywordDeleteDecorator = keyword => {
         handleKeywordDelete(keyword);
@@ -112,19 +98,26 @@ export const SearchJournals = () => {
 
         // make sure selected keywords are cleared if previous page doesnt have any query params
         if (!Object.keys(keywordsFromUrl).length) {
-            setSelectedKeywords(prevSelectedKeywords =>
-                Object.keys(prevSelectedKeywords || {}).length > 0 ? {} : prevSelectedKeywords,
-            );
+            setSelectedKeywords(prevSelectedKeywords => {
+                if (Object.keys(prevSelectedKeywords || {}).length > 0) {
+                    fromLocationChange.current = true;
+                    return {};
+                }
+                return prevSelectedKeywords;
+            });
             setShowInputControls(true);
+            setShowingAllJournals(false);
             return;
         }
 
+        setShowingAllJournals(isBrowsingAllJournals);
         if (!areKeywordsDifferent(keywordsFromUrl, selectedKeywords)) {
             return;
         }
 
         // if there are differences between selectedKeywords state variable
         // and the current search query keywords, update the state
+        fromLocationChange.current = true;
         setSelectedKeywords(searchQueryParams.keywords);
         setShowInputControls(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -143,6 +136,11 @@ export const SearchJournals = () => {
      * Run this effect whenever keywords are changed
      */
     React.useEffect(() => {
+        if (fromLocationChange.current) {
+            fromLocationChange.current = false;
+            return;
+        }
+
         // preview back/forward/refresh to add new history
         if (
             !Object.keys(selectedKeywords).length &&
@@ -197,11 +195,9 @@ export const SearchJournals = () => {
             delete journalSearchQueryParams.sortDirection;
         }
 
-        if (showingAllJournals || allJournalsPageRefresh.current) {
+        if (isBrowsingAllJournals) {
             fromHandleAllJournals.current = false;
             delete journalSearchQueryParams.keywords;
-
-            !!allJournalsPageRefresh && (allJournalsPageRefresh.current = false);
         }
 
         // add a delay when keywords are being removed
