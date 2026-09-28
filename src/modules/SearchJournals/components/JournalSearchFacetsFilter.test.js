@@ -43,8 +43,12 @@ const getIdText = label => {
 };
 
 describe('Search Journals Facets component', () => {
+    const onFacetsChangedHandler = jest.fn();
+
     afterEach(() => {
-        useLocation.mockClear();
+        jest.clearAllMocks();
+        jest.restoreAllMocks();
+        useLocation.mockReturnValue({ pathname: '/', search: '' });
     });
 
     it('should not render favourite facets if no facets are provided by the api', () => {
@@ -54,8 +58,6 @@ describe('Search Journals Facets component', () => {
     });
 
     it('should remove the favourite journals filter when deselected', async () => {
-        const onFacetsChangedHandler = jest.fn();
-
         useLocation.mockImplementationOnce(() => ({
             pathname: '/',
             search: `?${param({
@@ -166,7 +168,7 @@ describe('Search Journals Facets component', () => {
             expect(getByTestId(categoryId)).toBeInTheDocument();
 
             // click (expand) each category one at a time to
-            // dynamicaly populate the nested items.
+            // dynamically populate the nested items.
             fireEvent.click(getByTestId(categoryId));
 
             item.facets.forEach(facet => {
@@ -387,6 +389,122 @@ describe('Search Journals Facets component', () => {
         expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();
     });
 
+    describe('browser back/forward navigation', () => {
+        const buildKeywordQuery = (text, type = 'Title') => {
+            const id = `${type}-${text}`;
+            return [`keywords[${id}][type]=${type}`, `keywords[${id}][text]=${text}`, `keywords[${id}][id]=${id}`]
+                .map(param => {
+                    const [key, value] = param.split('=');
+                    return `${encodeURIComponent(key)}=${value}`;
+                })
+                .join('&');
+        };
+
+        const keywordTesting = buildKeywordQuery('Testing');
+        const keywordOther = buildKeywordQuery('Other');
+        const facetIndexedInScopus = 'activeFacets%5Bfilters%5D%5BIndexed+in%5D%5B%5D=Scopus';
+        const facetListedInCwts = 'activeFacets%5Bfilters%5D%5BListed+in%5D%5B%5D=CWTS';
+
+        const mockCurrentUrl = (...params) =>
+            useLocation.mockReturnValue({ pathname: '/', search: `?${params.join('&')}` });
+
+        describe('when the URL changes between facet selections', () => {
+            it('should remove the facet on back and re-apply it on forward, keeping unrelated facets', () => {
+                mockCurrentUrl(keywordTesting, facetIndexedInScopus);
+                const { getByTestId, queryByTestId, rerender } = setup({ ...facets, onFacetsChangedHandler });
+
+                // initial state
+                expect(queryByTestId('clear-facet-filter-nested-item-listed-in-cwts')).not.toBeInTheDocument();
+                expect(queryByTestId('clear-facet-filter-nested-item-indexed-in-scopus')).toBeInTheDocument();
+
+                // user selects CWTS
+                fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
+                fireEvent.click(getByTestId('facet-filter-nested-item-listed-in-cwts'));
+                expect(getByTestId('clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+                expect(queryByTestId('clear-facet-filter-nested-item-indexed-in-scopus')).toBeInTheDocument();
+
+                // app reflects the selection in the URL
+                mockCurrentUrl(keywordTesting, facetIndexedInScopus, facetListedInCwts);
+                setup({ ...facets, onFacetsChangedHandler }, rerender);
+                expect(getByTestId('clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+                expect(queryByTestId('clear-facet-filter-nested-item-indexed-in-scopus')).toBeInTheDocument();
+
+                // back: URL reverts to pre-selection state
+                mockCurrentUrl(keywordTesting, facetIndexedInScopus);
+                setup({ ...facets, onFacetsChangedHandler }, rerender);
+                expect(queryByTestId('clear-facet-filter-nested-item-listed-in-cwts')).not.toBeInTheDocument();
+                expect(queryByTestId('clear-facet-filter-nested-item-indexed-in-scopus')).toBeInTheDocument();
+
+                // forward: URL returns to post-selection state
+                mockCurrentUrl(keywordTesting, facetIndexedInScopus, facetListedInCwts);
+                setup({ ...facets, onFacetsChangedHandler }, rerender);
+                expect(getByTestId('clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+                expect(queryByTestId('clear-facet-filter-nested-item-indexed-in-scopus')).toBeInTheDocument();
+            });
+        });
+
+        describe('when navigation removes a keyword', () => {
+            it('should clear locally selected facets if the URL has no active facets', () => {
+                mockCurrentUrl(keywordTesting, keywordOther);
+                const { getByTestId, queryByTestId, rerender } = setup({ ...facets, onFacetsChangedHandler });
+
+                // initial state
+                expect(queryByTestId('clear-facet-filter-nested-item-listed-in-cwts')).not.toBeInTheDocument();
+
+                // facet selected locally only, URL is not updated
+                fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
+                fireEvent.click(getByTestId('facet-filter-nested-item-listed-in-cwts'));
+                expect(getByTestId('clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+                expect(getByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
+
+                mockCurrentUrl(keywordTesting);
+                setup({ ...facets, onFacetsChangedHandler }, rerender);
+
+                expect(queryByTestId('clear-facet-filter-nested-item-listed-in-cwts')).not.toBeInTheDocument();
+                expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();
+            });
+
+            it('should keep facets when the url updates and there are still active facets', () => {
+                mockCurrentUrl(keywordTesting, keywordOther, facetIndexedInScopus);
+                const { getByTestId, rerender } = setup({ ...facets, onFacetsChangedHandler });
+                expect(getByTestId('clear-facet-filter-nested-item-indexed-in-scopus')).toBeInTheDocument();
+
+                mockCurrentUrl(keywordTesting, facetIndexedInScopus);
+                setup({ ...facets, onFacetsChangedHandler }, rerender);
+
+                expect(getByTestId('clear-facet-filter-nested-item-indexed-in-scopus')).toBeInTheDocument();
+                expect(getByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
+            });
+
+            it('should clear locally selected facets when keywords return to their initial value', () => {
+                const useJournalSearchSpy = jest.spyOn(hooks, 'useJournalSearch');
+                const keywords = { 'Title-Testing': { type: 'Title', text: 'Testing', id: 'Title-Testing' } };
+                const mockKeywords = value =>
+                    useJournalSearchSpy.mockReturnValue({
+                        journalSearchQueryParams: { keywords: value, activeFacets: {} },
+                    });
+
+                mockKeywords({ ...keywords, other: {} });
+                const { getByTestId, queryByTestId, rerender } = setup({ ...facets, onFacetsChangedHandler });
+
+                // keyword removed
+                mockKeywords(keywords);
+                setup({ ...facets, onFacetsChangedHandler }, rerender);
+
+                // facet selected locally after the removal
+                fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
+                fireEvent.click(getByTestId('facet-filter-nested-item-listed-in-cwts'));
+                expect(getByTestId('clear-facet-filter-nested-item-listed-in-cwts')).toBeVisible();
+
+                // back: keywords return to the initial value
+                mockKeywords({ ...keywords, other: {} });
+                setup({ ...facets, onFacetsChangedHandler }, rerender);
+
+                expect(queryByTestId('clear-facet-filter-nested-item-listed-in-cwts')).not.toBeInTheDocument();
+            });
+        });
+    });
+
     describe('`Open search: accepted version`', () => {
         const availableFacets = {
             filters: {
@@ -418,7 +536,6 @@ describe('Search Journals Facets component', () => {
             },
         };
 
-        const onFacetsChangedHandler = jest.fn();
         const activate = async option =>
             await userEvent.click(
                 screen.getByTestId(`facet-filter-nested-item-open-access-accepted-version-${kebabCase(option)}`),
@@ -437,7 +554,6 @@ describe('Search Journals Facets component', () => {
                 ranges: {},
             });
 
-        afterEach(() => onFacetsChangedHandler.mockReset());
         describe('when empty', () => {
             const expandCategory = async () =>
                 await userEvent.click(screen.getByTestId('expand-more-facet-category-open-access-accepted-version'));

@@ -161,9 +161,6 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
     /**
      * This effect takes care of making the facets filter UI reflect updates made to the activeFacets part
      * of the querystring.
-     *
-     * The reason why using useState above is not enough can be found
-     * in here https://stackoverflow.com/a/58877875/1463121
      */
     useEffect(() => {
         if (activeFiltersQuerystringPart === prevActiveFiltersQuerystringPart.current) {
@@ -184,7 +181,9 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
         }
 
         prevKeywordsQuerystringPart.current = keywordsQuerystringPart;
-        setActiveFacetsFilters({});
+        if (!Object.keys(journalSearchQueryParams.activeFacets?.filters || {}).length) {
+            setActiveFacetsFilters({});
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [keywordsQuerystringPart]);
 
