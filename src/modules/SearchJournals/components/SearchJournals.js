@@ -259,6 +259,6 @@ export const SearchJournals = () => {
             </Grid>
         </StandardPage>
     );
-};;;;;;;;;;
+};
 
 export default React.memo(SearchJournals);
