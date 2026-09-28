@@ -87,6 +87,9 @@ export const SearchJournals = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // clear any pending requests onUnmount
+    React.useEffect(() => () => lastRequest && clearTimeout(lastRequest), []);
+
     /**
      * Update states based on the query url
      *   - e.g. back/forward buttons click
@@ -187,24 +190,25 @@ export const SearchJournals = () => {
         }
         // reset facets filter, paging and sorting when keywords are removed
         // or the All Journals button is pressed for the first time
+        const journalSearchQueryParamsSnapshot = { ...journalSearchQueryParams };
         if (fromHandleKeywordDelete.current || fromHandleKeywordClear.current || fromHandleAllJournals.current) {
-            delete journalSearchQueryParams.activeFacets;
-            delete journalSearchQueryParams.page;
-            delete journalSearchQueryParams.pageSize;
-            delete journalSearchQueryParams.sortBy;
-            delete journalSearchQueryParams.sortDirection;
+            delete journalSearchQueryParamsSnapshot.activeFacets;
+            delete journalSearchQueryParamsSnapshot.page;
+            delete journalSearchQueryParamsSnapshot.pageSize;
+            delete journalSearchQueryParamsSnapshot.sortBy;
+            delete journalSearchQueryParamsSnapshot.sortDirection;
         }
 
         if (isBrowsingAllJournals) {
             fromHandleAllJournals.current = false;
-            delete journalSearchQueryParams.keywords;
+            delete journalSearchQueryParamsSnapshot.keywords;
         }
 
         // add a delay when keywords are being removed
         // to avoid unnecessary load on the API
         lastRequest && clearTimeout(lastRequest);
         lastRequest = setTimeout(
-            () => dispatch(searchJournals(journalSearchQueryParams)),
+            () => dispatch(searchJournals(journalSearchQueryParamsSnapshot)),
             fromHandleKeywordDelete.current ? 1200 : 0,
         );
         fromHandleKeywordDelete.current = fromHandleKeywordClear.current = false;
@@ -255,6 +259,6 @@ export const SearchJournals = () => {
             </Grid>
         </StandardPage>
     );
-};
+};;;;;;;;;;
 
 export default React.memo(SearchJournals);
