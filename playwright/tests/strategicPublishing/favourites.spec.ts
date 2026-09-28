@@ -55,7 +55,7 @@ test.describe('Favourite Journals', () => {
             await page.getByTestId('fjl-sharable-link-1').click();
             await page.getByTestId('copy-to-clipboard-dialog-copy=button').click();
             expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
-                'http://localhost:3000/journals/search/?activeFacets%5Bfilters%5D%5BShowFavouritedOnly%5D=1&keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND#/journals/search/?activeFacets%5Bfilters%5D%5BShowFavouritedOnly%5D=true&page=1&keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND',
+                'http://localhost:3000/journals/search/?activeFacets%5Bfilters%5D%5BShowFavouritedOnly%5D=1&keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND',
             );
 
             await assertAccessibility(page, 'div.StandardPage');
