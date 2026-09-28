@@ -389,7 +389,7 @@ describe('Search Journals Facets component', () => {
         expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();
     });
 
-    describe('browser back/forward navigation', () => {
+    describe('on navigation', () => {
         const buildKeywordQuery = (text, type = 'Title') => {
             const id = `${type}-${text}`;
             return [`keywords[${id}][type]=${type}`, `keywords[${id}][text]=${text}`, `keywords[${id}][id]=${id}`]
