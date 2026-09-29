@@ -849,6 +849,7 @@ export const AuthorsList = ({
         muiExpandButtonProps: ({ table, row }) => ({
             id: `expandPanelIcon-${row.original.aut_id}`,
             ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
+            size: 'medium',
             sx: {
                 alignSelf: 'center',
             },

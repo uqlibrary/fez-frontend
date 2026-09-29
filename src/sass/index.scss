@@ -38,6 +38,30 @@ a, button.MuiLink-button:enabled {
   }
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[role='button']:focus-visible,
+.MuiButtonBase-root:not(.MuiButton-root):focus-visible,
+.MuiButtonBase-root:not(.MuiButton-root).Mui-focusVisible {
+  outline: 4px solid #0d6dcd;
+  outline-offset: -1px;
+}
+
+.AppBar a:focus-visible,
+.AppBar summary:focus-visible,
+.AppBar [role='button']:focus-visible,
+.AppBar .MuiButtonBase-root:focus-visible,
+.AppBar .MuiButtonBase-root.Mui-focusVisible,
+#main-menu-logo:focus-visible {
+  outline-color: #fff;
+}
+
+.AppBar .appTitle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+
 .smallLogo,
 .largeLogo {
   color: transparent;

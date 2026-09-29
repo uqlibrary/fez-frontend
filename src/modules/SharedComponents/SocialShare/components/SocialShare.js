@@ -15,7 +15,7 @@ export const SocialShare = ({ publication, size = 24, spaceBetween = 4, services
             id: 'email',
             link: {
                 href: `mailto:?subject=${publication.rek_title}&body=Please review this record in UQ eSpace: ${APP_URL}view/${publication.rek_pid}`,
-                title: 'Share this record via Email',
+                ['aria-label']: 'Share this record via Email',
                 openInNewIcon: false,
             },
             icon: EmailOutlined,
@@ -26,7 +26,7 @@ export const SocialShare = ({ publication, size = 24, spaceBetween = 4, services
                 href: '#',
                 onClick: printPage,
                 target: '',
-                title: 'Print this record',
+                ['aria-label']: 'Print this record',
                 openInNewIcon: false,
             },
             icon: PrintIcon,
