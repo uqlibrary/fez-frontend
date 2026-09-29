@@ -427,7 +427,6 @@ exports[`Search record results should render a single claimable item with no aut
                                         rel="noopener noreferrer"
                                         tabindex="0"
                                         target="_blank"
-                                        title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
                                           class="fez-icon google large"
@@ -1204,7 +1203,6 @@ exports[`Search record results should render a single unclaimable item with no a
                                         rel="noopener noreferrer"
                                         tabindex="0"
                                         target="_blank"
-                                        title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
                                           class="fez-icon google large"
@@ -1981,7 +1979,6 @@ exports[`Search record results should render a single unclaimable item with no a
                                         rel="noopener noreferrer"
                                         tabindex="0"
                                         target="_blank"
-                                        title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
                                           class="fez-icon google large"
@@ -2758,7 +2755,6 @@ exports[`Search record results should render publications list with one publicat
                                         rel="noopener noreferrer"
                                         tabindex="0"
                                         target="_blank"
-                                        title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
                                           class="fez-icon google large"

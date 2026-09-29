@@ -725,7 +725,6 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
                                             class="fez-icon google large"
@@ -1381,7 +1380,6 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
                                             class="fez-icon google large"
@@ -2037,7 +2035,6 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
                                             class="fez-icon google large"

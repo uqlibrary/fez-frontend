@@ -385,7 +385,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Web of science will open in a new window"
                                 >
                                   <span
                                     class="fez-icon wos large"
@@ -406,7 +405,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Scopus will open in a new window"
                                 >
                                   <span
                                     class="fez-icon scopus large"
@@ -427,7 +425,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Altmetric will open in a new window"
                                 >
                                   <span
                                     class="fez-icon altmetric large"
@@ -448,7 +445,6 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Google scholar will open in a new window"
                                 >
                                   <span
                                     class="fez-icon google large"
@@ -847,7 +843,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Web of science will open in a new window"
                                 >
                                   <span
                                     class="fez-icon wos large"
@@ -868,7 +863,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Scopus will open in a new window"
                                 >
                                   <span
                                     class="fez-icon scopus large"
@@ -889,7 +883,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Altmetric will open in a new window"
                                 >
                                   <span
                                     class="fez-icon altmetric large"
@@ -910,7 +903,6 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   rel="noopener noreferrer"
                                   tabindex="0"
                                   target="_blank"
-                                  title="Full citation in Google scholar will open in a new window"
                                 >
                                   <span
                                     class="fez-icon google large"

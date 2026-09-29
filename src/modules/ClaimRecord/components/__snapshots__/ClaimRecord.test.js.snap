@@ -239,7 +239,6 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -260,7 +259,6 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
                                         class="fez-icon scopus large"
@@ -281,7 +279,6 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
                                         class="fez-icon altmetric large"
@@ -1665,7 +1662,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -1686,7 +1682,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
                                         class="fez-icon scopus large"
@@ -1707,7 +1702,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
                                         class="fez-icon altmetric large"
@@ -3146,7 +3140,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -3167,7 +3160,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
                                         class="fez-icon scopus large"
@@ -3188,7 +3180,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
                                         class="fez-icon altmetric large"
@@ -3209,7 +3200,6 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
                                         class="fez-icon google large"
@@ -4451,7 +4441,6 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -4472,7 +4461,6 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
                                         class="fez-icon scopus large"
@@ -4493,7 +4481,6 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
                                         class="fez-icon altmetric large"
@@ -4514,7 +4501,6 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
                                         class="fez-icon google large"
@@ -5720,7 +5706,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -5741,7 +5726,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
                                         class="fez-icon scopus large"
@@ -5762,7 +5746,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
                                         class="fez-icon altmetric large"
@@ -5783,7 +5766,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
                                         class="fez-icon google large"
@@ -6173,7 +6155,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -6194,7 +6175,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
                                         class="fez-icon scopus large"
@@ -6215,7 +6195,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
                                         class="fez-icon altmetric large"
@@ -6236,7 +6215,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
                                         class="fez-icon google large"
