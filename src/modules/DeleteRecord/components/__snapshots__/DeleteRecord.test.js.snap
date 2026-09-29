@@ -230,7 +230,6 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -251,7 +250,6 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
                                         class="fez-icon google large"
@@ -1266,7 +1264,6 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -1287,7 +1284,6 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
                                         class="fez-icon google large"
@@ -2300,7 +2296,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
                                         class="fez-icon wos large"
@@ -2321,7 +2316,6 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
                                         class="fez-icon google large"

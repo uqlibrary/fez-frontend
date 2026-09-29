@@ -19,7 +19,8 @@ describe('IdentifierIconLink test', () => {
         expect(link).toBeInTheDocument();
         expect(link).toHaveAttribute('href', 'https://doi.org/10.1234/test');
         expect(link).toHaveAttribute('target', '_blank');
-        expect(link).toHaveAttribute('aria-label', 'Open DOI 10.1234/test in a new tab');
+        expect(link).toHaveAttribute('aria-label', 'Open DOI record');
+        // The full id is not read out in the label; it stays in the href (WCAG 1.1.1 / 4.1.2)
         expect(link).toHaveTextContent('10.1234/test');
 
         const icon = link.querySelector('.fez-icon.doi.large');
