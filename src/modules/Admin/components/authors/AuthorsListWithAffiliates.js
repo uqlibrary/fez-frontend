@@ -587,6 +587,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         muiExpandButtonProps: ({ table, row }) => ({
             id: `expandPanelIcon-${row.original.aut_id}`,
             ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
+            size: 'medium',
             sx: {
                 alignSelf: 'center',
                 display: !!!row.original.uqUsername || row.original.uqUsername === '' ? 'none' : 'inline-flex',
