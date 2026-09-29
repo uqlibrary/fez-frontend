@@ -168,6 +168,11 @@ describe('utils', () => {
         publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem4 });
         expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showDiamond: true });
 
+        dataItem4.is_diamond = true;
+        dataItem4.fez_journal_doaj = {};
+        publishedIndicatorProps = getIndicatorProps({ type: types.published, data: dataItem4 });
+        expect(publishedIndicatorProps).toEqual({ type: types.published, status: status.open, showDiamond: true });
+
         // doaj s2o
         dataItem4.is_diamond = null;
         dataItem4.fez_journal_doaj = {};
