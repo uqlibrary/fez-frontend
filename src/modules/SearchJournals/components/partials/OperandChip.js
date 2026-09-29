@@ -61,7 +61,7 @@ export const OperandChip = ({ onMenuItemClick, keyword }) => {
             </Menu>
         </>
     );
-};;;
+};
 
 OperandChip.propTypes = {
     onMenuItemClick: PropTypes.func.isRequired,
