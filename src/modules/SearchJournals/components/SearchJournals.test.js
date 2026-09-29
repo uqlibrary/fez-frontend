@@ -448,5 +448,59 @@ describe('SearchJournals', () => {
             // the hook's params object must not be mutated
             Object.values(stableParams).forEach(params => expect(params).toHaveProperty('page', '2'));
         });
+
+        it('should restore operand state on browser back', async () => {
+            const searchJournalsSpy = jest.spyOn(actions, 'searchJournals');
+            const initialSearch =
+                '?keywords%5BSubject-453314%5D%5Btype%5D=Subject&keywords%5BSubject-453314%5D%5BcvoId%5D=453314&keywords%5BSubject-453314%5D%5Bid%5D=Subject-453314&keywords%5BSubject-453314%5D%5Btext%5D=1503+Catalysis&keywords%5BSubject-453314%5D%5Boperand%5D=OR&keywords%5BSubject-452022%5D%5Btype%5D=Subject&keywords%5BSubject-452022%5D%5BcvoId%5D=452022&keywords%5BSubject-452022%5D%5Bid%5D=Subject-452022&keywords%5BSubject-452022%5D%5Btext%5D=0501+Ecological+Applications&keywords%5BSubject-452022%5D%5Boperand%5D=OR';
+            const updatedSearch =
+                '?keywords%5BSubject-453314%5D%5Btype%5D=Subject&keywords%5BSubject-453314%5D%5BcvoId%5D=453314&keywords%5BSubject-453314%5D%5Bid%5D=Subject-453314&keywords%5BSubject-453314%5D%5Btext%5D=1503+Catalysis&keywords%5BSubject-453314%5D%5Boperand%5D=OR&keywords%5BSubject-452022%5D%5Btype%5D=Subject&keywords%5BSubject-452022%5D%5BcvoId%5D=452022&keywords%5BSubject-452022%5D%5Bid%5D=Subject-452022&keywords%5BSubject-452022%5D%5Btext%5D=0501+Ecological+Applications&keywords%5BSubject-452022%5D%5Boperand%5D=AND';
+
+            mockUseLocation.mockReturnValue({ pathname: '/', search: initialSearch });
+            const { getByTestId, rerender } = setup({ state: { journalsListLoaded: true, journalsList: mockData } });
+
+            await waitFor(() =>
+                expect(searchJournalsSpy).toHaveBeenCalledWith(
+                    expect.objectContaining({
+                        keywords: expect.objectContaining({
+                            'Subject-453314': expect.objectContaining({ operand: 'OR' }),
+                        }),
+                    }),
+                ),
+            );
+            expect(getByTestId('operand-chip-subject-0501-ecological-applications')).toHaveTextContent('OR');
+            searchJournalsSpy.mockClear();
+
+            // change search operand from OR to AND
+            mockUseLocation.mockReturnValue({ pathname: '/', search: updatedSearch });
+            setup({ state: { journalsListLoaded: true, journalsList: mockData } }, rerender);
+
+            await waitFor(() =>
+                expect(searchJournalsSpy).toHaveBeenCalledWith(
+                    expect.not.objectContaining({
+                        keywords: expect.objectContaining({
+                            'Subject-453314': expect.objectContaining({ operand: 'AND' }),
+                        }),
+                    }),
+                ),
+            );
+            expect(getByTestId('operand-chip-subject-0501-ecological-applications')).toHaveTextContent('AND');
+            searchJournalsSpy.mockClear();
+
+            // change search operand back to prev. value
+            mockUseLocation.mockReturnValue({ pathname: '/', search: initialSearch });
+            setup({ state: { journalsListLoaded: true, journalsList: mockData } }, rerender);
+
+            await waitFor(() =>
+                expect(searchJournalsSpy).toHaveBeenCalledWith(
+                    expect.objectContaining({
+                        keywords: expect.objectContaining({
+                            'Subject-453314': expect.objectContaining({ operand: 'OR' }),
+                        }),
+                    }),
+                ),
+            );
+            expect(getByTestId('operand-chip-subject-0501-ecological-applications')).toHaveTextContent('OR');
+        });
     });
 });
