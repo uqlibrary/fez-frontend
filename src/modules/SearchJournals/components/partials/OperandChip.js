@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chip from '@mui/material/Chip';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -13,6 +13,11 @@ export const OperandChip = ({ onMenuItemClick, keyword }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [label, setLabel] = useState(operand); // default chip text
     const open = Boolean(anchorEl);
+
+    // sync local state with keyword operand changes
+    useEffect(() => {
+        setLabel(operand);
+    }, [operand]);
 
     const handleChipClick = event => {
         setAnchorEl(event.currentTarget);
@@ -56,7 +61,7 @@ export const OperandChip = ({ onMenuItemClick, keyword }) => {
             </Menu>
         </>
     );
-};
+};;;
 
 OperandChip.propTypes = {
     onMenuItemClick: PropTypes.func.isRequired,
