@@ -24,8 +24,6 @@ export const isDataTeamCollection = publication =>
     });
 
 const Links = ({ publication, isAdmin }) => {
-    console.log('publication', publication);
-    console.log('fez_record_search_key_link', publication.fez_record_search_key_link);
     const [state, setState] = useState({ isOpen: false, link: undefined, licence: undefined });
 
     const openRdmDownloadUrl = url => {
@@ -289,7 +287,6 @@ const Links = ({ publication, isAdmin }) => {
               }))
             : []),
     ].filter(Boolean);
-    console.log('uniqueLinks', resultLinks);
 
     return (
         <Grid size={12}>
