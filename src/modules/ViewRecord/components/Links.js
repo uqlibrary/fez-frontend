@@ -17,6 +17,7 @@ import DoiCitationView from 'modules/SharedComponents/PublicationCitation/compon
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { getDoiURL } from '../../../helpers/general';
 
 export const isDataTeamCollection = publication =>
     dataTeamCollections.some(pid => {
@@ -81,9 +82,11 @@ const Links = ({ publication, isAdmin }) => {
     };
 
     const getDOILink = (doi, openAccessStatus) => {
+        const href = getDoiURL(doi);
         if (doi.indexOf(DOI_CROSSREF_PREFIX) === -1 && doi.indexOf(DOI_DATACITE_PREFIX) === -1) {
             return {
                 index: 'doi',
+                dedup: href,
                 link: <DoiCitationView doi={doi} />,
                 description: locale.viewRecord.sections.links.doiDescription,
                 openAccessStatus: openAccessStatus,
@@ -94,8 +97,10 @@ const Links = ({ publication, isAdmin }) => {
     };
 
     const getPMCLink = (pubmedCentralId, openAccessStatus) => {
+        const href = locale.global.pubmedCentralLink.externalUrl.replace('[id]', pubmedCentralId);
         return {
             index: 'pmc',
+            dedup: href,
             link: <PubmedCentralLink pubmedCentralId={pubmedCentralId} />,
             description: locale.viewRecord.sections.links.pubmedCentralLinkDescription,
             openAccessStatus: openAccessStatus,
@@ -103,12 +108,14 @@ const Links = ({ publication, isAdmin }) => {
     };
 
     const getGoogleScholarLink = (title, openAccessStatus) => {
+        const href = locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title);
         return {
             index: 'google',
+            dedup: href,
             link: (
                 <ExternalLink
                     id="google-scholar"
-                    href={locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title)}
+                    href={href}
                     title={locale.viewRecord.sections.links.googleScholar.linkDescription}
                 >
                     {locale.viewRecord.sections.links.googleScholar.linkPrefix
@@ -183,12 +190,14 @@ const Links = ({ publication, isAdmin }) => {
         };
 
         const licence = getDownloadLicence(publication);
+        const href = typeof window !== 'undefined' && variableLinkDetails.href;
 
         return {
             index: index,
+            dedup: href,
             link: (
                 <ExternalLink
-                    href={typeof window !== 'undefined' && variableLinkDetails.href}
+                    href={href}
                     title={variableLinkDetails.title}
                     id={`publication-${index}`}
                     openInNewIcon={variableLinkDetails.openInNew}
@@ -286,7 +295,9 @@ const Links = ({ publication, isAdmin }) => {
                   ...getPublicationLink(item, index, isLinkNoDoi),
               }))
             : []),
-    ].filter(Boolean);
+    ]
+        .filter(Boolean)
+        .filter((item, index, array) => index === array.findIndex(item2 => item2.dedup === item.dedup));
 
     return (
         <Grid size={12}>
