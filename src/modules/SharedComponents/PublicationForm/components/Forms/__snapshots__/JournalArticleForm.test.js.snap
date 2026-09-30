@@ -15,13 +15,13 @@ exports[`JournalArticleForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-journal-article-information-header"
               id="standard-card-journal-article-information-header"
             >
@@ -322,13 +322,13 @@ exports[`JournalArticleForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -528,13 +528,13 @@ exports[`JournalArticleForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -631,13 +631,13 @@ exports[`JournalArticleForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -922,13 +922,13 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-journal-article-information-header"
               id="standard-card-journal-article-information-header"
             >
@@ -1229,13 +1229,13 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -1552,13 +1552,13 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -2092,7 +2092,7 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -2297,13 +2297,13 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -2486,13 +2486,13 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -2589,13 +2589,13 @@ exports[`JournalArticleForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -2880,13 +2880,13 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-journal-article-information-header"
               id="standard-card-journal-article-information-header"
             >
@@ -3187,13 +3187,13 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -3510,13 +3510,13 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -4050,7 +4050,7 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -4324,13 +4324,13 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -4513,13 +4513,13 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -4616,13 +4616,13 @@ exports[`JournalArticleForm component with 5 input fields for NTRO with musical 
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -4907,13 +4907,13 @@ exports[`JournalArticleForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-journal-article-information-header"
               id="standard-card-journal-article-information-header"
             >
@@ -5220,13 +5220,13 @@ exports[`JournalArticleForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -5427,13 +5427,13 @@ exports[`JournalArticleForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -5531,13 +5531,13 @@ exports[`JournalArticleForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >

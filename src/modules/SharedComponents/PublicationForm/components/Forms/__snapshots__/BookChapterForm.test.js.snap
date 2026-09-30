@@ -15,13 +15,13 @@ exports[`BookChapterForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-book-chapter-information-header"
               id="standard-card-book-chapter-information-header"
             >
@@ -411,13 +411,13 @@ exports[`BookChapterForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -604,13 +604,13 @@ exports[`BookChapterForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -738,13 +738,13 @@ exports[`BookChapterForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -841,13 +841,13 @@ exports[`BookChapterForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -944,13 +944,13 @@ exports[`BookChapterForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-other-work-details-header"
               id="standard-card-other-work-details-header"
             >
@@ -1186,13 +1186,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-book-chapter-information-header"
               id="standard-card-book-chapter-information-header"
             >
@@ -1582,13 +1582,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -1886,13 +1886,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -2026,13 +2026,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -2566,7 +2566,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -2771,13 +2771,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -2960,13 +2960,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -3063,13 +3063,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -3166,13 +3166,13 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-other-work-details-header"
               id="standard-card-other-work-details-header"
             >
@@ -3408,13 +3408,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-book-chapter-information-header"
               id="standard-card-book-chapter-information-header"
             >
@@ -3804,13 +3804,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -4108,13 +4108,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -4248,13 +4248,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -4788,7 +4788,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -5062,13 +5062,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -5251,13 +5251,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -5354,13 +5354,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -5457,13 +5457,13 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-other-work-details-header"
               id="standard-card-other-work-details-header"
             >
@@ -5699,13 +5699,13 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-book-chapter-information-header"
               id="standard-card-book-chapter-information-header"
             >
@@ -6103,13 +6103,13 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -6297,13 +6297,13 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -6432,13 +6432,13 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -6536,13 +6536,13 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -6640,13 +6640,13 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-other-work-details-header"
               id="standard-card-other-work-details-header"
             >
@@ -6887,13 +6887,13 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-book-chapter-information-header"
               id="standard-card-book-chapter-information-header"
             >
@@ -7283,13 +7283,13 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -7476,13 +7476,13 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -7610,13 +7610,13 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -7713,13 +7713,13 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -7816,13 +7816,13 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-other-work-details-header"
               id="standard-card-other-work-details-header"
             >

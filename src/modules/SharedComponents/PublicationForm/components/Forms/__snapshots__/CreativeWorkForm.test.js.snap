@@ -15,13 +15,13 @@ exports[`CreativeWorkForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -365,13 +365,13 @@ exports[`CreativeWorkForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -614,13 +614,13 @@ exports[`CreativeWorkForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -770,13 +770,13 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -1127,13 +1127,13 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -1379,13 +1379,13 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -1538,13 +1538,13 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -2023,13 +2023,13 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -2338,13 +2338,13 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -2878,7 +2878,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -3231,13 +3231,13 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -3420,13 +3420,13 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -3576,13 +3576,13 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -4026,13 +4026,13 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -4341,13 +4341,13 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -4881,7 +4881,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                        class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                       >
                         <div
                           class="tiptap ProseMirror"
@@ -5199,13 +5199,13 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -5388,13 +5388,13 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >

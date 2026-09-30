@@ -25,7 +25,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - This is test record: UQ:123456
@@ -205,13 +205,13 @@ exports[`AdminInterface component should disabled button and render alert for fo
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -455,7 +455,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - This is test record: UQ:123456
@@ -633,13 +633,13 @@ exports[`AdminInterface component should display job created alert 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -748,7 +748,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - This is test record: UQ:123456
@@ -926,13 +926,13 @@ exports[`AdminInterface component should display job created alert 2`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1096,7 +1096,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - This is test record: UQ:123456
@@ -1274,13 +1274,13 @@ exports[`AdminInterface component should display successful alert 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1389,7 +1389,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - This is test record: UQ:123456
@@ -1567,13 +1567,13 @@ exports[`AdminInterface component should display successful alert 2`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1737,7 +1737,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - Cost analysis: outsourcing radiofrequency ablution for massiv
@@ -1888,13 +1888,13 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2001,7 +2001,7 @@ exports[`AdminInterface component should render default view as a full form view
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - This is test record: UQ:123456
@@ -2144,13 +2144,13 @@ exports[`AdminInterface component should render default view as a full form view
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2178,13 +2178,13 @@ exports[`AdminInterface component should render default view as a full form view
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="files-section-header"
                     id="files-section-header"
                   >
@@ -2212,13 +2212,13 @@ exports[`AdminInterface component should render default view as a full form view
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="security-section-header"
                     id="security-section-header"
                   >
@@ -2325,7 +2325,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Journal Article - This is test record: UQ:123456
@@ -2514,13 +2514,13 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2627,7 +2627,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Add a new Thesis
@@ -2813,13 +2813,13 @@ exports[`AdminInterface component should render in create mode 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2912,7 +2912,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit undefined - undefined: UQ:123456
@@ -3187,13 +3187,13 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3302,7 +3302,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit undefined - undefined: UQ:123456
@@ -3575,13 +3575,13 @@ exports[`AdminInterface component should render locked info alert 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3688,7 +3688,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Undelete undefined - undefined: undefined
@@ -3852,13 +3852,13 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >

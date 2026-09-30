@@ -12,13 +12,13 @@ exports[`Additional Information Component  renderLicense() 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -87,13 +87,13 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -1009,13 +1009,13 @@ exports[`Additional Information Component  should not render map with empty geo 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -1681,13 +1681,13 @@ exports[`Additional Information Component  should render component with Attribut
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -2702,13 +2702,13 @@ exports[`Additional Information Component  should render component with a collec
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -2823,13 +2823,13 @@ exports[`Additional Information Component  should render component with a commun
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -2902,13 +2902,13 @@ exports[`Additional Information Component  should render component with audio do
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -3547,13 +3547,13 @@ exports[`Additional Information Component  should render component with book 1`]
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -4205,13 +4205,13 @@ exports[`Additional Information Component  should render component with book cha
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -5263,13 +5263,13 @@ exports[`Additional Information Component  should render component with conferen
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -6209,13 +6209,13 @@ exports[`Additional Information Component  should render component with conferen
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -7051,13 +7051,13 @@ exports[`Additional Information Component  should render component with creative
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -7416,13 +7416,13 @@ exports[`Additional Information Component  should render component with creative
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -7781,13 +7781,13 @@ exports[`Additional Information Component  should render component with creative
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -8165,13 +8165,13 @@ exports[`Additional Information Component  should render component with data col
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -9598,13 +9598,13 @@ exports[`Additional Information Component  should render component with data col
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -10584,13 +10584,13 @@ exports[`Additional Information Component  should render component with data col
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -12020,13 +12020,13 @@ exports[`Additional Information Component  should render component with data col
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -13512,13 +13512,13 @@ exports[`Additional Information Component  should render component with design d
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -14401,13 +14401,13 @@ exports[`Additional Information Component  should render component with digilib 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -14919,13 +14919,13 @@ exports[`Additional Information Component  should render component with generic 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -15343,13 +15343,13 @@ exports[`Additional Information Component  should render component with image 1`
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -15408,13 +15408,13 @@ exports[`Additional Information Component  should render component with instrume
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -15942,13 +15942,13 @@ exports[`Additional Information Component  should render component with journal 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -16542,13 +16542,13 @@ exports[`Additional Information Component  should render component with journal 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -17520,13 +17520,13 @@ exports[`Additional Information Component  should render component with manuscri
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -18066,13 +18066,13 @@ exports[`Additional Information Component  should render component with newspape
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -18899,13 +18899,13 @@ exports[`Additional Information Component  should render component with patent 1
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -19445,13 +19445,13 @@ exports[`Additional Information Component  should render component with preprint
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -20049,13 +20049,13 @@ exports[`Additional Information Component  should render component with proceedi
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -20875,13 +20875,13 @@ exports[`Additional Information Component  should render component with referenc
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -21484,13 +21484,13 @@ exports[`Additional Information Component  should render component with rek_herd
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -22561,13 +22561,13 @@ exports[`Additional Information Component  should render component with rek_star
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -23007,13 +23007,13 @@ exports[`Additional Information Component  should render component with research
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -23532,13 +23532,13 @@ exports[`Additional Information Component  should render component with thesis 1
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -23992,13 +23992,13 @@ exports[`Additional Information Component  should render component with video do
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -24468,13 +24468,13 @@ exports[`Additional Information Component  should render component with working 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -25189,13 +25189,13 @@ exports[`Additional Information Component  should render component without Attri
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -26167,13 +26167,13 @@ exports[`Additional Information Component  should render component without Attri
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -27145,13 +27145,13 @@ exports[`Additional Information Component  should render map with geo coordinate
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -27820,13 +27820,13 @@ exports[`Additional Information Component  should render oa status value link in
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -28282,13 +28282,13 @@ exports[`Additional Information Component  should render with description only 1
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -29260,13 +29260,13 @@ exports[`Additional Information Component  should render with no formatted abstr
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -30207,13 +30207,13 @@ exports[`Additional Information Component  should render with no formatted abstr
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -31185,13 +31185,13 @@ exports[`Additional Information Component  should skip render of date if it has 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -31222,13 +31222,13 @@ exports[`Additional Information Component  should skip render of end date if it 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >

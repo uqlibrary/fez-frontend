@@ -7,7 +7,7 @@ exports[`InheritedSecurityDetails component should render collections correctly 
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
@@ -82,7 +82,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited datastream security policy details
@@ -157,7 +157,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited datastream security policy details
@@ -228,7 +228,7 @@ exports[`InheritedSecurityDetails component should render collections for record
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
@@ -299,7 +299,7 @@ exports[`InheritedSecurityDetails component should render properly 1`] = `
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
     <h6
-      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details

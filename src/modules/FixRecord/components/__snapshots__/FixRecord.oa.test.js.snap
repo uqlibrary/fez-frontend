@@ -22,7 +22,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -50,13 +50,13 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -164,7 +164,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -386,13 +386,13 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                       data-testid="standard-card-suggest-a-correction-header"
                       id="standard-card-suggest-a-correction-header"
                     >
@@ -498,13 +498,13 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                       data-testid="standard-card-upload-files-header"
                       id="standard-card-upload-files-header"
                     >
@@ -780,7 +780,7 @@ exports[`Component FixRecord for non-compliant Open Access should render loader 
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
@@ -835,7 +835,7 @@ exports[`Component FixRecord for non-compliant Open Access should render loader 
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
@@ -858,7 +858,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -886,13 +886,13 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1000,7 +1000,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -1222,13 +1222,13 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                       data-testid="standard-card-suggest-a-correction-header"
                       id="standard-card-suggest-a-correction-header"
                     >
@@ -1334,13 +1334,13 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                       data-testid="standard-card-upload-files-header"
                       id="standard-card-upload-files-header"
                     >

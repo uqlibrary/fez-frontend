@@ -591,7 +591,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
               </div>
             </div>
             <div
-              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
             >
               <div
                 class="tiptap ProseMirror"
@@ -1296,7 +1296,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
               </div>
             </div>
             <div
-              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
             >
               <div
                 class="tiptap ProseMirror"
@@ -2100,7 +2100,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
               </div>
             </div>
             <div
-              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-1tgcem7-MuiTiptap-RichTextContent-root"
+              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-yb6p4b-MuiTiptap-RichTextContent-root"
             >
               <div
                 class="tiptap ProseMirror"
@@ -2892,7 +2892,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
               </div>
             </div>
             <div
-              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
             >
               <div
                 class="tiptap ProseMirror"
@@ -3682,7 +3682,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               </div>
             </div>
             <div
-              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
             >
               <div
                 class="tiptap ProseMirror"
@@ -4626,7 +4626,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
               </div>
             </div>
             <div
-              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
             >
               <div
                 class="tiptap ProseMirror"
@@ -5570,7 +5570,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
               </div>
             </div>
             <div
-              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+              class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
             >
               <div
                 class="tiptap ProseMirror"

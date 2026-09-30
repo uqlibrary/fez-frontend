@@ -414,7 +414,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -865,7 +865,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -1467,7 +1467,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -1919,7 +1919,7 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -1992,7 +1992,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -2545,7 +2545,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -3019,7 +3019,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -3549,7 +3549,7 @@ exports[`SearchComponent should update advanced search row on search text change
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -4023,7 +4023,7 @@ exports[`SearchComponent should update date range filter 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>
@@ -4763,7 +4763,7 @@ exports[`SearchComponent should update date range filter 2`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>

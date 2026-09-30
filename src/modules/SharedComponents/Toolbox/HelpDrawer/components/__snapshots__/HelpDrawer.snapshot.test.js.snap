@@ -35,7 +35,7 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1tyijqa-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >
@@ -108,7 +108,7 @@ exports[`HelpDrawer snapshots tests renders nested text 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1tyijqa-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >
@@ -194,7 +194,7 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1tyijqa-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >
@@ -269,7 +269,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1tyijqa-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >

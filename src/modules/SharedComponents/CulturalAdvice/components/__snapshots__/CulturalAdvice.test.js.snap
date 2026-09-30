@@ -9,13 +9,13 @@ exports[`Component CulturalAdvice should render component 1`] = `
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-ugx26t-MuiCardHeader-root"
+      class="MuiCardHeader-root css-ckg9hn-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="standard-card-cultural-advice-header"
           id="standard-card-cultural-advice-header"
         >

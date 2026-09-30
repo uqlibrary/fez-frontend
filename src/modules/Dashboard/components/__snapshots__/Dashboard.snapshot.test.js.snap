@@ -54,7 +54,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -625,7 +625,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                           style="text-align: center;"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                             style="font-size: 1.33rem;"
                           >
                             Loading your latest works
@@ -687,7 +687,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                             style="text-align: center;"
                           >
                             <span
-                              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                               style="font-size: 1.33rem;"
                             >
                               Loading your trending works
@@ -765,7 +765,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -1030,13 +1030,13 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -1066,13 +1066,13 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -1409,7 +1409,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                           style="text-align: center;"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                             style="font-size: 1.33rem;"
                           >
                             Loading your latest works
@@ -1471,7 +1471,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                             style="text-align: center;"
                           >
                             <span
-                              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                               style="font-size: 1.33rem;"
                             >
                               Loading your trending works
@@ -1535,7 +1535,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -1775,13 +1775,13 @@ exports[`Dashboard test Should only render barChart 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -1861,7 +1861,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -2432,7 +2432,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                           style="text-align: center;"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                             style="font-size: 1.33rem;"
                           >
                             Loading your latest works
@@ -2494,7 +2494,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                             style="text-align: center;"
                           >
                             <span
-                              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                               style="font-size: 1.33rem;"
                             >
                               Loading your trending works
@@ -2641,7 +2641,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -3025,7 +3025,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -3406,7 +3406,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -3721,7 +3721,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -4076,7 +4076,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                           style="text-align: center;"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                             style="font-size: 1.33rem;"
                           >
                             Loading your latest works
@@ -4138,7 +4138,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                             style="text-align: center;"
                           >
                             <span
-                              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                               style="font-size: 1.33rem;"
                             >
                               Loading your trending works
@@ -4216,7 +4216,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -4562,7 +4562,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                           style="text-align: center;"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                             style="font-size: 1.33rem;"
                           >
                             Loading your latest works
@@ -4639,7 +4639,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -4904,13 +4904,13 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -4940,13 +4940,13 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -5026,7 +5026,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -5376,7 +5376,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                             style="text-align: center;"
                           >
                             <span
-                              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                               style="font-size: 1.33rem;"
                             >
                               Loading your trending works
@@ -5454,7 +5454,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -5703,7 +5703,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -6018,7 +6018,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -6267,7 +6267,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -6587,7 +6587,7 @@ exports[`Dashboard test publicationStats should not render stats 2 1`] = `
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Loading your dashboard
@@ -6648,7 +6648,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -6888,13 +6888,13 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -6924,13 +6924,13 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -7212,7 +7212,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -7704,7 +7704,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -8196,7 +8196,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -8436,13 +8436,13 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -8472,13 +8472,13 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -8748,13 +8748,13 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -8784,13 +8784,13 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -9076,7 +9076,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -9366,7 +9366,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -9686,7 +9686,7 @@ exports[`Dashboard test renders loading for authors 1`] = `
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Loading your dashboard
@@ -9761,7 +9761,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -10062,7 +10062,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            
@@ -10338,7 +10338,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 css-1lcr2ib-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 css-734op-MuiTypography-root"
                         >
                           Professor
                            

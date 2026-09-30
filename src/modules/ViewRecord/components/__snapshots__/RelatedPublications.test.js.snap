@@ -12,13 +12,13 @@ exports[`Related publications Component  should not render data with empty looku
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card--header"
             id="standard-card--header"
           />
@@ -78,13 +78,13 @@ exports[`Related publications Component  should render component 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -146,13 +146,13 @@ exports[`Related publications Component  should render with a publication title 
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-a-test-title-header"
             id="standard-card-a-test-title-header"
           >
@@ -225,13 +225,13 @@ exports[`Related publications Component  should render without a child search ke
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >
@@ -293,13 +293,13 @@ exports[`Related publications Component  should render without a parent search k
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-title-header"
             id="standard-card-title-header"
           >

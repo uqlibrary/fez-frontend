@@ -9,13 +9,13 @@ exports[`StandardCard component renders given ID for standard card 1`] = `
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+      class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="test-card-header"
           id="test-card-header"
         >
@@ -42,13 +42,13 @@ exports[`StandardCard component renders with custom colours and full height 1`] 
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-1qohkyl-MuiCardHeader-root"
+      class="MuiCardHeader-root css-1ycmlp9-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -75,13 +75,13 @@ exports[`StandardCard component renders with no title 1`] = `
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+      class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="standard-card--header"
           id="standard-card--header"
         />
@@ -106,13 +106,13 @@ exports[`StandardCard component renders with small title and as a subcard 1`] = 
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+      class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -139,13 +139,13 @@ exports[`StandardCard component renders with square top and accent header 1`] = 
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-ytgj3m-MuiCardHeader-root"
+      class="MuiCardHeader-root css-1kb8iks-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -172,13 +172,13 @@ exports[`StandardCard component renders with title and help button 1`] = `
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+      class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -234,13 +234,13 @@ exports[`StandardCard component renders with title and no help icon 1`] = `
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+      class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >

@@ -15,13 +15,13 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -52,7 +52,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -150,13 +150,13 @@ exports[`SecurityCard component should mount with default props for a collection
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -258,7 +258,7 @@ exports[`SecurityCard component should mount with default props for a collection
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Current collection level security policy details
@@ -368,7 +368,7 @@ exports[`SecurityCard component should mount with default props for a collection
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     <span>
@@ -422,13 +422,13 @@ exports[`SecurityCard component should mount with default props for a record 1`]
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -459,7 +459,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -548,13 +548,13 @@ exports[`SecurityCard component should mount with default props for a record 1`]
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -585,7 +585,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -628,7 +628,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -748,13 +748,13 @@ exports[`SecurityCard component should not render data stream security selector 
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -785,7 +785,7 @@ exports[`SecurityCard component should not render data stream security selector 
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -883,13 +883,13 @@ exports[`SecurityCard component should render security card correctly for collec
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -992,7 +992,7 @@ exports[`SecurityCard component should render security card correctly for collec
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Current collection level security policy details
@@ -1103,7 +1103,7 @@ exports[`SecurityCard component should render security card correctly for collec
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     <span>
@@ -1157,13 +1157,13 @@ exports[`SecurityCard component should render security card correctly for commun
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1265,7 +1265,7 @@ exports[`SecurityCard component should render security card correctly for commun
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected community record security policy details
@@ -1313,13 +1313,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1350,7 +1350,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -1439,13 +1439,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -1476,7 +1476,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -1519,7 +1519,7 @@ exports[`SecurityCard component should render security card correctly for record
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -1639,13 +1639,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1676,7 +1676,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -1831,7 +1831,7 @@ exports[`SecurityCard component should render security card correctly for record
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected work level security policy details
@@ -1870,13 +1870,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -1907,7 +1907,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -1950,7 +1950,7 @@ exports[`SecurityCard component should render security card correctly for record
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -2070,13 +2070,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -2107,7 +2107,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -2266,7 +2266,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected work level security policy details
@@ -2305,13 +2305,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -2342,7 +2342,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -2385,7 +2385,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -2506,13 +2506,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -2543,7 +2543,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -2702,7 +2702,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected work level security policy details
@@ -2741,13 +2741,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -2778,7 +2778,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -2821,7 +2821,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>

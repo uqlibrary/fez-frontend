@@ -25,7 +25,7 @@ exports[`AdminContainer component should render default view 1`] = `
             style="margin-bottom: 12px;"
           >
             <h2
-              class="MuiTypography-root MuiTypography-h2 css-89ki3o-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h2 css-12iqeby-MuiTypography-root"
               style="font-size: 18px; font-weight: 400;"
             >
               Edit Working Paper - My UQ eSpace - Instructions for depositing, checking and claiming publications: UQ:252236
@@ -168,13 +168,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="admin-section-header"
                     id="admin-section-header"
                   >
@@ -861,13 +861,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1310,7 +1310,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -2503,7 +2503,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -3210,13 +3210,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="authors-section-header"
                     id="authors-section-header"
                   >
@@ -4379,13 +4379,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="identifiers-section-header"
                     id="identifiers-section-header"
                   >
@@ -4649,13 +4649,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="grants-section-header"
                     id="grants-section-header"
                   >
@@ -4889,13 +4889,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="related-services-section-header"
                     id="related-services-section-header"
                   >
@@ -5383,13 +5383,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="notes-section-header"
                     id="notes-section-header"
                   >
@@ -5924,7 +5924,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -6470,7 +6470,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -6602,13 +6602,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="files-section-header"
                     id="files-section-header"
                   >
@@ -6638,13 +6638,13 @@ exports[`AdminContainer component should render default view 1`] = `
                         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                       >
                         <div
-                          class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
                         >
                           <div
                             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                           >
                             <h4
-                              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                               data-testid="standard-card-attached-files-header"
                               id="standard-card-attached-files-header"
                             >
@@ -8390,7 +8390,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -8620,13 +8620,13 @@ exports[`AdminContainer component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-u5e9i2-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ynzrhe-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-kkpvyw-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
                     data-testid="security-section-header"
                     id="security-section-header"
                   >
@@ -8653,13 +8653,13 @@ exports[`AdminContainer component should render default view 1`] = `
                       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                     >
                       <div
-                        class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+                        class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
                       >
                         <div
                           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                         >
                           <h4
-                            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                             data-testid="record-security-card-header"
                             id="record-security-card-header"
                           >
@@ -8690,7 +8690,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                                 style="margin-top: -8px;"
                               >
                                 Inherited security policy details
@@ -8806,13 +8806,13 @@ exports[`AdminContainer component should render default view 1`] = `
                       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                     >
                       <div
-                        class="MuiCardHeader-root css-17395w1-MuiCardHeader-root"
+                        class="MuiCardHeader-root css-1rehsit-MuiCardHeader-root"
                       >
                         <div
                           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                         >
                           <h4
-                            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                             data-testid="datastream-security-card-header"
                             id="datastream-security-card-header"
                           >
@@ -8843,7 +8843,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                                 style="margin-top: -8px;"
                               >
                                 Inherited datastream security policy details
@@ -8913,7 +8913,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                             >
                               Override datastream security policy details
                             </h6>
@@ -9712,7 +9712,7 @@ exports[`AdminContainer component should render loading record view 1`] = `
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
@@ -9736,7 +9736,7 @@ exports[`AdminContainer component should render record not found view 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -9796,7 +9796,7 @@ exports[`AdminContainer component should render work not found if record is not 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"

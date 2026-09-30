@@ -24,7 +24,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 Oral Presentations – Thursday 11 July 2019
               </h6>
@@ -294,7 +294,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -627,7 +627,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -782,7 +782,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -936,7 +936,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1164,7 +1164,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1411,7 +1411,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1676,7 +1676,7 @@ exports[`PublicationCitation  should render component with default item with ima
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2027,7 +2027,7 @@ exports[`PublicationCitation  should render component with default item with ima
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2341,7 +2341,7 @@ exports[`PublicationCitation  should render component with default item without 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2655,7 +2655,7 @@ exports[`PublicationCitation  should render component with default item without 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </h6>
@@ -2878,7 +2878,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3002,7 +3002,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3230,7 +3230,7 @@ exports[`PublicationCitation  should render component with default list hiding t
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3458,7 +3458,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3693,7 +3693,7 @@ exports[`PublicationCitation  should render component with publication from mult
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4245,7 +4245,7 @@ exports[`PublicationCitation  should render component without image if whitelist
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4559,7 +4559,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4807,7 +4807,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4842,7 +4842,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                       class="fez-icon altmetric xxxlarge"
                     />
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
                     >
                       23
                     </h6>
@@ -4851,7 +4851,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                     class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 difference css-1jezqi0-MuiTypography-root"
                       title="Difference in social media activities"
                     >
                       +
@@ -5079,7 +5079,7 @@ exports[`PublicationCitation  should render publication citation metric without 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -5111,7 +5111,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                     class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 count css-1jezqi0-MuiTypography-root"
                     >
                       23
                     </h6>
@@ -5120,7 +5120,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                     class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h6 difference css-1jezqi0-MuiTypography-root"
                       title="Difference in social media activities"
                     >
                       +
@@ -5348,7 +5348,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               style="min-width: 1px;"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
               >
                 <a
                   data-discover="true"

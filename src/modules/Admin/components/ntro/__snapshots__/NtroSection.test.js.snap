@@ -650,7 +650,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -1526,7 +1526,7 @@ exports[`NtroSection component should render default view 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -2402,7 +2402,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -3292,7 +3292,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-1tgcem7-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-yb6p4b-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"

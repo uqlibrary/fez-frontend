@@ -19,7 +19,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -47,13 +47,13 @@ exports[`Component DeleteRecord should render delete record form with data colle
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -89,7 +89,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -309,13 +309,13 @@ exports[`Component DeleteRecord should render delete record form with data colle
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -394,13 +394,13 @@ exports[`Component DeleteRecord should render delete record form with data colle
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -471,13 +471,13 @@ exports[`Component DeleteRecord should render delete record form with data colle
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -969,7 +969,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -1053,7 +1053,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1081,13 +1081,13 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-work-deleted-header"
                     id="standard-card-work-deleted-header"
                   >
@@ -1123,7 +1123,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -1343,13 +1343,13 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1428,13 +1428,13 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1505,13 +1505,13 @@ exports[`Component DeleteRecord should render delete record form with deleted da
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2003,7 +2003,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1tgcem7-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-yb6p4b-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -2087,7 +2087,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2115,13 +2115,13 @@ exports[`Component DeleteRecord should render delete record form with deleted re
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-work-deleted-header"
                     id="standard-card-work-deleted-header"
                   >
@@ -2157,7 +2157,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -2375,13 +2375,13 @@ exports[`Component DeleteRecord should render delete record form with deleted re
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
