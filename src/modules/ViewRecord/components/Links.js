@@ -24,6 +24,8 @@ export const isDataTeamCollection = publication =>
     });
 
 const Links = ({ publication, isAdmin }) => {
+    console.log('publication', publication);
+    console.log('fez_record_search_key_link', publication.fez_record_search_key_link);
     const [state, setState] = useState({ isOpen: false, link: undefined, licence: undefined });
 
     const openRdmDownloadUrl = url => {
@@ -259,6 +261,36 @@ const Links = ({ publication, isAdmin }) => {
         return null;
     }
 
+    const resultLinks = [
+        // If publication has a PubMedCentral Id - display link, should be always OA
+        pubmedCentralId && {
+            linkId: 'rek-pubmed-central-id',
+            ...getPMCLink(pubmedCentralId, pmcOpenAccessStatus),
+        },
+
+        // If publication has a DOI - display a link, should be OA or OA with a date
+        doi && {
+            linkId: 'rek-doi',
+            ...getDOILink(doi, doiOpenAccessStatus),
+        },
+
+        // If publication has OA status of "Link (no DOI)" and has no actual links of its own,
+        // then produce a Google Scholar link for the publication title
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+            publication.fez_record_search_key_link?.length === 0 && {
+                linkId: 'rek-title',
+                ...getGoogleScholarLink(publication.rek_title, gcOpenAccessStatus),
+            },
+
+        ...(hasLinks
+            ? publication.fez_record_search_key_link.map((item, index) => ({
+                  linkId: `rek-link-${index}`,
+                  ...getPublicationLink(item, index, isLinkNoDoi),
+              }))
+            : []),
+    ].filter(Boolean);
+    console.log('uniqueLinks', resultLinks);
+
     return (
         <Grid size={12}>
             <ConfirmationBox
@@ -268,6 +300,7 @@ const Links = ({ publication, isAdmin }) => {
                 onClose={() => setState({ isOpen: false, link: undefined })}
                 locale={state.licence}
             />
+
             <StandardCard title={txt.title}>
                 <Grid
                     container
@@ -287,16 +320,12 @@ const Links = ({ publication, isAdmin }) => {
                         }),
                     ]}
                 >
-                    <Grid
-                        data-testid="link-label"
-                        size={{
-                            sm: 6,
-                        }}
-                    >
+                    <Grid data-testid="link-label" size={{ sm: 6 }}>
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.link}
                         </Typography>
                     </Grid>
+
                     <Grid
                         data-testid="description-label"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
@@ -306,47 +335,17 @@ const Links = ({ publication, isAdmin }) => {
                             {txt.headerTitles.description}
                         </Typography>
                     </Grid>
-                    <Grid
-                        data-testid="oa-status-label"
-                        size={{
-                            sm: 2,
-                        }}
-                    >
+
+                    <Grid data-testid="oa-status-label" size={{ sm: 2 }}>
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.oaStatus}
                         </Typography>
                     </Grid>
                 </Grid>
-                {
-                    // if publication has a PubMedCentral Id - display link, should be always OA
-                    !!pubmedCentralId && (
-                        <LinkRow linkId="rek-pubmed-central-id" {...getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />
-                    )
-                }
-                {
-                    // if publication has a DOI - display a link, should be OA or OA with a date
-                    !!doi && <LinkRow linkId="rek-doi" {...getDOILink(doi, doiOpenAccessStatus)} />
-                }
-                {
-                    // publication has OA status of "Link (no DOI)" and has no actual links of its own
-                    // then produce a google scholar link for the publication title
-                    openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
-                        publication.fez_record_search_key_link &&
-                        publication.fez_record_search_key_link.length === 0 && (
-                            <LinkRow
-                                linkId="rek-title"
-                                {...getGoogleScholarLink(publication.rek_title, gcOpenAccessStatus)}
-                            />
-                        )
-                }
-                {hasLinks &&
-                    publication.fez_record_search_key_link.map((item, index) => (
-                        <LinkRow
-                            linkId={`rek-link-${index}`}
-                            {...getPublicationLink(item, index, isLinkNoDoi)}
-                            key={index}
-                        />
-                    ))}
+
+                {resultLinks.map(link => (
+                    <LinkRow {...link} />
+                ))}
             </StandardCard>
         </Grid>
     );
