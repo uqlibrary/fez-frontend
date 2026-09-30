@@ -351,8 +351,8 @@ const Links = ({ publication, isAdmin }) => {
                     </Grid>
                 </Grid>
 
-                {resultLinks.map(link => (
-                    <LinkRow {...link} />
+                {resultLinks.map(item => (
+                    <LinkRow key={item.index} {...item} />
                 ))}
             </StandardCard>
         </Grid>
