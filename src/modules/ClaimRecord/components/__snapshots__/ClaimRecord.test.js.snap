@@ -22,7 +22,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -50,13 +50,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -92,7 +92,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                             </h6>
@@ -327,13 +327,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -439,13 +439,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -573,13 +573,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -755,7 +755,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -783,13 +783,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -825,7 +825,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               Data collection mock testing record
                             </h6>
@@ -960,13 +960,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -1059,13 +1059,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-editor-linking-header"
                     id="standard-card-editor-linking-header"
                   >
@@ -1158,13 +1158,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -1270,13 +1270,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -1452,7 +1452,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1480,13 +1480,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -1522,7 +1522,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                             </h6>
@@ -1750,13 +1750,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -1849,13 +1849,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -1961,13 +1961,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -2095,13 +2095,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -2277,7 +2277,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2305,13 +2305,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -2347,7 +2347,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               Data collection mock testing record
                             </h6>
@@ -2475,13 +2475,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-editor-linking-header"
                     id="standard-card-editor-linking-header"
                   >
@@ -2574,13 +2574,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -2686,13 +2686,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -2868,7 +2868,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2896,13 +2896,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -2938,7 +2938,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -3243,13 +3243,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -3741,13 +3741,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -3853,13 +3853,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -3987,13 +3987,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -4169,7 +4169,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -4197,13 +4197,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -4239,7 +4239,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -4561,13 +4561,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -5059,13 +5059,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -5171,13 +5171,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -5302,13 +5302,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -5484,7 +5484,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -5512,13 +5512,13 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -5554,7 +5554,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -5883,7 +5883,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -5911,13 +5911,13 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -5953,7 +5953,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -6379,7 +6379,7 @@ exports[`Component ClaimRecord  snapshots should show the loader 1`] = `
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Loading work to claim

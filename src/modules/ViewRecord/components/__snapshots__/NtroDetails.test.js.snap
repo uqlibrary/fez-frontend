@@ -12,13 +12,13 @@ exports[`NtroDetails  does not render the abstract at all 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -437,13 +437,13 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -899,13 +899,13 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -1394,13 +1394,13 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -1879,13 +1879,13 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -2364,13 +2364,13 @@ exports[`NtroDetails  renders component as expected 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -2820,13 +2820,13 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -3274,13 +3274,13 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -3693,13 +3693,13 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -4149,13 +4149,13 @@ exports[`NtroDetails  renders minor significance as an admin 2`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -4733,13 +4733,13 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -5249,13 +5249,13 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -5705,13 +5705,13 @@ exports[`NtroDetails  should render component with record 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -6322,13 +6322,13 @@ exports[`NtroDetails  should render default fields for record with missing looku
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >
@@ -6649,13 +6649,13 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
             data-testid="standard-card-non-traditional-research-output-metadata-header"
             id="standard-card-non-traditional-research-output-metadata-header"
           >

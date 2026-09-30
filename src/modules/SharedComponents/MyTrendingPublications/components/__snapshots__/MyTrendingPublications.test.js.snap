@@ -55,7 +55,7 @@ exports[`Component MyTrendingPublications should render loading indicator 1`] = 
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading your trending works
@@ -87,7 +87,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
           >
             <div
               class="fez-icon scopus xxlarge"
@@ -159,7 +159,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -191,7 +191,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-1jezqi0-MuiTypography-root"
                               >
                                 13
                               </h6>
@@ -200,7 +200,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-1jezqi0-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
@@ -436,7 +436,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
           >
             <div
               class="fez-icon thomson xxlarge"
@@ -508,7 +508,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -540,7 +540,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-1jezqi0-MuiTypography-root"
                               >
                                 83
                               </h6>
@@ -549,7 +549,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-1jezqi0-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
@@ -800,7 +800,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1k6k35g-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -872,7 +872,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -904,7 +904,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 count css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 count css-1jezqi0-MuiTypography-root"
                               >
                                 5
                               </h6>
@@ -913,7 +913,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-1jezqi0-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +

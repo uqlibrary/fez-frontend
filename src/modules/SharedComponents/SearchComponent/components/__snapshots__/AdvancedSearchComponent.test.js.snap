@@ -19,7 +19,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
           style="flex-grow: 1; width: 1px;"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
           >
             Advanced search
           </h5>

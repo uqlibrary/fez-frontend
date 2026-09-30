@@ -9,7 +9,7 @@ exports[`MyRecords test gets publications when user clicks back and state is not
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -36,13 +36,13 @@ exports[`MyRecords test gets publications when user clicks back and state is not
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-no-works-found-header"
                   id="standard-card-no-works-found-header"
                 >
@@ -90,7 +90,7 @@ exports[`MyRecords test gets publications when user clicks back and state is set
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -117,13 +117,13 @@ exports[`MyRecords test gets publications when user clicks back and state is set
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-no-works-found-header"
                   id="standard-card-no-works-found-header"
                 >
@@ -171,7 +171,7 @@ exports[`MyRecords test renders active filters 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -198,13 +198,13 @@ exports[`MyRecords test renders active filters 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-no-works-found-header"
                   id="standard-card-no-works-found-header"
                 >
@@ -247,7 +247,7 @@ exports[`MyRecords test renders active filters 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
             >
               <div
-                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1r6qgwy-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
               >
                 Refine results
               </div>
@@ -285,7 +285,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -683,7 +683,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                                 >
                                   <a
                                     data-discover="true"
@@ -940,7 +940,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1338,7 +1338,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                                 >
                                   <a
                                     data-discover="true"
@@ -1595,7 +1595,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1993,7 +1993,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                                 >
                                   <a
                                     data-discover="true"
@@ -2245,7 +2245,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
             >
               <div
-                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1r6qgwy-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
               >
                 Refine results
               </div>
@@ -2432,7 +2432,7 @@ exports[`MyRecords test renders loading screen while export publications loading
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2703,7 +2703,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                           style="text-align: center;"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                             style="font-size: 1.33rem;"
                           >
                             Exporting your works
@@ -2745,7 +2745,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2804,7 +2804,7 @@ exports[`MyRecords test renders loading screen while loading publications  1`] =
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Searching for your works
@@ -2831,7 +2831,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -3102,7 +3102,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                           style="text-align: center;"
                         >
                           <span
-                            class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                             style="font-size: 1.33rem;"
                           >
                             Retrieving your works
@@ -3142,7 +3142,7 @@ exports[`MyRecords test renders loading screen while pub loading 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -3201,7 +3201,7 @@ exports[`MyRecords test renders loading screen while pub loading 1`] = `
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Searching for your works
@@ -3228,7 +3228,7 @@ exports[`MyRecords test renders no results 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -3255,13 +3255,13 @@ exports[`MyRecords test renders no results 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                   data-testid="standard-card-no-works-found-header"
                   id="standard-card-no-works-found-header"
                 >

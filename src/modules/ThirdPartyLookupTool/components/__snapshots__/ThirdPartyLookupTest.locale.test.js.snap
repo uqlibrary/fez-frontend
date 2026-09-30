@@ -9,7 +9,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -36,7 +36,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -58,13 +58,13 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-iah6ku-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
                 >
                   <div
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-33levu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                       data-testid="standard-card-results-header"
                       id="standard-card-results-header"
                     >
@@ -111,7 +111,7 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -164,7 +164,7 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading
@@ -189,7 +189,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -229,7 +229,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                   style="flex-grow: 1; width: 1px;"
                 >
                   <h5
-                    class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
                   >
                     Incites
                   </h5>
@@ -339,7 +339,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-12t18e8-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -379,7 +379,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                   style="flex-grow: 1; width: 1px;"
                 >
                   <h5
-                    class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
                   >
                     Incites
                   </h5>

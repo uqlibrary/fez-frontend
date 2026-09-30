@@ -29,7 +29,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -493,7 +493,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -681,7 +681,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -843,7 +843,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -1008,7 +1008,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -1459,7 +1459,7 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
               style="text-align: center;"
             >
               <span
-                class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
                 style="font-size: 1.33rem;"
               >
                 Loading your latest works
@@ -1516,7 +1516,7 @@ exports[`Component MyLatestPublications should render loading indicator 1`] = `
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading your latest works

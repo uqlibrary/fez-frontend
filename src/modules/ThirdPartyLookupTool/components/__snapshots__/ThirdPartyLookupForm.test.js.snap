@@ -28,7 +28,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 Test Form
               </h5>
@@ -92,7 +92,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 Incites
               </h5>
@@ -195,7 +195,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 Test Form
               </h5>
@@ -320,7 +320,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 Test Form
               </h5>
@@ -384,7 +384,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 Test Form
               </h5>
@@ -509,7 +509,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 Test Form
               </h5>
@@ -573,7 +573,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 this form
               </h5>
@@ -700,7 +700,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
               style="flex-grow: 1; width: 1px;"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-1ohgz69-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
               >
                 this form
               </h5>

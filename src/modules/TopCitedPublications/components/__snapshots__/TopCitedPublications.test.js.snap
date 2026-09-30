@@ -50,7 +50,7 @@ exports[`Component TopCitedPublications should render loading indicator 1`] = `
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-170zr2h-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading trending works
@@ -142,7 +142,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1r6qgwy-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-15ej3kz-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -212,7 +212,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -244,7 +244,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-1jezqi0-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
@@ -600,7 +600,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <h6
-            class="MuiTypography-root MuiTypography-h6 css-1r6qgwy-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-15ej3kz-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
@@ -670,7 +670,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1szwa7r-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -702,7 +702,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                               class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 difference css-kkpvyw-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 difference css-1jezqi0-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
