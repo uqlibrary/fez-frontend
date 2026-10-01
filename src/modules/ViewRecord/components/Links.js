@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
+import localeGlobal from 'locale/global';
 import { openAccessConfig, viewRecordsConfig } from 'config';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, dataTeamCollections } from 'config/general';
 import componentsLocale from 'locale/components';
@@ -97,7 +98,7 @@ const Links = ({ publication, isAdmin }) => {
     };
 
     const getPMCLink = (pubmedCentralId, openAccessStatus) => {
-        const href = locale.global.pubmedCentralLink.externalUrl.replace('[id]', pubmedCentralId);
+        const href = localeGlobal.global.pubmedCentralLink.externalUrl.replace('[id]', pubmedCentralId);
         return {
             index: 'pmc',
             dedup: href,
