@@ -7,6 +7,7 @@ import { exportJournals } from 'actions/journals';
 import { pathConfig } from 'config';
 import { getDefaultOperand } from 'helpers/journalSearch';
 import { JOURNAL_SEARCH_OPERANDS } from 'config/general';
+import _ from 'lodash';
 
 export const isValidKeyword = keyword =>
     typeof keyword === 'object' && keyword.id && keyword.type && keyword.text && keyword.operand
@@ -14,9 +15,7 @@ export const isValidKeyword = keyword =>
         : true;
 
 export const filterNonValidKeywords = keywords => {
-    if (typeof keywords !== 'object') {
-        return {};
-    }
+    if (!_.isObject(keywords)) return {};
     return Object.keys(keywords)
         .filter(name => {
             return isValidKeyword(keywords[name]);
@@ -165,6 +164,7 @@ export const buildJournalSearchQueryParams = (search, facetFilters, rangeFilters
 export const useJournalSearch = (path = pathConfig.journals.search) => {
     const navigate = useNavigate();
     const location = useLocation();
+    const lastRequestedSearch = React.useRef(location.search?.substr(1));
     const searchQueryParams = deparam(location.search?.substr(1));
     searchQueryParams.keywords = filterNonValidKeywords(searchQueryParams.keywords);
 
@@ -181,7 +181,13 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     );
 
     const handleSearch = (searchQuery, state = {}) => {
-        navigate({ pathname: path, search: param(searchQuery) }, { state: state });
+        const targetSearch = param(searchQuery);
+
+        // bail on dup search request
+        if (targetSearch === lastRequestedSearch.current) return;
+        lastRequestedSearch.current = targetSearch;
+
+        navigate({ pathname: path, search: targetSearch }, { state });
     };
 
     return {

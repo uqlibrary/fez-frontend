@@ -1,5 +1,14 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter, createMatchMedia, within } from 'test-utils';
+import {
+    act,
+    fireEvent,
+    render as defaultRender,
+    WithReduxStore,
+    WithRouter,
+    createMatchMedia,
+    within,
+    waitFor,
+} from 'test-utils';
 import { pathConfig } from 'config';
 import * as actions from 'actions/journals.js';
 import * as searchJournalHooks from '../hooks';
@@ -7,20 +16,19 @@ import * as searchJournalHooks from '../hooks';
 import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
 
 import SearchJournals, { areKeywordsDifferent } from './SearchJournals';
-import {
-    mockData,
-    mockDataWithFilterFacetsAndPagination,
-} from 'mock/data/testing/journals/journalSearchResults';
+import { mockData, mockDataWithFilterFacetsAndPagination } from 'mock/data/testing/journals/journalSearchResults';
 
 const mockUseNavigate = jest.fn();
+const mockUseLocation = jest.fn(jest.requireActual('react-router').useLocation);
 jest.mock('react-router', () => ({
     ...jest.requireActual('react-router'),
     useNavigate: () => mockUseNavigate,
+    useLocation: () => mockUseLocation(),
 }));
 
 window.dataLayer = { push: jest.fn() };
 
-const setup = ({ state = {}, storeState = {}, route = '/', initialEntries = [route] } = {}) => {
+const setup = ({ state = {}, storeState = {}, route = '/', initialEntries = [route] } = {}, render = defaultRender) => {
     return render(
         <WithReduxStore
             initialState={{
@@ -37,12 +45,22 @@ const setup = ({ state = {}, storeState = {}, route = '/', initialEntries = [rou
                 <SearchJournals {...state} />
             </WithRouter>
         </WithReduxStore>,
+        render === defaultRender ? undefined : undefined,
     );
 };
 
 describe('SearchJournals', () => {
+    const keywordSearch = (...names) =>
+        `?${names
+            .map(
+                n =>
+                    `keywords%5BKeyword-${n}%5D%5Btype%5D=Keyword&keywords%5BKeyword-${n}%5D%5Btext%5D=${n}&keywords%5BKeyword-${n}%5D%5Bid%5D=Keyword-${n}&keywords%5BKeyword-${n}%5D%5Boperand%5D=AND`,
+            )
+            .join('&')}`;
+
     afterEach(() => {
-        mockUseNavigate.mockClear();
+        jest.clearAllMocks();
+        jest.useRealTimers();
     });
 
     it('should render', () => {
@@ -289,10 +307,146 @@ describe('SearchJournals', () => {
         );
     });
 
-    it('should clear state on dismount', () => {
-        const spy = jest.spyOn(actions, 'clearJournalSearchKeywords');
-        const { unmount } = setup();
-        unmount();
-        expect(spy).toHaveBeenCalledTimes(1);
+    describe('unmount', () => {
+        it('should not dispatch clearJournalSearchKeywords on unmount', () => {
+            const clearSpy = jest.spyOn(actions, 'clearJournalSearchKeywords');
+            mockUseLocation.mockReturnValue({ pathname: '/', search: '' });
+            const { unmount } = setup();
+
+            clearSpy.mockClear();
+            unmount();
+
+            expect(clearSpy).not.toHaveBeenCalled();
+        });
+
+        it('should cancel a pending delayed search on unmount', () => {
+            jest.useFakeTimers();
+            const searchJournalsSpy = jest.spyOn(actions, 'searchJournals');
+            mockUseLocation.mockReturnValue({ pathname: '/', search: keywordSearch('bioscience', 'biochemistry') });
+
+            const { getByTestId, rerender, unmount } = setup({
+                state: { journalsListLoaded: true, journalsList: mockData },
+            });
+
+            act(() => {
+                jest.advanceTimersByTime(0);
+            });
+            expect(searchJournalsSpy).toHaveBeenCalled();
+            searchJournalsSpy.mockClear();
+
+            // deleting a schedules a search delayed by 1200ms
+            fireEvent.click(getByTestId('journal-search-chip-keyword-biochemistry').querySelector('svg'));
+            mockUseLocation.mockReturnValue({ pathname: '/', search: keywordSearch('bioscience') });
+            setup({ state: { journalsListLoaded: true, journalsList: mockData } }, rerender);
+            unmount();
+            act(() => {
+                jest.advanceTimersByTime(1500);
+            });
+
+            expect(searchJournalsSpy).not.toHaveBeenCalled();
+        });
+    });
+
+    describe('on navigation', () => {
+        it('should return to the keyword search after Browse All Journals then browser back', async () => {
+            const searchJournalsSpy = jest.spyOn(actions, 'searchJournals');
+            const bioscienceSearch =
+                '?keywords%5BKeyword-bioscience%5D%5Btype%5D=Keyword&keywords%5BKeyword-bioscience%5D%5Btext%5D=bioscience&keywords%5BKeyword-bioscience%5D%5Bid%5D=Keyword-bioscience&keywords%5BKeyword-bioscience%5D%5Boperand%5D=AND';
+            const allJournalsSearch =
+                '?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND';
+
+            mockUseLocation.mockReturnValue({ pathname: '/', search: bioscienceSearch });
+            const { rerender } = setup({ state: { journalsListLoaded: true, journalsList: mockData } });
+
+            await waitFor(() =>
+                expect(searchJournalsSpy).toHaveBeenCalledWith(
+                    expect.objectContaining({
+                        keywords: expect.objectContaining({ 'Keyword-bioscience': expect.anything() }),
+                    }),
+                ),
+            );
+            searchJournalsSpy.mockClear();
+
+            // Browse All Journals clicked - app navigates, URL becomes the all-journals URL
+            mockUseLocation.mockReturnValue({ pathname: '/', search: allJournalsSearch });
+            setup({ state: { journalsListLoaded: true, journalsList: mockData } }, rerender);
+
+            await waitFor(() =>
+                expect(searchJournalsSpy).toHaveBeenCalledWith(
+                    expect.not.objectContaining({ keywords: expect.anything() }),
+                ),
+            );
+            searchJournalsSpy.mockClear();
+
+            // browser Back - URL reverts to the bioscience search
+            mockUseLocation.mockReturnValue({ pathname: '/', search: bioscienceSearch });
+            setup({ state: { journalsListLoaded: true, journalsList: mockData } }, rerender);
+
+            await waitFor(() =>
+                expect(searchJournalsSpy).toHaveBeenCalledWith(
+                    expect.objectContaining({
+                        keywords: expect.objectContaining({ 'Keyword-bioscience': expect.anything() }),
+                    }),
+                ),
+            );
+        });
+
+        it('should sync selected keywords from a URL change (e.g. browser back/forward) without calling navigate', () => {
+            mockUseLocation.mockReturnValue({ pathname: '/', search: keywordSearch('bioscience') });
+            const { rerender } = setup({ state: { journalsListLoaded: true, journalsList: mockData } });
+            mockUseNavigate.mockClear();
+
+            // e.g. browser back/forward
+            mockUseLocation.mockReturnValue({ pathname: '/', search: keywordSearch('biochemistry') });
+            setup({ state: { journalsListLoaded: true, journalsList: mockData } }, rerender);
+
+            expect(mockUseNavigate).not.toHaveBeenCalled();
+        });
+
+        it('should keep the 1200ms debounce and not mutate query params after deleting a keyword with paging/sorting', () => {
+            jest.useFakeTimers();
+            // simulate a hook returning a stable params reference per query
+            const hooks = require('../hooks');
+            const originalUseJournalSearch = hooks.useJournalSearch;
+            const stableParams = {};
+            jest.spyOn(hooks, 'useJournalSearch').mockImplementation(() => {
+                const real = originalUseJournalSearch();
+                const key = JSON.stringify(real.journalSearchQueryParams);
+                stableParams[key] = stableParams[key] || real.journalSearchQueryParams;
+                return { ...real, journalSearchQueryParams: stableParams[key] };
+            });
+            const searchJournalsSpy = jest.spyOn(actions, 'searchJournals');
+            const paging = '&page=2&pageSize=50&sortBy=title&sortDirection=Asc';
+            const state = { journalsListLoaded: true, journalsList: mockData };
+
+            mockUseLocation.mockReturnValue({
+                pathname: '/',
+                search: `${keywordSearch('bioscience', 'biochemistry')}${paging}`,
+            });
+            const { getByTestId, rerender } = setup({ state });
+            act(() => {
+                jest.advanceTimersByTime(0);
+            });
+            searchJournalsSpy.mockClear();
+
+            fireEvent.click(getByTestId('journal-search-chip-keyword-biochemistry').querySelector('svg'));
+            mockUseLocation.mockReturnValue({ pathname: '/', search: `${keywordSearch('bioscience')}${paging}` });
+            setup({ state }, rerender);
+            // extra render, same URL
+            setup({ state }, rerender);
+
+            act(() => {
+                jest.advanceTimersByTime(1100);
+            });
+            expect(searchJournalsSpy).not.toHaveBeenCalled();
+
+            act(() => {
+                jest.advanceTimersByTime(200);
+            });
+            expect(searchJournalsSpy).toHaveBeenCalledTimes(1);
+            expect(searchJournalsSpy).toHaveBeenCalledWith(expect.not.objectContaining({ page: expect.anything() }));
+            // the hook's params object must not be mutated
+            Object.values(stableParams).forEach(params => expect(params).toHaveProperty('page', '2'));
+        });
     });
 });
