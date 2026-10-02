@@ -46,6 +46,8 @@ export const SearchJournals = () => {
     const fromLocationChange = React.useRef(false);
     const [showingAllJournals, setShowingAllJournals] = React.useState(isBrowsingAllJournals);
 
+    const handleKeywordAddDecorator = keyword => handleKeywordAdd(keyword, isBrowsingAllJournals);
+
     const handleKeywordDeleteDecorator = keyword => {
         handleKeywordDelete(keyword);
         if (keyword.id === KEYWORD_ALL_JOURNALS_ID) setShowingAllJournals(false);
@@ -240,7 +242,7 @@ export const SearchJournals = () => {
                         browseAllJournals={showingAllJournals}
                         {...{
                             selectedKeywords,
-                            handleKeywordAdd,
+                            handleKeywordAdd: handleKeywordAddDecorator,
                             handleKeywordUpdate,
                             hasAnySelectedKeywords,
                             showInputControls: shouldShowInputControls,
