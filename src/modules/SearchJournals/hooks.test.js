@@ -101,15 +101,32 @@ describe('hooks', () => {
         });
 
         it('should add a keyword with a generated id and default operand', () => {
-            const { result } = renderHook(() => useSelectedKeywords({}));
+            const initial = { 'author-Smith': { id: 'author-Smith', type: 'author', text: 'Smith', operand: 'AND' } };
+            const { result } = renderHook(() => useSelectedKeywords(initial));
 
             act(() => {
-                result.current.handleKeywordAdd({ type: 'author', text: 'Smith' });
+                result.current.handleKeywordAdd({ type: 'author', text: 'Jack' });
             });
 
             expect(getDefaultOperand).toHaveBeenCalledWith('author');
             expect(result.current.selectedKeywords).toEqual({
-                'author-Smith': { type: 'author', text: 'Smith', id: 'author-Smith', operand: 'AND' },
+                ...initial,
+                'author-Jack': { type: 'author', text: 'Jack', id: 'author-Jack', operand: 'AND' },
+            });
+            expect(result.current.hasAnySelectedKeywords).toBe(true);
+        });
+
+        it('should replace a keyword with a generated id and default operand', () => {
+            const initial = { 'author-Smith': { id: 'author-Smith', type: 'author', text: 'Smith', operand: 'AND' } };
+            const { result } = renderHook(() => useSelectedKeywords(initial));
+
+            act(() => {
+                result.current.handleKeywordAdd({ type: 'author', text: 'Jack' }, true);
+            });
+
+            expect(getDefaultOperand).toHaveBeenCalledWith('author');
+            expect(result.current.selectedKeywords).toEqual({
+                'author-Jack': { type: 'author', text: 'Jack', id: 'author-Jack', operand: 'AND' },
             });
             expect(result.current.hasAnySelectedKeywords).toBe(true);
         });

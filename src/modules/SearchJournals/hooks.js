@@ -36,9 +36,9 @@ export const getKeywordKey = keyword =>
 export const useSelectedKeywords = initialKeywords => {
     const [selectedKeywords, setSelectedKeywords] = React.useState(filterNonValidKeywords(initialKeywords));
 
-    const handleKeywordAdd = React.useCallback(keyword => {
+    const handleKeywordAdd = React.useCallback((keyword, replace = false) => {
         setSelectedKeywords(prevSelectedKeywords => ({
-            ...prevSelectedKeywords,
+            ...(!replace ? prevSelectedKeywords : {}),
             [getKeywordKey(keyword)]: {
                 ...keyword,
                 id: getKeywordKey(keyword),
