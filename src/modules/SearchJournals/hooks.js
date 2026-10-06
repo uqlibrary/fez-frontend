@@ -67,7 +67,7 @@ export const useSelectedKeywords = initialKeywords => {
         [],
     );
 
-    const hasAnySelectedKeywords = selectedKeywords && Object.values(selectedKeywords).length > 0;
+    const hasAnySelectedKeywords = selectedKeywords && Object.keys(selectedKeywords).length > 0;
 
     return {
         selectedKeywords,
