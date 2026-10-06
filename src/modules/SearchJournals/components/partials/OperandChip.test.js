@@ -2,14 +2,17 @@ import React from 'react';
 import { fireEvent, rtlRender, within } from 'test-utils';
 import OperandChip from './OperandChip';
 
+const defaultProps = {
+    onMenuItemClick: jest.fn(),
+    keyword: {
+        type: 'Keyword',
+        text: 'Test',
+        operand: 'AND',
+    },
+};
 function setup(props = {}, render = rtlRender) {
     const testProps = {
-        onMenuItemClick: jest.fn(),
-        keyword: {
-            type: 'Keyword',
-            text: 'Test',
-            operand: 'AND',
-        },
+        ...defaultProps,
         ...props,
     };
     return render(<OperandChip {...testProps} />, {});
@@ -19,6 +22,23 @@ describe('OperandChip', () => {
     it('should render', () => {
         const { getByTestId } = setup();
         expect(getByTestId('operand-chip-keyword-test')).toHaveTextContent('AND');
+    });
+
+    it('should update label from props updates', () => {
+        const { getByTestId, rerender } = setup();
+        expect(getByTestId('operand-chip-keyword-test')).toHaveTextContent('AND');
+
+        setup(
+            {
+                keyword: {
+                    ...defaultProps.keyword,
+                    operand: 'OR',
+                },
+            },
+            rerender,
+        );
+
+        expect(getByTestId('operand-chip-keyword-test')).toHaveTextContent('OR');
     });
 
     it('should show default operand', () => {

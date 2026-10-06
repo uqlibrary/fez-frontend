@@ -17,8 +17,8 @@ export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
 
 export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
-    const keywordsNames = Object.keys(keywords);
-    const anotherKeywordsNames = Object.keys(anotherKeywords);
+    const keywordsNames = Object.keys(keywords).map(key => `${key}-${keywords[key]?.operand}`);
+    const anotherKeywordsNames = Object.keys(anotherKeywords).map(key => `${key}-${anotherKeywords[key]?.operand}`);
     return (
         keywordsNames.filter(keyword => !anotherKeywordsNames.includes(keyword)).length > 0 ||
         anotherKeywordsNames.filter(keyword => !keywordsNames.includes(keyword)).length > 0
