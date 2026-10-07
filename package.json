@@ -248,12 +248,14 @@
     "throttle-debounce": "^5.0.0",
     "timezones.json": "^1.2.1",
     "usehooks-ts": "^3.1.1",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz",
+    "prosemirror-view": "^1.42.6"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.0"
   },
   "overrides": {
+    "prosemirror-view": "^1.42.6",
     "compression": "^1.8.2",
     "source-map-js": "^1.2.2",
     "shell-quote": "^1.12.0",
