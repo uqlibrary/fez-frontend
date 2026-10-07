@@ -1,7 +1,7 @@
 import React from 'react';
 jest.dontMock('./CitationCounts');
 import CitationCounts from './CitationCounts';
-import { myRecordsList } from 'mock/data';
+import myRecordsList from 'mock/data/records/myRecordsList';
 import { render, WithRouter } from 'test-utils';
 
 function setup(testProps = {}) {

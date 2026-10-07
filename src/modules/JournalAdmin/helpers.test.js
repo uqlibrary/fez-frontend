@@ -1,6 +1,6 @@
 import { getInitialFormValues } from './helpers';
 
-import { journalDoaj } from 'mock/data';
+import { journalDoaj } from 'mock/data/journalDoaj';
 import { ADMIN_JOURNAL } from 'config/general';
 import { adminJournalFields } from 'config/journalAdmin/fields';
 import { helpersTypicalExpected } from 'mock/data/testing/journalAdmin';

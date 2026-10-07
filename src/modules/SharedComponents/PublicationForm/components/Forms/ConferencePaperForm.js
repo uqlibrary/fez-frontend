@@ -9,17 +9,17 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { validation } from 'config';
 import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export const ConferencePaperForm = ({ control, isSubmitting }) => {
     const txt = formLocale.conferencePaper;
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -35,7 +35,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -48,7 +48,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 validate={[validation.required]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -61,7 +61,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 label={txt.information.fieldLabels.conferenceLocation}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -74,7 +74,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 label={txt.information.fieldLabels.conferenceDates}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -85,7 +85,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 label={txt.information.fieldLabels.proceedingsTitle}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -97,7 +97,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 label={txt.information.fieldLabels.journalName}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -109,7 +109,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 label={txt.information.fieldLabels.publicationPlace}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -121,7 +121,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 label={txt.information.fieldLabels.publisher}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -134,7 +134,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 {...txt.information.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -152,7 +152,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
@@ -172,7 +172,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                     <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
@@ -189,7 +189,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                     <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
@@ -207,10 +207,10 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.other.title} help={txt.other.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -222,7 +222,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -234,7 +234,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Typography>
                                 Please add any other notes for the UQ eSpace team. If there is a <b>preprint version</b>{' '}
                                 of this work, please include its details and link.
@@ -250,7 +250,7 @@ export const ConferencePaperForm = ({ control, isSubmitting }) => {
                                 label={txt.other.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

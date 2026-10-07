@@ -11,18 +11,17 @@ env:
     SENTRY_PROJECT: "/CodeBuild/fez-frontend/SENTRY_PROJECT"
 phases:
   install:
-    runtime-versions:
-      nodejs: 24
     commands:
-      - n 24.15.0
+      - sysctl fs.inotify.max_user_watches
+      - sysctl fs.inotify.max_user_watches=524288
+      - sysctl fs.inotify.max_user_watches
   pre_build:
     commands:
-      sysctl fs.inotify.max_user_watches &&
-      sysctl fs.inotify.max_user_watches=524288 &&
-      sysctl fs.inotify.max_user_watches &&
-      chmod a+x -R bin/* scripts/*.sh &&
-      bin/codebuild-git-wrapper.sh $GITHUB_URL $CI_BRANCH &&
-      bin/codebuild-setup.sh
+      - chmod a+x -R bin/* scripts/*.sh
+      - bin/codebuild-git-wrapper.sh $GITHUB_URL $CI_BRANCH
+      - node --version
+      - npm --version
+      - npm ci
   build:
     commands:
       set &&

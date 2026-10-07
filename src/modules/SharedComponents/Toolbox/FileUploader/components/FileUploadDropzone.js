@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import { useFormContext } from 'react-hook-form';
@@ -260,7 +260,7 @@ export const FileUploadDropzone = ({
 
     return (
         <Grid container>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <div tabIndex={0} {...getRootProps({ id: 'FileUploadDropZone', style: { padding: '0px' } })}>
                     <input
                         {...getInputProps({

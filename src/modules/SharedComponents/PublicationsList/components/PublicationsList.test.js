@@ -1,6 +1,6 @@
 import React from 'react';
 import PublicationsList from './PublicationsList';
-import { myRecordsList } from 'mock/data';
+import myRecordsList from 'mock/data/records/myRecordsList';
 import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
 import * as Context from 'context';
 import * as Hooks from 'hooks/userIsAdmin';

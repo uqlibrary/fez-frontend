@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
@@ -111,10 +111,10 @@ export const GrantListEditorRow = ({
     const getGrantRowText = selectedClass => {
         return (
             <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
-                <Grid item xs={12} sm={5}>
+                <Grid size={{ xs: 12, sm: 5 }}>
                     {getListItemTypoGraphy(grant.grantAgencyName, '', { ...classes.primary, ...selectedClass }, {})}
                 </Grid>
-                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid size={{ sm: 3 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {getListItemTypoGraphy(
                         `${grant.grantId}`,
                         '',
@@ -122,7 +122,7 @@ export const GrantListEditorRow = ({
                         {},
                     )}
                 </Grid>
-                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid size={{ sm: 4 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {getListItemTypoGraphy(
                         `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
                         '',
@@ -144,14 +144,12 @@ export const GrantListEditorRow = ({
         <Fragment>
             <ConfirmDialogBox onRef={setConfirmationBox} onAction={deleteRecord} locale={deleteRecordConfirmation} />
             <ListItem divider style={{ padding: '8px 0 8px 0' }} aria-label={ariaLabel}>
-                <Grid container spacing={0} data-testid={`grant-list-row-${index}`}>
-                    <Grid item xs={10} sm={11} md={9}>
-                        {getGrantRowText(selectedClass)}
-                    </Grid>
-                    <Grid item xs={2} sm={1} md={3}>
+                <Grid container spacing={0} data-testid={`grant-list-row-${index}`} sx={{ width: '100%' }}>
+                    <Grid size={{ xs: 10, sm: 11, md: 9 }}>{getGrantRowText(selectedClass)}</Grid>
+                    <Grid size={{ xs: 2, sm: 1, md: 3 }}>
                         <ListItemSecondaryAction style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}>
                             <Grid container spacing={0}>
-                                <Grid item xs={8} sx={{ textAlign: 'right', display: { xs: 'none', md: 'block' } }}>
+                                <Grid size={8} sx={{ textAlign: 'right', display: { xs: 'none', md: 'block' } }}>
                                     <Tooltip
                                         title={moveUpHint}
                                         disableFocusListener={disabled || !canMoveUp}
@@ -210,7 +208,7 @@ export const GrantListEditorRow = ({
                                         </Tooltip>
                                     )}
                                 </Grid>
-                                <Grid item xs={width === 'sm' || width === 'xs' ? 12 : 4} sx={{ textAlign: 'right' }}>
+                                <Grid size={width === 'sm' || width === 'xs' ? 12 : 4} sx={{ textAlign: 'right' }}>
                                     <Tooltip
                                         title={deleteHint}
                                         disableFocusListener={disabled}

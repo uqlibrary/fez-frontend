@@ -9,7 +9,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
@@ -198,14 +198,11 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                         sx={{ outline: 'none', flexGrow: 1, paddingTop: 0 }}
                         tabIndex={-1}
                     >
-                        <Grid
-                            container
-                            spacing={0}
-                            wrap="nowrap"
-                            alignContent="center"
-                            alignItems="center"
-                            sx={{
-                                '&.MuiGridLegacy-container': {
+                        <Grid container spacing={0} wrap="nowrap" alignContent="center" alignItems="center">
+                            <Grid
+                                size={{ xs: 10, sm: 12 }}
+                                sx={{
+                                    minWidth: 0,
                                     backgroundColor: 'primary.main',
                                     height: '70px',
                                     boxShadow:
@@ -215,10 +212,8 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                                     '& img': {
                                         maxHeight: '45px',
                                     },
-                                },
-                            }}
-                        >
-                            <Grid item xs={10} sm={12} zeroMinWidth>
+                                }}
+                            >
                                 {logoImage && logoLink && logoText && (
                                     <ExternalLink
                                         id="main-menu-logo"
@@ -236,7 +231,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                                     </ExternalLink>
                                 )}
                             </Grid>
-                            <Grid item xs={2} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <Grid size={2} sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel} size="small">
                                     <KeyboardArrowLeft sx={{ color: 'white.main' }} />
                                 </IconButton>

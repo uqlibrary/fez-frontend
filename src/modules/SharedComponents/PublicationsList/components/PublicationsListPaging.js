@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 
 import { locale } from 'locale';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import ChevronRight from '@mui/icons-material/ChevronRight';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
 import Box from '@mui/material/Box';
@@ -184,7 +184,7 @@ export class PublicationsListPaging extends Component {
                 {totalPages > 1 && (
                     <Grid container spacing={0} sx={{ flexWrap: 'nowrap', justifyContent: 'space-between' }}>
                         {currentPage >= 1 && (
-                            <Grid item xs={'auto'}>
+                            <Grid size="auto">
                                 <StyledPrevNextButton
                                     variant={'text'}
                                     className={'paging-previous'}
@@ -199,8 +199,7 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         )}
                         <Grid
-                            item
-                            sm={'auto'}
+                            size={{ sm: 'auto' }}
                             sx={{ display: { xs: 'none', sm: 'block' }, textAlign: 'center' }}
                             data-analyticsid={`${this.props.pagingId}-desktop-controls`}
                             data-testid={`${this.props.pagingId}-desktop-controls`}
@@ -213,8 +212,7 @@ export class PublicationsListPaging extends Component {
                             {paginationPages.indexOf(totalPages) === -1 && this.renderButton(totalPages)}
                         </Grid>
                         <Grid
-                            item
-                            xs
+                            size="grow"
                             sx={{ display: { xs: 'block', sm: 'none' } }}
                             data-analyticsid={`${this.props.pagingId}-mobile-controls`}
                             data-testid={`${this.props.pagingId}-mobile-controls`}
@@ -236,7 +234,7 @@ export class PublicationsListPaging extends Component {
                             </Box>
                         </Grid>
                         {currentPage <= totalPages && (
-                            <Grid item xs={'auto'}>
+                            <Grid size="auto">
                                 <StyledPrevNextButton
                                     variant={'text'}
                                     className={'paging-next'}

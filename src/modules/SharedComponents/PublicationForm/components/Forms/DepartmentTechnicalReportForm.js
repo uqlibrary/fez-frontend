@@ -11,17 +11,17 @@ import { SeriesField, ReportNumberField, OrgUnitNameField, OrgNameField } from '
 
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
     const txt = formLocale.departmentTechnicalReport;
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -38,7 +38,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={OrgUnitNameField}
@@ -48,7 +48,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={OrgNameField}
@@ -58,7 +58,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={SeriesField}
@@ -68,7 +68,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={ReportNumberField}
@@ -78,7 +78,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -91,7 +91,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 {...txt.information.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -106,7 +106,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 floatingTitleRequired
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -123,7 +123,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
@@ -143,10 +143,10 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.other.title} help={txt.other.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -159,7 +159,7 @@ export const DepartmentTechnicalReportForm = ({ control, isSubmitting }) => {
                                 {...txt.other.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

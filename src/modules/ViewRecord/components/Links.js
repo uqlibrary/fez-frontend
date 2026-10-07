@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
+import localeGlobal from 'locale/global';
 import { openAccessConfig, viewRecordsConfig } from 'config';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, dataTeamCollections } from 'config/general';
 import componentsLocale from 'locale/components';
@@ -17,6 +18,7 @@ import DoiCitationView from 'modules/SharedComponents/PublicationCitation/compon
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { getDoiURL } from '../../../helpers/general';
 
 export const isDataTeamCollection = publication =>
     dataTeamCollections.some(pid => {
@@ -49,13 +51,7 @@ const Links = ({ publication, isAdmin }) => {
                 }),
             ]}
         >
-            <Grid
-                data-testid={`${linkId}-link`}
-                size={{
-                    xs: 12,
-                    sm: 6,
-                }}
-            >
+            <Grid data-testid={`${linkId}-link`} size={{ xs: 12, sm: 6 }}>
                 <Typography variant={'body2'} component={'span'}>
                     {link}
                 </Typography>
@@ -63,10 +59,7 @@ const Links = ({ publication, isAdmin }) => {
             <Grid
                 data-analyticsid={`${linkId}-description`}
                 data-testid={`${linkId}-description`}
-                size={{
-                    xs: 11,
-                    sm: 4,
-                }}
+                size={{ xs: 11, sm: 4 }}
                 sx={{
                     whiteSpace: 'nowrap',
                     textOverflow: 'ellipsis',
@@ -77,14 +70,7 @@ const Links = ({ publication, isAdmin }) => {
                     {description}
                 </Typography>
             </Grid>
-            <Grid
-                style={{ textAlign: 'right' }}
-                data-testid={`${linkId}-oa-status`}
-                size={{
-                    xs: 1,
-                    sm: 2,
-                }}
-            >
+            <Grid style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`} size={{ xs: 1, sm: 2 }}>
                 <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: '-5px' }} />
             </Grid>
         </Grid>
@@ -97,9 +83,11 @@ const Links = ({ publication, isAdmin }) => {
     };
 
     const getDOILink = (doi, openAccessStatus) => {
+        const href = getDoiURL(doi);
         if (doi.indexOf(DOI_CROSSREF_PREFIX) === -1 && doi.indexOf(DOI_DATACITE_PREFIX) === -1) {
             return {
                 index: 'doi',
+                dedup: href,
                 link: <DoiCitationView doi={doi} />,
                 description: locale.viewRecord.sections.links.doiDescription,
                 openAccessStatus: openAccessStatus,
@@ -110,8 +98,10 @@ const Links = ({ publication, isAdmin }) => {
     };
 
     const getPMCLink = (pubmedCentralId, openAccessStatus) => {
+        const href = localeGlobal.global.pubmedCentralLink.externalUrl.replace('[id]', pubmedCentralId);
         return {
             index: 'pmc',
+            dedup: href,
             link: <PubmedCentralLink pubmedCentralId={pubmedCentralId} />,
             description: locale.viewRecord.sections.links.pubmedCentralLinkDescription,
             openAccessStatus: openAccessStatus,
@@ -119,12 +109,14 @@ const Links = ({ publication, isAdmin }) => {
     };
 
     const getGoogleScholarLink = (title, openAccessStatus) => {
+        const href = locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title);
         return {
             index: 'google',
+            dedup: href,
             link: (
                 <ExternalLink
                     id="google-scholar"
-                    href={locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title)}
+                    href={href}
                     title={locale.viewRecord.sections.links.googleScholar.linkDescription}
                 >
                     {locale.viewRecord.sections.links.googleScholar.linkPrefix
@@ -199,12 +191,14 @@ const Links = ({ publication, isAdmin }) => {
         };
 
         const licence = getDownloadLicence(publication);
+        const href = typeof window !== 'undefined' && variableLinkDetails.href;
 
         return {
             index: index,
+            dedup: href,
             link: (
                 <ExternalLink
-                    href={typeof window !== 'undefined' && variableLinkDetails.href}
+                    href={href}
                     title={variableLinkDetails.title}
                     id={`publication-${index}`}
                     openInNewIcon={variableLinkDetails.openInNew}
@@ -275,6 +269,37 @@ const Links = ({ publication, isAdmin }) => {
         return null;
     }
 
+    const resultLinks = [
+        // If publication has a PubMedCentral Id - display link, should be always OA
+        pubmedCentralId && {
+            linkId: 'rek-pubmed-central-id',
+            ...getPMCLink(pubmedCentralId, pmcOpenAccessStatus),
+        },
+
+        // If publication has a DOI - display a link, should be OA or OA with a date
+        doi && {
+            linkId: 'rek-doi',
+            ...getDOILink(doi, doiOpenAccessStatus),
+        },
+
+        // If publication has OA status of "Link (no DOI)" and has no actual links of its own,
+        // then produce a Google Scholar link for the publication title
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
+            publication.fez_record_search_key_link?.length === 0 && {
+                linkId: 'rek-title',
+                ...getGoogleScholarLink(publication.rek_title, gcOpenAccessStatus),
+            },
+
+        ...(hasLinks
+            ? publication.fez_record_search_key_link.map((item, index) => ({
+                  linkId: `rek-link-${index}`,
+                  ...getPublicationLink(item, index, isLinkNoDoi),
+              }))
+            : []),
+    ]
+        .filter(Boolean)
+        .filter((item, index, array) => index === array.findIndex(item2 => item2.dedup === item.dedup));
+
     return (
         <Grid size={12}>
             <ConfirmationBox
@@ -284,6 +309,7 @@ const Links = ({ publication, isAdmin }) => {
                 onClose={() => setState({ isOpen: false, link: undefined })}
                 locale={state.licence}
             />
+
             <StandardCard title={txt.title}>
                 <Grid
                     container
@@ -303,68 +329,32 @@ const Links = ({ publication, isAdmin }) => {
                         }),
                     ]}
                 >
-                    <Grid
-                        data-testid="link-label"
-                        size={{
-                            sm: 6,
-                        }}
-                    >
+                    <Grid data-testid="link-label" size={{ sm: 6 }}>
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.link}
                         </Typography>
                     </Grid>
+
                     <Grid
                         data-testid="description-label"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
-                        size={{
-                            sm: 4,
-                        }}
+                        size={{ sm: 4 }}
                     >
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.description}
                         </Typography>
                     </Grid>
-                    <Grid
-                        data-testid="oa-status-label"
-                        size={{
-                            sm: 2,
-                        }}
-                    >
+
+                    <Grid data-testid="oa-status-label" size={{ sm: 2 }}>
                         <Typography variant="caption" gutterBottom>
                             {txt.headerTitles.oaStatus}
                         </Typography>
                     </Grid>
                 </Grid>
-                {
-                    // if publication has a PubMedCentral Id - display link, should be always OA
-                    !!pubmedCentralId && (
-                        <LinkRow linkId="rek-pubmed-central-id" {...getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />
-                    )
-                }
-                {
-                    // if publication has a DOI - display a link, should be OA or OA with a date
-                    !!doi && <LinkRow linkId="rek-doi" {...getDOILink(doi, doiOpenAccessStatus)} />
-                }
-                {
-                    // publication has OA status of "Link (no DOI)" and has no actual links of its own
-                    // then produce a google scholar link for the publication title
-                    openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI &&
-                        publication.fez_record_search_key_link &&
-                        publication.fez_record_search_key_link.length === 0 && (
-                            <LinkRow
-                                linkId="rek-title"
-                                {...getGoogleScholarLink(publication.rek_title, gcOpenAccessStatus)}
-                            />
-                        )
-                }
-                {hasLinks &&
-                    publication.fez_record_search_key_link.map((item, index) => (
-                        <LinkRow
-                            linkId={`rek-link-${index}`}
-                            {...getPublicationLink(item, index, isLinkNoDoi)}
-                            key={index}
-                        />
-                    ))}
+
+                {resultLinks.map(item => (
+                    <LinkRow key={item.index} {...item} />
+                ))}
             </StandardCard>
         </Grid>
     );

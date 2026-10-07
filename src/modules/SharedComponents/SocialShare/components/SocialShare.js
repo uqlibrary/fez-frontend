@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
 import Avatar from '@mui/material/Avatar';
@@ -39,7 +39,7 @@ export const SocialShare = ({ publication, size = 24, spaceBetween = 4, services
                 services.map((item, index) => {
                     const Icon = locale[item].icon;
                     return (
-                        <Grid item id={item.id} key={index} style={{ marginRight: spaceBetween }}>
+                        <Grid id={item.id} key={index} style={{ marginRight: spaceBetween }}>
                             <ExternalLink
                                 {...locale[item].link}
                                 id={locale[item].id}

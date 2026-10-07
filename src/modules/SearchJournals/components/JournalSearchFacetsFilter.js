@@ -6,7 +6,7 @@ import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { useActiveFacetFilters, useJournalSearch } from '../hooks';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { isNumeric, sanitiseId } from 'helpers/general';
 
@@ -161,15 +161,13 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
     /**
      * This effect takes care of making the facets filter UI reflect updates made to the activeFacets part
      * of the querystring.
-     *
-     * The reason why using useState above is not enough can be found
-     * in here https://stackoverflow.com/a/58877875/1463121
      */
     useEffect(() => {
         if (activeFiltersQuerystringPart === prevActiveFiltersQuerystringPart.current) {
             return;
         }
 
+        prevActiveFiltersQuerystringPart.current = activeFiltersQuerystringPart;
         setActiveFacetsFilters({ ...journalSearchQueryParams.activeFacets?.filters });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeFiltersQuerystringPart]);
@@ -182,7 +180,10 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
             return;
         }
 
-        setActiveFacetsFilters({});
+        prevKeywordsQuerystringPart.current = keywordsQuerystringPart;
+        if (!Object.keys(journalSearchQueryParams.activeFacets?.filters || {}).length) {
+            setActiveFacetsFilters({});
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [keywordsQuerystringPart]);
 
@@ -283,7 +284,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
                 </List>
                 {activeFacetsFilters && Object.keys(activeFacetsFilters).length > 0 && (
                     <Grid container justifyContent="flex-end">
-                        <Grid item>
+                        <Grid>
                             <Button
                                 variant="contained"
                                 arial-label="rest facet filters"

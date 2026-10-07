@@ -8,7 +8,7 @@ import { default as record } from 'mock/data/records/record';
 import { recordWithNoAffiliationIssues } from 'mock/data/records';
 import { accounts, currentAuthor } from 'mock/data/account';
 import { useParams } from 'react-router';
-import { recordVersionLegacy } from 'mock/data';
+import { default as recordVersionLegacy } from 'mock/data/records/recordVersionLegacy';
 import locale from 'locale/pages';
 import { notFound } from 'config/routes';
 import globalLocale from 'locale/global';

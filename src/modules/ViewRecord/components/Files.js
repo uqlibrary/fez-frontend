@@ -399,20 +399,8 @@ const Files = props => {
                             padding: 0,
                         }}
                     >
-                        <Grid
-                            size={{
-                                xs: 2,
-                                sm: 1,
-                            }}
-                        >
-                            &nbsp;
-                        </Grid>
-                        <Grid
-                            data-testid="dsi-dsid-label"
-                            size={{
-                                sm: 4,
-                            }}
-                        >
+                        <Grid size={{ xs: 2, sm: 1 }}>&nbsp;</Grid>
+                        <Grid data-testid="dsi-dsid-label" size={{ sm: 4 }}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.fileName}
                             </Typography>
@@ -420,10 +408,7 @@ const Files = props => {
                         <Grid
                             data-testid="dsi-label-label"
                             sx={{ display: { xs: 'none', sm: 'block' } }}
-                            size={{
-                                sm: 6,
-                                md: 4,
-                            }}
+                            size={{ sm: 6, md: 4 }}
                         >
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.description}
@@ -432,20 +417,13 @@ const Files = props => {
                         <Grid
                             data-testid="dsi-size-label"
                             sx={{ display: { xs: 'none', md: 'block' } }}
-                            size={{
-                                md: 2,
-                            }}
+                            size={{ md: 2 }}
                         >
                             <Typography variant="caption" gutterBottom>
                                 {locale.viewRecord.sections.files.size}
                             </Typography>
                         </Grid>
-                        <Grid
-                            sx={{ display: { xs: 'none', sm: 'block' } }}
-                            size={{
-                                sm: 'grow',
-                            }}
-                        />
+                        <Grid sx={{ display: { xs: 'none', sm: 'block' } }} size={{ sm: 'grow' }} />
                     </Grid>
                 </Box>
 
@@ -472,23 +450,15 @@ const Files = props => {
                             <Grid
                                 data-analyticsid={`dsi-mimetype-${index}`}
                                 data-testid={`dsi-mimetype-${index}`}
-                                size={{
-                                    xs: 2,
-                                    sm: 1,
-                                }}
-                                sx={{
-                                    textAlign: 'center',
-                                }}
+                                size={{ xs: 2, sm: 1 }}
+                                sx={{ textAlign: 'center' }}
                             >
                                 {item.icon}
                             </Grid>
                             <Grid
                                 data-analyticsid={`dsi-dsid-${index}`}
                                 data-testid={`dsi-dsid-${index}`}
-                                size={{
-                                    xs: 8,
-                                    sm: 4,
-                                }}
+                                size={{ xs: 8, sm: 4 }}
                                 sx={{
                                     textOverflow: 'ellipsis',
                                     whiteSpace: 'nowrap',
@@ -510,10 +480,7 @@ const Files = props => {
                             </Grid>
                             <Grid
                                 data-testid={`dsi-label-${index}`}
-                                size={{
-                                    sm: 6,
-                                    md: 4,
-                                }}
+                                size={{ sm: 6, md: 4 }}
                                 sx={{
                                     textOverflow: 'ellipsis',
                                     whiteSpace: 'nowrap',
@@ -527,9 +494,7 @@ const Files = props => {
                             </Grid>
                             <Grid
                                 data-testid={`dsi-size-${index}`}
-                                size={{
-                                    md: 2,
-                                }}
+                                size={{ md: 2 }}
                                 sx={{
                                     textOverflow: 'ellipsis',
                                     whiteSpace: 'nowrap',
@@ -546,29 +511,17 @@ const Files = props => {
                                 data-analyticsid={`rek-oa-status-${index}`}
                                 data-testid={`rek-oa-status-${index}`}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
-                                size={{
-                                    sm: 'grow',
-                                }}
+                                size={{ sm: 'grow' }}
                             >
                                 <Box style={{ whiteSpace: 'nowrap' }}>
-                                    <Box
-                                        component={'span'}
-                                        sx={{
-                                            paddingRight: 1,
-                                        }}
-                                    >
+                                    <Box component={'span'} sx={{ paddingRight: 1 }}>
                                         <FileAvStateIcon
                                             state={item.avCheck?.state}
                                             checkedAt={item.avCheck?.date}
                                             id={`${item.pid}-${item.fileName}`}
                                         />
                                     </Box>
-                                    <Box
-                                        component={'span'}
-                                        sx={{
-                                            paddingRight: 1,
-                                        }}
-                                    >
+                                    <Box component={'span'} sx={{ paddingRight: 1 }}>
                                         <OpenAccessIcon
                                             {...item.openAccessStatus}
                                             securityStatus={item.securityStatus}

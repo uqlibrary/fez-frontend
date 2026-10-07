@@ -7,11 +7,12 @@ if [[ $CODE_COVERAGE_REQUIRED == false ]]; then
     exit 0
 fi
 
-# Copy output artifact test reports into common location
+# Copy output artifact test reports into common location.
+# Topology: pipes 1 and 2 run the two e2e shards (each emits coverage/playwright/coverage-final.json via
+# the istanbul ReportMerger); pipe 3 runs jest (jest + jest-serial coverage-final.json).
 mkdir -p coverage/all
 cp "${CODEBUILD_SRC_DIR_TestArtifact1}/coverage/playwright/coverage-final.json" coverage/all/playwright-1.json
 cp "${CODEBUILD_SRC_DIR_TestArtifact2}/coverage/playwright/coverage-final.json" coverage/all/playwright-2.json
-cp "${CODEBUILD_SRC_DIR_TestArtifact3}/coverage/playwright/coverage-final.json" coverage/all/playwright-3.json
 cp "${CODEBUILD_SRC_DIR_TestArtifact3}/coverage/jest/coverage-final.json" coverage/all/jest.json
 cp "${CODEBUILD_SRC_DIR_TestArtifact3}/coverage/jest-serial/coverage-final.json" coverage/all/jest-serial.json
 

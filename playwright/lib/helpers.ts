@@ -37,10 +37,19 @@ export const navToHomeFromMenu = async (
         if (!(await dialog.count())) return;
 
         const button = dialog.getByRole('button', { name: locale.confirmButtonLabel });
-        if (!(await button.count())) return;
 
-        if (await button.isVisible()) {
-            await button.click();
+        // Click "confirm" and wait for the dialog to actually close. The dialog can re-render and
+        // detach between locating and clicking the button (a race that previously left the click
+        // retrying until the 120s test timeout). Bound each click and retry until the dialog is gone.
+        for (let attempt = 0; attempt < 3; attempt++) {
+            if (!(await dialog.count())) return; // already closed
+            await button.click({ timeout: 5000 }).catch(() => {});
+            try {
+                await dialog.waitFor({ state: 'detached', timeout: 3000 });
+                return;
+            } catch {
+                // dialog still present (button re-rendered / detached mid-click) — retry
+            }
         }
     };
 

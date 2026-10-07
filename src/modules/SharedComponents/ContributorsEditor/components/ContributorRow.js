@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -243,7 +243,7 @@ export const ContributorRow = ({
                 id={`${contributorRowId}-${index}`}
                 data-testid={`${contributorRowId}-${index}`}
             >
-                <Grid container p={0} id="contributor-row">
+                <Grid container p={0} id="contributor-row" sx={{ width: '100%' }}>
                     <ListItemIcon sx={{ display: { xs: 'none', sm: 'block' }, ...selectedClass }}>
                         {getRowIcon()}
                     </ListItemIcon>

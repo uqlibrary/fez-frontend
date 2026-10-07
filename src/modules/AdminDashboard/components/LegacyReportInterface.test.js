@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, userEvent } from 'test-utils';
+import { render, userEvent, setTextField } from 'test-utils';
 
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
@@ -181,8 +181,8 @@ describe('LegacyReportInterface', () => {
 
         expect(getByRole('button', { name: 'Export report' })).toHaveAttribute('disabled'); // bindings required
 
-        await userEvent.type(getByTestId('testForm-date-from-input'), '02/04/2023');
-        await userEvent.type(getByTestId('testForm-date-to-input'), '12/04/2023');
+        setTextField(getByTestId('testForm-date-from-input'), '02/04/2023');
+        setTextField(getByTestId('testForm-date-to-input'), '12/04/2023');
 
         expect(getByRole('button', { name: 'Export report' })).not.toHaveAttribute('disabled'); // bindings required
         await userEvent.click(getByRole('button', { name: 'Export report' }));

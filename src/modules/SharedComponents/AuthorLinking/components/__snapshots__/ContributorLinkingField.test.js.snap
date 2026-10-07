@@ -4,10 +4,10 @@ exports[`Component ContributorLinkingField should render as expected 1`] = `
 <div>
   <div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item css-hi9xyf-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-dhorc6-MuiGrid-root"
       />
     </div>
   </div>

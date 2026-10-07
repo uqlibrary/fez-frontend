@@ -6,13 +6,36 @@ export COMMIT_INFO_EMAIL=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"
 export COMMIT_INFO_MESSAGE=$(git show ${CI_COMMIT_ID} --no-patch --pretty=format:"%B")
 export CI_BUILD_URL="https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend/executions/${CI_BUILD_NUMBER}"
 export TZ='Australia/Brisbane'
-export PWTEST_SHARD_WEIGHTS=36:51:13 # ENV VAR name expected by PW, please don't rename it
-export PW_SHARD_COUNT=3
+export PWTEST_SHARD_WEIGHTS=40:60 # ENV VAR name expected by PW, please don't rename it. Weight count must equal PW_SHARD_COUNT. 40:60 (not 50:50) because shard 1's tests are slower: a 50:50 count split left shard 1 ~11.9m vs shard 2 ~7.2m, so shard 1 sheds ~20% of its test count to balance duration.
+export PW_SHARD_COUNT=2
 
-# Run CC only on these branches
-# NB: These branches will require 3 pipelines to run all tests, branches not in this list require only 2.
+# Put the write-heavy test scratch on tmpfs (RAM) so it doesn't hit the slow CI disk: coverage/ (V8 raw
+# partials, deduped bundles, merged report) and TMPDIR (playwright transform cache, chromium temp, node
+# compile cache). Requires the runner to allow a tmpfs mount (privileged / CAP_SYS_ADMIN); if it can't,
+# we log and fall back to disk, never fatal. tmpfs is capped (not reserved), so it only uses RAM for
+# actual data.
+setup_ram_scratch() {
+    mkdir -p coverage
+    if mount -t tmpfs -o size=2g tmpfs "$(pwd)/coverage" 2>/dev/null; then
+        printf "RAM scratch: coverage/ on tmpfs\n"
+    else
+        printf "RAM scratch: coverage/ staying on disk (tmpfs mount unavailable, safe fallback)\n"
+    fi
+    mkdir -p /ramtmp
+    if mount -t tmpfs -o size=2g,mode=1777 tmpfs /ramtmp 2>/dev/null; then
+        export TMPDIR=/ramtmp
+        printf "RAM scratch: TMPDIR=%s on tmpfs\n" "$TMPDIR"
+    else
+        printf "RAM scratch: TMPDIR staying on disk (tmpfs mount unavailable, safe fallback)\n"
+    fi
+}
+setup_ram_scratch
+
+# Run CC only on these branches.
+# Test work is split across 3 build pipes: pipe 1 and pipe 2 run the two e2e shards (1/2 and 2/2),
+# pipe 3 runs the jest unit suite. On CC branches a later coverage pipe merges all three artifacts.
 CODE_COVERAGE_REQUIRED=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-uqlsibba-1" || $CI_BRANCH == "feature-uqclien-1" || $CI_BRANCH == "feature-marcelopm-1" || $CI_BRANCH == *"coverage"*) ]]; then
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == "feature-uqlsibba-1" || $CI_BRANCH == "feature-uqclien-1" || $CI_BRANCH == "feature-marcelopm-1" || $CI_BRANCH == "feature-uqamartl-1" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
 fi
 
@@ -67,20 +90,8 @@ function fix_coverage_report_paths() {
     sed -i.bak 's,'"$CODEBUILD_SRC_DIR"',,g' "$1"
 }
 
-function install_pw_deps() {
-    printf "\n--- \e[INSTALLING PW DEPS [STARTING AT $(date)] 1\e[0m ---\n"
-    sed -i 's|http://archive.ubuntu.com/ubuntu|http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu|g' /etc/apt/sources.list
-    sed -i 's|http://security.ubuntu.com/ubuntu|http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu|g' /etc/apt/sources.list
-    apt-get clean
-    apt-get update
-    npx playwright install chromium-headless-shell
-    npx playwright install-deps chromium-headless-shell
-    printf "\n--- \e[ENDED INSTALLING PW DEPS AT $(date)] 1\e[0m ---\n"
-}
-
 function run_pw_test_shard() {
     set -e
-    install_pw_deps
     export PW_SHARD_INDEX="$1"
 
     printf "\n--- \e[1mRUNNING E2E TESTS GROUP #${PW_SHARD_INDEX} [STARTING AT $(date)] 2\e[0m ---\n"
@@ -120,8 +131,6 @@ case "$PIPE_NUM" in
         npm run test:unit:ci:serial:nocoverage
         npm run test:unit:ci:nocoverage
     fi
-
-    run_pw_test_shard "$PIPE_NUM"
 ;;
 *)
 ;;

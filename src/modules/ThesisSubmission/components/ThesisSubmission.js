@@ -305,12 +305,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             id="rek-title"
                                         />
                                     </Grid>
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: 6,
-                                        }}
-                                    >
+                                    <Grid size={{ xs: 12, sm: 6 }}>
                                         <Field
                                             control={control}
                                             component={TextField}
@@ -325,12 +320,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                             textFieldId="rek-author"
                                         />
                                     </Grid>
-                                    <Grid
-                                        size={{
-                                            xs: 12,
-                                            sm: 6,
-                                        }}
-                                    >
+                                    <Grid size={{ xs: 12, sm: 6 }}>
                                         <Field
                                             control={control}
                                             component={ThesisSubtypeSelectField}
@@ -495,18 +485,8 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                         )}
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid
-                            size={{
-                                xs: false,
-                                sm: 'grow',
-                            }}
-                        />
-                        <Grid
-                            size={{
-                                xs: 12,
-                                sm: 'auto',
-                            }}
-                        >
+                        <Grid size={{ xs: false, sm: 'grow' }} />
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 data-testid="cancel-deposit-thesis"
                                 variant="contained"
@@ -517,12 +497,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                                 onClick={cancelSubmit}
                             />
                         </Grid>
-                        <Grid
-                            size={{
-                                xs: 12,
-                                sm: 'auto',
-                            }}
-                        >
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 type="button"
                                 variant="contained"

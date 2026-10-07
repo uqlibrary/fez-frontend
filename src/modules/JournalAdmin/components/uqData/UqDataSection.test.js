@@ -4,7 +4,7 @@ import UqDataSection from './UqDataSection';
 
 jest.mock('../../../../context');
 import { useJournalContext } from 'context';
-import { journalDoaj } from 'mock/data';
+import { journalDoaj } from 'mock/data/journalDoaj';
 import { ADMIN_JOURNAL } from 'config/general';
 
 function setup(testProps = {}, renderer = rtlRender) {

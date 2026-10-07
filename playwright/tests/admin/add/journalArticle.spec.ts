@@ -7,7 +7,7 @@ import {
     editAffiliationAndAssert,
 } from '../helpers';
 import { clickAutoSuggestion, testIdStartsWith } from '../../../lib/helpers';
-import { typeRichTextEditor, assertRichTextEditorValue } from '../../../lib/richTextEditor';
+import { typeRichTextEditor, assertRichTextEditorValue, openSpecialCharacters } from '../../../lib/richTextEditor';
 
 test.describe('As an admin,', () => {
     test('I can add a journal article', async ({ page }) => {
@@ -52,8 +52,7 @@ test.describe('As an admin,', () => {
         // Test Insert Special Characters
         const titleEditor = page.getByTestId('rek-title-container');
         await titleEditor.locator('.ProseMirror').click();
-        await titleEditor.getByRole('button', { name: 'Insert special character' }).click();
-        await expect(page.getByTestId('special-character-close-button')).toHaveCount(1);
+        await openSpecialCharacters(page, 'rek-title-container');
 
         await titleEditor.getByRole('button', { name: '🔚' }).click();
         await assertRichTextEditorValue(page, 'rek-title', 'Test title🔚');

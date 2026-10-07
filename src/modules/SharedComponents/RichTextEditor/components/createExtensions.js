@@ -38,7 +38,9 @@ export const createExtensions = ({ singleLine = false, preservePasteFormatting =
         openOnClick: false,
     }),
 
-    ...(!singleLine ? [ListItem, BulletList, OrderedList, HardBreak] : []),
+    ...(!singleLine ? [ListItem, BulletList, OrderedList] : []),
+
+    HardBreak,
 
     History,
 

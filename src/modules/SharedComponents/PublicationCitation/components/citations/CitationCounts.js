@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 export const CitationCounts = ({ publication, showAltmetricWidget }) => {
     const getTitle = title =>
@@ -28,7 +28,7 @@ export const CitationCounts = ({ publication, showAltmetricWidget }) => {
 
     return (
         <Grid container spacing={0}>
-            <Grid item xs={12} sm={'auto'}>
+            <Grid size={{ xs: 12, sm: 'auto' }}>
                 {!!publication.fez_record_search_key_isi_loc &&
                     !!publication.fez_record_search_key_isi_loc.rek_isi_loc && (
                         <Partials.CitationCountView
@@ -109,7 +109,7 @@ export const CitationCounts = ({ publication, showAltmetricWidget }) => {
                     style={{ marginBottom: '-5px' }}
                 />
             </Grid>
-            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+            <Grid size="grow" sx={{ display: { xs: 'none', sm: 'block' } }} />
         </Grid>
     );
 };

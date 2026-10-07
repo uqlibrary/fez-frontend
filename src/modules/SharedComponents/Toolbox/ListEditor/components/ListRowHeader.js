@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
@@ -38,15 +38,15 @@ export const ListRowHeader = ({
                 confirmationBoxId={`${listEditorId}-delete-all`}
             />
             <Grid container alignItems="center" spacing={2} borderBottom={'1px solid rgba(0, 0, 0, 0.1)'}>
-                <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
+                <Grid size={{ xs: hideReorder ? 10 : 5, sm: hideReorder ? 11 : 6 }}>
                     <Typography variant="caption">{nameColumn}</Typography>
                 </Grid>
                 {!hideReorder && (
-                    <Grid item xs={5} sm={5} textAlign={'right'}>
+                    <Grid size={{ xs: 5, sm: 5 }} textAlign={'right'}>
                         <Typography variant="caption">{reorderColumn}</Typography>
                     </Grid>
                 )}
-                <Grid item xs={2} sm={1} textAlign={'center'}>
+                <Grid size={{ xs: 2, sm: 1 }} textAlign={'center'}>
                     <Tooltip title={deleteAll}>
                         <span>
                             <IconButton

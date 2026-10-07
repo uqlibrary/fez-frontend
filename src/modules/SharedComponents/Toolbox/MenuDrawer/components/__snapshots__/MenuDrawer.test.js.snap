@@ -40,10 +40,10 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         tabindex="-1"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-81r0vt-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-isl6k7-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-12 css-gc29ga-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-xdsajr-MuiGrid-root"
           >
             <a
               class="noHover css-1oqhn84"
@@ -65,7 +65,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             </a>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 css-123wywt-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-1q71y3e-MuiGrid-root"
           >
             <button
               aria-label="Close menu"
@@ -194,10 +194,10 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           tabindex="-1"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-wrap-xs-nowrap css-81r0vt-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-isl6k7-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-zeroMinWidth MuiGridLegacy-grid-xs-10 MuiGridLegacy-grid-sm-12 css-gc29ga-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-xdsajr-MuiGrid-root"
             >
               <a
                 class="noHover css-1oqhn84"
@@ -219,7 +219,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               </a>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-2 css-123wywt-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-1q71y3e-MuiGrid-root"
             >
               <button
                 aria-label="Close menu"

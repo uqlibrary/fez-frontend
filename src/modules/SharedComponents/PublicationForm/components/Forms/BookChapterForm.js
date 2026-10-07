@@ -10,7 +10,7 @@ import { validation } from 'config';
 import { locale } from 'locale';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 
@@ -22,10 +22,10 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
         !!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10) ? 'Page range invalid' : '';
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -41,7 +41,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -56,7 +56,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 validate={[validation.required]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -69,7 +69,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -82,7 +82,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 label={txt.information.fieldLabels.publisher}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -95,7 +95,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 {...txt.information.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -113,7 +113,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Field
                         control={control}
@@ -133,7 +133,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.editors.title} help={txt.editors.help}>
                     <Field
                         control={control}
@@ -151,7 +151,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                 </StandardCard>
             </Grid>
             {isNtro && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <NtroFields
                         control={control}
                         canEdit
@@ -170,7 +170,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                     />
                 </Grid>
             )}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                     <Typography>{locale.components.isbnForm.text}</Typography>
                     <Field
@@ -187,7 +187,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                     <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
@@ -205,10 +205,10 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.other.title} help={txt.other.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -220,7 +220,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -235,7 +235,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 errorText={pageError}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -252,7 +252,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                         </Grid>
                     </Grid>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -264,7 +264,7 @@ export const BookChapterForm = ({ isSubmitting, subtype, isNtro, isAuthorSelecte
                                 label={txt.other.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

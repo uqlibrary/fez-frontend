@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as controlledVocabActions from './controlledVocabularies';
-import { vocabulariesList } from 'mock/data';
+import { vocabulariesList } from 'mock/data/vocabularies';
 
 describe('Controlled Vocabularies actions', () => {
     beforeEach(() => {

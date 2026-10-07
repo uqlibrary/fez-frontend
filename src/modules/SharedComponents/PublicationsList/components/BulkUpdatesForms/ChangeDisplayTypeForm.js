@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { DocumentTypeSingleField, PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
@@ -50,10 +50,10 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
     return (
         <form data-testid="change-display-type-form" id="change-display-type-form">
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Alert alertId="alert-info-change-display-type" {...txt.changeDisplayTypeForm.alert} />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Field
                         control={control}
                         component={DocumentTypeSingleField}
@@ -66,7 +66,7 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
                     />
                 </Grid>
                 {!!displayType && subtypes.length > 0 && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Field
                             control={control}
                             component={PublicationSubtypeField}
@@ -79,7 +79,7 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
                         />
                     </Grid>
                 )}
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
                         children={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
@@ -92,7 +92,7 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
                         children={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
@@ -106,7 +106,7 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {isSubmitting && (
                         <Alert
                             alertId="alert-info-change-display-type"

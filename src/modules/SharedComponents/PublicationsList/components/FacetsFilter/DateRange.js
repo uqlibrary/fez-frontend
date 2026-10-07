@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
@@ -11,7 +11,7 @@ export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, 
     return (
         <div style={{ padding: 8 }}>
             <Grid container spacing={2} wrap={'nowrap'} alignItems={'flex-end'}>
-                <Grid item xs={4}>
+                <Grid size={4}>
                     <TextField
                         variant="standard"
                         type="number"
@@ -29,7 +29,7 @@ export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, 
                         }}
                     />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid size={4}>
                     <TextField
                         variant="standard"
                         type="number"
@@ -47,7 +47,7 @@ export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, 
                         }}
                     />
                 </Grid>
-                <Grid item>
+                <Grid>
                     <Button
                         variant="text"
                         children={locale.rangeSubmitButtonLabel}

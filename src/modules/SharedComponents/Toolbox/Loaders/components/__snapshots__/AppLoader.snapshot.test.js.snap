@@ -3,10 +3,10 @@
 exports[`Component AppLoader should render as expected 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-1tn8p30-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-8spuev-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
     >
       <span
         class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jb97hd-MuiCircularProgress-root"
@@ -29,7 +29,7 @@ exports[`Component AppLoader should render as expected 1`] = `
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
     >
       <div
         alt="Fez logo"
@@ -37,7 +37,7 @@ exports[`Component AppLoader should render as expected 1`] = `
       />
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-ejcx5-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-1pkcg1t-MuiGrid-root"
     >
       <h6
         class="MuiTypography-root MuiTypography-h6 css-12tzrfb-MuiTypography-root"

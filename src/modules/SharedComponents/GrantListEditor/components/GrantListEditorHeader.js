@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import DeleteForever from '@mui/icons-material/DeleteForever';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { useWidth } from 'hooks';
 
 export const GrantListEditorHeader = ({
@@ -49,10 +49,10 @@ export const GrantListEditorHeader = ({
                     paddingBottom: '6px',
                 }}
             >
-                <Grid container spacing={0}>
-                    <Grid item xs={10} sm={11} md={9}>
+                <Grid container spacing={0} sx={{ width: '100%' }}>
+                    <Grid size={{ xs: 10, sm: 11, md: 9 }}>
                         <Grid container spacing={0}>
-                            <Grid item xs={12} sm={5}>
+                            <Grid size={{ xs: 12, sm: 5 }}>
                                 <ListItemText
                                     secondary={GrantAgencyName}
                                     style={{ padding: 0 }}
@@ -61,7 +61,7 @@ export const GrantListEditorHeader = ({
                                     }}
                                 />
                             </Grid>
-                            <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Grid size={{ sm: 3 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <ListItemText
                                     secondary={GrantID}
                                     style={{ padding: 0 }}
@@ -71,7 +71,7 @@ export const GrantListEditorHeader = ({
                                 />
                             </Grid>
                             {!hideType && (
-                                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                <Grid size={{ sm: 4 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                     <ListItemText
                                         secondary={GrantAgencyType}
                                         style={{ padding: 0 }}
@@ -83,10 +83,10 @@ export const GrantListEditorHeader = ({
                             )}
                         </Grid>
                     </Grid>
-                    <Grid item xs={2} sm={1} md={3}>
+                    <Grid size={{ xs: 2, sm: 1, md: 3 }}>
                         <ListItemSecondaryAction style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}>
                             <Grid container spacing={0}>
-                                <Grid item xs={8} sx={{ display: { xs: 'none', md: 'block' } }}>
+                                <Grid size={8} sx={{ display: { xs: 'none', md: 'block' } }}>
                                     <ListItemText
                                         secondary={reorderColumn}
                                         style={{ padding: 0 }}
@@ -96,11 +96,7 @@ export const GrantListEditorHeader = ({
                                         }}
                                     />
                                 </Grid>
-                                <Grid
-                                    item
-                                    xs={width === 'xs' || width === 'sm' ? 12 : 4}
-                                    style={{ textAlign: 'right' }}
-                                >
+                                <Grid size={width === 'xs' || width === 'sm' ? 12 : 4} style={{ textAlign: 'right' }}>
                                     <Tooltip
                                         title={deleteAll}
                                         disableFocusListener={disabled}

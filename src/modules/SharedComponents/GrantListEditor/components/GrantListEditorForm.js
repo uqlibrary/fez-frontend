@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
@@ -101,7 +101,7 @@ export const GrantListEditorForm = ({
         <React.Fragment>
             {description}
             <Grid container spacing={1} style={{ marginTop: 8 }}>
-                <Grid item xs={12} sm={12} md>
+                <Grid size={{ xs: 12, sm: 12, md: 'grow' }}>
                     <TextField
                         fullWidth
                         name="grantAgencyName"
@@ -120,7 +120,7 @@ export const GrantListEditorForm = ({
                         }
                     />
                 </Grid>
-                <Grid item xs={12} sm={12} md={!hideType ? 3 : 4}>
+                <Grid size={{ xs: 12, sm: 12, md: !hideType ? 3 : 4 }}>
                     <TextField
                         fullWidth
                         name="grantId"
@@ -136,7 +136,7 @@ export const GrantListEditorForm = ({
                     <FormHelperText component="div">{grantIdHelperText}</FormHelperText>
                 </Grid>
                 {!hideType && (
-                    <Grid item xs={12} sm={12} md={3}>
+                    <Grid size={{ xs: 12, sm: 12, md: 3 }}>
                         <FormControl
                             variant="standard"
                             fullWidth
@@ -191,7 +191,7 @@ export const GrantListEditorForm = ({
                         </FormControl>
                     </Grid>
                 )}
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Button
                         id={(!!grantSelectedToEdit && 'rek-grant-update') || 'rek-grant-add'}
                         data-analyticsid={(!!grantSelectedToEdit && 'rek-grant-update') || 'rek-grant-add'}

@@ -3,10 +3,10 @@
 exports[`ScaleOfSignificanceTemplate component should render default view 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -18,7 +18,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-lvb8h-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -29,7 +29,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
     >
       <span
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -44,10 +44,10 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
 exports[`ScaleOfSignificanceTemplate component should render with author name 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -60,7 +60,7 @@ exports[`ScaleOfSignificanceTemplate component should render with author name 1`
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-lvb8h-MuiGrid-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
@@ -71,7 +71,7 @@ exports[`ScaleOfSignificanceTemplate component should render with author name 1`
       </p>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-9 css-g93h27-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-1q194yh-MuiGrid-root"
     >
       <span
         class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"

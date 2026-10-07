@@ -513,6 +513,23 @@ const clearAndType = async (input, value) => {
     await userEvent.type(screen.getByTestId(input), value);
 };
 
+/**
+ * Set a plain controlled text field's value in a single change event (+ blur), instead of typing it
+ * char-by-char with userEvent.type which re-renders the whole form on every keystroke. Pass the input
+ * element (e.g. screen.getByTestId('x-input') or a scoped getByTestId). Use ONLY for plain text
+ * inputs: autocomplete/lookup fields need the per-keystroke input events to fire their search, and
+ * MUI date-picker fields / special-key sequences ({Control>}a…) must stay on userEvent.type.
+ * @param {HTMLElement} input
+ * @param {string} value
+ * @return {HTMLElement} the input element
+ */
+const setTextField = (input, value) => {
+    const { fireEvent } = reactTestingLib;
+    fireEvent.change(input, { target: { value } });
+    fireEvent.blur(input);
+    return input;
+};
+
 // https://stackoverflow.com/a/73160202/1417494
 const sortObjectProps = obj => {
     return Object.keys(obj)
@@ -655,6 +672,7 @@ module.exports = {
     addItemUsingNamesPopoverForm,
     addAndSelectItemUsingNamesPopoverForm,
     clearAndType,
+    setTextField,
     sortObjectProps,
     getTableBodyRows,
     api,

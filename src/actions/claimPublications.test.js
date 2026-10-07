@@ -3,7 +3,7 @@ import * as claimActions from './claimPublications';
 import { getPreCheckError } from './claimPublications';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import { possibleUnclaimedList } from 'mock/data';
+import possibleUnclaimedList from 'mock/data/records/possibleUnclaimedList';
 import * as mockData from 'mock/data/testing/records';
 
 describe('Claim publication actions tests ', () => {

@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { isValidKeyword } from 'config/validation';
@@ -80,7 +80,7 @@ export const FreeTextForm = ({
             id={listEditorFormId}
             data-testid={listEditorFormId}
         >
-            <Grid item style={{ flexGrow: 1 }}>
+            <Grid style={{ flexGrow: 1 }}>
                 <TextField
                     variant="standard"
                     fullWidth
@@ -114,7 +114,7 @@ export const FreeTextForm = ({
                     </Typography>
                 )}
             </Grid>
-            <Grid item xs={12} sm={2}>
+            <Grid size={{ xs: 12, sm: 2 }}>
                 <Button
                     fullWidth
                     id={`${listEditorId}-${mode}`}

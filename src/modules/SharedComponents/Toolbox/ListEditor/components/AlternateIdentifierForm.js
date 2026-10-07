@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ALTERNATE_IDENTIFIER_TYPE } from 'config/general';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
@@ -56,7 +56,7 @@ export const AlternateIdentifierForm = ({ disabled, locale, onAdd, itemSelectedT
 
     return (
         <Grid container spacing={2} display="row" alignItems="center">
-            <Grid item style={{ flexGrow: 1 }} xs={12} sm={6} md={5}>
+            <Grid size={{ xs: 12, sm: 6, md: 5 }} style={{ flexGrow: 1 }}>
                 <TextField
                     key={(itemSelectedToEdit || {}).key}
                     fullWidth
@@ -72,7 +72,7 @@ export const AlternateIdentifierForm = ({ disabled, locale, onAdd, itemSelectedT
                     defaultValue={(itemSelectedToEdit || {}).key || ''}
                 />
             </Grid>
-            <Grid item xs={12} sm={6} md={5}>
+            <Grid size={{ xs: 12, sm: 6, md: 5 }}>
                 <NewGenericSelectField
                     key={(itemSelectedToEdit || {}).value}
                     fullWidth
@@ -89,7 +89,7 @@ export const AlternateIdentifierForm = ({ disabled, locale, onAdd, itemSelectedT
                     }}
                 />
             </Grid>
-            <Grid item xs={12} md={2}>
+            <Grid size={{ xs: 12, md: 2 }}>
                 <Button
                     fullWidth
                     id="add-items"

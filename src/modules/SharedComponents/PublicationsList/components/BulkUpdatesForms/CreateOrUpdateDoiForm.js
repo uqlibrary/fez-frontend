@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { locale } from 'locale';
 import { createOrUpdateDoi } from 'actions';
@@ -35,18 +35,18 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
     return (
         <form data-testid="create-or-update-doi-form" id="create-or-update-doi-form">
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Alert alertId="alert-info-create-or-update-doi" {...txt.createOrUpdateDoiForm.alert} />
                 </Grid>
                 {!!hasCollectionsAmongSelectedRecords && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             alertId="collection-alert-warning-create-or-update-doi"
                             {...txt.createOrUpdateDoiForm.collectionAlert}
                         />
                     </Grid>
                 )}
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}
                         children={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}
@@ -59,7 +59,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.createOrUpdateDoiForm.formLabels.submitButtonLabel}
                         children={txt.createOrUpdateDoiForm.formLabels.submitButtonLabel}
@@ -73,7 +73,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {!!isSubmitting && (
                         <Alert
                             alertId="alert-info-create-or-update-doi"

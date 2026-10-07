@@ -166,10 +166,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-type-header')).toHaveTextContent('Type of journal');
         expect(getByTestId('jnl-type-value')).toHaveTextContent('Fully Open Access');
-        expect(getByTestId('jnl-type-lookup-link')).toHaveAttribute(
-            'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fdoaj.org%2Ftoc%2F1085-3375',
-        );
+        expect(getByTestId('jnl-type-lookup-link')).toHaveAttribute('href', 'https://doaj.org/toc/1085-3375');
 
         // **************************************************************
         // Open Access Options Section
@@ -184,7 +181,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-doaj-apc-average-price-value')).toHaveTextContent('975 USD');
         expect(getByTestId('jnl-doaj-apc-average-price-lookup-link')).toHaveAttribute(
             'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fdoaj.org%2Ftoc%2F1085-3375',
+            'https://doaj.org/toc/1085-3375',
         );
 
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
@@ -344,7 +341,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-uq-author-publications-value')).toHaveTextContent('View these articles in UQ eSpace');
         expect(getByTestId('jnl-uq-author-publications-lookup-link')).toHaveAttribute(
             'href',
-            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2021&activeFacets[ranges][Year+published][to]=2026&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2012&activeFacets[ranges][Year+published][to]=2017&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
         );
 
         expect(getByTestId('jnl-editorial-staff-header')).toHaveTextContent('UQ Editorial Staff');

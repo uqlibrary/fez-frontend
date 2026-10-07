@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
@@ -30,13 +30,13 @@ export const DashboardAuthorDetails = ({ title, familyName, givenName, orgUnits,
 
     return (
         <Grid container spacing={1}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StyledTypography variant={'h6'}>
                     {title}&nbsp;{givenName}&nbsp;{familyName}
                 </StyledTypography>
             </Grid>
             {/* Author Name/Positions/OrgUnits */}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 {positions &&
                     positions.length > 0 &&
                     positions.map(

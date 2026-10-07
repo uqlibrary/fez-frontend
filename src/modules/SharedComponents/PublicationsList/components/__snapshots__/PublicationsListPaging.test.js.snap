@@ -15,10 +15,10 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
     id="test"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -40,7 +40,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
@@ -80,7 +80,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
         data-analyticsid="test-mobile-controls"
         data-testid="test-mobile-controls"
         id="test-mobile-controls"
@@ -98,7 +98,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -131,10 +131,10 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
     id="test"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -156,7 +156,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
@@ -242,7 +242,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
         data-analyticsid="test-mobile-controls"
         data-testid="test-mobile-controls"
         id="test-mobile-controls"
@@ -260,7 +260,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -301,10 +301,10 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
     id="test"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -327,7 +327,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
@@ -367,7 +367,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
         data-analyticsid="test-mobile-controls"
         data-testid="test-mobile-controls"
         id="test-mobile-controls"
@@ -385,7 +385,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -418,10 +418,10 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
     id="test"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -443,7 +443,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
@@ -483,7 +483,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
         data-analyticsid="test-mobile-controls"
         data-testid="test-mobile-controls"
         id="test-mobile-controls"
@@ -501,7 +501,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -535,10 +535,10 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
     id="test"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container css-sqlfad-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-139lpa7-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-previous css-1wivnju-MuiButtonBase-root-MuiButton-root"
@@ -560,7 +560,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-auto css-6v8vv2-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-auto css-xyo3sa-MuiGrid-root"
         data-analyticsid="test-desktop-controls"
         data-testid="test-desktop-controls"
         id="test-desktop-controls"
@@ -600,7 +600,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </button>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
         data-analyticsid="test-mobile-controls"
         data-testid="test-mobile-controls"
         id="test-mobile-controls"
@@ -618,7 +618,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary paging-next css-1wivnju-MuiButtonBase-root-MuiButton-root"

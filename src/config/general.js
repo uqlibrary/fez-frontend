@@ -11,7 +11,7 @@ export const ULRICHS_URL_PREFIX =
 
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
-export const getDoajUrl = issn => prefixByUrlResolver(`https://doaj.org/toc/${issn}`);
+export const getDoajUrl = issn => `https://doaj.org/toc/${issn}`;
 
 /*
  Construct the Open Policy Finder URL locally because the API still returns

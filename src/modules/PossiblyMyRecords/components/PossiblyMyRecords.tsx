@@ -19,7 +19,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { pathConfig } from 'config/pathConfig';
 import { locale } from 'locale';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createConfirmDialogBoxRefAssigner } from '../../SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
 import { FezRecord } from '../../../@types/models/FezRecord';
@@ -308,11 +308,11 @@ const PossiblyMyRecords: React.FC = () => {
                 // been loaded or any my publications haven't been loaded
                 !state.hasPublications && (loadingPossiblePublicationsList || loadingPossibleCounts) && (
                     <Grid container>
-                        <Grid item xs />
-                        <Grid item>
+                        <Grid size="grow" />
+                        <Grid>
                             <InlineLoader message={txt.loadingMessage} />
                         </Grid>
-                        <Grid item xs />
+                        <Grid size="grow" />
                     </Grid>
                 )
             }
@@ -329,7 +329,7 @@ const PossiblyMyRecords: React.FC = () => {
                     !loadingPossibleCounts &&
                         !loadingPossiblePublicationsList &&
                         possiblePublicationsList.length === 0 && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
                             </Grid>
                         )
@@ -338,30 +338,30 @@ const PossiblyMyRecords: React.FC = () => {
                     // results to display or loading if user is filtering/paging
                     state.hasPublications &&
                         (loadingPossiblePublicationsList || possiblePublicationsList.length > 0) && (
-                            <Grid item xs={12} md={9}>
+                            <Grid size={{ xs: 12, md: 9 }}>
                                 <StandardCard noHeader>
                                     {loadingPossiblePublicationsList && (
                                         <Grid container>
-                                            <Grid item xs />
-                                            <Grid item>
+                                            <Grid size="grow" />
+                                            <Grid>
                                                 <InlineLoader message={txt.loadingMessage} />
                                             </Grid>
-                                            <Grid item xs />
+                                            <Grid size="grow" />
                                         </Grid>
                                     )}
                                     {!loadingPossiblePublicationsList && possiblePublicationsList.length > 0 && (
                                         <>
-                                            <Grid item xs>
+                                            <Grid size="grow">
                                                 <Typography>
                                                     {txt.searchResults.text
                                                         .replace('[resultsCount]', possiblePublicationsList.length)
                                                         .replace('[totalCount]', totalPossiblePubs)}
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs style={{ marginTop: 16 }}>
+                                            <Grid size="grow" style={{ marginTop: 16 }}>
                                                 {totalPossiblePubs > initialState.pageSize && (
                                                     <>
-                                                        <Grid item xs>
+                                                        <Grid size="grow">
                                                             <PublicationsListSorting
                                                                 sortBy={state.sortBy}
                                                                 sortDirection={state.sortDirection}
@@ -373,7 +373,7 @@ const PossiblyMyRecords: React.FC = () => {
                                                                 canUseExport={false}
                                                             />
                                                         </Grid>
-                                                        <Grid item xs>
+                                                        <Grid size="grow">
                                                             <PublicationsListPaging
                                                                 pagingData={pagingData}
                                                                 onPageChanged={pageChanged}
@@ -383,7 +383,7 @@ const PossiblyMyRecords: React.FC = () => {
                                                         </Grid>
                                                     </>
                                                 )}
-                                                <Grid item xs>
+                                                <Grid size="grow">
                                                     <PublicationsList
                                                         publicationsLoading={
                                                             loadingPossiblePublicationsList || loadingPossibleCounts
@@ -395,7 +395,7 @@ const PossiblyMyRecords: React.FC = () => {
                                                     />
                                                 </Grid>
                                                 {totalPossiblePubs > initialState.pageSize && (
-                                                    <Grid item xs>
+                                                    <Grid size="grow">
                                                         <PublicationsListPaging
                                                             loading={loadingPossiblePublicationsList}
                                                             pagingData={pagingData}
@@ -417,7 +417,7 @@ const PossiblyMyRecords: React.FC = () => {
                     ((possiblePublicationsFacets && Object.keys(possiblePublicationsFacets).length > 0) ||
                         (state.activeFacets?.filters && Object.keys(state.activeFacets.filters).length > 0) ||
                         (state.activeFacets?.ranges && Object.keys(state.activeFacets.ranges).length > 0)) && (
-                        <Grid item sm={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <Grid size={{ sm: 3 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <StandardRighthandCard title={txt.facetsFilter.title}>
                                 <FacetsFilter
                                     facetsData={possiblePublicationsFacets}

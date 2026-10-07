@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
@@ -110,7 +110,7 @@ export const RelatedServiceListEditorRow = ({
     const getRelatedServiceRowText = selectedClass => {
         return (
             <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
-                <Grid item xs={12} sm={5}>
+                <Grid size={{ xs: 12, sm: 5 }}>
                     {getListItemTypography(
                         relatedService.relatedServiceId,
                         '',
@@ -118,7 +118,7 @@ export const RelatedServiceListEditorRow = ({
                         {},
                     )}
                 </Grid>
-                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Grid size={{ sm: 3 }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {getListItemTypography(
                         relatedService.relatedServiceDesc,
                         '',
@@ -137,14 +137,12 @@ export const RelatedServiceListEditorRow = ({
         <Fragment>
             <ConfirmDialogBox onRef={setConfirmationBox} onAction={deleteRecord} locale={deleteRecordConfirmation} />
             <ListItem divider style={{ padding: '8px 0 8px 0' }}>
-                <Grid container spacing={0} data-testid={`related-service-list-row-${index}`}>
-                    <Grid item xs={10} sm={11} md={9}>
-                        {getRelatedServiceRowText(selectedClass)}
-                    </Grid>
-                    <Grid item xs={2} sm={1} md={3}>
+                <Grid container spacing={0} data-testid={`related-service-list-row-${index}`} sx={{ width: '100%' }}>
+                    <Grid size={{ xs: 10, sm: 11, md: 9 }}>{getRelatedServiceRowText(selectedClass)}</Grid>
+                    <Grid size={{ xs: 2, sm: 1, md: 3 }}>
                         <ListItemSecondaryAction style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}>
                             <Grid container spacing={0}>
-                                <Grid item xs={8} sx={{ textAlign: 'right', display: { xs: 'none', md: 'block' } }}>
+                                <Grid size={8} sx={{ textAlign: 'right', display: { xs: 'none', md: 'block' } }}>
                                     <Tooltip
                                         title={moveUpHint}
                                         disableFocusListener={disabled || !canMoveUp}
@@ -203,7 +201,7 @@ export const RelatedServiceListEditorRow = ({
                                         </Tooltip>
                                     )}
                                 </Grid>
-                                <Grid item xs={width === 'sm' || width === 'xs' ? 12 : 4} sx={{ textAlign: 'right' }}>
+                                <Grid size={width === 'sm' || width === 'xs' ? 12 : 4} sx={{ textAlign: 'right' }}>
                                     <Tooltip
                                         title={deleteHint}
                                         disableFocusListener={disabled}

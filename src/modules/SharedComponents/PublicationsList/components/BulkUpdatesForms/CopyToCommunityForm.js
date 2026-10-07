@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { useDispatch } from 'react-redux';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { CommunityField } from 'modules/SharedComponents/LookupFields';
@@ -59,11 +59,11 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
     return (
         <form data-testid={`${idText}-community-form`} id={`${idText}-community-form`}>
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Alert alertId={`alert-info-${idText}-community`} {...txt.copyToCommunity.alert(isRemoveFrom)} />
                 </Grid>
                 {!!hasMoreThanCollectionsSelected && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             alertId={`alert-info-${idText}-community-notallowed`}
                             {...txt.copyToCommunity.onlyCollectionsAllowed}
@@ -71,12 +71,12 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
                     </Grid>
                 )}
                 {!!alertUser && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert alertId={`alert-warning-${idText}-community`} {...txt.copyToCommunity.warningAlert} />
                     </Grid>
                 )}
                 {!hasMoreThanCollectionsSelected && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Field
                             control={control}
                             component={CommunityField}
@@ -93,7 +93,7 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
                         />
                     </Grid>
                 )}
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.copyToCommunity.formLabels.cancelButtonLabel}
                         children={txt.copyToCommunity.formLabels.cancelButtonLabel}
@@ -106,7 +106,7 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                     <Button
                         aria-label={txt.copyToCommunity.formLabels.submitButtonLabel}
                         children={txt.copyToCommunity.formLabels.submitButtonLabel}
@@ -126,7 +126,7 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {isSubmitting && (
                         <Alert
                             alertId={`alert-info-${idText}-community`}

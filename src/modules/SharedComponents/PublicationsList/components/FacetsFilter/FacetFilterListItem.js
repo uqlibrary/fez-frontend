@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useState } from 'react';
+import React, { Fragment, useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import ListItem from '@mui/material/ListItem';
@@ -12,6 +12,12 @@ import Typography from '@mui/material/Typography';
 export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActive }) => {
     const [isOpen, setIsOpen] = useState(isActive || false);
     const handleIsOpen = useCallback(() => setIsOpen(!isOpen), [isOpen]);
+
+    useEffect(() => {
+        if (!isActive) return;
+        setIsOpen(true);
+    }, [isActive]);
+
     return (
         <Fragment key={`facet_fragment_${id}`}>
             <ListItem key={`facet_filter_${id}`} component="div" disablePadding>

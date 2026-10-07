@@ -4,7 +4,7 @@ import { userIsAdmin } from 'hooks';
 import locale from 'locale/global';
 import { numberToWords } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, ORG_TYPES_LOOKUP } from 'config/general';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 
@@ -76,9 +76,7 @@ export const ContributorRowText = ({
     return (
         <>
             <Grid
-                item
-                xs={10}
-                md={3}
+                size={{ xs: 10, md: 3 }}
                 id={`${contributorRowId}-name-as-published`}
                 data-testid={`${contributorRowId}-name-as-published`}
             >
@@ -91,9 +89,7 @@ export const ContributorRowText = ({
             </Grid>
             {isAuthorLinked(contributor) && haveFullAuthorDetails(contributor) && (
                 <Grid
-                    item
-                    xs={10}
-                    md={showRoleInput ? 4 : idColWidth}
+                    size={{ xs: 10, md: showRoleInput ? 4 : idColWidth }}
                     id={`${contributorRowId}-uq-details`}
                     data-testid={`${contributorRowId}-uq-details`}
                 >
@@ -112,9 +108,7 @@ export const ContributorRowText = ({
             )}
             {!isAuthorLinked(contributor) && !!contributor.affiliation && (
                 <Grid
-                    item
-                    xs={12}
-                    md={idColWidth}
+                    size={{ xs: 12, md: idColWidth }}
                     id={`${contributorRowId}-affiliation`}
                     data-testid={`${contributorRowId}-affiliation`}
                 >
@@ -132,7 +126,11 @@ export const ContributorRowText = ({
                 </Grid>
             )}
             {showRoleInput && (
-                <Grid item xs={12} md={md} id={`${contributorRowId}-role`} data-testid={`${contributorRowId}-role`}>
+                <Grid
+                    size={{ xs: 12, md: md }}
+                    id={`${contributorRowId}-role`}
+                    data-testid={`${contributorRowId}-role`}
+                >
                     {getListItemTypography(
                         contributor.creatorRole,
                         '',

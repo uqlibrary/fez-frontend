@@ -626,7 +626,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
                         class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
                         >
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"

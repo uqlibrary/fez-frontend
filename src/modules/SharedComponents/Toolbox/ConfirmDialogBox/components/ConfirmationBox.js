@@ -6,7 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 export const ConfirmationBox = ({
     actionButtonColor,
@@ -62,10 +62,10 @@ export const ConfirmationBox = ({
             </DialogContent>
             <DialogActions>
                 <Grid container spacing={1}>
-                    <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                    <Grid size="grow" sx={{ display: { xs: 'none', sm: 'block' } }} />
 
                     {!hideActionButton && (
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 {...(!!actionButtonVariant ? { variant: actionButtonVariant } : {})}
                                 children={locale.confirmButtonLabel}
@@ -81,7 +81,7 @@ export const ConfirmationBox = ({
                     )}
                     {showAlternateActionButton && (
                         // an optional middle button that will display in a warning colour
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 variant={'contained'}
                                 sx={{
@@ -101,7 +101,7 @@ export const ConfirmationBox = ({
                         </Grid>
                     )}
                     {!hideCancelButton && (
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 variant={'contained'}
                                 color={cancelButtonColor || 'primary'}

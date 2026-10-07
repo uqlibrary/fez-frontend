@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -281,7 +281,7 @@ export const ContributorForm = ({
             {description}
             <Grid container spacing={1} style={{ marginTop: 8 }} id="contributorForm">
                 {isNtro && (
-                    <Grid item xs={12} sm={2}>
+                    <Grid size={{ xs: 12, sm: 2 }}>
                         <OrgAffiliationTypeSelector
                             affiliation={contributor.affiliation}
                             onAffiliationChange={handleAffiliationChange}
@@ -290,7 +290,7 @@ export const ContributorForm = ({
                         />
                     </Grid>
                 )}
-                <Grid item xs={12} sm>
+                <Grid size={{ xs: 12, sm: 'grow' }}>
                     {!hideNamesPopoverForm && (
                         <>
                             <NamesPopoverForm
@@ -326,13 +326,9 @@ export const ContributorForm = ({
                 {(((showIdentifierLookup || isNtro) &&
                     (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
                     (!isNtro && canEdit && !hideUqIDFields) ||
-                    (showIdentifierLookup && canEdit)) && (
-                    <Grid item xs={12} sm={3}>
-                        {renderUqIdField()}
-                    </Grid>
-                )}
+                    (showIdentifierLookup && canEdit)) && <Grid size={{ xs: 12, sm: 3 }}>{renderUqIdField()}</Grid>}
                 {showRoleInput && (
-                    <Grid item xs={12} sm={12} md={(showIdentifierLookup && 3) || 5}>
+                    <Grid size={{ xs: 12, sm: 12, md: (showIdentifierLookup && 3) || 5 }}>
                         <RoleField
                             fullWidth
                             key={`role-input-${(contributor.nameAsPublished || '').trim().length === 0}`}
@@ -355,7 +351,7 @@ export const ContributorForm = ({
                     </Grid>
                 )}
                 {isNtro && contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <NonUqOrgAffiliationFormSection
                             orgAffiliation={contributor.orgaff || ''}
                             orgType={contributor.orgtype || ''}
@@ -371,7 +367,7 @@ export const ContributorForm = ({
                 )}
             </Grid>
             <Grid container spacing={1} style={{ marginTop: 8 }}>
-                <Grid item xs={displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
+                <Grid size={displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
                     <Button
                         variant="contained"
                         fullWidth
@@ -391,7 +387,7 @@ export const ContributorForm = ({
                     </Button>
                 </Grid>
                 {displayCancel && (
-                    <Grid item xs={6} style={{ marginBottom: 8 }}>
+                    <Grid size={6} style={{ marginBottom: 8 }}>
                         <Button
                             variant="contained"
                             fullWidth

@@ -3,7 +3,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as journalActions from './journals';
 
-import { journalDoaj } from 'mock/data';
+import { journalDoaj } from 'mock/data/journalDoaj';
 import moment from 'moment/moment';
 
 describe('transformers', () => {

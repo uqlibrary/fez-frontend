@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
@@ -70,14 +70,14 @@ export const ListRow = ({
                 confirmationBoxId={`${listRowId}-delete`}
             />
             <Grid container alignItems="center" spacing={1} ml={0} mt={0} borderBottom={'1px solid rgba(0, 0, 0, 0.1)'}>
-                <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6} md={hideReorder ? 11 : 9}>
+                <Grid size={{ xs: hideReorder ? 10 : 5, sm: hideReorder ? 11 : 6, md: hideReorder ? 11 : 9 }}>
                     <ItemTemplate item={item} />
                 </Grid>
                 {!hideReorder && (
-                    <Grid item xs={5} sm={5} md={2} textAlign={'center'}>
+                    <Grid size={{ xs: 5, sm: 5, md: 2 }} textAlign={'center'}>
                         <Grid container justifyContent="flex-end">
                             {canMoveUp && (
-                                <Grid item>
+                                <Grid>
                                     <Tooltip title={moveUpHint}>
                                         <span>
                                             <IconButton
@@ -95,7 +95,7 @@ export const ListRow = ({
                                 </Grid>
                             )}
                             {canMoveDown && (
-                                <Grid item>
+                                <Grid>
                                     <Tooltip title={moveDownHint}>
                                         <span>
                                             <IconButton
@@ -137,7 +137,7 @@ export const ListRow = ({
                         </Grid>
                     </Grid>
                 )}
-                <Grid item xs={2} sm={1} textAlign={'center'}>
+                <Grid size={{ xs: 2, sm: 1 }} textAlign={'center'}>
                     {canDelete && (
                         <Tooltip title={deleteHint}>
                             <span>

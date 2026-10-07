@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -36,10 +36,7 @@ const JournalsListCollapsibleDataPanelContent = ({ item, index, data, isFirstRow
     const id = sanitiseId(item.key);
     return (
         <Grid
-            xs={12}
-            sm={6}
-            item
-            size="small"
+            size={{ xs: 12, sm: 6 }}
             sx={{
                 ...(!isFirstRow ? classes.collapsibleContainerDataRowTop : {}),
                 ...(!isLastRow ? classes.collapsibleContainerDataRowBottom : {}),

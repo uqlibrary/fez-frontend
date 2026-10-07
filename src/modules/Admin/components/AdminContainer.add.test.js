@@ -1,6 +1,6 @@
 import React from 'react';
 import AdminContainer from './AdminContainer';
-import { recordWithDatastreams } from 'mock/data';
+import recordWithDatastreams from 'mock/data/records/recordWithDatastreams';
 import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 import Cookies from 'js-cookie';
 

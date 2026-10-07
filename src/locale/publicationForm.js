@@ -1,10 +1,12 @@
 import React from 'react';
 import { default as txt } from './components';
+// Import the data leaves directly, not the FileUploader barrel: the barrel pulls the component tree
+// (-> config/routes -> locale/publicationForm), a cycle that only resolved by import-order luck.
+import { default as fileUploaderLocale } from 'modules/SharedComponents/Toolbox/FileUploader/locale';
 import {
-    fileUploaderLocale,
     FILE_ACCESS_CONDITION_OPEN,
     FILE_ACCESS_CONDITION_CLOSED,
-} from 'modules/SharedComponents/Toolbox/FileUploader';
+} from 'modules/SharedComponents/Toolbox/FileUploader/config';
 import { selectFields } from 'locale/selectFields';
 
 const thesisSubmission = {

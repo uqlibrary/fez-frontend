@@ -61,7 +61,7 @@ const getIcon = ({ index, rowData, disabled }) => {
 
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ width: '100%' }}>
             <Grid sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>{icon}</Grid>
             <Grid sx={{ ...(linked ? classes.linked : {}) }}>{text}</Grid>
         </Grid>
@@ -225,7 +225,7 @@ export const AuthorsList = ({
                     };
 
                     return (
-                        <Grid container spacing={2}>
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <PersonOutlined color="secondary" />
                             </Grid>
@@ -387,7 +387,7 @@ export const AuthorsList = ({
                         handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
                     };
                     return (
-                        <Grid container spacing={2}>
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <TextField
                                     value={value}
@@ -438,7 +438,7 @@ export const AuthorsList = ({
                         handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
                     return (
-                        <Grid container spacing={2}>
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <NewGenericSelectField
                                     itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}

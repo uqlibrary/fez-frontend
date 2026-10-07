@@ -10,10 +10,10 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     class="MuiBox-root css-moxgk8"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-13gd6xk-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1j2ekt5-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 MuiGridLegacy-grid-md-3 css-ngslpu-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-2 css-nwngbi-MuiGrid-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom MuiTypography-noWrap css-1efwksy-MuiTypography-root"
@@ -26,7 +26,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
         </p>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
@@ -50,7 +50,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-3 MuiGridLegacy-grid-md-3 css-w04l-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-md-3 css-108uuwk-MuiGrid-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
@@ -106,7 +106,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-2 css-1185iop-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-2 css-1qw8ze4-MuiGrid-root"
       >
         <div
           class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-nr9o0-MuiTypography-root"
@@ -116,7 +116,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-1 css-ajq32e-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
       >
         <span
           aria-label="Remove this file"

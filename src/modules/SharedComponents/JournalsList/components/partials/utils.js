@@ -73,29 +73,31 @@ export const getIndicatorProps = ({ type, data }) => {
             return null;
         }
     } else {
-        indicatorProps.status = status.fee;
-        if (hasRNP) {
-            if (s2oValue === 'S2O') {
-                indicatorProps.showS2O = true;
-                indicatorProps.status = status.open;
-            } else if (isCapped) {
-                indicatorProps.status = status.cap;
-            } else if (cappedValue === 'N' && !isDiscounted) {
-                indicatorProps.status = status.open;
-                if (s2oValue === 'Y') {
+        if (data.is_diamond) {
+            indicatorProps.status = status.open;
+            indicatorProps.showDiamond = true;
+        } else {
+            indicatorProps.status = status.fee;
+            if (hasRNP) {
+                if (s2oValue === 'S2O') {
+                    indicatorProps.showS2O = true;
+                    indicatorProps.status = status.open;
+                } else if (isCapped) {
+                    indicatorProps.status = status.cap;
+                } else if (cappedValue === 'N' && !isDiscounted) {
+                    indicatorProps.status = status.open;
+                    if (s2oValue === 'Y') {
+                        indicatorProps.showS2O = true;
+                    }
+                }
+            } else if (hasDOAJ) {
+                const doaj = data.fez_journal_doaj;
+                if (!hasApc) {
+                    indicatorProps.status = status.open;
+                }
+                if (!!doaj.jnl_doaj_is_s2o) {
                     indicatorProps.showS2O = true;
                 }
-            }
-        } else if (hasDOAJ) {
-            const doaj = data.fez_journal_doaj;
-            if (!hasApc) {
-                indicatorProps.status = status.open;
-                if (data.is_diamond) {
-                    indicatorProps.showDiamond = true;
-                }
-            }
-            if (!!doaj.jnl_doaj_is_s2o) {
-                indicatorProps.showS2O = true;
             }
         }
     }

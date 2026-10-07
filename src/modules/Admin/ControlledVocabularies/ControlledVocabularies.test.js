@@ -1,6 +1,26 @@
 import React from 'react';
-import { render, WithReduxStore, WithRouter, waitFor, userEvent, within, waitForElementToBeRemoved } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    waitFor,
+    userEvent,
+    within,
+    waitForElementToBeRemoved,
+    screen,
+    setTextField,
+} from 'test-utils';
 import * as mockData from 'mock/data';
+
+// A page/child loading indicator can be removed before we look for it when mock responses resolve
+// quickly, which makes waitForElementToBeRemoved(getByTestId(...)) throw "unable to find". Only wait
+// for removal if it is actually present (matches the guarded pattern already used in this file).
+const waitForLoadingRemoved = async testId => {
+    const el = screen.queryByTestId(testId);
+    if (el) {
+        await waitForElementToBeRemoved(el);
+    }
+};
 import * as UserIsAdmin from 'hooks/userIsAdmin';
 import ControlledVocabularies from './ControlledVocabularies';
 import * as repositories from 'repositories';
@@ -40,7 +60,7 @@ describe('ControlledVocabularies', () => {
 
     it('should render as expected', async () => {
         const { getByText, getByTestId } = setup();
-        await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+        await waitForLoadingRemoved('vocab-page-loading');
 
         expect(getByText('Displaying 42 total controlled vocabularies')).toBeInTheDocument();
         // check sorting is working
@@ -86,7 +106,7 @@ describe('ControlledVocabularies', () => {
 
         it('should render and save when button clicked', async () => {
             await showAddForm().then(async ({ getByTestId, queryByTestId }) => {
-                await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                setTextField(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 queryByTestId('update_dialog-controlledVocabulary') &&
                     (await waitForElementToBeRemoved(queryByTestId('update_dialog-controlledVocabulary')));
@@ -96,7 +116,7 @@ describe('ControlledVocabularies', () => {
             const message = 'Test error message';
             mockApi.onPost(repositories.routes.VOCAB_API().apiUrl).reply(422, { message });
             await showAddForm().then(async ({ getByTestId }) => {
-                await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                setTextField(getByTestId('cvo-title-input'), 'Test title');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
                 await waitFor(() => {
@@ -129,7 +149,7 @@ describe('ControlledVocabularies', () => {
                     return Promise.resolve(rendered);
                 };
                 await showAddForm2().then(async ({ getByTestId, queryByTestId }) => {
-                    await userEvent.type(getByTestId('cvo-title-input'), 'Test title');
+                    setTextField(getByTestId('cvo-title-input'), 'Test title');
                     await userEvent.click(getByTestId('update_dialog-action-button'));
                     queryByTestId('update_dialog-controlledVocabulary') &&
                         (await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary')));
@@ -162,7 +182,7 @@ describe('ControlledVocabularies', () => {
         });
         it('should render and save when button clicked', async () => {
             await showEditForm().then(async ({ getByTestId, queryByTestId }) => {
-                await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
+                setTextField(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
                 queryByTestId('update_dialog-controlledVocabulary') &&
                     (await waitForElementToBeRemoved(queryByTestId('update_dialog-controlledVocabulary')));
@@ -171,10 +191,10 @@ describe('ControlledVocabularies', () => {
         describe('child vocab', () => {
             it('should render and save when button clicked', async () => {
                 const { getByTestId, queryByTestId } = setup();
-                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+                await waitForLoadingRemoved('vocab-page-loading');
 
                 await userEvent.click(getByTestId('expand-row-453669'));
-                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+                await waitForLoadingRemoved('childControlledVocab-page-loading');
 
                 await userEvent.click(getByTestId('admin-edit-button-453670'));
 
@@ -186,20 +206,20 @@ describe('ControlledVocabularies', () => {
                     within(getByTestId('update_dialog-controlledVocabulary')).getByTestId('cvo-title-input'),
                 ).toHaveAttribute('value', 'Yukulta / Ganggalidda language G34');
 
-                await userEvent.type(getByTestId('cvo-title-input'), ' Updated');
+                setTextField(getByTestId('cvo-title-input'), ' Updated');
                 await userEvent.click(getByTestId('update_dialog-action-button'));
 
                 queryByTestId('update_dialog-controlledVocabulary') &&
                     (await waitForElementToBeRemoved(getByTestId('update_dialog-controlledVocabulary')));
-                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+                await waitForLoadingRemoved('childControlledVocab-page-loading');
                 expect(getByTestId('admin-edit-button-453670')).toBeInTheDocument();
             });
             it('should close the opened dialog when page changes', async () => {
                 const { getByTestId, getByRole, getByText } = setup();
-                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+                await waitForLoadingRemoved('vocab-page-loading');
 
                 await userEvent.click(getByTestId('expand-row-453669'));
-                await waitForElementToBeRemoved(getByTestId('childControlledVocab-page-loading'));
+                await waitForLoadingRemoved('childControlledVocab-page-loading');
 
                 await userEvent.click(getByTestId('admin-edit-button-453670'));
 
@@ -218,7 +238,7 @@ describe('ControlledVocabularies', () => {
             });
             it('should close the opened dialog when rows-per-page changes', async () => {
                 const { getByTestId, getByRole, getByText } = setup();
-                await waitForElementToBeRemoved(getByTestId('vocab-page-loading'));
+                await waitForLoadingRemoved('vocab-page-loading');
 
                 await userEvent.click(getByTestId('expand-row-453669'));
 

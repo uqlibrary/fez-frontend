@@ -1,6 +1,6 @@
 import React from 'react';
 import FreeTextForm from './FreeTextForm';
-import { rtlRender, fireEvent, userEvent, screen } from 'test-utils';
+import { rtlRender, fireEvent, userEvent, screen, setTextField } from 'test-utils';
 import { isValidIsbn, isValidKeyword } from 'config/validation';
 
 describe('FreeTextForm behaviour tests', () => {
@@ -284,7 +284,7 @@ describe('FreeTextForm behaviour tests', () => {
 
         await clearInput('test-input');
 
-        await userEvent.type(getByTestId('test-input'), 'cats');
+        setTextField(getByTestId('test-input'), 'cats');
         expect(getByTestId('test-add')).not.toHaveAttribute('disabled');
         expect(queryByText('Limited to 5 characters')).not.toBeInTheDocument();
         await userEvent.click(getByTestId('test-add'));

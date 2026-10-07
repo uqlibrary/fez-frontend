@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { numberToWords } from 'config';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import RadioButtonUnchecked from '@mui/icons-material/RadioButtonUnchecked';
@@ -41,7 +41,7 @@ export const AuthorItem = ({
     const isDisabled = disabled || linked;
 
     return (
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Button
                 onClick={!linked && !selected ? selectAuthor : undefined}
                 fullWidth

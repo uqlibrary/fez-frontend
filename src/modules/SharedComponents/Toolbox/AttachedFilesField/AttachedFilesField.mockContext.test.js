@@ -7,7 +7,7 @@ import * as UserIsAdmin from 'hooks/userIsAdmin';
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
 
-import { recordWithDatastreams } from 'mock/data';
+import recordWithDatastreams from 'mock/data/records/recordWithDatastreams';
 
 function setup({ values, ...testProps }, renderMethod = rtlRender) {
     const { locale, ...restProps } = testProps;

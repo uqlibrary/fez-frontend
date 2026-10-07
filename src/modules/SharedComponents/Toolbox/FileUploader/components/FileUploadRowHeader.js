@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
@@ -59,31 +59,31 @@ export const FileUploadRowHeader = ({
                     sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.1)' }}
                     gutter={8}
                 >
-                    <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
+                    <Grid size={{ md: !requireOpenAccessStatus ? 8 : 3, sm: !requireOpenAccessStatus ? 8 : 2 }}>
                         <Typography variant="caption" gutterBottom>
                             {filenameColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={3} sm={3}>
+                    <Grid size={{ sm: 3, md: 3 }}>
                         <Typography variant="caption" gutterBottom>
                             {fileDescriptionColumn}
                         </Typography>
                     </Grid>
                     {!!requireOpenAccessStatus && (
                         <>
-                            <Grid item md={3} sm={3}>
+                            <Grid size={{ sm: 3, md: 3 }}>
                                 <Typography variant="caption" gutterBottom>
                                     {isAdmin ? fileSecurityPolicyColumn : fileAccessColumn}
                                 </Typography>
                             </Grid>
-                            <Grid item sm={2}>
+                            <Grid size={{ sm: 2 }}>
                                 <Typography variant="caption" gutterBottom>
                                     {embargoDateColumn}
                                 </Typography>
                             </Grid>
                         </>
                     )}
-                    <Grid item xs={1} sx={{ textAlign: 'center' }}>
+                    <Grid size={{ xs: 1 }} sx={{ textAlign: 'center' }}>
                         <Tooltip title={deleteAllFiles}>
                             <span>
                                 <IconButton

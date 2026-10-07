@@ -8,6 +8,7 @@ import {
     selectDropDownOptionByElement,
     fireEvent,
     userEvent,
+    setTextField,
 } from 'test-utils';
 import * as ManageUsersActions from 'actions/manageUsers';
 import * as repository from 'repositories';
@@ -519,9 +520,11 @@ describe('ManageUsers', () => {
 
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
-        await waitFor(() => expect(getByTestId('usr-full-name-0')).toBeInTheDocument());
-        await new Promise(r => setTimeout(r, 2000));
-        expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Testing User');
+        // Poll for the post-delete list reload (component re-fetches after a 1s setTimeout) instead of a
+        // fixed 2s sleep — resolves as soon as the new row-0 value lands.
+        await waitFor(() => expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Testing User'), {
+            timeout: 3000,
+        });
         expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
     });
 
@@ -891,7 +894,7 @@ describe('ManageUsers', () => {
         const loadUserListFn = jest.spyOn(ManageUsersActions, 'loadUserList');
         const { getByTestId } = setup();
         await waitFor(() => expect(loadUserListFn).toHaveBeenCalledTimes(1));
-        await userEvent.type(getByTestId('users-search-input'), 'test search');
+        setTextField(getByTestId('users-search-input'), 'test search');
 
         await waitFor(() =>
             expect(loadUserListFn).toHaveBeenLastCalledWith({ page: 0, pageSize: 20, search: 'test search' }),

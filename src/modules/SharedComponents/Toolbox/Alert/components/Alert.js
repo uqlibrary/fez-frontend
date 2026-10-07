@@ -15,7 +15,7 @@ import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import Help from '@mui/icons-material/Help';
 import HelpOutline from '@mui/icons-material/HelpOutline';
 import Done from '@mui/icons-material/Done';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 const icon = {
     '& .icon': {
@@ -173,9 +173,7 @@ export const Alert = ({
                 sx={{}}
             >
                 <Grid
-                    item
-                    xs={12}
-                    sm
+                    size={{ xs: 12, sm: 'grow' }}
                     sx={{
                         ...(action && !disableAlertClick
                             ? {
@@ -188,7 +186,6 @@ export const Alert = ({
                 >
                     <Grid container justifyContent="center" alignItems="flex-start" alignContent="center">
                         <StyledGridWiggler
-                            item
                             sx={{ ...icon }}
                             className={'alert-icon'}
                             wiggle={!!wiggle ? 'true' : null}
@@ -208,8 +205,7 @@ export const Alert = ({
                             )}
                         </StyledGridWiggler>
                         <StyledGridTitle
-                            item
-                            xs
+                            size="grow"
                             className={'alert-text'}
                             onClick={(!disableAlertClick && action) || undefined}
                             onKeyDown={(!disableAlertClick && action) || undefined}
@@ -218,7 +214,7 @@ export const Alert = ({
                             <span data-testid="alert-message">{message}</span>
                         </StyledGridTitle>
                         {allowDismiss && dismissAction && (
-                            <StyledGridDismissButton item sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <StyledGridDismissButton sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 <IconButton
                                     onClick={dismissAction}
                                     title={dismissTitle}
@@ -235,7 +231,7 @@ export const Alert = ({
                     </Grid>
                 </Grid>
                 {action && actionButtonLabel && (
-                    <StyledGridActionButton item xs sm="auto">
+                    <StyledGridActionButton size={{ xs: 'grow', sm: 'auto' }}>
                         <Button
                             variant="text"
                             children={actionButtonLabel}
@@ -250,7 +246,7 @@ export const Alert = ({
                     </StyledGridActionButton>
                 )}
                 {allowDismiss && dismissAction && (
-                    <StyledGridDismissButton item sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <StyledGridDismissButton sx={{ display: { xs: 'none', sm: 'block' } }}>
                         <IconButton
                             onClick={dismissAction}
                             title={dismissTitle}

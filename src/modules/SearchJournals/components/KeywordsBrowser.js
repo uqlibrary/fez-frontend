@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { useSelector } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -109,26 +109,26 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
     return (
         <Grid container spacing={0}>
             {hasJournalSearchKeywordsFailed && (
-                <Grid item>
+                <Grid>
                     <Alert {...journalSearchKeywordsError} />
                 </Grid>
             )}
-            <Grid item xs={12} style={{ padding: '10px 0' }}>
+            <Grid size={12} style={{ padding: '10px 0' }}>
                 <Typography role="alert" aria-label={txt.aria_label}>
                     <b>{txt.titlePrefix}</b>&nbsp;{txt.title}
                 </Typography>
             </Grid>
-            <Grid item xs={12} md={3} style={{ marginTop: '10px' }}>
+            <Grid size={{ xs: 12, md: 3 }} style={{ marginTop: '10px' }}>
                 <Grid container>
                     {hasExactKeywords && (
-                        <Grid item xs={12} style={{ marginBottom: '10px' }}>
+                        <Grid size={12} style={{ marginBottom: '10px' }}>
                             <ExactMatchSearchKeywordsList
                                 keywordsListTitle={txt.exactMatch.title}
                                 keywordsList={journalSearchKeywords.exactMatch}
                             />
                         </Grid>
                     )}
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <SearchKeywordsList
                             keywordsListTitle={txt.titleMatch.title}
                             keywordsList={journalSearchKeywords.titleMatch}
@@ -139,7 +139,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
                     </Grid>
                 </Grid>
             </Grid>
-            <StyledGrid item xs={12} md={3} style={{ marginTop: '10px' }}>
+            <StyledGrid size={{ xs: 12, md: 3 }} style={{ marginTop: '10px' }}>
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch}
@@ -148,7 +148,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
                     selectedKeywords={selectedKeywords}
                 />
             </StyledGrid>
-            <StyledGrid item xs={12} md={6} style={{ marginTop: '10px', paddingRight: 0 }}>
+            <StyledGrid size={{ xs: 12, md: 6 }} style={{ marginTop: '10px', paddingRight: 0 }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch}

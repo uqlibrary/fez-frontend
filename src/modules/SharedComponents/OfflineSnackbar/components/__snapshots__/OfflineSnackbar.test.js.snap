@@ -19,13 +19,13 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
           class="MuiSnackbarContent-message css-ozrxnr-MuiSnackbarContent-message"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-js8yfx-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1ufc87a-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             />
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="margin-right: 24px;"
             >
               <svg
@@ -41,12 +41,12 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               Your connection is back online
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             />
           </div>
         </div>
@@ -91,13 +91,13 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
           class="MuiSnackbarContent-message css-ozrxnr-MuiSnackbarContent-message"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-js8yfx-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1ufc87a-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             />
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               style="margin-right: 24px;"
             >
               <svg
@@ -113,12 +113,12 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
             >
               Your connection is offline
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
             />
           </div>
         </div>
