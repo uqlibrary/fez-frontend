@@ -156,7 +156,9 @@
     "webpack-dev-middleware": "^8.3.0",
     "whatwg-fetch": "^3.6.20",
     "shell-quote": "^1.12.0",
-    "proxy-addr":"^2.0.8"
+    "proxy-addr": "^2.0.8",
+    "source-map-js": "^1.2.2",
+    "compression": "^1.8.2"
   },
   "dependencies": {
     "@babel/runtime": "^7.29.7",
@@ -246,12 +248,16 @@
     "throttle-debounce": "^5.0.0",
     "timezones.json": "^1.2.1",
     "usehooks-ts": "^3.1.1",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz",
+    "prosemirror-view": "^1.42.6"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.0"
   },
   "overrides": {
+    "prosemirror-view": "^1.42.6",
+    "compression": "^1.8.2",
+    "source-map-js": "^1.2.2",
     "shell-quote": "^1.12.0",
     "proxy-addr": "^2.0.8",
     "sass": {
