@@ -190,6 +190,12 @@ export const SearchJournals = () => {
 
             return;
         }
+
+        // Don't search until the URL keywords match the selected keywords.
+        if (areKeywordsDifferent(journalSearchQueryParams.keywords, selectedKeywords)) {
+            return;
+        }
+
         // reset facets filter, paging and sorting when keywords are removed
         // or the All Journals button is pressed for the first time
         const journalSearchQueryParamsSnapshot = { ...journalSearchQueryParams };
@@ -202,7 +208,6 @@ export const SearchJournals = () => {
         }
 
         if (isBrowsingAllJournals) {
-            fromHandleAllJournals.current = false;
             delete journalSearchQueryParamsSnapshot.keywords;
         }
 
@@ -213,9 +218,14 @@ export const SearchJournals = () => {
             () => dispatch(searchJournals(journalSearchQueryParamsSnapshot)),
             fromHandleKeywordDelete.current ? 1200 : 0,
         );
-        fromHandleKeywordDelete.current = fromHandleKeywordClear.current = false;
+        fromHandleKeywordDelete.current = fromHandleKeywordClear.current = fromHandleAllJournals.current = false;
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [showInputControls, hasAnySelectedKeywords, JSON.stringify(journalSearchQueryParams)]);
+    }, [
+        showInputControls,
+        hasAnySelectedKeywords,
+        JSON.stringify(journalSearchQueryParams), // eslint-disable-line react-hooks/exhaustive-deps
+        JSON.stringify(selectedKeywords), // eslint-disable-line react-hooks/exhaustive-deps
+    ]);
 
     const txt = locale.components.searchJournals;
     // Safety net: no selected keywords means we are in the initial (search-input) view, full stop.

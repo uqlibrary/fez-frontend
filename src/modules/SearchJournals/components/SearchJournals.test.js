@@ -425,6 +425,62 @@ describe('SearchJournals', () => {
             );
         });
 
+        it('should only dispatch one search when navigating from / to Browse All Journals', async () => {
+            jest.spyOn(actions, 'searchJournals').mockReturnValue(() => Promise.resolve({ ...mockData }));
+
+            jest.useFakeTimers();
+            jest.spyOn(global, 'clearTimeout').mockImplementation(() => {});
+
+            const allJournalsSearch =
+                '?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals&keywords%5BKeyword-all-journals%5D%5Boperand%5D=AND';
+
+            mockUseLocation.mockReturnValue({
+                pathname: pathConfig.journals.search,
+                search: '',
+            });
+
+            const { getByTestId, rerender } = setup({
+                state: {
+                    journalsListLoaded: true,
+                    journalsList: mockData,
+                },
+                route: pathConfig.journals.search,
+                initialEntries: [pathConfig.journals.search],
+            });
+
+            // There should be no search when initially loading `/`.
+            expect(actions.searchJournals).not.toHaveBeenCalled();
+
+            // Browse All Journals changes selectedKeywords and calls navigate().
+            fireEvent.click(getByTestId('journal-search-browse-all-button'));
+
+            expect(mockUseNavigate).toHaveBeenCalled();
+
+            // Simulate the URL change caused by navigate().
+            mockUseLocation.mockReturnValue({
+                pathname: pathConfig.journals.search,
+                search: allJournalsSearch,
+            });
+
+            setup(
+                {
+                    state: {
+                        journalsListLoaded: true,
+                        journalsList: mockData,
+                    },
+                    route: pathConfig.journals.search,
+                    initialEntries: [pathConfig.journals.search],
+                },
+                rerender,
+            );
+
+            act(() => {
+                jest.runAllTimers();
+            });
+
+            expect(actions.searchJournals).toHaveBeenCalledTimes(1);
+        });
+
         it('should sync selected keywords from a URL change (e.g. browser back/forward) without calling navigate', () => {
             mockUseLocation.mockReturnValue({ pathname: '/', search: keywordSearch('bioscience') });
             const { rerender } = setup({ state: { journalsListLoaded: true, journalsList: mockData } });
