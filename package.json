@@ -155,7 +155,8 @@
     "webpack-dev-server": "^6.0.0",
     "webpack-dev-middleware": "^8.3.0",
     "whatwg-fetch": "^3.6.20",
-    "shell-quote": "^1.12.0"
+    "shell-quote": "^1.12.0",
+    "proxy-addr":"^2.0.8"
   },
   "dependencies": {
     "@babel/runtime": "^7.29.7",
@@ -251,12 +252,8 @@
     "fsevents": "^2.3.0"
   },
   "overrides": {
-    "browserify": {
-      "shell-quote": "^1.12.0"
-    },
-    "launch-editor": {
-      "shell-quote": "^1.12.0"
-    },
+    "shell-quote": "^1.12.0",
+    "proxy-addr": "^2.0.8",
     "sass": {
       "immutable": "^5.1.8"
     },
