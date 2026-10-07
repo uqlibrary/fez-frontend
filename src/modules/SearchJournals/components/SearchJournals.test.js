@@ -8,12 +8,14 @@ import {
     createMatchMedia,
     within,
     waitFor,
+    userEvent,
+    waitForText,
 } from 'test-utils';
 import { pathConfig } from 'config';
 import * as actions from 'actions/journals.js';
 import * as searchJournalHooks from '../hooks';
 
-import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
+import { initialJournalSearchKeywords, initialState, keywordOnlySuffix } from 'reducers/journals';
 
 import SearchJournals, { areKeywordsDifferent } from './SearchJournals';
 import { mockData, mockDataWithFilterFacetsAndPagination } from 'mock/data/testing/journals/journalSearchResults';
@@ -182,8 +184,6 @@ describe('SearchJournals', () => {
         }
     });
 
-    /* Commented out test due bug in test cases causing 404 page not found error */
-
     it('should handle "all journals" keyword deletion', () => {
         const initialEntries = [
             '/?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals',
@@ -204,6 +204,40 @@ describe('SearchJournals', () => {
         expect(mockUseNavigate).toHaveBeenCalledWith({ pathname: path, search: '' }, { state: { scrollToTop: false } });
 
         expect(queryByText('Step 2.')).not.toBeInTheDocument();
+    });
+
+    it('should remove "all journals" keyword when adding a subject to the search criteria', async () => {
+        jest.spyOn(actions, 'searchJournals').mockReturnValue(() => Promise.resolve({ ...mockData }));
+        const { queryByTestId, getByText } = setup({
+            state: {
+                journalsListLoaded: true,
+                journalsList: { ...mockData },
+            },
+            storeState: {
+                [keywordOnlySuffix]: {
+                    journalSearchKeywords: {
+                        subjectFuzzyMatch: [
+                            {
+                                jnl_subject_cvo_id: 41000,
+                                jnl_subject_sources: 'ERA',
+                                jnl_subject_title: '1000 General',
+                            },
+                        ],
+                    },
+                },
+            },
+            initialEntries: [
+                '/?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals',
+            ],
+        });
+
+        await userEvent.click(queryByTestId('add-to-subject-selection-button'));
+        await waitFor(() => expect(queryByTestId('for-code-autocomplete-field-input')).toBeInTheDocument());
+        await userEvent.type(queryByTestId('for-code-autocomplete-field-input'), 'Gene');
+        await waitForText('1000 General');
+        await userEvent.click(getByText('1000 General'));
+        await waitFor(() => expect(queryByTestId('journal-search-chip-subject-1000-general')).toBeInTheDocument());
+        expect(queryByTestId('journal-search-chip-keyword-all-journals')).not.toBeInTheDocument();
     });
 
     it('should update querystring when operands are changed', () => {
