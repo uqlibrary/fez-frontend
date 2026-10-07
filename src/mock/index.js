@@ -622,7 +622,7 @@ export const setup = () => {
                     'Exported',
                     { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
                 ];
-            } else if (config.params.query?.includes('biological')) {
+            } else if (config.params.query?.includes('title:biological')) {
                 let maxCount = config.params.query?.includes('glycobiology') ? 4 : 8;
                 if (config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
                 const data = mockData.journalList.data.filter((element, index) => index < maxCount);
