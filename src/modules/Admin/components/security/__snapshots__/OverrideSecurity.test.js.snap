@@ -29,7 +29,7 @@ exports[`OverrideSecurity component should render properly 1`] = `
       </svg>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-t4ynyp-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
     >
       test
     </span>
