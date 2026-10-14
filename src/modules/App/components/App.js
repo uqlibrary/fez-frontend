@@ -267,6 +267,9 @@ const AppClass = ({
     return (
         <StyledGrid container sx={{ width: '100%' }}>
             <Meta routesConfig={routesConfig} />
+            {/* UQ Design System header is a solid $purple-500 (#51247a), applied here via color="primary"
+                (-> primary.main). The DS deprecated the purple->magenta gradient for the header - the
+                gradient is commented out in the DS header component and now applies only to the hero. */}
             <AppBar className="AppBar" color="primary" position="fixed">
                 <Toolbar sx={{ height: '70px' }}>
                     <Grid

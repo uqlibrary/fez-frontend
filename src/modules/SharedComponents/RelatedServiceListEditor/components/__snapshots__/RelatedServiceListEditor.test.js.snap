@@ -18,7 +18,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -26,14 +26,14 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -56,7 +56,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -73,7 +73,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -82,7 +82,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -104,7 +104,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -207,7 +207,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -315,7 +315,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -342,7 +342,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           disabled=""
                           tabindex="-1"
@@ -373,7 +373,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -421,7 +421,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -429,14 +429,14 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -459,7 +459,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -476,7 +476,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -485,7 +485,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -507,7 +507,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -610,7 +610,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -718,7 +718,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -745,7 +745,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           tabindex="0"
                           type="button"
@@ -775,7 +775,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -873,7 +873,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -899,7 +899,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -930,7 +930,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -978,7 +978,7 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -986,14 +986,14 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -1016,7 +1016,7 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -1033,7 +1033,7 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -1042,7 +1042,7 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -1064,7 +1064,7 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -1098,7 +1098,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -1106,14 +1106,14 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -1136,7 +1136,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -1153,7 +1153,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -1162,7 +1162,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -1184,7 +1184,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -1287,7 +1287,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -1395,7 +1395,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -1422,7 +1422,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           tabindex="0"
                           type="button"
@@ -1452,7 +1452,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -1550,7 +1550,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -1576,7 +1576,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -1607,7 +1607,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -1657,7 +1657,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -1665,14 +1665,14 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -1695,7 +1695,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -1712,7 +1712,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -1721,7 +1721,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -1743,7 +1743,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -1846,7 +1846,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -1954,7 +1954,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -1981,7 +1981,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           disabled=""
                           tabindex="-1"
@@ -2012,7 +2012,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -2060,7 +2060,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -2068,14 +2068,14 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -2098,7 +2098,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -2115,7 +2115,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -2124,7 +2124,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -2146,7 +2146,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -2249,7 +2249,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -2357,7 +2357,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -2384,7 +2384,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           tabindex="0"
                           type="button"
@@ -2414,7 +2414,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -2512,7 +2512,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -2538,7 +2538,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -2569,7 +2569,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -2617,7 +2617,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -2625,14 +2625,14 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -2655,7 +2655,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -2672,7 +2672,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -2681,7 +2681,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -2703,7 +2703,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -2806,7 +2806,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -2914,7 +2914,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -2941,7 +2941,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           tabindex="0"
                           type="button"
@@ -2971,7 +2971,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -3069,7 +3069,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -3095,7 +3095,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -3126,7 +3126,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -3174,7 +3174,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -3182,14 +3182,14 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -3212,7 +3212,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -3229,7 +3229,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -3238,7 +3238,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -3260,7 +3260,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -3363,7 +3363,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -3471,7 +3471,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -3498,7 +3498,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           tabindex="0"
                           type="button"
@@ -3528,7 +3528,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -3626,7 +3626,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -3652,7 +3652,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -3683,7 +3683,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -3731,7 +3731,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -3739,14 +3739,14 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -3769,7 +3769,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -3786,7 +3786,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -3795,7 +3795,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -3817,7 +3817,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -3920,7 +3920,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -4028,7 +4028,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -4055,7 +4055,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           tabindex="0"
                           type="button"
@@ -4085,7 +4085,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -4183,7 +4183,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -4209,7 +4209,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -4240,7 +4240,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -4288,7 +4288,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -4296,14 +4296,14 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -4326,7 +4326,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -4343,7 +4343,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -4352,7 +4352,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -4374,7 +4374,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -4477,7 +4477,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -4585,7 +4585,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -4612,7 +4612,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           disabled=""
                           tabindex="-1"
@@ -4643,7 +4643,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -4691,7 +4691,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -4699,14 +4699,14 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -4729,7 +4729,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -4746,7 +4746,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -4755,7 +4755,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -4777,7 +4777,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -4880,7 +4880,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -4988,7 +4988,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -5015,7 +5015,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           disabled=""
                           tabindex="-1"
@@ -5046,7 +5046,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -5094,7 +5094,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -5102,14 +5102,14 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -5132,7 +5132,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -5149,7 +5149,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -5158,7 +5158,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5180,7 +5180,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -5283,7 +5283,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -5391,7 +5391,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -5418,7 +5418,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           disabled=""
                           tabindex="-1"
@@ -5449,7 +5449,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           disabled=""
                           tabindex="-1"
                           type="button"
@@ -5548,7 +5548,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -5574,7 +5574,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -5605,7 +5605,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -5653,7 +5653,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -5661,14 +5661,14 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -5691,7 +5691,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -5708,7 +5708,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -5717,7 +5717,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -5739,7 +5739,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -5842,7 +5842,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -5950,7 +5950,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -5977,7 +5977,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           disabled=""
                           tabindex="-1"
@@ -6008,7 +6008,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           disabled=""
                           tabindex="-1"
                           type="button"
@@ -6107,7 +6107,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -6133,7 +6133,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           disabled=""
                           tabindex="-1"
@@ -6164,7 +6164,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -6212,7 +6212,7 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -6220,14 +6220,14 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -6250,7 +6250,7 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -6267,7 +6267,7 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -6276,7 +6276,7 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -6298,7 +6298,7 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -6332,7 +6332,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -6340,14 +6340,14 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -6370,7 +6370,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -6387,7 +6387,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -6396,7 +6396,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -6418,7 +6418,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -6431,7 +6431,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
       </div>
     </div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
     >
       Some error
     </span>
@@ -6457,7 +6457,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -6465,14 +6465,14 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -6495,7 +6495,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -6512,7 +6512,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -6521,7 +6521,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -6543,7 +6543,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -6556,7 +6556,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
       </div>
     </div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
     >
       <span>
         Test error 1
@@ -6587,7 +6587,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -6595,14 +6595,14 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -6625,7 +6625,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -6642,7 +6642,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -6651,7 +6651,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -6673,7 +6673,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -6776,7 +6776,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -6884,7 +6884,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -6911,7 +6911,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           tabindex="0"
                           type="button"
@@ -6941,7 +6941,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -7039,7 +7039,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=1"
                           tabindex="0"
                           type="button"
@@ -7065,7 +7065,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=1"
                           tabindex="0"
                           type="button"
@@ -7095,7 +7095,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -7193,7 +7193,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=2"
                           tabindex="0"
                           type="button"
@@ -7219,7 +7219,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=2"
                           tabindex="0"
                           type="button"
@@ -7249,7 +7249,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -7347,7 +7347,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=3"
                           tabindex="0"
                           type="button"
@@ -7373,7 +7373,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=3"
                           disabled=""
                           tabindex="-1"
@@ -7404,7 +7404,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -7452,7 +7452,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -7460,14 +7460,14 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -7490,7 +7490,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -7507,7 +7507,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -7516,7 +7516,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -7538,7 +7538,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -7551,7 +7551,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
       </div>
     </div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1nkh0cj-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1ika5mu-MuiTypography-root"
     >
       Test error
     </span>
@@ -7577,7 +7577,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               for="rek-related-service-id"
               id="rek-related-service-id-label"
@@ -7585,14 +7585,14 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
               Related Service ID
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1v5bsei-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-h9sn1w-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-pwuujq-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1ovk4op-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -7615,7 +7615,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
               />
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
             >
@@ -7632,7 +7632,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
           data-testid="rek-related-service-desc"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ogdmdb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="rek-related-service-desc-label"
             for="rek-related-service-desc-input"
@@ -7641,7 +7641,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
             Related Service Description
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -7663,7 +7663,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1lv1zgq-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="rek-related-service-add"
           data-testid="rek-related-service-add"
           disabled=""
@@ -7766,7 +7766,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
                       >
                         <button
                           aria-label="Remove all entries"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >
@@ -7874,7 +7874,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
                       >
                         <button
                           aria-label="Move entry up the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-up=0"
                           disabled=""
                           tabindex="-1"
@@ -7901,7 +7901,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
                       >
                         <button
                           aria-label="Move entry down the order"
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="related-service-list-move-down=0"
                           disabled=""
                           tabindex="-1"
@@ -7932,7 +7932,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
                       >
                         <button
                           aria-label="Remove this entry"
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                           tabindex="0"
                           type="button"
                         >

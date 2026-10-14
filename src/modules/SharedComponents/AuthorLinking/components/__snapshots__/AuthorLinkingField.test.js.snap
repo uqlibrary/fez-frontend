@@ -7,7 +7,7 @@ exports[`Component AuthorLinkingField should render as expected 1`] = `
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-dhorc6-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-1svxk3g-MuiGrid-root"
       />
     </div>
   </div>

@@ -651,11 +651,11 @@ export const AttachedFiles = ({
                                     >
                                         <Grid size={6} />
                                         <Grid size={6}>
-                                            <Typography sx={{ color: mui1theme.palette.warning.main }}>
+                                            <Typography sx={{ color: mui1theme.palette.warning.contrastText }}>
                                                 <WarningIcon
                                                     fontSize={'small'}
                                                     sx={{
-                                                        color: mui1theme.palette.warning.main,
+                                                        color: mui1theme.palette.warning.contrastText,
                                                         marginRight: '10px',
                                                         marginBottom: '-4px',
                                                     }}

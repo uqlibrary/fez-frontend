@@ -68,7 +68,7 @@ exports[`AdminContainer component should render default view 1`] = `
               >
                 <button
                   aria-label="Learn about keyboard shortcuts"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"
                   data-testid="help-icon"
@@ -77,7 +77,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   type="button"
                 >
                   <svg
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
                     role="img"
@@ -108,7 +108,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-qr4a0t-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-r3f5zq-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="admin-work-cancel-top"
                     data-testid="admin-work-cancel-top"
                     id="admin-work-cancel-top"
@@ -123,7 +123,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1k4gxy1-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-qr4a0t-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-r3f5zq-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="unpublish-admin-top"
                     data-testid="unpublish-admin-top"
                     id="admin-work-unpublish-top"
@@ -137,7 +137,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1at5iln-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                     data-analyticsid="submit-admin-top"
                     data-testid="submit-admin-top"
                     id="admin-work-submit-top"
@@ -242,7 +242,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                               >
                                 <label
-                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                   data-shrink="true"
                                   for="rek-ismemberof"
                                   id="rek-ismemberof-label"
@@ -250,17 +250,17 @@ exports[`AdminContainer component should render default view 1`] = `
                                   Member of collection
                                   <span
                                     aria-hidden="true"
-                                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                   >
                                      
                                     *
                                   </span>
                                 </label>
                                 <div
-                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                 >
                                   <div
-                                    class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1vywjq7-MuiButtonBase-root-MuiChip-root"
+                                    class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1m25iy2-MuiButtonBase-root-MuiChip-root"
                                     data-tag-index="0"
                                     data-testid="rek-ismemberof-0"
                                     id="rek-ismemberof-0"
@@ -285,7 +285,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     </svg>
                                   </div>
                                   <div
-                                    class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1vywjq7-MuiButtonBase-root-MuiChip-root"
+                                    class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1m25iy2-MuiButtonBase-root-MuiChip-root"
                                     data-tag-index="1"
                                     data-testid="rek-ismemberof-1"
                                     id="rek-ismemberof-1"
@@ -331,7 +331,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   >
                                     <button
                                       aria-label="Open"
-                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-5fosz2-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                                       tabindex="-1"
                                       title="Open"
                                       type="button"
@@ -393,7 +393,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-herdc-code-label"
                                 id="rek-herdc-code-label"
@@ -401,7 +401,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Category code
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -452,7 +452,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-herdc-status-label"
                                 id="rek-herdc-status-label"
@@ -460,7 +460,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Category code status
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -511,7 +511,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="true"
                                 data-testid="rek-institutional-status-label"
                                 id="rek-institutional-status-label"
@@ -519,7 +519,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Institutional status
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -565,7 +565,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="true"
                                 data-testid="rek-refereed-source-label"
                                 id="rek-refereed-source-label"
@@ -573,7 +573,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Refereed source
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -619,7 +619,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-content-indicator-label"
                                 id="rek-content-indicator-label"
@@ -627,7 +627,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Content Indicators
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -678,7 +678,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="true"
                                 data-testid="rek-oa-status-label"
                                 id="rek-oa-status-label"
@@ -686,7 +686,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 OA status
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -732,7 +732,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-oa-status-type-label"
                                 id="rek-oa-status-type-label"
@@ -740,7 +740,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 OA status type
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -791,7 +791,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-license-label"
                                 id="rek-license-label"
@@ -799,7 +799,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 License
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -1310,7 +1310,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1yhclbk-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-pfx0xs-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -1384,7 +1384,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-language-label"
                                 id="rek-language-label"
@@ -1392,7 +1392,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Language of work
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -1500,7 +1500,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       for="rek-isbn-input"
                                       id="rek-isbn-input-label"
@@ -1508,7 +1508,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       ISBN value
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -1527,7 +1527,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
-                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                                     data-analyticsid="rek-isbn-add"
                                     data-testid="rek-isbn-add"
                                     disabled=""
@@ -1546,7 +1546,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-isbn-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -1614,7 +1614,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       for="rek-issn-input"
                                       id="rek-issn-input-label"
@@ -1622,7 +1622,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       ISSN value
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -1641,7 +1641,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
-                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                                     data-analyticsid="rek-issn-add"
                                     data-testid="rek-issn-add"
                                     disabled=""
@@ -1660,7 +1660,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-issn-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -1717,7 +1717,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               data-testid="rek-publisher"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-publisher-label"
                                 for="rek-publisher-input"
@@ -1726,7 +1726,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Publisher name
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -1754,7 +1754,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                               >
                                 <label
-                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                   data-shrink="false"
                                   for="rek-series"
                                   id="rek-series-label"
@@ -1762,7 +1762,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   Series
                                 </label>
                                 <div
-                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                 >
                                   <input
                                     aria-autocomplete="list"
@@ -1793,7 +1793,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               data-testid="rek-start-page"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-start-page-label"
                                 for="rek-start-page-input"
@@ -1802,7 +1802,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Start page
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -1828,7 +1828,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               data-testid="rek-end-page"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-end-page-label"
                                 for="rek-end-page-input"
@@ -1837,7 +1837,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 End page
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -1863,7 +1863,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               data-testid="rek-total-pages"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-total-pages-label"
                                 for="rek-total-pages-input"
@@ -1872,7 +1872,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Total pages / Extent
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -1901,13 +1901,13 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                               >
                                 <label
-                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1kypf15-MuiFormLabel-root-MuiInputLabel-root"
+                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-khcl4c-MuiFormLabel-root-MuiInputLabel-root"
                                   data-shrink="true"
                                 >
                                   Publication date
                                   <span
                                     aria-hidden="true"
-                                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                   >
                                      
                                     *
@@ -1928,7 +1928,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <div
-                                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -1950,7 +1950,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-90y7z4-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-qza0gn-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-1dexu2k-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
                                         aria-expanded="false"
@@ -1999,7 +1999,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <div
-                                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                       >
                                         <input
                                           aria-invalid="false"
@@ -2498,7 +2498,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1yhclbk-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-pfx0xs-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -2530,7 +2530,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               data-testid="rek-parent-publication"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-parent-publication-label"
                                 for="rek-parent-publication-input"
@@ -2539,7 +2539,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Parent Publication
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-f6ms2o-MuiInputBase-root-MuiInput-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-1j6oa25-MuiInputBase-root-MuiInput-root"
                               >
                                 <textarea
                                   aria-invalid="false"
@@ -2573,7 +2573,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                               >
                                 <label
-                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                   data-shrink="false"
                                   for="rek-org-name"
                                   id="rek-org-name-label"
@@ -2581,7 +2581,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   Institution
                                 </label>
                                 <div
-                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                 >
                                   <input
                                     aria-autocomplete="list"
@@ -2614,7 +2614,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                               >
                                 <label
-                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                   data-shrink="false"
                                   for="rek-org-unit-name"
                                   id="rek-org-unit-name-label"
@@ -2622,7 +2622,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   School, Centre or Institute
                                 </label>
                                 <div
-                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                 >
                                   <input
                                     aria-autocomplete="list"
@@ -2652,7 +2652,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               data-testid="rek-report-number"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-report-number-label"
                                 for="rek-report-number-input"
@@ -2661,7 +2661,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Report number
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -2698,7 +2698,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       for="rek-raid-input"
                                       id="rek-raid-input-label"
@@ -2706,7 +2706,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       RAiD value
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -2725,7 +2725,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
-                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                                     data-analyticsid="rek-raid-add"
                                     data-testid="rek-raid-add"
                                     disabled=""
@@ -2744,7 +2744,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-raid-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -2812,7 +2812,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       for="rek-keywords-input"
                                       id="rek-keywords-input-label"
@@ -2820,7 +2820,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       Keywords
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -2839,7 +2839,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
                                 >
                                   <button
-                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                                     data-analyticsid="rek-keywords-add"
                                     data-testid="rek-keywords-add"
                                     disabled=""
@@ -2856,7 +2856,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-keywords-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -2920,7 +2920,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                 >
                                   <label
-                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                     data-shrink="false"
                                     for="rek-subject"
                                     id="rek-subject-label"
@@ -2928,7 +2928,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     Begin typing to select and add subject(s)
                                   </label>
                                   <div
-                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                   >
                                     <input
                                       aria-autocomplete="list"
@@ -2951,7 +2951,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     >
                                       <button
                                         aria-label="Open"
-                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-5fosz2-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                                         tabindex="-1"
                                         title="Open"
                                         type="button"
@@ -2965,7 +2965,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-subjects-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -3029,7 +3029,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                 >
                                   <label
-                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                     data-shrink="false"
                                     for="rek-sustainable-development-goal"
                                     id="rek-sustainable-development-goal-label"
@@ -3037,7 +3037,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     Begin typing to select and add SDG(s)
                                   </label>
                                   <div
-                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                   >
                                     <input
                                       aria-autocomplete="list"
@@ -3060,7 +3060,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     >
                                       <button
                                         aria-label="Open"
-                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-5fosz2-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                                         tabindex="-1"
                                         title="Open"
                                         type="button"
@@ -3074,7 +3074,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-sustainable-development-goal-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -3138,7 +3138,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                 >
                                   <label
-                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                     data-shrink="false"
                                     for="rek-isdatasetof"
                                     id="rek-isdatasetof-label"
@@ -3146,7 +3146,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     Item name
                                   </label>
                                   <div
-                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                   >
                                     <input
                                       aria-autocomplete="list"
@@ -3169,7 +3169,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     >
                                       <button
                                         aria-label="Open"
-                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-5fosz2-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                                         tabindex="-1"
                                         title="Open"
                                         type="button"
@@ -3183,7 +3183,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-isderivationof-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -3332,7 +3332,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   >
                                     <button
                                       aria-label="Add author"
-                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                                       data-mui-internal-clone-element="true"
                                       data-testid="rek-author-add-author"
                                       id="rek-author-add-author"
@@ -3422,7 +3422,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                   >
                                                     <svg
                                                       aria-hidden="true"
-                                                      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                                      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                                       data-testid="PeopleIcon"
                                                       focusable="false"
                                                       viewBox="0 0 24 24"
@@ -3436,7 +3436,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                     class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                                   >
                                                     <span
-                                                      class="MuiTypography-root MuiTypography-caption css-4deszx-MuiTypography-root"
+                                                      class="MuiTypography-root MuiTypography-caption css-olt67m-MuiTypography-root"
                                                     >
                                                       Author's name as published
                                                     </span>
@@ -3497,7 +3497,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                               >
                                                 <span
-                                                  class="MuiTypography-root MuiTypography-caption css-4deszx-MuiTypography-root"
+                                                  class="MuiTypography-root MuiTypography-caption css-olt67m-MuiTypography-root"
                                                 >
                                                   UQ identifiers
                                                 </span>
@@ -3568,7 +3568,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiTableBody-root css-tlrxt6-MuiTableBody-root"
                                     >
                                       <tr
-                                        class="MuiTableRow-root css-e9t0og-MuiTableRow-root"
+                                        class="MuiTableRow-root css-1t6mhmf-MuiTableRow-root"
                                         data-index="0"
                                         data-testid="rek-author-list-row-0"
                                         id="rek-author-list-row-0"
@@ -3584,7 +3584,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           >
                                             <button
                                               aria-label="Expand"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1cx15j9-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-3ntkiv-MuiButtonBase-root-MuiIconButton-root"
                                               data-testid="expandPanelIcon-6168"
                                               id="expandPanelIcon-6168"
                                               tabindex="0"
@@ -3755,7 +3755,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </td>
                                       </tr>
                                       <tr
-                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-1t4kkhn-MuiTableRow-root"
+                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-aka9hy-MuiTableRow-root"
                                         data-index="1"
                                         data-testid="rek-author-list-row-0-detailPanel"
                                         id="rek-author-list-row-0-detailPanel"
@@ -3766,7 +3766,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         />
                                       </tr>
                                       <tr
-                                        class="MuiTableRow-root css-e9t0og-MuiTableRow-root"
+                                        class="MuiTableRow-root css-1t6mhmf-MuiTableRow-root"
                                         data-index="2"
                                         data-testid="rek-author-list-row-1"
                                         id="rek-author-list-row-1"
@@ -3782,7 +3782,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           >
                                             <button
                                               aria-label="Expand"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1cx15j9-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-3ntkiv-MuiButtonBase-root-MuiIconButton-root"
                                               data-testid="expandPanelIcon-84025"
                                               id="expandPanelIcon-84025"
                                               tabindex="0"
@@ -3953,7 +3953,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </td>
                                       </tr>
                                       <tr
-                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-1t4kkhn-MuiTableRow-root"
+                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-aka9hy-MuiTableRow-root"
                                         data-index="3"
                                         data-testid="rek-author-list-row-1-detailPanel"
                                         id="rek-author-list-row-1-detailPanel"
@@ -4089,7 +4089,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   >
                                     <button
                                       aria-label="Add editor"
-                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                                       data-mui-internal-clone-element="true"
                                       data-testid="rek-contributor-add-editor"
                                       id="rek-contributor-add-editor"
@@ -4179,7 +4179,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                   >
                                                     <svg
                                                       aria-hidden="true"
-                                                      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                                      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                                       data-testid="PeopleIcon"
                                                       focusable="false"
                                                       viewBox="0 0 24 24"
@@ -4193,7 +4193,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                     class="MuiGrid-root MuiGrid-direction-xs-row css-w2kqzq-MuiGrid-root"
                                                   >
                                                     <span
-                                                      class="MuiTypography-root MuiTypography-caption css-4deszx-MuiTypography-root"
+                                                      class="MuiTypography-root MuiTypography-caption css-olt67m-MuiTypography-root"
                                                     >
                                                       Editor's name as published
                                                     </span>
@@ -4254,7 +4254,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                               >
                                                 <span
-                                                  class="MuiTypography-root MuiTypography-caption css-4deszx-MuiTypography-root"
+                                                  class="MuiTypography-root MuiTypography-caption css-olt67m-MuiTypography-root"
                                                 >
                                                   UQ identifiers
                                                 </span>
@@ -4446,7 +4446,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               data-testid="rek-doi"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-doi-label"
                                 for="rek-doi-input"
@@ -4455,7 +4455,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 DOI
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                               >
                                 <input
                                   aria-invalid="false"
@@ -4538,7 +4538,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     data-testid="rek-link"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       data-testid="rek-link-label"
                                       for="rek-link-input"
@@ -4547,7 +4547,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       Link
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -4573,7 +4573,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     data-testid="rek-link-description"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       data-testid="rek-link-description-label"
                                       for="rek-link-description-input"
@@ -4582,7 +4582,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       Description
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -4603,7 +4603,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-kg4boa-MuiGrid-root"
                                 >
                                   <button
-                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                                     data-analyticsid="rek-link-add"
                                     data-testid="rek-link-add"
                                     disabled=""
@@ -4622,7 +4622,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 id="rek-link-list"
                               />
                               <p
-                                class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                               />
                             </div>
                           </div>
@@ -4725,7 +4725,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     data-testid="rek-grant-agency"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       data-testid="rek-grant-agency-label"
                                       for="rek-grant-agency-input"
@@ -4734,7 +4734,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       Grant Agency
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -4761,7 +4761,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     data-testid="rek-grant-id"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       data-testid="rek-grant-id-label"
                                       for="rek-grant-id-input"
@@ -4770,7 +4770,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       Grant ID
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -4789,7 +4789,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     </div>
                                   </div>
                                   <div
-                                    class="MuiFormHelperText-root css-b9jxy4-MuiFormHelperText-root"
+                                    class="MuiFormHelperText-root css-1ylemp3-MuiFormHelperText-root"
                                   >
                                     Accepts IDs or full URLs
                                   </div>
@@ -4801,14 +4801,14 @@ exports[`AdminContainer component should render default view 1`] = `
                                     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                                   >
                                     <span
-                                      class="MuiTypography-root MuiTypography-caption css-4deszx-MuiTypography-root"
+                                      class="MuiTypography-root MuiTypography-caption css-olt67m-MuiTypography-root"
                                       style="margin-bottom: -3px;"
                                     >
                                        
                                        
                                     </span>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
                                         aria-disabled="true"
@@ -4852,7 +4852,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                 >
                                   <button
-                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                                     data-analyticsid="rek-grant-add"
                                     data-testid="rek-grant-add"
                                     disabled=""
@@ -4967,7 +4967,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                                     >
                                       <label
-                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                         data-shrink="false"
                                         for="rek-related-service-id"
                                         id="rek-related-service-id-label"
@@ -4975,7 +4975,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         Related Service ID
                                       </label>
                                       <div
-                                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-7ln61f-MuiInputBase-root-MuiInput-root"
                                       >
                                         <input
                                           aria-autocomplete="list"
@@ -5006,7 +5006,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     data-testid="rek-related-service-desc"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="false"
                                       data-testid="rek-related-service-desc-label"
                                       for="rek-related-service-desc-input"
@@ -5015,7 +5015,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                       Related Service Description
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1racoc5-MuiInputBase-root-MuiInput-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-7ln61f-MuiInputBase-root-MuiInput-root"
                                     >
                                       <input
                                         aria-invalid="false"
@@ -5037,7 +5037,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-11eetqs-MuiGrid-root"
                                 >
                                   <button
-                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                                     data-analyticsid="rek-related-service-add"
                                     data-testid="rek-related-service-add"
                                     disabled=""
@@ -5140,7 +5140,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 >
                                                   <button
                                                     aria-label="Remove all entries"
-                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                                                     tabindex="0"
                                                     type="button"
                                                   >
@@ -5248,7 +5248,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 >
                                                   <button
                                                     aria-label="Move entry up the order"
-                                                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                                                     data-testid="related-service-list-move-up=0"
                                                     disabled=""
                                                     tabindex="-1"
@@ -5275,7 +5275,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 >
                                                   <button
                                                     aria-label="Move entry down the order"
-                                                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                                                     data-testid="related-service-list-move-down=0"
                                                     disabled=""
                                                     tabindex="-1"
@@ -5301,7 +5301,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 >
                                                   <button
                                                     aria-label="Edit this entry"
-                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                                                     data-analyticsid="edit-related-service-0"
                                                     id="edit-related-service-0"
                                                     tabindex="0"
@@ -5332,7 +5332,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 >
                                                   <button
                                                     aria-label="Remove this entry"
-                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                                                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                                                     tabindex="0"
                                                     type="button"
                                                   >
@@ -5919,7 +5919,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1yhclbk-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-pfx0xs-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -6465,7 +6465,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1yhclbk-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-pfx0xs-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -6657,7 +6657,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             class="MuiBox-root css-hpgf8j"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1jips3t-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-abo9cv-MuiGrid-root"
                             >
                               <div
                                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-sxuzkt-MuiGrid-root"
@@ -6694,7 +6694,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-11"
                           >
                             <div
@@ -6705,7 +6705,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -6809,7 +6809,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-15"
                           >
                             <div
@@ -6820,7 +6820,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -6933,7 +6933,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-16"
                           >
                             <div
@@ -6944,7 +6944,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -7057,7 +7057,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-17"
                           >
                             <div
@@ -7068,7 +7068,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -7181,7 +7181,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-13"
                           >
                             <div
@@ -7192,7 +7192,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -7305,7 +7305,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-14"
                           >
                             <div
@@ -7316,7 +7316,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -7429,7 +7429,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-31"
                           >
                             <div
@@ -7440,7 +7440,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -7553,7 +7553,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             </div>
                           </div>
                           <div
-                            class="MuiBox-root css-1vn0y5f"
+                            class="MuiBox-root css-qjulvg"
                             data-testid="fez-datastream-info-attached-list-row-32"
                           >
                             <div
@@ -7564,7 +7564,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                                  class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                                   data-testid="PictureAsPdfIcon"
                                   focusable="false"
                                   viewBox="0 0 24 24"
@@ -8361,7 +8361,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   </div>
                                 </div>
                                 <div
-                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1yhclbk-MuiTiptap-RichTextContent-root"
+                                  class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-pfx0xs-MuiTiptap-RichTextContent-root"
                                 >
                                   <div
                                     class="tiptap ProseMirror"
@@ -8437,7 +8437,7 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                             >
                               <label
-                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hz3as-MuiFormLabel-root-MuiInputLabel-root"
+                                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-atztrx-MuiFormLabel-root-MuiInputLabel-root"
                                 data-shrink="false"
                                 data-testid="rek-sensitive-handling-note-id-label"
                                 id="rek-sensitive-handling-note-id-label"
@@ -8445,7 +8445,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 Sensitive Handling Note
                               </label>
                               <div
-                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                               >
                                 <div
                                   aria-expanded="false"
@@ -8565,7 +8565,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                 </svg>
                               </span>
                               <div
-                                class="MuiTypography-root MuiTypography-body1 css-11kmvqb-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-8zgo81-MuiTypography-root"
                                 data-testid="rek-copyright-label"
                                 id="rek-copyright-label"
                               >
@@ -8624,7 +8624,7 @@ exports[`AdminContainer component should render default view 1`] = `
                       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                     >
                       <div
-                        class="MuiCardHeader-root css-5ngt85-MuiCardHeader-root"
+                        class="MuiCardHeader-root css-l49v1u-MuiCardHeader-root"
                       >
                         <div
                           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -8777,7 +8777,7 @@ exports[`AdminContainer component should render default view 1`] = `
                       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
                     >
                       <div
-                        class="MuiCardHeader-root css-5ngt85-MuiCardHeader-root"
+                        class="MuiCardHeader-root css-l49v1u-MuiCardHeader-root"
                       >
                         <div
                           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
@@ -8918,21 +8918,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-0-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9002,21 +9002,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-1-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9086,21 +9086,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-2-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9170,21 +9170,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-3-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9254,21 +9254,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-4-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9338,21 +9338,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-5-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9422,21 +9422,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-6-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9506,21 +9506,21 @@ exports[`AdminContainer component should render default view 1`] = `
                                     style="width: 100%;"
                                   >
                                     <label
-                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-150h25l-MuiFormLabel-root-MuiInputLabel-root"
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1hcdoc7-MuiFormLabel-root-MuiInputLabel-root"
                                       data-shrink="true"
                                       id="dsi-security-policy-7-label"
                                     >
                                       Security policy for this file to override inheritance
                                       <span
                                         aria-hidden="true"
-                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                                        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-h9sn1w-MuiFormLabel-asterisk"
                                       >
                                          
                                         *
                                       </span>
                                     </label>
                                     <div
-                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-1ghq726-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-104ie7g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                       required=""
                                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -9592,7 +9592,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1x938dn-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-qr4a0t-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-r3f5zq-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="admin-work-cancel"
                   data-testid="admin-work-cancel"
                   id="admin-work-cancel"
@@ -9607,7 +9607,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1k4gxy1-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-qr4a0t-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-r3f5zq-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="unpublish-admin"
                   data-testid="unpublish-admin"
                   id="admin-work-unpublish"
@@ -9621,7 +9621,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1at5iln-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-syxmsz-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1um578z-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="submit-admin"
                   data-testid="submit-admin"
                   id="admin-work-submit"

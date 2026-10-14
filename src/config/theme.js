@@ -4,9 +4,9 @@ import { IS_JEST_TEST } from './general';
 
 const palette = {
     primary: {
-        light: '#962A8B',
-        main: '#51247A',
-        dark: '#3b1a59',
+        light: '#962A8B', // $purple-light
+        main: '#51247A', // $purple-500
+        dark: '#3a1f53', // $purple-700
         gradient: {
             horizontal: {
                 background: 'linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
@@ -24,36 +24,55 @@ const palette = {
     },
     default: {
         light: 'rgba(0, 0, 0, 0.87)',
-        main: '#595959',
-        dark: '#333333',
+        main: '#5e5b60', // $grey-800
+        dark: '#302c33', // $grey-925
     },
     secondary: {
-        light: '#f2f2f2',
-        main: '#595959',
-        dark: '#333333',
+        light: '#f3f3f4', // $grey-50
+        main: '#5e5b60', // $grey-800
+        dark: '#302c33', // $grey-925
     },
     accent: {
-        light: '#54acff',
-        main: '#316799',
-        dark: '#2a557d',
+        // UQ Design System $utility-500 (#0d6dcd) — the DS utility blue; single colour across weights.
+        // Used as decorative header / selected-row backgrounds with white text (white on #0d6dcd ~5.1:1 AA).
+        light: '#0d6dcd',
+        main: '#0d6dcd',
+        dark: '#0d6dcd',
     },
     white: {
         main: '#FFFFFF',
     },
     warning: {
-        light: '#ff9a57',
-        main: '#bf5000',
-        dark: '#542400',
+        // UQ Design System $warning-500 (#f7ba1e) — the DS warning fill, single colour across weights.
+        // Pair with dark text (contrastText $grey-900): grey-900 on #f7ba1e ~6.7:1 passes AA. Never white text.
+        light: '#f7ba1e',
+        main: '#f7ba1e',
+        dark: '#f7ba1e',
+        contrastText: '#3b383e', // $grey-900
     },
     success: {
-        light: '#00a700',
-        main: '#007200',
-        dark: '#005000',
+        // UQ Design System $success-700 (#3b7c3e) — single colour across weights (the DS defines no weighted
+        // success variant for these uses); AA on white (~5:1) for non-alert success text/icon
+        light: '#3b7c3e',
+        main: '#3b7c3e',
+        dark: '#3b7c3e',
     },
     error: {
-        light: '#ff0000',
-        main: '#c80000',
-        dark: '#790000',
+        // UQ Design System $error-700 (#9d2424) — single colour across weights; AA on white (~7.4:1) and on
+        // #efefef fields (~5.9:1), e.g. form-field error text (DS $error-500 #d62929 fails on #efefef)
+        light: '#9d2424',
+        main: '#9d2424',
+        dark: '#9d2424',
+    },
+    // UQ Design System "page" alert colours: a light $*-50 tint background + $grey-900 text (for every
+    // type). Keyed by the palette entry each alert type maps to (see the Alert component's paletteIndex).
+    alert: {
+        text: '#3b383e', // $grey-900
+        accent: { background: '#e7f0fa' }, // info → $utility-50
+        success: { background: '#edf6ed' }, // done → $success-50
+        warning: { background: '#fef8e8' }, // $warning-50
+        error: { background: '#fbeaea' }, // $error-50
+        secondary: { background: '#f3f3f4' }, // help → $grey-50
     },
 };
 

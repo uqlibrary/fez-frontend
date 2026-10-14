@@ -7,7 +7,7 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-4x35a1-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-365cyv-MuiFormLabel-root"
       id="test-label"
     />
     <div
@@ -90,7 +90,7 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
           class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-fmjne0-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-15lgwpk-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -117,7 +117,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-4x35a1-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-365cyv-MuiFormLabel-root"
       id="test-label"
     />
     <div
@@ -200,7 +200,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
           class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-fmjne0-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-15lgwpk-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
@@ -217,7 +217,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-u90aml-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-1g2spw3-MuiFormHelperText-root"
     >
       Something bad happened
     </p>

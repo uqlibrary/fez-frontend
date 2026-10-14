@@ -3,7 +3,7 @@
 exports[`Component FileUploadRowMobileView should not render access selector or date picker if access condition is not required to select 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
+    class="MuiList-root MuiList-padding css-8hvwnm-MuiList-root"
   >
     <li
       class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
@@ -47,7 +47,7 @@ exports[`Component FileUploadRowMobileView should not render access selector or 
 exports[`Component FileUploadRowMobileView should not render embargo date picker if access condition is set to closed access 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
+    class="MuiList-root MuiList-padding css-8hvwnm-MuiList-root"
   >
     <li
       class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
@@ -210,7 +210,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"
@@ -238,7 +238,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
 exports[`Component FileUploadRowMobileView should render default view 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
+    class="MuiList-root MuiList-padding css-8hvwnm-MuiList-root"
   >
     <li
       class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
@@ -344,7 +344,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
               </svg>
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
               data-testid="dsi-open-access-0-helper-text"
               id="dsi-open-access-0-helper-text"
             >
@@ -409,7 +409,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"
@@ -437,7 +437,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
 exports[`Component FileUploadRowMobileView should render default view for admin 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
+    class="MuiList-root MuiList-padding css-8hvwnm-MuiList-root"
   >
     <li
       class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
@@ -549,7 +549,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
               </svg>
             </div>
             <p
-              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-u90aml-MuiFormHelperText-root"
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1g2spw3-MuiFormHelperText-root"
             >
               This field is required
             </p>
@@ -612,7 +612,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"
@@ -640,7 +640,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
 exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
 <div>
   <ul
-    class="MuiList-root MuiList-padding css-1rbmvro-MuiList-root"
+    class="MuiList-root MuiList-padding css-8hvwnm-MuiList-root"
   >
     <li
       class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-17yl9do-MuiListItem-root"
@@ -803,7 +803,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
                 >
                   <button
                     aria-label="Choose date, selected date is Jan 1, 2017"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -839,7 +839,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
             tabindex="0"

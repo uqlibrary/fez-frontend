@@ -19,7 +19,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
     >
       <button
         aria-label="Click for more information"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
@@ -28,7 +28,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -76,7 +76,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
     >
       <button
         aria-label="Click for more information"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
@@ -85,7 +85,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"
@@ -164,7 +164,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
     >
       <button
         aria-label="Click for more information"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
@@ -173,7 +173,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxueyx-MuiSvgIcon-root"
           data-testid="HelpOutlineIcon"
           focusable="false"
           role="img"

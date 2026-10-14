@@ -30,7 +30,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7wnotg-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vgx3az-MuiSvgIcon-root"
                 data-testid="LinkIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -102,7 +102,7 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1b7vqe0-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ds8qni-MuiSvgIcon-root"
                 data-testid="LinkOffIcon"
                 focusable="false"
                 viewBox="0 0 24 24"

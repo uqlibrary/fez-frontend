@@ -40,7 +40,7 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
     data-mui-internal-clone-element="true"
   >
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
       tabindex="0"
@@ -70,7 +70,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
     data-mui-internal-clone-element="true"
   >
     <button
-      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
       disabled=""
@@ -96,7 +96,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
 <div>
   <button
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
     tabindex="0"
     type="button"
   >
@@ -153,7 +153,7 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
     data-mui-internal-clone-element="true"
   >
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
       tabindex="0"

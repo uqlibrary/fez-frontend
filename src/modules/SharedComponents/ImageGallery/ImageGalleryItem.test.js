@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, WithRouter, fireEvent } from 'test-utils';
 
-import ImageGalleryItem, { getAlertMessageText } from './ImageGalleryItem';
+import ImageGalleryItem, { getAlertMessageText, getAlertBarColors } from './ImageGalleryItem';
 import collectionSearchResultsImages from 'mock/data/records/collectionSearchResultsImages';
 import txt from 'locale/components';
 
@@ -484,6 +484,15 @@ describe('Image Gallery Item', () => {
         });
         it('should return no title text', () => {
             expect(getAlertMessageText({ unavailable: false, restricted: false, advisory: false })).toBeNull();
+        });
+    });
+
+    describe('getAlertBarColors function', () => {
+        it('should return the DS warning colours for an advisory (content warning)', () => {
+            expect(getAlertBarColors({ advisory: true })).toEqual({ backgroundColor: '#f7ba1e', color: '#3b383e' });
+        });
+        it('should return the informational blue for non-advisory (restricted/unavailable) messages', () => {
+            expect(getAlertBarColors({ advisory: false })).toEqual({ backgroundColor: '#4085c6', color: '#ffffff' });
         });
     });
 });

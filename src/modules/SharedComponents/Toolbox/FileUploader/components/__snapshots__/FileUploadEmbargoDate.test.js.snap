@@ -25,7 +25,7 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
@@ -73,7 +73,7 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
           disabled=""
           tabindex="-1"
           type="button"
@@ -121,7 +121,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
@@ -168,7 +168,7 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
       >
         <button
           aria-label="Choose date"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
@@ -215,7 +215,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
@@ -262,7 +262,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2018"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >

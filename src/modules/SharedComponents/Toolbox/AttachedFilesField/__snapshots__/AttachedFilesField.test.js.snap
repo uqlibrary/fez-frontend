@@ -28,7 +28,7 @@ exports[`AttachedFilesField component should render default view when files prov
           class="MuiBox-root css-hpgf8j"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-cyx3wm-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1fi2615-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-11rz0ao-MuiGrid-root"
@@ -59,7 +59,7 @@ exports[`AttachedFilesField component should render default view when files prov
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-3835508"
         >
           <div
@@ -70,7 +70,7 @@ exports[`AttachedFilesField component should render default view when files prov
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -195,7 +195,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
           class="MuiBox-root css-hpgf8j"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-cyx3wm-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1fi2615-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-11rz0ao-MuiGrid-root"
@@ -226,7 +226,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-3835508"
         >
           <div
@@ -237,7 +237,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="ImageIcon"
                 focusable="false"
                 viewBox="0 0 24 24"

@@ -36,7 +36,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           class="MuiBox-root css-hpgf8j"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-cyx3wm-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1fi2615-MuiGrid-root"
           >
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-11rz0ao-MuiGrid-root"
@@ -67,7 +67,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-11"
         >
           <div
@@ -78,7 +78,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -182,7 +182,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-15"
         >
           <div
@@ -193,7 +193,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -297,7 +297,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-16"
         >
           <div
@@ -308,7 +308,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -412,7 +412,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-17"
         >
           <div
@@ -423,7 +423,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -527,7 +527,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-13"
         >
           <div
@@ -538,7 +538,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -642,7 +642,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-14"
         >
           <div
@@ -653,7 +653,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -757,7 +757,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-31"
         >
           <div
@@ -768,7 +768,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -872,7 +872,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css-qjulvg"
           data-testid="fez-datastream-info-attached-list-row-32"
         >
           <div
@@ -883,7 +883,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1b782d3-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"

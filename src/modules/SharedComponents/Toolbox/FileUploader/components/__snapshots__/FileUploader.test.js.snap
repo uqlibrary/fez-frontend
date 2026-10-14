@@ -123,7 +123,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -132,7 +132,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -148,7 +148,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -172,7 +172,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -181,23 +181,26 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -253,7 +256,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -314,7 +317,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -339,7 +342,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -393,7 +396,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -418,7 +421,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -568,7 +571,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -577,7 +580,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -593,7 +596,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -617,7 +620,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -626,23 +629,26 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -698,7 +704,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -759,7 +765,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -784,7 +790,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -838,7 +844,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -863,7 +869,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -917,7 +923,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-testid="dsi-label-upload-2"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -942,7 +948,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-2-delete"
                 data-testid="dsi-dsid-2-delete"
                 tabindex="0"
@@ -1211,7 +1217,7 @@ exports[`Component FileUploader should delete first file 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1220,7 +1226,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -1236,7 +1242,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -1260,7 +1266,7 @@ exports[`Component FileUploader should delete first file 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1269,23 +1275,26 @@ exports[`Component FileUploader should delete first file 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -1341,7 +1350,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -1402,7 +1411,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -1427,7 +1436,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -1577,7 +1586,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1586,7 +1595,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -1602,7 +1611,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -1626,7 +1635,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -1635,23 +1644,26 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -1707,7 +1719,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -1768,7 +1780,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -1793,7 +1805,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -1847,7 +1859,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -1872,7 +1884,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -2276,7 +2288,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -2285,7 +2297,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -2301,7 +2313,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -2325,7 +2337,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -2334,23 +2346,26 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -2406,7 +2421,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -2467,7 +2482,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -2492,7 +2507,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -2546,7 +2561,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -2571,7 +2586,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -2840,7 +2855,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -2849,7 +2864,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -2865,7 +2880,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -2889,7 +2904,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -2898,23 +2913,26 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -2988,7 +3006,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -3049,7 +3067,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -3139,7 +3157,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 >
                   <button
                     aria-label="Choose date, selected date is Jan 1, 2020"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -3168,7 +3186,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -3222,7 +3240,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -3286,7 +3304,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-isx5j4-MuiFormHelperText-root"
                 data-testid="dsi-open-access-1-helper-text"
                 id="dsi-open-access-1-helper-text"
               >
@@ -3313,7 +3331,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -3366,7 +3384,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
           </svg>
         </span>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14cyzb0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-80clbu-MuiTypography-root"
         >
           I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.
         </p>
@@ -3975,7 +3993,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -3984,7 +4002,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -4000,7 +4018,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -4024,7 +4042,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -4033,23 +4051,26 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -4123,7 +4144,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -4184,7 +4205,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -4248,7 +4269,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-isx5j4-MuiFormHelperText-root"
                 data-testid="dsi-open-access-0-helper-text"
                 id="dsi-open-access-0-helper-text"
               >
@@ -4275,7 +4296,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -4329,7 +4350,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -4393,7 +4414,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-isx5j4-MuiFormHelperText-root"
                 data-testid="dsi-open-access-1-helper-text"
                 id="dsi-open-access-1-helper-text"
               >
@@ -4420,7 +4441,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -4570,7 +4591,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -4579,7 +4600,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -4595,7 +4616,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -4619,7 +4640,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -4628,23 +4649,26 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -4718,7 +4742,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -4779,7 +4803,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -4862,7 +4886,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -4916,7 +4940,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -4980,7 +5004,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-isx5j4-MuiFormHelperText-root"
                 data-testid="dsi-open-access-1-helper-text"
                 id="dsi-open-access-1-helper-text"
               >
@@ -5007,7 +5031,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -5157,7 +5181,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -5166,7 +5190,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -5182,7 +5206,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -5206,7 +5230,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -5215,23 +5239,26 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -5305,7 +5332,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -5366,7 +5393,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -5449,7 +5476,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -5503,7 +5530,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -5593,7 +5620,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 >
                   <button
                     aria-label="Choose date, selected date is Feb 2, 2022"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -5622,7 +5649,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -5675,7 +5702,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </svg>
         </span>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14cyzb0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-80clbu-MuiTypography-root"
         >
           I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.
         </p>
@@ -5927,7 +5954,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -5936,7 +5963,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -5952,7 +5979,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -5976,7 +6003,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -5985,23 +6012,26 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -6057,7 +6087,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -6118,7 +6148,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6143,7 +6173,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -6197,7 +6227,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6222,7 +6252,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -6491,7 +6521,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -6500,7 +6530,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -6516,7 +6546,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -6540,7 +6570,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -6549,23 +6579,26 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -6639,7 +6672,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -6700,7 +6733,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6770,7 +6803,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-isx5j4-MuiFormHelperText-root"
               >
                 This field is required
               </p>
@@ -6795,7 +6828,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -6849,7 +6882,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -6919,7 +6952,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-isx5j4-MuiFormHelperText-root"
               >
                 This field is required
               </p>
@@ -6944,7 +6977,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -7094,7 +7127,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -7103,7 +7136,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -7119,7 +7152,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -7143,7 +7176,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -7152,23 +7185,26 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -7242,7 +7278,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -7303,7 +7339,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -7392,7 +7428,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -7446,7 +7482,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -7516,7 +7552,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-isx5j4-MuiFormHelperText-root"
               >
                 This field is required
               </p>
@@ -7541,7 +7577,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -7691,7 +7727,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -7700,7 +7736,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -7716,7 +7752,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -7740,7 +7776,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -7749,23 +7785,26 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -7839,7 +7878,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -7900,7 +7939,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -7989,7 +8028,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -8043,7 +8082,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-testid="dsi-label-upload-1"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8139,7 +8178,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 >
                   <button
                     aria-label="Choose date, selected date is Jan 1, 2020"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1i5buoz-MuiButtonBase-root-MuiIconButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -8168,7 +8207,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
                 tabindex="0"
@@ -8221,7 +8260,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
           </svg>
         </span>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14cyzb0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-80clbu-MuiTypography-root"
         >
           I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.
         </p>
@@ -8473,7 +8512,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -8482,7 +8521,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -8498,7 +8537,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -8522,7 +8561,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -8531,23 +8570,26 @@ exports[`Component FileUploader should set max files error message 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -8571,7 +8613,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-19q8l9l-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -8580,23 +8622,23 @@ exports[`Component FileUploader should set max files error message 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="ErrorIcon"
+                  data-testid="HighlightOffIcon"
                   focusable="false"
                   id="error-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                    d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Upload Errors - 
@@ -8652,7 +8694,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -8713,7 +8755,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -8738,7 +8780,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"
@@ -8888,7 +8930,7 @@ exports[`Component FileUploader should update file description 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1owr5e7-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -8897,7 +8939,7 @@ exports[`Component FileUploader should update file description 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
@@ -8913,7 +8955,7 @@ exports[`Component FileUploader should update file description 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Success - 
@@ -8937,7 +8979,7 @@ exports[`Component FileUploader should update file description 1`] = `
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1uzz2kd-MuiGrid-root"
         >
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -8946,23 +8988,26 @@ exports[`Component FileUploader should update file description 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1xxg5um-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-mu00a8-MuiGrid-root"
               >
                 <b>
                   Notice - 
@@ -9036,7 +9081,7 @@ exports[`Component FileUploader should update file description 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
                   id="delete-all-files"
@@ -9097,7 +9142,7 @@ exports[`Component FileUploader should update file description 1`] = `
               data-testid="dsi-label-upload-0"
             >
               <div
-                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1ovk4op-MuiInputBase-root-MuiInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -9161,7 +9206,7 @@ exports[`Component FileUploader should update file description 1`] = `
                 </svg>
               </div>
               <p
-                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-15g82cj-MuiFormHelperText-root"
+                class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-focused Mui-required css-isx5j4-MuiFormHelperText-root"
                 data-testid="dsi-open-access-0-helper-text"
                 id="dsi-open-access-0-helper-text"
               >
@@ -9188,7 +9233,7 @@ exports[`Component FileUploader should update file description 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-173uukt-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
                 tabindex="0"

@@ -109,7 +109,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                     >
                       <button
                         aria-label="Add designer"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-author-add-designer"
                         id="rek-author-add-designer"
@@ -177,7 +177,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -191,7 +191,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Designer's name as published
                                       </span>
@@ -252,7 +252,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -311,7 +311,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     Organisation/Organisation type
                                   </span>
@@ -521,7 +521,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                     >
                       <button
                         aria-label="Add contributor"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-contributor-add-contributor"
                         id="rek-contributor-add-contributor"
@@ -589,7 +589,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -603,7 +603,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Contributor's name as published
                                       </span>
@@ -664,7 +664,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -723,7 +723,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     Organisation/Organisation type
                                   </span>
@@ -942,7 +942,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                     >
                       <button
                         aria-label="Add author"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-author-add-author"
                         id="rek-author-add-author"
@@ -1032,7 +1032,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -1046,7 +1046,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Author's name as published
                                       </span>
@@ -1107,7 +1107,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -1326,7 +1326,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                     >
                       <button
                         aria-label="Add author"
-                        class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-author-add-author"
                         disabled=""
@@ -1417,7 +1417,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -1431,7 +1431,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Author's name as published
                                       </span>
@@ -1492,7 +1492,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -1711,7 +1711,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                     >
                       <button
                         aria-label="Add author"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-author-add-author"
                         id="rek-author-add-author"
@@ -1801,7 +1801,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -1815,7 +1815,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Author's name as published
                                       </span>
@@ -1876,7 +1876,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -2086,7 +2086,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                     >
                       <button
                         aria-label="Add editor"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-contributor-add-editor"
                         id="rek-contributor-add-editor"
@@ -2176,7 +2176,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -2190,7 +2190,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Editor's name as published
                                       </span>
@@ -2251,7 +2251,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -2470,7 +2470,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                     >
                       <button
                         aria-label="Add designer"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-author-add-designer"
                         id="rek-author-add-designer"
@@ -2560,7 +2560,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -2574,7 +2574,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Designer's name as published
                                       </span>
@@ -2635,7 +2635,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
@@ -2845,7 +2845,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                     >
                       <button
                         aria-label="Add contributor"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1bf9msl-MuiButtonBase-root-MuiIconButton-root"
                         data-mui-internal-clone-element="true"
                         data-testid="rek-contributor-add-contributor"
                         id="rek-contributor-add-contributor"
@@ -2935,7 +2935,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                     >
                                       <svg
                                         aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-di3iqj-MuiSvgIcon-root"
+                                        class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-esna6n-MuiSvgIcon-root"
                                         data-testid="PeopleIcon"
                                         focusable="false"
                                         viewBox="0 0 24 24"
@@ -2949,7 +2949,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                       class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
                                     >
                                       <span
-                                        class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                        class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                       >
                                         Contributor's name as published
                                       </span>
@@ -3010,7 +3010,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                                   class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
                                 >
                                   <span
-                                    class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+                                    class="MuiTypography-root MuiTypography-caption css-1jniyyd-MuiTypography-root"
                                   >
                                     UQ identifiers
                                   </span>
