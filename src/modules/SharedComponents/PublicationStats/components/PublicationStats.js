@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import HelpIcon from '@mui/icons-material/Help';
 import { locale } from 'locale';
 
 const StyledGridHeader = styled(Grid)(({ theme }) => ({
@@ -26,7 +30,7 @@ const classes = {
     },
 };
 
-export const PublicationStats = ({ publicationsStats }) => {
+export const PublicationStats = ({ publicationsStats, showHindexHelpLink = false }) => {
     const txt = locale.components.publicationStats;
     const pubStats = publicationsStats;
     if (!pubStats) return <span className="publicationsStats empty" />;
@@ -85,7 +89,27 @@ export const PublicationStats = ({ publicationsStats }) => {
             {/* hindex */}
             <Grid container spacing={2} sx={{ ...classes.data }}>
                 <Grid size={6}>
-                    <Typography variant={'body2'}>{txt.publicationStatsRowTitle1}</Typography>
+                    {showHindexHelpLink ? (
+                        <Box sx={{ display: 'flex', alignItems: 'center', columnGap: '4px' }}>
+                            <Typography variant={'body2'}>{txt.publicationStatsRowTitle1}</Typography>
+                            <Tooltip title={txt.hindexHelpTooltip} arrow>
+                                <IconButton
+                                    component="a"
+                                    href={txt.hindexHelpUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={txt.hindexHelpAriaLabel}
+                                    size="small"
+                                    data-testid="hindex-help-link"
+                                    sx={{ p: 0 }}
+                                >
+                                    <HelpIcon fontSize="small" color="primary" />
+                                </IconButton>
+                            </Tooltip>
+                        </Box>
+                    ) : (
+                        <Typography variant={'body2'}>{txt.publicationStatsRowTitle1}</Typography>
+                    )}
                 </Grid>
                 <Grid size={3} style={{ textAlign: 'center' }}>
                     <Typography variant={'body2'}>
@@ -148,5 +172,6 @@ export const PublicationStats = ({ publicationsStats }) => {
 };
 PublicationStats.propTypes = {
     publicationsStats: PropTypes.object,
+    showHindexHelpLink: PropTypes.bool,
 };
 export default React.memo(PublicationStats);
