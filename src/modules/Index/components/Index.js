@@ -1,7 +1,5 @@
-import React, { PureComponent, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, { PureComponent } from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import { redirectUserToPassiveLogin } from 'helpers/redirectUserToPassiveLogin';
 import { TopCitedPublications } from 'modules/TopCitedPublications';
 import { CulturalAdvice, CulturalNotice } from 'modules/SharedComponents/CulturalAdvice';
 import Grid from '@mui/material/Grid';
