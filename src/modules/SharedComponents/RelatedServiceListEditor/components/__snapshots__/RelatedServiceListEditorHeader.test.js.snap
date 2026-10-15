@@ -26,7 +26,7 @@ exports[`RelatedServiceListEditorHeader should hide grant agency type input 1`] 
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service ID
               </span>
@@ -40,7 +40,7 @@ exports[`RelatedServiceListEditorHeader should hide grant agency type input 1`] 
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service Description
               </span>
@@ -66,7 +66,7 @@ exports[`RelatedServiceListEditorHeader should hide grant agency type input 1`] 
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
@@ -136,7 +136,7 @@ exports[`RelatedServiceListEditorHeader should render default mobile view 1`] = 
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service ID
               </span>
@@ -150,7 +150,7 @@ exports[`RelatedServiceListEditorHeader should render default mobile view 1`] = 
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service Description
               </span>
@@ -176,7 +176,7 @@ exports[`RelatedServiceListEditorHeader should render default mobile view 1`] = 
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
@@ -246,7 +246,7 @@ exports[`RelatedServiceListEditorHeader should render default mobile view 2`] = 
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service ID
               </span>
@@ -260,7 +260,7 @@ exports[`RelatedServiceListEditorHeader should render default mobile view 2`] = 
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service Description
               </span>
@@ -286,7 +286,7 @@ exports[`RelatedServiceListEditorHeader should render default mobile view 2`] = 
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
@@ -356,7 +356,7 @@ exports[`RelatedServiceListEditorHeader should render default view 1`] = `
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service ID
               </span>
@@ -370,7 +370,7 @@ exports[`RelatedServiceListEditorHeader should render default view 1`] = `
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service Description
               </span>
@@ -396,7 +396,7 @@ exports[`RelatedServiceListEditorHeader should render default view 1`] = `
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
@@ -466,7 +466,7 @@ exports[`RelatedServiceListEditorHeader should render with default props 1`] = `
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service ID
               </span>
@@ -480,7 +480,7 @@ exports[`RelatedServiceListEditorHeader should render with default props 1`] = `
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service Description
               </span>
@@ -506,7 +506,7 @@ exports[`RelatedServiceListEditorHeader should render with default props 1`] = `
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
@@ -578,7 +578,7 @@ exports[`RelatedServiceListEditorHeader should show confirmation box 1`] = `
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service ID
               </span>
@@ -592,7 +592,7 @@ exports[`RelatedServiceListEditorHeader should show confirmation box 1`] = `
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
               >
                 Related Service Description
               </span>
@@ -618,7 +618,7 @@ exports[`RelatedServiceListEditorHeader should show confirmation box 1`] = `
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-rnevh8-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
                 >
                   Reorder entries
                 </span>

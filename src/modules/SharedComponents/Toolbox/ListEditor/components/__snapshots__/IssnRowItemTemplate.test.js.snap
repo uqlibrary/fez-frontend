@@ -3,7 +3,7 @@
 exports[`IssnRowItemTemplate renderer should render default view 1`] = `
 <DocumentFragment>
   <span
-    class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
   >
     0000-0000
   </span>

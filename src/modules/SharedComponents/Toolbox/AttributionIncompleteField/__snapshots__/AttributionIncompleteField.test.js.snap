@@ -4,7 +4,7 @@ exports[`Component AttributionIncompleteField should render default view 1`] = `
 <div>
   <div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
     />
   </div>
   <label
@@ -35,7 +35,7 @@ exports[`Component AttributionIncompleteField should render default view 1`] = `
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-p3i1lu-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
       data-testid="attributionIncomplete-label"
       id="attributionIncomplete-label"
     />

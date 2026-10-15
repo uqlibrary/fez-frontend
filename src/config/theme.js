@@ -57,19 +57,43 @@ const palette = {
     },
 };
 
+// UQ Design System typography (_text-constants.scss): Roboto body, Montserrat headings.
+// The DS applies Montserrat ($font-title) to h1 only (body/_component.scss); h2-h6 inherit Roboto at
+// medium 500 / line-height 1.2. Weights: normal 400, medium/bold 500 - the DS defines no light (300)
+// and no 700 (bold === medium). Body line-height 1.6, heading line-height 1.2, 1% letter-spacing on
+// every variant. Heading sizes follow the DS type scale; H1-H3 drop to the DS mobile sizes below 1024px
+// (the DS switches at min-width:1024px in _css-variables.scss). H4-H6 are a single size.
+const montserrat = '"Montserrat", Helvetica, Arial, sans-serif';
+const roboto = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
+// h2-h6: Roboto (the DS body font) at medium weight; h1 alone gets Montserrat via displayHeading.
+const heading = size => ({ fontFamily: roboto, fontWeight: 500, lineHeight: 1.2, ...size });
+const displayHeading = size => ({ ...heading(size), fontFamily: montserrat });
+const typography = {
+    fontFamily: roboto,
+    fontWeightLight: 400, // DS has no light weight; floor at normal
+    fontWeightRegular: 400, // $font-weight-normal
+    fontWeightMedium: 500, // $font-weight-medium
+    fontWeightBold: 500, // $font-weight-bold === medium
+    useNextVariants: true,
+    suppressDeprecationWarnings: true,
+    allVariants: { letterSpacing: '0.01rem' }, // DS $letter-spacing (1%)
+    h1: displayHeading({ fontSize: '1.875rem', '@media (min-width:1024px)': { fontSize: '2.5rem' } }),
+    h2: heading({ fontSize: '1.5rem', '@media (min-width:1024px)': { fontSize: '2rem' } }),
+    h3: heading({ fontSize: '1.375rem', '@media (min-width:1024px)': { fontSize: '1.5rem' } }),
+    h4: heading({ fontSize: '1.25rem' }),
+    h5: heading({ fontSize: '1.125rem' }),
+    h6: heading({ fontSize: '1rem' }),
+    body1: { lineHeight: 1.6 }, // DS $line-height
+    body2: { lineHeight: 1.6 },
+};
+
 export const mui1theme = createTheme({
     palette: palette,
     status: {
         danger: red[500],
         warning: orange[500],
     },
-    typography: {
-        fontWeightLight: 200,
-        fontWeightRegular: 300,
-        fontWeightMedium: 400,
-        useNextVariants: true,
-        suppressDeprecationWarnings: true,
-    },
+    typography,
     components: {
         MuiButtonBase: {
             defaultProps: {
@@ -178,6 +202,7 @@ export const mui1theme = createTheme({
 
 export const adminTheme = createTheme({
     palette: palette,
+    typography,
     components: {
         MuiButtonBase: {
             defaultProps: {

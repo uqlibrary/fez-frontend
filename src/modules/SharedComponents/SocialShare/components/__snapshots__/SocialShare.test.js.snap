@@ -22,7 +22,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         title="Share this record via Email"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
@@ -54,7 +54,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         title="Print this record"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
@@ -96,7 +96,7 @@ exports[`Component SocialShare should render component 1`] = `
         title="Share this record via Email"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
@@ -128,7 +128,7 @@ exports[`Component SocialShare should render component 1`] = `
         title="Print this record"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"

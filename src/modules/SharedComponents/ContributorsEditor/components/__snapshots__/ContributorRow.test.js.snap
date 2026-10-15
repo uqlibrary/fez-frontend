@@ -37,12 +37,12 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -57,12 +57,12 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -143,12 +143,12 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -163,12 +163,12 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -249,12 +249,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -335,12 +335,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -421,12 +421,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -441,12 +441,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -558,7 +558,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -581,12 +581,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -613,7 +613,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -644,7 +644,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -667,12 +667,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -699,7 +699,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -753,12 +753,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -773,12 +773,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -836,7 +836,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -859,12 +859,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -879,7 +879,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
           >
             Investigator
           </p>
@@ -906,7 +906,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -937,7 +937,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       id="contributor-row"
     >
       <div
-        class="MuiListItemIcon-root css-1xlb6x9-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-12538bb-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
@@ -960,12 +960,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-qvw9r7-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -980,7 +980,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-tki2hk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
           >
             Investigator
           </p>
@@ -1007,7 +1007,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1krx6eu-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7q20o9-MuiSvgIcon-root"
               data-testid="DeleteIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1061,12 +1061,12 @@ exports[`Component ContributorRow should handle edits 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             Third  listed contributor
           </span>
@@ -1180,7 +1180,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
           class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1262,12 +1262,12 @@ exports[`Component ContributorRow should render contributor row linked class for
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             Test
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1375,12 +1375,12 @@ exports[`Component ContributorRow should render row as required 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             Test
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1461,12 +1461,12 @@ exports[`Component ContributorRow should render with default props 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1547,12 +1547,12 @@ exports[`Component ContributorRow should render with missing aria label if selec
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-sq7264-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1q4f2v3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
           >
             First undefined
           </span>

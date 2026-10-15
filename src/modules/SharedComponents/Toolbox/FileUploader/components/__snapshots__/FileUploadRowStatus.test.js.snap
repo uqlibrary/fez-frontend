@@ -25,7 +25,7 @@ exports[`Component FileUploadRowStatus should render circular progress if upload
   </span>
   <span
     aria-label="50%"
-    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
   >
     50%
   </span>
@@ -138,7 +138,7 @@ exports[`Component FileUploadRowStatus should render for edge browser if file is
   </span>
   <span
     aria-label="Uploading..."
-    class="MuiTypography-root MuiTypography-caption css-bf50cq-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
   >
     Uploading...
   </span>

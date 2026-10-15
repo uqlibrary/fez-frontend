@@ -72,16 +72,16 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-1qcwxge-MuiListItemText-root"
+              class="MuiListItemText-root MuiListItemText-multiline css-27e8jo-MuiListItemText-root"
               id="menu-itemText-0"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
               >
                 Primary text 0
               </span>
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-1jei0z3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-cvkt6l-MuiTypography-root"
               >
                 secondary text 0
               </p>
@@ -98,11 +98,11 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root css-kzroz5-MuiListItemText-root"
+              class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
               id="menu-itemText-1"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-t4ynyp-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
               >
                 <a
                   class="noHover css-1maagub"
