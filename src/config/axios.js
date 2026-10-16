@@ -6,6 +6,7 @@ import {
     IS_LOCAL_DEV,
     IS_TEST,
     SESSION_COOKIE_NAME,
+    SESSION_PTYPE_COOKIE_NAME,
     SESSION_USER_GROUP_COOKIE_NAME,
     TOKEN_NAME,
 } from './general';
@@ -75,7 +76,7 @@ export const sessionApi = axios.create({
 });
 
 sessionApi.interceptors.request.use(request => {
-    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+    if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_PTYPE_COOKIE_NAME)) {
         request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
     }
     return request;
@@ -99,7 +100,7 @@ export const clearLastRequest = () => {
 
 let isGet = null;
 api.interceptors.request.use(request => {
-    if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+    if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_PTYPE_COOKIE_NAME)) {
         request.headers[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
     }
     apiLastRequest = request;
