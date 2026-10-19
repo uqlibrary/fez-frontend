@@ -4872,7 +4872,7 @@ export default {
                     },
                     searchJournals: {
                         title: 'Step 3. Search',
-                        aria: 'Search',
+                        aria: 'Step 3. Search',
                     },
                     compareJournals: {
                         title: 'COMPARE SELECTED',
