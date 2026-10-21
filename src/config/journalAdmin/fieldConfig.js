@@ -1,4 +1,3 @@
-import Immutable from 'immutable';
 import { validation } from 'config';
 import locale from 'locale/components';
 import { BOOLEAN_OPTIONS, CAPPED_OPTIONS, S2O_OPTIONS } from 'config/general';
@@ -119,12 +118,8 @@ export default {
                             opacity: 0.666,
                         },
                     },
-                    height: 100,
-                    format: value => Immutable.Map(value),
-                    richEditorId: 'jnl-advisory-statement',
-                    canEdit: true,
+                    id: 'jnl-advisory-statement',
                     required: false,
-                    noRef: true,
                 },
             },
         },

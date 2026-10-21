@@ -3,11 +3,11 @@
 exports[`Component SocialShare should fire print method on click 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     id="social-share"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
@@ -22,7 +22,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         title="Share this record via Email"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
@@ -39,7 +39,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       </a>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
@@ -54,7 +54,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         title="Print this record"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
@@ -77,11 +77,11 @@ exports[`Component SocialShare should fire print method on click 1`] = `
 exports[`Component SocialShare should render component 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
     id="social-share"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
@@ -96,7 +96,7 @@ exports[`Component SocialShare should render component 1`] = `
         title="Share this record via Email"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"
@@ -113,7 +113,7 @@ exports[`Component SocialShare should render component 1`] = `
       </a>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       style="margin-right: 4px;"
     >
       <a
@@ -128,7 +128,7 @@ exports[`Component SocialShare should render component 1`] = `
         title="Print this record"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-p0ecn4-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-i602or-MuiAvatar-root"
         >
           <svg
             aria-hidden="true"

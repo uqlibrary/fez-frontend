@@ -3,7 +3,7 @@ import { useValidatedForm } from 'hooks';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -61,10 +61,10 @@ const MasterJournalListIngest = () => {
         <StandardPage title={txt.title}>
             <form>
                 <Grid container spacing={2}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <StandardCard help={txt.help}>
                             <Grid container spacing={2}>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Field
                                         control={control}
                                         component={DirectorySelectField}
@@ -81,11 +81,11 @@ const MasterJournalListIngest = () => {
                         </StandardCard>
                     </Grid>
                     {alertProps && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert alertId="batch-import-validation" {...alertProps} />
                         </Grid>
                     )}
-                    <Grid item xs={12} sm="auto">
+                    <Grid size={{ xs: 12, sm: 'auto' }}>
                         <Button
                             aria-label={txt.formLabels.cancelButtonLabel}
                             children={txt.formLabels.cancelButtonLabel}
@@ -99,7 +99,7 @@ const MasterJournalListIngest = () => {
                             color={'default'}
                         />
                     </Grid>
-                    <Grid item xs={12} sm="auto">
+                    <Grid size={{ xs: 12, sm: 'auto' }}>
                         <Button
                             aria-label={txt.formLabels.submitButtonLabel}
                             children={txt.formLabels.submitButtonLabel}

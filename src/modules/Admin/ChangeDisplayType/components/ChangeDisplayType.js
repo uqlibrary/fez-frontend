@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router';
 import { useConfirmationState, useForm, usePublicationSubtype } from 'hooks';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
@@ -134,7 +134,7 @@ export const ChangeDisplayType = () => {
             <StandardPage>
                 {!!pid && (
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             {renderTitle(record)}
                             <PublicationCitation
                                 publication={record}
@@ -151,10 +151,10 @@ export const ChangeDisplayType = () => {
                             onCancelAction={navigateToViewPage}
                             onClose={hideConfirmation}
                         />
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
                                 <Grid container spacing={1}>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <Field
                                             control={control}
                                             component={SelectField}
@@ -171,7 +171,7 @@ export const ChangeDisplayType = () => {
                                     </Grid>
                                     {!!subitems && subitems.length > 0 && (
                                         /* istanbul ignore next */
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={SelectField}
@@ -192,7 +192,7 @@ export const ChangeDisplayType = () => {
                         </Grid>
                         {alertProps && (
                             /* istanbul ignore next */
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Alert
                                     testId="change-display-type-submit-status"
                                     alertId="change-display-type-submit-status"
@@ -200,10 +200,10 @@ export const ChangeDisplayType = () => {
                                 />
                             </Grid>
                         )}
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Grid container spacing={2}>
-                                <Grid item xs={false} sm />
-                                <Grid item xs={12} sm="auto">
+                                <Grid size={{ xs: false, sm: 'grow' }} />
+                                <Grid size={{ xs: 12, sm: 'auto' }}>
                                     <Button
                                         id="rek-change-display-type-cancel"
                                         data-analyticsid="rek-change-display-type-cancel"
@@ -217,7 +217,7 @@ export const ChangeDisplayType = () => {
                                     </Button>
                                 </Grid>
 
-                                <Grid item xs={12} sm="auto">
+                                <Grid size={{ xs: 12, sm: 'auto' }}>
                                     <Button
                                         id="change-display-type-submit"
                                         data-analyticsid="change-display-type-submit"

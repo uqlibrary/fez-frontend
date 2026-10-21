@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import locale from 'locale/pages';
@@ -22,9 +22,7 @@ export const WorkNotFound = ({
     return (
         <StandardPage className="workNotFound" title={title}>
             <StyledGridWithTopMargin container id="workNotFoundGridContainer" data-testid="workNotFoundGridContainer">
-                <Grid item xs={12}>
-                    {message}
-                </Grid>
+                <Grid size={12}>{message}</Grid>
             </StyledGridWithTopMargin>
             {loadingError && loadingError.status && loadingError.message && (
                 <Typography variant={'caption'} style={{ opacity: 0.5 }}>

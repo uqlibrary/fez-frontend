@@ -2,7 +2,7 @@ import React from 'react';
 import { rtlRender, fireEvent } from 'test-utils';
 
 import ImageGalleryItemImage from './ImageGalleryItemImage';
-import { collectionSearchResultsImages } from 'mock/data';
+import collectionSearchResultsImages from 'mock/data/records/collectionSearchResultsImages';
 import config from 'config/imageGalleryConfig';
 import * as utils from './Utils';
 

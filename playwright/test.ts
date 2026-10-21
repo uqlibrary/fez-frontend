@@ -1,6 +1,6 @@
 import { test as base } from '@playwright/test';
 import { collectCoverageAsync } from './lib/coverage/istanbul/collectCoverageAsync';
-import { istanbulReportPartialsDir } from './lib/constants';
+import { istanbulReportPartialsDir, istanbulStructureDir } from './lib/constants';
 
 export * from '@playwright/test';
 
@@ -33,11 +33,12 @@ test = test.extend({
     },
 });
 
-// enable istanbul coverage collecting
+// enable istanbul coverage collecting (window.__coverage__ from the instrumented bundle; per-test
+// counts partials + write-once structures, merged by the ReportMerger reporter)
 if (process?.env?.NODE_ENV === 'cc') {
     test = test.extend({
         context: async ({ context }, use) => {
-            await collectCoverageAsync(context, use, istanbulReportPartialsDir);
+            await collectCoverageAsync(context, use, istanbulReportPartialsDir, istanbulStructureDir);
         },
     });
 }

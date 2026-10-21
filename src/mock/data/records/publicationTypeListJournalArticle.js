@@ -249,12 +249,6 @@ const publicationTypeListJournalArticle = {
                             },
                         },
                     ],
-                    'fez_sherpa_romeo': {
-                        'srm_id': 4231,
-                        'srm_issn': '0969-7330',
-                        'srm_journal_name': 'Nursing Ethics',
-                        'srm_journal_link': 'http://example.com'
-                    },
                     'fez_ulrichs': {
                         'ulr_issn': '0969-7330',
                         'ulr_title_id': '233801',
@@ -332,6 +326,7 @@ const publicationTypeListJournalArticle = {
                     ],
                     'fez_sherpa_romeo': {
                         'srm_id': 4232,
+                        'srm_source_id': 4232,
                         'srm_issn': '1477-0989',
                         'srm_journal_name': 'Nursing Ethics',
                         'srm_journal_link': 'http://example.com',

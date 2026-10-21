@@ -6,7 +6,7 @@ import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 
 const background = require('../../../../public/images/dashboard_cover.jpg');
@@ -27,7 +27,7 @@ export const DashboardAuthorProfile = ({ author, authorDetails }) => {
             <Grid container spacing={3} alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
                 {/* Profile avatar */}
                 {authorDetails.image_exists === 1 && (
-                    <Grid item xs={'auto'}>
+                    <Grid size={'auto'}>
                         <DashboardAuthorAvatar
                             values={{
                                 uqr_id: authorDetails.uqr_id || author.aut_id || '',
@@ -39,9 +39,9 @@ export const DashboardAuthorProfile = ({ author, authorDetails }) => {
                     </Grid>
                 )}
                 {/* Author Details/Name/Orgs/ResearcherIDs */}
-                <Grid item xs>
+                <Grid size="grow">
                     <Grid container>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <DashboardAuthorDetails
                                 title={author.aut_title || ''}
                                 givenName={author.aut_fname || ''}
@@ -50,7 +50,7 @@ export const DashboardAuthorProfile = ({ author, authorDetails }) => {
                                 positions={authorDetails.positions}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <DashboardResearcherIds
                                 values={{
                                     researcher: author.aut_researcher_id,
@@ -72,7 +72,7 @@ export const DashboardAuthorProfile = ({ author, authorDetails }) => {
                     </Grid>
                 </Grid>
                 {/* Publication count */}
-                <Grid item xs={'auto'} sx={{ display: { xs: 'none', md: 'block' } }}>
+                <Grid size="auto" sx={{ display: { xs: 'none', md: 'block' } }}>
                     <DashboardArticleCount />
                 </Grid>
             </Grid>

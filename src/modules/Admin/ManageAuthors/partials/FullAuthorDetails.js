@@ -10,7 +10,7 @@ import { useForm } from 'hooks';
 import { useWatch } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 import { ScrollToSection } from 'modules/SharedComponents/Toolbox/ScrollToSection';
@@ -180,16 +180,16 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Box sx={{ ...classes.background, paddingTop: 2, paddingRight: 2, paddingLeft: 2 }}>
                             <Grid container spacing={2} sx={{ position: 'relative' }}>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <NameData />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <UsernameIdData />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <ResearcherIdentifierData />
                                 </Grid>
-                                <Grid item xs={12} sx={{ paddingBottom: 2 }}>
+                                <Grid size={12} sx={{ paddingBottom: 2 }}>
                                     <NotesData />
                                 </Grid>
                             </Grid>
@@ -203,7 +203,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                     bottom: 0,
                                 }}
                             >
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Grid
                                         container
                                         direction="row-reverse"
@@ -212,7 +212,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                         spacing={2}
                                         paddingBottom={2}
                                     >
-                                        <Grid item>
+                                        <Grid>
                                             <Button
                                                 id={`authors-${mode}-this-author-save`}
                                                 data-analyticsid={`authors-${mode}-this-author-save`}
@@ -225,7 +225,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                                 {mode === 'update' ? editButton : addButton}
                                             </Button>
                                         </Grid>
-                                        <Grid item>
+                                        <Grid>
                                             <Button
                                                 id={`authors-${mode}-this-author-cancel`}
                                                 data-analyticsid={`authors-${mode}-this-author-cancel`}
@@ -241,7 +241,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
                                     </Grid>
 
                                     {(!!apiError || !!Object.keys(errors).length) && (
-                                        <Grid xs={12} paddingBottom={2}>
+                                        <Grid size={12} paddingBottom={2}>
                                             <Alert alertId="api_error_alert" {...alertProps} />
                                         </Grid>
                                     )}

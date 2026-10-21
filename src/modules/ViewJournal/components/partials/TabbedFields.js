@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 
@@ -31,7 +31,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
     return (
         <Grid container style={{ marginBottom: 20 }}>
             {title && (
-                <Grid item xs={12} style={{ marginTop: 20 }}>
+                <Grid size={12} style={{ marginTop: 20 }}>
                     <Typography
                         variant="subtitle1"
                         id={`${tabId}-header`}
@@ -42,7 +42,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
                     </Typography>
                 </Grid>
             )}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <Tabs
                     indicatorColor="primary"
                     onChange={handleTabChange}

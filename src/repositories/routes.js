@@ -613,16 +613,19 @@ export const JOURNAL_SEARCH_API = query => {
     };
 };
 
-export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
+export const JOURNAL_USE_LISTS_API = (id = null) => ({
+    apiUrl: `journals/lists/${id ?? ''}`,
+});
+
+export const JOURNAL_USER_LIST_ITEMS_API = ({ id, query }) => {
     const { pageSize } = {
         ...locale.components.favouriteJournals.sortingDefaults,
         ...query,
     };
 
     const validPageSize = getValidPageSize(locale.components.sorting.recordsPerPage, pageSize);
-
     const params = {
-        apiUrl: 'journals/favourites' + (!!append ? `/${append}` : ''),
+        apiUrl: `journals/lists/${String(id).trim()}/items`,
     };
 
     if (query) {

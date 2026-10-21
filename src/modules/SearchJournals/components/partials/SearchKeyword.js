@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { sanitiseId } from 'helpers/general';
 import ForCodeSource from './ForCodeSource';
@@ -55,7 +55,7 @@ export const SearchKeyword = ({
     const handleKeywordClick = () => onKeywordClick && onKeywordClick(isSelected, keyword, cvoId);
 
     return (
-        <Grid item xs={12}>
+        <Grid size={12}>
             <Typography
                 component="span"
                 sx={{

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useFormContext } from 'react-hook-form';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { fieldConfig } from 'config/admin';
 import { NTRO_SUBTYPES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, SUBTYPE_NON_NTRO } from 'config/general';
 import { useRecordContext } from 'context';
@@ -35,7 +35,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     if (fieldConfig.default[field]?.isComposed) {
         const Component = fieldConfig.default[field]?.component;
         return (
-            <Grid item xs={12} md={12 / group.length}>
+            <Grid size={{ xs: 12, md: 12 / group.length }}>
                 <Component disabled={disabled} {...componentProps} />
             </Grid>
         );
@@ -43,7 +43,7 @@ export const FieldGridItem = ({ field, group, disabled, ...props }) => {
     const error = form.getFieldState(componentProps.name).error;
 
     return (
-        <Grid item xs={12} md={12 / group.length}>
+        <Grid size={{ xs: 12, md: 12 / group.length }}>
             <Field
                 name={componentProps.name}
                 control={form.control}

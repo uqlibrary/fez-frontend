@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import locale from 'locale/components';
 import { pathConfig } from 'config';
@@ -19,13 +19,13 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
     const navigate = useNavigate();
     const txt = locale.components.searchJournals;
     const handleFavouriteJournalsClick = () => {
-        navigate(pathConfig.journals.favourites, {
+        navigate(pathConfig.journals.lists, {
             state: { prevLocation: location },
         });
     };
     return (
         <>
-            <StyledGridButtonContainer item xs={12} sm={6} md={3}>
+            <StyledGridButtonContainer size={{ xs: 12, sm: 6, md: 3 }}>
                 <Button
                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
@@ -37,7 +37,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
                 />
             </StyledGridButtonContainer>
             {!isBrowsingAllJournals && (
-                <StyledGridButtonContainer item xs={12} sm={6} md={3}>
+                <StyledGridButtonContainer size={{ xs: 12, sm: 6, md: 3 }}>
                     <Button
                         id="journal-search-browse-all-button"
                         data-analyticsid="journal-search-browse-all-button"

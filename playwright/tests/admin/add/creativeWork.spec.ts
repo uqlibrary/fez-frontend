@@ -1,7 +1,7 @@
 import { test, expect, Page } from '../../../test';
 import { adminEditTabbedView, assertAffiliationsAllowed } from '../helpers';
 import { clickAutoSuggestion } from '../../../lib/helpers';
-import { typeCKEditor } from '../../../lib/ckeditor';
+import { typeRichTextEditor } from '../../../lib/richTextEditor';
 
 test.describe('As an admin, I can', () => {
     const loadNtroTabAdminAdd = async (page: Page, collectionRowId: number, subtypeName: string) => {
@@ -48,7 +48,7 @@ test.describe('As an admin, I can', () => {
         await page.getByTestId(`rek-significance-list-row-${index}-edit`).click();
         await page.getByTestId('rek-significance-select').click();
         await page.getByTestId(`rek-significance-option-${typeIndex}`).click();
-        await typeCKEditor(page, 'rek-creator-contribution-statement', statement);
+        await typeRichTextEditor(page, 'rek-creator-contribution-statement', statement);
         await page.getByTestId('rek-significance-add').click();
     };
 

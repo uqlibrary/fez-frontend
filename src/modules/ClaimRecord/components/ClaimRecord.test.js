@@ -17,6 +17,7 @@ import {
     expectApiRequestToMatchSnapshot,
     api,
     assertInstanceOfFile,
+    setTextField,
 } from 'test-utils';
 import locale from 'locale/forms';
 
@@ -421,8 +422,8 @@ describe('Component ClaimRecord ', () => {
                 selectAuthor();
                 await addFilesToFileUploader(fileMock);
                 await setFileUploaderFilesToClosedAccess(fileMock);
-                await userEvent.type(getByTestId('claim-comments-input'), 'my comments');
-                await userEvent.type(getByTestId('claim-link-input'), 'https://www.test.com');
+                setTextField(getByTestId('claim-comments-input'), 'my comments');
+                setTextField(getByTestId('claim-link-input'), 'https://www.test.com');
                 await userEvent.click(getByTestId('rek-content-indicator-select'));
                 await userEvent.click(getByText(newContentIndicator));
                 await submitForm();

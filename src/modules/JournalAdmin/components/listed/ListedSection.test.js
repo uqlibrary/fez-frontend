@@ -2,7 +2,7 @@ import React from 'react';
 import { rtlRender, FormProviderWrapper } from 'test-utils';
 
 jest.mock('../../../../context');
-import { journalDoaj } from 'mock/data';
+import { journalDoaj } from 'mock/data/journalDoaj';
 import { useJournalContext } from 'context';
 import ListedSection from './ListedSection';
 import { ADMIN_JOURNAL } from 'config/general';

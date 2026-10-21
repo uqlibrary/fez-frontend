@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import FormHelperText from '@mui/material/FormHelperText';
 import ColumnTitle from './ColumnTitle';
 import { useFormContext } from 'react-hook-form';
@@ -21,9 +21,9 @@ export const DataSwitch = ({ value, onChange, name, ['data-testid']: dataTestId,
     return (
         <React.Fragment>
             {!isMobileView && (
-                <Grid item xs={3}>
+                <Grid size={3}>
                     <Grid container justifyContent="flex-end">
-                        <Grid item>
+                        <Grid>
                             <ColumnTitle title={rest.label} />
                         </Grid>
                     </Grid>
@@ -31,12 +31,12 @@ export const DataSwitch = ({ value, onChange, name, ['data-testid']: dataTestId,
             )}
             {
                 /* istanbul ignore next */ isMobileView && (
-                    <Grid item xs={12} md={6}>
+                    <Grid size={{ xs: 12, md: 6 }}>
                         <ColumnTitle title={rest.label} />
                     </Grid>
                 )
             }
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
                 <FormControlLabel
                     control={
                         <Switch
@@ -49,7 +49,7 @@ export const DataSwitch = ({ value, onChange, name, ['data-testid']: dataTestId,
                     disabled={isValidating}
                 />
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid size={{ xs: 12, md: 3 }}>
                 <FormHelperText variant="outlined">{rest.helperText}</FormHelperText>
             </Grid>
         </React.Fragment>

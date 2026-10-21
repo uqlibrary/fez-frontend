@@ -1,5 +1,5 @@
 import * as helpers from './authorAffiliations';
-import { recordWithProblematicAuthorAffiliations as record } from 'mock/data';
+import record from 'mock/data/records/recordWithProblematicAuthorAffiliations';
 
 const testAuthor = { rek_author_id: 88844 };
 

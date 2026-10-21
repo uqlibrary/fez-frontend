@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -15,7 +15,7 @@ export const PublicationListLoadingProgress = ({ loadingPublicationSources }) =>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {txt.repositories.map((item, index) => (
                     <Grid container spacing={1} key={index}>
-                        <Grid item xs>
+                        <Grid size="grow">
                             <Typography
                                 variant={'body1'}
                                 sx={theme => ({
@@ -26,7 +26,7 @@ export const PublicationListLoadingProgress = ({ loadingPublicationSources }) =>
                             </Typography>
                         </Grid>
                         {loadingPublicationSources && loadingPublicationSources[item.id] ? (
-                            <Grid item>
+                            <Grid>
                                 <Typography
                                     sx={theme => ({
                                         fontSize: theme.typography.caption.fontSize,
@@ -37,7 +37,7 @@ export const PublicationListLoadingProgress = ({ loadingPublicationSources }) =>
                                 </Typography>
                             </Grid>
                         ) : (
-                            <Grid item>
+                            <Grid>
                                 <CircularProgress
                                     size={12}
                                     thickness={4}

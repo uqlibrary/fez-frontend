@@ -1,6 +1,7 @@
 export const sherpaRomeo = [
     {
         "srm_id": 6341,
+        "srm_source_id": 14955,
         "srm_issn": "1535-4970",
         "srm_json": "{}",
         "srm_journal_name": "American Journal of Respiratory and Critical Care Medicine",
@@ -9,6 +10,7 @@ export const sherpaRomeo = [
     },
     {
         "srm_id": 69424,
+        "srm_source_id": null,
         "srm_issn": "1611-3349",
         "srm_json": null,
         "srm_journal_name":"Not found in Sherpa Romeo",
@@ -17,6 +19,7 @@ export const sherpaRomeo = [
     },
     {
         "srm_id": 3,
+        "srm_source_id": 3,
         "srm_issn": "3333-3333",
         "srm_json": "{}",
         "srm_journal_name":"Dummy",
@@ -25,6 +28,7 @@ export const sherpaRomeo = [
     },
     {
         "srm_id": 4,
+        "srm_source_id": 4,
         "srm_issn": "4444-4444",
         "srm_json": "{}",
         "srm_journal_name":"Dummy",
@@ -33,6 +37,7 @@ export const sherpaRomeo = [
     },
     {
         "srm_id": 5,
+        "srm_source_id": 5,
         "srm_issn": "5555-5555",
         "srm_json": "{}",
         "srm_journal_name":"Dummy",
@@ -41,6 +46,7 @@ export const sherpaRomeo = [
     },
     {
         "srm_id": 6,
+        "srm_source_id": 6,
         "srm_issn": "6666-6666",
         "srm_json": "{}",
         "srm_journal_name":"Dummy",
@@ -49,6 +55,7 @@ export const sherpaRomeo = [
     },
     {
         "srm_id": 69421,
+        "srm_source_id": 33095,
         "srm_issn": "0302-9743",
         "srm_json": "{}",
         "srm_journal_name": "Lecture Notes in Artificial Intelligence",
@@ -57,6 +64,7 @@ export const sherpaRomeo = [
     },
     {
         "srm_id": 33264,
+        "srm_source_id": 16950,
         "srm_issn": "0388-0001",
         "srm_json": "{}",
         "srm_journal_name": "Language Sciences",

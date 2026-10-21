@@ -77,17 +77,6 @@ describe('Routes getMenuConfig method', () => {
         expect(testRoutes.length).toEqual(17);
     });
 
-    it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
-        const testRoutes = routes.getMenuConfig(
-            accounts.uqmasquerade,
-            currentAuthor.uqmasquerade.data,
-            authorDetails.uqmasquerade,
-            false,
-            true,
-        );
-        expect(testRoutes.length).toEqual(18);
-    });
-
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
         expect(testRoutes.length).toEqual(29);
@@ -160,7 +149,8 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.find(i => i.path === '/journals/favourites/:id')).not.toBeUndefined();
+        expect(testRoutes.length).toEqual(32);
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
@@ -169,7 +159,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqmasquerade,
             authorDetails: authorDetails.uqmasquerade,
         });
-        expect(testRoutes.length).toEqual(32);
+        expect(testRoutes.length).toEqual(33);
     });
 
     it('should return a list of routes for user who has admin (uqstaff)', () => {
@@ -178,7 +168,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(55);
+        expect(testRoutes.length).toEqual(56);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -199,7 +189,7 @@ describe('Routes getRoutesConfig method', () => {
             isHdrStudent: true,
             authorDetails: authorDetails.uqresearcher,
         });
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(32);
     });
 });
 

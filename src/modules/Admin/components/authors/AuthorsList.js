@@ -7,7 +7,7 @@ import { MaterialReactTable, useMaterialReactTable } from 'material-react-table'
 import { useTheme } from '@mui/material/styles';
 import { numberToWords } from 'config';
 import AddCircle from '@mui/icons-material/AddCircle';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import People from '@mui/icons-material/People';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
@@ -61,13 +61,9 @@ const getIcon = ({ index, rowData, disabled }) => {
 
 export const NameAsPublished = React.memo(({ icon, text, linked }) => {
     return (
-        <Grid container spacing={2}>
-            <Grid item sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>
-                {icon}
-            </Grid>
-            <Grid item sx={{ ...(linked ? classes.linked : {}) }}>
-                {text}
-            </Grid>
+        <Grid container spacing={2} sx={{ width: '100%' }}>
+            <Grid sx={{ alignSelf: 'center', display: { xs: 'none', sm: 'block' } }}>{icon}</Grid>
+            <Grid sx={{ ...(linked ? classes.linked : {}) }}>{text}</Grid>
         </Grid>
     );
 });
@@ -81,17 +77,17 @@ NameAsPublished.propTypes = {
 /* istanbul ignore next */
 export const AuthorDetail = rowData => {
     return (
-        <Grid container item xs={12} style={{ padding: 16 }}>
-            <Grid item xs={2}>
+        <Grid container size={12} style={{ padding: 16 }}>
+            <Grid size={2}>
                 <Typography variant="subtitle2">{'Organisation affiliation'}</Typography>
             </Grid>
-            <Grid item xs={10}>
+            <Grid size={10}>
                 <Typography variant="body2">{rowData.rowData.orgaff}</Typography>
             </Grid>
-            <Grid item xs={2}>
+            <Grid size={2}>
                 <Typography variant="subtitle2">{'Organisation type'}</Typography>
             </Grid>
-            <Grid item xs={10}>
+            <Grid size={10}>
                 <Typography variant="body2">{rowData.rowData.orgtype}</Typography>
             </Grid>
         </Grid>
@@ -229,11 +225,11 @@ export const AuthorsList = ({
                     };
 
                     return (
-                        <Grid container spacing={2}>
-                            <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
+                            <Grid style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                 <PersonOutlined color="secondary" />
                             </Grid>
-                            <Grid item style={{ flexGrow: '1' }}>
+                            <Grid style={{ flexGrow: '1' }}>
                                 <TextField
                                     autoFocus
                                     value={value}
@@ -391,8 +387,8 @@ export const AuthorsList = ({
                         handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
                     };
                     return (
-                        <Grid container spacing={2}>
-                            <Grid item style={{ flexGrow: '1' }}>
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
+                            <Grid style={{ flexGrow: '1' }}>
                                 <TextField
                                     value={value}
                                     onChange={handleChange}
@@ -442,8 +438,8 @@ export const AuthorsList = ({
                         handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
                     return (
-                        <Grid container spacing={2}>
-                            <Grid item style={{ flexGrow: '1' }}>
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
+                            <Grid style={{ flexGrow: '1' }}>
                                 <NewGenericSelectField
                                     itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}
                                     onChange={handleChange}
@@ -526,7 +522,7 @@ export const AuthorsList = ({
                     const rowData = { ...row.original, ...row._valuesCache };
                     return (
                         <Grid container>
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Typography
                                     variant="body2"
                                     className={linkedClass(rowData)}
@@ -536,7 +532,7 @@ export const AuthorsList = ({
                                     {rowData.orgaff}
                                 </Typography>
                             </Grid>
-                            <Grid xs={12}>
+                            <Grid size={12}>
                                 <Typography
                                     variant="caption"
                                     className={linkedClass(rowData)}
@@ -593,7 +589,7 @@ export const AuthorsList = ({
                         <React.Fragment>
                             {isNtro && (
                                 <Grid container>
-                                    <Grid xs={12}>
+                                    <Grid size={12}>
                                         <OrgAffiliationTypeSelector
                                             affiliation={contributor.affiliation}
                                             onAffiliationChange={handleAffiliationChange}

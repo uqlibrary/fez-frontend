@@ -1,7 +1,7 @@
 import React from 'react';
 import { rtlRender, fireEvent } from 'test-utils';
 import FacetsFilter from './FacetsFilter';
-import { possibleUnclaimedList } from 'mock/data';
+import possibleUnclaimedList from 'mock/data/records/possibleUnclaimedList';
 import { general } from 'config';
 
 function setup(testProps = {}) {

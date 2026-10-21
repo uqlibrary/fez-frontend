@@ -5,7 +5,7 @@ import { hide } from '../actions';
 
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
@@ -56,7 +56,7 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
             onClose={_hide}
         >
             <Grid container spacing={5} id="help-drawer">
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Typography
                         component={'h3'}
                         data-testid="help-drawer-title"
@@ -78,7 +78,7 @@ export const HelpDrawer = ({ buttonLabel = 'CLOSE' }) => {
                         {indexedText}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} id="help-drawer-button">
+                <Grid size={12} id="help-drawer-button">
                     <Button
                         children={buttonLabel}
                         sx={{ float: 'right', marginBottom: '60px' }}

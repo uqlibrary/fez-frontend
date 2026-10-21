@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { DataGrid, gridClasses } from '@mui/x-data-grid';
 
@@ -140,7 +140,7 @@ const Reports = () => {
                 <SectionTitle mb={2}>{txt.exportTitle}</SectionTitle>
                 <Grid container spacing={2} mb={2}>
                     {exportAlertIsVisible && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert
                                 type="error_outline"
                                 title={txt.error.title}
@@ -154,7 +154,7 @@ const Reports = () => {
                         </Grid>
                     )}
                     {exportReportAlertIsVisible && !!exportReportAlertProps?.message && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert {...exportReportAlertProps} />
                         </Grid>
                     )}
@@ -176,7 +176,7 @@ const Reports = () => {
                     <SectionTitle mb={2}>{txt.displayTitle}</SectionTitle>
                     <Grid container spacing={2} mb={2}>
                         {displayAlertIsVisible && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Alert
                                     type="error_outline"
                                     title={txt.error.title}
@@ -201,7 +201,7 @@ const Reports = () => {
 
                     {!!adminDashboardDisplayReportData && (
                         <Grid container mt={2}>
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <DataGrid
                                     getRowId={row => row.pre_id || row.sat_id || /* istanbul ignore next */ ''}
                                     rows={adminDashboardDisplayReportData}

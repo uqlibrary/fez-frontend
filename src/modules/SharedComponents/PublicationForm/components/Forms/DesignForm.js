@@ -12,7 +12,7 @@ import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { dateRange } from 'config/validation';
 
@@ -27,10 +27,10 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
 
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -46,7 +46,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={12}>
+                        <Grid size={{ xs: 12, sm: 12 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -58,7 +58,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -70,7 +70,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -83,7 +83,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 {...txt.information.fieldLabels.publisher}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -96,7 +96,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 {...txt.information.fieldLabels.placeOfPublication}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -109,7 +109,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 {...txt.information.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -125,7 +125,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 hasError={hasDateError}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -140,7 +140,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
@@ -162,7 +162,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                 </StandardCard>
             </Grid>
             {isNtro && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <NtroFields
                         control={control}
                         canEdit
@@ -179,10 +179,10 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                     />
                 </Grid>
             )}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -195,7 +195,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -207,7 +207,7 @@ export const DesignForm = ({ control, values, isSubmitting, isNtro, isAuthorSele
                                 validate={[validation.url]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

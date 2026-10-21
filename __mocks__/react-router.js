@@ -15,10 +15,7 @@ const parsePath = value => {
         };
     }
 
-    const asString =
-        typeof value === 'string'
-            ? value
-            : value.pathname || value.path || '/';
+    const asString = typeof value === 'string' ? value : value.pathname || value.path || '/';
     const [pathname, search = ''] = asString.split('?');
     return {
         pathname: pathname || '/',
@@ -85,13 +82,18 @@ export const RouterProvider = ({ router, children }) => {
     if (!router || !Array.isArray(router.routes)) return <>{children ?? null}</>;
 
     const firstEntry = router.initialEntries?.[0] || '/';
-    const [location, setLocation] = React.useState(() => {
-        const parsed = parsePath(firstEntry);
+    // Initialise the module location once on mount, outside the useState initializer and guarded by a
+    // ref. Some tests mock React.useState, and a mocked useState returns the initializer uncalled; doing
+    // the init inside it would then leave `location` as a function and silently drop the route state.
+    const parsed = parsePath(firstEntry);
+    const didInit = React.useRef(false);
+    if (!didInit.current) {
+        didInit.current = true;
         currentPathname = parsed.pathname;
         currentSearch = parsed.search;
         currentState = parsed.state;
-        return parsed;
-    });
+    }
+    const [location, setLocation] = React.useState(parsed);
 
     React.useEffect(() => {
         setCurrentLocation = setLocation;

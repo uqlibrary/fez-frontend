@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import ViewRow from './partials/ViewRow';
 import { useJournalContext } from 'context';
@@ -28,7 +28,7 @@ export const Section = ({ sectionKey, sectionConfig, wrapped = true }) => {
     });
 
     return (
-        <Grid item xs={12}>
+        <Grid size={12}>
             {wrapped && (
                 <StandardCard
                     noHeader={!sectionConfig.title}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import InputLabel from '@mui/material/InputLabel';
 
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
@@ -61,14 +61,14 @@ export const DateRangeField = ({
     return (
         <React.Fragment>
             <Grid container>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <InputLabel shrink sx={theme => ({ ...theme.typography.caption })}>
                         {locale.title}
                     </InputLabel>
                 </Grid>
             </Grid>
             <Grid container>
-                <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
+                <Grid sx={{ flexGrow: 1, minWidth: 0, width: '1px' }}>
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DatePicker
                             value={from && moment(from)}
@@ -90,7 +90,7 @@ export const DateRangeField = ({
                         />
                     </LocalizationProvider>
                 </Grid>
-                <Grid item xs="auto">
+                <Grid size="auto">
                     <TextField
                         variant="standard"
                         sx={{ width: '24px' }}
@@ -101,7 +101,7 @@ export const DateRangeField = ({
                         }}
                     />
                 </Grid>
-                <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
+                <Grid sx={{ flexGrow: 1, minWidth: 0, width: '1px' }}>
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DatePicker
                             value={to && moment(to)}

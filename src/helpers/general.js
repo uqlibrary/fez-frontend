@@ -621,3 +621,9 @@ export const withErrorBoundary = (Component, callback = undefined) => {
     WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
     return WrappedComponent;
 };
+
+/**
+ * @param value
+ * @return {boolean}
+ */
+export const isNumeric = value => !isNaN(parseFloat(value)) && isFinite(value);

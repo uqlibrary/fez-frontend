@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -111,7 +111,7 @@ const EditableFileName = ({
         <>
             {!isEditing ? (
                 <Grid container alignItems={'center'} wrap="nowrap">
-                    <Grid item xs={12} sm={8} sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Grid size={{ xs: 12, sm: 8 }} sx={{ display: 'flex', alignItems: 'center' }}>
                         {!!!isEdited && <FileName {...props} />}
                         {!!isEdited && (
                             <Typography
@@ -128,7 +128,7 @@ const EditableFileName = ({
                             </Typography>
                         )}
                     </Grid>
-                    <Grid item sm sx={{ display: { xs: 'none', md: 'flex' } }}>
+                    <Grid size={{ sm: 'grow' }} sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton
                             aria-label="rename file"
                             onClick={handleFileEditFilename}

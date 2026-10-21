@@ -1,5 +1,5 @@
 import { test, expect, Page } from '../test';
-import { readCKEditor, typeCKEditor } from '../lib/ckeditor';
+import { readRichTextEditor, typeRichTextEditor } from '../lib/richTextEditor';
 import errors from 'locale/validationErrors';
 import {
     assertHasText,
@@ -17,8 +17,8 @@ test.describe('Incomplete record form', () => {
     };
 
     const checkResearchStatement = async (page: Page, statement: string) => {
-        await typeCKEditor(page, 'rek-creator-contribution-statement', statement);
-        expect(await readCKEditor(page, 'rek-creator-contribution-statement')).toContain(statement);
+        await typeRichTextEditor(page, 'rek-creator-contribution-statement', statement);
+        expect(await readRichTextEditor(page, 'rek-creator-contribution-statement')).toContain(statement);
     };
 
     const checkAudienceSize = async (page: Page, sizeText: string) => {

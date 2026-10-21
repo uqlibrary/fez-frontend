@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'modules/SharedComponents/Toolbox/ReactHookForm';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -38,10 +38,10 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
 
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -57,7 +57,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={isNtroCpeeExhibitionEvent ? 12 : 6}>
+                        <Grid size={{ xs: 12, sm: isNtroCpeeExhibitionEvent ? 12 : 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -70,7 +70,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                                 {...txt.information.fieldLabels.placeOfPublication}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={isNtroCpeeExhibitionEvent ? 12 : 6}>
+                        <Grid size={{ xs: 12, sm: isNtroCpeeExhibitionEvent ? 12 : 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -84,7 +84,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                             />
                         </Grid>
                         {!isNtroCpeeExhibitionEvent && (
-                            <Grid item xs={12} sm={displayEndDate ? 12 : 6}>
+                            <Grid size={{ xs: 12, sm: displayEndDate ? 12 : 6 }}>
                                 <Field
                                     control={control}
                                     component={TextField}
@@ -97,7 +97,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                                 />
                             </Grid>
                         )}
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -114,7 +114,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                             />
                         </Grid>
                         {displayEndDate && (
-                            <Grid item xs={12} sm={6}>
+                            <Grid size={{ xs: 12, sm: 6 }}>
                                 <Field
                                     control={control}
                                     component={PartialDateField}
@@ -130,7 +130,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Typography>{txt.authors.description}</Typography>
                     <Field
@@ -151,7 +151,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                 </StandardCard>
             </Grid>
             {isNtro && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <NtroFields
                         control={control}
                         canEdit
@@ -167,10 +167,10 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                     />
                 </Grid>
             )}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -182,7 +182,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -194,7 +194,7 @@ export const CreativeWorkForm = ({ isSubmitting, subtype, isNtro, isAuthorSelect
                                 validate={[validation.url]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

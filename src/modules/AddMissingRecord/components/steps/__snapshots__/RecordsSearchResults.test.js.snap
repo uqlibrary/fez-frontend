@@ -3,28 +3,28 @@
 exports[`Search record results should render a single claimable item with no authors on the record (record should appear in publicationsList prop) 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-y1r2i4-MuiGrid-root"
     >
       <div
         class="MuiBox-root css-130f8nx"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               eSpace
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="eSpace loading"
@@ -49,19 +49,19 @@ exports[`Search record results should render a single claimable item with no aut
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Web of science
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Web of science loading"
@@ -86,19 +86,19 @@ exports[`Search record results should render a single claimable item with no aut
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Scopus
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Scopus loading"
@@ -123,19 +123,19 @@ exports[`Search record results should render a single claimable item with no aut
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               PubMed
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="PubMed loading"
@@ -160,19 +160,19 @@ exports[`Search record results should render a single claimable item with no aut
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Crossref
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Crossref loading"
@@ -197,19 +197,19 @@ exports[`Search record results should render a single claimable item with no aut
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               OpenAlex
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="OpenAlex loading"
@@ -248,25 +248,25 @@ exports[`Search record results should render a single claimable item with no aut
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-9 css-1uidrsu-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 MuiGrid-grid-md-9 css-1usv5ll-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
           style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+            class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -281,16 +281,16 @@ exports[`Search record results should render a single claimable item with no aut
             id="standard-card-possible-matches-found-content"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 Top 1 potential match(es) displayed for "undefined".
                 Claim a matching work below, refine your search or create a new eSpace work.
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <div
                   class="MuiBox-root css-0"
@@ -306,20 +306,20 @@ exports[`Search record results should render a single claimable item with no aut
                       id="publication-citation-parent-UQ:795469"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
@@ -330,7 +330,7 @@ exports[`Search record results should render a single claimable item with no aut
                               </h6>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                             >
                               <span
                                 class="citationContent citationBook"
@@ -403,23 +403,23 @@ exports[`Search record results should render a single claimable item with no aut
                               </span>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount css-si3g8d"
+                                        class="googleCitationCount css-1h1gyme"
                                         data-analyticsid="google-citation-count-link"
                                         data-testid="google-citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:Early%20Onset%20Scoliosis%20-%20this%20is%20an%20edited%20book%20with%20editors%20only"
@@ -439,17 +439,17 @@ exports[`Search record results should render a single claimable item with no aut
                                       />
                                     </div>
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                                     />
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                             >
                               <span
-                                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
                               >
                                 Found in: 
                                 <a
@@ -510,16 +510,16 @@ exports[`Search record results should render a single claimable item with no aut
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-185v6aw-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                         />
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root UQ795469 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-bsq87r-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="publication-action-UQ795469-primary"
                             data-testid="publication-action-UQ795469-primary"
                             tabindex="0"
@@ -541,20 +541,20 @@ exports[`Search record results should render a single claimable item with no aut
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           style="margin-top: 12px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-1jzghbp-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -562,10 +562,10 @@ exports[`Search record results should render a single claimable item with no aut
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-hfm9ro-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -576,47 +576,47 @@ exports[`Search record results should render a single claimable item with no aut
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 MuiGridLegacy-grid-md-3 css-8rez07-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-1xhx7lx-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
           >
             Repository search
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
           />
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-130f8nx"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   eSpace
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="eSpace loading"
@@ -641,19 +641,19 @@ exports[`Search record results should render a single claimable item with no aut
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Web of science
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Web of science loading"
@@ -678,19 +678,19 @@ exports[`Search record results should render a single claimable item with no aut
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Scopus
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Scopus loading"
@@ -715,19 +715,19 @@ exports[`Search record results should render a single claimable item with no aut
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   PubMed
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="PubMed loading"
@@ -752,19 +752,19 @@ exports[`Search record results should render a single claimable item with no aut
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Crossref
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Crossref loading"
@@ -789,19 +789,19 @@ exports[`Search record results should render a single claimable item with no aut
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   OpenAlex
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="OpenAlex loading"
@@ -848,28 +848,28 @@ exports[`Search record results should render a single claimable item with no aut
 exports[`Search record results should render a single unclaimable item with no authors on the record (record should appear in publicationsListSubset prop) 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-y1r2i4-MuiGrid-root"
     >
       <div
         class="MuiBox-root css-130f8nx"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               eSpace
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="eSpace loading"
@@ -894,19 +894,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Web of science
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Web of science loading"
@@ -931,19 +931,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Scopus
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Scopus loading"
@@ -968,19 +968,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               PubMed
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="PubMed loading"
@@ -1005,19 +1005,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Crossref
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Crossref loading"
@@ -1042,19 +1042,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               OpenAlex
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="OpenAlex loading"
@@ -1093,25 +1093,25 @@ exports[`Search record results should render a single unclaimable item with no a
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-9 css-1uidrsu-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 MuiGrid-grid-md-9 css-1usv5ll-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
           style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+            class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -1126,16 +1126,16 @@ exports[`Search record results should render a single unclaimable item with no a
             id="standard-card-possible-matches-found-content"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 Top 1 potential match(es) displayed for "undefined".
                 Claim a matching work below, refine your search or create a new eSpace work.
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <div
                   class="MuiBox-root css-0"
@@ -1151,20 +1151,20 @@ exports[`Search record results should render a single unclaimable item with no a
                       id="publication-citation-parent-UQ:795469"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
@@ -1173,30 +1173,30 @@ exports[`Search record results should render a single unclaimable item with no a
                               </h6>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                             >
                               <div>
                                 Citation display not available for 
                               </div>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount css-si3g8d"
+                                        class="googleCitationCount css-1h1gyme"
                                         data-analyticsid="google-citation-count-link"
                                         data-testid="google-citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:undefined"
@@ -1216,17 +1216,17 @@ exports[`Search record results should render a single unclaimable item with no a
                                       />
                                     </div>
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                                     />
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                             >
                               <span
-                                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
                               >
                                 Found in: 
                                 <a
@@ -1287,16 +1287,16 @@ exports[`Search record results should render a single unclaimable item with no a
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-185v6aw-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                         />
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
                             data-testid="publication-action-UQ795469-secondary"
                             disabled=""
                             tabindex="-1"
@@ -1318,20 +1318,20 @@ exports[`Search record results should render a single unclaimable item with no a
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           style="margin-top: 12px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-1jzghbp-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1339,10 +1339,10 @@ exports[`Search record results should render a single unclaimable item with no a
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-hfm9ro-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1353,47 +1353,47 @@ exports[`Search record results should render a single unclaimable item with no a
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 MuiGridLegacy-grid-md-3 css-8rez07-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-1xhx7lx-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
           >
             Repository search
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
           />
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-130f8nx"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   eSpace
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="eSpace loading"
@@ -1418,19 +1418,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Web of science
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Web of science loading"
@@ -1455,19 +1455,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Scopus
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Scopus loading"
@@ -1492,19 +1492,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   PubMed
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="PubMed loading"
@@ -1529,19 +1529,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Crossref
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Crossref loading"
@@ -1566,19 +1566,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   OpenAlex
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="OpenAlex loading"
@@ -1625,28 +1625,28 @@ exports[`Search record results should render a single unclaimable item with no a
 exports[`Search record results should render a single unclaimable item with no authors on the record (record should appear in publicationsListSubset prop) with full mount 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-y1r2i4-MuiGrid-root"
     >
       <div
         class="MuiBox-root css-130f8nx"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               eSpace
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="eSpace loading"
@@ -1671,19 +1671,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Web of science
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Web of science loading"
@@ -1708,19 +1708,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Scopus
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Scopus loading"
@@ -1745,19 +1745,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               PubMed
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="PubMed loading"
@@ -1782,19 +1782,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Crossref
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Crossref loading"
@@ -1819,19 +1819,19 @@ exports[`Search record results should render a single unclaimable item with no a
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               OpenAlex
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="OpenAlex loading"
@@ -1870,25 +1870,25 @@ exports[`Search record results should render a single unclaimable item with no a
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-9 css-1uidrsu-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 MuiGrid-grid-md-9 css-1usv5ll-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
           style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+            class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -1903,16 +1903,16 @@ exports[`Search record results should render a single unclaimable item with no a
             id="standard-card-possible-matches-found-content"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 Top 1 potential match(es) displayed for "undefined".
                 Claim a matching work below, refine your search or create a new eSpace work.
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <div
                   class="MuiBox-root css-0"
@@ -1928,20 +1928,20 @@ exports[`Search record results should render a single unclaimable item with no a
                       id="publication-citation-parent-UQ:795469"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
@@ -1950,30 +1950,30 @@ exports[`Search record results should render a single unclaimable item with no a
                               </h6>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                             >
                               <div>
                                 Citation display not available for 
                               </div>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount css-si3g8d"
+                                        class="googleCitationCount css-1h1gyme"
                                         data-analyticsid="google-citation-count-link"
                                         data-testid="google-citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:undefined"
@@ -1993,17 +1993,17 @@ exports[`Search record results should render a single unclaimable item with no a
                                       />
                                     </div>
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                                     />
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                             >
                               <span
-                                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1i50wxn-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
                               >
                                 Found in: 
                                 <a
@@ -2064,16 +2064,16 @@ exports[`Search record results should render a single unclaimable item with no a
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-185v6aw-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                         />
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root UQ795469 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
                             data-testid="publication-action-UQ795469-secondary"
                             disabled=""
                             tabindex="-1"
@@ -2095,20 +2095,20 @@ exports[`Search record results should render a single unclaimable item with no a
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           style="margin-top: 12px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-1jzghbp-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -2116,10 +2116,10 @@ exports[`Search record results should render a single unclaimable item with no a
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-hfm9ro-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -2130,47 +2130,47 @@ exports[`Search record results should render a single unclaimable item with no a
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 MuiGridLegacy-grid-md-3 css-8rez07-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-1xhx7lx-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
           >
             Repository search
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
           />
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-130f8nx"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   eSpace
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="eSpace loading"
@@ -2195,19 +2195,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Web of science
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Web of science loading"
@@ -2232,19 +2232,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Scopus
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Scopus loading"
@@ -2269,19 +2269,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   PubMed
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="PubMed loading"
@@ -2306,19 +2306,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Crossref
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Crossref loading"
@@ -2343,19 +2343,19 @@ exports[`Search record results should render a single unclaimable item with no a
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   OpenAlex
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="OpenAlex loading"
@@ -2402,28 +2402,28 @@ exports[`Search record results should render a single unclaimable item with no a
 exports[`Search record results should render publications list with one publication to be able to claim (record should not appear in publicationsListSubset prop) 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-y1r2i4-MuiGrid-root"
     >
       <div
         class="MuiBox-root css-130f8nx"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               eSpace
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="eSpace loading"
@@ -2448,19 +2448,19 @@ exports[`Search record results should render publications list with one publicat
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Web of science
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Web of science loading"
@@ -2485,19 +2485,19 @@ exports[`Search record results should render publications list with one publicat
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Scopus
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Scopus loading"
@@ -2522,19 +2522,19 @@ exports[`Search record results should render publications list with one publicat
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               PubMed
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="PubMed loading"
@@ -2559,19 +2559,19 @@ exports[`Search record results should render publications list with one publicat
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Crossref
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Crossref loading"
@@ -2596,19 +2596,19 @@ exports[`Search record results should render publications list with one publicat
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               OpenAlex
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="OpenAlex loading"
@@ -2647,25 +2647,25 @@ exports[`Search record results should render publications list with one publicat
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-9 css-1uidrsu-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 MuiGrid-grid-md-9 css-1usv5ll-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-possible-matches-found"
           id="standard-card-possible-matches-found"
           style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+            class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -2680,16 +2680,16 @@ exports[`Search record results should render publications list with one publicat
             id="standard-card-possible-matches-found-content"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 Top 1 potential match(es) displayed for "undefined".
                 Claim a matching work below, refine your search or create a new eSpace work.
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
               >
                 <div
                   class="MuiBox-root css-0"
@@ -2705,20 +2705,20 @@ exports[`Search record results should render publications list with one publicat
                       id="publication-citation-parent-UQ:255472"
                     >
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                         >
                           <div
-                            class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                           >
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
                               <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-6on8jz-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
@@ -2727,30 +2727,30 @@ exports[`Search record results should render publications list with one publicat
                               </h6>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-1ulg1rp-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
                             >
                               <div>
                                 Citation display not available for 
                               </div>
                             </div>
                             <div
-                              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+                              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                             >
                               <div
-                                class="MuiGridLegacy-root MuiGridLegacy-container css-4zaipq-MuiGridLegacy-root"
+                                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-wx9gf7-MuiGridLegacy-root"
+                                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+                                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
                                   >
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                                     >
                                       <a
                                         aria-label="Full citation in Google scholar will open in a new window"
-                                        class="googleCitationCount css-si3g8d"
+                                        class="googleCitationCount css-1h1gyme"
                                         data-analyticsid="google-citation-count-link"
                                         data-testid="google-citation-count-link"
                                         href="https://scholar.google.com/scholar?q=intitle:undefined"
@@ -2770,7 +2770,7 @@ exports[`Search record results should render publications list with one publicat
                                       />
                                     </div>
                                     <div
-                                      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                                     />
                                   </div>
                                 </div>
@@ -2780,16 +2780,16 @@ exports[`Search record results should render publications list with one publicat
                         </div>
                       </div>
                       <div
-                        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-8slyrk-MuiGridLegacy-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-185v6aw-MuiGrid-root"
                       >
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1n3v6zn-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
                         />
                         <div
-                          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-auto css-e9j1q9-MuiGridLegacy-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root UQ255472 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ255472 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-alav1n-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root UQ255472 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ255472 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-bsq87r-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="publication-action-UQ255472-primary"
                             data-testid="publication-action-UQ255472-primary"
                             tabindex="0"
@@ -2811,20 +2811,20 @@ exports[`Search record results should render publications list with one publicat
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           style="margin-top: 12px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-1jzghbp-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -2832,10 +2832,10 @@ exports[`Search record results should render publications list with one publicat
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-hfm9ro-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -2846,47 +2846,47 @@ exports[`Search record results should render publications list with one publicat
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 MuiGridLegacy-grid-md-3 css-8rez07-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-1xhx7lx-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
           >
             Repository search
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
           />
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-130f8nx"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   eSpace
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="eSpace loading"
@@ -2911,19 +2911,19 @@ exports[`Search record results should render publications list with one publicat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Web of science
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Web of science loading"
@@ -2948,19 +2948,19 @@ exports[`Search record results should render publications list with one publicat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Scopus
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Scopus loading"
@@ -2985,19 +2985,19 @@ exports[`Search record results should render publications list with one publicat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   PubMed
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="PubMed loading"
@@ -3022,19 +3022,19 @@ exports[`Search record results should render publications list with one publicat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Crossref
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Crossref loading"
@@ -3059,19 +3059,19 @@ exports[`Search record results should render publications list with one publicat
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   OpenAlex
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="OpenAlex loading"
@@ -3118,28 +3118,28 @@ exports[`Search record results should render publications list with one publicat
 exports[`Search record results should render spinner 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-y1r2i4-MuiGrid-root"
     >
       <div
         class="MuiBox-root css-130f8nx"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               eSpace
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="eSpace loading"
@@ -3164,19 +3164,19 @@ exports[`Search record results should render spinner 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Web of science
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Web of science loading"
@@ -3201,19 +3201,19 @@ exports[`Search record results should render spinner 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Scopus
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Scopus loading"
@@ -3238,19 +3238,19 @@ exports[`Search record results should render spinner 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               PubMed
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="PubMed loading"
@@ -3275,19 +3275,19 @@ exports[`Search record results should render spinner 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               Crossref
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="Crossref loading"
@@ -3312,19 +3312,19 @@ exports[`Search record results should render spinner 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
             >
               OpenAlex
             </p>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
           >
             <span
               aria-label="OpenAlex loading"
@@ -3363,19 +3363,19 @@ exports[`Search record results should render spinner 1`] = `
       </span>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-9 css-1uidrsu-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 MuiGrid-grid-md-9 css-1usv5ll-MuiGrid-root"
     >
       <div
         style="padding: 8px;"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1s5ig73-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
             style="text-align: center;"
           >
             <span
@@ -3400,64 +3400,64 @@ exports[`Search record results should render spinner 1`] = `
             </span>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-auto css-14euy9a-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-kl1ura-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Searching for works
             </span>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
           />
         </div>
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 MuiGridLegacy-grid-md-3 css-8rez07-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-1xhx7lx-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
           >
             Repository search
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
           />
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div
             class="MuiBox-root css-130f8nx"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   eSpace
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="eSpace loading"
@@ -3482,19 +3482,19 @@ exports[`Search record results should render spinner 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Web of science
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Web of science loading"
@@ -3519,19 +3519,19 @@ exports[`Search record results should render spinner 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Scopus
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Scopus loading"
@@ -3556,19 +3556,19 @@ exports[`Search record results should render spinner 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   PubMed
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="PubMed loading"
@@ -3593,19 +3593,19 @@ exports[`Search record results should render spinner 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   Crossref
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="Crossref loading"
@@ -3630,19 +3630,19 @@ exports[`Search record results should render spinner 1`] = `
               </div>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
             >
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-78h3u6-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
                 >
                   OpenAlex
                 </p>
               </div>
               <div
-                class="MuiGridLegacy-root MuiGridLegacy-item css-11uceyq-MuiGridLegacy-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
               >
                 <span
                   aria-label="OpenAlex loading"
@@ -3689,35 +3689,35 @@ exports[`Search record results should render spinner 1`] = `
 exports[`Search record results should render stepper and no results 1`] = `
 <div>
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-3 css-qk4t9k-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1idtt4c-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-y1r2i4-MuiGrid-root"
     >
       <div>
         Loading...
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true MuiGridLegacy-grid-sm-8 MuiGridLegacy-grid-md-9 css-1uidrsu-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-8 MuiGrid-grid-md-9 css-1usv5ll-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-f0kq9p-MuiPaper-root-MuiCard-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
           data-testid="standard-card-no-matching-works-found"
           id="standard-card-no-matching-works-found"
           style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
         >
           <div
-            class="MuiCardHeader-root css-rq3lln-MuiCardHeader-root"
+            class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
           >
             <div
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-w0ll6m-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
                 data-testid="standard-card-no-matching-works-found-header"
                 id="standard-card-no-matching-works-found-header"
               >
@@ -3736,20 +3736,20 @@ exports[`Search record results should render stepper and no results 1`] = `
         </div>
       </div>
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-12 css-19zwfrd-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-12 css-1vcx2rk-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-2 css-z5z9i1-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
           style="margin-top: 12px;"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-1skj0mj-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           />
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-1jzghbp-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -3757,10 +3757,10 @@ exports[`Search record results should render stepper and no results 1`] = `
             </button>
           </div>
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-md-auto css-1b8i5mh-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-hfm9ro-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-focusVisible MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -3771,29 +3771,29 @@ exports[`Search record results should render stepper and no results 1`] = `
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-sm-4 MuiGridLegacy-grid-md-3 css-8rez07-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-1xhx7lx-MuiGrid-root"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-164hai-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true css-2iyoae-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-j4livs-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
           >
             Repository search
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-nvjyq9-MuiDivider-root"
           />
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <div>
             Loading...

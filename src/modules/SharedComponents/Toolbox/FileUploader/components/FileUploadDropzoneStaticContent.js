@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import CloudUpload from '@mui/icons-material/CloudUpload';
 
@@ -25,7 +25,7 @@ const StyledGridDropzone = styled(Grid)(({ theme }) => ({
 }));
 const FileUploadDropzoneStaticContent = ({ locale }) => (
     <StyledGridDropzone container className={'FileUploadTermsAndConditions-root'}>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
             <Typography
                 sx={{
                     fontSize: 14,
@@ -38,7 +38,7 @@ const FileUploadDropzoneStaticContent = ({ locale }) => (
             </Typography>
             {locale.fileUploadRestrictions}
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
             <Grid
                 container
                 direction="column"
@@ -46,10 +46,10 @@ const FileUploadDropzoneStaticContent = ({ locale }) => (
                 justifyContent="center"
                 sx={{ height: '100%', textAlign: 'center' }}
             >
-                <Grid item>
+                <Grid>
                     <CloudUpload sx={{ fontSize: 36, color: 'rgb(89, 89, 89)' }} />
                 </Grid>
-                <Grid item>{locale.fileUploadInstruction}</Grid>
+                <Grid>{locale.fileUploadInstruction}</Grid>
             </Grid>
         </Grid>
     </StyledGridDropzone>

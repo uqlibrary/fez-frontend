@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -125,13 +125,13 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
             />
             <Box sx={{ minHeight: 200, backgroundColor: '#FFF', padding: '10px' }}>
                 {loadingChildVocab[parentRow.cvo_id] && (
-                    <Grid item md={12}>
+                    <Grid size={{ md: 12 }}>
                         <InlineLoader loaderId="childControlledVocab-page-loading" message={txt.loading.message} />
                     </Grid>
                 )}
                 {!!!loadingChildVocab[parentRow.cvo_id] && (childData[parentRow.cvo_id]?.data?.length ?? -1) >= 0 && (
                     <Grid container spacing={0}>
-                        <Grid item md={12}>
+                        <Grid size={{ md: 12 }}>
                             <Breadcrumbs
                                 id={`vocabNav-${parentRow.cvo_id}`}
                                 data={breadCrumbElements}
@@ -150,24 +150,17 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                             </Typography>
                         </Grid>
                         {/* Header Row */}
-                        <Grid container spacing={0} sx={{ fontWeight: 400 }} data-testid="vocab-child-header">
-                            <Grid item xs={12} sm={1}>
-                                {labels.id}
-                            </Grid>
-                            <Grid item xs={12} sm={locked ? 5 : 4}>
-                                {labels.title}
-                            </Grid>
-                            <Grid item xs={12} sm={5}>
-                                {labels.desc}
-                            </Grid>
-                            <Grid item xs={12} sm={1}>
-                                {labels.external_id}
-                            </Grid>
-                            {!locked && (
-                                <Grid item xs={12} sm={1}>
-                                    {labels.actions}
-                                </Grid>
-                            )}
+                        <Grid
+                            container
+                            spacing={0}
+                            sx={{ width: '100%', fontWeight: 400 }}
+                            data-testid="vocab-child-header"
+                        >
+                            <Grid size={{ xs: 12, sm: 1 }}>{labels.id}</Grid>
+                            <Grid size={{ xs: 12, sm: locked ? 5 : 4 }}>{labels.title}</Grid>
+                            <Grid size={{ xs: 12, sm: 5 }}>{labels.desc}</Grid>
+                            <Grid size={{ xs: 12, sm: 1 }}>{labels.external_id}</Grid>
+                            {!locked && <Grid size={{ xs: 12, sm: 1 }}>{labels.actions}</Grid>}
                         </Grid>
                         {/* Data Row */}
                         <Grid container sx={{ paddingTop: '10px' }} data-testid="vocab-child-body">
@@ -181,8 +174,15 @@ export const ChildVocabTable = ({ parentRow, locked }) => {
                                     handlePageChange={handlePageChange}
                                 />
                             ))}
-                            <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center">
-                                <Grid item xs={3}>
+                            <Grid
+                                container
+                                spacing={0}
+                                direction="column"
+                                alignItems="center"
+                                justifyContent="center"
+                                sx={{ width: '100%', paddingTop: '10px' }}
+                            >
+                                <Grid>
                                     {!!total && (
                                         <TablePagination
                                             component="div"

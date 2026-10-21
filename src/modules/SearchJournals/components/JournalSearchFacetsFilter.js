@@ -6,9 +6,9 @@ import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { useActiveFacetFilters, useJournalSearch } from '../hooks';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import { sanitiseId } from 'helpers/general';
+import { isNumeric, sanitiseId } from 'helpers/general';
 
 /**
  * ShowFavouritedOnly is the key recognised by API - case sensitive
@@ -59,7 +59,7 @@ JournalFacetFilterNestedListItemsList.propTypes = {
     isFacetFilterActive: PropTypes.func,
 };
 
-export const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
+export const getFacetsToDisplay = (rawFacets, renameFacetsList, isFavouriteFacetsFilterActive) => {
     const facetsToDisplay = [];
     rawFacets &&
         Object.keys(rawFacets)
@@ -85,7 +85,7 @@ export const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
             });
 
     // add show favourite only facet
-    facetsToDisplay.push(showFavouritedOnlyFacet);
+    if (isFavouriteFacetsFilterActive) facetsToDisplay.push(showFavouritedOnlyFacet);
     return facetsToDisplay;
 };
 
@@ -161,15 +161,13 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
     /**
      * This effect takes care of making the facets filter UI reflect updates made to the activeFacets part
      * of the querystring.
-     *
-     * The reason why using useState above is not enough can be found
-     * in here https://stackoverflow.com/a/58877875/1463121
      */
     useEffect(() => {
         if (activeFiltersQuerystringPart === prevActiveFiltersQuerystringPart.current) {
             return;
         }
 
+        prevActiveFiltersQuerystringPart.current = activeFiltersQuerystringPart;
         setActiveFacetsFilters({ ...journalSearchQueryParams.activeFacets?.filters });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeFiltersQuerystringPart]);
@@ -182,7 +180,10 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
             return;
         }
 
-        setActiveFacetsFilters({});
+        prevKeywordsQuerystringPart.current = keywordsQuerystringPart;
+        if (!Object.keys(journalSearchQueryParams.activeFacets?.filters || {}).length) {
+            setActiveFacetsFilters({});
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [keywordsQuerystringPart]);
 
@@ -197,9 +198,10 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
         return () => setIsFacetFilterClicked(false);
     }, [isFacetFilterClicked, activeFacetsFilters, activeFacetsRanges, onFacetsChanged]);
 
+    const isFavouriteFacetsFilterActive = isNumeric(activeFacetsFilters[showFavouritedOnlyFacet.facetTitle]);
     const facetsToDisplay = useMemo(
-        () => getFacetsToDisplay(facetsData, renameFacetsList),
-        [facetsData, renameFacetsList],
+        () => getFacetsToDisplay(facetsData, renameFacetsList, isFavouriteFacetsFilterActive),
+        [facetsData, renameFacetsList, isFavouriteFacetsFilterActive],
     );
     const oaAcceptedVersionFacetOptions = useMemo(
         () => getOAAcceptedVersionFacetOptions(facetsToDisplay),
@@ -224,7 +226,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
 
         // remove facet filter
         if (isActivated) {
-            if (category === showFavouritedOnlyFacet.facetTitle) {
+            if (category === showFavouritedOnlyFacet.facetTitle && newActiveFacetsFilters[category]) {
                 delete newActiveFacetsFilters[category];
             } else {
                 newActiveFacetsFilters[category] = newActiveFacetsFilters[category].filter(item => item !== facet);
@@ -235,7 +237,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
             newActiveFacetsFilters[category].push(facet);
             // add an active facet filter
         } else {
-            newActiveFacetsFilters[category] = category === showFavouritedOnlyFacet.facetTitle ? true : [facet];
+            newActiveFacetsFilters[category] = [facet];
         }
 
         setIsFacetFilterClicked(true);
@@ -282,7 +284,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
                 </List>
                 {activeFacetsFilters && Object.keys(activeFacetsFilters).length > 0 && (
                     <Grid container justifyContent="flex-end">
-                        <Grid item>
+                        <Grid>
                             <Button
                                 variant="contained"
                                 arial-label="rest facet filters"

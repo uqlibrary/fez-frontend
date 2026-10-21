@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { locale } from 'locale';
@@ -331,7 +331,7 @@ export const PublicationCitation = ({
                           showDefaultActions ? _handleDefaultActions(action.key) : action.handleAction(publication),
                   };
                   return (
-                      <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
+                      <Grid size={{ xs: 12, sm: 'auto' }} key={`action_key_${index}`}>
                           {action.primary ? (
                               <Button
                                   {...buttonProps}
@@ -414,10 +414,10 @@ export const PublicationCitation = ({
                 renderThumbnails={renderThumbnails}
             >
                 <Grid container spacing={0}>
-                    <Grid item xs>
+                    <Grid size={12}>
                         <Grid container spacing={0}>
                             {!hideTitle ? (
-                                <Grid item xs style={{ minWidth: 1 }}>
+                                <Grid size="grow" style={{ minWidth: 1 }}>
                                     <Typography
                                         variant="h6"
                                         component="h6"
@@ -434,10 +434,10 @@ export const PublicationCitation = ({
                                     </Typography>
                                 </Grid>
                             ) : (
-                                <Grid item xs />
+                                <Grid size="grow" />
                             )}
                             {showMetrics && (
-                                <Grid item xs={12} sm="auto" className="citationMetrics">
+                                <Grid size={{ xs: 12, sm: 'auto' }} className="citationMetrics">
                                     <ExternalLink
                                         id={`my-trending-pubs-${recordValue.source}`}
                                         href={recordValue.citation_url}
@@ -453,20 +453,20 @@ export const PublicationCitation = ({
                                     >
                                         <Grid container>
                                             {showSourceCountIcon && (
-                                                <Grid item>
+                                                <Grid>
                                                     <span className={`fez-icon ${recordValue.source} xxxlarge`} />
                                                     <Typography variant="h6">{recordValue.count}</Typography>
                                                 </Grid>
                                             )}
                                             {!showSourceCountIcon && !hideCountTotal && (
-                                                <Grid item>
+                                                <Grid>
                                                     <Typography variant="h6" color="inherit" className="count">
                                                         {Math.round(recordValue.count)}
                                                     </Typography>
                                                 </Grid>
                                             )}
                                             {!hideCountDiff && (
-                                                <Grid item>
+                                                <Grid>
                                                     <Typography
                                                         variant="h6"
                                                         color="inherit"
@@ -487,8 +487,7 @@ export const PublicationCitation = ({
                             )}
                             {!hideCitationText && (
                                 <Grid
-                                    item
-                                    xs={12}
+                                    size={12}
                                     sx={theme => ({
                                         ...theme.typography.caption,
                                         color: theme.typography.body2.color,
@@ -502,19 +501,15 @@ export const PublicationCitation = ({
                                 </Grid>
                             )}
                             {showUnpublishedBufferFields && (
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <UnpublishedBufferCitationView publication={publication} />
                                 </Grid>
                             )}
                             {(!hideCitationCounts || !!showAdminActions) && (
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Grid container alignItems="center">
                                         {!hideCitationCounts && (
-                                            <Grid
-                                                item
-                                                xs="auto"
-                                                sx={{ '&.MuiGridLegacy-root': { flexGrow: 1, whiteSpace: 'nowrap' } }}
-                                            >
+                                            <Grid size="grow" sx={{ whiteSpace: 'nowrap' }}>
                                                 <CitationCounts
                                                     publication={publication}
                                                     showAltmetricWidget={showAltmetricWidget}
@@ -523,7 +518,7 @@ export const PublicationCitation = ({
                                         )}
 
                                         {!!showAdminActions && (
-                                            <Grid item>
+                                            <Grid>
                                                 <AdminActions
                                                     publication={publication}
                                                     isRecordDeleted={isPublicationDeleted}
@@ -538,7 +533,7 @@ export const PublicationCitation = ({
                                 </Grid>
                             )}
                             {showSources && publication.sources && (
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Typography gutterBottom variant="caption">
                                         {renderSources()}
                                     </Typography>
@@ -549,7 +544,7 @@ export const PublicationCitation = ({
                     {!hideContentIndicators &&
                         publication.fez_record_search_key_content_indicator &&
                         publication.fez_record_search_key_content_indicator.length > 0 && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Typography
                                     variant="caption"
                                     id="rek-content-indicator"
@@ -567,7 +562,7 @@ export const PublicationCitation = ({
                 </Grid>
                 {(showDefaultActions || customActions) && (
                     <StyledGridActionButtons container spacing={1}>
-                        <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                        <Grid size="grow" sx={{ display: { xs: 'none', sm: 'block' } }} />
 
                         {renderActions(showDefaultActions ? defaultActions : customActions)}
                     </StyledGridActionButtons>

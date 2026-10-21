@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import BooleanTemplate from './BooleanTemplate';
@@ -97,7 +97,7 @@ export const ViewField = ({ fieldConfig, headerColumnWidth }) => {
                     height: '100%',
                 })}
             >
-                <Grid item xs={12} sm={headerColumnWidth}>
+                <Grid size={{ xs: 12, sm: headerColumnWidth }}>
                     <Typography
                         variant="body2"
                         id={`${fieldId}-header`}
@@ -109,7 +109,7 @@ export const ViewField = ({ fieldConfig, headerColumnWidth }) => {
                         {heading}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={12 - headerColumnWidth}>
+                <Grid size={{ xs: 12, sm: 12 - headerColumnWidth }}>
                     <TemplateComponent data={data} templateProps={templateProps} fieldId={fieldId} />
                 </Grid>
             </Grid>

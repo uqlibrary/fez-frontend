@@ -10,7 +10,7 @@ import {
     adminEditCheckDefaultTab,
     assertChangeSelectFromTo,
 } from '../helpers';
-import { typeCKEditor } from '../../../lib/ckeditor';
+import { typeRichTextEditor } from '../../../lib/richTextEditor';
 import { assertHasText } from '../../../lib/helpers';
 
 test.describe('Creative Work admin edit, general', () => {
@@ -157,7 +157,7 @@ test.describe('Creative Work admin edit, general', () => {
             await expect(NTROSectionContent).toBeVisible();
 
             await clickRowEditButton(page, 0);
-            await typeCKEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
+            await typeRichTextEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
             await assertChangeSelectFromTo(
                 page,
                 'rek-significance',
@@ -182,7 +182,7 @@ test.describe('Creative Work admin edit, general', () => {
             await expect(page.getByTestId('ntro-section-content')).toBeVisible();
 
             await clickRowEditButton(page, 1);
-            await typeCKEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
+            await typeRichTextEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
             await assertChangeSelectFromTo(page, 'rek-significance', '', statementList[0].newSignificance);
             await clickFormSaveButton(page, 'UPDATE');
             await rowScaleDisplaysAs(page, 1, statementList[0].newSignificance);
@@ -234,7 +234,7 @@ test.describe('Creative Work admin edit, general', () => {
             await expect(NTROSectionContent).toBeVisible();
 
             await clickRowEditButton(page, 1);
-            await typeCKEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
+            await typeRichTextEditor(page, 'rek-creator-contribution-statement', statementList[0].newText);
             // popup appears at foot of page, outside Admin section
             await assertChangeSelectFromTo(page, 'rek-significance', '', statementList[0].newSignificance);
 

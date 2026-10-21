@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { url } from 'config/validation';
 
@@ -64,7 +64,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
 
     return (
         <Grid container spacing={2} display="row" alignItems="center">
-            <Grid item style={{ flexGrow: 1 }} xs={12} sm={6} md={5}>
+            <Grid size={{ xs: 12, sm: 6, md: 5 }} style={{ flexGrow: 1 }}>
                 <TextField
                     key={(itemSelectedToEdit || {}).key}
                     fullWidth
@@ -83,7 +83,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                     defaultValue={(itemSelectedToEdit || {}).key || ''}
                 />
             </Grid>
-            <Grid item xs={12} sm={6} md={5}>
+            <Grid size={{ xs: 12, sm: 6, md: 5 }}>
                 <TextField
                     key={(itemSelectedToEdit || {}).value}
                     fullWidth
@@ -100,7 +100,7 @@ export const LinkInfoForm = ({ disabled, locale, onAdd, itemSelectedToEdit }) =>
                     defaultValue={(itemSelectedToEdit || {}).value || ''}
                 />
             </Grid>
-            <Grid item xs={12} md={2}>
+            <Grid size={{ xs: 12, md: 2 }}>
                 <Button
                     fullWidth
                     id="add-items"

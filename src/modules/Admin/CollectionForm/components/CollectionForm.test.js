@@ -12,7 +12,7 @@ import {
     spyOnWindowLocationMethod,
 } from 'test-utils';
 import * as repositories from 'repositories';
-import { record } from 'mock/data';
+import record from 'mock/data/records/record';
 
 async function setup(testProps) {
     const props = {

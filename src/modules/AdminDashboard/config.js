@@ -6,12 +6,25 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { GridFilterInputSingleSelect } from '@mui/x-data-grid';
 import { isEmptyString, isURL } from '../../helpers/general';
+// Date formats and getFormattedServerDate live in a leaf module (no React/MUI) so data modules can
+// import them without pulling in this file's UI graph. Re-exported below to keep this file's API stable.
+import {
+    DEFAULT_DATEPICKER_INPUT_FORMAT,
+    DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME,
+    DEFAULT_DATE_FORMAT,
+    DEFAULT_DATE_FORMAT_WITH_TIME,
+    DEFAULT_SERVER_DATE_FORMAT,
+    DEFAULT_SERVER_DATE_FORMAT_NO_TIME,
+    DEFAULT_DATE_FORMAT_WITH_TIME_24H,
+    DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
+    getFormattedServerDate,
+} from 'config/dateFormats';
 
 export const COLOURS = { assigned: '#338CFA', unassigned: '#B60DCE' };
 
@@ -39,14 +52,17 @@ export const VIEWMODES = {
 export const VIEWADMINPANELMODES = [VIEWMODES.ADD, VIEWMODES.EDIT, VIEWMODES.DELETE];
 export const REORDERING = [MENUACTIONS.TOP, MENUACTIONS.UP, MENUACTIONS.BOTTOM, MENUACTIONS.DOWN];
 
-export const DEFAULT_DATEPICKER_INPUT_FORMAT = 'DD/MM/YYYY';
-export const DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME = 'DD/MM/YYYY HH:mm:ss';
-export const DEFAULT_DATE_FORMAT = 'Do MMMM YYYY';
-export const DEFAULT_DATE_FORMAT_WITH_TIME = 'Do MMMM YYYY hh:mm';
-export const DEFAULT_SERVER_DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
-export const DEFAULT_SERVER_DATE_FORMAT_NO_TIME = 'YYYY-MM-DD';
-export const DEFAULT_DATE_FORMAT_WITH_TIME_24H = 'Do MMMM YYYY HH:mm';
-export const DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS = 'Do MMMM YYYY HH:mm:ss';
+export {
+    DEFAULT_DATEPICKER_INPUT_FORMAT,
+    DEFAULT_DATEPICKER_INPUT_FORMAT_WITH_TIME,
+    DEFAULT_DATE_FORMAT,
+    DEFAULT_DATE_FORMAT_WITH_TIME,
+    DEFAULT_SERVER_DATE_FORMAT,
+    DEFAULT_SERVER_DATE_FORMAT_NO_TIME,
+    DEFAULT_DATE_FORMAT_WITH_TIME_24H,
+    DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS,
+    getFormattedServerDate,
+};
 
 export const SYSTEM_ALERT_ACTION = {
     ASSIGN: 'ASSIGN',
@@ -138,9 +154,6 @@ export const optionDoubleRowRender = (props, option) => {
 
 export const getReportTypeFromValue = value => Object.entries(REPORT_TYPE).find(arr => arr[1] === value)?.[0];
 export const getDefaultSorting = reportType => DEFAULT_SORTING?.[reportType] || [];
-
-export const getFormattedServerDate = (dateStr, format = DEFAULT_DATE_FORMAT) =>
-    (dateStr && moment(dateStr, DEFAULT_SERVER_DATE_FORMAT).format(format)) || '';
 
 export const sortUsersByName = (users = []) =>
     [...users].sort((a, b) =>
@@ -404,7 +417,7 @@ export const exportReportFilters = {
             const hasDependantBinding = !!state.report?.sel_bindings?.includes(':date_to');
 
             return (
-                <Grid item xs={12} sm={4} key={`${id}-date-from`}>
+                <Grid size={{ xs: 12, sm: 4 }} key={`${id}-date-from`}>
                     <Box data-testid={`${id}-date-from`}>
                         <DatePicker
                             label={locale.label.dateFrom}
@@ -506,7 +519,7 @@ export const exportReportFilters = {
             const hasBinding = !!state.report?.sel_bindings?.includes(':date_to');
             const exportReport = state.report || defaultLegacyReportOption;
             return (
-                <Grid item xs={12} sm={4} key={`${id}-date-to`}>
+                <Grid size={{ xs: 12, sm: 4 }} key={`${id}-date-to`}>
                     <Box data-testid={`${id}-date-to`}>
                         <DatePicker
                             label={locale.label.dateTo}

@@ -25,13 +25,13 @@ We use 16 unit spacing for forms
 
 ```jsx
 <Grid container spacing={2}>
-  <Grid item xs={12}>
+  <Grid size={12}>
     Form component here
   </Grid>
-  <Grid item xs={6}>
+  <Grid size={6}>
     Form component here
   </Grid>
-  <Grid item xs={6}>
+  <Grid size={6}>
     Form component here
   </Grid>
 </Grid>
@@ -43,8 +43,8 @@ To push items right
 
 ```jsx
 <Grid container spacing={2}>
-  <Grid item xs />
-  <Grid item xs={'auto'}>
+  <Grid size="grow" />
+  <Grid size="auto">
     This will display to the right and be as wide as the contents
   </Grid>
 </Grid>
@@ -54,11 +54,11 @@ To center items,
 
 ```jsx
 <Grid container spacing={2}>
-  <Grid item xs />
-  <Grid item xs={'auto'}>
+  <Grid size="grow" />
+  <Grid size="auto">
     This will in the center of the row and be only as wide as the contents
   </Grid>
-  <Grid item xs />
+  <Grid size="grow" />
 </Grid>
 ```
 

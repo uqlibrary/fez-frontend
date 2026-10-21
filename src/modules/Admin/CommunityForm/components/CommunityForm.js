@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -17,7 +17,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 
@@ -73,15 +73,15 @@ export const CommunityForm = () => {
         return (
             <StandardPage title={txt.title}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <StandardCard title={txt.afterSubmitTitle}>
                             <Typography>{txt.afterSubmitText}</Typography>
                         </StandardCard>
                     </Grid>
                 </Grid>
                 <Grid container spacing={2}>
-                    <Grid item xs />
-                    <Grid item>
+                    <Grid size="grow" />
+                    <Grid>
                         <Button
                             variant="contained"
                             fullWidth
@@ -92,7 +92,7 @@ export const CommunityForm = () => {
                             {txt.afterSubmitButton}
                         </Button>
                     </Grid>
-                    <Grid item>
+                    <Grid>
                         <Button
                             variant="contained"
                             color="primary"
@@ -129,11 +129,11 @@ export const CommunityForm = () => {
                 <form>
                     <NavigationDialogBox when={isDirty && !isSubmitSuccessful} txt={txt.cancelWorkflowConfirmation} />
                     <Grid container spacing={3}>
-                        <Grid item xs={12}>
-                            <Grid item xs={12}>
+                        <Grid size={12}>
+                            <Grid size={12}>
                                 <StandardCard title={txt.details.title} help={txt.details.help}>
                                     <Grid container spacing={3}>
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={TextField}
@@ -149,7 +149,7 @@ export const CommunityForm = () => {
                                             />
                                         </Grid>
 
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Field
                                                 control={control}
                                                 component={TextField}
@@ -165,7 +165,7 @@ export const CommunityForm = () => {
                                             />
                                         </Grid>
 
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Typography>{txt.formLabels.keywords.description}</Typography>
                                             <Field
                                                 control={control}
@@ -181,33 +181,29 @@ export const CommunityForm = () => {
                                             />
                                         </Grid>
 
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Typography>{txt.formLabels.internalNotes.label}</Typography>
                                             <Field
                                                 control={control}
-                                                component={RichEditorField}
-                                                richEditorId="internalNotes"
+                                                component={RichTextEditorField}
+                                                id="internalNotes"
                                                 disabled={isSubmitting}
                                                 name="internalNotes"
-                                                fullWidth
-                                                multiline
-                                                rows={5}
-                                                {...txt.formLabels.internalNotes}
                                             />
                                         </Grid>
                                     </Grid>
                                 </StandardCard>
                             </Grid>
                             {alertProps && (
-                                <Grid item xs={12}>
+                                <Grid size={12}>
                                     <Alert {...alertProps} />
                                 </Grid>
                             )}
                         </Grid>
 
-                        <Grid container spacing={2}>
-                            <Grid item xs={false} sm />
-                            <Grid item xs={12} sm="auto">
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
+                            <Grid size={{ xs: false, sm: 'grow' }} />
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     data-analyticsid="cancel-community"
                                     data-testid="cancel-community"
@@ -220,7 +216,7 @@ export const CommunityForm = () => {
                                 </Button>
                             </Grid>
 
-                            <Grid item xs={12} sm="auto">
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     data-analyticsid="submit-community"
                                     data-testid="submit-community"

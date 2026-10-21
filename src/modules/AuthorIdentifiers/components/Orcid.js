@@ -3,7 +3,7 @@ import { createHash } from 'crypto';
 import { parse } from 'querystring';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -174,7 +174,7 @@ const Orcid = () => {
         <StandardPage title={txt.title}>
             <ConfirmDialogBox onRef={_setAuthoriseConfirmation} locale={txt.grantAccessConfirmation} />
             <Grid container spacing={3}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {getAlert({
                         submitFailed: !!accountAuthorError || !isValidOrcidState,
                         error: !isValidOrcidState
@@ -184,15 +184,15 @@ const Orcid = () => {
                         alertLocale: txt,
                     })}
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={txt.linkOrcid.title}>
                         <Typography component={'span'} gutterBottom>
                             {txt.linkOrcid.description}
                         </Typography>
                         <Grid container spacing={2}>
-                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                            <Grid size="grow" sx={{ display: { xs: 'none', sm: 'block' } }} />
 
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     aria-label={txt.linkOrcid.labels.submit}
                                     variant={'contained'}
@@ -206,15 +206,15 @@ const Orcid = () => {
                         </Grid>
                     </StandardCard>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard title={txt.createOrcid.title}>
                         <Typography component={'span'} gutterBottom>
                             {txt.createOrcid.description}
                         </Typography>
                         <Grid container spacing={2}>
-                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+                            <Grid size="grow" sx={{ display: { xs: 'none', sm: 'block' } }} />
 
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     aria-label={txt.createOrcid.labels.submit}
                                     variant={'contained'}

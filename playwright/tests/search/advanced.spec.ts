@@ -1,5 +1,5 @@
 import { test, expect, Page } from '../../test';
-import { assertCKEditorEmpty, typeCKEditor } from '../../lib/ckeditor';
+import { assertRichTextEditorEmpty, typeRichTextEditor } from '../../lib/richTextEditor';
 
 test.describe('Advanced Search', () => {
     // a particular search key can be updated for bulk records
@@ -14,8 +14,8 @@ test.describe('Advanced Search', () => {
         await page.getByTestId(`search-key-option-${optionId}`).click();
         // enter some words in the rich editor
         await expect(page.getByTestId('change-search-key-value-submit')).toBeDisabled();
-        await assertCKEditorEmpty(page, frskName);
-        await typeCKEditor(page, frskName, 'some words');
+        await assertRichTextEditorEmpty(page, frskName);
+        await typeRichTextEditor(page, frskName, 'some words');
         await expect(page.getByTestId('change-search-key-value-submit')).not.toBeDisabled();
         // save & see success
         await page.getByTestId('change-search-key-value-submit').click();

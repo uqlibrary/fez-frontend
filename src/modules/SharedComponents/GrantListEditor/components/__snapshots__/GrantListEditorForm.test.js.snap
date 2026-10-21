@@ -4,39 +4,39 @@ exports[`GrantListEditorForm should render with default props 1`] = `
 <div>
   Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
   <div
-    class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-1 css-1x7evzc-MuiGridLegacy-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
     style="margin-top: 8px;"
   >
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-true css-1x31aqv-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-grow css-1w2mcj5-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         data-testid="rek-grant-agency"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
           data-testid="rek-grant-agency-label"
           for="rek-grant-agency-input"
           id="rek-grant-agency-label"
         >
-          Funder/Sponsor name
+          Grant Agency
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
-            aria-label="Funder/Sponsor name"
+            aria-label="Grant Agency"
             autocomplete="off"
             class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
             data-analyticsid="rek-grant-agency-input"
             data-testid="rek-grant-agency-input"
             id="rek-grant-agency-input"
-            label="Funder/Sponsor name"
+            label="Grant Agency"
             name="grantAgencyName"
-            placeholder="Funder/sponsor name for this work"
+            placeholder="Grant agency for this work"
             type="text"
             value=""
           />
@@ -44,14 +44,14 @@ exports[`GrantListEditorForm should render with default props 1`] = `
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-d949ub-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         data-testid="rek-grant-id"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1hd0yqc-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
           data-testid="rek-grant-id-label"
           for="rek-grant-id-input"
@@ -60,7 +60,7 @@ exports[`GrantListEditorForm should render with default props 1`] = `
           Grant ID
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-pwuujq-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
@@ -79,26 +79,26 @@ exports[`GrantListEditorForm should render with default props 1`] = `
         </div>
       </div>
       <div
-        class="MuiFormHelperText-root css-u90aml-MuiFormHelperText-root"
+        class="MuiFormHelperText-root css-1puf113-MuiFormHelperText-root"
       >
         Accepts IDs or full URLs
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-12 MuiGridLegacy-grid-md-3 css-mzq0b9-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-d949ub-MuiGrid-root"
     >
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-rvampk-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
           style="margin-bottom: -3px;"
         >
            
            
         </span>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-119uwq1-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         >
           <div
             aria-disabled="true"
@@ -110,7 +110,7 @@ exports[`GrantListEditorForm should render with default props 1`] = `
             id="rek-grant-type-select"
             role="combobox"
           >
-            Funder/Sponsor type
+            Grant Agency type
           </div>
           <input
             aria-hidden="true"
@@ -120,7 +120,7 @@ exports[`GrantListEditorForm should render with default props 1`] = `
             disabled=""
             id="rek-grant-type-input"
             name="grantAgencyType"
-            placeholder="Funder/Sponsor type"
+            placeholder="Grant Agency type"
             tabindex="-1"
             value=""
           />
@@ -139,10 +139,10 @@ exports[`GrantListEditorForm should render with default props 1`] = `
       </div>
     </div>
     <div
-      class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-alav1n-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
         data-analyticsid="rek-grant-add"
         data-testid="rek-grant-add"
         disabled=""

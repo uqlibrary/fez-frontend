@@ -90,7 +90,7 @@ test.describe('view Journal', () => {
                     fieldValues[field] = await page.getByTestId(field).inputValue();
                 }
 
-                const ckContent = await page.locator('.ck-content').innerText();
+                const advisoryStatement = await page.locator('[data-testid="jnl-advisory-statement"]').innerText();
                 await expect(page.getByTestId('jnl_issn_jid-list-row-0')).toContainText('0388-0001');
                 await expect(page.getByTestId('jnl_issn_jid-list-row-1')).toContainText('2169-0375');
                 await page.getByTestId('action-button').click();
@@ -99,7 +99,7 @@ test.describe('view Journal', () => {
                 for (const field of fields) {
                     await expect(page.getByTestId(field)).toHaveValue(fieldValues[field]);
                 }
-                await expect(page.locator('.ck-content')).toHaveText(ckContent);
+                await expect(page.locator('[data-testid="jnl-advisory-statement"]')).toHaveText(advisoryStatement);
                 await expect(page.getByTestId('jnl_issn_jid-list-row-0')).toContainText('0388-0001');
                 await expect(page.getByTestId('jnl_issn_jid-list-row-1')).toContainText('2169-0375');
             });

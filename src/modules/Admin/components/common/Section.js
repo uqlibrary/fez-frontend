@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import AdminCard from '../AdminCard/components/AdminCard';
 import FieldGridItem from './FieldGridItem';
 
@@ -22,7 +22,7 @@ GroupsWithoutCard.propTypes = {
 };
 
 export const GroupsWithinCard = React.memo(({ title, groups, disabled, ...props }) => (
-    <Grid item xs={12} key={title}>
+    <Grid size={12} key={title}>
         <AdminCard title={`${title}`} accentHeader>
             <Grid container spacing={1}>
                 <GroupsWithoutCard groups={groups} disabled={disabled} {...props} />

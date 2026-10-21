@@ -8,7 +8,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 
@@ -178,7 +178,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <Box sx={{ ...classes.background }}>
                                     <Grid container spacing={2} sx={{ position: 'relative' }}>
-                                        <Grid item xs={12} sx={{ paddingBottom: 2 }}>
+                                        <Grid size={12} sx={{ paddingBottom: 2 }}>
                                             <NameData />
                                         </Grid>
                                     </Grid>
@@ -192,7 +192,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                             bottom: 0,
                                         }}
                                     >
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Grid
                                                 container
                                                 direction="row-reverse"
@@ -200,7 +200,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                                 alignItems="center"
                                                 spacing={2}
                                             >
-                                                <Grid item>
+                                                <Grid>
                                                     <Button
                                                         id={`users-${mode}-this-user-save`}
                                                         data-analyticsid={`users-${mode}-this-user-save`}
@@ -213,7 +213,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                                         {mode === 'update' ? editButton : addButton}
                                                     </Button>
                                                 </Grid>
-                                                <Grid item>
+                                                <Grid>
                                                     <Button
                                                         id={`users-${mode}-this-user-cancel`}
                                                         data-analyticsid={`users-${mode}-this-user-cancel`}
@@ -229,7 +229,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
                                             </Grid>
 
                                             {(!!apiError || !!Object.keys(errors).length) && (
-                                                <Grid item xs={12}>
+                                                <Grid size={12}>
                                                     <Alert alertId="api_error_alert" {...alertProps} />
                                                 </Grid>
                                             )}

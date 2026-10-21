@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { styled } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -142,7 +142,7 @@ const ControlledVocabularies = () => {
                     </Box>
                 )}
                 {!!loadingVocabError && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             alertId="alert_controlled_vocabularies"
                             title={txt.error.title}

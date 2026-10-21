@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import ManageUsersNewList from './ManageUsersList';
@@ -33,7 +33,7 @@ export const ManageUsers = () => {
         <StandardPage title={locale.pages.users.title}>
             <Grid container spacing={2}>
                 <ActionFeedback />
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard noHeader>
                         <ManageUsersNewList
                             onRowAdd={handleRowAdd}

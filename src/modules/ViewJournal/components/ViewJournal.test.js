@@ -7,11 +7,10 @@ import {
     waitForElementToBeRemoved,
     WithReduxStore,
     WithRouter,
-    act,
     fireEvent,
     createMatchMedia,
     waitForTextToBeRemoved,
-    assertNotInTheDocument,
+    assertNotToBeInTheDocument,
     api,
     waitElementToBeInTheDocument,
     userEvent,
@@ -167,10 +166,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-type-header')).toHaveTextContent('Type of journal');
         expect(getByTestId('jnl-type-value')).toHaveTextContent('Fully Open Access');
-        expect(getByTestId('jnl-type-lookup-link')).toHaveAttribute(
-            'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fdoaj.org%2Ftoc%2F1085-3375',
-        );
+        expect(getByTestId('jnl-type-lookup-link')).toHaveAttribute('href', 'https://doaj.org/toc/1085-3375');
 
         // **************************************************************
         // Open Access Options Section
@@ -185,7 +181,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-doaj-apc-average-price-value')).toHaveTextContent('975 USD');
         expect(getByTestId('jnl-doaj-apc-average-price-lookup-link')).toHaveAttribute(
             'href',
-            'https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fdoaj.org%2Ftoc%2F1085-3375',
+            'https://doaj.org/toc/1085-3375',
         );
 
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-header')).toHaveTextContent('Journal licence');
@@ -345,7 +341,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-uq-author-publications-value')).toHaveTextContent('View these articles in UQ eSpace');
         expect(getByTestId('jnl-uq-author-publications-lookup-link')).toHaveAttribute(
             'href',
-            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2021&activeFacets[ranges][Year+published][to]=2026&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+            'http://localhost/records/search?activeFacets[ranges][Year+published][from]=2012&activeFacets[ranges][Year+published][to]=2017&searchQueryParams[mtj_jnl_id][value]=8508&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
         );
 
         expect(getByTestId('jnl-editorial-staff-header')).toHaveTextContent('UQ Editorial Staff');
@@ -573,6 +569,7 @@ describe('ViewJournal', () => {
                         jnl_issn: '1111-1111',
                         jnl_issn_order: 1,
                         fez_sherpa_romeo: {
+                            srm_source_id: 1,
                             srm_issn: '1111-1111',
                             srm_max_embargo_amount: 6,
                             srm_max_embargo_units: 'months',
@@ -589,7 +586,10 @@ describe('ViewJournal', () => {
 
         expect(queryByTestId('srm-journal-link-header')).toHaveTextContent('Open access with Accepted manuscript');
         expect(queryByTestId('srm-journal-link-value')).toHaveTextContent('6 months');
-        expect(queryByTestId('srm-journal-link-lookup-link')).toHaveAttribute('href', 'http://test');
+        expect(queryByTestId('srm-journal-link-lookup-link')).toHaveAttribute(
+            'href',
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1',
+        );
     });
 
     it('Should show embargo details from second issn even when journal link is not available', async () => {
@@ -601,18 +601,18 @@ describe('ViewJournal', () => {
                         jnl_issn: '1111-1111',
                         jnl_issn_order: 1,
                         fez_sherpa_romeo: {
+                            srm_source_id: null,
                             srm_issn: '1111-1111',
-                            srm_journal_link: null,
                         },
                     },
                     {
                         jnl_issn: '2222-2222',
                         jnl_issn_order: 2,
                         fez_sherpa_romeo: {
+                            srm_source_id: null,
                             srm_max_embargo_amount: 6,
                             srm_max_embargo_units: 'weeks',
                             srm_issn: '2222-2222',
-                            srm_journal_link: null,
                         },
                     },
                 ],
@@ -839,39 +839,6 @@ describe('ViewJournal', () => {
         expect(queryByTestId('journal-details-journal-details-qualityByRanking-header')).not.toBeInTheDocument();
     });
 
-    describe('Favouriting', () => {
-        it('should display an error message if the journal "favourite" action fails', async () => {
-            window.matchMedia = createMatchMedia(1600);
-            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
-                data: {
-                    ...journalDetails.data,
-                },
-            });
-            mockApi.onPost(new RegExp(repositories.routes.JOURNAL_FAVOURITES_API().apiUrl)).reply(500, { data: '' });
-            const { getByTestId, getByText, queryByTestId } = setup();
-
-            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-
-            expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
-            expect(queryByTestId('alert-error')).not.toBeInTheDocument();
-
-            await act(async () => {
-                fireEvent.click(getByTestId('favourite-journal-notsaved'));
-
-                // need some time to pass for the api call to return
-                await new Promise(r => setTimeout(r, 500));
-            });
-            expect(getByTestId('alert-error')).toBeInTheDocument();
-            expect(getByTestId('dismiss')).toBeInTheDocument();
-
-            await act(async () => {
-                fireEvent.click(getByTestId('dismiss'));
-            });
-
-            expect(queryByTestId('alert-error')).not.toBeInTheDocument();
-        });
-    });
-
     it('should display journal with advisory statement', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
@@ -1060,7 +1027,7 @@ describe('ViewJournal', () => {
             setup();
 
             await waitForTextToBeRemoved('Loading journal data');
-            assertNotInTheDocument('publish-as-oa-button');
+            assertNotToBeInTheDocument('publish-as-oa-button');
         });
 
         describe('search workflows', () => {
@@ -1081,7 +1048,7 @@ describe('ViewJournal', () => {
                 setup();
 
                 await waitForTextToBeRemoved('Loading journal data');
-                assertNotInTheDocument('publish-as-oa-button');
+                assertNotToBeInTheDocument('publish-as-oa-button');
             });
 
             describe("should display button for search workflows when OA status = `fee` and it's not embargoed", () => {
@@ -1289,7 +1256,7 @@ describe('ViewJournal', () => {
                     await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
 
-                it('should not display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', () => {
+                it('should display button for search workflows when OA status equal to `fee` and embargoed for less than 12 months', async () => {
                     api.mock.journals.get({
                         id: '.*',
                         data: {
@@ -1302,7 +1269,7 @@ describe('ViewJournal', () => {
                     });
                     setup();
 
-                    assertNotInTheDocument('publish-as-oa-button');
+                    await waitElementToBeInTheDocument('publish-as-oa-button');
                 });
             });
         });

@@ -11,7 +11,7 @@ import {
     assertAffiliationsAllowed,
 } from '../helpers';
 
-import { readCKEditor } from '../../../lib/ckeditor';
+import { readRichTextEditor } from '../../../lib/richTextEditor';
 
 test.describe('Working paper admin edit', () => {
     const record = { ...recordList.data[0] };
@@ -36,7 +36,7 @@ test.describe('Working paper admin edit', () => {
 
         await expect(titleCard.locator('span').locator('span').nth(0)).toContainText('Formatted title');
 
-        expect(await readCKEditor(page, 'rek-title')).toContain(record.rek_title);
+        expect(await readRichTextEditor(page, 'rek-title')).toContain(record.rek_title);
 
         const bibliographicCard = bibliographicContent.locator('.AdminCard').nth(4);
         await expect(bibliographicCard.locator('h4')).toHaveText(/Bibliographic/);

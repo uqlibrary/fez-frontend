@@ -5,7 +5,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Tooltip from '@mui/material/Tooltip';
 
 import Search from '@mui/icons-material/Search';
@@ -116,30 +116,14 @@ export const SimpleSearchComponent = ({
                             className={classes.inHeader}
                         >
                             {showPrefixIcon && (
-                                <Grid
-                                    item
-                                    xs={'auto'}
-                                    sx={{
-                                        '&.MuiGridLegacy-item': {
-                                            padding: '4px',
-                                        },
-                                    }}
-                                >
+                                <Grid size="auto" sx={{ padding: '4px' }}>
                                     <Search
                                         sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })}
                                         className={classes.searchIconPrefix}
                                     />
                                 </Grid>
                             )}
-                            <Grid
-                                item
-                                xs
-                                sx={{
-                                    '&.MuiGridLegacy-item': {
-                                        padding: '4px',
-                                    },
-                                }}
-                            >
+                            <Grid size="grow" sx={{ padding: '4px' }}>
                                 <TextField
                                     textFieldId="simple-search"
                                     type="search"
@@ -203,7 +187,7 @@ export const SimpleSearchComponent = ({
                                         justifyContent={'center'}
                                     >
                                         {showMobileSearchButton && (
-                                            <Grid item>
+                                            <Grid>
                                                 <IconButton onClick={_handleToggleMobile} size="large">
                                                     <Close
                                                         sx={theme => ({
@@ -215,7 +199,7 @@ export const SimpleSearchComponent = ({
                                                 </IconButton>
                                             </Grid>
                                         )}
-                                        <Grid item xs zeroMinWidth>
+                                        <Grid size="grow" sx={{ minWidth: 0 }}>
                                             <TextField
                                                 sx={{
                                                     width: '99%',
@@ -246,7 +230,7 @@ export const SimpleSearchComponent = ({
                                             />
                                         </Grid>
                                         {showMobileSearchButton && (
-                                            <Grid item>
+                                            <Grid>
                                                 <IconButton
                                                     onClick={_handleSearch}
                                                     disabled={state.searchTerm.trim().length === 0}
@@ -265,7 +249,7 @@ export const SimpleSearchComponent = ({
                     <React.Fragment>
                         {/* NOT in header */}
                         <Grid container spacing={2} alignItems={'center'}>
-                            <Grid item xs>
+                            <Grid size="grow">
                                 <TextField
                                     textFieldId="simple-search"
                                     type="search"
@@ -280,7 +264,7 @@ export const SimpleSearchComponent = ({
                                     errorText={searchTextValidationMessage(searchText)}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     children={txt.searchButtonText}
                                     aria-label={txt.searchButtonAriaLabel}
@@ -294,7 +278,7 @@ export const SimpleSearchComponent = ({
                                     data-testid="simple-search-button"
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={'auto'}>
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     variant={'contained'}
                                     color={'default'}

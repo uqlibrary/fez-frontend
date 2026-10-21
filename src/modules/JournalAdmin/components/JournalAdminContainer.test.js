@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 import { useParams } from 'react-router';
 import * as JournalActions from 'actions/journals';
 import { accounts } from 'mock/data/account';
-import { journalDoaj } from 'mock/data';
+import { journalDoaj } from 'mock/data/journalDoaj';
 import JournalAdminContainer from './JournalAdminContainer';
 
 class ResizeObserver {

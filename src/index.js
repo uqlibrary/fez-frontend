@@ -32,7 +32,7 @@ if (!IS_TEST && process.env.ENABLE_LOG) {
     Sentry.init({
         dsn: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
         integrations: [
-            Sentry.reactRouterV6BrowserTracingIntegration({
+            Sentry.reactRouterBrowserTracingIntegration({
                 useEffect: React.useEffect,
                 useLocation,
                 useNavigationType,

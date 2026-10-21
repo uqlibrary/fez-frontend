@@ -9,15 +9,51 @@ import {
     assertDisabled,
     assertEnabled,
 } from 'test-utils';
+import { Routes, Route } from 'react-router';
 import { FavouriteJournals } from '../index';
 import mockData from '../../../mock/data/testing/journals/journals';
 import * as redux from 'react-redux';
+import { loadLists, loadListItems, deleteListItems } from 'actions/journalUserLists';
+import { useDispatchOnce } from 'hooks/useDispatchOnce';
+import { pathConfig } from '../../../config';
 
-const setup = ({ state = {} } = {}) => {
+const mockNavigate = jest.fn();
+const mockParams = jest.fn();
+
+jest.mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
+    useNavigate: () => mockNavigate,
+    useParams: () => mockParams(),
+}));
+
+jest.mock('actions/journalUserLists', () => ({
+    loadLists: jest.fn(() => ({ type: 'LOAD_LISTS' })),
+    loadListItems: jest.fn(() => ({ type: 'LOAD_LIST_ITEMS' })),
+    deleteListItems: jest.fn(() => ({ type: 'DELETE_LIST_ITEMS' })),
+}));
+
+jest.mock('hooks/useDispatchOnce', () => ({
+    useDispatchOnce: jest.fn(),
+}));
+
+const setup = ({ state = {}, listsState = {}, listId = '123' } = {}) => {
+    mockParams.mockReturnValue({ id: listId });
     return render(
-        <WithMemoryRouter>
-            <WithReduxStore initialState={{ favouriteJournalsReducer: state }}>
-                <FavouriteJournals />
+        <WithMemoryRouter route={`/favourites/${listId}`}>
+            <WithReduxStore
+                initialState={{
+                    favouriteJournalsReducer: state,
+                    journalUserListsReducer: {
+                        loading: false,
+                        isDirty: false,
+                        data: { data: [] },
+                        ...listsState,
+                    },
+                }}
+            >
+                <Routes>
+                    <Route path="/favourites/:id" element={<FavouriteJournals />} />
+                </Routes>
             </WithReduxStore>
         </WithMemoryRouter>,
     );
@@ -28,34 +64,37 @@ jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
     useDispatch: jest.fn(),
 }));
+
 describe('FavouriteJournals', () => {
+    beforeEach(() => {
+        jest.clearAllMocks();
+        mocks.useDispatch = redux.useDispatch;
+        mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
+        useDispatchOnce.mockImplementation((condition, callback) => callback);
+    });
+
     afterEach(() => {
-        Object.keys(mocks).map(name => mocks[name].mockRestore());
+        Object.keys(mocks).forEach(name => mocks[name].mockRestore());
     });
 
     it('should toggle selection of all favourite journals', () => {
         const selectAllCheckboxSelectorString = 'journal-list-header-col-1-select-all';
         const checkboxSelectorString = 'input[id^="journal-list-data-col-1-checkbox-"]:checked';
-        mocks.useDispatch = redux.useDispatch;
-        mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { queryByTestId, container } = setup({
             state: { loading: false, response: { total: 1, data: mockData } },
         });
 
         expect(queryByTestId(selectAllCheckboxSelectorString)).toBeInTheDocument();
-
         expect(container.querySelectorAll(checkboxSelectorString).length).toBe(0);
 
         act(() => {
             fireEvent.click(queryByTestId(selectAllCheckboxSelectorString));
         });
-
         expect(container.querySelectorAll(checkboxSelectorString).length).toBe(2);
 
         act(() => {
             fireEvent.click(queryByTestId(selectAllCheckboxSelectorString));
         });
-
         expect(container.querySelectorAll(checkboxSelectorString).length).toBe(0);
     });
 
@@ -65,19 +104,15 @@ describe('FavouriteJournals', () => {
             'input[id="journal-list-header-col-1-select-all"]:checked';
         const checkboxUncheckedSelectorString = 'input[id^="journal-list-data-col-1-checkbox-"]';
         const checkboxCheckedSelectorString = 'input[id^="journal-list-data-col-1-checkbox-"]:checked';
-        mocks.useDispatch = redux.useDispatch;
-        mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { queryByTestId, container } = setup({
             state: { loading: false, response: { total: 1, data: mockData } },
         });
 
         expect(queryByTestId(selectAllFavouritesCheckboxSelectorString)).toBeInTheDocument();
         expect(container.querySelectorAll(selectAllFavouritesCheckedCheckboxSelectorString).length).toBe(0);
-
         expect(container.querySelectorAll(checkboxCheckedSelectorString).length).toBe(0);
 
         container.querySelectorAll(checkboxUncheckedSelectorString).forEach(checkbox => {
-            // don't wrap these calls in act(), as this actually prevents the "all" checkbox updating
             fireEvent.click(checkbox);
         });
 
@@ -90,30 +125,103 @@ describe('FavouriteJournals', () => {
         expect(container.querySelectorAll(selectAllFavouritesCheckedCheckboxSelectorString).length).toBe(0);
     });
 
-    it('should remove journal ', async () => {
-        mocks.useDispatch = redux.useDispatch;
-        mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
-        const { getByTestId } = setup({
+    it('should remove journal', async () => {
+        const { getByTestId, container } = setup({
             state: { loading: false, response: { total: 1, data: mockData } },
         });
 
         expect(getByTestId('remove-from-favourites-button')).toBeInTheDocument();
         assertDisabled(getByTestId('remove-from-favourites-button'));
-        await userEvent.click(document.querySelector('#journal-list-data-col-1-checkbox-0'));
 
+        const firstCheckbox = container.querySelector('input[id^="journal-list-data-col-1-checkbox-"]');
+        await userEvent.click(firstCheckbox);
         assertEnabled(getByTestId('remove-from-favourites-button'));
 
-        expect(redux.useDispatch).toHaveBeenCalledTimes(4);
         await userEvent.click(getByTestId('remove-from-favourites-button'));
-        // basic check that the button was clicked
-        expect(redux.useDispatch).toHaveBeenCalledTimes(6);
+
+        expect(deleteListItems).toHaveBeenCalledWith(
+            expect.objectContaining({ id: '123', ids: expect.arrayContaining([expect.any(String)]) }),
+        );
+        expect(deleteListItems.mock.calls[0][0].ids).toHaveLength(1);
     });
 
-    it('should render when there are no favs', () => {
-        mocks.useDispatch = redux.useDispatch;
-        mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
-        const { queryByTestId } = setup();
-        expect(queryByTestId('remove-from-favourites-button')).not.toBeInTheDocument();
-        expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();
+    it('should not load list items when no list is selected', () => {
+        setup({ listId: '' });
+
+        expect(loadListItems).not.toHaveBeenCalled();
+    });
+
+    it('should load list items for the selected list', () => {
+        setup({ listId: '123', state: { loading: false, response: { total: 1, data: mockData } } });
+
+        expect(loadListItems).toHaveBeenCalledWith(expect.objectContaining({ id: '123' }));
+    });
+
+    it('should fetch lists once favourites have loaded and are not dirty', () => {
+        setup({
+            state: { loading: false, response: { total: 1, data: mockData } },
+            listsState: { isDirty: false },
+        });
+
+        expect(useDispatchOnce).toHaveBeenCalledWith(true, expect.any(Function));
+
+        const [, callback] = useDispatchOnce.mock.calls[0];
+        callback();
+        expect(loadLists).toHaveBeenCalled();
+    });
+
+    it('should not fetch lists while dirty or before favourites have loaded', () => {
+        setup({
+            state: { loading: false, response: undefined },
+            listsState: { isDirty: false },
+        });
+
+        expect(useDispatchOnce).toHaveBeenCalledWith(false, expect.any(Function));
+    });
+
+    it('should pass loading and lists data down to ListSelect', () => {
+        const { getByTestId } = setup({
+            listId: '123',
+            listsState: { loading: true, data: { data: [{ id: '123', label: 'List A' }] } },
+        });
+
+        expect(getByTestId('favourte-list-select-input')).toBeDisabled();
+    });
+
+    it('should switch the active list when a new one is selected', async () => {
+        const { getByTestId, getByText, getByRole } = setup({
+            listId: '123',
+            listsState: {
+                data: {
+                    data: [
+                        { id: 123, label: 'List A' },
+                        { id: 456, label: 'List B' },
+                    ],
+                },
+            },
+        });
+
+        expect(getByText('List A')).toBeInTheDocument();
+        expect(getByTestId('favourte-list-select-input')).toHaveValue('123');
+
+        await userEvent.click(getByRole('combobox'));
+        await userEvent.click(getByRole('option', { name: 'List B' }));
+
+        expect(getByText('List B')).toBeInTheDocument();
+        expect(loadListItems).toHaveBeenLastCalledWith(expect.objectContaining({ id: '456' }));
+    });
+
+    it('should navigate to favourite journal lists', async () => {
+        const { getByTestId } = setup();
+
+        await userEvent.click(getByTestId('to-favourite-journal-lists-button'));
+        expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.lists);
+    });
+
+    it('should navigate to search', async () => {
+        const { getByTestId } = setup();
+
+        await userEvent.click(getByTestId('return-to-search-results-button'));
+        expect(mockNavigate).toHaveBeenCalledWith(pathConfig.journals.search);
     });
 });

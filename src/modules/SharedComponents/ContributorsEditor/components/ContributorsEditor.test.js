@@ -1,5 +1,5 @@
 import { ContributorsEditor, mapStateToProps } from './ContributorsEditor';
-import { authorsSearch } from 'mock/data';
+import { authorsSearch } from 'mock/data/account';
 import React from 'react';
 import { locale } from 'locale';
 import { render, WithReduxStore, fireEvent, waitFor, within, userEvent } from 'test-utils';

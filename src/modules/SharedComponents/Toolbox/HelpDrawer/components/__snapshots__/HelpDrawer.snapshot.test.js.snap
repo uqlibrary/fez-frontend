@@ -28,21 +28,21 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
       tabindex="-1"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-899c3r-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-yzy5am-MuiGrid-root"
         id="help-drawer"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1ozjd4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >
             HelpDrawer Title
           </h3>
           <div
-            class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             data-testid="help-drawer-message"
             id="help-drawer-text-HelpDrawerTitle"
           >
@@ -50,11 +50,11 @@ exports[`HelpDrawer snapshots tests renders menu 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           id="help-drawer-button"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-kyjpvp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1g3q2cd-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="help-drawer-close"
             data-testid="help-drawer-close"
             tabindex="0"
@@ -101,21 +101,21 @@ exports[`HelpDrawer snapshots tests renders nested text 1`] = `
       tabindex="-1"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-899c3r-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-yzy5am-MuiGrid-root"
         id="help-drawer"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1ozjd4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >
             HelpDrawer title
           </h3>
           <div
-            class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             data-testid="help-drawer-message"
             id="help-drawer-text-HelpDrawertitle"
           >
@@ -130,11 +130,11 @@ exports[`HelpDrawer snapshots tests renders nested text 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           id="help-drawer-button"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-kyjpvp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1g3q2cd-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="help-drawer-close"
             data-testid="help-drawer-close"
             tabindex="0"
@@ -187,21 +187,21 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
       tabindex="-1"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-899c3r-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-yzy5am-MuiGrid-root"
         id="help-drawer"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1ozjd4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >
             HelpDrawer title
           </h3>
           <div
-            class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             data-testid="help-drawer-message"
             id="help-drawer-text-HelpDrawertitle"
           >
@@ -211,11 +211,11 @@ exports[`HelpDrawer snapshots tests renders text as react children 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           id="help-drawer-button"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-kyjpvp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1g3q2cd-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="help-drawer-close"
             data-testid="help-drawer-close"
             tabindex="0"
@@ -262,21 +262,21 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
       tabindex="-1"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container MuiGridLegacy-spacing-xs-5 css-899c3r-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-5 css-yzy5am-MuiGrid-root"
         id="help-drawer"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h6 css-1ozjd4k-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-wgh92w-MuiTypography-root"
             data-testid="help-drawer-title"
             id="help-drawer-title"
           >
             HelpDrawer title
           </h3>
           <div
-            class="MuiTypography-root MuiTypography-body2 css-kp6n3s-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
             data-testid="help-drawer-message"
             id="help-drawer-text-HelpDrawertitle"
           >
@@ -284,11 +284,11 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
           </div>
         </div>
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 css-fwd0zd-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
           id="help-drawer-button"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-kyjpvp-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1g3q2cd-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="help-drawer-close"
             data-testid="help-drawer-close"
             tabindex="0"

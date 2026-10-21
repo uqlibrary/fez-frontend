@@ -124,6 +124,7 @@ const publicationTypeListJournal = {
                 }],
                 "fez_sherpa_romeo": {
                     "srm_id": 32188,
+                    "srm_source_id": 3218,
                     "srm_issn": "0312-2417",
                     "srm_journal_name": "Australian Archaeology",
                     "srm_journal_link": null,

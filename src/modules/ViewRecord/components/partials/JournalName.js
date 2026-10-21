@@ -5,6 +5,7 @@ import { default as viewRecordLocale } from 'locale/viewRecord';
 import { pathConfig } from 'config/pathConfig';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { Link } from 'react-router';
+import { getOpenPolicyFinderUrl } from 'config/general';
 
 // fez_journal returns era data
 export const getERAYears = matchedJournal => {
@@ -21,9 +22,13 @@ export const getERAYears = matchedJournal => {
 };
 
 export const getSherpaRomeo = issns => {
-    const filteredIssns = issns.filter(issn => !!issn.fez_sherpa_romeo && !!issn.fez_sherpa_romeo.srm_journal_link);
-    return filteredIssns.length > 0
-        ? { issn: filteredIssns[0].rek_issn, url: filteredIssns[0].fez_sherpa_romeo.srm_journal_link }
+    const match = issns.find(item => item.fez_sherpa_romeo?.srm_source_id);
+
+    return match
+        ? {
+              issn: match.rek_issn,
+              url: getOpenPolicyFinderUrl(match.fez_sherpa_romeo.srm_source_id),
+          }
         : null;
 };
 

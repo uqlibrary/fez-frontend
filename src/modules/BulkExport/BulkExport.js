@@ -12,7 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import Dialog from '@mui/material/Dialog';
 import ErrorIcon from '@mui/icons-material/Error';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import MuiDialogContent from '@mui/material/DialogContent';
 import MuiDialogTitle from '@mui/material/DialogTitle';
@@ -144,15 +144,15 @@ const BulkExport = ({
     const exportOptionRender = exportPages.map(page => {
         const id = `bulk-export-row-heading-${page.number}`;
         return (
-            <Grid item data-testid={id} id={id} xs={12} key={page.number}>
+            <Grid data-testid={id} id={id} size={12} key={page.number}>
                 <Grid container spacing={2}>
-                    <Grid item xs="auto" sm={6} md={5}>
+                    <Grid size={{ xs: 'auto', sm: 6, md: 5 }}>
                         {rowLabel.replace('[start]', page.start).replace('[end]', page.end)}
                     </Grid>
-                    <Grid item xs={12} sm={6} md={7}>
+                    <Grid size={{ xs: 12, sm: 6, md: 7 }}>
                         <Grid container spacing={2}>
                             {exportConfig.format.map(format => (
-                                <Grid item xs={12} md={6} key={`page-${page.start}-${format.value}`}>
+                                <Grid size={{ xs: 12, md: 6 }} key={`page-${page.start}-${format.value}`}>
                                     {exportButtonsRender(format, page)}
                                 </Grid>
                             ))}
@@ -212,11 +212,11 @@ const BulkExport = ({
                 </MuiDialogTitle>
                 <MuiDialogContent>
                     <Grid container spacing={2} sx={{ gap: '1rem', marginBottom: '2rem', maxWidth: '40em' }}>
-                        <Grid item xs={12} id="bulk-export-instructions">
+                        <Grid size={12} id="bulk-export-instructions">
                             {sizeMessage.replace('[bulkExportSize]', pageSize)}
                         </Grid>
                         {hasSuccess.current && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Alert message={successMessage} type="info" />
                             </Grid>
                         )}

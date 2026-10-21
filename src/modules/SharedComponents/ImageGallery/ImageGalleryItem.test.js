@@ -2,7 +2,7 @@ import React from 'react';
 import { render, WithRouter, fireEvent } from 'test-utils';
 
 import ImageGalleryItem, { getAlertMessageText } from './ImageGalleryItem';
-import { collectionSearchResultsImages } from 'mock/data';
+import collectionSearchResultsImages from 'mock/data/records/collectionSearchResultsImages';
 import txt from 'locale/components';
 
 const mockUseNavigate = jest.fn();

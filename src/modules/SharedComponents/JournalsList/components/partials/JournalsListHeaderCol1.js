@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import JournalFieldsMap from './JournalFieldsMap';
 import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';
@@ -22,7 +22,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 ...(!isSelectable && { height: '35px' }),
             })}
         >
-            <Grid item xs="auto" id="journal-list-header-checkbox">
+            <Grid size="auto" id="journal-list-header-checkbox">
                 {isSelectable && (
                     <Tooltip title="Select All" placement="right">
                         <Checkbox
@@ -44,8 +44,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 )}
             </Grid>
             <Grid
-                item
-                xs
+                size="grow"
                 id="journal-list-header-col-1"
                 data-testid="journal-list-header-col-1"
                 sx={() => ({

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -15,13 +15,13 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
     } = useFormContext();
     return (
         <React.Fragment>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <Grid container justifyContent="flex-end" flexDirection={'column'}>
-                    <Grid item>
+                    <Grid>
                         <ColumnTitle title={label} />
                     </Grid>
 
-                    <Grid item>
+                    <Grid>
                         {type === 'checkbox' && (
                             <Checkbox
                                 {...props}
@@ -71,7 +71,7 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type = 'text
                             />
                         )}
                     </Grid>
-                    <Grid item>
+                    <Grid>
                         <FormHelperText variant="outlined" sx={{ ml: 0, mr: 0 }}>
                             {helperText}
                         </FormHelperText>

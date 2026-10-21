@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import * as actions from 'actions';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -209,7 +209,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
     return (
         <StandardPage className="page-search-records">
             <Grid container spacing={3}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <StandardCard className="searchComponent" noHeader standardCardId="search-records-queries">
                         <SearchComponent
                             activeFacets={searchParams.activeFacets}
@@ -225,20 +225,20 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                 {
                     // first time loading search results
                     searchLoading && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <InlineLoader message={txt.loadingMessage} loaderId="search-records-loading" />
                         </Grid>
                     )
                 }
                 {searchLoadingError && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert pushToTop {...alertProps} />
                     </Grid>
                 )}
                 {
                     // no results to display
                     hasSearchParams && !searchLoading && publicationsList && publicationsList.length === 0 && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
                         </Grid>
                     )
@@ -249,11 +249,11 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                         exportPublicationsLoading ||
                         (hasSearchParams && searchLoading) ||
                         (!!publicationsList && publicationsList.length > 0)) && (
-                        <Grid item xs sm md={displayLookup === 'author_statistics' ? 12 : 9}>
+                        <Grid size={{ xs: 'grow', sm: 'grow', md: displayLookup === 'author_statistics' ? 12 : 9 }}>
                             <StandardCard noHeader standardCardId="search-records-results">
                                 <Grid container spacing={2} justifyContent="space-between">
                                     {displayLookup !== 'author_statistics' && (
-                                        <Grid item xs="auto">
+                                        <Grid size="auto">
                                             {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
                                                 <span>
                                                     {txt.recordCount
@@ -267,7 +267,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                         </Grid>
                                     )}
                                     {displayLookup !== 'author_statistics' && (isAdmin || isResearcher) && (
-                                        <Grid item xs="auto">
+                                        <Grid size="auto">
                                             <BulkExport
                                                 exportPublications={handleExport}
                                                 locale={txt.bulkExport}
@@ -278,7 +278,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                         </Grid>
                                     )}
                                     {displayLookup !== 'author_statistics' && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <PublicationsListSorting
                                                 showDisplayAs
                                                 canUseExport={canUseExport}
@@ -298,7 +298,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                         </Grid>
                                     )}
                                     {displayLookup !== 'author_statistics' && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <PublicationsListPaging
                                                 disabled={isLoadingOrExporting}
                                                 loading={isLoadingOrExporting}
@@ -309,9 +309,9 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                         </Grid>
                                     )}
                                     {isLoadingOrExporting && displayLookup !== 'author_statistics' && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Grid container justifyContent={'center'}>
-                                                <Grid item xs={12}>
+                                                <Grid size={12}>
                                                     <InlineLoader
                                                         loaderId="search-records-page-loading"
                                                         message={
@@ -325,22 +325,20 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                         </Grid>
                                     )}
                                     {displayLookup === 'author_statistics' && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Link to={autoViewUrl} onClick={() => setUserSelectedDisplayAs(null)}>
                                                 {txt.authorStatistics.viewPublicationsList}
                                             </Link>
                                         </Grid>
                                     )}
                                     {displayLookup === 'author_statistics' && (
-                                        <Grid item xs={12}>
-                                            {SelectRecordView(publicationsList)}
-                                        </Grid>
+                                        <Grid size={12}>{SelectRecordView(publicationsList)}</Grid>
                                     )}
                                     {displayLookup !== 'author_statistics' &&
                                         !isLoadingOrExporting &&
                                         publicationsList &&
                                         publicationsList.length > 0 && (
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <RecordsSelectorContext.Provider
                                                     value={{
                                                         records: publicationsList,
@@ -351,7 +349,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                                             </Grid>
                                         )}
                                     {displayLookup !== 'author_statistics' && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <PublicationsListPaging
                                                 disabled={isLoadingOrExporting}
                                                 loading={isLoadingOrExporting}
@@ -370,8 +368,7 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                     publicationsListFacets &&
                     Object.keys(publicationsListFacets).length !== 0 && (
                         <Grid
-                            item
-                            md={3}
+                            size={{ md: 3 }}
                             id="refine-results-facets"
                             data-testid="refine-results-facets"
                             sx={{ display: { xs: 'none', md: 'block' } }}

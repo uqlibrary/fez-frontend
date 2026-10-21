@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import FormHelperText from '@mui/material/FormHelperText';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
@@ -22,15 +22,15 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
     return (
         <React.Fragment>
             {!isMobileView && (
-                <Grid item xs={3}>
+                <Grid size={3}>
                     <Grid container justifyContent="flex-end">
-                        <Grid item>
+                        <Grid>
                             <ColumnTitle title={label} />
                         </Grid>
                     </Grid>
                 </Grid>
             )}
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
                 <TextField
                     {...props}
                     label={label}
@@ -65,7 +65,7 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
                     }}
                 />
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid size={{ xs: 12, md: 3 }}>
                 <FormHelperText variant="outlined">{helperText}</FormHelperText>
             </Grid>
         </React.Fragment>

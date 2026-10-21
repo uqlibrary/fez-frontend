@@ -3,7 +3,7 @@ import * as repositories from 'repositories';
 import * as viewRecordActions from './viewRecord';
 import { removeShadowSuffixFromTableNames } from './viewRecord';
 import * as mockData from 'mock/data';
-import { recordVersion } from 'mock/data';
+import recordVersion from 'mock/data/records/recordVersion';
 import { locale } from 'locale';
 import { DELETED, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
 

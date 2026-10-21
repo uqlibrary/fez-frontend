@@ -1,5 +1,5 @@
 import { getThumbnail, getUrl, sortThumbnailsBySecurityStatus, filterMissingThumbnails } from './Utils';
-import { collectionSearchResultsImages } from 'mock/data';
+import collectionSearchResultsImages from 'mock/data/records/collectionSearchResultsImages';
 
 describe('ImageGallery Utils', () => {
     let publication;

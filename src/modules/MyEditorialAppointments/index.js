@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -80,11 +80,11 @@ export const MyEditorialAppointments = () => {
     return (
         <StandardPage title={locale.pages.editorialAppointments.title}>
             <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {<Alert {...componentLocale.components.myEditorialAppointmentsList.infoTextAlert} />}
                 </Grid>
                 {!!myEditorialAppointmentsListError && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             {...myEditorialAppointmentsListError}
                             type="error"
@@ -93,7 +93,7 @@ export const MyEditorialAppointments = () => {
                     </Grid>
                 )}
                 {!!myEditorialAppointmentsAddError && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Alert
                             {...myEditorialAppointmentsAddError}
                             type="error"
@@ -101,7 +101,7 @@ export const MyEditorialAppointments = () => {
                         />
                     </Grid>
                 )}
-                <Grid item xs={12}>
+                <Grid size={12}>
                     {!!myEditorialAppointmentsList && (
                         <StandardCard hideTitle>
                             <MyEditorialAppointmentsList

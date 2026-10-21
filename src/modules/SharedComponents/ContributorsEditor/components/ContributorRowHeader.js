@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -72,7 +72,7 @@ export const ContributorRowHeader = ({
                 </ListItemIcon>
 
                 <Grid container classes={{ container: classes?.listContainer }}>
-                    <Grid item xs={10} sm={5} md={3}>
+                    <Grid size={{ xs: 10, sm: 5, md: 3 }}>
                         <ListItemText
                             secondary={nameColumn}
                             slotProps={{
@@ -81,7 +81,7 @@ export const ContributorRowHeader = ({
                         />
                     </Grid>
                     {showIdentifierLookup && (
-                        <Grid item xs={12} sm={4}>
+                        <Grid size={{ xs: 12, sm: 4 }}>
                             <ListItemText
                                 secondary={identifierColumn}
                                 sx={{ display: { xs: 'none', sm: 'block' } }}
@@ -91,7 +91,7 @@ export const ContributorRowHeader = ({
                             />
                         </Grid>
                     )}
-                    <Grid item xs={12} sm={5} md={4}>
+                    <Grid size={{ xs: 12, sm: 5, md: 4 }}>
                         {showRoleInput && (
                             <ListItemText
                                 secondary={roleColumn}

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { useDispatch } from 'react-redux';
 import * as actions from 'actions/viewControlledVocab';
 
@@ -50,10 +50,10 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                         ...(row.cvo_hide === 1 ? { fontStyle: 'italic' } : {}),
                     }}
                 >
-                    <Grid item xs={12} sm={1} data-testid={`child-row-id-${row.cvo_id}`}>
+                    <Grid size={{ xs: 12, sm: 1 }} data-testid={`child-row-id-${row.cvo_id}`}>
                         {row.cvo_id}
                     </Grid>
-                    <Grid item xs={12} sm={locked ? 5 : 4} data-testid={`child-row-title-${row.cvo_id}`}>
+                    <Grid size={{ xs: 12, sm: locked ? 5 : 4 }} data-testid={`child-row-title-${row.cvo_id}`}>
                         <Link
                             id={`child-row-title-link-${row.cvo_id}`}
                             component="button"
@@ -74,25 +74,21 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                         </Link>
                     </Grid>
                     <Grid
-                        item
-                        xs={12}
-                        sm={5}
+                        size={{ xs: 12, sm: 5 }}
                         data-testid={`child-row-desc-${row.cvo_id}`}
                         sx={{ wordBreak: 'break-word' }}
                     >
                         {row.cvo_desc}
                     </Grid>
                     <Grid
-                        item
-                        xs={12}
-                        sm={1}
+                        size={{ xs: 12, sm: 1 }}
                         data-testid={`child-row-eid-${row.cvo_id}`}
                         sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
                     >
                         {row.cvo_external_id}
                     </Grid>
                     {!locked && (
-                        <Grid item xs={12} sm={1} data-testid={`child-row-action-${row.cvo_id}`}>
+                        <Grid size={{ xs: 12, sm: 1 }} data-testid={`child-row-action-${row.cvo_id}`}>
                             <IconButton
                                 id={`admin-edit-button-${row.cvo_id}`}
                                 data-analyticsid={`admin-edit-button-${row.cvo_id}`}

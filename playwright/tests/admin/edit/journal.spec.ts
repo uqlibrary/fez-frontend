@@ -45,11 +45,12 @@ test.describe('Journal admin edit', () => {
         );
 
         const issn = record.fez_record_search_key_issn[0].rek_issn;
-        const sherpaLink = `https://www.sherpa.ac.uk/romeo/search.php?issn=${issn}`;
+        const sherpaLink =
+            'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F3218';
 
         const issnRow = page.locator('#rek-issn-list-row-0');
         await expect(issnRow).toContainText(issn);
-        await expect(issnRow).toContainText('SHERPA/RoMEO');
+        await expect(issnRow).toContainText('Open Policy Finder');
         await expect(issnRow.locator('#sherparomeo-link')).toHaveAttribute('href', sherpaLink);
     });
 });

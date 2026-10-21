@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
-    '&.MuiGridLegacy-item': {
-        maxWidth: '1200px',
-        margin: '24px auto',
-        width: '90%',
-        padding: 0,
-        [theme.breakpoints.down('md')]: {
-            margin: '12px auto',
-        },
+    maxWidth: '1200px',
+    margin: '24px auto',
+    width: '90%',
+    padding: 0,
+    [theme.breakpoints.down('md')]: {
+        margin: '12px auto',
     },
 }));
 
@@ -37,7 +35,7 @@ export const StandardPage = ({ title, help, children, standardPageId }) => {
     return (
         <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
             {title && (
-                <Grid item xs>
+                <Grid size={12}>
                     <StyledPageTitle
                         color="primary"
                         component="h2"
@@ -54,8 +52,8 @@ export const StandardPage = ({ title, help, children, standardPageId }) => {
                     <HelpIcon {...help} />
                 </Box>
             )}
-            <Grid item xs={12} />
-            <StyledGrid item>{children}</StyledGrid>
+            <Grid size={12} />
+            <StyledGrid>{children}</StyledGrid>
         </Grid>
     );
 };

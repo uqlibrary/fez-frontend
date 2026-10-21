@@ -1,6 +1,7 @@
 import React from 'react';
 import { DashboardArticleCount } from './DashboardArticleCount';
-import { currentAuthorStats, authorDetails } from 'mock/data';
+import { currentAuthorStats } from 'mock/data/academicStats';
+import { authorDetails } from 'mock/data/account';
 import { rtlRender } from 'test-utils';
 
 function setup(testProps = {}) {

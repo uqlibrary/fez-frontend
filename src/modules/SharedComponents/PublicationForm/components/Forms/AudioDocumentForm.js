@@ -10,7 +10,7 @@ import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { hasAtLeastOneItemSelected } from 'helpers/general';
 
 export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
@@ -20,10 +20,10 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
     const isEditorSelected = hasAtLeastOneItemSelected(values.editors);
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -39,7 +39,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -51,7 +51,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -63,7 +63,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -76,7 +76,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                                 {...txt.information.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -91,7 +91,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                                 floatingTitleRequired
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -107,7 +107,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.creator.title} help={txt.creator.help}>
                     <Field
                         control={control}
@@ -125,7 +125,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.contributor.title} help={txt.contributor.help}>
                     <Field
                         control={control}
@@ -143,10 +143,10 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -159,7 +159,7 @@ export const AudioDocumentForm = ({ isSubmitting, control, values }) => {
                                 {...txt.optional.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

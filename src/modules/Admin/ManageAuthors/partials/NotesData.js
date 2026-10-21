@@ -1,7 +1,7 @@
 import { useFormContext } from 'react-hook-form';
 import React from 'react';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import AuthorFieldData from './AuthorFieldData';

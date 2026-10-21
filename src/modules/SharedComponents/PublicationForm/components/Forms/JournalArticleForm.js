@@ -11,7 +11,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
 import { locale } from 'locale';
 import { IssnListEditorField, IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isAuthorSelected }) => {
@@ -19,10 +19,10 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
     const txt = formLocale.journalArticle;
     return (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.information.title} help={txt.information.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -39,7 +39,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 validate={[validation.required, validation.maxLength1000Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -53,7 +53,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 validate={[validation.required, validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -66,7 +66,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 {...txt.information.fieldLabels.doi}
                             />
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid size={{ xs: 12, sm: 6 }}>
                             <Field
                                 control={control}
                                 component={PartialDateField}
@@ -84,10 +84,10 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.authors.title} help={txt.authors.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Typography>{txt.authors.description}</Typography>
                             <Field
                                 control={control}
@@ -110,7 +110,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                 </StandardCard>
             </Grid>
             {isNtro && (
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <NtroFields
                         control={control}
                         canEdit
@@ -129,7 +129,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                     />
                 </Grid>
             )}
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                     <Typography>{locale.components.issnForm.text}</Typography>
                     <Field
@@ -147,10 +147,10 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.optional.title} help={txt.optional.help}>
                     <Grid container spacing={2}>
-                        <Grid item xs={6} sm={3}>
+                        <Grid size={{ xs: 6, sm: 3 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -163,7 +163,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={6} sm={3}>
+                        <Grid size={{ xs: 6, sm: 3 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -177,7 +177,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                             />
                         </Grid>
 
-                        <Grid item xs={6} sm={3}>
+                        <Grid size={{ xs: 6, sm: 3 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -190,7 +190,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={6} sm={3}>
+                        <Grid size={{ xs: 6, sm: 3 }}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -203,7 +203,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -216,7 +216,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 validate={[validation.maxLength255Validator]}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}
@@ -230,7 +230,7 @@ export const JournalArticleForm = ({ control, isSubmitting, subtype, isNtro, isA
                                 label={txt.optional.fieldLabels.notes}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Field
                                 control={control}
                                 component={TextField}

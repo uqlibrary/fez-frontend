@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { render, within } from '@testing-library/react';
+import { act, render, within } from '@testing-library/react';
 import { createMemoryRouter, RouterProvider, MemoryRouter } from 'react-router';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
@@ -227,13 +227,13 @@ const waitElementToBeInTheDocument = async (dataTestId, options) =>
  * @param {string|function} testId
  * @return {void}
  */
-const assertIsInTheDocument = testId =>
+const assertToBeInTheDocument = testId =>
     expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).toBeInTheDocument();
 
 /**
  * @param {string|function} testId
  */
-const assertNotInTheDocument = testId =>
+const assertNotToBeInTheDocument = testId =>
     testId && expect(screen.queryByTestId(typeof testId === 'function' ? testId() : testId)).not.toBeInTheDocument();
 
 /**
@@ -513,6 +513,23 @@ const clearAndType = async (input, value) => {
     await userEvent.type(screen.getByTestId(input), value);
 };
 
+/**
+ * Set a plain controlled text field's value in a single change event (+ blur), instead of typing it
+ * char-by-char with userEvent.type which re-renders the whole form on every keystroke. Pass the input
+ * element (e.g. screen.getByTestId('x-input') or a scoped getByTestId). Use ONLY for plain text
+ * inputs: autocomplete/lookup fields need the per-keystroke input events to fire their search, and
+ * MUI date-picker fields / special-key sequences ({Control>}a…) must stay on userEvent.type.
+ * @param {HTMLElement} input
+ * @param {string} value
+ * @return {HTMLElement} the input element
+ */
+const setTextField = (input, value) => {
+    const { fireEvent } = reactTestingLib;
+    fireEvent.change(input, { target: { value } });
+    fireEvent.blur(input);
+    return input;
+};
+
 // https://stackoverflow.com/a/73160202/1417494
 const sortObjectProps = obj => {
     return Object.keys(obj)
@@ -540,12 +557,9 @@ const sortObjectProps = obj => {
  * @param {string} testId
  * @return {Promise<Element>}
  */
-const getRichTextEditor = async testId =>
-    await waitFor(() => {
-        const el = screen.getByTestId(testId).querySelector('.ck-editor__editable');
-        if (!el.ckeditorInstance) throw new Error('Waiting for CKEditor editable element');
-        return el;
-    });
+const getRichTextEditor = async testId => {
+    return await screen.findByTestId(testId);
+};
 
 /**
  * Note: value is set programmatically, not via DOM
@@ -553,8 +567,10 @@ const getRichTextEditor = async testId =>
  * @param {string} value
  */
 const setRichTextEditorValue = async (testId, value) => {
-    const editor = await getRichTextEditor(testId);
-    await editor.ckeditorInstance.setData(value);
+    const editorElement = await getRichTextEditor(testId);
+    await act(async () => {
+        editorElement.editor.commands.setContent(value);
+    });
     await userEvent.tab();
 };
 
@@ -625,8 +641,8 @@ module.exports = {
     waitToBeEnabled,
     waitToBeDisabled,
     waitElementToBeInTheDocument,
-    assertIsInTheDocument,
-    assertNotInTheDocument,
+    assertToBeInTheDocument,
+    assertNotToBeInTheDocument,
     waitForText,
     waitForTextToBeRemoved,
     expectRequiredFieldError,
@@ -656,6 +672,7 @@ module.exports = {
     addItemUsingNamesPopoverForm,
     addAndSelectItemUsingNamesPopoverForm,
     clearAndType,
+    setTextField,
     sortObjectProps,
     getTableBodyRows,
     api,

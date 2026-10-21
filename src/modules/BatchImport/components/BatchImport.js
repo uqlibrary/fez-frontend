@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useWatch } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
@@ -127,10 +127,10 @@ export const BatchImport = () => {
             <ConfirmDiscardFormChanges dirty={isDirty} submitSucceeded={isSubmitSuccessful}>
                 <form onSubmit={onSubmit}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <StandardCard help={batchImportTxt.help}>
                                 <Grid container spacing={2}>
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <Controller
                                             name="is_bulk_file_ingest"
                                             control={control}
@@ -152,7 +152,7 @@ export const BatchImport = () => {
                                         />
                                     </Grid>
                                     {!isBulkFileIngest && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Controller
                                                 name="communityID"
                                                 control={control}
@@ -171,7 +171,7 @@ export const BatchImport = () => {
                                         </Grid>
                                     )}
                                     {!isBulkFileIngest && !!communityID && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Controller
                                                 name="collection_pid"
                                                 control={control}
@@ -191,7 +191,7 @@ export const BatchImport = () => {
                                         </Grid>
                                     )}
                                     {!isBulkFileIngest && (
-                                        <Grid item xs={12}>
+                                        <Grid size={12}>
                                             <Controller
                                                 name="doc_type_id"
                                                 control={control}
@@ -211,7 +211,7 @@ export const BatchImport = () => {
                                             />
                                         </Grid>
                                     )}
-                                    <Grid item xs={12}>
+                                    <Grid size={12}>
                                         <Controller
                                             name="directory"
                                             control={control}
@@ -234,12 +234,12 @@ export const BatchImport = () => {
                             </StandardCard>
                         </Grid>
                         {validationErrors && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <Alert alertId="batch-import-validation" {...validationErrors} />
                             </Grid>
                         )}
-                        <Grid item xs={false} sm />
-                        <Grid item xs={12} sm="auto">
+                        <Grid size={{ xs: false, sm: 'grow' }} />
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 aria-label={batchImportTxt.formLabels.cancelButtonLabel}
                                 children={batchImportTxt.formLabels.cancelButtonLabel}
@@ -253,7 +253,7 @@ export const BatchImport = () => {
                                 color={'default'}
                             />
                         </Grid>
-                        <Grid item xs={12} sm="auto">
+                        <Grid size={{ xs: 12, sm: 'auto' }}>
                             <Button
                                 type="submit"
                                 aria-label={batchImportTxt.formLabels.submitButtonLabel}

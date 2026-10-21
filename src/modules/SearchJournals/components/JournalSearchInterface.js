@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import JournalSearchInput from './JournalSearchInput';
 import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
@@ -64,14 +64,13 @@ export const JournalSearchInterface = ({
             />
             <Grid container spacing={2} sx={{ position: 'relative' }}>
                 {showInputControls && (
-                    <Grid item xs={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
+                    <Grid size={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
                         <JournalSearchInput onReset={handleKeywordReset} />
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && (
                     <Grid
-                        item
-                        xs={12}
+                        size={12}
                         id={`${id}-selected-keywords`}
                         data-testid={`${id}-selected-keywords`}
                         style={{ paddingRight: 48 }}
@@ -108,7 +107,7 @@ export const JournalSearchInterface = ({
                     </Tooltip>
                 )}
                 {showInputControls && (
-                    <Grid item xs={12} id={`${id}-keywords-browser`} data-testid={`${id}-keywords-browser`}>
+                    <Grid size={12} id={`${id}-keywords-browser`} data-testid={`${id}-keywords-browser`}>
                         <KeywordsBrowser
                             onKeywordAdd={handleKeywordAdd}
                             onKeywordDelete={handleKeywordDelete}
@@ -117,10 +116,10 @@ export const JournalSearchInterface = ({
                     </Grid>
                 )}
                 {showInputControls && (
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Grid container spacing={2} justifyContent="flex-end">
                             <CommonButtons onSearchAll={onSearchAll} />
-                            <Grid item xs={12} sm="auto">
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     disabled={!hasAnySelectedKeywords}
                                     variant="contained"

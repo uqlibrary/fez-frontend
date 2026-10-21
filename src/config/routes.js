@@ -327,9 +327,14 @@ export const getRoutesConfig = ({
                       pageTitle: locale.components.journalComparison.title,
                   },
                   {
-                      path: pathConfig.journals.favourites,
+                      path: pathConfig.journals.favourites(id),
                       element: <components.FavouriteJournals />,
                       pageTitle: locale.components.favouriteJournals.title,
+                  },
+                  {
+                      path: pathConfig.journals.lists,
+                      element: <components.JournalUserLists />,
+                      pageTitle: locale.components.journalUserLists.title,
                   },
               ]
             : []),

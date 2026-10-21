@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router';
 // forms & custom components
 import { pathConfig } from 'config';
 import locale from 'locale/pages';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearNewRecord } from '../../../../actions';
 import { createConfirmDialogBoxRefAssigner } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox/components/ConfirmDialogBox';
@@ -49,7 +49,7 @@ export const NewRecord = () => {
     const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
     saveConfirmationLocale.confirmationMessage = (
         <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 {newRecordFileUploadingOrIssueError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
                 {saveConfirmationLocale.recordSuccessConfirmationMessage}
             </Grid>

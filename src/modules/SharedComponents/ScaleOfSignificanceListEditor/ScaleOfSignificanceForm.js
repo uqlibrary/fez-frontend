@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { RichTextEditorField } from 'modules/SharedComponents/RichTextEditor';
 import { SIGNIFICANCE } from 'config/general';
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -139,7 +139,7 @@ export const ScaleOfSignificanceForm = ({
             alignItems="center"
             data-testid="rek-significance-form"
         >
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <FormControlLabel
                     sx={{ margin: 0 }}
                     control={
@@ -165,7 +165,7 @@ export const ScaleOfSignificanceForm = ({
                     }
                 />
             </Grid>
-            <Grid item style={{ flexGrow: 1 }} xs={12}>
+            <Grid style={{ flexGrow: 1 }} size={12}>
                 <NewGenericSelectField
                     genericSelectFieldId="rek-significance"
                     label={significanceInputFieldLabel}
@@ -178,12 +178,10 @@ export const ScaleOfSignificanceForm = ({
                     required
                 />
             </Grid>
-            <Grid item xs={12}>
-                <RichEditorField
-                    richEditorId="rek-creator-contribution-statement"
-                    name="value"
+            <Grid size={12}>
+                <RichTextEditorField
+                    id="rek-creator-contribution-statement"
                     onChange={handleContributionStatement}
-                    onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled || emptySignificance}
                     title={contributionStatementInputFieldLabel}
@@ -197,7 +195,7 @@ export const ScaleOfSignificanceForm = ({
                     required
                 />
             </Grid>
-            <Grid item xs={9}>
+            <Grid size={9}>
                 <Button
                     fullWidth
                     id="add-items"
@@ -213,7 +211,7 @@ export const ScaleOfSignificanceForm = ({
                     onClick={saveChanges}
                 />
             </Grid>
-            <Grid item xs={3}>
+            <Grid size={3}>
                 <Button
                     fullWidth
                     id="clear-items"

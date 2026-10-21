@@ -3,11 +3,9 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import { selectFields } from 'locale/selectFields';
 import { prefixByUrlResolver } from 'config/general';
-import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'modules/AdminDashboard/config';
-
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
+import { DEFAULT_DATE_FORMAT_WITH_TIME_24H_SECONDS, getFormattedServerDate } from 'config/dateFormats';
+import Link from '@mui/icons-material/Link';
+import _ from 'lodash';
 
 export default {
     components: {
@@ -326,6 +324,9 @@ export default {
             publicationStatsRowTitle4: 'Total works',
             publicationStatsRowTitle5: 'Works year range',
             publicationStatsNA: 'N/A',
+            hindexHelpUrl: 'https://guides.library.uq.edu.au/research-and-teaching-staff/calculate-h-index',
+            hindexHelpTooltip: 'Learn more about the h-index',
+            hindexHelpAriaLabel: 'Learn more about the h-index (opens in a new tab)',
         },
         publicationCitation: {
             publicationSourcesLabel: 'Found in: ',
@@ -736,13 +737,13 @@ export default {
             locale: {
                 form: {
                     locale: {
-                        grantAgencyNameLabel: 'Funder/Sponsor name',
-                        grantAgencyNameHint: 'Funder/sponsor name for this work',
+                        grantAgencyNameLabel: 'Grant Agency',
+                        grantAgencyNameHint: 'Grant agency for this work',
                         grantIdLabel: 'Grant ID',
                         grantIdHint: 'Grant number for this work',
                         grantIdHelperText: 'Accepts IDs or full URLs',
-                        grantAgencyTypeLabel: 'Funder/Sponsor type',
-                        grantAgencyTypeHint: 'Select Funder/Sponsor type',
+                        grantAgencyTypeLabel: 'Grant Agency type',
+                        grantAgencyTypeHint: 'Select Grant Agency type',
                         addButton: 'Add grant',
                         editButton: 'Edit grant',
                         description:
@@ -751,9 +752,9 @@ export default {
                 },
                 header: {
                     locale: {
-                        GrantAgencyName: 'Funder/Sponsor name',
+                        GrantAgencyName: 'Grant Agency',
                         GrantID: 'Grant ID',
-                        GrantAgencyType: 'Funder/Sponsor type',
+                        GrantAgencyType: 'Grant Agency type',
                         reorderColumn: 'Reorder entries',
                         deleteAll: 'Remove all entries',
                         deleteAllConfirmation: {
@@ -1536,11 +1537,11 @@ export default {
             },
         },
         authorsList: suffix => ({
-            title: `${capitalizeFirstLetter(suffix)}s`,
+            title: `${_.upperFirst(suffix)}s`,
             field: {
                 form: {
                     locale: {
-                        nameAsPublishedLabel: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameAsPublishedLabel: `${_.upperFirst(suffix)}'s name as published`,
                         nameAsPublishedHint: 'Enter the name exactly as published (eg. Smith, John)',
                         identifierLabel: 'UQ identifier (if available)',
                         externalIdentifierLabel: 'External identifier',
@@ -1582,7 +1583,7 @@ export default {
                 header: {
                     locale: {
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: `${capitalizeFirstLetter(suffix)}'s name as published`,
+                        nameColumn: `${_.upperFirst(suffix)}'s name as published`,
                         identifierColumn: 'UQ identifiers',
                         externalIdentifierColumn: 'External identifier',
                         externalIdentifierTypeColumn: 'External identifier type',
@@ -4477,16 +4478,24 @@ export default {
             },
         },
         favouriteJournals: {
-            title: 'My Favourite Journals',
+            title: 'Favourite Journals List',
             buttons: {
-                removeFromFavourites: {
-                    title: 'REMOVE FROM FAVOURITES',
-                    aria: 'Remove from favourites',
+                delete: {
+                    title: 'REMOVE FROM LIST',
+                    aria: 'Remove from LIST',
+                },
+                toJournalSearch: {
+                    title: 'SEARCH JOURNALS',
+                    aria: 'Search Journals',
                 },
                 returnToSearch: {
                     title: 'RETURN TO JOURNAL SEARCH',
                     aria: 'Return to Journal Search',
                 },
+            },
+            favouriteLists: {
+                noneSelected: 'Please select a list above to display items.',
+                empty: 'You haven\'t created any favourite lists yet. Use the "Add to favourites" button on the results page to add favourites.',
             },
             favouriteJournalsList: {
                 loading: 'Loading ...',
@@ -4510,11 +4519,59 @@ export default {
                 empty: 'No journals were selected for comparison',
             },
         },
+        journalUserLists: {
+            grid: {
+                noRowsLabel: 'No lists to display',
+                columns: {
+                    label: {
+                        title: 'Label',
+                    },
+                    isPublic: {
+                        title: 'Is sharable',
+                    },
+                    viewLink: {
+                        title: 'See list',
+                    },
+                    links: {
+                        title: 'Links',
+                        view: {
+                            title: 'See list',
+                        },
+                        sharable: {
+                            title: 'Sharing link',
+                            copyLink: {
+                                title: (
+                                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                                        Copy list's sharing link <Link />
+                                    </span>
+                                ),
+                            },
+                        },
+                    },
+                    actions: {
+                        items: {
+                            title: 'Manage Items',
+                        },
+                        edit: {
+                            title: 'Edit properties',
+                        },
+                        delete: {
+                            title: 'Delete list',
+                        },
+                    },
+                },
+            },
+        },
         searchJournals: {
             snackbar: {
                 message: 'Search results updated',
             },
             partials: {
+                addNewDialog: {
+                    title: 'New favourites list',
+                    isPublicButtonLabel: 'Make this list sharable?',
+                    serverError: 'Failed to create list, please try again.',
+                },
                 addToSelectedSubjects: {
                     button: {
                         title: 'Add a subject to broaden results',
@@ -4801,10 +4858,13 @@ export default {
                         </ul>
                     </React.Fragment>
                 ),
+                errors: {
+                    addList: 'Failed to create list. Please try again.',
+                },
                 buttons: {
                     myFavouriteJournals: {
-                        title: 'My favourite journals',
-                        aria: 'My favourite journals',
+                        title: 'My Favourites Lists',
+                        aria: 'My Favourites Lists',
                     },
                     browseAllJournals: {
                         title: 'Browse all journals',
@@ -4812,19 +4872,15 @@ export default {
                     },
                     searchJournals: {
                         title: 'Step 3. Search',
-                        aria: 'Search',
+                        aria: 'Step 3. Search',
                     },
                     compareJournals: {
                         title: 'COMPARE SELECTED',
                         aria: 'Compare Selected',
                     },
-                    addToFavourites: {
-                        title: 'ADD TO FAVOURITES',
-                        aria: 'Add to favourites',
-                    },
                 },
                 confirmations: {
-                    addToFavourites: {
+                    addToList: {
                         confirmationMessage: 'COUNT item(s) have been added.',
                     },
                 },
@@ -4880,10 +4936,6 @@ export default {
             journalFacetsFilter: {
                 title: 'Refine results',
                 resetButtonText: 'Clear all filters',
-                favoriteFilter: {
-                    displayTitle: 'Favourite Journals',
-                    activeFilter: 'Show journals favourited',
-                },
                 help: {
                     title: 'Refine results',
                     text: (

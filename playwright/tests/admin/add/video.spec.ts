@@ -1,6 +1,6 @@
 import { test, expect } from '../../../test';
 import { clickAutoSuggestion } from '../../../lib/helpers';
-import { typeCKEditor } from '../../../lib/ckeditor';
+import { typeRichTextEditor } from '../../../lib/richTextEditor';
 import { adminEditCheckTabErrorBadge, adminEditTabbedView, assertAffiliationsAllowed } from '../helpers';
 
 test.describe('As an admin,', () => {
@@ -30,7 +30,7 @@ test.describe('As an admin,', () => {
         await adminEditTabbedView(page, false);
 
         // Fill required fields
-        await typeCKEditor(page, 'rek-title', 'Test title');
+        await typeRichTextEditor(page, 'rek-title', 'Test title');
         await page.getByTestId('rek-date-year-input').fill('2020');
         await page.getByTestId('rek-rights-input').fill('All rights reserved');
         await page.getByTestId('rek-author-add').click();

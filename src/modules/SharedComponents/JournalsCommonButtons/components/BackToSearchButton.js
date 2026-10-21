@@ -13,7 +13,6 @@ const BackToSearchButton = props => {
             variant="contained"
             type="submit"
             color="primary"
-            id="return-to-search-results-button"
             data-analyticsid="return-to-search-results-button"
             data-testid="return-to-search-results-button"
             onClick={handleReturnToSearchClick}

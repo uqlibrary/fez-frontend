@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import locale from 'locale/components';
@@ -12,7 +12,7 @@ export const KeywordsList = ({ title, list, help }) => {
 
     return (
         <Grid container id={componentId} data-testid={componentId}>
-            <Grid item xs="auto" style={{ marginBottom: '10px' }}>
+            <Grid size="auto" style={{ marginBottom: '10px' }}>
                 <Typography
                     color="primary"
                     component="h3"
@@ -26,7 +26,7 @@ export const KeywordsList = ({ title, list, help }) => {
             {!!list && list.length > 0 ? (
                 list
             ) : (
-                <Grid item xs={12} id={`${componentId}-no-matches`} data-testid={`${componentId}-no-matches`}>
+                <Grid size={12} id={`${componentId}-no-matches`} data-testid={`${componentId}-no-matches`}>
                     <Typography color="secondary">{txt.partials.keywordsList.noResultsFound}</Typography>
                 </Grid>
             )}

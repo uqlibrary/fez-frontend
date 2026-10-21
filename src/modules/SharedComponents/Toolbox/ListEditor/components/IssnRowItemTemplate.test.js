@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-    IssnRowItemTemplate,
-    getValidSherpa,
-    getSherpaLink,
-    getValidUlrichs,
-    mapStateToProps,
-} from './IssnRowItemTemplate';
+import { IssnRowItemTemplate, getValidSherpa, getValidUlrichs, mapStateToProps } from './IssnRowItemTemplate';
 import { rtlRender } from 'test-utils';
 import { ULRICHS_URL_PREFIX } from '../../../../../config/general';
 
@@ -70,7 +64,7 @@ describe('IssnRowItemTemplate', () => {
             });
 
             const sherpaRomeo = getByTestId('sherparomeo-link');
-            expect(sherpaRomeo).toHaveTextContent('SHERPA/RoMEO');
+            expect(sherpaRomeo).toHaveTextContent('Open Policy Finder');
             expect(sherpaRomeo.href).toEqual('http://example.com/sherpa?issn=1234-1234');
             expect(sherpaRomeo.title).toEqual("Check publisher's OA archiving policy");
 
@@ -220,22 +214,6 @@ describe('IssnRowItemTemplate', () => {
             expect(getValidSherpa(sherpaRomeo, item2)).toEqual(false);
         });
 
-        it('should use a fallback link for Sherpa Romeo', () => {
-            const sherpaData = {
-                srm_colour: 'green',
-                srm_journal_name: 'Testing',
-                srm_journal_link: '',
-                srm_issn: '1234-5678',
-            };
-            expect(getSherpaLink(sherpaData)).toBe('https://www.sherpa.ac.uk/romeo/search.php?issn=1234-5678');
-
-            sherpaData.srm_colour = 'gray';
-            expect(getSherpaLink(sherpaData)).toBe('');
-
-            sherpaData.srm_journal_link = 'http://example.com';
-            expect(getSherpaLink(sherpaData)).toBe('http://example.com');
-        });
-
         it('should find valid Ulrichs matches', () => {
             const expected = {
                 ulr_issn: props.item,
@@ -300,6 +278,7 @@ describe('IssnRowItemTemplate', () => {
                         sherpaRomeo: {
                             [props.item]: {
                                 srm_issn: props.item,
+                                srm_source_id: 1,
                                 srm_journal_name: 'Testing 1',
                                 srm_journal_link: sherpaLink,
                             },
@@ -319,7 +298,7 @@ describe('IssnRowItemTemplate', () => {
                         key: props.item,
                         value: {
                             sherpaRomeo: {
-                                link: sherpaLink,
+                                link: 'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1',
                             },
                             ulrichs: {
                                 link: `${ULRICHS_URL_PREFIX}${ulrichsTitleId}`,
@@ -402,6 +381,7 @@ describe('IssnRowItemTemplate', () => {
                         value: {
                             fez_sherpa_romeo: {
                                 srm_issn: props.item,
+                                srm_source_id: 1,
                                 srm_journal_link: sherpaLink,
                                 srm_journal_name: 'Testing 1',
                             },
@@ -420,7 +400,7 @@ describe('IssnRowItemTemplate', () => {
                         key: props.item,
                         value: {
                             sherpaRomeo: {
-                                link: sherpaLink,
+                                link: 'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1',
                             },
                             ulrichs: {
                                 link: `${ULRICHS_URL_PREFIX}${ulrichsTitleId}`,

@@ -4161,6 +4161,7 @@ export const journalArticle = {
             "rek_issn_order": 1,            
             "fez_sherpa_romeo": {
                 "srm_id": 13764,
+                "srm_source_id": 1376,
                 "srm_issn": "1477-9137",
                 "srm_json": "{}",
                 "srm_journal_name": "Journal of Cell Science",

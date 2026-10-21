@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { publicationTypes } from 'config';
 import { locale } from 'locale';
@@ -268,7 +268,7 @@ export const FacetsFilter = ({
             </List>
             {hasActiveFilters && (
                 <Grid container justifyContent="flex-end">
-                    <Grid item>
+                    <Grid>
                         <Button variant="contained" onClick={_handleResetClick}>
                             {resetButtonText}
                         </Button>

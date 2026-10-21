@@ -2,7 +2,7 @@ import React from 'react';
 import { parseHtmlToJSX } from 'helpers/general';
 import { useParams } from 'react-router';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
@@ -383,18 +383,18 @@ export const Doi: React.FC<Doi> = ({
         <StandardPage>
             {!!pid && (
                 <Grid container spacing={2}>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         {renderTitle({ doi, displayTypeLookup, title, pid })}
                         {/* @ts-expect-error todo */}
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         {(!!errorMessage && <Alert message={errorMessage} type="error" alertId="rek-doi-error" />) ||
                             (!!warningMessage && (
                                 <Alert message={warningMessage} type="warning" alertId="rek-doi-warning" />
                             ))}
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <ConfirmationBox
                             // @ts-expect-error todo
                             testId="rek-doi-confirmation-box"
@@ -408,14 +408,14 @@ export const Doi: React.FC<Doi> = ({
                         {!unsupportedType && <DoiPreview publication={record} />}
                     </Grid>
                     {alertProps && (
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Alert alertId="rek-doi-submit-status" message="" {...alertProps} />
                         </Grid>
                     )}
-                    <Grid item xs={12}>
+                    <Grid size={12}>
                         <Grid container spacing={2}>
-                            <Grid item xs={false} sm />
-                            <Grid item xs={12} sm="auto">
+                            <Grid size={{ xs: false, sm: 'grow' }} />
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     id="rek-doi-cancel"
                                     data-analyticsid="rek-doi-cancel"
@@ -429,7 +429,7 @@ export const Doi: React.FC<Doi> = ({
                                 </Button>
                             </Grid>
 
-                            <Grid item xs={12} sm="auto">
+                            <Grid size={{ xs: 12, sm: 'auto' }}>
                                 <Button
                                     id="rek-doi-submit"
                                     data-analyticsid="rek-doi-submit"

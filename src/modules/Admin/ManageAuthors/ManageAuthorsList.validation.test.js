@@ -8,9 +8,10 @@ import {
     WithReduxStore,
     waitToBeEnabled,
     waitToBeDisabled,
-    assertNotInTheDocument,
+    assertNotToBeInTheDocument,
     waitForText,
     api,
+    setTextField,
 } from 'test-utils';
 import * as repository from 'repositories';
 
@@ -86,7 +87,7 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('aut-org-username-input'), 'uqtest');
+        setTextField(getByTestId('aut-org-username-input'), 'uqtest');
 
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 
@@ -102,8 +103,7 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('authors-add-this-author-save')).toHaveAttribute('disabled');
 
-        userEvent.clear(getByTestId('aut-org-username-input'));
-        userEvent.type(getByTestId('aut-org-username-input'), 'uqtesta');
+        setTextField(getByTestId('aut-org-username-input'), 'uqtesta');
 
         await waitFor(() => {
             expect(getByTestId('aut-org-username-input')).toHaveAttribute('aria-invalid', 'false');
@@ -260,7 +260,7 @@ describe('ManageAuthorsList', () => {
 
         expect(getByTestId('authors-add-this-author-save')).not.toHaveAttribute('disabled');
 
-        await userEvent.type(getByTestId('aut-org-student-id-input'), '12345678');
+        setTextField(getByTestId('aut-org-student-id-input'), '12345678');
 
         await userEvent.click(getByTestId('authors-add-this-author-save'));
 
@@ -536,7 +536,7 @@ describe('ManageAuthorsList', () => {
             await waitForText('staff 1');
 
             // should not allow staff authors to be merged
-            assertNotInTheDocument('authors-merge-button');
+            assertNotToBeInTheDocument('authors-merge-button');
             await selectAuthor('staff 1');
             await waitToBeDisabled('authors-merge-button');
             await selectAuthor('staff 2');
@@ -545,7 +545,7 @@ describe('ManageAuthorsList', () => {
             await userEvent.click(getByText(/clear selection/i));
 
             // should not allow student authors to be merged
-            assertNotInTheDocument('authors-merge-button');
+            assertNotToBeInTheDocument('authors-merge-button');
             await selectAuthor('student 1');
             await waitToBeDisabled('authors-merge-button');
             await selectAuthor('student 2');
@@ -554,7 +554,7 @@ describe('ManageAuthorsList', () => {
             await userEvent.click(getByText(/clear selection/i));
 
             // should allow student author to be merged with staff author
-            assertNotInTheDocument('authors-merge-button');
+            assertNotToBeInTheDocument('authors-merge-button');
             await selectAuthor('student 1');
             await waitToBeDisabled('authors-merge-button');
             await selectAuthor('staff 1');

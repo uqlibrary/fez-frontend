@@ -10,16 +10,16 @@ exports[`Component NtroHeader should render default view 1`] = `
       style="margin-top: 5px;"
     >
       <div
-        class="MuiGridLegacy-root MuiGridLegacy-container css-1so89gw-MuiGridLegacy-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
       >
         <div
-          class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-12 MuiGridLegacy-grid-sm-true css-40g213-MuiGridLegacy-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
         >
           <div
-            class="MuiGridLegacy-root MuiGridLegacy-container css-mcuokg-MuiGridLegacy-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
           >
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item alert-icon css-19gcae9-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
@@ -35,7 +35,7 @@ exports[`Component NtroHeader should render default view 1`] = `
               </svg>
             </div>
             <div
-              class="MuiGridLegacy-root MuiGridLegacy-item MuiGridLegacy-grid-xs-true alert-text css-1s0jjal-MuiGridLegacy-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
             >
               <b>
                 Non-traditional research output (NTRO) requirements - 

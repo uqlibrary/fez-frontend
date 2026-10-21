@@ -960,59 +960,51 @@ describe('Backend routes method', () => {
         });
     });
 
-    it('should construct url for journal favourites api', () => {
-        const commonQueryParams = {
-            export_to: '',
-            order_by: 'desc',
-            page: 1,
-            per_page: 20,
-            sort: 'score',
-        };
+    describe('journal user lists', () => {
+        it('should construct url for user lists', () => {
+            expect(routes.JOURNAL_USE_LISTS_API()).toEqual({
+                apiUrl: 'journals/lists/',
+            });
 
-        expect(routes.JOURNAL_FAVOURITES_API()).toEqual({
-            apiUrl: 'journals/favourites',
+            expect(routes.JOURNAL_USE_LISTS_API(123)).toEqual({
+                apiUrl: 'journals/lists/123',
+            });
         });
 
-        expect(routes.JOURNAL_FAVOURITES_API({ query: 'a' })).toEqual({
-            apiUrl: 'journals/favourites',
-            options: {
-                params: { ...commonQueryParams },
-            },
-        });
+        it('should construct url for journal favourites api', () => {
+            const commonQueryParams = {
+                export_to: '',
+                order_by: 'desc',
+                page: 1,
+                per_page: 20,
+                sort: 'score',
+            };
 
-        expect(
-            routes.JOURNAL_FAVOURITES_API({
-                query: {
-                    keywords: [
-                        { type: 'Title', text: 'apple', operand: 'AND' },
-                        { type: 'Keyword', text: 'apple', operand: 'OR' },
-                        { type: 'Subject', text: 'apple', cvoId: 12345, operand: 'OR' },
-                    ],
+            expect(
+                routes.JOURNAL_USER_LIST_ITEMS_API({
+                    id: '1',
+                    query: 'a',
+                }),
+            ).toEqual({
+                apiUrl: 'journals/lists/1/items',
+                options: {
+                    params: { ...commonQueryParams },
                 },
-            }),
-        ).toEqual({
-            apiUrl: 'journals/favourites',
-            options: {
-                params: {
-                    ...commonQueryParams,
-                    query: 'title:apple OR description:apple OR subject:12345',
+            });
+            expect(
+                routes.JOURNAL_USER_LIST_ITEMS_API({
+                    id: 1,
+                    query: 'a',
+                }),
+            ).toEqual({
+                apiUrl: 'journals/lists/1/items',
+                options: {
+                    params: { ...commonQueryParams },
                 },
-            },
-        });
-
-        // with append
-        expect(
-            routes.JOURNAL_FAVOURITES_API({
-                append: 'append',
-                query: 'a',
-            }),
-        ).toEqual({
-            apiUrl: 'journals/favourites/append',
-            options: {
-                params: { ...commonQueryParams },
-            },
+            });
         });
     });
+
     it('should construct url for community list api', () => {
         expect(routes.COMMUNITY_LIST_API({ pageSize: 20, page: 1, direction: 'Asc', sortBy: 'title' })).toEqual({
             apiUrl: 'communities',

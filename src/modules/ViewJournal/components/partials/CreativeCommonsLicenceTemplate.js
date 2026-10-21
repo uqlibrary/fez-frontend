@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import DefaultTemplate from './DefaultTemplate';
 import { CCL_4_0_SLUG_TEXT_MAP, getCreativeCommonsUrl } from 'config/general';
@@ -19,7 +19,7 @@ const CreativeCommonsLicenceTemplate = ({ data: { by, nd, nc, sa }, fieldId }) =
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <DefaultTemplate
                     fieldId={fieldId}
                     data={
@@ -34,7 +34,7 @@ const CreativeCommonsLicenceTemplate = ({ data: { by, nd, nc, sa }, fieldId }) =
                     }
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <ExternalLink
                     href={getCreativeCommonsUrl('4.0')(licence)}
                     id={`${fieldId}-icon`}

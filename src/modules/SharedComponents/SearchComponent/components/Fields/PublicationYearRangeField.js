@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import locale from 'locale/components';
 
@@ -36,14 +36,14 @@ export const PublicationYearRangeField = ({
     return (
         <React.Fragment>
             <Grid container>
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Typography variant={'caption'} color={'secondary'}>
                         {txt.title}
                     </Typography>
                 </Grid>
             </Grid>
             <Grid container>
-                <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
+                <Grid sx={{ flexGrow: 1, minWidth: 0, width: '1px' }}>
                     <TextField
                         variant="standard"
                         fullWidth
@@ -63,7 +63,7 @@ export const PublicationYearRangeField = ({
                         }}
                     />
                 </Grid>
-                <Grid item xs={'auto'}>
+                <Grid size={'auto'}>
                     <TextField
                         variant="standard"
                         sx={{ width: '24px' }}
@@ -77,7 +77,7 @@ export const PublicationYearRangeField = ({
                         }}
                     />
                 </Grid>
-                <Grid item zeroMinWidth sx={{ flexGrow: 1, width: '1px' }}>
+                <Grid sx={{ flexGrow: 1, minWidth: 0, width: '1px' }}>
                     <TextField
                         variant="standard"
                         fullWidth

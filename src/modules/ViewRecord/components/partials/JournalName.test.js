@@ -199,17 +199,22 @@ describe('Journal Name Component test ', () => {
                     {
                         rek_issn: '1532-1827',
                         fez_sherpa_romeo: {
+                            srm_source_id: 1627,
                             srm_journal_link: 'https://v2.sherpa.ac.uk/id/publication/1627',
                         },
                     },
                 ]),
-            ).toEqual({ issn: '1532-1827', url: 'https://v2.sherpa.ac.uk/id/publication/1627' });
+            ).toEqual({
+                issn: '1532-1827',
+                url: 'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1627',
+            });
 
             expect(
                 getSherpaRomeo([
                     {
                         rek_issn: '1532-1827',
                         fez_sherpa_romeo: {
+                            srm_source_id: 1627,
                             srm_journal_link_nope: 'https://v2.sherpa.ac.uk/id/publication/1627',
                         },
                     },
@@ -220,24 +225,32 @@ describe('Journal Name Component test ', () => {
                         },
                     },
                 ]),
-            ).toEqual({ issn: '1532-1827', url: 'https://v2.sherpa.ac.uk/id/publication/1627' });
+            ).toEqual({
+                issn: '1532-1827',
+                url: 'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1627',
+            });
 
             expect(
                 getSherpaRomeo([
                     {
                         rek_issn: '1532-1827',
                         fez_sherpa_romeo: {
+                            srm_source_id: 1627,
                             srm_journal_link: 'https://v2.sherpa.ac.uk/id/publication/1627',
                         },
                     },
                 ]),
-            ).toEqual({ issn: '1532-1827', url: 'https://v2.sherpa.ac.uk/id/publication/1627' });
+            ).toEqual({
+                issn: '1532-1827',
+                url: 'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1627',
+            });
 
             expect(
                 getSherpaRomeo([
                     {
                         rek_issn: '1532-1827',
                         fez_sherpa_romeo: {
+                            srm_source_id: 1627,
                             srm_journal_link: 'https://v2.sherpa.ac.uk/id/publication/1627',
                         },
                     },
@@ -248,7 +261,10 @@ describe('Journal Name Component test ', () => {
                         },
                     },
                 ]),
-            ).toEqual({ issn: '1532-1827', url: 'https://v2.sherpa.ac.uk/id/publication/1627' });
+            ).toEqual({
+                issn: '1532-1827',
+                url: 'https://resolver.library.uq.edu.au/openathens/redir?qurl=%20https%3A%2F%2Fopenpolicyfinder.jisc.ac.uk%2Fpublication%2F1627',
+            });
         });
     });
 });

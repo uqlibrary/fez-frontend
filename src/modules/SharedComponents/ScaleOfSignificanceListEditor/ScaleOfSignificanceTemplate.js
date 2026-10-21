@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import { numberToWords, SIGNIFICANCE_MAP } from 'config/general';
 import { parseHtmlToJSX } from 'helpers/general';
 
@@ -9,7 +9,7 @@ export const ScaleOfSignificanceTemplate = ({ item }) => {
     const authorNameIfKnown = <>{!!item.author?.rek_author ? `(${item.author.rek_author})` : ''}</>;
     return (
         <Grid container>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <Typography
                     variant="body2"
                     style={{ color: 'rgba(0, 0, 0, 0.5)' }}
@@ -18,12 +18,12 @@ export const ScaleOfSignificanceTemplate = ({ item }) => {
                     {numberToWords(item.id + 1)} listed author {authorNameIfKnown}
                 </Typography>
             </Grid>
-            <Grid item xs={12} md={3}>
+            <Grid size={{ xs: 12, md: 3 }}>
                 <Typography variant="body2" id={`scale-item-${item.id}`} data-testid={`scale-item-${item.id}`}>
                     {SIGNIFICANCE_MAP[item.scaleValue] || 'Missing'}
                 </Typography>
             </Grid>
-            <Grid item xs={12} md={9}>
+            <Grid size={{ xs: 12, md: 9 }}>
                 <Typography
                     variant="body2"
                     component={'span'}

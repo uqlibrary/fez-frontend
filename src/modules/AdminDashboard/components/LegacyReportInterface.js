@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -64,7 +64,7 @@ const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) 
     return (
         <Box id={id} data-testid={id}>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={4}>
+                <Grid size={{ xs: 12, sm: 4 }}>
                     <Autocomplete
                         id={id}
                         disablePortal
@@ -118,7 +118,7 @@ const LegacyReportInterface = ({ id, loading, disabled, items, onExportClick }) 
                     }),
                 )}
 
-                <Grid item xs={12}>
+                <Grid size={12}>
                     <Button
                         id="report-export-button"
                         data-testid="report-export-button"

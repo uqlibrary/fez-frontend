@@ -9,7 +9,7 @@ import {
     assertAffiliationsAllowed,
     loadRecordForAdminEdit,
 } from '../helpers';
-import { readCKEditor } from '../../../lib/ckeditor';
+import { readRichTextEditor } from '../../../lib/richTextEditor';
 import { checkPartialDateFromRecordValue } from '../../../lib/helpers';
 
 test.describe('Thesis admin edit', () => {
@@ -35,8 +35,8 @@ test.describe('Thesis admin edit', () => {
         const titleCard = bibliographicAdminCards.nth(0);
         await expect(titleCard.locator('h4')).toHaveText(/Title/);
         await expect(titleCard.locator('span span').first()).toContainText('Formatted title');
-        // Assuming readCKEditor is a helper function that returns the text content of the CKEditor
-        expect(await readCKEditor(page, 'rek-title')).toContain(record.rek_title);
+        // Assuming readRichTextEditor is a helper function that returns the text content of the Rich Text Editor
+        expect(await readRichTextEditor(page, 'rek-title')).toContain(record.rek_title);
 
         const languageCard = bibliographicAdminCards.nth(1);
         await expect(languageCard.locator('h4')).toHaveText(/Language of work/);
@@ -148,7 +148,7 @@ test.describe('Thesis admin edit', () => {
 
         const additionalNotesCard = notesAdminCards.nth(0);
         await expect(additionalNotesCard.locator('span span').first()).toHaveText('Additional notes (public)');
-        const rekNotesText = await readCKEditor(page, 'rek-notes');
+        const rekNotesText = await readRichTextEditor(page, 'rek-notes');
         await expect(rekNotesText).toContain(record.fez_record_search_key_notes.rek_notes);
 
         // ---------------------------------------------- FILES TAB --------------------------------------------------

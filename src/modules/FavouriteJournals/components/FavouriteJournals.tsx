@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@mui/material/Grid';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../../SearchJournals/hooks';
@@ -10,22 +10,39 @@ import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from 'modules/SharedComponents/JournalsCommonButtons';
-import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
+import { deleteListItems, loadListItems, loadLists } from 'actions/journalUserLists';
 import { LoadingButton } from 'modules/SharedComponents/LoadingButton';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate, useParams } from 'react-router';
 import { AppState } from '../../../reducer';
+import ListSelect from 'modules/FavouriteJournals/components/ListSelect';
+import { Box } from '@mui/material';
+import { useDispatchOnce } from 'hooks/useDispatchOnce';
+import Button from '@mui/material/Button';
 
 export const FavouriteJournals: React.FC = () => {
+    const { id: listIdParam } = useParams();
     const dispatch = useDispatch();
     const location = useLocation();
+    const navigate = useNavigate();
     const txt = locale.components.favouriteJournals;
-    // keep track of previous location, so we can go back to the search page correctly after re rendering this component
+    // keep track of previous location, so we can go back to the search page correctly after re-rendering this component
     const prevLocation = useRef(location.state?.prevLocation);
+    const [listId, setListId] = useState(listIdParam);
 
     const response = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').response);
     const loading = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').loading);
     const error = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').error);
     const removing = useSelector((state: AppState) => state.get?.('favouriteJournalsReducer').remove?.loading);
+    const {
+        loading: loadingLists,
+        data: listsResponse,
+        isDirty,
+    } = useSelector((state: AppState) => state.get?.('journalUserListsReducer'));
+    const fetchLists = useDispatchOnce(!!response?.data && !isDirty, () => loadLists());
+
+    useEffect(() => {
+        fetchLists();
+    }, [fetchLists]);
 
     const {
         selectedJournals,
@@ -35,9 +52,9 @@ export const FavouriteJournals: React.FC = () => {
         countSelectedJournals,
         handleToggleSelectAllJournals,
     } = useSelectedJournals({ available: response?.data });
-    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites);
+    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites(listId));
     /* istanbul ignore next */
-    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
+    const { pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
         params => {
             handleSearch(params);
             clearSelectedJournals();
@@ -46,49 +63,61 @@ export const FavouriteJournals: React.FC = () => {
         true,
     );
 
-    const handleRemoveFromFavouritesClick = () =>
-        dispatch(removeFromFavourites(Object.keys(selectedJournals)))
+    const handleDeleteFavouritesClick = () =>
+        dispatch(deleteListItems({ id: listId, ids: Object.keys(selectedJournals) }))
             .then(() => clearSelectedJournals())
-            .then(() => dispatch(retrieveFavouriteJournals(journalSearchQueryParams)));
+            .then(() => dispatch(loadListItems({ id: listId, searchQuery: journalSearchQueryParams })));
+
+    // handle listIdParam changes
+    useEffect(() => {
+        setListId(listIdParam);
+    }, [listIdParam]);
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
-        dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection }));
+        /* istanbul ignore next */
+        if (!listId) return;
+        dispatch(loadListItems({ id: listId, searchQuery: { page, pageSize, sortBy, sortDirection } }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [page, pageSize, sortBy, sortDirection]);
+    }, [listId, page, pageSize, sortBy, sortDirection]);
+
+    /* istanbul ignore next */
+    const handleListSelection = (
+        event:
+            | ChangeEvent<HTMLInputElement, Element>
+            | (Event & {
+                  target: {
+                      value: unknown;
+                      name: string;
+                  };
+              }),
+    ) => {
+        setListId(String(event.target.value));
+    };
+
+    const Title = (
+        <Grid container spacing={2} alignItems="center">
+            {txt.title}
+            <Box component="span" sx={{ mb: -2, width: 300 }}>
+                <ListSelect
+                    loading={loadingLists}
+                    lists={listsResponse?.data}
+                    value={listId}
+                    disabled={loading}
+                    onChange={handleListSelection}
+                />
+            </Box>
+        </Grid>
+    );
 
     return (
-        // @ts-expect-error TODO remove upon converting to TS
-        <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
-            <Grid
-                container
-                spacing={3}
-                sx={{
-                    padding: 0,
-                }}
-            >
+        <StandardPage title={Title} data-testid="journal-search-page">
+            <Grid container spacing={3} sx={{ padding: 0 }}>
                 <Grid size="grow">
-                    <Grid
-                        container
-                        spacing={2}
-                        sx={{
-                            padding: 0,
-                        }}
-                    >
-                        <Grid
-                            size={12}
-                            sx={{
-                                flexGrow: 1,
-                            }}
-                        >
+                    <Grid container spacing={2} sx={{ padding: 0 }}>
+                        <Grid size={12} sx={{ flexGrow: 1 }}>
                             <StandardCard noHeader>
-                                <Grid
-                                    container
-                                    spacing={2}
-                                    sx={{
-                                        padding: 0,
-                                    }}
-                                >
+                                <Grid container spacing={2} sx={{ padding: 0 }}>
                                     <FavouriteJournalsList
                                         journalsList={response}
                                         loading={loading}
@@ -97,7 +126,6 @@ export const FavouriteJournals: React.FC = () => {
                                         isAllSelected={isAllSelected}
                                         onSelectionChange={handleSelectedJournalsChange}
                                         onToggleSelectAll={handleToggleSelectAllJournals}
-                                        onExport={handleExport}
                                         onPageSizeChange={pageSizeChanged}
                                         onPageChange={pageChanged}
                                         onSortByChange={sortByChanged}
@@ -105,21 +133,9 @@ export const FavouriteJournals: React.FC = () => {
                                     />
                                 </Grid>
                                 <Grid style={{ paddingTop: response?.total ? 20 : 25 }} size={12}>
-                                    <Grid
-                                        container
-                                        spacing={2}
-                                        sx={{
-                                            padding: 0,
-                                        }}
-                                    >
-                                        {!!response?.total && (
-                                            <Grid
-                                                size={{
-                                                    xs: 12,
-                                                    sm: 6,
-                                                    md: 'auto',
-                                                }}
-                                            >
+                                    <Grid container spacing={2} sx={{ padding: 0 }}>
+                                        {listId && !!response?.total && (
+                                            <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
                                                 <LoadingButton
                                                     variant="contained"
                                                     type="submit"
@@ -128,26 +144,43 @@ export const FavouriteJournals: React.FC = () => {
                                                     data-testid="remove-from-favourites-button"
                                                     disabled={!!removing || countSelectedJournals() < 1}
                                                     loading={removing}
-                                                    aria-label={txt.buttons.removeFromFavourites.aria}
-                                                    children={txt.buttons.removeFromFavourites.title}
-                                                    onClick={handleRemoveFromFavouritesClick}
+                                                    aria-label={txt.buttons.delete.aria}
+                                                    children={txt.buttons.delete.title}
+                                                    onClick={handleDeleteFavouritesClick}
                                                     fullWidth
                                                 />
                                             </Grid>
                                         )}
-                                        <Grid
-                                            size={{
-                                                xs: 12,
-                                                sm: 6,
-                                                md: 'auto',
-                                            }}
-                                        >
-                                            <BackToSearchButton
-                                                children={txt.buttons.returnToSearch.title}
-                                                aria-label={txt.buttons.returnToSearch.aria}
-                                                prevLocation={prevLocation.current}
-                                                fullWidth
-                                            />
+                                        <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
+                                            <Button
+                                                variant="contained"
+                                                type="submit"
+                                                color="primary"
+                                                data-analyticsid="to-favourite-journal-lists-button"
+                                                data-testid="to-favourite-journal-lists-button"
+                                                onClick={() => navigate(pathConfig.journals.lists)}
+                                            >
+                                                Favourites lists
+                                            </Button>
+                                        </Grid>
+                                        <Grid size={{ xs: 12, sm: 6, md: 'auto' }}>
+                                            {!prevLocation.current && (
+                                                <BackToSearchButton
+                                                    children={txt.buttons.toJournalSearch.title}
+                                                    aria-label={txt.buttons.toJournalSearch.aria}
+                                                    fullWidth
+                                                />
+                                            )}
+                                            {
+                                                /* istanbul ignore next */ prevLocation.current && (
+                                                    <BackToSearchButton
+                                                        children={txt.buttons.returnToSearch.title}
+                                                        aria-label={txt.buttons.returnToSearch.aria}
+                                                        prevLocation={prevLocation.current}
+                                                        fullWidth
+                                                    />
+                                                )
+                                            }
                                         </Grid>
                                     </Grid>
                                 </Grid>

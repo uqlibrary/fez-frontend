@@ -11,7 +11,15 @@ export const ULRICHS_URL_PREFIX =
 
 export const prefixByUrlResolver = url => RESOLVER_URL_PREFIX + encodeURIComponent(url);
 
-export const getDoajUrl = issn => prefixByUrlResolver(`https://doaj.org/toc/${issn}`);
+export const getDoajUrl = issn => `https://doaj.org/toc/${issn}`;
+
+/*
+ Construct the Open Policy Finder URL locally because the API still returns
+ the legacy Sherpa/RoMEO link. This can be removed once the API returns
+ Open Policy Finder URLs directly.
+ */
+export const getOpenPolicyFinderUrl = id =>
+    id ? prefixByUrlResolver(` https://openpolicyfinder.jisc.ac.uk/publication/${id}`) : null;
 
 export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
@@ -20,6 +28,7 @@ export const numberToWords = value => {
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
+export const SESSION_PTYPE_COOKIE_NAME = 'UQLID_PTYPE';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 // Set by the API on a passive (silent) login attempt to suppress re-attempts until it expires
 export const PASSIVE_LOGIN_CHECK_COOKIE_NAME = 'UQL_PASSIVE_CHECKED';

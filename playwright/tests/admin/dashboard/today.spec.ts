@@ -34,6 +34,8 @@ test.describe('Admin Dashboard - Today tab', () => {
     test('renders charts and quick links as expected', async ({ page }) => {
         // a more verbose test than usual, due to being
         // unable to test charts in jest unit tests
+        await page.evaluate(() => document.fonts.ready);
+        await expect(page.getByTestId('system-alerts-title')).toBeVisible();
         await expect(page.getByTestId('system-alerts-title')).toContainText('System Alerts');
 
         // Charts

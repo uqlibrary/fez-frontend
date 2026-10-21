@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import DoiField from './DoiField';
@@ -102,7 +102,7 @@ export const DoiPreview = ({ publication }) => {
 
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.cardTitles.doi}>
                     <DoiField
                         label={!!doi ? txt.doiLabel.hasDoi : txt.doiLabel.noDoi}
@@ -111,13 +111,13 @@ export const DoiPreview = ({ publication }) => {
                     />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.cardTitles.depositor}>
                     <DoiField label={txt.depositorNameTitle} field="rek_author-name" data={account.full_name} />
                     <DoiField label={txt.depositorEmailTitle} field="rek_author-email" data={account.email} />
                 </StandardCard>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 <StandardCard title={txt.cardTitles.work}>{previewFields}</StandardCard>
             </Grid>
         </Grid>

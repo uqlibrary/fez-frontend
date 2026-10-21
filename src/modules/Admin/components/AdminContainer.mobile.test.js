@@ -2,7 +2,7 @@ import React from 'react';
 import { rtlRender, WithReduxStore, WithRouter } from 'test-utils';
 
 import AdminContainer from './AdminContainer';
-import { recordWithDatastreams } from 'mock/data';
+import recordWithDatastreams from 'mock/data/records/recordWithDatastreams';
 import { useIsMobileView } from '../../../hooks';
 import { useRecordContext, useTabbedContext } from 'context';
 

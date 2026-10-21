@@ -15,7 +15,6 @@ export const FavouriteJournalsList = ({
     error,
     onSelectionChange,
     onToggleSelectAll,
-    onExport,
     onSortByChange,
     onPageChange,
     onPageSizeChange,
@@ -57,13 +56,11 @@ export const FavouriteJournalsList = ({
         <>
             <Grid size={12}>
                 <PublicationsListSorting
-                    canUseExport
                     exportData={locale.components.searchJournals.export}
                     pagingData={journalsList}
                     sortingData={locale.components.searchJournals.sorting}
                     sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
                     sortDirection={(journalSearchQueryParams && journalSearchQueryParams.sortDirection) || 'Desc'}
-                    onExportPublications={onExport}
                     onSortByChanged={onSortByChange}
                     onPageSizeChanged={onPageSizeChange}
                     pageSize={journalsList?.per_page}
@@ -106,7 +103,6 @@ FavouriteJournalsList.propTypes = {
     loading: PropTypes.bool,
     onSelectionChange: PropTypes.func,
     onToggleSelectAll: PropTypes.func,
-    onExport: PropTypes.func,
     onPageSizeChange: PropTypes.func,
     onPageChange: PropTypes.func,
     onSortByChange: PropTypes.func,

@@ -14,7 +14,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import locale from 'locale/components';
 import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
 import { pathConfig } from 'config';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -221,7 +221,7 @@ export default class MyRecords extends PureComponent {
                         // first time loading my publications - account hasn't been
                         // loaded or any my publications haven't been loaded
                         !this.state.hasPublications && this.props.loadingPublicationsList && (
-                            <Grid item xs={12}>
+                            <Grid size={12}>
                                 <InlineLoader message={txt.loadingMessage} />
                             </Grid>
                         )
@@ -231,7 +231,7 @@ export default class MyRecords extends PureComponent {
                         !this.props.loadingPublicationsList &&
                             this.props.publicationsList &&
                             this.props.publicationsList.length === 0 && (
-                                <Grid item xs={12} md={9}>
+                                <Grid size={{ xs: 12, md: 9 }}>
                                     <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
                                 </Grid>
                             )
@@ -240,7 +240,7 @@ export default class MyRecords extends PureComponent {
                         // results to display or loading if user is filtering/paging
                         this.state.hasPublications &&
                             (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
-                                <Grid item xs={12} md={9}>
+                                <Grid size={{ xs: 12, md: 9 }}>
                                     <StandardCard
                                         {...(txt?.help ? { title: txt.cardTitle, help: txt.help } : { noHeader: true })}
                                     >
@@ -261,10 +261,8 @@ export default class MyRecords extends PureComponent {
                                             </span>
                                         )}
                                         <Grid container spacing={2}>
-                                            <Grid item xs={12}>
-                                                {txt.text}
-                                            </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>{txt.text}</Grid>
+                                            <Grid size={12}>
                                                 <PublicationsListSorting
                                                     initPageLength={this.initState.pageSize}
                                                     sortBy={this.state.sortBy}
@@ -279,7 +277,7 @@ export default class MyRecords extends PureComponent {
                                                     bulkExportSize={MY_RECORDS_BULK_EXPORT_SIZE}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <PublicationsListPaging
                                                     loading={isLoadingOrExporting}
                                                     pagingData={pagingData}
@@ -288,14 +286,14 @@ export default class MyRecords extends PureComponent {
                                                     pagingId="my-records-paging-top"
                                                 />
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <ConfirmDialogBox
                                                     locale={confirmationLocale}
                                                     hideCancelButton
                                                     onRef={this._setSuccessConfirmation}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 {isLoadingOrExporting && (
                                                     <div className="is-centered">
                                                         <InlineLoader
@@ -319,7 +317,7 @@ export default class MyRecords extends PureComponent {
                                                         />
                                                     )}
                                             </Grid>
-                                            <Grid item xs={12}>
+                                            <Grid size={12}>
                                                 <PublicationsListPaging
                                                     loading={isLoadingOrExporting}
                                                     pagingData={pagingData}
@@ -342,7 +340,7 @@ export default class MyRecords extends PureComponent {
                                 this.state.activeFacets.ranges &&
                                 Object.keys(this.state.activeFacets.ranges).length > 0) ||
                             (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
-                            <Grid item xs={12} md={3}>
+                            <Grid size={{ xs: 12, md: 3 }}>
                                 <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                     <FacetsFilter
                                         facetsData={this.props.publicationsListFacets}

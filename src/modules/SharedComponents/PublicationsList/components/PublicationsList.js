@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/GridLegacy';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -85,7 +85,7 @@ export const PublicationsList = ({
 
     return (
         <Grid container spacing={1}>
-            <Grid item xs={12} sm>
+            <Grid size={{ xs: 12, sm: 'grow' }}>
                 <Box
                     sx={{
                         display: 'flex',
@@ -116,9 +116,7 @@ export const PublicationsList = ({
                 </Box>
             </Grid>
             <StyledBulkActionContainer
-                item
-                xs={12}
-                sm
+                size={{ xs: 12, sm: 'grow' }}
                 sx={{ display: Object.keys(recordsSelected).length > 0 ? '' : 'none' }}
             >
                 <Box
@@ -134,10 +132,10 @@ export const PublicationsList = ({
                     />
                 </Box>
             </StyledBulkActionContainer>
-            <Grid item xs={12}>
+            <Grid size={12}>
                 {publicationsList.map((publication, index) => (
                     <Grid container spacing={0} alignItems="flex-start" key={`publication-${index}`}>
-                        <Grid item xs={2} sm={1}>
+                        <Grid size={{ xs: 2, sm: 1 }}>
                             <Checkbox
                                 inputProps={{
                                     'data-analyticsid': `select-publication-${index}-input`,
@@ -149,9 +147,7 @@ export const PublicationsList = ({
                                 checked={recordsSelected.hasOwnProperty(publication.rek_pid)}
                             />
                         </Grid>
-                        <Grid item xs={10} sm={11}>
-                            {renderPublicationCitation(index, publication)}
-                        </Grid>
+                        <Grid size={{ xs: 10, sm: 11 }}>{renderPublicationCitation(index, publication)}</Grid>
                     </Grid>
                 ))}
             </Grid>
