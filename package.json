@@ -102,6 +102,7 @@
     "browserify": "^17.0.0",
     "buffer": "^6.0.3",
     "chalk": "^4.1.2",
+    "compression": "^1.8.2",
     "cross-env": "^10.0.0",
     "css-loader": "^7.1.4",
     "css-mediaquery": "^0.1.2",
@@ -135,6 +136,7 @@
     "prettier-eslint": "^17.1.0",
     "prettier-eslint-cli": "^9.2.0",
     "progress-bar-webpack-plugin": "^2.1.0",
+    "proxy-addr": "^2.0.8",
     "react-refresh": "^0.14.0",
     "react-test-renderer": "^19.2.0",
     "redux-mock-store": "^1.5.1",
@@ -142,7 +144,9 @@
     "robotstxt-webpack-plugin": "^8.0.0",
     "sass": "^1.70.0",
     "sass-loader": "^10.2.1",
+    "shell-quote": "^1.12.0",
     "snapshot-diff": "^0.10.0",
+    "source-map-js": "^1.2.2",
     "start-server-and-test": "^2.0.3",
     "string-to-arraybuffer": "^1.0.0",
     "style-loader": "^2.0.0",
@@ -152,13 +156,9 @@
     "webpack": "^5.107.2",
     "webpack-bundle-analyzer": "^5.3.0",
     "webpack-cli": "^7.0.3",
-    "webpack-dev-server": "^6.0.0",
     "webpack-dev-middleware": "^8.3.0",
-    "whatwg-fetch": "^3.6.20",
-    "shell-quote": "^1.12.0",
-    "proxy-addr": "^2.0.8",
-    "source-map-js": "^1.2.2",
-    "compression": "^1.8.2"
+    "webpack-dev-server": "^6.0.0",
+    "whatwg-fetch": "^3.6.20"
   },
   "dependencies": {
     "@babel/runtime": "^7.29.7",
@@ -224,6 +224,7 @@
     "mui-tiptap": "^1.31.0",
     "number-to-words": "^1.2.4",
     "prop-types": "^15.7.2",
+    "prosemirror-view": "^1.42.6",
     "query-string": "^6.5.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
@@ -248,8 +249,7 @@
     "throttle-debounce": "^5.0.0",
     "timezones.json": "^1.2.1",
     "usehooks-ts": "^3.1.1",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
-    "prosemirror-view": "^1.42.6"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.0"
