@@ -744,23 +744,14 @@ export default {
         getValue: record => getValueFromRekKey(record, 'rek_copyright'),
     },
     fez_record_search_key_isderivationof: {
-        getValue: record => [
-            ...(record.fez_record_search_key_isderivationof || []).map(derivation => ({
+        getValue: record =>
+            (record.fez_record_search_key_isderivationof || []).map(derivation => ({
                 rek_isderivationof: {
                     id: derivation.rek_isderivationof,
                     value: derivation.rek_isderivationof_lookup,
                 },
                 rek_isderivationof_order: derivation.rek_isderivationof_order,
             })),
-            ...(record.fez_record_search_key_has_derivations || []).map(parent => ({
-                rek_isderivationof: {
-                    id: parent.rek_has_derivations,
-                    value: `${parent.rek_has_derivations_lookup} (backlink)`,
-                    backlink: true,
-                },
-                rek_isderivationof_order: parent.rek_has_derivations_order,
-            })),
-        ],
     },
     fez_record_search_key_alternate_genre: {
         getValue: record =>

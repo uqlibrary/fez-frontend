@@ -393,9 +393,6 @@ export default {
     "fez_record_search_key_has_related_datasets":[
         
     ],
-    "fez_record_search_key_has_derivations":[
-        
-    ],
     "rek_display_type_lookup":"Image",
     "rek_pubmed_doc_type_lookup":null,
     "rek_object_type_lookup":"Record",
