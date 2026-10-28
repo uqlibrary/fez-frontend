@@ -21,7 +21,7 @@ exports[`PatentForm component 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-patent-information-header"
               id="standard-card-patent-information-header"
             >
@@ -346,7 +346,7 @@ exports[`PatentForm component 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-creators-header"
               id="standard-card-creators-header"
             >
@@ -515,7 +515,7 @@ exports[`PatentForm component 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-other-patent-details-header"
               id="standard-card-other-patent-details-header"
             >
@@ -636,7 +636,7 @@ exports[`PatentForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-patent-information-header"
               id="standard-card-patent-information-header"
             >
@@ -968,7 +968,7 @@ exports[`PatentForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-creators-header"
               id="standard-card-creators-header"
             >
@@ -1138,7 +1138,7 @@ exports[`PatentForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-other-patent-details-header"
               id="standard-card-other-patent-details-header"
             >

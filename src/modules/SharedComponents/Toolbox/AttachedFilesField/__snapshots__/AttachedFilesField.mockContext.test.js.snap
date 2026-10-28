@@ -18,7 +18,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h4
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >

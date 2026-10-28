@@ -158,8 +158,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                         style="min-width: 1px;"
                       >
-                        <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                        <h3
+                          class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -167,7 +167,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
-                        </h6>
+                        </h3>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-1lu29ow-MuiGrid-root"
@@ -511,8 +511,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                         style="min-width: 1px;"
                       >
-                        <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                        <h3
+                          class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -520,7 +520,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           >
                             Prophylactic HPV vaccines: Underlying mechanisms
                           </a>
-                        </h6>
+                        </h3>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-1lu29ow-MuiGrid-root"
@@ -879,8 +879,8 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                         style="min-width: 1px;"
                       >
-                        <h6
-                          class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                        <h3
+                          class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                         >
                           <a
                             data-discover="true"
@@ -888,7 +888,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
-                        </h6>
+                        </h3>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-1lu29ow-MuiGrid-root"

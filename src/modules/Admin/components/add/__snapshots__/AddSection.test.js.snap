@@ -10,7 +10,7 @@ exports[`AddSection component should render default view 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -43,7 +43,7 @@ exports[`AddSection component should render default view 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -254,7 +254,7 @@ exports[`AddSection component should render with subtypes 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -287,7 +287,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -560,7 +560,7 @@ exports[`AddSection component with coverage should render with default doc type 
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -593,7 +593,7 @@ exports[`AddSection component with coverage should render with default doc type 
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >

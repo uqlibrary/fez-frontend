@@ -23,11 +23,11 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 Oral Presentations – Thursday 11 July 2019
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -293,8 +293,8 @@ exports[`PublicationCitation  should render button disabled with spinners on act
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -302,7 +302,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -628,8 +628,8 @@ exports[`PublicationCitation  should render component with citation unavailable 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -637,7 +637,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -787,8 +787,8 @@ exports[`PublicationCitation  should render component with citation unavailable 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -796,7 +796,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -945,8 +945,8 @@ exports[`PublicationCitation  should render component with content indicators 1`
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -954,7 +954,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1175,8 +1175,8 @@ exports[`PublicationCitation  should render component with default actions 1`] =
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1184,7 +1184,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1424,8 +1424,8 @@ exports[`PublicationCitation  should render component with default item 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1433,7 +1433,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1691,8 +1691,8 @@ exports[`PublicationCitation  should render component with default item with ima
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -1700,7 +1700,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2046,8 +2046,8 @@ exports[`PublicationCitation  should render component with default item with ima
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2055,7 +2055,7 @@ exports[`PublicationCitation  should render component with default item with ima
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2364,8 +2364,8 @@ exports[`PublicationCitation  should render component with default item without 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2373,7 +2373,7 @@ exports[`PublicationCitation  should render component with default item without 
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2682,11 +2682,11 @@ exports[`PublicationCitation  should render component with default item without 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2907,8 +2907,8 @@ exports[`PublicationCitation  should render component with default list hiding t
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -2916,7 +2916,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
@@ -3033,8 +3033,8 @@ exports[`PublicationCitation  should render component with default list hiding t
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3042,7 +3042,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -3263,8 +3263,8 @@ exports[`PublicationCitation  should render component with default list hiding t
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3272,7 +3272,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -3493,8 +3493,8 @@ exports[`PublicationCitation  should render component with empty custom actions 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3502,7 +3502,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -3730,8 +3730,8 @@ exports[`PublicationCitation  should render component with publication from mult
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -3739,7 +3739,7 @@ exports[`PublicationCitation  should render component with publication from mult
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -4286,8 +4286,8 @@ exports[`PublicationCitation  should render component without image if whitelist
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4295,7 +4295,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                 >
                   TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -4604,8 +4604,8 @@ exports[`PublicationCitation  should render primary action button 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4613,7 +4613,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -4854,8 +4854,8 @@ exports[`PublicationCitation  should render publication citation metric with cou
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -4863,7 +4863,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-1lu29ow-MuiGrid-root"
@@ -5128,8 +5128,8 @@ exports[`PublicationCitation  should render publication citation metric without 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -5137,7 +5137,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto citationMetrics css-1lu29ow-MuiGrid-root"
@@ -5399,8 +5399,8 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               style="min-width: 1px;"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+              <h3
+                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
               >
                 <a
                   data-discover="true"
@@ -5408,7 +5408,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 >
                   Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                 </a>
-              </h6>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"

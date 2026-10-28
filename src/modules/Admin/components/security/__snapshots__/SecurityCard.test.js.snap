@@ -21,7 +21,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -156,7 +156,7 @@ exports[`SecurityCard component should mount with default props for a collection
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -428,7 +428,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -554,7 +554,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -754,7 +754,7 @@ exports[`SecurityCard component should not render data stream security selector 
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -889,7 +889,7 @@ exports[`SecurityCard component should render security card correctly for collec
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1163,7 +1163,7 @@ exports[`SecurityCard component should render security card correctly for commun
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1319,7 +1319,7 @@ exports[`SecurityCard component should render security card correctly for record
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1445,7 +1445,7 @@ exports[`SecurityCard component should render security card correctly for record
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -1645,7 +1645,7 @@ exports[`SecurityCard component should render security card correctly for record
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1876,7 +1876,7 @@ exports[`SecurityCard component should render security card correctly for record
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -2076,7 +2076,7 @@ exports[`SecurityCard component should render security card with disabled inputs
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -2311,7 +2311,7 @@ exports[`SecurityCard component should render security card with disabled inputs
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -2512,7 +2512,7 @@ exports[`SecurityCard component should render security card with disabled inputs
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -2747,7 +2747,7 @@ exports[`SecurityCard component should render security card with disabled inputs
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >

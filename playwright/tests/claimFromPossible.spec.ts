@@ -23,7 +23,7 @@ test.describe('Claim possible work', () => {
         test('renders a list of possible works with filters', async ({ page }) => {
             await page.goto('/records/possible');
             await expect(page.locator('h2')).toHaveText(/Claim possible works/);
-            await expect(page.locator('.StandardCard h6[class*="PublicationCitation-citationTitle"] > a')).toHaveCount(
+            await expect(page.locator('.StandardCard h3[class*="PublicationCitation-citationTitle"] > a')).toHaveCount(
                 8,
             );
             await expect(page.locator('[class*="StandardRighthandCard-title"]')).toHaveText(/Refine results/);

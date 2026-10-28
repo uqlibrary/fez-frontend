@@ -29,7 +29,7 @@ test.describe('My Open Access', () => {
         test('renders a list of possible works with filters', async ({ page }) => {
             await page.goto('/records/my-open-access');
             await expect(page.locator('h2')).toHaveText(/My open access/);
-            await expect(page.locator('.StandardCard h6[class*="PublicationCitation-citationTitle"] > a')).toHaveCount(
+            await expect(page.locator('.StandardCard h3[class*="PublicationCitation-citationTitle"] > a')).toHaveCount(
                 3,
             );
             await expect(page.locator('[class*="StandardRighthandCard-title"]')).toHaveText(/Refine results/);
@@ -61,7 +61,7 @@ test.describe('My Open Access', () => {
                     .first(),
             ).toBeVisible();
             await expect(
-                page.locator('.StandardCard .publicationCitation h6 a', { hasText: record.rek_title }).first(),
+                page.locator('.StandardCard .publicationCitation h4 a', { hasText: record.rek_title }).first(),
             ).toBeVisible();
         });
 

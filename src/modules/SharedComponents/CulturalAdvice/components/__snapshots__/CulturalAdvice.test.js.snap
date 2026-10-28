@@ -15,7 +15,7 @@ exports[`Component CulturalAdvice should render component 1`] = `
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
           data-testid="standard-card-cultural-advice-header"
           id="standard-card-cultural-advice-header"
         >
