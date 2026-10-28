@@ -36,6 +36,10 @@ a, button.MuiLink-button:enabled {
       text-decoration: none;
     }
   }
+  &:focus {
+    outline: 4px solid var(--uq-utility-500);
+    outline-offset: 0px; 
+  }
 }
 
 .smallLogo,

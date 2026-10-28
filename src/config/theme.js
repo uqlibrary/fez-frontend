@@ -197,7 +197,7 @@ export const commonThemeOverrides = {
     MuiButtonBase: {
         styleOverrides: {
             root: {
-                '&.Mui-focusVisible:not(.MuiSwitch-switchBase)': {
+                '&.Mui-focusVisible:not(.MuiSwitch-switchBase, .MuiCheckbox-root, .MuiRadio-root)': {
                     ...dsOutlineStandard,
                 },
                 // keep the standard outline, but make it visible on the purple header
@@ -208,7 +208,10 @@ export const commonThemeOverrides = {
                 // draw the outline inside the box for checkbox / radio buttons
                 // (`&&` keeps this above the header rule when they sit in the header)
                 '&&.Mui-focusVisible:is(.MuiCheckbox-root, .MuiRadio-root)': {
-                    outlineOffset: '-6px',
+                    '& svg': {
+                        ...dsOutlineStandard,
+                        outlineOffset: '-6px',
+                    },
                 },
             },
         },
@@ -234,6 +237,16 @@ export const commonThemeOverrides = {
                 },
                 '&:hover': {
                     backgroundColor: ds.colour.grey[100], // only matters for clickable chips
+                },
+            },
+        },
+    },
+
+    MuiImageListItem: {
+        styleOverrides: {
+            root: {
+                '&:focus-visible': {
+                    ...dsOutlineStandard,
                 },
             },
         },

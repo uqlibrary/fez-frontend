@@ -291,7 +291,9 @@ export const PublicationCitation = ({
 
     const renderTitle = () => {
         return publication.rek_pid && !hideLinks ? (
-            <Link to={pathConfig.records.view(publication.rek_pid)}>{parseHtmlToJSX(publication.rek_title)}</Link>
+            <Link to={pathConfig.records.view(publication.rek_pid)} tabIndex={0}>
+                {parseHtmlToJSX(publication.rek_title)}
+            </Link>
         ) : (
             parseHtmlToJSX(publication.rek_title)
         );
