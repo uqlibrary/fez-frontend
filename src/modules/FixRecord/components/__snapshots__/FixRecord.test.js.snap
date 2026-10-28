@@ -26,7 +26,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -60,7 +60,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                     data-testid="standard-card-work-to-be-amended-header"
                     id="standard-card-work-to-be-amended-header"
                   >
@@ -95,8 +95,8 @@ exports[`Component FixRecord should render fix record form 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                             style="min-width: 1px;"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                            <h4
+                              class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -104,7 +104,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
-                            </h6>
+                            </h4>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -510,7 +510,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -544,7 +544,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                     data-testid="standard-card-work-to-be-amended-header"
                     id="standard-card-work-to-be-amended-header"
                   >
@@ -579,8 +579,8 @@ exports[`Component FixRecord should render record citation, two actions in selec
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                             style="min-width: 1px;"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                            <h4
+                              class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -588,7 +588,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
-                            </h6>
+                            </h4>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -884,7 +884,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -918,7 +918,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                     data-testid="standard-card-work-to-be-amended-header"
                     id="standard-card-work-to-be-amended-header"
                   >
@@ -953,8 +953,8 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                             style="min-width: 1px;"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                            <h4
+                              class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -962,7 +962,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
-                            </h6>
+                            </h4>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1238,7 +1238,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                     data-testid="standard-card-remove-this-work-from-my-profile-header"
                     id="standard-card-remove-this-work-from-my-profile-header"
                   >

@@ -18,7 +18,7 @@ exports[`Component Links  Full mount render 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -359,7 +359,7 @@ exports[`Component Links  Rendering due to a doi 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -495,7 +495,7 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -636,7 +636,7 @@ exports[`Component Links  Rendering due to being open access link no doi 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -712,7 +712,7 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -988,7 +988,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -1379,7 +1379,7 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -1761,7 +1761,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2079,7 +2079,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2461,7 +2461,7 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -2843,7 +2843,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3165,7 +3165,7 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3310,7 +3310,7 @@ exports[`Component Links  should render no oa icon for mediated access rdm link 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3441,7 +3441,7 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3581,7 +3581,7 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3721,7 +3721,7 @@ exports[`Component Links  should render oa icon for past embargo date open acces
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3861,7 +3861,7 @@ exports[`Component Links  should render only an OA google scholar link for OPEN_
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >
@@ -3992,7 +3992,7 @@ exports[`Component Links  should use special default description if the link has
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-links-header"
             id="standard-card-links-header"
           >

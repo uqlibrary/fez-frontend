@@ -22,7 +22,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-type-&-community-header"
             id="standard-card-type-&-community-header"
           >
@@ -182,7 +182,7 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-type-&-community-header"
             id="standard-card-type-&-community-header"
           >
@@ -331,7 +331,7 @@ exports[`Publication Details Component  Renders the Type title for Communities 1
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-type-header"
             id="standard-card-type-header"
           >
@@ -440,7 +440,7 @@ exports[`Publication Details Component  should render component 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-type-&-collection-header"
             id="standard-card-type-&-collection-header"
           >
@@ -672,7 +672,7 @@ exports[`Publication Details Component  should render with publication without c
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-type-&-collection-header"
             id="standard-card-type-&-collection-header"
           >
@@ -779,7 +779,7 @@ exports[`Publication Details Component  should render with publication without s
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-type-&-collection-header"
             id="standard-card-type-&-collection-header"
           >

@@ -27,7 +27,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-8of9ew-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-1xnq471-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -625,7 +625,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -665,7 +665,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -708,7 +708,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -748,7 +748,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -865,7 +865,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-glsfqj-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-1jm8n80-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1199,7 +1199,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1239,7 +1239,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1282,7 +1282,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -1322,7 +1322,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1433,7 +1433,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-glsfqj-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-1jm8n80-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -1703,7 +1703,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -1743,7 +1743,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -1786,7 +1786,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -1826,7 +1826,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -1937,7 +1937,7 @@ exports[`Application component should render app for account with fez author wit
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-glsfqj-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-1jm8n80-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2207,7 +2207,7 @@ exports[`Application component should render app for account with fez author wit
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -2247,7 +2247,7 @@ exports[`Application component should render app for account with fez author wit
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -2290,7 +2290,7 @@ exports[`Application component should render app for account with fez author wit
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -2330,7 +2330,7 @@ exports[`Application component should render app for account with fez author wit
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >
@@ -2441,7 +2441,7 @@ exports[`Application component should render application with routing for the us
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-glsfqj-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-1jm8n80-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -2732,7 +2732,7 @@ exports[`Application component should render for anon user 1`] = `
                 style="overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-noWrap css-glsfqj-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-1jm8n80-MuiTypography-root"
                 >
                   <a
                     class="appTitle"
@@ -3002,7 +3002,7 @@ exports[`Application component should render for anon user 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-acknowledgement-of-country-header"
                           id="standard-card-acknowledgement-of-country-header"
                         >
@@ -3042,7 +3042,7 @@ exports[`Application component should render for anon user 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-cultural-advice-header"
                           id="standard-card-cultural-advice-header"
                         >
@@ -3085,7 +3085,7 @@ exports[`Application component should render for anon user 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-restrictions-on-use-header"
                           id="standard-card-restrictions-on-use-header"
                         >
@@ -3125,7 +3125,7 @@ exports[`Application component should render for anon user 1`] = `
                         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                       >
                         <h3
-                          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                           data-testid="standard-card-open-to-collaborate-header"
                           id="standard-card-open-to-collaborate-header"
                         >

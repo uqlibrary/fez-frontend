@@ -161,6 +161,7 @@ const DeleteRecord = () => {
                                     publication={recordToDelete}
                                     citationStyle={'header'}
                                     hideCitationText={hideCitationText}
+                                    titleComponent="h4"
                                 />
                             </StandardCard>
                         </Grid>

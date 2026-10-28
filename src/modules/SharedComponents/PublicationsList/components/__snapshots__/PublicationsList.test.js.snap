@@ -28,14 +28,14 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
                     href="/view/UQ:111111"
                   />
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -134,8 +134,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -143,7 +143,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -418,8 +418,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -427,7 +427,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Open Accessible test record
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -744,8 +744,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -753,7 +753,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Open Accessible test Book Chapter record
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -931,8 +931,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -940,7 +940,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Flux of signalling endosomes undergoing axonal retrograde transport is encoded by presynaptic activity and TrkB
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1251,8 +1251,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -1260,7 +1260,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Extracellular vesicles secreted by highly metastatic clonal variants of osteosarcoma preferentially localize to the lungs and induce metastatic behaviour in poorly metastatic clones
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1577,8 +1577,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -1586,7 +1586,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Botulinum neurotoxin type-A enters a non-recycling pool of synaptic vesicles
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1891,8 +1891,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -1900,7 +1900,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     A mutant tat protein inhibits HIV-1 reverse transcription by targeting the reverse transcription complex
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2210,8 +2210,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -2219,7 +2219,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Control of autophagosome axonal retrograde flux by presynaptic activity unveiled using botulinum neurotoxin type A
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2536,8 +2536,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -2545,7 +2545,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Activity-driven relaxation of the cortical actomyosin II network synchronizes Munc18-1-dependent neurosecretory vesicle docking
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2836,8 +2836,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -2845,7 +2845,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     An acto-myosin II constricting ring initiates the fission of activity-dependent bulk endosomes in neurosecretory cells
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -3113,8 +3113,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -3122,7 +3122,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Increased polyubiquitination and proteasomal degradation of a Munc18-1 disease-linked mutant causes temperature-sensitive defect in exocytosis
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -3439,8 +3439,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -3448,7 +3448,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Caveolin-1 is necessary for hepatic oxidative lipid metabolism: evidence for crosstalk between caveolin-1 and bile acid signaling
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -3884,8 +3884,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -3893,7 +3893,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     The Munc18-1 domain 3a loop is essential for neuroexocytosis but not for syntaxin-1A transport to the plasma membrane
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -4175,8 +4175,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -4184,7 +4184,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Inhibition of PIKfyve by YM-201636 Dysregulates Autophagy and Leads to Apoptosis-Independent Neuronal Cell Death
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -4440,8 +4440,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -4449,7 +4449,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Myosin VI small insert isoform maintains exocytosis by tethering secretory granules to the cortical actin
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -4745,8 +4745,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -4754,7 +4754,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Secretagogue stimulation of neurosecretory cells elicits filopodial extensions uncovering new functional release sites
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -5001,8 +5001,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -5010,7 +5010,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Caveolin-1 deficiency leads to increased susceptibility to cell death and fibrosis in white adipose tissue: characterization of a lipodystrophic model
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -5277,8 +5277,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -5286,7 +5286,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Co-regulation of cell polarization and migration by caveolar proteins PTRF/cavin-1 and caveolin-1
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -5619,8 +5619,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -5628,7 +5628,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Caveolin-1 orchestrates the balance between glucose and lipid-dependent energy metabolism: Implications for liver regeneration
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -5966,8 +5966,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -5975,7 +5975,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Postlipolytic insulin-dependent remodeling of micro lipid droplets in adipocytes
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -6250,8 +6250,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -6259,7 +6259,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Retrograde trafficking at the presynaptic nerve terminal using bacterial toxins
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -6460,8 +6460,8 @@ exports[`PublicationsList renders component with items 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -6469,7 +6469,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     Dynamin inhibition blocks botulinum neurotoxin type A endocytosis in neurons and delays botulism
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"

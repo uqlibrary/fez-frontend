@@ -53,6 +53,10 @@ const StyledAppTitle = styled(Typography, {
     shouldForwardProp: prop => prop !== 'indentTitle',
 })(({ theme, indentTitle }) => ({
     ...(indentTitle ? { textIndent: '282px' } : {}),
+    // Keep the semantic h1 (and its Montserrat), but size the banner title for the header rather than
+    // the document h1 scale (DS h1 = 40px would overflow). DS $font-size-xxl (24px), fixed across widths.
+    fontSize: '1.5rem',
+    '@media (min-width:1024px)': { fontSize: '1.5rem' },
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     color: theme.palette.common.white,
@@ -318,7 +322,7 @@ const AppClass = ({
                                     </Grid>
                                 )}
                                 <Grid size="auto" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                    <StyledAppTitle variant="h5" component={'h1'} noWrap indentTitle={docked}>
+                                    <StyledAppTitle variant="h1" component={'h1'} noWrap indentTitle={docked}>
                                         {locale.global.appTitle}
                                     </StyledAppTitle>
                                 </Grid>

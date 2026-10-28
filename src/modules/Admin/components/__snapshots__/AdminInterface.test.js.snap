@@ -211,7 +211,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -635,7 +635,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -928,7 +928,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1274,7 +1274,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1567,7 +1567,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -1886,7 +1886,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2142,7 +2142,7 @@ exports[`AdminInterface component should render default view as a full form view
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2176,7 +2176,7 @@ exports[`AdminInterface component should render default view as a full form view
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="files-section-header"
                     id="files-section-header"
                   >
@@ -2210,7 +2210,7 @@ exports[`AdminInterface component should render default view as a full form view
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="security-section-header"
                     id="security-section-header"
                   >
@@ -2512,7 +2512,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -2811,7 +2811,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3183,7 +3183,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3569,7 +3569,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3846,7 +3846,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-11plaxe-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >

@@ -266,7 +266,7 @@ exports[`Search record results should render a single claimable item with no aut
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -318,8 +318,8 @@ exports[`Search record results should render a single claimable item with no aut
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
-                              <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              <h3
+                                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
@@ -327,7 +327,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 >
                                   Early Onset Scoliosis - this is an edited book with editors only
                                 </a>
-                              </h6>
+                              </h3>
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1111,7 +1111,7 @@ exports[`Search record results should render a single unclaimable item with no a
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -1163,14 +1163,14 @@ exports[`Search record results should render a single unclaimable item with no a
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
-                              <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              <h3
+                                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
                                   href="/view/UQ:795469"
                                 />
-                              </h6>
+                              </h3>
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -1888,7 +1888,7 @@ exports[`Search record results should render a single unclaimable item with no a
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -1940,14 +1940,14 @@ exports[`Search record results should render a single unclaimable item with no a
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
-                              <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              <h3
+                                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
                                   href="/view/UQ:795469"
                                 />
-                              </h6>
+                              </h3>
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -2665,7 +2665,7 @@ exports[`Search record results should render publications list with one publicat
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                 data-testid="standard-card-possible-matches-found-header"
                 id="standard-card-possible-matches-found-header"
               >
@@ -2717,14 +2717,14 @@ exports[`Search record results should render publications list with one publicat
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                               style="min-width: 1px;"
                             >
-                              <h6
-                                class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              <h3
+                                class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-14kdaww-MuiTypography-root"
                               >
                                 <a
                                   data-discover="true"
                                   href="/view/UQ:255472"
                                 />
-                              </h6>
+                              </h3>
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
@@ -3717,7 +3717,7 @@ exports[`Search record results should render stepper and no results 1`] = `
               class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                 data-testid="standard-card-no-matching-works-found-header"
                 id="standard-card-no-matching-works-found-header"
               >

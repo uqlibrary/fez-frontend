@@ -24,7 +24,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-masquerade-header"
               id="standard-card-masquerade-header"
             >
@@ -152,7 +152,7 @@ exports[`Component Masquerade Should render readonly description 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-masquerade-header"
               id="standard-card-masquerade-header"
             >

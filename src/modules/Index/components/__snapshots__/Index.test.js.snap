@@ -104,7 +104,7 @@ exports[`Index page should render placeholders 1`] = `
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                       data-testid="standard-card-acknowledgement-of-country-header"
                       id="standard-card-acknowledgement-of-country-header"
                     >
@@ -144,7 +144,7 @@ exports[`Index page should render placeholders 1`] = `
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                       data-testid="standard-card-cultural-advice-header"
                       id="standard-card-cultural-advice-header"
                     >
@@ -187,7 +187,7 @@ exports[`Index page should render placeholders 1`] = `
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                       data-testid="standard-card-restrictions-on-use-header"
                       id="standard-card-restrictions-on-use-header"
                     >
@@ -227,7 +227,7 @@ exports[`Index page should render placeholders 1`] = `
                     class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                       data-testid="standard-card-open-to-collaborate-header"
                       id="standard-card-open-to-collaborate-header"
                     >

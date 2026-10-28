@@ -21,7 +21,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -53,7 +53,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -112,7 +112,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-label-9-header"
               id="standard-card-label-9-header"
             >
@@ -144,7 +144,7 @@ exports[`Component ThirdPartyLookupFormResult renders api data when no second fi
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -203,7 +203,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -235,7 +235,7 @@ exports[`Component ThirdPartyLookupFormResult should display a blank when the re
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-results-header"
                   id="standard-card-results-header"
                 >
@@ -313,7 +313,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-label-10-header"
               id="standard-card-label-10-header"
             >
@@ -350,7 +350,7 @@ exports[`Component ThirdPartyLookupFormResult should display the secondary field
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -409,7 +409,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-label-8-header"
               id="standard-card-label-8-header"
             >
@@ -441,7 +441,7 @@ exports[`Component ThirdPartyLookupFormResult should not display the secondary f
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -500,7 +500,7 @@ exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] =
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -532,7 +532,7 @@ exports[`Component ThirdPartyLookupFormResult should renders with defaults 1`] =
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -610,7 +610,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -642,7 +642,7 @@ exports[`Component ThirdPartyLookupFormResult should show locale-defined message
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-test-results-header"
                   id="standard-card-test-results-header"
                 >
@@ -720,7 +720,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-test-form-header"
               id="standard-card-test-form-header"
             >
@@ -752,7 +752,7 @@ exports[`Component ThirdPartyLookupFormResult should use defaults when locale va
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-results-header"
                   id="standard-card-results-header"
                 >

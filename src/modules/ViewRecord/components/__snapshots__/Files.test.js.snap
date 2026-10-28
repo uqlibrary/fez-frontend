@@ -499,7 +499,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -707,7 +707,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -901,7 +901,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1221,7 +1221,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1582,7 +1582,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -1943,7 +1943,7 @@ exports[`Files Component  should render an image as the original filename with n
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2180,7 +2180,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2582,7 +2582,7 @@ exports[`Files Component  should render component 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -2900,7 +2900,7 @@ exports[`Files Component  should render component 2`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -3795,7 +3795,7 @@ exports[`Files Component  should render component for public users 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -4056,7 +4056,7 @@ exports[`Files Component  should render files based on security policy correctly
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -4278,7 +4278,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -5271,7 +5271,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -5632,7 +5632,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -5993,7 +5993,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >

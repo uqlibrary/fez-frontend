@@ -1058,7 +1058,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -1094,7 +1094,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -1827,7 +1827,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -4956,7 +4956,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -4992,7 +4992,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -6932,7 +6932,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -6968,7 +6968,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -8552,7 +8552,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -8588,7 +8588,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >
@@ -8890,7 +8890,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-uq-espace-works-per-year-header"
                   id="standard-card-uq-espace-works-per-year-header"
                 >
@@ -8926,7 +8926,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date w
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-work-types-overview-header"
                   id="standard-card-work-types-overview-header"
                 >

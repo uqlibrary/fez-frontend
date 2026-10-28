@@ -18,7 +18,7 @@ exports[`Additional Information Component  renderLicense() 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -93,7 +93,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -1015,7 +1015,7 @@ exports[`Additional Information Component  should not render map with empty geo 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -1687,7 +1687,7 @@ exports[`Additional Information Component  should render component with Attribut
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -2708,7 +2708,7 @@ exports[`Additional Information Component  should render component with a collec
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -2829,7 +2829,7 @@ exports[`Additional Information Component  should render component with a commun
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -2908,7 +2908,7 @@ exports[`Additional Information Component  should render component with audio do
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -3553,7 +3553,7 @@ exports[`Additional Information Component  should render component with book 1`]
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -4211,7 +4211,7 @@ exports[`Additional Information Component  should render component with book cha
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -5269,7 +5269,7 @@ exports[`Additional Information Component  should render component with conferen
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -6215,7 +6215,7 @@ exports[`Additional Information Component  should render component with conferen
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -7057,7 +7057,7 @@ exports[`Additional Information Component  should render component with creative
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -7422,7 +7422,7 @@ exports[`Additional Information Component  should render component with creative
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -7787,7 +7787,7 @@ exports[`Additional Information Component  should render component with creative
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -8171,7 +8171,7 @@ exports[`Additional Information Component  should render component with data col
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -9604,7 +9604,7 @@ exports[`Additional Information Component  should render component with data col
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -10590,7 +10590,7 @@ exports[`Additional Information Component  should render component with data col
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -12026,7 +12026,7 @@ exports[`Additional Information Component  should render component with data col
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -13518,7 +13518,7 @@ exports[`Additional Information Component  should render component with design d
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -14407,7 +14407,7 @@ exports[`Additional Information Component  should render component with digilib 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -14925,7 +14925,7 @@ exports[`Additional Information Component  should render component with generic 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -15349,7 +15349,7 @@ exports[`Additional Information Component  should render component with image 1`
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -15414,7 +15414,7 @@ exports[`Additional Information Component  should render component with instrume
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -15948,7 +15948,7 @@ exports[`Additional Information Component  should render component with journal 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -16548,7 +16548,7 @@ exports[`Additional Information Component  should render component with journal 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -17526,7 +17526,7 @@ exports[`Additional Information Component  should render component with manuscri
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -18072,7 +18072,7 @@ exports[`Additional Information Component  should render component with newspape
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -18905,7 +18905,7 @@ exports[`Additional Information Component  should render component with patent 1
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -19451,7 +19451,7 @@ exports[`Additional Information Component  should render component with preprint
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -20055,7 +20055,7 @@ exports[`Additional Information Component  should render component with proceedi
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -20881,7 +20881,7 @@ exports[`Additional Information Component  should render component with referenc
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -21490,7 +21490,7 @@ exports[`Additional Information Component  should render component with rek_herd
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -22567,7 +22567,7 @@ exports[`Additional Information Component  should render component with rek_star
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -23013,7 +23013,7 @@ exports[`Additional Information Component  should render component with research
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -23538,7 +23538,7 @@ exports[`Additional Information Component  should render component with thesis 1
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -23998,7 +23998,7 @@ exports[`Additional Information Component  should render component with video do
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -24474,7 +24474,7 @@ exports[`Additional Information Component  should render component with working 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -25195,7 +25195,7 @@ exports[`Additional Information Component  should render component without Attri
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -26173,7 +26173,7 @@ exports[`Additional Information Component  should render component without Attri
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -27151,7 +27151,7 @@ exports[`Additional Information Component  should render map with geo coordinate
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -27826,7 +27826,7 @@ exports[`Additional Information Component  should render oa status value link in
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -28288,7 +28288,7 @@ exports[`Additional Information Component  should render with description only 1
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -29266,7 +29266,7 @@ exports[`Additional Information Component  should render with no formatted abstr
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -30213,7 +30213,7 @@ exports[`Additional Information Component  should render with no formatted abstr
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -31191,7 +31191,7 @@ exports[`Additional Information Component  should skip render of date if it has 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >
@@ -31228,7 +31228,7 @@ exports[`Additional Information Component  should skip render of end date if it 
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
             data-testid="standard-card-additional-information-header"
             id="standard-card-additional-information-header"
           >

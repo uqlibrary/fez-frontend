@@ -15,7 +15,7 @@ exports[`StandardCard component renders given ID for standard card 1`] = `
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
           data-testid="test-card-header"
           id="test-card-header"
         >
@@ -48,7 +48,7 @@ exports[`StandardCard component renders with custom colours and full height 1`] 
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -81,7 +81,7 @@ exports[`StandardCard component renders with no title 1`] = `
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
           data-testid="standard-card--header"
           id="standard-card--header"
         />
@@ -112,7 +112,7 @@ exports[`StandardCard component renders with small title and as a subcard 1`] = 
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-1jezqi0-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -145,7 +145,7 @@ exports[`StandardCard component renders with square top and accent header 1`] = 
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -178,7 +178,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -240,7 +240,7 @@ exports[`StandardCard component renders with title and no help icon 1`] = `
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >

@@ -21,7 +21,7 @@ exports[`CreativeWorkForm component 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -366,7 +366,7 @@ exports[`CreativeWorkForm component 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -615,7 +615,7 @@ exports[`CreativeWorkForm component 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -771,7 +771,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -1123,7 +1123,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -1375,7 +1375,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -1534,7 +1534,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -2009,7 +2009,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -2324,7 +2324,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -3217,7 +3217,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -3406,7 +3406,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -3562,7 +3562,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-creative-work-information-header"
               id="standard-card-creative-work-information-header"
             >
@@ -4002,7 +4002,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -4317,7 +4317,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -5175,7 +5175,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -5364,7 +5364,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
