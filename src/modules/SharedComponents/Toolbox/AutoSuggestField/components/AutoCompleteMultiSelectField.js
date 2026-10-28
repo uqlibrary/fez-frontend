@@ -67,6 +67,7 @@ export const AutoCompleteMultiSelectField = ({
                         id={`${autoCompleteMultiSelectFieldId}-${index}`}
                         data-testid={`${autoCompleteMultiSelectFieldId}-${index}`}
                         {...getTagProps({ index })}
+                        tabIndex={0}
                     />
                 ))
             }

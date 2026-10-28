@@ -32,6 +32,7 @@ export const AttributionIncomplete = ({
                         }}
                         checked={isAttributionIncomplete}
                         onChange={_handleChange}
+                        slotProps={{ input: { tabIndex: 0 } }}
                     />
                 }
                 label={

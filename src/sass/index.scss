@@ -43,6 +43,12 @@ a, button.MuiLink-button:enabled {
   color: transparent;
   background: center center url(~/src/images/uq-logo-white-minimal.svg) no-repeat;
 }
+#main-menu-logo-link {
+  &:focus {
+    outline: 4px solid var(--uq-white);
+    outline-offset: 0px; 
+  }
+}
 
 .largeLogo {
   background-image: url('~/src/images/uq-logo-white-2018.svg');
