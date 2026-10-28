@@ -1,6 +1,5 @@
 import { Page, expect, Locator } from '../test';
 import { baseURL } from './constants';
-import { BrowserContext } from '@playwright/test';
 import moment from 'moment/moment';
 import path from 'path';
 
@@ -102,11 +101,6 @@ export const loadAdminDashboard = async (page: Page, user: string = 'uqstaff') =
 };
 
 export const testIdStartsWith = (page: Page | Locator, id: string) => page.locator(`[data-testid^=${id}]`);
-
-export const getOpenedLink = async (context: BrowserContext, locator: Locator) => {
-    const [newPage] = await Promise.all([context.waitForEvent('page'), locator.click()]);
-    return newPage;
-};
 
 export const setPartialDate = async (
     page: Page,
