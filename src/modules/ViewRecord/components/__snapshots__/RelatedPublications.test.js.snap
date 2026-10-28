@@ -251,6 +251,32 @@ exports[`Related publications Component  should render without a child search ke
           <li>
             <p
               class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+              data-testid="rek-isderivationof-0"
+            >
+              <a
+                data-discover="true"
+                href="/view/UQ:123456"
+              >
+                Published record
+              </a>
+            </p>
+          </li>
+          <li>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+              data-testid="rek-isderivationof-1"
+            >
+              <a
+                data-discover="true"
+                href="/view/UQ:234567"
+              >
+                Unpublished record
+              </a>
+            </p>
+          </li>
+          <li>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
               data-testid="rek-has-related-datasets-0"
             >
               <a

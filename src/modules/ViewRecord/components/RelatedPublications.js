@@ -8,7 +8,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
-// TODO remove children list upon circular linking all related pubs.
 const RelatedPublications = ({
     publication,
     title = locale.viewRecord.sections.relatedPublications.title,
@@ -48,7 +47,6 @@ const RelatedPublications = ({
 
     const renderList = (publication, parentSearchKey, childrenSearchKey, showPublicationTitle) => {
         const parents = (parentSearchKey && publication[parentSearchKey.key]) || [];
-        // TODO remove children list upon circular linking all related pubs.
         /* istanbul ignore next */
         const children = publication[childrenSearchKey.key]?.filter(
             // filter out dups

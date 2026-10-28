@@ -435,7 +435,34 @@ export const dataCollection = {
             "rek_grant_id": "DP1093175"
         }
     ],
-    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isderivationof": [
+        {
+            "rek_isderivationof_pid": "UQ:407731",
+            "rek_isderivationof": "UQ:123456",
+            "rek_isderivationof_order": 1,
+            "parent": {
+                "rek_pid": "UQ:123456",
+                "rek_display_type": "179",
+                "rek_status": 2,
+                "rek_title": "Published record",
+                "fez_record_search_key_doi": null,
+            },
+            "rek_isderivationof_lookup": "Published record"
+        },
+        {
+            "rek_isderivationof_pid": "UQ:407732",
+            "rek_isderivationof": "UQ:234567",
+            "rek_isderivationof_order": 2,
+            "parent": {
+                "rek_pid": "UQ:234567",
+                "rek_display_type": "179",
+                "rek_status": 1,
+                "rek_title": "Unpublished child",
+                "fez_record_search_key_doi": null,
+            },
+            "rek_isderivationof_lookup": "Unpublished record"
+        }
+    ],
     "fez_record_search_key_isdatasetof": [
         {
             "rek_isdatasetof_id": 3294,

@@ -18,8 +18,9 @@ function setup(testProps) {
 
 describe('Available Versions Component ', () => {
     it('should render component', () => {
-        const { container } = setup({});
+        const { container, queryByText } = setup({});
         expect(container).toMatchSnapshot();
-        // expect(wrapper.find('.availableVersions li').length).toEqual(2);
+        expect(queryByText('Published record')).toBeInTheDocument();
+        expect(queryByText('Unpublished record')).not.toBeInTheDocument();
     });
 });
