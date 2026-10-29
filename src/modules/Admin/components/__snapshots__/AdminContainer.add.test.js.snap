@@ -4,13 +4,13 @@ exports[`AdminContainer component should show Add form 1`] = `
 <div>
   <form>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -19,31 +19,31 @@ exports[`AdminContainer component should show Add form 1`] = `
         </h2>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-identify-your-new-work"
               id="standard-card-identify-your-new-work"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -52,25 +52,25 @@ exports[`AdminContainer component should show Add form 1`] = `
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-identify-your-new-work-content"
                 data-testid="standard-card-identify-your-new-work-content"
                 id="standard-card-identify-your-new-work-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-o5oj2-MuiAutocomplete-root"
+                      class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-MuiAutocomplete-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           for="rek-ismemberof"
                           id="rek-ismemberof-label"
@@ -78,14 +78,14 @@ exports[`AdminContainer component should show Add form 1`] = `
                           Member of collections
                           <span
                             aria-hidden="true"
-                            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                           >
                              
                             *
                           </span>
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-autocomplete="list"
@@ -93,7 +93,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                             aria-invalid="false"
                             autocapitalize="none"
                             autocomplete="off"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-ismemberof-input"
                             data-testid="rek-ismemberof-input"
                             id="rek-ismemberof-input"
@@ -105,11 +105,11 @@ exports[`AdminContainer component should show Add form 1`] = `
                             value=""
                           />
                           <div
-                            class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
+                            class="MuiAutocomplete-endAdornment css-MuiAutocomplete-endAdornment"
                           >
                             <button
                               aria-label="Open"
-                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                               tabindex="-1"
                               title="Open"
                               type="button"
@@ -120,28 +120,28 @@ exports[`AdminContainer component should show Add form 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+                      class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         id="rek-display-type-label"
                       >
                         Work type
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                         >
                            
                           *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -149,7 +149,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                           aria-haspopup="listbox"
                           aria-labelledby="rek-display-type-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-display-type-select"
                           id="rek-display-type-select"
                           role="combobox"
@@ -166,7 +166,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                           aria-hidden="true"
                           aria-invalid="false"
                           aria-labelledby="rek-display-type-label"
-                          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                          class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                           data-analyticsid="rek-display-type-input"
                           data-testid="rek-display-type-input"
                           id="rek-display-type-input"
@@ -178,7 +178,7 @@ exports[`AdminContainer component should show Add form 1`] = `
                         />
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                           data-testid="ArrowDropDownIcon"
                           focusable="false"
                           viewBox="0 0 24 24"
@@ -191,22 +191,22 @@ exports[`AdminContainer component should show Add form 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   />
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                       />
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-zgmru4-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="cancel-work"
                           data-testid="cancel-work"
                           id="cancel-work"
@@ -217,10 +217,10 @@ exports[`AdminContainer component should show Add form 1`] = `
                         </button>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="submit-work"
                           data-testid="submit-work"
                           disabled=""

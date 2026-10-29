@@ -13,13 +13,13 @@ exports[`Component DeleteRecord form submission should submit the form for a rec
 exports[`Component DeleteRecord should render delete record form with data collection citation 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -28,32 +28,32 @@ exports[`Component DeleteRecord should render delete record form with data colle
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <form>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-to-be-deleted"
               id="standard-card-work-to-be-deleted"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-work-to-be-deleted-header"
                     id="standard-card-work-to-be-deleted-header"
                   >
@@ -62,7 +62,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-work-to-be-deleted-content"
                 data-testid="standard-card-work-to-be-deleted-content"
                 id="standard-card-work-to-be-deleted-content"
@@ -71,25 +71,25 @@ exports[`Component DeleteRecord should render delete record form with data colle
                   class="publicationCitation"
                 >
                   <div
-                    class="css-0"
+                    class="css"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -100,7 +100,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationDataCollection"
@@ -178,7 +178,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                               >
                                 <a
                                   aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink css-1oqhn84"
+                                  class="citationDoiLink css"
                                   data-analyticsid="citation-doi-link"
                                   data-testid="citation-doi-link"
                                   href="https://doi.org/10.2364312345"
@@ -190,7 +190,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="citation-doi-link-new-window-icon"
@@ -206,23 +206,23 @@ exports[`Component DeleteRecord should render delete record form with data colle
                             </span>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -236,14 +236,14 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="MuiBox-root css-19k1sqg"
+                                        class="MuiBox-root css"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -263,7 +263,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     />
                                   </div>
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                                   />
                                 </div>
                               </div>
@@ -272,15 +272,15 @@ exports[`Component DeleteRecord should render delete record form with data colle
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
                           <div
-                            class="MuiBox-root css-w4835h"
+                            class="MuiBox-root css"
                           >
                             Content Indicators
                             :
@@ -291,33 +291,33 @@ exports[`Component DeleteRecord should render delete record form with data colle
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
                   />
                 </div>
               </div>
             </div>
           </div>
           <span
-            class="MuiBox-root css-0"
+            class="MuiBox-root css"
             data-testid="confirmDialogBox"
           />
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -333,23 +333,23 @@ exports[`Component DeleteRecord should render delete record form with data colle
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       data-testid="reason"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="reason-label"
                         for="reason-input"
@@ -358,12 +358,12 @@ exports[`Component DeleteRecord should render delete record form with data colle
                         Please enter a reason why you are deleting this work
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Please enter a reason why you are deleting this work"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="reason-input"
                           data-testid="reason-input"
                           id="reason-input"
@@ -374,7 +374,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -387,22 +387,22 @@ exports[`Component DeleteRecord should render delete record form with data colle
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -416,23 +416,23 @@ exports[`Component DeleteRecord should render delete record form with data colle
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-new-doi"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-new-doi-label"
                         for="rek-new-doi-input"
@@ -441,12 +441,12 @@ exports[`Component DeleteRecord should render delete record form with data colle
                         Please enter the DOI to which the record moved to
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Please enter the DOI to which the record moved to"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-new-doi-input"
                           data-testid="rek-new-doi-input"
                           id="rek-new-doi-input"
@@ -464,22 +464,22 @@ exports[`Component DeleteRecord should render delete record form with data colle
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -493,16 +493,16 @@ exports[`Component DeleteRecord should render delete record form with data colle
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
                       data-analyticsid="rek-deletion-notes-container"
@@ -511,43 +511,43 @@ exports[`Component DeleteRecord should render delete record form with data colle
                     >
                       <span />
                       <div
-                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                       >
                         <div
-                          class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
+                          class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-MuiCollapse-root-MuiTiptap-MenuBar-root"
                           style="min-height: 0px;"
                         >
                           <div
-                            class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                            class="MuiCollapse-wrapper MuiCollapse-vertical css-MuiCollapse-wrapper"
                           >
                             <div
-                              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-MuiCollapse-wrapperInner"
                             >
                               <div
-                                class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-1go9yyq-MuiTiptap-MenuBar-content"
+                                class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-MuiTiptap-MenuBar-content"
                               >
                                 <div
-                                  class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
+                                  class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-MuiTiptap-MenuControlsContainer-root"
                                 >
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + B"
                                         aria-label="Bold"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bold"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatBoldIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -560,24 +560,24 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + I"
                                         aria-label="Italic"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Italic"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatItalicIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -590,24 +590,24 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + U"
                                         aria-label="Underline"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Underline"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatUnderlinedIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -620,24 +620,24 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + S"
                                         aria-label="Strikethrough"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Strikethrough"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="StrikethroughSIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -650,24 +650,24 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + ,"
                                         aria-label="Subscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Subscript"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="SubscriptIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -680,24 +680,24 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + ."
                                         aria-label="Superscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Superscript"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="SuperscriptIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -711,28 +711,28 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   </span>
                                   <div
                                     aria-orientation="vertical"
-                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + U"
                                         aria-label="Link"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Link"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="LinkIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -745,24 +745,24 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + 7"
                                         aria-label="Ordered list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Ordered list"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatListNumberedIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -775,24 +775,24 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + 8"
                                         aria-label="Bulleted list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bulleted list"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatListBulletedIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -806,27 +806,27 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   </span>
                                   <div
                                     aria-orientation="vertical"
-                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-label="Change case"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Change case"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="LetterCaseIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -846,23 +846,23 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-label="Remove inline formatting"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Remove inline formatting"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatClearIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -876,16 +876,16 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   </span>
                                   <span>
                                     <span
-                                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                     >
                                       <span
-                                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                         data-mui-internal-clone-element="true"
                                       >
                                         <button
                                           aria-label="Insert special character"
                                           aria-pressed="false"
-                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                           tabindex="0"
                                           type="button"
                                           value="Insert special character"
@@ -901,28 +901,28 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                   </span>
                                   <div
                                     aria-orientation="vertical"
-                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Z"
                                         aria-label="Undo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Undo"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="UndoIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -935,17 +935,17 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + Z"
                                         aria-label="Redo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -953,7 +953,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="RedoIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -971,7 +971,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -990,11 +990,11 @@ exports[`Component DeleteRecord should render delete record form with data colle
                         </div>
                         <div
                           aria-hidden="true"
-                          class="MuiTiptap-FieldContainer-notchedOutline css-f0dl5j-MuiTiptap-FieldContainer-notchedOutline"
+                          class="MuiTiptap-FieldContainer-notchedOutline css-MuiTiptap-FieldContainer-notchedOutline"
                         />
                       </div>
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                         style="display: inline-block;"
                       >
                         0
@@ -1009,13 +1009,13 @@ exports[`Component DeleteRecord should render delete record form with data colle
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1peu8cu-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="cancel-delete-record"
               data-testid="cancel-delete-record"
               id="cancel-delete-record"
@@ -1026,10 +1026,10 @@ exports[`Component DeleteRecord should render delete record form with data colle
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="delete-admin"
               data-testid="submit-delete-record"
               id="submit-delete-record"
@@ -1049,13 +1049,13 @@ exports[`Component DeleteRecord should render delete record form with data colle
 exports[`Component DeleteRecord should render delete record form with deleted data collection citation 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1064,32 +1064,32 @@ exports[`Component DeleteRecord should render delete record form with deleted da
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <form>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-deleted"
               id="standard-card-work-deleted"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-work-deleted-header"
                     id="standard-card-work-deleted-header"
                   >
@@ -1098,7 +1098,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-work-deleted-content"
                 data-testid="standard-card-work-deleted-content"
                 id="standard-card-work-deleted-content"
@@ -1107,25 +1107,25 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                   class="publicationCitation"
                 >
                   <div
-                    class="css-0"
+                    class="css"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -1136,7 +1136,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationDataCollection"
@@ -1214,7 +1214,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                               >
                                 <a
                                   aria-label="Open this DOI in an new window"
-                                  class="citationDoiLink css-1oqhn84"
+                                  class="citationDoiLink css"
                                   data-analyticsid="citation-doi-link"
                                   data-testid="citation-doi-link"
                                   href="https://doi.org/10.2364312345"
@@ -1226,7 +1226,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                                     data-testid="OpenInNewIcon"
                                     focusable="false"
                                     id="citation-doi-link-new-window-icon"
@@ -1242,23 +1242,23 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                             </span>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -1272,14 +1272,14 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="MuiBox-root css-19k1sqg"
+                                        class="MuiBox-root css"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -1299,7 +1299,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     />
                                   </div>
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                                   />
                                 </div>
                               </div>
@@ -1308,15 +1308,15 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
                           <div
-                            class="MuiBox-root css-w4835h"
+                            class="MuiBox-root css"
                           >
                             Content Indicators
                             :
@@ -1327,33 +1327,33 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
                   />
                 </div>
               </div>
             </div>
           </div>
           <span
-            class="MuiBox-root css-0"
+            class="MuiBox-root css"
             data-testid="confirmDialogBox"
           />
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1369,23 +1369,23 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       data-testid="reason"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="reason-label"
                         for="reason-input"
@@ -1394,12 +1394,12 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                         Please enter a reason why you are updating this work
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Please enter a reason why you are updating this work"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="reason-input"
                           data-testid="reason-input"
                           id="reason-input"
@@ -1410,7 +1410,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -1423,22 +1423,22 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1452,23 +1452,23 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       data-testid="rek-new-doi"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-new-doi-label"
                         for="rek-new-doi-input"
@@ -1477,12 +1477,12 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                         Please enter the DOI to which the record moved to
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Please enter the DOI to which the record moved to"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-new-doi-input"
                           data-testid="rek-new-doi-input"
                           id="rek-new-doi-input"
@@ -1500,22 +1500,22 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -1529,16 +1529,16 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
                       data-analyticsid="rek-deletion-notes-container"
@@ -1547,43 +1547,43 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                     >
                       <span />
                       <div
-                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                       >
                         <div
-                          class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
+                          class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-MuiCollapse-root-MuiTiptap-MenuBar-root"
                           style="min-height: 0px;"
                         >
                           <div
-                            class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                            class="MuiCollapse-wrapper MuiCollapse-vertical css-MuiCollapse-wrapper"
                           >
                             <div
-                              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-MuiCollapse-wrapperInner"
                             >
                               <div
-                                class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-1go9yyq-MuiTiptap-MenuBar-content"
+                                class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-MuiTiptap-MenuBar-content"
                               >
                                 <div
-                                  class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
+                                  class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-MuiTiptap-MenuControlsContainer-root"
                                 >
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + B"
                                         aria-label="Bold"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bold"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatBoldIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1596,24 +1596,24 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + I"
                                         aria-label="Italic"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Italic"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatItalicIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1626,24 +1626,24 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + U"
                                         aria-label="Underline"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Underline"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatUnderlinedIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1656,24 +1656,24 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + S"
                                         aria-label="Strikethrough"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Strikethrough"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="StrikethroughSIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1686,24 +1686,24 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + ,"
                                         aria-label="Subscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Subscript"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="SubscriptIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1716,24 +1716,24 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + ."
                                         aria-label="Superscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Superscript"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="SuperscriptIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1747,28 +1747,28 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   </span>
                                   <div
                                     aria-orientation="vertical"
-                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + U"
                                         aria-label="Link"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Link"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="LinkIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1781,24 +1781,24 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + 7"
                                         aria-label="Ordered list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Ordered list"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatListNumberedIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1811,24 +1811,24 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + 8"
                                         aria-label="Bulleted list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bulleted list"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatListBulletedIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1842,27 +1842,27 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   </span>
                                   <div
                                     aria-orientation="vertical"
-                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-label="Change case"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Change case"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="LetterCaseIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1882,23 +1882,23 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-label="Remove inline formatting"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Remove inline formatting"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="FormatClearIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1912,16 +1912,16 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   </span>
                                   <span>
                                     <span
-                                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                     >
                                       <span
-                                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                         data-mui-internal-clone-element="true"
                                       >
                                         <button
                                           aria-label="Insert special character"
                                           aria-pressed="false"
-                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                           tabindex="0"
                                           type="button"
                                           value="Insert special character"
@@ -1937,28 +1937,28 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                   </span>
                                   <div
                                     aria-orientation="vertical"
-                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Z"
                                         aria-label="Undo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Undo"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="UndoIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -1971,17 +1971,17 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                                   >
                                     <span
-                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                      class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                       data-mui-internal-clone-element="true"
                                     >
                                       <button
                                         aria-description="Ctrl + Shift + Z"
                                         aria-label="Redo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -1989,7 +1989,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                           data-testid="RedoIcon"
                                           focusable="false"
                                           viewBox="0 0 24 24"
@@ -2007,7 +2007,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -2026,11 +2026,11 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                         </div>
                         <div
                           aria-hidden="true"
-                          class="MuiTiptap-FieldContainer-notchedOutline css-f0dl5j-MuiTiptap-FieldContainer-notchedOutline"
+                          class="MuiTiptap-FieldContainer-notchedOutline css-MuiTiptap-FieldContainer-notchedOutline"
                         />
                       </div>
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                         style="display: inline-block;"
                       >
                         0
@@ -2045,13 +2045,13 @@ exports[`Component DeleteRecord should render delete record form with deleted da
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1peu8cu-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="cancel-delete-record"
               data-testid="cancel-delete-record"
               id="cancel-delete-record"
@@ -2062,10 +2062,10 @@ exports[`Component DeleteRecord should render delete record form with deleted da
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="delete-admin"
               data-testid="submit-delete-record"
               id="submit-delete-record"
@@ -2085,13 +2085,13 @@ exports[`Component DeleteRecord should render delete record form with deleted da
 exports[`Component DeleteRecord should render delete record form with deleted record citation 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2100,32 +2100,32 @@ exports[`Component DeleteRecord should render delete record form with deleted re
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <form>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-work-deleted"
               id="standard-card-work-deleted"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-work-deleted-header"
                     id="standard-card-work-deleted-header"
                   >
@@ -2134,7 +2134,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-work-deleted-content"
                 data-testid="standard-card-work-deleted-content"
                 id="standard-card-work-deleted-content"
@@ -2143,25 +2143,25 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                   class="publicationCitation"
                 >
                   <div
-                    class="css-0"
+                    class="css"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -2172,7 +2172,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -2276,23 +2276,23 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                             </span>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -2306,14 +2306,14 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="MuiBox-root css-19k1sqg"
+                                        class="MuiBox-root css"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -2333,7 +2333,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                     />
                                   </div>
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                                   />
                                 </div>
                               </div>
@@ -2342,15 +2342,15 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
                           <div
-                            class="MuiBox-root css-w4835h"
+                            class="MuiBox-root css"
                           >
                             Content Indicators
                             :
@@ -2361,33 +2361,33 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
                   />
                 </div>
               </div>
             </div>
           </div>
           <span
-            class="MuiBox-root css-0"
+            class="MuiBox-root css"
             data-testid="confirmDialogBox"
           />
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
@@ -2403,23 +2403,23 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       data-testid="reason"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="reason-label"
                         for="reason-input"
@@ -2428,12 +2428,12 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                         Please enter a reason why you are updating this work
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Please enter a reason why you are updating this work"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="reason-input"
                           data-testid="reason-input"
                           id="reason-input"
@@ -2444,7 +2444,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -2458,13 +2458,13 @@ exports[`Component DeleteRecord should render delete record form with deleted re
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1peu8cu-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="cancel-delete-record"
               data-testid="cancel-delete-record"
               id="cancel-delete-record"
@@ -2475,10 +2475,10 @@ exports[`Component DeleteRecord should render delete record form with deleted re
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="delete-admin"
               data-testid="submit-delete-record"
               id="submit-delete-record"

@@ -3,25 +3,25 @@
 exports[`PolicyDropdown component should hide policies that the user cant select 1`] = `
 <div>
   <div
-    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    class="MuiFormControl-root css-MuiFormControl-root"
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       id="test-policy-label"
     >
       Work level policy to apply to this PID
       <span
         aria-hidden="true"
-        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
       >
          
         *
       </span>
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -32,7 +32,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
         aria-haspopup="listbox"
         aria-labelledby="test-policy-select"
         aria-required="true"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="test-policy-select"
         id="test-policy-select"
         role="combobox"
@@ -49,7 +49,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="test-policy-label"
-        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
         data-analyticsid="test-policy-input"
         data-testid="test-policy-input"
         id="test-policy-input"
@@ -60,7 +60,7 @@ exports[`PolicyDropdown component should hide policies that the user cant select
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -77,25 +77,25 @@ exports[`PolicyDropdown component should hide policies that the user cant select
 exports[`PolicyDropdown component should render properly 1`] = `
 <div>
   <div
-    class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
+    class="MuiFormControl-root css-MuiFormControl-root"
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       id="test-policy-label"
     >
       Work level policy to apply to this PID
       <span
         aria-hidden="true"
-        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+        class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
       >
          
         *
       </span>
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -106,7 +106,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
         aria-haspopup="listbox"
         aria-labelledby="test-policy-select"
         aria-required="true"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="test-policy-select"
         id="test-policy-select"
         role="combobox"
@@ -123,7 +123,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
         aria-hidden="true"
         aria-invalid="false"
         aria-labelledby="test-policy-label"
-        class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+        class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
         data-analyticsid="test-policy-input"
         data-testid="test-policy-input"
         id="test-policy-input"
@@ -134,7 +134,7 @@ exports[`PolicyDropdown component should render properly 1`] = `
       />
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
         data-testid="ArrowDropDownIcon"
         focusable="false"
         viewBox="0 0 24 24"

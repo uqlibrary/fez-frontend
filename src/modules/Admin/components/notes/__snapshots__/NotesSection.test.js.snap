@@ -3,35 +3,35 @@
 exports[`NotesSection component should render default view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Additional notes
@@ -41,13 +41,13 @@ exports[`NotesSection component should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
                 data-analyticsid="rek-notes-container"
@@ -56,50 +56,50 @@ exports[`NotesSection component should render default view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-hl82h6-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                     style="font-weight: 600;"
                   >
                     Additional notes (public)
                   </span>
                 </span>
                 <div
-                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                 >
                   <div
-                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
+                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-MuiCollapse-root-MuiTiptap-MenuBar-root"
                     style="min-height: 0px;"
                   >
                     <div
-                      class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                      class="MuiCollapse-wrapper MuiCollapse-vertical css-MuiCollapse-wrapper"
                     >
                       <div
-                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-MuiCollapse-wrapperInner"
                       >
                         <div
-                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-1go9yyq-MuiTiptap-MenuBar-content"
+                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-MuiTiptap-MenuBar-content"
                         >
                           <div
-                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
+                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-MuiTiptap-MenuControlsContainer-root"
                           >
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bold"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatBoldIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -112,24 +112,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Italic"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatItalicIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -142,24 +142,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Underline"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatUnderlinedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -172,24 +172,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Strikethrough"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="StrikethroughSIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -202,24 +202,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Subscript"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SubscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -232,24 +232,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Superscript"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SuperscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -263,28 +263,28 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Link"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LinkIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -297,24 +297,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Ordered list"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListNumberedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -327,24 +327,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bulleted list"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListBulletedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -358,27 +358,27 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Change case"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LetterCaseIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -398,23 +398,23 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Remove inline formatting"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatClearIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -428,16 +428,16 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <span>
                               <span
-                                class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                               >
                                 <span
-                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                   data-mui-internal-clone-element="true"
                                 >
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                     tabindex="0"
                                     type="button"
                                     value="Insert special character"
@@ -453,28 +453,28 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Undo"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="UndoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -487,17 +487,17 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -505,7 +505,7 @@ exports[`NotesSection component should render default view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="RedoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -523,7 +523,7 @@ exports[`NotesSection component should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -542,7 +542,7 @@ exports[`NotesSection component should render default view 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="MuiTiptap-FieldContainer-notchedOutline css-f0dl5j-MuiTiptap-FieldContainer-notchedOutline"
+                    class="MuiTiptap-FieldContainer-notchedOutline css-MuiTiptap-FieldContainer-notchedOutline"
                   />
                 </div>
               </div>
@@ -552,32 +552,32 @@ exports[`NotesSection component should render default view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Internal notes
@@ -587,13 +587,13 @@ exports[`NotesSection component should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
                 data-analyticsid="ain-notes-container"
@@ -602,50 +602,50 @@ exports[`NotesSection component should render default view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Internal notes (admin)
                   </span>
                 </span>
                 <div
-                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                 >
                   <div
-                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
+                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-MuiCollapse-root-MuiTiptap-MenuBar-root"
                     style="min-height: 0px;"
                   >
                     <div
-                      class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                      class="MuiCollapse-wrapper MuiCollapse-vertical css-MuiCollapse-wrapper"
                     >
                       <div
-                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-MuiCollapse-wrapperInner"
                       >
                         <div
-                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-1go9yyq-MuiTiptap-MenuBar-content"
+                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-MuiTiptap-MenuBar-content"
                         >
                           <div
-                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
+                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-MuiTiptap-MenuControlsContainer-root"
                           >
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bold"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatBoldIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -658,24 +658,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Italic"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatItalicIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -688,24 +688,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Underline"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatUnderlinedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -718,24 +718,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Strikethrough"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="StrikethroughSIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -748,24 +748,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Subscript"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SubscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -778,24 +778,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Superscript"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SuperscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -809,28 +809,28 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Link"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LinkIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -843,24 +843,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Ordered list"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListNumberedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -873,24 +873,24 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bulleted list"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListBulletedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -904,27 +904,27 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Change case"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LetterCaseIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -944,23 +944,23 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Remove inline formatting"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatClearIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -974,16 +974,16 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <span>
                               <span
-                                class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                               >
                                 <span
-                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                   data-mui-internal-clone-element="true"
                                 >
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                     tabindex="0"
                                     type="button"
                                     value="Insert special character"
@@ -999,28 +999,28 @@ exports[`NotesSection component should render default view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Undo"
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="UndoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1033,17 +1033,17 @@ exports[`NotesSection component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1051,7 +1051,7 @@ exports[`NotesSection component should render default view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="RedoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1069,7 +1069,7 @@ exports[`NotesSection component should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -1088,7 +1088,7 @@ exports[`NotesSection component should render default view 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="MuiTiptap-FieldContainer-notchedOutline css-f0dl5j-MuiTiptap-FieldContainer-notchedOutline"
+                    class="MuiTiptap-FieldContainer-notchedOutline css-MuiTiptap-FieldContainer-notchedOutline"
                   />
                 </div>
               </div>
@@ -1098,32 +1098,32 @@ exports[`NotesSection component should render default view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Cultural Institute (CI) Notice
@@ -1133,29 +1133,29 @@ exports[`NotesSection component should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div>
                 <span
-                  class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                 >
                   Determines if the record or collection is to be CI labelled Attribution Incomplete.
                 </span>
               </div>
               <label
-                class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
+                class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
-                    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                    class="PrivateSwitchBase-input css-MuiSwitchBase-root"
                     data-analyticsid="attributionIncomplete-input"
                     data-indeterminate="false"
                     data-testid="attributionIncomplete-input"
@@ -1164,7 +1164,7 @@ exports[`NotesSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="CheckBoxOutlineBlankIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1175,7 +1175,7 @@ exports[`NotesSection component should render default view 1`] = `
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                   data-testid="attributionIncomplete-label"
                   id="attributionIncomplete-label"
                 >
@@ -1194,35 +1194,35 @@ exports[`NotesSection component should render default view 1`] = `
 exports[`NotesSection component should render disabled view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Additional notes
@@ -1232,13 +1232,13 @@ exports[`NotesSection component should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
                 data-analyticsid="rek-notes-container"
@@ -1247,43 +1247,43 @@ exports[`NotesSection component should render disabled view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-hl82h6-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                     style="font-weight: 600;"
                   >
                     Additional notes (public)
                   </span>
                 </span>
                 <div
-                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiTiptap-FieldContainer-disabled MuiBox-root css-dvydy0-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiTiptap-FieldContainer-disabled MuiBox-root css-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                 >
                   <div
-                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
+                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-MuiCollapse-root-MuiTiptap-MenuBar-root"
                     style="min-height: 0px;"
                   >
                     <div
-                      class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                      class="MuiCollapse-wrapper MuiCollapse-vertical css-MuiCollapse-wrapper"
                     >
                       <div
-                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-MuiCollapse-wrapperInner"
                       >
                         <div
-                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-1go9yyq-MuiTiptap-MenuBar-content"
+                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-MuiTiptap-MenuBar-content"
                         >
                           <div
-                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
+                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-MuiTiptap-MenuControlsContainer-root"
                           >
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1291,7 +1291,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatBoldIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1304,17 +1304,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1322,7 +1322,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatItalicIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1335,17 +1335,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1353,7 +1353,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatUnderlinedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1366,17 +1366,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1384,7 +1384,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="StrikethroughSIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1397,17 +1397,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1415,7 +1415,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SubscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1428,17 +1428,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1446,7 +1446,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SuperscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1460,21 +1460,21 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1482,7 +1482,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LinkIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1495,17 +1495,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1513,7 +1513,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListNumberedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1526,17 +1526,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1544,7 +1544,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListBulletedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1558,20 +1558,20 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1579,7 +1579,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LetterCaseIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1599,16 +1599,16 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1616,7 +1616,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatClearIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1630,16 +1630,16 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <span>
                               <span
-                                class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                               >
                                 <span
-                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                   data-mui-internal-clone-element="true"
                                 >
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                     disabled=""
                                     tabindex="-1"
                                     type="button"
@@ -1656,21 +1656,21 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1678,7 +1678,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="UndoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1691,17 +1691,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1709,7 +1709,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="RedoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1727,7 +1727,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-qnu64u-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -1745,7 +1745,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="MuiTiptap-FieldContainer-notchedOutline css-1gkt1g6-MuiTiptap-FieldContainer-notchedOutline"
+                    class="MuiTiptap-FieldContainer-notchedOutline css-MuiTiptap-FieldContainer-notchedOutline"
                   />
                 </div>
               </div>
@@ -1755,32 +1755,32 @@ exports[`NotesSection component should render disabled view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Internal notes
@@ -1790,13 +1790,13 @@ exports[`NotesSection component should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
                 data-analyticsid="ain-notes-container"
@@ -1805,43 +1805,43 @@ exports[`NotesSection component should render disabled view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Internal notes (admin)
                   </span>
                 </span>
                 <div
-                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiTiptap-FieldContainer-disabled MuiBox-root css-dvydy0-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiTiptap-FieldContainer-disabled MuiBox-root css-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                 >
                   <div
-                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
+                    class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-MuiCollapse-root-MuiTiptap-MenuBar-root"
                     style="min-height: 0px;"
                   >
                     <div
-                      class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+                      class="MuiCollapse-wrapper MuiCollapse-vertical css-MuiCollapse-wrapper"
                     >
                       <div
-                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-MuiCollapse-wrapperInner"
                       >
                         <div
-                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-1go9yyq-MuiTiptap-MenuBar-content"
+                          class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-MuiTiptap-MenuBar-content"
                         >
                           <div
-                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
+                            class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-MuiTiptap-MenuControlsContainer-root"
                           >
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1849,7 +1849,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatBoldIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1862,17 +1862,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1880,7 +1880,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatItalicIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1893,17 +1893,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1911,7 +1911,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatUnderlinedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1924,17 +1924,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1942,7 +1942,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="StrikethroughSIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1955,17 +1955,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -1973,7 +1973,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SubscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -1986,17 +1986,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2004,7 +2004,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="SuperscriptIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2018,21 +2018,21 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + U"
                                   aria-label="Link"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2040,7 +2040,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LinkIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2053,17 +2053,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 7"
                                   aria-label="Ordered list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2071,7 +2071,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListNumberedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2084,17 +2084,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + 8"
                                   aria-label="Bulleted list"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2102,7 +2102,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatListBulletedIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2116,20 +2116,20 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2137,7 +2137,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="LetterCaseIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2157,16 +2157,16 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2174,7 +2174,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="FormatClearIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2188,16 +2188,16 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <span>
                               <span
-                                class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                               >
                                 <span
-                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                  class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                   data-mui-internal-clone-element="true"
                                 >
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                     disabled=""
                                     tabindex="-1"
                                     type="button"
@@ -2214,21 +2214,21 @@ exports[`NotesSection component should render disabled view 1`] = `
                             </span>
                             <div
                               aria-orientation="vertical"
-                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2236,7 +2236,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="UndoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2249,17 +2249,17 @@ exports[`NotesSection component should render disabled view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                             >
                               <span
-                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                                class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                                 data-mui-internal-clone-element="true"
                               >
                                 <button
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -2267,7 +2267,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                                 >
                                   <svg
                                     aria-hidden="true"
-                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                                     data-testid="RedoIcon"
                                     focusable="false"
                                     viewBox="0 0 24 24"
@@ -2285,7 +2285,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-qnu64u-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -2303,7 +2303,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                   </div>
                   <div
                     aria-hidden="true"
-                    class="MuiTiptap-FieldContainer-notchedOutline css-1gkt1g6-MuiTiptap-FieldContainer-notchedOutline"
+                    class="MuiTiptap-FieldContainer-notchedOutline css-MuiTiptap-FieldContainer-notchedOutline"
                   />
                 </div>
               </div>
@@ -2313,32 +2313,32 @@ exports[`NotesSection component should render disabled view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Cultural Institute (CI) Notice
@@ -2348,31 +2348,31 @@ exports[`NotesSection component should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div>
                 <span
-                  class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                 >
                   Determines if the record or collection is to be CI labelled Attribution Incomplete.
                 </span>
               </div>
               <label
-                class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
+                class="MuiFormControlLabel-root Mui-disabled MuiFormControlLabel-labelPlacementEnd css-MuiFormControlLabel-root"
               >
                 <span
                   aria-disabled="true"
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                   tabindex="-1"
                 >
                   <input
-                    class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+                    class="PrivateSwitchBase-input css-MuiSwitchBase-root"
                     data-analyticsid="attributionIncomplete-input"
                     data-indeterminate="false"
                     data-testid="attributionIncomplete-input"
@@ -2382,7 +2382,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="CheckBoxOutlineBlankIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2393,7 +2393,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                   </svg>
                 </span>
                 <div
-                  class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                   data-testid="attributionIncomplete-label"
                   id="attributionIncomplete-label"
                 >

@@ -16,13 +16,13 @@ File {
 exports[`Component FixRecord for non-compliant Open Access should render fix record form 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -31,39 +31,39 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <form>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
                     <div>
                       Upload an Author Accepted Manuscript for green open access
                       <div
-                        class="MuiBox-root css-1tt1d3t"
+                        class="MuiBox-root css"
                       >
                         <p>
                           Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this research more visible.
@@ -72,7 +72,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                           Visit
                            
                           <a
-                            class="css-1oqhn84"
+                            class="css"
                             data-analyticsid="make-research-open-access-link-link"
                             data-testid="make-research-open-access-link-link"
                             href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
@@ -84,7 +84,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                           >
                             <svg
                               aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                               data-testid="OpenInNewIcon"
                               focusable="false"
                               id="make-research-open-access-link-link-new-window-icon"
@@ -107,11 +107,11 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                   </h3>
                 </div>
                 <div
-                  class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
+                  class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -120,7 +120,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -137,7 +137,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
@@ -146,25 +146,25 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                   class="publicationCitation"
                 >
                   <div
-                    class="css-0"
+                    class="css"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -175,7 +175,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -279,23 +279,23 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                             </span>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -309,14 +309,14 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="MuiBox-root css-19k1sqg"
+                                        class="MuiBox-root css"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -336,7 +336,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                     />
                                   </div>
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                                   />
                                 </div>
                               </div>
@@ -345,15 +345,15 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
                           <div
-                            class="MuiBox-root css-w4835h"
+                            class="MuiBox-root css"
                           >
                             Content Indicators
                             :
@@ -364,7 +364,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -372,29 +372,29 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
           </div>
           <span />
           <span
-            class="MuiBox-root css-0"
+            class="MuiBox-root css"
             data-testid="confirmDialogBox"
           />
           <div
-            class="MuiBox-root css-1730fl9"
+            class="MuiBox-root css"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-suggest-a-correction"
                 id="standard-card-suggest-a-correction"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                       data-testid="standard-card-suggest-a-correction-header"
                       id="standard-card-suggest-a-correction-header"
                     >
@@ -403,23 +403,23 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  class="MuiCardContent-root css-MuiCardContent-root"
                   data-analyticsid="standard-card-suggest-a-correction-content"
                   data-testid="standard-card-suggest-a-correction-content"
                   id="standard-card-suggest-a-correction-content"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                         data-testid="comments"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="comments-label"
                           for="comments-input"
@@ -428,12 +428,12 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                           Type changes or comments here
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-MuiInputBase-root-MuiInput-root"
                         >
                           <textarea
                             aria-invalid="false"
                             aria-label="Type changes or comments here"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="comments-input"
                             data-testid="comments-input"
                             id="comments-input"
@@ -444,7 +444,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                           />
                           <textarea
                             aria-hidden="true"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                             readonly=""
                             style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                             tabindex="-1"
@@ -453,14 +453,14 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                         data-testid="rek_link"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek_link-label"
                           for="rek_link-input"
@@ -469,12 +469,12 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                           Link (URL)
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="false"
                             aria-label="Link (URL)"
-                            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek_link-input"
                             data-testid="rek_link-input"
                             id="rek_link-input"
@@ -491,22 +491,22 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-upload-files"
                 id="standard-card-upload-files"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                       data-testid="standard-card-upload-files-header"
                       id="standard-card-upload-files-header"
                     >
@@ -515,7 +515,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  class="MuiCardContent-root css-MuiCardContent-root"
                   data-analyticsid="standard-card-upload-files-content"
                   data-testid="standard-card-upload-files-content"
                   id="standard-card-upload-files-content"
@@ -524,21 +524,21 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     Upload an Open Access file.
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
                       >
                         You may add up to 10 files (max 5GB each)
                       </p>
                       <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                         >
                           <div
                             id="FileUploadDropZone"
@@ -557,13 +557,13 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                               type="file"
                             />
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-gogl66-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
                               >
                                 <p
-                                  class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                                 >
                                   File upload restrictions
                                 </p>
@@ -600,17 +600,17 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                 </div>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-fvr8mz-MuiGrid-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                                       data-testid="CloudUploadIcon"
                                       focusable="false"
                                       viewBox="0 0 24 24"
@@ -621,7 +621,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                     </svg>
                                   </div>
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                                   >
                                     <p>
                                       Click here to select files,
@@ -642,27 +642,27 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
               data-testid="alert"
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
                         data-testid="WarningIcon"
                         focusable="false"
                         id="warning-icon"
@@ -674,7 +674,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
                       <b>
                         Validation - 
@@ -701,13 +701,13 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1peu8cu-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -715,10 +715,10 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               disabled=""
@@ -742,27 +742,27 @@ exports[`Component FixRecord for non-compliant Open Access should render loader 
     style="padding: 8px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
         style="text-align: center;"
       >
         <span
           aria-label="Loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
           role="progressbar"
           style="width: 18px; height: 18px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -773,18 +773,18 @@ exports[`Component FixRecord for non-compliant Open Access should render loader 
         </span>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
         </span>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
       />
     </div>
   </div>
@@ -797,27 +797,27 @@ exports[`Component FixRecord for non-compliant Open Access should render loader 
     style="padding: 8px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
       />
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
         style="text-align: center;"
       >
         <span
           aria-label="Loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
           role="progressbar"
           style="width: 18px; height: 18px;"
         >
           <svg
-            class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+            class="MuiCircularProgress-svg css-MuiCircularProgress-svg"
             viewBox="22 22 44 44"
           >
             <circle
-              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-MuiCircularProgress-circle"
               cx="44"
               cy="44"
               fill="none"
@@ -828,18 +828,18 @@ exports[`Component FixRecord for non-compliant Open Access should render loader 
         </span>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
         style="text-align: center;"
       >
         <span
-          class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
           style="font-size: 1.33rem;"
         >
           Loading work
         </span>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
       />
     </div>
   </div>
@@ -849,13 +849,13 @@ exports[`Component FixRecord for non-compliant Open Access should render loader 
 exports[`Component FixRecord for non-compliant Open Access should render record citation, two actions in select field and a cancel button 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -864,39 +864,39 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <form>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
               data-testid="standard-card"
               id="standard-card"
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                  class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-header"
                     id="standard-card-header"
                   >
                     <div>
                       Upload an Author Accepted Manuscript for green open access
                       <div
-                        class="MuiBox-root css-1tt1d3t"
+                        class="MuiBox-root css"
                       >
                         <p>
                           Upload this work's Author Accepted Manuscript (AAM) below and click submit to make this research more visible.
@@ -905,7 +905,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                           Visit
                            
                           <a
-                            class="css-1oqhn84"
+                            class="css"
                             data-analyticsid="make-research-open-access-link-link"
                             data-testid="make-research-open-access-link-link"
                             href="https://web.library.uq.edu.au/research-and-publish/open-research/open-access/make-research-open-access-uq-espace"
@@ -917,7 +917,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                           >
                             <svg
                               aria-hidden="true"
-                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                               data-testid="OpenInNewIcon"
                               focusable="false"
                               id="make-research-open-access-link-link-new-window-icon"
@@ -940,11 +940,11 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                   </h3>
                 </div>
                 <div
-                  class="MuiCardHeader-action css-116l9hl-MuiCardHeader-action"
+                  class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -953,7 +953,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     type="button"
                   >
                     <svg
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
                       role="img"
@@ -970,7 +970,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                 </div>
               </div>
               <div
-                class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                class="MuiCardContent-root css-MuiCardContent-root"
                 data-analyticsid="standard-card-content"
                 data-testid="standard-card-content"
                 id="standard-card-content"
@@ -979,25 +979,25 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                   class="publicationCitation"
                 >
                   <div
-                    class="css-0"
+                    class="css"
                     data-testid="publication-citation-parent-UQ:41878"
                     id="publication-citation-parent-UQ:41878"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                         >
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -1008,7 +1008,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -1112,23 +1112,23 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                             </span>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1udd3lf-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000224648802120"
@@ -1142,14 +1142,14 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                         class="fez-icon wos large"
                                       />
                                       <span
-                                        class="MuiBox-root css-19k1sqg"
+                                        class="MuiBox-root css"
                                       >
                                         2
                                       </span>
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth"
@@ -1169,7 +1169,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                     />
                                   </div>
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                                   />
                                 </div>
                               </div>
@@ -1178,15 +1178,15 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
                           <div
-                            class="MuiBox-root css-w4835h"
+                            class="MuiBox-root css"
                           >
                             Content Indicators
                             :
@@ -1197,7 +1197,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     </div>
                   </div>
                   <hr
-                    class="MuiDivider-root MuiDivider-fullWidth css-zww2ny-MuiDivider-root"
+                    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
                   />
                 </div>
               </div>
@@ -1205,29 +1205,29 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
           </div>
           <span />
           <span
-            class="MuiBox-root css-0"
+            class="MuiBox-root css"
             data-testid="confirmDialogBox"
           />
           <div
-            class="MuiBox-root css-1730fl9"
+            class="MuiBox-root css"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-suggest-a-correction"
                 id="standard-card-suggest-a-correction"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                       data-testid="standard-card-suggest-a-correction-header"
                       id="standard-card-suggest-a-correction-header"
                     >
@@ -1236,23 +1236,23 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  class="MuiCardContent-root css-MuiCardContent-root"
                   data-analyticsid="standard-card-suggest-a-correction-content"
                   data-testid="standard-card-suggest-a-correction-content"
                   id="standard-card-suggest-a-correction-content"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-g79o35-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                         data-testid="comments"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="comments-label"
                           for="comments-input"
@@ -1261,12 +1261,12 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                           Type changes or comments here
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-MuiInputBase-root-MuiInput-root"
                         >
                           <textarea
                             aria-invalid="false"
                             aria-label="Type changes or comments here"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="comments-input"
                             data-testid="comments-input"
                             id="comments-input"
@@ -1277,7 +1277,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                           />
                           <textarea
                             aria-hidden="true"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-MuiInputBase-input-MuiInput-input"
                             readonly=""
                             style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                             tabindex="-1"
@@ -1286,14 +1286,14 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                     >
                       <div
-                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                         data-testid="rek_link"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek_link-label"
                           for="rek_link-input"
@@ -1302,12 +1302,12 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                           Link (URL)
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="false"
                             aria-label="Link (URL)"
-                            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek_link-input"
                             data-testid="rek_link-input"
                             id="rek_link-input"
@@ -1324,22 +1324,22 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
             >
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-upload-files"
                 id="standard-card-upload-files"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                       data-testid="standard-card-upload-files-header"
                       id="standard-card-upload-files-header"
                     >
@@ -1348,7 +1348,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  class="MuiCardContent-root css-MuiCardContent-root"
                   data-analyticsid="standard-card-upload-files-content"
                   data-testid="standard-card-upload-files-content"
                   id="standard-card-upload-files-content"
@@ -1357,21 +1357,21 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     Upload an Open Access file.
                   </div>
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                     >
                       <p
-                        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
                       >
                         You may add up to 10 files (max 5GB each)
                       </p>
                       <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+                          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                         >
                           <div
                             id="FileUploadDropZone"
@@ -1390,13 +1390,13 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                               type="file"
                             />
                             <div
-                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-gogl66-MuiGrid-root"
+                              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
                               >
                                 <p
-                                  class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                                 >
                                   File upload restrictions
                                 </p>
@@ -1433,17 +1433,17 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                 </div>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-fvr8mz-MuiGrid-root"
+                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-MuiGrid-root"
                                 >
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                                       data-testid="CloudUploadIcon"
                                       focusable="false"
                                       viewBox="0 0 24 24"
@@ -1454,7 +1454,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                     </svg>
                                   </div>
                                   <div
-                                    class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                                    class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                                   >
                                     <p>
                                       Click here to select files,
@@ -1475,27 +1475,27 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
               data-testid="alert"
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
                         data-testid="WarningIcon"
                         focusable="false"
                         id="warning-icon"
@@ -1507,7 +1507,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+                      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
                       <b>
                         Validation - 
@@ -1534,13 +1534,13 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1peu8cu-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1548,10 +1548,10 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="fixSubmit"
               data-testid="fix-submit"
               disabled=""

@@ -3,17 +3,17 @@
 exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
       <input
         aria-invalid="false"
         autocomplete="off"
-        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-MuiInputBase-input-MuiInput-input"
         id="_r_l_"
         inputmode="text"
         placeholder="dd/mm/yyyy"
@@ -21,17 +21,17 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
         value="01/01/2016"
       />
       <div
-        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-MuiInputAdornment-root"
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="CalendarIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -50,17 +50,17 @@ exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
 exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiInputBase-adornedEnd css-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
       <input
         aria-invalid="false"
         autocomplete="off"
-        class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputAdornedEnd css-MuiInputBase-input-MuiInput-input"
         disabled=""
         id="_r_9_"
         inputmode="text"
@@ -69,18 +69,18 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
         value="01/01/2016"
       />
       <div
-        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-MuiInputAdornment-root"
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
           disabled=""
           tabindex="-1"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="CalendarIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -99,17 +99,17 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
 exports[`Component FileUploadEmbargoDate should render with default setup 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
       <input
         aria-invalid="false"
         autocomplete="off"
-        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-MuiInputBase-input-MuiInput-input"
         id="_r_1_"
         inputmode="text"
         placeholder="dd/mm/yyyy"
@@ -117,17 +117,17 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
         value="01/01/2016"
       />
       <div
-        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-MuiInputAdornment-root"
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="CalendarIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -146,17 +146,17 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
 exports[`Component FileUploadEmbargoDate should render with no supplied date 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-14gqc9w-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
       <input
         aria-invalid="false"
         autocomplete="off"
-        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-MuiInputBase-input-MuiInput-input"
         id="_r_5_"
         inputmode="text"
         placeholder="dd/mm/yyyy"
@@ -164,17 +164,17 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
         value=""
       />
       <div
-        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-MuiInputAdornment-root"
       >
         <button
           aria-label="Choose date"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="CalendarIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -193,17 +193,17 @@ exports[`Component FileUploadEmbargoDate should render with no supplied date 1`]
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
       <input
         aria-invalid="false"
         autocomplete="off"
-        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-MuiInputBase-input-MuiInput-input"
         id="_r_d_"
         inputmode="text"
         placeholder="dd/mm/yyyy"
@@ -211,17 +211,17 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
         value="01/01/2016"
       />
       <div
-        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-MuiInputAdornment-root"
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2016"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="CalendarIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -240,17 +240,17 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 2`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-16hn5e4-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-15au5hp-MuiInputBase-root-MuiInput-root"
+      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-MuiInputBase-root-MuiInput-root"
       data-analyticsid="undefined-input"
       data-testid="undefined-input"
     >
       <input
         aria-invalid="false"
         autocomplete="off"
-        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+        class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-MuiInputBase-input-MuiInput-input"
         id="_r_d_"
         inputmode="text"
         placeholder="dd/mm/yyyy"
@@ -258,17 +258,17 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
         value="01/01/2018"
       />
       <div
-        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
+        class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-standard MuiInputAdornment-sizeMedium css-MuiInputAdornment-root"
       >
         <button
           aria-label="Choose date, selected date is Jan 1, 2018"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-ihabhf-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="CalendarIcon"
             focusable="false"
             viewBox="0 0 24 24"

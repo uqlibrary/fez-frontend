@@ -3,23 +3,23 @@
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <br />
   Step 2 - Select your name from the list below
   <li
-    class="MuiListItem-container css-xw6fwh-MuiListItem-container"
+    class="MuiListItem-container css-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-d43oe-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="PeopleIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -30,46 +30,46 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Name as published
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-8rtno-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-y2splu-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               UQ identifier / Organisation
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-MuiGrid-root"
         />
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-12763ss-MuiListItemText-root"
+          class="MuiListItemText-root css-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -77,7 +77,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </div>
     </div>
     <div
-      class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+      class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
     >
       <span
         aria-label="Remove all records"
@@ -86,13 +86,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <button
           aria-label="Remove all records"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="DeleteForeverIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -111,21 +111,21 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-container css-xw6fwh-MuiListItem-container"
+    class="MuiListItem-container css-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-d43oe-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="PeopleIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -136,33 +136,33 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Name as published
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-MuiGrid-root"
         />
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-12763ss-MuiListItemText-root"
+          class="MuiListItemText-root css-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -170,7 +170,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </div>
     </div>
     <div
-      class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+      class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
     >
       <span
         aria-label="Remove all records"
@@ -179,14 +179,14 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <button
           aria-label="Remove all records"
-          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           disabled=""
           tabindex="-1"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="DeleteForeverIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -205,21 +205,21 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-container css-xw6fwh-MuiListItem-container"
+    class="MuiListItem-container css-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-d43oe-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="PeopleIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -230,33 +230,33 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Name as published
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-MuiGrid-root"
         />
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-12763ss-MuiListItemText-root"
+          class="MuiListItemText-root css-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -264,7 +264,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </div>
     </div>
     <div
-      class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+      class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
     >
       <span
         aria-label="Remove all records"
@@ -273,13 +273,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <button
           aria-label="Remove all records"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="DeleteForeverIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -298,21 +298,21 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 exports[`Component ContributorRowHeader header for creator role 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-container css-xw6fwh-MuiListItem-container"
+    class="MuiListItem-container css-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-d43oe-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="PeopleIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -323,29 +323,29 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Name as published
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-y2splu-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Role
             </span>
@@ -353,13 +353,13 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         </div>
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-12763ss-MuiListItemText-root"
+          class="MuiListItemText-root css-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -367,7 +367,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       </div>
     </div>
     <div
-      class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+      class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
     >
       <span
         aria-label="Remove all records"
@@ -376,13 +376,13 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       >
         <button
           aria-label="Remove all records"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="DeleteForeverIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -401,21 +401,21 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
 exports[`Component ContributorRowHeader should display infinite class 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-container css-xw6fwh-MuiListItem-container"
+    class="MuiListItem-container css-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-d43oe-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="PeopleIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -426,33 +426,33 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Name as published
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-MuiGrid-root"
         />
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-1ojqf4x-MuiListItemText-root"
+          class="MuiListItemText-root css-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -460,7 +460,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       </div>
     </div>
     <div
-      class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+      class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
     >
       <span
         aria-label="Remove all records"
@@ -469,13 +469,13 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       >
         <button
           aria-label="Remove all records"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="DeleteForeverIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -494,21 +494,21 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
 exports[`Component ContributorRowHeader should use extra padding if row is editable 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-container css-xw6fwh-MuiListItem-container"
+    class="MuiListItem-container css-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-d43oe-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="PeopleIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -519,33 +519,33 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Name as published
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-MuiGrid-root"
         />
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-omnkj0-MuiListItemText-root"
+          class="MuiListItemText-root css-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -553,7 +553,7 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
       </div>
     </div>
     <div
-      class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+      class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
     >
       <span
         aria-label="Remove all records"
@@ -562,13 +562,13 @@ exports[`Component ContributorRowHeader should use extra padding if row is edita
       >
         <button
           aria-label="Remove all records"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="DeleteForeverIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -589,21 +589,21 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
   aria-hidden="true"
 >
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-container css-xw6fwh-MuiListItem-container"
+    class="MuiListItem-container css-MuiListItem-container"
   >
     <div
-      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-d43oe-MuiListItem-root"
+      class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-MuiListItem-root"
     >
       <div
-        class="MuiListItemIcon-root css-m11kn3-MuiListItemIcon-root"
+        class="MuiListItemIcon-root css-MuiListItemIcon-root"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="PeopleIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -614,33 +614,33 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
         </svg>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-1vwug1r-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
           <div
-            class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+            class="MuiListItemText-root css-MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
             >
               Name as published
             </span>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-1ee56cg-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-MuiGrid-root"
         />
       </div>
       <div
-        class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+        class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
       >
         <div
-          class="MuiListItemText-root css-12763ss-MuiListItemText-root"
+          class="MuiListItemText-root css-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
           >
             Reorder records
           </span>
@@ -648,7 +648,7 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
       </div>
     </div>
     <div
-      class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+      class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
     >
       <span
         aria-label="Remove all records"
@@ -657,13 +657,13 @@ exports[`Component ContributorRowHeader triggers the confirmation box 1`] = `
       >
         <button
           aria-label="Remove all records"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="DeleteForeverIcon"
             focusable="false"
             viewBox="0 0 24 24"

@@ -3,22 +3,22 @@
 exports[`DataStreamSecuritySelector component with mockContext should render with form data 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-files"
       id="standard-card-files"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+        class="MuiCardHeader-root css-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+          class="MuiCardHeader-content css-MuiCardHeader-content"
         >
           <h4
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
             data-testid="standard-card-files-header"
             id="standard-card-files-header"
           >
@@ -27,58 +27,58 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
         </div>
       </div>
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-MuiCardContent-root"
         data-analyticsid="standard-card-files-content"
         data-testid="standard-card-files-content"
         id="standard-card-files-content"
       >
         <div
-          class="MuiBox-root css-hpgf8j"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-cyx3wm-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-11rz0ao-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
                
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-1il8lwd-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-MuiTypography-root"
               />
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-dgnj0v-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-MuiTypography-root"
               />
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-3xfxpg-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-1w91ltw-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiTypography-gutterBottom css-MuiTypography-root"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-11"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -89,18 +89,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-11"
                 id="file-name-11"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-11-download-link"
                     data-testid="file-name-11-download-link"
                     href="http://localhost/view/UQ:252236/MyUQeSpace_Researcher_Guidelines_current.pdf"
@@ -112,7 +112,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-11-download-link-new-window-icon"
@@ -128,36 +128,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 Full text (open access)
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 487.57 KB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="11-file-av-state-icon-default"
                     focusable="false"
@@ -170,7 +170,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"
@@ -182,18 +182,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-15"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -204,18 +204,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-15"
                 id="file-name-15"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-15-download-link"
                     data-testid="file-name-15-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines.pdf"
@@ -227,7 +227,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-15-download-link-new-window-icon"
@@ -243,36 +243,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 Full text (open access)
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 1.03 MB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="15-file-av-state-icon-default"
                     focusable="false"
@@ -285,7 +285,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"
@@ -297,18 +297,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-16"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -319,18 +319,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-16"
                 id="file-name-16"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-16-download-link"
                     data-testid="file-name-16-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2013.pdf"
@@ -342,7 +342,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-16-download-link-new-window-icon"
@@ -358,36 +358,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 UPO Guide v.3
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 1.27 MB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="16-file-av-state-icon-default"
                     focusable="false"
@@ -400,7 +400,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"
@@ -412,18 +412,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-17"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -434,18 +434,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-17"
                 id="file-name-17"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-17-download-link"
                     data-testid="file-name-17-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_UPO_guidelines_2016.pdf"
@@ -457,7 +457,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-17-download-link-new-window-icon"
@@ -473,36 +473,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 UPO Guide v.4
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 573.25 KB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="17-file-av-state-icon-default"
                     focusable="false"
@@ -515,7 +515,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"
@@ -527,18 +527,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-13"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -549,18 +549,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-13"
                 id="file-name-13"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-13-download-link"
                     data-testid="file-name-13-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2012.pdf"
@@ -572,7 +572,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-13-download-link-new-window-icon"
@@ -588,36 +588,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 My UQ eSpace - Researcher Guide
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 1.05 MB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="13-file-av-state-icon-default"
                     focusable="false"
@@ -630,7 +630,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"
@@ -642,18 +642,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-14"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -664,18 +664,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-14"
                 id="file-name-14"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-14-download-link"
                     data-testid="file-name-14-download-link"
                     href="http://localhost/view/UQ:252236/My_UQ_eSpace_researcher_guidelines_2014.pdf"
@@ -687,7 +687,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-14-download-link-new-window-icon"
@@ -703,36 +703,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 My UQ eSpace - Researcher Guide
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 267.44 KB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="14-file-av-state-icon-default"
                     focusable="false"
@@ -745,7 +745,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"
@@ -757,18 +757,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-31"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -779,18 +779,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-31"
                 id="file-name-31"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-31-download-link"
                     data-testid="file-name-31-download-link"
                     href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119.pdf"
@@ -802,7 +802,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-31-download-link-new-window-icon"
@@ -818,36 +818,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 UPO Guide - v.1
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 902.51 KB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="31-file-av-state-icon-default"
                     focusable="false"
@@ -860,7 +860,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"
@@ -872,18 +872,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
           </div>
         </div>
         <div
-          class="MuiBox-root css-1vn0y5f"
+          class="MuiBox-root css"
           data-testid="fez-datastream-info-attached-list-row-32"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-o607lz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-118ue65-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-1 css-MuiGrid-root"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="PictureAsPdfIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -894,18 +894,18 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </svg>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-ftl6zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 MuiGrid-grid-xs-6 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-mv3e8q-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
                 data-testid="file-name-32"
                 id="file-name-32"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-18a7y1c-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-12 css-MuiGrid-root"
                 >
                   <a
-                    class="css-2489rw"
+                    class="css"
                     data-analyticsid="file-name-32-download-link"
                     data-testid="file-name-32-download-link"
                     href="http://localhost/view/UQ:252236/UQ_eSpace_My_Research_091119_old.pdf"
@@ -917,7 +917,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="file-name-32-download-link-new-window-icon"
@@ -933,36 +933,36 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-10q6z7l-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-5 MuiGrid-grid-sm-7 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 Full text
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-g0fbq1-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-2 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
               >
                 84.36 KB
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-c5jf4z-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-md-3 MuiGrid-grid-sm-4 css-MuiGrid-root"
             >
               <div
-                class="MuiBox-root css-epvm6"
+                class="MuiBox-root css"
               >
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <svg
                     aria-hidden="true"
                     aria-label="Not yet scanned for threats"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-mui-internal-clone-element="true"
                     data-testid="32-file-av-state-icon-default"
                     focusable="false"
@@ -975,7 +975,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                   </svg>
                 </span>
                 <span
-                  class="MuiBox-root css-111wug5"
+                  class="MuiBox-root css"
                 >
                   <span
                     class="noOaIcon"

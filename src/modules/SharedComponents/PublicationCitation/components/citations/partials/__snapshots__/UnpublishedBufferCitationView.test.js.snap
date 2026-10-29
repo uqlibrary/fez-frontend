@@ -3,14 +3,14 @@
 exports[`UnpublishedBufferCitationView test button click sets value should render empty component with no date 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
       style="flex-grow: 1; width: 100%;"
     >
       <div
-        class="MuiTypography-root MuiTypography-caption css-fy7r9h-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
       >
         <i>
           <span

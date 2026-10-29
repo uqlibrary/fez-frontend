@@ -3,35 +3,35 @@
 exports[`AdminSection component should render default view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Member of collections
@@ -41,22 +41,22 @@ exports[`AdminSection component should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-o5oj2-MuiAutocomplete-root"
+                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-MuiAutocomplete-root"
               >
                 <div
-                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     for="rek-ismemberof"
                     id="rek-ismemberof-label"
@@ -64,14 +64,14 @@ exports[`AdminSection component should render default view 1`] = `
                     Member of collection
                     <span
                       aria-hidden="true"
-                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                     >
                        
                       *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-autocomplete="list"
@@ -79,7 +79,7 @@ exports[`AdminSection component should render default view 1`] = `
                       aria-invalid="false"
                       autocapitalize="none"
                       autocomplete="off"
-                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="rek-ismemberof-input"
                       data-testid="rek-ismemberof-input"
                       id="rek-ismemberof-input"
@@ -91,11 +91,11 @@ exports[`AdminSection component should render default view 1`] = `
                       value=""
                     />
                     <div
-                      class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
+                      class="MuiAutocomplete-endAdornment css-MuiAutocomplete-endAdornment"
                     >
                       <button
                         aria-label="Open"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                         tabindex="-1"
                         title="Open"
                         type="button"
@@ -110,32 +110,32 @@ exports[`AdminSection component should render default view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Additional information
@@ -145,19 +145,19 @@ exports[`AdminSection component should render default view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="true"
                   data-testid="rek-subtype-label"
                   id="rek-subtype-label"
@@ -165,21 +165,21 @@ exports[`AdminSection component should render default view 1`] = `
                   Work sub-type
                   <span
                     aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                   >
                      
                     *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-subtype-select"
                     aria-required="true"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-subtype-select"
                     id="rek-subtype-select"
                     role="combobox"
@@ -191,7 +191,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-subtype-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-subtype-input"
                     data-testid="rek-subtype-input"
                     id="rek-subtype-input"
@@ -201,7 +201,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -214,13 +214,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-herdc-code-label"
                   id="rek-herdc-code-label"
@@ -228,13 +228,13 @@ exports[`AdminSection component should render default view 1`] = `
                   Category code
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-code-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-herdc-code-select"
                     id="rek-herdc-code-select"
                     role="combobox"
@@ -251,7 +251,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-herdc-code-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-herdc-code-input"
                     data-testid="rek-herdc-code-input"
                     id="rek-herdc-code-input"
@@ -260,7 +260,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -273,13 +273,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-herdc-status-label"
                   id="rek-herdc-status-label"
@@ -287,13 +287,13 @@ exports[`AdminSection component should render default view 1`] = `
                   Category code status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-status-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-herdc-status-select"
                     id="rek-herdc-status-select"
                     role="combobox"
@@ -310,7 +310,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-herdc-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-herdc-status-input"
                     data-testid="rek-herdc-status-input"
                     id="rek-herdc-status-input"
@@ -319,7 +319,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -332,13 +332,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-institutional-status-label"
                   id="rek-institutional-status-label"
@@ -346,13 +346,13 @@ exports[`AdminSection component should render default view 1`] = `
                   Institutional status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-institutional-status-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-institutional-status-select"
                     id="rek-institutional-status-select"
                     role="combobox"
@@ -369,7 +369,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-institutional-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-institutional-status-input"
                     data-testid="rek-institutional-status-input"
                     id="rek-institutional-status-input"
@@ -378,7 +378,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -391,13 +391,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-refereed-source-label"
                   id="rek-refereed-source-label"
@@ -405,13 +405,13 @@ exports[`AdminSection component should render default view 1`] = `
                   Refereed source
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-refereed-source-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-refereed-source-select"
                     id="rek-refereed-source-select"
                     role="combobox"
@@ -428,7 +428,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-refereed-source-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-refereed-source-input"
                     data-testid="rek-refereed-source-input"
                     id="rek-refereed-source-input"
@@ -437,7 +437,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -450,13 +450,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-content-indicator-label"
                   id="rek-content-indicator-label"
@@ -464,13 +464,13 @@ exports[`AdminSection component should render default view 1`] = `
                   Content Indicators
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-content-indicator-select"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-content-indicator-select"
                     id="rek-content-indicator-select"
                     role="combobox"
@@ -487,7 +487,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-content-indicator-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-content-indicator-input"
                     data-testid="rek-content-indicator-input"
                     id="rek-content-indicator-input"
@@ -496,7 +496,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -509,13 +509,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-oa-status-label"
                   id="rek-oa-status-label"
@@ -523,13 +523,13 @@ exports[`AdminSection component should render default view 1`] = `
                   OA status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-oa-status-select"
                     id="rek-oa-status-select"
                     role="combobox"
@@ -546,7 +546,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-oa-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-oa-status-input"
                     data-testid="rek-oa-status-input"
                     id="rek-oa-status-input"
@@ -555,7 +555,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -568,13 +568,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-oa-status-type-label"
                   id="rek-oa-status-type-label"
@@ -582,13 +582,13 @@ exports[`AdminSection component should render default view 1`] = `
                   OA status type
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-type-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-oa-status-type-select"
                     id="rek-oa-status-type-select"
                     role="combobox"
@@ -605,7 +605,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-oa-status-type-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-oa-status-type-input"
                     data-testid="rek-oa-status-type-input"
                     id="rek-oa-status-type-input"
@@ -614,7 +614,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -627,13 +627,13 @@ exports[`AdminSection component should render default view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-license-label"
                   id="rek-license-label"
@@ -641,13 +641,13 @@ exports[`AdminSection component should render default view 1`] = `
                   License
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-license-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-license-select"
                     id="rek-license-select"
                     role="combobox"
@@ -664,7 +664,7 @@ exports[`AdminSection component should render default view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-license-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-license-input"
                     data-testid="rek-license-input"
                     id="rek-license-input"
@@ -673,7 +673,7 @@ exports[`AdminSection component should render default view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -696,35 +696,35 @@ exports[`AdminSection component should render default view 1`] = `
 exports[`AdminSection component should render design form fields 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Member of collections
@@ -734,22 +734,22 @@ exports[`AdminSection component should render design form fields 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-o5oj2-MuiAutocomplete-root"
+                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-MuiAutocomplete-root"
               >
                 <div
-                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     for="rek-ismemberof"
                     id="rek-ismemberof-label"
@@ -757,14 +757,14 @@ exports[`AdminSection component should render design form fields 1`] = `
                     Member of collection
                     <span
                       aria-hidden="true"
-                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                     >
                        
                       *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-autocomplete="list"
@@ -772,7 +772,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                       aria-invalid="false"
                       autocapitalize="none"
                       autocomplete="off"
-                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="rek-ismemberof-input"
                       data-testid="rek-ismemberof-input"
                       id="rek-ismemberof-input"
@@ -784,11 +784,11 @@ exports[`AdminSection component should render design form fields 1`] = `
                       value=""
                     />
                     <div
-                      class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
+                      class="MuiAutocomplete-endAdornment css-MuiAutocomplete-endAdornment"
                     >
                       <button
                         aria-label="Open"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                         tabindex="-1"
                         title="Open"
                         type="button"
@@ -803,32 +803,32 @@ exports[`AdminSection component should render design form fields 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Additional information
@@ -838,19 +838,19 @@ exports[`AdminSection component should render design form fields 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="true"
                   data-testid="rek-subtype-label"
                   id="rek-subtype-label"
@@ -858,21 +858,21 @@ exports[`AdminSection component should render design form fields 1`] = `
                   Work sub-type
                   <span
                     aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                   >
                      
                     *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-subtype-select"
                     aria-required="true"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-subtype-select"
                     id="rek-subtype-select"
                     role="combobox"
@@ -889,7 +889,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-subtype-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-subtype-input"
                     data-testid="rek-subtype-input"
                     id="rek-subtype-input"
@@ -899,7 +899,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -912,13 +912,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-herdc-code-label"
                   id="rek-herdc-code-label"
@@ -926,13 +926,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   Category code
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-code-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-herdc-code-select"
                     id="rek-herdc-code-select"
                     role="combobox"
@@ -949,7 +949,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-herdc-code-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-herdc-code-input"
                     data-testid="rek-herdc-code-input"
                     id="rek-herdc-code-input"
@@ -958,7 +958,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -971,13 +971,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-herdc-status-label"
                   id="rek-herdc-status-label"
@@ -985,13 +985,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   Category code status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-status-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-herdc-status-select"
                     id="rek-herdc-status-select"
                     role="combobox"
@@ -1008,7 +1008,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-herdc-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-herdc-status-input"
                     data-testid="rek-herdc-status-input"
                     id="rek-herdc-status-input"
@@ -1017,7 +1017,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1030,13 +1030,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-institutional-status-label"
                   id="rek-institutional-status-label"
@@ -1044,13 +1044,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   Institutional status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-institutional-status-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-institutional-status-select"
                     id="rek-institutional-status-select"
                     role="combobox"
@@ -1067,7 +1067,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-institutional-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-institutional-status-input"
                     data-testid="rek-institutional-status-input"
                     id="rek-institutional-status-input"
@@ -1076,7 +1076,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1089,13 +1089,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-refereed-source-label"
                   id="rek-refereed-source-label"
@@ -1103,13 +1103,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   Refereed source
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-refereed-source-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-refereed-source-select"
                     id="rek-refereed-source-select"
                     role="combobox"
@@ -1126,7 +1126,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-refereed-source-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-refereed-source-input"
                     data-testid="rek-refereed-source-input"
                     id="rek-refereed-source-input"
@@ -1135,7 +1135,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1148,13 +1148,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-content-indicator-label"
                   id="rek-content-indicator-label"
@@ -1162,13 +1162,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   Content Indicators
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-content-indicator-select"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-content-indicator-select"
                     id="rek-content-indicator-select"
                     role="combobox"
@@ -1185,7 +1185,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-content-indicator-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-content-indicator-input"
                     data-testid="rek-content-indicator-input"
                     id="rek-content-indicator-input"
@@ -1194,7 +1194,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1207,13 +1207,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-oa-status-label"
                   id="rek-oa-status-label"
@@ -1221,13 +1221,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   OA status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-oa-status-select"
                     id="rek-oa-status-select"
                     role="combobox"
@@ -1244,7 +1244,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-oa-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-oa-status-input"
                     data-testid="rek-oa-status-input"
                     id="rek-oa-status-input"
@@ -1253,7 +1253,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1266,13 +1266,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-oa-status-type-label"
                   id="rek-oa-status-type-label"
@@ -1280,13 +1280,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   OA status type
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-type-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-oa-status-type-select"
                     id="rek-oa-status-type-select"
                     role="combobox"
@@ -1303,7 +1303,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-oa-status-type-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-oa-status-type-input"
                     data-testid="rek-oa-status-type-input"
                     id="rek-oa-status-type-input"
@@ -1312,7 +1312,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1325,13 +1325,13 @@ exports[`AdminSection component should render design form fields 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-license-label"
                   id="rek-license-label"
@@ -1339,13 +1339,13 @@ exports[`AdminSection component should render design form fields 1`] = `
                   License
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-license-select"
-                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-license-select"
                     id="rek-license-select"
                     role="combobox"
@@ -1362,7 +1362,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-license-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-license-input"
                     data-testid="rek-license-input"
                     id="rek-license-input"
@@ -1371,7 +1371,7 @@ exports[`AdminSection component should render design form fields 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1394,35 +1394,35 @@ exports[`AdminSection component should render design form fields 1`] = `
 exports[`AdminSection component should render disabled view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Member of collections
@@ -1432,22 +1432,22 @@ exports[`AdminSection component should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-o5oj2-MuiAutocomplete-root"
+                class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon css-MuiAutocomplete-root"
               >
                 <div
-                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     for="rek-ismemberof"
                     id="rek-ismemberof-label"
@@ -1455,14 +1455,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                     Member of collection
                     <span
                       aria-hidden="true"
-                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                     >
                        
                       *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-autocomplete="list"
@@ -1470,7 +1470,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                       aria-invalid="false"
                       autocapitalize="none"
                       autocomplete="off"
-                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="rek-ismemberof-input"
                       data-testid="rek-ismemberof-input"
                       id="rek-ismemberof-input"
@@ -1482,11 +1482,11 @@ exports[`AdminSection component should render disabled view 1`] = `
                       value=""
                     />
                     <div
-                      class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
+                      class="MuiAutocomplete-endAdornment css-MuiAutocomplete-endAdornment"
                     >
                       <button
                         aria-label="Open"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                         tabindex="-1"
                         title="Open"
                         type="button"
@@ -1501,32 +1501,32 @@ exports[`AdminSection component should render disabled view 1`] = `
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-tt2wqz-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row undefined AdminCard css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css"
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                    
                   Additional information
@@ -1536,19 +1536,19 @@ exports[`AdminSection component should render disabled view 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-1yvsbrk-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="true"
                   data-testid="rek-subtype-label"
                   id="rek-subtype-label"
@@ -1556,14 +1556,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   Work sub-type
                   <span
                     aria-hidden="true"
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1v5bsei-MuiFormLabel-asterisk"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
                   >
                      
                     *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
@@ -1571,7 +1571,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-haspopup="listbox"
                     aria-labelledby="rek-subtype-select"
                     aria-required="true"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-subtype-select"
                     id="rek-subtype-select"
                     role="combobox"
@@ -1582,7 +1582,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-subtype-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-subtype-input"
                     data-testid="rek-subtype-input"
                     disabled=""
@@ -1593,7 +1593,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1606,13 +1606,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-herdc-code-label"
                   id="rek-herdc-code-label"
@@ -1620,14 +1620,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   Category code
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-code-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-herdc-code-select"
                     id="rek-herdc-code-select"
                     role="combobox"
@@ -1643,7 +1643,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-herdc-code-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-herdc-code-input"
                     data-testid="rek-herdc-code-input"
                     disabled=""
@@ -1653,7 +1653,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1666,13 +1666,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-herdc-status-label"
                   id="rek-herdc-status-label"
@@ -1680,14 +1680,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   Category code status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-herdc-status-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-herdc-status-select"
                     id="rek-herdc-status-select"
                     role="combobox"
@@ -1703,7 +1703,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-herdc-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-herdc-status-input"
                     data-testid="rek-herdc-status-input"
                     disabled=""
@@ -1713,7 +1713,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1726,13 +1726,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-xur2zb-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-institutional-status-label"
                   id="rek-institutional-status-label"
@@ -1740,14 +1740,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   Institutional status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-institutional-status-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-institutional-status-select"
                     id="rek-institutional-status-select"
                     role="combobox"
@@ -1763,7 +1763,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-institutional-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-institutional-status-input"
                     data-testid="rek-institutional-status-input"
                     disabled=""
@@ -1773,7 +1773,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1786,13 +1786,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-refereed-source-label"
                   id="rek-refereed-source-label"
@@ -1800,14 +1800,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   Refereed source
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-refereed-source-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-refereed-source-select"
                     id="rek-refereed-source-select"
                     role="combobox"
@@ -1823,7 +1823,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-refereed-source-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-refereed-source-input"
                     data-testid="rek-refereed-source-input"
                     disabled=""
@@ -1833,7 +1833,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1846,13 +1846,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-content-indicator-label"
                   id="rek-content-indicator-label"
@@ -1860,14 +1860,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   Content Indicators
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-content-indicator-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-content-indicator-select"
                     id="rek-content-indicator-select"
                     role="combobox"
@@ -1883,7 +1883,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-content-indicator-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-content-indicator-input"
                     data-testid="rek-content-indicator-input"
                     disabled=""
@@ -1893,7 +1893,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1906,13 +1906,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-oa-status-label"
                   id="rek-oa-status-label"
@@ -1920,14 +1920,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   OA status
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-oa-status-select"
                     id="rek-oa-status-select"
                     role="combobox"
@@ -1943,7 +1943,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-oa-status-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-oa-status-input"
                     data-testid="rek-oa-status-input"
                     disabled=""
@@ -1953,7 +1953,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -1966,13 +1966,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-204a8q-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-oa-status-type-label"
                   id="rek-oa-status-type-label"
@@ -1980,14 +1980,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   OA status type
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-oa-status-type-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-oa-status-type-select"
                     id="rek-oa-status-type-select"
                     role="combobox"
@@ -2003,7 +2003,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-oa-status-type-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-oa-status-type-input"
                     data-testid="rek-oa-status-type-input"
                     disabled=""
@@ -2013,7 +2013,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -2026,13 +2026,13 @@ exports[`AdminSection component should render disabled view 1`] = `
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-1wj9vbk-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-12 css-MuiGrid-root"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+                class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-license-label"
                   id="rek-license-label"
@@ -2040,14 +2040,14 @@ exports[`AdminSection component should render disabled view 1`] = `
                   License
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-license-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-license-select"
                     id="rek-license-select"
                     role="combobox"
@@ -2063,7 +2063,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                     aria-hidden="true"
                     aria-invalid="false"
                     aria-labelledby="rek-license-label"
-                    class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+                    class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
                     data-analyticsid="rek-license-input"
                     data-testid="rek-license-input"
                     disabled=""
@@ -2073,7 +2073,7 @@ exports[`AdminSection component should render disabled view 1`] = `
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"

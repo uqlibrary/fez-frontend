@@ -4,7 +4,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
 <div>
   <a
     aria-label="Google"
-    class="wosCitationCount css-pi8u"
+    class="wosCitationCount css"
     data-analyticsid="wos-citation-count-link"
     data-testid="wos-citation-count-link"
     href="www.google.com"
@@ -18,7 +18,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
       class="fez-icon wos large"
     />
     <span
-      class="MuiBox-root css-19k1sqg"
+      class="MuiBox-root css"
     >
       4
     </span>

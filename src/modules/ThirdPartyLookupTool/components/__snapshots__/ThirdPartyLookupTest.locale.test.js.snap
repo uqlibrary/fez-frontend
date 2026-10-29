@@ -3,13 +3,13 @@
 exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -18,32 +18,32 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+              class="MuiCardHeader-root css-MuiCardHeader-root"
             >
               <div
-                class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                class="MuiCardHeader-content css-MuiCardHeader-content"
               />
             </div>
             <div
-              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+              class="MuiCardContent-root css-MuiCardContent-root"
               data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
@@ -52,19 +52,19 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
                  - 
               </p>
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
                 data-testid="standard-card-results"
                 id="standard-card-results"
                 style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
               >
                 <div
-                  class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                  class="MuiCardHeader-root css-MuiCardHeader-root"
                 >
                   <div
-                    class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+                    class="MuiCardHeader-content css-MuiCardHeader-content"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
                       data-testid="standard-card-results-header"
                       id="standard-card-results-header"
                     >
@@ -73,7 +73,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+                  class="MuiCardContent-root css-MuiCardContent-root"
                   data-analyticsid="standard-card-results-content"
                   data-testid="standard-card-results-content"
                   id="standard-card-results-content"
@@ -86,7 +86,7 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1r261e5-MuiButtonBase-root-MuiButton-root"
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-MuiButtonBase-root-MuiButton-root"
                 style="margin-top: 20px;"
                 tabindex="0"
                 type="button"
@@ -105,13 +105,13 @@ exports[`Component ThirdPartyLookupTool renders a results screen 1`] = `
 exports[`Component ThirdPartyLookupTool renders loading screen while loading data 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -120,36 +120,36 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
         style="padding: 8px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-no9lbm-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
             style="text-align: center;"
           >
             <span
               aria-label="Loading"
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
               role="progressbar"
               style="width: 18px; height: 18px;"
             >
               <svg
-                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                class="MuiCircularProgress-svg css-MuiCircularProgress-svg"
                 viewBox="22 22 44 44"
               >
                 <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-MuiCircularProgress-circle"
                   cx="44"
                   cy="44"
                   fill="none"
@@ -160,18 +160,18 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1hef13s-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
             style="text-align: center;"
           >
             <span
-              class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               style="font-size: 1.33rem;"
             >
               Loading
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-14k847e-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
           />
         </div>
       </div>
@@ -183,13 +183,13 @@ exports[`Component ThirdPartyLookupTool renders loading screen while loading dat
 exports[`Component ThirdPartyLookupTool should render a form ready for input 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -198,47 +198,47 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+              class="MuiCardContent-root css-MuiCardContent-root"
               data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                   style="flex-grow: 1; width: 1px;"
                 >
                   <h5
-                    class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
                   >
                     Incites
                   </h5>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="minimise-toggle"
                     tabindex="0"
                     tooltip="Hide form for Incites"
@@ -246,7 +246,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="KeyboardArrowUpIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -266,15 +266,15 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                   </h4>
                   <p />
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label="primaryValue"
-                        class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         id="_r_3_"
                         name="primaryValue"
                         placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
@@ -293,15 +293,15 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                     Optional, a default key is provided. Limit: 1,000 queries per day
                   </p>
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label="secondaryValue"
-                        class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         id="_r_4_"
                         name="secondaryValue"
                         placeholder="Enter API key"
@@ -314,7 +314,7 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                 <p />
                 <button
                   aria-label="Submit to Incites"
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1r261e5-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-MuiButtonBase-root-MuiButton-root"
                   tabindex="0"
                   type="button"
                 >
@@ -333,13 +333,13 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
 exports[`Component ThirdPartyLookupTool should set state with submitted data 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row StandardPage css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -348,47 +348,47 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
       </h2>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-5hbn4l-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
             data-testid="standard-card"
             id="standard-card"
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+              class="MuiCardContent-root css-MuiCardContent-root"
               data-analyticsid="standard-card-content"
               data-testid="standard-card-content"
               id="standard-card-content"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-1u8xl8z-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                   style="flex-grow: 1; width: 1px;"
                 >
                   <h5
-                    class="MuiTypography-root MuiTypography-h5 css-1br6pob-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
                   >
                     Incites
                   </h5>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                  class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="minimise-toggle"
                     tabindex="0"
                     tooltip="Hide form for Incites"
@@ -396,7 +396,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="KeyboardArrowUpIcon"
                       focusable="false"
                       viewBox="0 0 24 24"
@@ -416,15 +416,15 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                   </h4>
                   <p />
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root primaryValue css-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label="primaryValue"
-                        class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         id="_r_9_"
                         name="primaryValue"
                         placeholder="Enter one or more UTs separated by a comma e.g. 000455548800001"
@@ -443,15 +443,15 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                     Optional, a default key is provided. Limit: 1,000 queries per day
                   </p>
                   <div
-                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-cmpglg-MuiFormControl-root-MuiTextField-root"
+                    class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root secondaryValue css-MuiFormControl-root-MuiTextField-root"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
                         aria-label="secondaryValue"
-                        class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                        class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         id="_r_a_"
                         name="secondaryValue"
                         placeholder="Enter API key"
@@ -464,7 +464,7 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                 <p />
                 <button
                   aria-label="Submit to Incites"
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1r261e5-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-MuiButtonBase-root-MuiButton-root"
                   tabindex="0"
                   type="button"
                 >

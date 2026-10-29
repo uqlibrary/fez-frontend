@@ -3,44 +3,44 @@
 exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-19a21ue-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-1qcs568-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Grant agency
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-9h4ma8-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor ID
               </span>
@@ -49,31 +49,31 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-13bwnp6-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-MuiGrid-root"
       >
         <div
-          class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+          class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
           style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-1uzkkp6-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
+                class="MuiListItemText-root css-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-1oxte1b-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-MuiGrid-root"
               style="text-align: right;"
             >
               <div
@@ -84,13 +84,13 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="DeleteForeverIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -113,58 +113,58 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 exports[`GrantListEditorHeader should render default mobile view 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-19a21ue-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-1qcs568-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Grant agency
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-9h4ma8-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor ID
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-jjs0jn-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor type
               </span>
@@ -173,31 +173,31 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-13bwnp6-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-MuiGrid-root"
       >
         <div
-          class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+          class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
           style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-1uzkkp6-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
+                class="MuiListItemText-root css-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
               style="text-align: right;"
             >
               <div
@@ -208,13 +208,13 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="DeleteForeverIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -237,58 +237,58 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
 exports[`GrantListEditorHeader should render default mobile view 2`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-19a21ue-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-1qcs568-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Grant agency
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-9h4ma8-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor ID
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-jjs0jn-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor type
               </span>
@@ -297,31 +297,31 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-13bwnp6-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-MuiGrid-root"
       >
         <div
-          class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+          class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
           style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-1uzkkp6-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
+                class="MuiListItemText-root css-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
               style="text-align: right;"
             >
               <div
@@ -332,13 +332,13 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="DeleteForeverIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -361,58 +361,58 @@ exports[`GrantListEditorHeader should render default mobile view 2`] = `
 exports[`GrantListEditorHeader should render default view 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-19a21ue-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-1qcs568-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Grant agency
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-9h4ma8-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor ID
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-jjs0jn-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor type
               </span>
@@ -421,31 +421,31 @@ exports[`GrantListEditorHeader should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-13bwnp6-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-MuiGrid-root"
       >
         <div
-          class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+          class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
           style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-1uzkkp6-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
+                class="MuiListItemText-root css-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-1oxte1b-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-MuiGrid-root"
               style="text-align: right;"
             >
               <div
@@ -456,13 +456,13 @@ exports[`GrantListEditorHeader should render default view 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="DeleteForeverIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -485,58 +485,58 @@ exports[`GrantListEditorHeader should render default view 1`] = `
 exports[`GrantListEditorHeader should render with default props 1`] = `
 <div>
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-19a21ue-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-1qcs568-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Grant agency
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-9h4ma8-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor ID
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-jjs0jn-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor type
               </span>
@@ -545,31 +545,31 @@ exports[`GrantListEditorHeader should render with default props 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-13bwnp6-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-MuiGrid-root"
       >
         <div
-          class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+          class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
           style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-1uzkkp6-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
+                class="MuiListItemText-root css-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-1oxte1b-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-MuiGrid-root"
               style="text-align: right;"
             >
               <div
@@ -580,13 +580,13 @@ exports[`GrantListEditorHeader should render with default props 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="DeleteForeverIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -611,58 +611,58 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
   aria-hidden="true"
 >
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
   <li
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1ulijmd-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1l3uuuo-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-19a21ue-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 MuiGrid-grid-md-9 css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-1qcs568-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Grant agency
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-9h4ma8-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor ID
               </span>
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-jjs0jn-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <div
-              class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               style="padding: 0px;"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
               >
                 Funder/sponsor type
               </span>
@@ -671,31 +671,31 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-13bwnp6-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 MuiGrid-grid-md-3 css-MuiGrid-root"
       >
         <div
-          class="MuiListItemSecondaryAction-root css-zezwi5-MuiListItemSecondaryAction-root"
+          class="MuiListItemSecondaryAction-root css-MuiListItemSecondaryAction-root"
           style="position: relative; width: 100%; margin: 0px 0px -32px 0px;"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-1uzkkp6-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-8 css-MuiGrid-root"
             >
               <div
-                class="MuiListItemText-root css-1bfygtv-MuiListItemText-root"
+                class="MuiListItemText-root css-MuiListItemText-root"
                 style="padding: 0px;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-9q2kf3-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-MuiTypography-root"
                 >
                   Reorder entries
                 </span>
               </div>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-1oxte1b-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-4 css-MuiGrid-root"
               style="text-align: right;"
             >
               <div
@@ -706,13 +706,13 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
               >
                 <button
                   aria-label="Remove all entries"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   tabindex="0"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="DeleteForeverIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
