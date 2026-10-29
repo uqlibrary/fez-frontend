@@ -89,6 +89,7 @@ import { CommunityField } from 'modules/SharedComponents/LookupFields/containers
 import { SustainableDevelopmentGoalListField } from '../../modules/SharedComponents/LookupFields/containers/SustainableDevelopmentGoalListField';
 import { CommissionedResearchReportField } from 'modules/SharedComponents/Toolbox/CommissionedResearchReportField';
 import PublicationMap from '../../modules/SharedComponents/PublicationMap/PublicationMap';
+import { RelatedPublicationListField } from '../../modules/SharedComponents/LookupFields/containers/RelatedPublicationListField';
 
 const transformCollectionView = () =>
     COLLECTION_VIEW_TYPE.map(viewType => {
@@ -1131,7 +1132,7 @@ export default {
             },
         },
         fez_record_search_key_isderivationof: {
-            component: RelatedDatasetAndPublicationListField,
+            component: RelatedPublicationListField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_isderivationof',
                 searchKey: { value: 'rek_isderivationof', order: 'rek_isderivationof_order' },

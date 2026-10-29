@@ -47,7 +47,12 @@ const RelatedPublications = ({
 
     const renderList = (publication, parentSearchKey, childrenSearchKey, showPublicationTitle) => {
         const parents = (parentSearchKey && publication[parentSearchKey.key]) || [];
-        const children = publication[childrenSearchKey.key];
+        /* istanbul ignore next */
+        const children = publication[childrenSearchKey.key]?.filter(
+            // filter out dups
+            child =>
+                !parents.find(parent => parent && child && parent.rek_isderivationof === child.rek_has_derivations),
+        );
         const testId = parentSearchKey && parentSearchKey.pid.replace(/_/g, '-');
 
         return (

@@ -1324,9 +1324,6 @@ export const trendingPublications = {
             "fez_record_search_key_has_related_datasets":[
                 
             ],
-            "fez_record_search_key_has_derivations":[
-                
-            ],
             "rek_display_type_lookup":"Conference Paper",
             "rek_pubmed_doc_type_lookup":"Article (original research)",
             "rek_object_type_lookup":"Record",
@@ -3669,7 +3666,6 @@ export const trendingPublications = {
         "fez_matched_journals": null,
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
-        "fez_record_search_key_has_derivations": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
         "rek_wok_doc_type_lookup": null,
@@ -5045,7 +5041,6 @@ export const trendingPublications = {
         "fez_matched_journals": null,
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
-        "fez_record_search_key_has_derivations": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
         "rek_wok_doc_type_lookup": null,
@@ -7737,7 +7732,6 @@ export const trendingPublications = {
         "fez_matched_journals": null,
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
-        "fez_record_search_key_has_derivations": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
         "rek_wok_doc_type_lookup": null,
@@ -8232,7 +8226,6 @@ export const trendingPublications = {
         "fez_matched_journals": null,
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
-        "fez_record_search_key_has_derivations": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
         "rek_wok_doc_type_lookup": null,
@@ -8911,7 +8904,6 @@ export const trendingPublications = {
         },
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
-        "fez_record_search_key_has_derivations": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
         "rek_wok_doc_type_lookup": null,
@@ -9457,7 +9449,6 @@ export const trendingPublications = {
         "fez_matched_journals": null,
         "fez_record_search_key_has_datasets": [],
         "fez_record_search_key_has_related_datasets": [],
-        "fez_record_search_key_has_derivations": [],
         "rek_status_lookup": "Published",
         "rek_object_type_lookup": "Record",
         "rek_wok_doc_type_lookup": null,

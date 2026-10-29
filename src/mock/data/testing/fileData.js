@@ -787,7 +787,6 @@ export default {
     "fez_matched_journals": null,
     "fez_record_search_key_has_datasets": [],
     "fez_record_search_key_has_related_datasets": [],
-    "fez_record_search_key_has_derivations": [],
     "rek_status_lookup": "Published",
     "rek_object_type_lookup": "Record",
     "rek_wok_doc_type_lookup": null,

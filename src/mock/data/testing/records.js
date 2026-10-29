@@ -435,7 +435,34 @@ export const dataCollection = {
             "rek_grant_id": "DP1093175"
         }
     ],
-    "fez_record_search_key_isderivationof": [],
+    "fez_record_search_key_isderivationof": [
+        {
+            "rek_isderivationof_pid": "UQ:407731",
+            "rek_isderivationof": "UQ:123456",
+            "rek_isderivationof_order": 1,
+            "parent": {
+                "rek_pid": "UQ:123456",
+                "rek_display_type": "179",
+                "rek_status": 2,
+                "rek_title": "Published record",
+                "fez_record_search_key_doi": null,
+            },
+            "rek_isderivationof_lookup": "Published record"
+        },
+        {
+            "rek_isderivationof_pid": "UQ:407732",
+            "rek_isderivationof": "UQ:234567",
+            "rek_isderivationof_order": 2,
+            "parent": {
+                "rek_pid": "UQ:234567",
+                "rek_display_type": "179",
+                "rek_status": 1,
+                "rek_title": "Unpublished child",
+                "fez_record_search_key_doi": null,
+            },
+            "rek_isderivationof_lookup": "Unpublished record"
+        }
+    ],
     "fez_record_search_key_isdatasetof": [
         {
             "rek_isdatasetof_id": 3294,
@@ -10205,7 +10232,6 @@ export const instrument = {
     "fez_record_search_key_isderivationof": [],
     "fez_record_search_key_sdg_source": [],
     "fez_record_search_key_has_related_datasets": [],
-    "fez_record_search_key_has_derivations": [],
     "rek_display_type_lookup": "Instrument",
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Record",
@@ -14360,7 +14386,6 @@ export const dataCollectionWithFoRCodes = {
             rek_has_related_datasets_lookup: "Habitat map of Danajon Bank, Philippines, derived from a high-spatial-resolution multi-spectral satellite image and georeferenced point intercept transect and spot-check survey field data, using an object-based image classification method"
         }
     ],
-    fez_record_search_key_has_derivations: [],
     rek_status_lookup: "Published",
     rek_object_type_lookup: "Record",
     rek_wok_doc_type_lookup: null,
@@ -14974,7 +14999,6 @@ export const conferencePaperWithProceedingsTitle = {
     ],
     fez_record_search_key_has_datasets: [],
     fez_record_search_key_has_related_datasets: [],
-    fez_record_search_key_has_derivations: [],
     rek_status_lookup: "Published",
     rek_object_type_lookup: "Record",
     rek_wok_doc_type_lookup: null,
@@ -15280,7 +15304,6 @@ export const ntro = {
     fez_matched_journals: [],
     fez_record_search_key_has_datasets: [],
     fez_record_search_key_has_related_datasets: [],
-    fez_record_search_key_has_derivations: [],
     rek_display_type_lookup: "Creative Work",
     rek_pubmed_doc_type_lookup: null,
     rek_object_type_lookup: "Record",
@@ -15700,7 +15723,6 @@ export const ntro2 = {
     fez_matched_journals: [],
     fez_record_search_key_has_datasets: [],
     fez_record_search_key_has_related_datasets: [],
-    fez_record_search_key_has_derivations: [],
     rek_display_type_lookup: "Creative Work",
     rek_pubmed_doc_type_lookup: null,
     rek_object_type_lookup: "Record",
@@ -16058,7 +16080,6 @@ export const ntroMinimal = {
     fez_matched_journals: [],
     fez_record_search_key_has_datasets: [],
     fez_record_search_key_has_related_datasets: [],
-    fez_record_search_key_has_derivations: [],
     rek_display_type_lookup: "Creative Work",
     rek_pubmed_doc_type_lookup: null,
     rek_object_type_lookup: "Record",
@@ -19220,7 +19241,6 @@ export const communityRecord = {
     "fez_record_search_key_isderivationof": [],
     "fez_record_search_key_author_id": [],
     "fez_record_search_key_has_related_datasets": [],
-    "fez_record_search_key_has_derivations": [],
     "rek_display_type_lookup": "Community",
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Community",
@@ -19453,7 +19473,6 @@ export const collectionRecord = {
     "fez_record_search_key_isderivationof": [],
     "fez_record_search_key_author_id": [],
     "fez_record_search_key_has_related_datasets": [],
-    "fez_record_search_key_has_derivations": [],
     "rek_display_type_lookup": "Collection",
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Collection",
@@ -19790,7 +19809,6 @@ export const recordWithRDM = {
     "fez_record_search_key_scopus_id": null,
     "fez_record_search_key_isderivationof": [],
     "fez_record_search_key_has_related_datasets": [],
-    "fez_record_search_key_has_derivations": [],
     "rek_display_type_lookup": "Data Collection",
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Record",
@@ -20187,7 +20205,6 @@ export const recordWithRdmMediatedAccess = {
     "fez_record_search_key_scopus_id": null,
     "fez_record_search_key_isderivationof": [],
     "fez_record_search_key_has_related_datasets": [],
-    "fez_record_search_key_has_derivations": [],
     "rek_display_type_lookup": "Data Collection",
     "rek_pubmed_doc_type_lookup": null,
     "rek_object_type_lookup": "Record",

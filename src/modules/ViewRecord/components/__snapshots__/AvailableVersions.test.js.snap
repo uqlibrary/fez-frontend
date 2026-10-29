@@ -38,6 +38,19 @@ exports[`Available Versions Component  should render component 1`] = `
           <li>
             <p
               class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
+              data-testid="rek-isderivationof-0"
+            >
+              <a
+                data-discover="true"
+                href="/view/UQ:123456"
+              >
+                Published record
+              </a>
+            </p>
+          </li>
+          <li>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
               data-testid="rek-isderivationof-current"
             >
               Data collection mock testing record

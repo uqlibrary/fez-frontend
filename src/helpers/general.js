@@ -332,7 +332,6 @@ export function hydrateMock(truncatedData) {
         fez_record_search_key_zoorec_id: null,
         fez_record_search_key_isdatasetof: [],
         fez_record_search_key_has_related_datasets: [],
-        fez_record_search_key_has_derivations: [],
         fez_author_affiliation: [],
         fez_record_search_key_audience_size: null,
         fez_record_search_key_author_affiliation_id: [],
