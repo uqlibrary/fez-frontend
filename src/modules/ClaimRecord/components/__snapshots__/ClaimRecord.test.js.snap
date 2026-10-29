@@ -22,7 +22,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -50,13 +50,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -92,13 +92,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -231,7 +231,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css-1lzpyxx"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -252,7 +252,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                     </a>
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
-                                      class="scopusCitationCount css-1h1gyme"
+                                      class="scopusCitationCount css-1lzpyxx"
                                       data-analyticsid="scopus-citation-count-link"
                                       data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -273,7 +273,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                     </a>
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
-                                      class="altmetricCitationCount css-1h1gyme"
+                                      class="altmetricCitationCount css-1lzpyxx"
                                       data-analyticsid="altmetric-citation-count-link"
                                       data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
@@ -330,13 +330,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -361,7 +361,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                       data-testid="claim-comments"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-comments-label"
                         for="claim-comments-input"
@@ -370,12 +370,12 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                         Type changes or comments here
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-comments-input"
                           data-testid="claim-comments-input"
                           id="claim-comments-input"
@@ -386,7 +386,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -402,7 +402,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                       data-testid="claim-link"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-link-label"
                         for="claim-link-input"
@@ -411,12 +411,12 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                         Link (URL)
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-link-input"
                           data-testid="claim-link-input"
                           id="claim-link-input"
@@ -442,13 +442,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -460,7 +460,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1956hvo-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -498,7 +498,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     >
                       If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                     </p>
@@ -510,7 +510,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
@@ -518,13 +518,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-content-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"
                           role="combobox"
@@ -576,13 +576,13 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -603,7 +603,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-12x1xpo-MuiTypography-root"
                     >
                       You may add up to 10 files (max 5GB each)
                     </p>
@@ -636,7 +636,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                             >
                               <p
-                                class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-9yhr2x-MuiTypography-root"
                               >
                                 File upload restrictions
                               </p>
@@ -721,7 +721,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -732,7 +732,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-3yc0im-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="claimSubmit"
               data-testid="claim-record-submit"
               id="claimSubmit"
@@ -758,7 +758,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -786,13 +786,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -828,13 +828,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               Data collection mock testing record
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationDataCollection"
@@ -963,13 +963,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -1006,7 +1006,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-0"
                             data-testid="rek-author-id-0"
                             id="rek-author-id-0"
@@ -1029,7 +1029,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-0-name"
                               id="rek-author-id-0-name"
                               style="--Typography-textAlign: left;"
@@ -1038,7 +1038,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-0-order"
                             id="rek-author-id-0-order"
                           >
@@ -1062,13 +1062,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-editor-linking-header"
                     id="standard-card-editor-linking-header"
                   >
@@ -1105,7 +1105,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-contributor-id-0"
                             data-testid="rek-contributor-id-0"
                             id="rek-contributor-id-0"
@@ -1128,7 +1128,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-contributor-id-0-name"
                               id="rek-contributor-id-0-name"
                               style="--Typography-textAlign: left;"
@@ -1137,7 +1137,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-contributor-id-0-order"
                             id="rek-contributor-id-0-order"
                           >
@@ -1161,13 +1161,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -1192,7 +1192,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                       data-testid="claim-comments"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-comments-label"
                         for="claim-comments-input"
@@ -1201,12 +1201,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         Type changes or comments here
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-comments-input"
                           data-testid="claim-comments-input"
                           id="claim-comments-input"
@@ -1217,7 +1217,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -1233,7 +1233,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                       data-testid="claim-link"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-link-label"
                         for="claim-link-input"
@@ -1242,12 +1242,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         Link (URL)
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-link-input"
                           data-testid="claim-link-input"
                           id="claim-link-input"
@@ -1273,13 +1273,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -1300,7 +1300,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-12x1xpo-MuiTypography-root"
                     >
                       You may add up to 10 files (max 5GB each)
                     </p>
@@ -1333,7 +1333,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                             >
                               <p
-                                class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-9yhr2x-MuiTypography-root"
                               >
                                 File upload restrictions
                               </p>
@@ -1418,7 +1418,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -1429,7 +1429,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-3yc0im-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="claimSubmit"
               data-testid="claim-record-submit"
               id="claimSubmit"
@@ -1455,7 +1455,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1483,13 +1483,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -1525,13 +1525,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -1657,7 +1657,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css-1lzpyxx"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -1678,7 +1678,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     </a>
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
-                                      class="scopusCitationCount css-1h1gyme"
+                                      class="scopusCitationCount css-1lzpyxx"
                                       data-analyticsid="scopus-citation-count-link"
                                       data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -1699,7 +1699,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                     </a>
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
-                                      class="altmetricCitationCount css-1h1gyme"
+                                      class="altmetricCitationCount css-1lzpyxx"
                                       data-analyticsid="altmetric-citation-count-link"
                                       data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
@@ -1756,13 +1756,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -1799,7 +1799,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-0"
                             data-testid="rek-author-id-0"
                             id="rek-author-id-0"
@@ -1822,7 +1822,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-0-name"
                               id="rek-author-id-0-name"
                               style="--Typography-textAlign: left;"
@@ -1831,7 +1831,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-0-order"
                             id="rek-author-id-0-order"
                           >
@@ -1855,13 +1855,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -1886,7 +1886,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                       data-testid="claim-comments"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-comments-label"
                         for="claim-comments-input"
@@ -1895,12 +1895,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         Type changes or comments here
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-comments-input"
                           data-testid="claim-comments-input"
                           id="claim-comments-input"
@@ -1911,7 +1911,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -1927,7 +1927,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                       data-testid="claim-link"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-link-label"
                         for="claim-link-input"
@@ -1936,12 +1936,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         Link (URL)
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-link-input"
                           data-testid="claim-link-input"
                           id="claim-link-input"
@@ -1967,13 +1967,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -1985,7 +1985,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1956hvo-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -2023,7 +2023,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     >
                       If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                     </p>
@@ -2035,7 +2035,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
@@ -2043,13 +2043,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-content-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"
                           role="combobox"
@@ -2101,13 +2101,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -2128,7 +2128,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-12x1xpo-MuiTypography-root"
                     >
                       You may add up to 10 files (max 5GB each)
                     </p>
@@ -2161,7 +2161,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                             >
                               <p
-                                class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-9yhr2x-MuiTypography-root"
                               >
                                 File upload restrictions
                               </p>
@@ -2246,7 +2246,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -2257,7 +2257,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-3yc0im-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="claimSubmit"
               data-testid="claim-record-submit"
               id="claimSubmit"
@@ -2283,7 +2283,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2311,13 +2311,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -2353,13 +2353,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               Data collection mock testing record
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationDataCollection"
@@ -2481,13 +2481,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-editor-linking-header"
                     id="standard-card-editor-linking-header"
                   >
@@ -2524,7 +2524,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-contributor-id-0"
                             data-testid="rek-contributor-id-0"
                             id="rek-contributor-id-0"
@@ -2547,7 +2547,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-contributor-id-0-name"
                               id="rek-contributor-id-0-name"
                               style="--Typography-textAlign: left;"
@@ -2556,7 +2556,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-contributor-id-0-order"
                             id="rek-contributor-id-0-order"
                           >
@@ -2580,13 +2580,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -2611,7 +2611,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                       data-testid="claim-comments"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-comments-label"
                         for="claim-comments-input"
@@ -2620,12 +2620,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         Type changes or comments here
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-comments-input"
                           data-testid="claim-comments-input"
                           id="claim-comments-input"
@@ -2636,7 +2636,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -2652,7 +2652,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                       data-testid="claim-link"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-link-label"
                         for="claim-link-input"
@@ -2661,12 +2661,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         Link (URL)
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-link-input"
                           data-testid="claim-link-input"
                           id="claim-link-input"
@@ -2692,13 +2692,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -2719,7 +2719,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-12x1xpo-MuiTypography-root"
                     >
                       You may add up to 10 files (max 5GB each)
                     </p>
@@ -2752,7 +2752,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                             >
                               <p
-                                class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-9yhr2x-MuiTypography-root"
                               >
                                 File upload restrictions
                               </p>
@@ -2837,7 +2837,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -2848,7 +2848,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-3yc0im-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="claimSubmit"
               data-testid="claim-record-submit"
               id="claimSubmit"
@@ -2874,7 +2874,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -2902,13 +2902,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -2944,18 +2944,19 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
                                 href="/view/UQ:676287"
+                                tabindex="0"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                               </a>
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -3138,7 +3139,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css-1lzpyxx"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -3159,7 +3160,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     </a>
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
-                                      class="scopusCitationCount css-1h1gyme"
+                                      class="scopusCitationCount css-1lzpyxx"
                                       data-analyticsid="scopus-citation-count-link"
                                       data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -3180,7 +3181,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     </a>
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
-                                      class="altmetricCitationCount css-1h1gyme"
+                                      class="altmetricCitationCount css-1lzpyxx"
                                       data-analyticsid="altmetric-citation-count-link"
                                       data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
@@ -3201,7 +3202,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css-1lzpyxx"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -3253,13 +3254,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -3296,7 +3297,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-0"
                             data-testid="rek-author-id-0"
                             disabled=""
@@ -3320,7 +3321,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-0-name"
                               id="rek-author-id-0-name"
                               style="--Typography-textAlign: left;"
@@ -3329,7 +3330,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-0-order"
                             id="rek-author-id-0-order"
                           >
@@ -3346,7 +3347,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-1"
                             data-testid="rek-author-id-1"
                             id="rek-author-id-1"
@@ -3369,7 +3370,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-1-name"
                               id="rek-author-id-1-name"
                               style="--Typography-textAlign: left;"
@@ -3378,7 +3379,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-1-order"
                             id="rek-author-id-1-order"
                           >
@@ -3395,7 +3396,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-2"
                             data-testid="rek-author-id-2"
                             disabled=""
@@ -3419,7 +3420,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-2-name"
                               id="rek-author-id-2-name"
                               style="--Typography-textAlign: left;"
@@ -3428,7 +3429,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-2-order"
                             id="rek-author-id-2-order"
                           >
@@ -3445,7 +3446,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-3"
                             data-testid="rek-author-id-3"
                             disabled=""
@@ -3469,7 +3470,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-3-name"
                               id="rek-author-id-3-name"
                               style="--Typography-textAlign: left;"
@@ -3478,7 +3479,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-3-order"
                             id="rek-author-id-3-order"
                           >
@@ -3495,7 +3496,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-4"
                             data-testid="rek-author-id-4"
                             disabled=""
@@ -3519,7 +3520,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-4-name"
                               id="rek-author-id-4-name"
                               style="--Typography-textAlign: left;"
@@ -3528,7 +3529,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-4-order"
                             id="rek-author-id-4-order"
                           >
@@ -3545,7 +3546,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-5"
                             data-testid="rek-author-id-5"
                             disabled=""
@@ -3569,7 +3570,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-5-name"
                               id="rek-author-id-5-name"
                               style="--Typography-textAlign: left;"
@@ -3578,7 +3579,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-5-order"
                             id="rek-author-id-5-order"
                           >
@@ -3595,7 +3596,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-6"
                             data-testid="rek-author-id-6"
                             id="rek-author-id-6"
@@ -3618,7 +3619,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-6-name"
                               id="rek-author-id-6-name"
                               style="--Typography-textAlign: left;"
@@ -3627,7 +3628,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-6-order"
                             id="rek-author-id-6-order"
                           >
@@ -3644,7 +3645,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-7"
                             data-testid="rek-author-id-7"
                             disabled=""
@@ -3668,7 +3669,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-7-name"
                               id="rek-author-id-7-name"
                               style="--Typography-textAlign: left;"
@@ -3677,7 +3678,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-7-order"
                             id="rek-author-id-7-order"
                           >
@@ -3694,7 +3695,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-8"
                             data-testid="rek-author-id-8"
                             disabled=""
@@ -3718,7 +3719,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-8-name"
                               id="rek-author-id-8-name"
                               style="--Typography-textAlign: left;"
@@ -3727,7 +3728,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-8-order"
                             id="rek-author-id-8-order"
                           >
@@ -3751,13 +3752,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -3782,7 +3783,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                       data-testid="claim-comments"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-comments-label"
                         for="claim-comments-input"
@@ -3791,12 +3792,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         Type changes or comments here
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-comments-input"
                           data-testid="claim-comments-input"
                           id="claim-comments-input"
@@ -3807,7 +3808,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -3823,7 +3824,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                       data-testid="claim-link"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-link-label"
                         for="claim-link-input"
@@ -3832,12 +3833,12 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         Link (URL)
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-link-input"
                           data-testid="claim-link-input"
                           id="claim-link-input"
@@ -3863,13 +3864,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -3881,7 +3882,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1956hvo-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -3919,7 +3920,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     >
                       If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                     </p>
@@ -3931,7 +3932,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
@@ -3939,13 +3940,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-content-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"
                           role="combobox"
@@ -3997,13 +3998,13 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -4024,7 +4025,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-12x1xpo-MuiTypography-root"
                     >
                       You may add up to 10 files (max 5GB each)
                     </p>
@@ -4057,7 +4058,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                             >
                               <p
-                                class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-9yhr2x-MuiTypography-root"
                               >
                                 File upload restrictions
                               </p>
@@ -4142,7 +4143,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -4153,7 +4154,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-3yc0im-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="claimSubmit"
               data-testid="claim-record-submit"
               id="claimSubmit"
@@ -4179,7 +4180,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -4207,13 +4208,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -4249,18 +4250,19 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
                                 href="/view/UQ:676287"
+                                tabindex="0"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                               </a>
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -4443,7 +4445,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css-1lzpyxx"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -4464,7 +4466,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     </a>
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
-                                      class="scopusCitationCount css-1h1gyme"
+                                      class="scopusCitationCount css-1lzpyxx"
                                       data-analyticsid="scopus-citation-count-link"
                                       data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -4485,7 +4487,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     </a>
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
-                                      class="altmetricCitationCount css-1h1gyme"
+                                      class="altmetricCitationCount css-1lzpyxx"
                                       data-analyticsid="altmetric-citation-count-link"
                                       data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
@@ -4506,7 +4508,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css-1lzpyxx"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -4538,7 +4540,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                       >
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                           data-testid="rek-content-indicator"
                           id="rek-content-indicator"
                         >
@@ -4575,13 +4577,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-author-linking-header"
                     id="standard-card-author-linking-header"
                   >
@@ -4618,7 +4620,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-0"
                             data-testid="rek-author-id-0"
                             disabled=""
@@ -4642,7 +4644,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-0-name"
                               id="rek-author-id-0-name"
                               style="--Typography-textAlign: left;"
@@ -4651,7 +4653,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-0-order"
                             id="rek-author-id-0-order"
                           >
@@ -4668,7 +4670,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-1"
                             data-testid="rek-author-id-1"
                             id="rek-author-id-1"
@@ -4691,7 +4693,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-1-name"
                               id="rek-author-id-1-name"
                               style="--Typography-textAlign: left;"
@@ -4700,7 +4702,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-1-order"
                             id="rek-author-id-1-order"
                           >
@@ -4717,7 +4719,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-2"
                             data-testid="rek-author-id-2"
                             disabled=""
@@ -4741,7 +4743,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-2-name"
                               id="rek-author-id-2-name"
                               style="--Typography-textAlign: left;"
@@ -4750,7 +4752,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-2-order"
                             id="rek-author-id-2-order"
                           >
@@ -4767,7 +4769,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-3"
                             data-testid="rek-author-id-3"
                             disabled=""
@@ -4791,7 +4793,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-3-name"
                               id="rek-author-id-3-name"
                               style="--Typography-textAlign: left;"
@@ -4800,7 +4802,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-3-order"
                             id="rek-author-id-3-order"
                           >
@@ -4817,7 +4819,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-4"
                             data-testid="rek-author-id-4"
                             disabled=""
@@ -4841,7 +4843,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-4-name"
                               id="rek-author-id-4-name"
                               style="--Typography-textAlign: left;"
@@ -4850,7 +4852,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-4-order"
                             id="rek-author-id-4-order"
                           >
@@ -4867,7 +4869,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-5"
                             data-testid="rek-author-id-5"
                             disabled=""
@@ -4891,7 +4893,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-5-name"
                               id="rek-author-id-5-name"
                               style="--Typography-textAlign: left;"
@@ -4900,7 +4902,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-5-order"
                             id="rek-author-id-5-order"
                           >
@@ -4917,7 +4919,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-6"
                             data-testid="rek-author-id-6"
                             id="rek-author-id-6"
@@ -4940,7 +4942,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-6-name"
                               id="rek-author-id-6-name"
                               style="--Typography-textAlign: left;"
@@ -4949,7 +4951,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-6-order"
                             id="rek-author-id-6-order"
                           >
@@ -4966,7 +4968,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-7"
                             data-testid="rek-author-id-7"
                             disabled=""
@@ -4990,7 +4992,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-7-name"
                               id="rek-author-id-7-name"
                               style="--Typography-textAlign: left;"
@@ -4999,7 +5001,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-7-order"
                             id="rek-author-id-7-order"
                           >
@@ -5016,7 +5018,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-h3cks1-MuiGrid-root"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-4o41zx-MuiButtonBase-root-MuiButton-root"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-msz7mv-MuiButtonBase-root-MuiButton-root"
                             data-analyticsid="rek-author-id-8"
                             data-testid="rek-author-id-8"
                             disabled=""
@@ -5040,7 +5042,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               </svg>
                             </span>
                             <span
-                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-dbixxy-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-button MuiTypography-alignLeft css-ax3qjx-MuiTypography-root"
                               data-testid="rek-author-id-8-name"
                               id="rek-author-id-8-name"
                               style="--Typography-textAlign: left;"
@@ -5049,7 +5051,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                             </span>
                           </button>
                           <span
-                            class="MuiTypography-root MuiTypography-caption css-ig3rsp-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-caption css-1ig29w3-MuiTypography-root"
                             data-testid="rek-author-id-8-order"
                             id="rek-author-id-8-order"
                           >
@@ -5073,13 +5075,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                     id="standard-card-optional:-suggest-changes-or-add-links-to-this-work-header"
                   >
@@ -5104,7 +5106,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                       data-testid="claim-comments"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-comments-label"
                         for="claim-comments-input"
@@ -5113,12 +5115,12 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         Type changes or comments here
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                       >
                         <textarea
                           aria-invalid="false"
                           aria-label="Type changes or comments here"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-comments-input"
                           data-testid="claim-comments-input"
                           id="claim-comments-input"
@@ -5129,7 +5131,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         />
                         <textarea
                           aria-hidden="true"
-                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                           readonly=""
                           style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                           tabindex="-1"
@@ -5145,7 +5147,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                       data-testid="claim-link"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="claim-link-label"
                         for="claim-link-input"
@@ -5154,12 +5156,12 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         Link (URL)
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="false"
                           aria-label="Link (URL)"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="claim-link-input"
                           data-testid="claim-link-input"
                           id="claim-link-input"
@@ -5185,13 +5187,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-content-indicators-header"
                     id="standard-card-optional:-content-indicators-header"
                   >
@@ -5203,7 +5205,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1956hvo-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
                     data-testid="help-icon"
@@ -5241,7 +5243,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     >
                       If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                     </p>
@@ -5253,7 +5255,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         data-testid="rek-content-indicator-label"
                         id="rek-content-indicator-label"
@@ -5261,13 +5263,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                         Add any relevant indicator(s).
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-content-indicator-select"
-                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-content-indicator-select"
                           id="rek-content-indicator-select"
                           role="combobox"
@@ -5316,13 +5318,13 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-optional:-upload-additional-files-header"
                     id="standard-card-optional:-upload-additional-files-header"
                   >
@@ -5343,7 +5345,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-12x1xpo-MuiTypography-root"
                     >
                       You may add up to 10 files (max 5GB each)
                     </p>
@@ -5376,7 +5378,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
                             >
                               <p
-                                class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+                                class="MuiTypography-root MuiTypography-body1 css-9yhr2x-MuiTypography-root"
                               >
                                 File upload restrictions
                               </p>
@@ -5461,7 +5463,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -5472,7 +5474,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-ac5ujr-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-3yc0im-MuiButtonBase-root-MuiButton-root"
               data-analyticsid="claimSubmit"
               data-testid="claim-record-submit"
               id="claimSubmit"
@@ -5498,7 +5500,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -5526,13 +5528,13 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -5568,18 +5570,19 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
                                 href="/view/UQ:676287"
+                                tabindex="0"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                               </a>
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -5712,7 +5715,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css-1lzpyxx"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -5733,7 +5736,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     </a>
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
-                                      class="scopusCitationCount css-1h1gyme"
+                                      class="scopusCitationCount css-1lzpyxx"
                                       data-analyticsid="scopus-citation-count-link"
                                       data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -5754,7 +5757,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     </a>
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
-                                      class="altmetricCitationCount css-1h1gyme"
+                                      class="altmetricCitationCount css-1lzpyxx"
                                       data-analyticsid="altmetric-citation-count-link"
                                       data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
@@ -5775,7 +5778,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css-1lzpyxx"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -5820,7 +5823,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-tpfpyf-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -5876,7 +5879,7 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -5899,7 +5902,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -5927,13 +5930,13 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                     data-testid="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                     id="standard-card-you-are-claiming-to-be-an-author-for-the-following-work:-header"
                   >
@@ -5969,18 +5972,19 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                             style="min-width: 1px;"
                           >
                             <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
                                 href="/view/UQ:676287"
+                                tabindex="0"
                               >
                                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
                               </a>
                             </h6>
                           </div>
                           <div
-                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                           >
                             <span
                               class="citationContent citationJournalArticle"
@@ -6163,7 +6167,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                   >
                                     <a
                                       aria-label="Full citation in Web of science will open in a new window"
-                                      class="wosCitationCount css-1h1gyme"
+                                      class="wosCitationCount css-1lzpyxx"
                                       data-analyticsid="wos-citation-count-link"
                                       data-testid="wos-citation-count-link"
                                       href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D000405613400008"
@@ -6184,7 +6188,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                     </a>
                                     <a
                                       aria-label="Full citation in Scopus will open in a new window"
-                                      class="scopusCitationCount css-1h1gyme"
+                                      class="scopusCitationCount css-1lzpyxx"
                                       data-analyticsid="scopus-citation-count-link"
                                       data-testid="scopus-citation-count-link"
                                       href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85024119372%26origin%3Dinward"
@@ -6205,7 +6209,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                     </a>
                                     <a
                                       aria-label="Full citation in Altmetric will open in a new window"
-                                      class="altmetricCitationCount css-1h1gyme"
+                                      class="altmetricCitationCount css-1lzpyxx"
                                       data-analyticsid="altmetric-citation-count-link"
                                       data-testid="altmetric-citation-count-link"
                                       href="https://queensland.altmetric.com/details/20711411"
@@ -6226,7 +6230,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                     </a>
                                     <a
                                       aria-label="Full citation in Google scholar will open in a new window"
-                                      class="googleCitationCount css-1h1gyme"
+                                      class="googleCitationCount css-1lzpyxx"
                                       data-analyticsid="google-citation-count-link"
                                       data-testid="google-citation-count-link"
                                       href="https://scholar.google.com/scholar?q=intitle:TRPC1%20is%20a%20differential%20regulator%20of%20hypoxia-mediated%20events%20and%20Akt%20signalling%20in%20PTEN-deficient%20breast%20cancer%20cells"
@@ -6271,7 +6275,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
               style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-tpfpyf-MuiGrid-root"
               >
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
@@ -6327,7 +6331,7 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-2ra0ka-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth css-6ouvgt-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -6373,7 +6377,7 @@ exports[`Component ClaimRecord  snapshots should show the loader 1`] = `
               >
                 <span
                   aria-label="Loading"
-                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
                   role="progressbar"
                   style="width: 18px; height: 18px;"
                 >
@@ -6397,7 +6401,7 @@ exports[`Component ClaimRecord  snapshots should show the loader 1`] = `
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-c56spg-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Loading work to claim

@@ -7,7 +7,7 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-tonggy-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-tvzsph-MuiFormLabel-root"
       id="test-label"
     />
     <div
@@ -20,7 +20,7 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option A"
           >
             <input
@@ -44,7 +44,7 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
             </svg>
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
           >
             option A
           </span>
@@ -57,7 +57,7 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option b"
           >
             <input
@@ -81,7 +81,7 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
             </svg>
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
           >
             option b
           </span>
@@ -90,11 +90,11 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
           class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-147kugr-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-2tphw8-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+              class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-b-option-text"
               data-testid="test-b-option-text"
               id="test-b-option-text"
@@ -117,7 +117,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-tonggy-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-tvzsph-MuiFormLabel-root"
       id="test-label"
     />
     <div
@@ -130,7 +130,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option A"
           >
             <input
@@ -154,7 +154,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
             </svg>
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
           >
             option A
           </span>
@@ -167,7 +167,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
             label="option b"
           >
             <input
@@ -191,7 +191,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
             </svg>
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
           >
             option b
           </span>
@@ -200,11 +200,11 @@ exports[`CheckboxGroup tests renders an error 1`] = `
           class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-147kugr-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-2tphw8-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+              class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-b-option-text"
               data-testid="test-b-option-text"
               id="test-b-option-text"
@@ -217,7 +217,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-1puf113-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-3wbiaq-MuiFormHelperText-root"
     >
       Something bad happened
     </p>

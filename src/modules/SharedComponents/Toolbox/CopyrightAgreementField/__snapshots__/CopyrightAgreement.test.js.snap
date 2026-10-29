@@ -6,7 +6,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
     class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-oretft-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-k4pgs2-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
@@ -15,6 +15,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
         data-indeterminate="false"
         data-testid="test-input"
         id="test-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg
@@ -30,7 +31,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-24vhrn-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-jraxzp-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >
@@ -46,7 +47,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
     class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-16v659t-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-oretft-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-k4pgs2-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -54,6 +55,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
         data-indeterminate="false"
         data-testid="test-input"
         id="test-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg
@@ -69,7 +71,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-1cbqqc9-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-xrcawp-MuiTypography-root"
       data-testid="test-label"
       id="test-label"
     >

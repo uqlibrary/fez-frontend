@@ -24,14 +24,14 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Title
@@ -56,7 +56,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
               >
                 <span>
                   <span
-                    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                     style="opacity: 0.666;"
                   >
                     Formatted title
@@ -66,7 +66,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                   </span>
                 </span>
                 <div
-                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                  class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-1rmbo06-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                 >
                   <div
                     class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
@@ -85,7 +85,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                             class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
                           >
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -95,7 +95,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + B"
                                   aria-label="Bold"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Bold"
@@ -115,7 +115,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -125,7 +125,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + I"
                                   aria-label="Italic"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Italic"
@@ -145,7 +145,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -155,7 +155,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + U"
                                   aria-label="Underline"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Underline"
@@ -175,7 +175,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -185,7 +185,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + S"
                                   aria-label="Strikethrough"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Strikethrough"
@@ -205,7 +205,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -215,7 +215,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + ,"
                                   aria-label="Subscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Subscript"
@@ -235,7 +235,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -245,7 +245,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + ."
                                   aria-label="Superscript"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Superscript"
@@ -270,7 +270,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -279,7 +279,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                 <button
                                   aria-label="Change case"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Change case"
@@ -306,7 +306,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -315,7 +315,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                 <button
                                   aria-label="Remove inline formatting"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Remove inline formatting"
@@ -336,7 +336,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                             </span>
                             <span>
                               <span
-                                class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                               >
                                 <span
                                   class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -345,7 +345,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   <button
                                     aria-label="Insert special character"
                                     aria-pressed="false"
-                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                    class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                     tabindex="0"
                                     type="button"
                                     value="Insert special character"
@@ -365,7 +365,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               role="separator"
                             />
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -375,7 +375,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + Z"
                                   aria-label="Undo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   tabindex="0"
                                   type="button"
                                   value="Undo"
@@ -395,7 +395,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                               </span>
                             </span>
                             <span
-                              class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                              class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                             >
                               <span
                                 class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -405,7 +405,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                                   aria-description="Ctrl + Shift + Z"
                                   aria-label="Redo"
                                   aria-pressed="false"
-                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                  class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                   disabled=""
                                   tabindex="-1"
                                   type="button"
@@ -431,7 +431,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
                     </div>
                   </div>
                   <div
-                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                    class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-zrfu7m-MuiTiptap-RichTextContent-root"
                   >
                     <div
                       class="tiptap ProseMirror"
@@ -478,7 +478,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
       >
         <span>
           <span
-            class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
             style="opacity: 0.666;"
           >
             Formatted title
@@ -488,7 +488,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
           </span>
         </span>
         <div
-          class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+          class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-1rmbo06-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
         >
           <div
             class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
@@ -507,7 +507,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                     class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
                   >
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -517,7 +517,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + B"
                           aria-label="Bold"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Bold"
@@ -537,7 +537,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -547,7 +547,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + I"
                           aria-label="Italic"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Italic"
@@ -567,7 +567,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -577,7 +577,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + U"
                           aria-label="Underline"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Underline"
@@ -597,7 +597,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -607,7 +607,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + Shift + S"
                           aria-label="Strikethrough"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Strikethrough"
@@ -627,7 +627,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -637,7 +637,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + ,"
                           aria-label="Subscript"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Subscript"
@@ -657,7 +657,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -667,7 +667,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + ."
                           aria-label="Superscript"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Superscript"
@@ -692,7 +692,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       role="separator"
                     />
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -701,7 +701,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                         <button
                           aria-label="Change case"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Change case"
@@ -728,7 +728,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -737,7 +737,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                         <button
                           aria-label="Remove inline formatting"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Remove inline formatting"
@@ -758,7 +758,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                     </span>
                     <span>
                       <span
-                        class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                        class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                       >
                         <span
                           class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -767,7 +767,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           <button
                             aria-label="Insert special character"
                             aria-pressed="false"
-                            class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                            class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                             tabindex="0"
                             type="button"
                             value="Insert special character"
@@ -787,7 +787,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       role="separator"
                     />
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -797,7 +797,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + Z"
                           aria-label="Undo"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Undo"
@@ -817,7 +817,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                     >
                       <span
                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -827,7 +827,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
                           aria-description="Ctrl + Shift + Z"
                           aria-label="Redo"
                           aria-pressed="false"
-                          class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                           disabled=""
                           tabindex="-1"
                           type="button"
@@ -853,7 +853,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
             </div>
           </div>
           <div
-            class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+            class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-zrfu7m-MuiTiptap-RichTextContent-root"
           >
             <div
               class="tiptap ProseMirror"
@@ -905,14 +905,14 @@ exports[`Section component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Title
