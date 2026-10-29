@@ -200,6 +200,11 @@ export const commonThemeOverrides = {
                 '&.Mui-focusVisible:not(.MuiSwitch-switchBase, .MuiCheckbox-root, .MuiRadio-root)': {
                     ...dsOutlineStandard,
                 },
+                '&.Mui-focusVisible:is(.MuiTableSortLabel-root)': {
+                    outlineWidth: '2px',
+                    outlineOffset: '-2px',
+                    opacity: 1,
+                },
                 // keep the standard outline, but make it visible on the purple header
                 'header &.Mui-focusVisible:not(.MuiSwitch-switchBase)': {
                     ...dsOutlineStandard,
@@ -222,8 +227,9 @@ export const commonThemeOverrides = {
             // outline the switch thumb only when the input has keyboard focus
             switchBase: {
                 '&.Mui-focusVisible .MuiSwitch-thumb': {
+                    ...dsOutlineStandard,
                     outline: `4px solid ${ds.colour.utility[500]}`,
-                    outlineOffset: '0px', // Prevents the outline from touching the text
+                    outlineOffset: '0px',
                 },
             },
         },
@@ -247,6 +253,16 @@ export const commonThemeOverrides = {
             root: {
                 '&:focus-visible': {
                     ...dsOutlineStandard,
+                },
+            },
+        },
+    },
+
+    MuiTab: {
+        styleOverrides: {
+            root: {
+                '&.Mui-focusVisible.MuiTab-root': {
+                    outlineOffset: '-4px',
                 },
             },
         },
@@ -303,6 +319,9 @@ export const mui1theme = createTheme(
                     // Disable ripple for jest tests
                     disableRipple: IS_JEST_TEST,
                 },
+            },
+
+            MuiButton: {
                 styleOverrides: {
                     root: {
                         variants: [
@@ -329,18 +348,18 @@ export const mui1theme = createTheme(
                     noSsr: true,
                 },
             },
-            MuiDataGrid: {
-                styleOverrides: {
-                    root: {
-                        '& .MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
-                            outline: 'none',
-                        },
-                        '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
-                            outline: 'none',
-                        },
-                    },
-                },
-            },
+            // MuiDataGrid: { // might need this to come back
+            //     styleOverrides: {
+            //         root: {
+            //             '& .MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
+            //                 outline: 'none',
+            //             },
+            //             '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
+            //                 outline: 'none',
+            //             },
+            //         },
+            //     },
+            // },
         },
         graphs: {
             color1: '#d72865',
