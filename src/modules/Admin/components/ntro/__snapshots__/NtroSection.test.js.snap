@@ -24,14 +24,14 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Scale/Significance of work & Creator research statement
@@ -63,7 +63,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
                           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -86,7 +86,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                         </svg>
                       </span>
                       <div
-                        class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-z7ly6e-MuiTypography-root"
                         data-testid="empty-significance-statement-label"
                         id="empty-significance-statement-label"
                       >
@@ -102,7 +102,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-significance-label"
                         id="rek-significance-label"
@@ -117,7 +117,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -125,7 +125,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                           aria-invalid="true"
                           aria-labelledby="rek-significance-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
                           id="rek-significance-select"
                           role="combobox"
@@ -163,7 +163,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1puf113-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-3wbiaq-MuiFormHelperText-root"
                         data-testid="rek-significance-helper-text"
                         id="rek-significance-helper-text"
                       />
@@ -179,7 +179,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                     >
                       <span>
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                           style="opacity: 0.666;"
                         >
                           Creator research statement
@@ -189,7 +189,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                         </span>
                       </span>
                       <div
-                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-1rmbo06-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                       >
                         <div
                           class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
@@ -208,7 +208,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                   class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
                                 >
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -218,7 +218,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + B"
                                         aria-label="Bold"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bold"
@@ -238,7 +238,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -248,7 +248,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + I"
                                         aria-label="Italic"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Italic"
@@ -268,7 +268,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -278,7 +278,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + U"
                                         aria-label="Underline"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Underline"
@@ -298,7 +298,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -308,7 +308,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + Shift + S"
                                         aria-label="Strikethrough"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Strikethrough"
@@ -328,7 +328,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -338,7 +338,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + ,"
                                         aria-label="Subscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Subscript"
@@ -358,7 +358,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -368,7 +368,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + ."
                                         aria-label="Superscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Superscript"
@@ -393,7 +393,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -403,7 +403,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + Shift + U"
                                         aria-label="Link"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Link"
@@ -423,7 +423,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -433,7 +433,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + Shift + 7"
                                         aria-label="Ordered list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Ordered list"
@@ -453,7 +453,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -463,7 +463,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + Shift + 8"
                                         aria-label="Bulleted list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bulleted list"
@@ -488,7 +488,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -497,7 +497,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                       <button
                                         aria-label="Change case"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Change case"
@@ -524,7 +524,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -533,7 +533,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                       <button
                                         aria-label="Remove inline formatting"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Remove inline formatting"
@@ -554,7 +554,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                   </span>
                                   <span>
                                     <span
-                                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                     >
                                       <span
                                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -563,7 +563,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         <button
                                           aria-label="Insert special character"
                                           aria-pressed="false"
-                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                           tabindex="0"
                                           type="button"
                                           value="Insert special character"
@@ -583,7 +583,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -593,7 +593,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + Z"
                                         aria-label="Undo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Undo"
@@ -613,7 +613,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -623,7 +623,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                                         aria-description="Ctrl + Shift + Z"
                                         aria-label="Redo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -649,7 +649,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-zrfu7m-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -677,7 +677,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-9 css-ilteg3-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-add"
                       data-testid="rek-significance-add"
                       disabled=""
@@ -692,7 +692,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-clear"
                       data-testid="rek-significance-clear"
                       id="clear-items"
@@ -713,7 +713,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                       >
                         Author - Scale/significance of work - Creator research statement
                       </span>
@@ -727,7 +727,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                         data-mui-internal-clone-element="true"
                       >
                         <button
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
                           id="delete-all-rek-significance"
@@ -755,7 +755,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                   id="rek-significance-list"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
@@ -786,14 +786,14 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Quality indicators
@@ -815,7 +815,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-quality-indicator-label"
                   id="rek-quality-indicator-label"
@@ -823,13 +823,13 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                   Quality indicators
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"
                     role="combobox"
@@ -899,14 +899,14 @@ exports[`NtroSection component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Scale/Significance of work & Creator research statement
@@ -938,7 +938,7 @@ exports[`NtroSection component should render default view 1`] = `
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
                           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -961,7 +961,7 @@ exports[`NtroSection component should render default view 1`] = `
                         </svg>
                       </span>
                       <div
-                        class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-z7ly6e-MuiTypography-root"
                         data-testid="empty-significance-statement-label"
                         id="empty-significance-statement-label"
                       >
@@ -977,7 +977,7 @@ exports[`NtroSection component should render default view 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-significance-label"
                         id="rek-significance-label"
@@ -992,7 +992,7 @@ exports[`NtroSection component should render default view 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -1000,7 +1000,7 @@ exports[`NtroSection component should render default view 1`] = `
                           aria-invalid="true"
                           aria-labelledby="rek-significance-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
                           id="rek-significance-select"
                           role="combobox"
@@ -1038,7 +1038,7 @@ exports[`NtroSection component should render default view 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1puf113-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-3wbiaq-MuiFormHelperText-root"
                         data-testid="rek-significance-helper-text"
                         id="rek-significance-helper-text"
                       />
@@ -1054,7 +1054,7 @@ exports[`NtroSection component should render default view 1`] = `
                     >
                       <span>
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                           style="opacity: 0.666;"
                         >
                           Creator research statement
@@ -1064,7 +1064,7 @@ exports[`NtroSection component should render default view 1`] = `
                         </span>
                       </span>
                       <div
-                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-1rmbo06-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                       >
                         <div
                           class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
@@ -1083,7 +1083,7 @@ exports[`NtroSection component should render default view 1`] = `
                                   class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
                                 >
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1093,7 +1093,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + B"
                                         aria-label="Bold"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bold"
@@ -1113,7 +1113,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1123,7 +1123,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + I"
                                         aria-label="Italic"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Italic"
@@ -1143,7 +1143,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1153,7 +1153,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + U"
                                         aria-label="Underline"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Underline"
@@ -1173,7 +1173,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1183,7 +1183,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + Shift + S"
                                         aria-label="Strikethrough"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Strikethrough"
@@ -1203,7 +1203,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1213,7 +1213,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + ,"
                                         aria-label="Subscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Subscript"
@@ -1233,7 +1233,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1243,7 +1243,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + ."
                                         aria-label="Superscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Superscript"
@@ -1268,7 +1268,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1278,7 +1278,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + Shift + U"
                                         aria-label="Link"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Link"
@@ -1298,7 +1298,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1308,7 +1308,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + Shift + 7"
                                         aria-label="Ordered list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Ordered list"
@@ -1328,7 +1328,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1338,7 +1338,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + Shift + 8"
                                         aria-label="Bulleted list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bulleted list"
@@ -1363,7 +1363,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1372,7 +1372,7 @@ exports[`NtroSection component should render default view 1`] = `
                                       <button
                                         aria-label="Change case"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Change case"
@@ -1399,7 +1399,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1408,7 +1408,7 @@ exports[`NtroSection component should render default view 1`] = `
                                       <button
                                         aria-label="Remove inline formatting"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Remove inline formatting"
@@ -1429,7 +1429,7 @@ exports[`NtroSection component should render default view 1`] = `
                                   </span>
                                   <span>
                                     <span
-                                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                     >
                                       <span
                                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1438,7 +1438,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         <button
                                           aria-label="Insert special character"
                                           aria-pressed="false"
-                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                           tabindex="0"
                                           type="button"
                                           value="Insert special character"
@@ -1458,7 +1458,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1468,7 +1468,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + Z"
                                         aria-label="Undo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Undo"
@@ -1488,7 +1488,7 @@ exports[`NtroSection component should render default view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1498,7 +1498,7 @@ exports[`NtroSection component should render default view 1`] = `
                                         aria-description="Ctrl + Shift + Z"
                                         aria-label="Redo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -1524,7 +1524,7 @@ exports[`NtroSection component should render default view 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-zrfu7m-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -1552,7 +1552,7 @@ exports[`NtroSection component should render default view 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-9 css-ilteg3-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-add"
                       data-testid="rek-significance-add"
                       disabled=""
@@ -1567,7 +1567,7 @@ exports[`NtroSection component should render default view 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-clear"
                       data-testid="rek-significance-clear"
                       id="clear-items"
@@ -1588,7 +1588,7 @@ exports[`NtroSection component should render default view 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                       >
                         Author - Scale/significance of work - Creator research statement
                       </span>
@@ -1602,7 +1602,7 @@ exports[`NtroSection component should render default view 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
                           id="delete-all-rek-significance"
@@ -1630,7 +1630,7 @@ exports[`NtroSection component should render default view 1`] = `
                   id="rek-significance-list"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
@@ -1661,14 +1661,14 @@ exports[`NtroSection component should render default view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Quality indicators
@@ -1690,7 +1690,7 @@ exports[`NtroSection component should render default view 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-quality-indicator-label"
                   id="rek-quality-indicator-label"
@@ -1698,13 +1698,13 @@ exports[`NtroSection component should render default view 1`] = `
                   Quality indicators
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"
                     role="combobox"
@@ -1774,14 +1774,14 @@ exports[`NtroSection component should render design form fields 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Scale/Significance of work & Creator research statement
@@ -1813,7 +1813,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
                           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -1836,7 +1836,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                         </svg>
                       </span>
                       <div
-                        class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-z7ly6e-MuiTypography-root"
                         data-testid="empty-significance-statement-label"
                         id="empty-significance-statement-label"
                       >
@@ -1852,7 +1852,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-significance-label"
                         id="rek-significance-label"
@@ -1867,7 +1867,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
@@ -1875,7 +1875,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                           aria-invalid="true"
                           aria-labelledby="rek-significance-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
                           id="rek-significance-select"
                           role="combobox"
@@ -1913,7 +1913,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1puf113-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-3wbiaq-MuiFormHelperText-root"
                         data-testid="rek-significance-helper-text"
                         id="rek-significance-helper-text"
                       />
@@ -1929,7 +1929,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                     >
                       <span>
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                           style="opacity: 0.666;"
                         >
                           Creator research statement
@@ -1939,7 +1939,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                         </span>
                       </span>
                       <div
-                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-1rmbo06-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                       >
                         <div
                           class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
@@ -1958,7 +1958,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                   class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
                                 >
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1968,7 +1968,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + B"
                                         aria-label="Bold"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bold"
@@ -1988,7 +1988,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -1998,7 +1998,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + I"
                                         aria-label="Italic"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Italic"
@@ -2018,7 +2018,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2028,7 +2028,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + U"
                                         aria-label="Underline"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Underline"
@@ -2048,7 +2048,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2058,7 +2058,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + Shift + S"
                                         aria-label="Strikethrough"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Strikethrough"
@@ -2078,7 +2078,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2088,7 +2088,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + ,"
                                         aria-label="Subscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Subscript"
@@ -2108,7 +2108,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2118,7 +2118,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + ."
                                         aria-label="Superscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Superscript"
@@ -2143,7 +2143,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2153,7 +2153,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + Shift + U"
                                         aria-label="Link"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Link"
@@ -2173,7 +2173,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2183,7 +2183,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + Shift + 7"
                                         aria-label="Ordered list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Ordered list"
@@ -2203,7 +2203,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2213,7 +2213,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + Shift + 8"
                                         aria-label="Bulleted list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Bulleted list"
@@ -2238,7 +2238,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2247,7 +2247,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                       <button
                                         aria-label="Change case"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Change case"
@@ -2274,7 +2274,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2283,7 +2283,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                       <button
                                         aria-label="Remove inline formatting"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Remove inline formatting"
@@ -2304,7 +2304,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                   </span>
                                   <span>
                                     <span
-                                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                     >
                                       <span
                                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2313,7 +2313,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         <button
                                           aria-label="Insert special character"
                                           aria-pressed="false"
-                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                           tabindex="0"
                                           type="button"
                                           value="Insert special character"
@@ -2333,7 +2333,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2343,7 +2343,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + Z"
                                         aria-label="Undo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         tabindex="0"
                                         type="button"
                                         value="Undo"
@@ -2363,7 +2363,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2373,7 +2373,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                                         aria-description="Ctrl + Shift + Z"
                                         aria-label="Redo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -2399,7 +2399,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-qnu64u-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-zrfu7m-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -2427,7 +2427,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-9 css-ilteg3-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-add"
                       data-testid="rek-significance-add"
                       disabled=""
@@ -2442,7 +2442,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-clear"
                       data-testid="rek-significance-clear"
                       id="clear-items"
@@ -2463,7 +2463,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                       >
                         Author - Scale/significance of work - Creator research statement
                       </span>
@@ -2477,7 +2477,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
-                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
                           id="delete-all-rek-significance"
@@ -2505,7 +2505,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                   id="rek-significance-list"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
@@ -2536,14 +2536,14 @@ exports[`NtroSection component should render design form fields 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Quality indicators
@@ -2565,7 +2565,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-quality-indicator-label"
                   id="rek-quality-indicator-label"
@@ -2573,13 +2573,13 @@ exports[`NtroSection component should render design form fields 1`] = `
                   Quality indicators
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
-                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"
                     role="combobox"
@@ -2649,14 +2649,14 @@ exports[`NtroSection component should render disabled view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Scale/Significance of work & Creator research statement
@@ -2688,7 +2688,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                       class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
                     >
                       <span
-                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                       >
                         <input
                           class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -2711,7 +2711,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                         </svg>
                       </span>
                       <div
-                        class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-body1 css-z7ly6e-MuiTypography-root"
                         data-testid="empty-significance-statement-label"
                         id="empty-significance-statement-label"
                       >
@@ -2727,7 +2727,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                       class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-significance-label"
                         id="rek-significance-label"
@@ -2742,7 +2742,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-disabled="true"
@@ -2751,7 +2751,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                           aria-invalid="true"
                           aria-labelledby="rek-significance-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
                           id="rek-significance-select"
                           role="combobox"
@@ -2789,7 +2789,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1puf113-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-3wbiaq-MuiFormHelperText-root"
                         data-testid="rek-significance-helper-text"
                         id="rek-significance-helper-text"
                       />
@@ -2805,7 +2805,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                     >
                       <span>
                         <span
-                          class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                           style="opacity: 0.666;"
                         >
                           Creator research statement
@@ -2815,7 +2815,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                         </span>
                       </span>
                       <div
-                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiTiptap-FieldContainer-disabled MuiBox-root css-dvydy0-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+                        class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiTiptap-FieldContainer-disabled MuiBox-root css-119jdxy-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
                       >
                         <div
                           class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
@@ -2834,7 +2834,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                   class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
                                 >
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2844,7 +2844,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + B"
                                         aria-label="Bold"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -2865,7 +2865,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2875,7 +2875,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + I"
                                         aria-label="Italic"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -2896,7 +2896,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2906,7 +2906,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + U"
                                         aria-label="Underline"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -2927,7 +2927,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2937,7 +2937,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + Shift + S"
                                         aria-label="Strikethrough"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -2958,7 +2958,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2968,7 +2968,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + ,"
                                         aria-label="Subscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -2989,7 +2989,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -2999,7 +2999,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + ."
                                         aria-label="Superscript"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3025,7 +3025,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3035,7 +3035,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + Shift + U"
                                         aria-label="Link"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3056,7 +3056,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3066,7 +3066,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + Shift + 7"
                                         aria-label="Ordered list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3087,7 +3087,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3097,7 +3097,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + Shift + 8"
                                         aria-label="Bulleted list"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3123,7 +3123,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3132,7 +3132,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                       <button
                                         aria-label="Change case"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3160,7 +3160,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3169,7 +3169,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                       <button
                                         aria-label="Remove inline formatting"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3191,7 +3191,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                   </span>
                                   <span>
                                     <span
-                                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                      class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                     >
                                       <span
                                         class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3200,7 +3200,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         <button
                                           aria-label="Insert special character"
                                           aria-pressed="false"
-                                          class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                          class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                           disabled=""
                                           tabindex="-1"
                                           type="button"
@@ -3221,7 +3221,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     role="separator"
                                   />
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3231,7 +3231,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + Z"
                                         aria-label="Undo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3252,7 +3252,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                                    class="MuiTiptap-MenuButton-root css-1yykdei-MuiTiptap-MenuButton-root"
                                   >
                                     <span
                                       class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
@@ -3262,7 +3262,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                                         aria-description="Ctrl + Shift + Z"
                                         aria-label="Redo"
                                         aria-pressed="false"
-                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-hj3cv9-MuiButtonBase-root-MuiToggleButton-root"
+                                        class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-dpk1gu-MuiButtonBase-root-MuiToggleButton-root"
                                         disabled=""
                                         tabindex="-1"
                                         type="button"
@@ -3288,7 +3288,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-qnu64u-MuiTiptap-RichTextContent-root"
+                          class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-readonly css-zrfu7m-MuiTiptap-RichTextContent-root"
                         >
                           <div
                             class="tiptap ProseMirror"
@@ -3315,7 +3315,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-9 css-ilteg3-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-add"
                       data-testid="rek-significance-add"
                       disabled=""
@@ -3330,7 +3330,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="rek-significance-clear"
                       data-testid="rek-significance-clear"
                       disabled=""
@@ -3352,7 +3352,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-11 css-1x6o1g1-MuiGrid-root"
                     >
                       <span
-                        class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                       >
                         Author - Scale/significance of work - Creator research statement
                       </span>
@@ -3366,7 +3366,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
-                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
                           disabled=""
@@ -3395,7 +3395,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                   id="rek-significance-list"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                     style="text-align: center; font-size: 0.875rem; padding: 16px; border-bottom: 1px solid rgb(224, 224, 224);"
                   >
                     No records to display
@@ -3426,14 +3426,14 @@ exports[`NtroSection component should render disabled view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <hr
-                  class="MuiBox-root css-1a7sacs"
+                  class="MuiBox-root css-19tp3v2"
                 />
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
               >
                 <h4
-                  class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
                 >
                    
                   Quality indicators
@@ -3455,7 +3455,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                 class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-quality-indicator-label"
                   id="rek-quality-indicator-label"
@@ -3463,14 +3463,14 @@ exports[`NtroSection component should render disabled view 1`] = `
                   Quality indicators
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 >
                   <div
                     aria-disabled="true"
                     aria-expanded="false"
                     aria-haspopup="listbox"
                     aria-labelledby="rek-quality-indicator-select"
-                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                    class="MuiSelect-select MuiSelect-standard Mui-disabled MuiSelect-multiple MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                     data-testid="rek-quality-indicator-select"
                     id="rek-quality-indicator-select"
                     role="combobox"

@@ -17,7 +17,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="rek-related-service-id"
             id="rek-related-service-id-label"
@@ -32,7 +32,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1bepcjx-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-autocomplete="list"
@@ -41,7 +41,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
               aria-invalid="true"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1jyne0q-MuiInputBase-input-MuiInput-input"
               data-analyticsid="rek-related-service-id-input"
               data-testid="rek-related-service-id-input"
               id="rek-related-service-id"
@@ -55,7 +55,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
             />
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-3wbiaq-MuiFormHelperText-root"
             data-testid="rek-related-service-id-helper-text"
             id="rek-related-service-id-helper-text"
           >
@@ -72,7 +72,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
         data-testid="rek-related-service-desc"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
           data-testid="rek-related-service-desc-label"
           for="rek-related-service-desc-input"
@@ -81,12 +81,12 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
           Related Service Description
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
         >
           <input
             aria-invalid="false"
             aria-label="Related Service Description"
-            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+            class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
             data-analyticsid="rek-related-service-desc-input"
             data-testid="rek-related-service-desc-input"
             id="rek-related-service-desc-input"
@@ -103,7 +103,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
         data-analyticsid="rek-related-service-add"
         data-testid="rek-related-service-add"
         disabled=""

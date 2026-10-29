@@ -9,13 +9,13 @@ exports[`Component AcknowledgementOfCountry should render component 1`] = `
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiCardHeader-root css-ckg9hn-MuiCardHeader-root"
+      class="MuiCardHeader-root css-12lujhd-MuiCardHeader-root"
     >
       <div
         class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
           data-testid="standard-card-acknowledgement-of-country-header"
           id="standard-card-acknowledgement-of-country-header"
         >
@@ -30,7 +30,7 @@ exports[`Component AcknowledgementOfCountry should render component 1`] = `
       id="standard-card-acknowledgement-of-country-content"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
       >
         <span>
           The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.

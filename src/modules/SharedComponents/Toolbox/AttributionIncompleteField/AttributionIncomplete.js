@@ -25,13 +25,16 @@ export const AttributionIncomplete = ({
                 disabled={disabled}
                 control={
                     <Checkbox
-                        inputProps={{
-                            'data-analyticsid': 'attributionIncomplete-input',
-                            'data-testid': 'attributionIncomplete-input',
-                            id: 'attributionIncomplete-input',
-                        }}
                         checked={isAttributionIncomplete}
                         onChange={_handleChange}
+                        slotProps={{
+                            input: {
+                                tabIndex: 0,
+                                'data-analyticsid': 'attributionIncomplete-input',
+                                'data-testid': 'attributionIncomplete-input',
+                                id: 'attributionIncomplete-input',
+                            },
+                        }}
                     />
                 }
                 label={

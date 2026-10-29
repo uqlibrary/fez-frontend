@@ -12,21 +12,21 @@ exports[`PublicationsListSorting component has the correct display type options 
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-by-label"
         >
           Sort results by
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-by"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -60,21 +60,21 @@ exports[`PublicationsListSorting component has the correct display type options 
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-order-label"
         >
           Sort order
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-order"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -108,21 +108,21 @@ exports[`PublicationsListSorting component has the correct display type options 
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="page-size-label"
         >
           Works per page
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-page-size"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -156,21 +156,21 @@ exports[`PublicationsListSorting component has the correct display type options 
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="display-records-as-label"
         >
           Display results
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-display-records-as"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="display-records-as-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -221,21 +221,21 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-by-label"
         >
           Sort results by
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-by"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -269,21 +269,21 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-order-label"
         >
           Sort order
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-order"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -317,21 +317,21 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="page-size-label"
         >
           Works per page
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-page-size"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -365,21 +365,21 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="display-records-as-label"
         >
           Display results
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-display-records-as"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="display-records-as-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -413,21 +413,21 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="export-publications-format-label"
         >
           Export page results
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="export-publications-format"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="export-publications-format-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="export-publications-format-select"
             role="combobox"
             tabindex="0"
@@ -480,21 +480,21 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-by-label"
         >
           Sort results by
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-by"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -528,21 +528,21 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-order-label"
         >
           Sort order
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-order"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -576,21 +576,21 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="page-size-label"
         >
           Works per page
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-page-size"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -624,21 +624,21 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="export-publications-format-label"
         >
           Export page results
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="export-publications-format"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="export-publications-format-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="export-publications-format-select"
             role="combobox"
             tabindex="0"
@@ -683,21 +683,21 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-by-label"
         >
           Sort results by
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-by"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -731,21 +731,21 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-order-label"
         >
           Sort order
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-order"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -779,21 +779,21 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="page-size-label"
         >
           Works per page
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-page-size"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -836,21 +836,21 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-by-label"
         >
           Sort results by
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-by"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -884,21 +884,21 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-order-label"
         >
           Sort order
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-order"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -932,21 +932,21 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="page-size-label"
         >
           Works per page
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-page-size"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -989,21 +989,21 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-by-label"
         >
           Sort results by
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-by"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -1037,21 +1037,21 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-order-label"
         >
           Sort order
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-order"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -1085,21 +1085,21 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="page-size-label"
         >
           Works per page
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-page-size"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -1142,21 +1142,21 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-by-label"
         >
           Sort results by
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-by"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-by-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -1190,21 +1190,21 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="sort-order-label"
         >
           Sort order
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-sort-order"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="sort-order-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >
@@ -1238,21 +1238,21 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="page-size-label"
         >
           Works per page
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           data-testid="publication-list-sorting-page-size"
         >
           <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="page-size-label"
-            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             role="combobox"
             tabindex="0"
           >

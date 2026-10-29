@@ -15,13 +15,13 @@ exports[`ConferencePaperForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-conference-paper-information-header"
               id="standard-card-conference-paper-information-header"
             >
@@ -46,7 +46,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="rek_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="true"
                   data-testid="rek_title-label"
                   for="rek_title-input"
@@ -62,12 +62,12 @@ exports[`ConferencePaperForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
                     aria-label="Title of paper"
-                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="rek_title-input"
                     data-testid="rek_title-input"
                     id="rek_title-input"
@@ -79,7 +79,7 @@ exports[`ConferencePaperForm component 1`] = `
                   />
                   <textarea
                     aria-hidden="true"
-                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     readonly=""
                     style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                     tabindex="-1"
@@ -95,7 +95,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_conference_name.rek_conference_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_conference_name.rek_conference_name-label"
                   for="fez_record_search_key_conference_name.rek_conference_name-input"
@@ -111,12 +111,12 @@ exports[`ConferencePaperForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Conference name"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_conference_name.rek_conference_name-input"
                     data-testid="fez_record_search_key_conference_name.rek_conference_name-input"
                     id="fez_record_search_key_conference_name.rek_conference_name-input"
@@ -137,7 +137,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_conference_location.rek_conference_location"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_conference_location.rek_conference_location-label"
                   for="fez_record_search_key_conference_location.rek_conference_location-input"
@@ -153,12 +153,12 @@ exports[`ConferencePaperForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Conference location"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_conference_location.rek_conference_location-input"
                     data-testid="fez_record_search_key_conference_location.rek_conference_location-input"
                     id="fez_record_search_key_conference_location.rek_conference_location-input"
@@ -179,7 +179,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_conference_dates.rek_conference_dates"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_conference_dates.rek_conference_dates-label"
                   for="fez_record_search_key_conference_dates.rek_conference_dates-input"
@@ -195,12 +195,12 @@ exports[`ConferencePaperForm component 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Conference dates (e.g 3-5 May)"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_conference_dates.rek_conference_dates-input"
                     data-testid="fez_record_search_key_conference_dates.rek_conference_dates-input"
                     id="fez_record_search_key_conference_dates.rek_conference_dates-input"
@@ -221,7 +221,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_proceedings_title.rek_proceedings_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_proceedings_title.rek_proceedings_title-label"
                   for="fez_record_search_key_proceedings_title.rek_proceedings_title-input"
@@ -230,12 +230,12 @@ exports[`ConferencePaperForm component 1`] = `
                   Proceedings title
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Proceedings title"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_proceedings_title.rek_proceedings_title-input"
                     data-testid="fez_record_search_key_proceedings_title.rek_proceedings_title-input"
                     id="fez_record_search_key_proceedings_title.rek_proceedings_title-input"
@@ -255,7 +255,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_journal_name.rek_journal_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_journal_name.rek_journal_name-label"
                   for="fez_record_search_key_journal_name.rek_journal_name-input"
@@ -264,12 +264,12 @@ exports[`ConferencePaperForm component 1`] = `
                   Journal name
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Journal name"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_journal_name.rek_journal_name-input"
                     data-testid="fez_record_search_key_journal_name.rek_journal_name-input"
                     id="fez_record_search_key_journal_name.rek_journal_name-input"
@@ -289,7 +289,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-label"
                   for="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
@@ -298,12 +298,12 @@ exports[`ConferencePaperForm component 1`] = `
                   Place of publication
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Place of publication"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
                     data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
                     id="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
@@ -323,7 +323,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_publisher.rek_publisher"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_publisher.rek_publisher-label"
                   for="fez_record_search_key_publisher.rek_publisher-input"
@@ -332,12 +332,12 @@ exports[`ConferencePaperForm component 1`] = `
                   Publisher
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Publisher"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_publisher.rek_publisher-input"
                     data-testid="fez_record_search_key_publisher.rek_publisher-input"
                     id="fez_record_search_key_publisher.rek_publisher-input"
@@ -357,7 +357,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="rek-doi"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-doi-label"
                   for="rek-doi-input"
@@ -366,12 +366,12 @@ exports[`ConferencePaperForm component 1`] = `
                   DOI
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="DOI"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="rek-doi-input"
                     data-testid="rek-doi-input"
                     id="rek-doi-input"
@@ -395,7 +395,7 @@ exports[`ConferencePaperForm component 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Publication date
@@ -422,11 +422,11 @@ exports[`ConferencePaperForm component 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
-                            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             id="rek-date-day-input"
@@ -440,7 +440,7 @@ exports[`ConferencePaperForm component 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
                       >
                         Year required
                       </p>
@@ -449,14 +449,14 @@ exports[`ConferencePaperForm component 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="rek-date-month-select"
-                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
                           id="rek-date-month-select"
@@ -499,11 +499,11 @@ exports[`ConferencePaperForm component 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
-                            class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             id="rek-date-year-input"
@@ -535,13 +535,13 @@ exports[`ConferencePaperForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -553,7 +553,7 @@ exports[`ConferencePaperForm component 1`] = `
           >
             <button
               aria-label="Click for more information"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1956hvo-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
               data-testid="help-icon"
@@ -585,7 +585,7 @@ exports[`ConferencePaperForm component 1`] = `
           id="standard-card-authors-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
           >
             Please provide a list of authors and then select your name from the list.
           </p>
@@ -626,7 +626,7 @@ exports[`ConferencePaperForm component 1`] = `
                       style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="authors-label"
                         for="authors-input"
@@ -642,13 +642,13 @@ exports[`ConferencePaperForm component 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           id="authors-input"
@@ -673,7 +673,7 @@ exports[`ConferencePaperForm component 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1r3d950-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1nfnxrg-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-add"
                       data-testid="authors-add"
                       disabled=""
@@ -689,7 +689,7 @@ exports[`ConferencePaperForm component 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1r3d950-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1nfnxrg-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-cancel"
                       data-testid="authors-cancel"
                       disabled=""
@@ -704,7 +704,7 @@ exports[`ConferencePaperForm component 1`] = `
               </div>
             </div>
             <span
-              class="MuiTypography-root MuiTypography-caption css-raqu5e-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-1cxuo9o-MuiTypography-root"
               data-testid="authors-error"
             >
               <span>
@@ -733,13 +733,13 @@ exports[`ConferencePaperForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -754,7 +754,7 @@ exports[`ConferencePaperForm component 1`] = `
           id="standard-card-isbn-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
           >
             You can add up to five ISBN values
           </p>
@@ -774,7 +774,7 @@ exports[`ConferencePaperForm component 1`] = `
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     for="isbn-input"
                     id="isbn-input-label"
@@ -782,11 +782,11 @@ exports[`ConferencePaperForm component 1`] = `
                     ISBN value
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                      class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="isbn-input"
                       data-testid="isbn-input"
                       id="isbn-input"
@@ -801,7 +801,7 @@ exports[`ConferencePaperForm component 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="isbn-add"
                   data-testid="isbn-add"
                   disabled=""
@@ -820,7 +820,7 @@ exports[`ConferencePaperForm component 1`] = `
               id="isbn-list"
             />
             <p
-              class="MuiFormHelperText-root css-1puf113-MuiFormHelperText-root"
+              class="MuiFormHelperText-root css-3wbiaq-MuiFormHelperText-root"
             />
           </div>
         </div>
@@ -836,13 +836,13 @@ exports[`ConferencePaperForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -857,7 +857,7 @@ exports[`ConferencePaperForm component 1`] = `
           id="standard-card-issn-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
           >
             You can add up to five ISSN values
           </p>
@@ -877,7 +877,7 @@ exports[`ConferencePaperForm component 1`] = `
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     for="issn-input"
                     id="issn-input-label"
@@ -885,11 +885,11 @@ exports[`ConferencePaperForm component 1`] = `
                     ISSN value
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                      class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="issn-input"
                       data-testid="issn-input"
                       id="issn-input"
@@ -904,7 +904,7 @@ exports[`ConferencePaperForm component 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="issn-add"
                   data-testid="issn-add"
                   disabled=""
@@ -923,7 +923,7 @@ exports[`ConferencePaperForm component 1`] = `
               id="issn-list"
             />
             <p
-              class="MuiFormHelperText-root css-1puf113-MuiFormHelperText-root"
+              class="MuiFormHelperText-root css-3wbiaq-MuiFormHelperText-root"
             />
           </div>
         </div>
@@ -939,13 +939,13 @@ exports[`ConferencePaperForm component 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-other-work-details-header"
               id="standard-card-other-work-details-header"
             >
@@ -970,7 +970,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_start_page.rek_start_page"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_start_page.rek_start_page-label"
                   for="fez_record_search_key_start_page.rek_start_page-input"
@@ -979,12 +979,12 @@ exports[`ConferencePaperForm component 1`] = `
                   Start page
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Start page"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_start_page.rek_start_page-input"
                     data-testid="fez_record_search_key_start_page.rek_start_page-input"
                     id="fez_record_search_key_start_page.rek_start_page-input"
@@ -1004,7 +1004,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="fez_record_search_key_end_page.rek_end_page"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_end_page.rek_end_page-label"
                   for="fez_record_search_key_end_page.rek_end_page-input"
@@ -1013,12 +1013,12 @@ exports[`ConferencePaperForm component 1`] = `
                   End page
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="End page"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_end_page.rek_end_page-input"
                     data-testid="fez_record_search_key_end_page.rek_end_page-input"
                     id="fez_record_search_key_end_page.rek_end_page-input"
@@ -1034,7 +1034,7 @@ exports[`ConferencePaperForm component 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
               >
                 Please add any other notes for the UQ eSpace team. If there is a 
                 <b>
@@ -1048,7 +1048,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="comments"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="comments-label"
                   for="comments-input"
@@ -1057,12 +1057,12 @@ exports[`ConferencePaperForm component 1`] = `
                   Notes (not publicly viewable)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
                     aria-label="Notes (not publicly viewable)"
-                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="comments-input"
                     data-testid="comments-input"
                     id="comments-input"
@@ -1072,7 +1072,7 @@ exports[`ConferencePaperForm component 1`] = `
                   />
                   <textarea
                     aria-hidden="true"
-                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     readonly=""
                     style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                     tabindex="-1"
@@ -1088,7 +1088,7 @@ exports[`ConferencePaperForm component 1`] = `
                 data-testid="rek_link"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link-label"
                   for="rek_link-input"
@@ -1097,12 +1097,12 @@ exports[`ConferencePaperForm component 1`] = `
                   Link (URL)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Link (URL)"
-                    class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="rek_link-input"
                     data-testid="rek_link-input"
                     id="rek_link-input"
@@ -1137,13 +1137,13 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-conference-paper-information-header"
               id="standard-card-conference-paper-information-header"
             >
@@ -1168,7 +1168,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="rek_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_title-label"
                   for="rek_title-input"
@@ -1184,12 +1184,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
                     aria-label="Title of paper"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="rek_title-input"
                     data-testid="rek_title-input"
                     disabled=""
@@ -1202,7 +1202,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   />
                   <textarea
                     aria-hidden="true"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     readonly=""
                     style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                     tabindex="-1"
@@ -1218,7 +1218,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_conference_name.rek_conference_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_conference_name.rek_conference_name-label"
                   for="fez_record_search_key_conference_name.rek_conference_name-input"
@@ -1234,12 +1234,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Conference name"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_conference_name.rek_conference_name-input"
                     data-testid="fez_record_search_key_conference_name.rek_conference_name-input"
                     disabled=""
@@ -1261,7 +1261,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_conference_location.rek_conference_location"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_conference_location.rek_conference_location-label"
                   for="fez_record_search_key_conference_location.rek_conference_location-input"
@@ -1277,12 +1277,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Conference location"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_conference_location.rek_conference_location-input"
                     data-testid="fez_record_search_key_conference_location.rek_conference_location-input"
                     disabled=""
@@ -1304,7 +1304,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_conference_dates.rek_conference_dates"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_conference_dates.rek_conference_dates-label"
                   for="fez_record_search_key_conference_dates.rek_conference_dates-input"
@@ -1320,12 +1320,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Conference dates (e.g 3-5 May)"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_conference_dates.rek_conference_dates-input"
                     data-testid="fez_record_search_key_conference_dates.rek_conference_dates-input"
                     disabled=""
@@ -1347,7 +1347,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_proceedings_title.rek_proceedings_title"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_proceedings_title.rek_proceedings_title-label"
                   for="fez_record_search_key_proceedings_title.rek_proceedings_title-input"
@@ -1356,12 +1356,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   Proceedings title
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Proceedings title"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_proceedings_title.rek_proceedings_title-input"
                     data-testid="fez_record_search_key_proceedings_title.rek_proceedings_title-input"
                     disabled=""
@@ -1382,7 +1382,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_journal_name.rek_journal_name"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_journal_name.rek_journal_name-label"
                   for="fez_record_search_key_journal_name.rek_journal_name-input"
@@ -1391,12 +1391,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   Journal name
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Journal name"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_journal_name.rek_journal_name-input"
                     data-testid="fez_record_search_key_journal_name.rek_journal_name-input"
                     disabled=""
@@ -1417,7 +1417,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-label"
                   for="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
@@ -1426,12 +1426,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   Place of publication
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Place of publication"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
                     data-testid="fez_record_search_key_place_of_publication.rek_place_of_publication-input"
                     disabled=""
@@ -1452,7 +1452,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_publisher.rek_publisher"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_publisher.rek_publisher-label"
                   for="fez_record_search_key_publisher.rek_publisher-input"
@@ -1461,12 +1461,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   Publisher
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Publisher"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_publisher.rek_publisher-input"
                     data-testid="fez_record_search_key_publisher.rek_publisher-input"
                     disabled=""
@@ -1487,7 +1487,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="rek-doi"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek-doi-label"
                   for="rek-doi-input"
@@ -1496,12 +1496,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   DOI
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="DOI"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="rek-doi-input"
                     data-testid="rek-doi-input"
                     disabled=""
@@ -1526,7 +1526,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="true"
                   >
                     Publication date
@@ -1553,11 +1553,11 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
-                            class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             disabled=""
@@ -1572,7 +1572,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                         </div>
                       </div>
                       <p
-                        class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+                        class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
                       >
                         Year required
                       </p>
@@ -1581,7 +1581,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
                     >
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
                           aria-disabled="true"
@@ -1589,7 +1589,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                           aria-haspopup="listbox"
                           aria-invalid="true"
                           aria-labelledby="rek-date-month-select"
-                          class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
                           id="rek-date-month-select"
@@ -1632,11 +1632,11 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="true"
-                            class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             disabled=""
@@ -1669,13 +1669,13 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -1687,7 +1687,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
           >
             <button
               aria-label="Click for more information"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1956hvo-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
               data-testid="help-icon"
@@ -1719,7 +1719,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
           id="standard-card-authors-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
           >
             Please provide a list of authors and then select your name from the list.
           </p>
@@ -1760,7 +1760,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                       style="border-style: solid; border-width: 2px; border-color: rgb(229, 229, 229); border-radius: 4px; background-color: rgb(239, 239, 239);"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="authors-label"
                         for="authors-input"
@@ -1776,13 +1776,13 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                       >
                         <input
                           aria-invalid="true"
                           aria-label="Author's name as published"
                           autocomplete="off"
-                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                          class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="authors-input"
                           data-testid="authors-input"
                           disabled=""
@@ -1808,7 +1808,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1r3d950-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1nfnxrg-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-add"
                       data-testid="authors-add"
                       disabled=""
@@ -1824,7 +1824,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                     style="margin-bottom: 8px;"
                   >
                     <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1r3d950-MuiButtonBase-root-MuiButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1nfnxrg-MuiButtonBase-root-MuiButton-root"
                       data-analyticsid="authors-cancel"
                       data-testid="authors-cancel"
                       disabled=""
@@ -1839,7 +1839,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
               </div>
             </div>
             <span
-              class="MuiTypography-root MuiTypography-caption css-raqu5e-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-caption css-1cxuo9o-MuiTypography-root"
               data-testid="authors-error"
             >
               <span>
@@ -1868,13 +1868,13 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -1889,7 +1889,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
           id="standard-card-isbn-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
           >
             You can add up to five ISBN values
           </p>
@@ -1909,7 +1909,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     for="isbn-input"
                     id="isbn-input-label"
@@ -1917,11 +1917,11 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                     ISBN value
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="isbn-input"
                       data-testid="isbn-input"
                       disabled=""
@@ -1937,7 +1937,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="isbn-add"
                   data-testid="isbn-add"
                   disabled=""
@@ -1956,7 +1956,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
               id="isbn-list"
             />
             <p
-              class="MuiFormHelperText-root css-1puf113-MuiFormHelperText-root"
+              class="MuiFormHelperText-root css-3wbiaq-MuiFormHelperText-root"
             />
           </div>
         </div>
@@ -1972,13 +1972,13 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -1993,7 +1993,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
           id="standard-card-issn-content"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
           >
             You can add up to five ISSN values
           </p>
@@ -2013,7 +2013,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     for="issn-input"
                     id="issn-input-label"
@@ -2021,11 +2021,11 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                     ISSN value
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                      class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                       data-analyticsid="issn-input"
                       data-testid="issn-input"
                       disabled=""
@@ -2041,7 +2041,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
               >
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                   data-analyticsid="issn-add"
                   data-testid="issn-add"
                   disabled=""
@@ -2060,7 +2060,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
               id="issn-list"
             />
             <p
-              class="MuiFormHelperText-root css-1puf113-MuiFormHelperText-root"
+              class="MuiFormHelperText-root css-3wbiaq-MuiFormHelperText-root"
             />
           </div>
         </div>
@@ -2076,13 +2076,13 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
               data-testid="standard-card-other-work-details-header"
               id="standard-card-other-work-details-header"
             >
@@ -2107,7 +2107,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_start_page.rek_start_page"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_start_page.rek_start_page-label"
                   for="fez_record_search_key_start_page.rek_start_page-input"
@@ -2116,12 +2116,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   Start page
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Start page"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_start_page.rek_start_page-input"
                     data-testid="fez_record_search_key_start_page.rek_start_page-input"
                     disabled=""
@@ -2142,7 +2142,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="fez_record_search_key_end_page.rek_end_page"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="fez_record_search_key_end_page.rek_end_page-label"
                   for="fez_record_search_key_end_page.rek_end_page-input"
@@ -2151,12 +2151,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   End page
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="End page"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="fez_record_search_key_end_page.rek_end_page-input"
                     data-testid="fez_record_search_key_end_page.rek_end_page-input"
                     disabled=""
@@ -2173,7 +2173,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
               >
                 Please add any other notes for the UQ eSpace team. If there is a 
                 <b>
@@ -2187,7 +2187,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="comments"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="comments-label"
                   for="comments-input"
@@ -2196,12 +2196,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   Notes (not publicly viewable)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-st232q-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-zlzfha-MuiInputBase-root-MuiInput-root"
                 >
                   <textarea
                     aria-invalid="false"
                     aria-label="Notes (not publicly viewable)"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="comments-input"
                     data-testid="comments-input"
                     disabled=""
@@ -2212,7 +2212,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   />
                   <textarea
                     aria-hidden="true"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-9j73qj-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled MuiInputBase-inputMultiline css-1sd62bd-MuiInputBase-input-MuiInput-input"
                     readonly=""
                     style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
                     tabindex="-1"
@@ -2228,7 +2228,7 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                 data-testid="rek_link"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
                   data-testid="rek_link-label"
                   for="rek_link-input"
@@ -2237,12 +2237,12 @@ exports[`ConferencePaperForm component with all fields disabled 1`] = `
                   Link (URL)
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
                 >
                   <input
                     aria-invalid="false"
                     aria-label="Link (URL)"
-                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                    class="MuiInputBase-input MuiInput-input Mui-disabled css-1jyne0q-MuiInputBase-input-MuiInput-input"
                     data-analyticsid="rek_link-input"
                     data-testid="rek_link-input"
                     disabled=""

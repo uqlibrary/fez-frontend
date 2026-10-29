@@ -10,7 +10,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -30,11 +30,11 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -48,7 +48,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -57,14 +57,14 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -107,11 +107,11 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -141,7 +141,7 @@ exports[`PartialDateForm component should handle keypress 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -161,11 +161,11 @@ exports[`PartialDateForm component should handle keypress 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -179,7 +179,7 @@ exports[`PartialDateForm component should handle keypress 1`] = `
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -188,14 +188,14 @@ exports[`PartialDateForm component should handle keypress 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -238,11 +238,11 @@ exports[`PartialDateForm component should handle keypress 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -272,7 +272,7 @@ exports[`PartialDateForm component should handle keypress 2`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -292,11 +292,11 @@ exports[`PartialDateForm component should handle keypress 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -310,7 +310,7 @@ exports[`PartialDateForm component should handle keypress 2`] = `
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -319,14 +319,14 @@ exports[`PartialDateForm component should handle keypress 2`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -369,11 +369,11 @@ exports[`PartialDateForm component should handle keypress 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -403,7 +403,7 @@ exports[`PartialDateForm component should handle keypress 3`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -423,11 +423,11 @@ exports[`PartialDateForm component should handle keypress 3`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -441,7 +441,7 @@ exports[`PartialDateForm component should handle keypress 3`] = `
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -450,14 +450,14 @@ exports[`PartialDateForm component should handle keypress 3`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -500,11 +500,11 @@ exports[`PartialDateForm component should handle keypress 3`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -534,7 +534,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -554,11 +554,11 @@ exports[`PartialDateForm component should handle partial values 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -572,7 +572,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -581,14 +581,14 @@ exports[`PartialDateForm component should handle partial values 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -631,11 +631,11 @@ exports[`PartialDateForm component should handle partial values 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -665,7 +665,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -685,11 +685,11 @@ exports[`PartialDateForm component should handle partial values 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -703,7 +703,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -712,14 +712,14 @@ exports[`PartialDateForm component should handle partial values 2`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth Mui-focused MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -762,11 +762,11 @@ exports[`PartialDateForm component should handle partial values 2`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -796,7 +796,7 @@ exports[`PartialDateForm component should handle partial values day and year onl
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -816,11 +816,11 @@ exports[`PartialDateForm component should handle partial values day and year onl
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -834,7 +834,7 @@ exports[`PartialDateForm component should handle partial values day and year onl
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -843,14 +843,14 @@ exports[`PartialDateForm component should handle partial values day and year onl
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -893,11 +893,11 @@ exports[`PartialDateForm component should handle partial values day and year onl
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -927,7 +927,7 @@ exports[`PartialDateForm component should handle partial values with year only 1
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -947,11 +947,11 @@ exports[`PartialDateForm component should handle partial values with year only 1
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -969,13 +969,13 @@ exports[`PartialDateForm component should handle partial values with year only 1
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1018,11 +1018,11 @@ exports[`PartialDateForm component should handle partial values with year only 1
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -1052,7 +1052,7 @@ exports[`PartialDateForm component should load existing values 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -1072,11 +1072,11 @@ exports[`PartialDateForm component should load existing values 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -1094,13 +1094,13 @@ exports[`PartialDateForm component should load existing values 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1143,11 +1143,11 @@ exports[`PartialDateForm component should load existing values 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -1177,7 +1177,7 @@ exports[`PartialDateForm component should load existing values for month of Dece
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -1197,11 +1197,11 @@ exports[`PartialDateForm component should load existing values for month of Dece
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -1219,13 +1219,13 @@ exports[`PartialDateForm component should load existing values for month of Dece
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1268,11 +1268,11 @@ exports[`PartialDateForm component should load existing values for month of Dece
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -1302,7 +1302,7 @@ exports[`PartialDateForm component should load existing values for month of Janu
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -1322,11 +1322,11 @@ exports[`PartialDateForm component should load existing values for month of Janu
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -1344,13 +1344,13 @@ exports[`PartialDateForm component should load existing values for month of Janu
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1393,11 +1393,11 @@ exports[`PartialDateForm component should load existing values for month of Janu
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -1427,7 +1427,7 @@ exports[`PartialDateForm component should load existing values from input value 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -1447,11 +1447,11 @@ exports[`PartialDateForm component should load existing values from input value 
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -1469,13 +1469,13 @@ exports[`PartialDateForm component should load existing values from input value 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1518,11 +1518,11 @@ exports[`PartialDateForm component should load existing values from input value 
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -1552,7 +1552,7 @@ exports[`PartialDateForm component should render comp 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -1572,11 +1572,11 @@ exports[`PartialDateForm component should render comp 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -1594,13 +1594,13 @@ exports[`PartialDateForm component should render comp 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1643,11 +1643,11 @@ exports[`PartialDateForm component should render comp 1`] = `
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="false"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"
@@ -1677,7 +1677,7 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1g80yep-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-animated MuiInputLabel-shrink css-1ihhgw8-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Enter a date
@@ -1704,11 +1704,11 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-day-input"
                 data-testid="test-day-input"
                 id="test-day-input"
@@ -1722,7 +1722,7 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error css-1puf113-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error css-3wbiaq-MuiFormHelperText-root"
           >
             Invalid date
           </p>
@@ -1731,14 +1731,14 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
         >
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-19nxx4i-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-pu3pen-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
               aria-labelledby="test-month-select"
-              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-analyticsid="test-month-select"
               data-testid="test-month-select"
               id="test-month-select"
@@ -1781,11 +1781,11 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1bepcjx-MuiInputBase-root-MuiInput-root"
             >
               <input
                 aria-invalid="true"
-                class="MuiInputBase-input MuiInput-input css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                class="MuiInputBase-input MuiInput-input css-1jyne0q-MuiInputBase-input-MuiInput-input"
                 data-analyticsid="test-year-input"
                 data-testid="test-year-input"
                 id="test-year-input"

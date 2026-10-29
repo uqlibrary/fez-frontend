@@ -4,7 +4,7 @@ exports[`Component AttributionIncomplete should render checked if record is chec
 <div>
   <div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
     >
       Test detail
     </span>
@@ -13,7 +13,7 @@ exports[`Component AttributionIncomplete should render checked if record is chec
     class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         checked=""
@@ -22,6 +22,7 @@ exports[`Component AttributionIncomplete should render checked if record is chec
         data-indeterminate="false"
         data-testid="attributionIncomplete-input"
         id="attributionIncomplete-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg
@@ -37,7 +38,7 @@ exports[`Component AttributionIncomplete should render checked if record is chec
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-z7ly6e-MuiTypography-root"
       data-testid="attributionIncomplete-label"
       id="attributionIncomplete-label"
     >
@@ -51,7 +52,7 @@ exports[`Component AttributionIncomplete should render default view 1`] = `
 <div>
   <div>
     <span
-      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
     >
       Test detail
     </span>
@@ -60,7 +61,7 @@ exports[`Component AttributionIncomplete should render default view 1`] = `
     class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -68,6 +69,7 @@ exports[`Component AttributionIncomplete should render default view 1`] = `
         data-indeterminate="false"
         data-testid="attributionIncomplete-input"
         id="attributionIncomplete-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg
@@ -83,7 +85,7 @@ exports[`Component AttributionIncomplete should render default view 1`] = `
       </svg>
     </span>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-11a1ttq-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-z7ly6e-MuiTypography-root"
       data-testid="attributionIncomplete-label"
       id="attributionIncomplete-label"
     >

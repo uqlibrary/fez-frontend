@@ -12,7 +12,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           eSpace
         </p>
@@ -22,7 +22,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       >
         <span
           aria-label="eSpace loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -49,7 +49,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Web of science
         </p>
@@ -58,7 +58,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1sy0ak3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1s1tptt-MuiTypography-root"
         >
           5
            
@@ -73,7 +73,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Scopus
         </p>
@@ -82,7 +82,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1sy0ak3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1s1tptt-MuiTypography-root"
         >
           0
            
@@ -97,7 +97,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           PubMed
         </p>
@@ -106,7 +106,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1sy0ak3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1s1tptt-MuiTypography-root"
         >
           0
            
@@ -121,7 +121,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Crossref
         </p>
@@ -130,7 +130,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1sy0ak3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1s1tptt-MuiTypography-root"
         >
           0
            
@@ -145,7 +145,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           OpenAlex
         </p>
@@ -155,7 +155,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
       >
         <span
           aria-label="OpenAlex loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -184,7 +184,7 @@ exports[`Search Dashboard test Render the search dashboard with expected data) 1
     role="progressbar"
   >
     <span
-      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-i9m1j0-MuiLinearProgress-bar1"
+      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-c4gqrn-MuiLinearProgress-bar1"
       style="transform: translateX(0%);"
     />
   </span>
@@ -203,7 +203,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           eSpace
         </p>
@@ -213,7 +213,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       >
         <span
           aria-label="eSpace loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -240,7 +240,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Web of science
         </p>
@@ -250,7 +250,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       >
         <span
           aria-label="Web of science loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -277,7 +277,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Scopus
         </p>
@@ -287,7 +287,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       >
         <span
           aria-label="Scopus loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -314,7 +314,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           PubMed
         </p>
@@ -324,7 +324,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       >
         <span
           aria-label="PubMed loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -351,7 +351,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Crossref
         </p>
@@ -361,7 +361,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       >
         <span
           aria-label="Crossref loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -388,7 +388,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           OpenAlex
         </p>
@@ -398,7 +398,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
       >
         <span
           aria-label="OpenAlex loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -427,7 +427,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, all
     role="progressbar"
   >
     <span
-      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-i9m1j0-MuiLinearProgress-bar1"
+      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-c4gqrn-MuiLinearProgress-bar1"
       style="transform: translateX(-100%);"
     />
   </span>
@@ -446,7 +446,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           eSpace
         </p>
@@ -456,7 +456,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       >
         <span
           aria-label="eSpace loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -483,7 +483,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Web of science
         </p>
@@ -492,7 +492,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1sy0ak3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1s1tptt-MuiTypography-root"
         >
           5
            
@@ -507,7 +507,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Scopus
         </p>
@@ -516,7 +516,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1sy0ak3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1s1tptt-MuiTypography-root"
         >
           4
            
@@ -531,7 +531,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           PubMed
         </p>
@@ -540,7 +540,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1sy0ak3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-1s1tptt-MuiTypography-root"
         >
           12
            
@@ -555,7 +555,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           Crossref
         </p>
@@ -565,7 +565,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       >
         <span
           aria-label="Crossref loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -592,7 +592,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-x2iaxu-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-15nwk5p-MuiTypography-root"
         >
           OpenAlex
         </p>
@@ -602,7 +602,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
       >
         <span
           aria-label="OpenAlex loading"
-          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
           role="progressbar"
           style="width: 12px; height: 12px;"
         >
@@ -631,7 +631,7 @@ exports[`Search Dashboard test Render the search dashboard with random data, one
     role="progressbar"
   >
     <span
-      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-i9m1j0-MuiLinearProgress-bar1"
+      class="MuiLinearProgress-bar MuiLinearProgress-bar1 MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate css-c4gqrn-MuiLinearProgress-bar1"
       style="transform: translateX(-25%);"
     />
   </span>

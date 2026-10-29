@@ -37,20 +37,20 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
           class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-isl6k7-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1hbyh4q-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-4trez3-MuiGrid-root"
           />
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-1q71y3e-MuiGrid-root"
           >
             <button
               aria-label="close"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1t8iw5z-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-7ulkrv-MuiSvgIcon-root"
                 data-testid="KeyboardArrowLeftIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -66,22 +66,22 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
           class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
         >
           <div
-            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-5jk3ju-MuiButtonBase-root-MuiListItemButton-root"
             id="menu-item-0"
             role="button"
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-27e8jo-MuiListItemText-root"
+              class="MuiListItemText-root MuiListItemText-multiline css-18gsunf-MuiListItemText-root"
               id="menu-itemText-0"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-n8yw9v-MuiTypography-root"
               >
                 Primary text 0
               </span>
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-cvkt6l-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-odqozu-MuiTypography-root"
               >
                 secondary text 0
               </p>
@@ -92,17 +92,17 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
           class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
         >
           <div
-            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-5jk3ju-MuiButtonBase-root-MuiListItemButton-root"
             id="menu-item-1"
             role="button"
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
+              class="MuiListItemText-root css-5wo6lg-MuiListItemText-root"
               id="menu-itemText-1"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-n8yw9v-MuiTypography-root"
               >
                 <a
                   class="noHover css-1maagub"

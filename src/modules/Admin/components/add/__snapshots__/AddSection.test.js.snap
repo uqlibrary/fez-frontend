@@ -10,7 +10,7 @@ exports[`AddSection component should render default view 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-czwdwx-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -37,13 +37,13 @@ exports[`AddSection component should render default view 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -70,7 +70,7 @@ exports[`AddSection component should render default view 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           for="rek-ismemberof"
                           id="rek-ismemberof-label"
@@ -85,7 +85,7 @@ exports[`AddSection component should render default view 1`] = `
                           </span>
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1bepcjx-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-autocomplete="list"
@@ -93,7 +93,7 @@ exports[`AddSection component should render default view 1`] = `
                             aria-invalid="false"
                             autocapitalize="none"
                             autocomplete="off"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1jyne0q-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-ismemberof-input"
                             data-testid="rek-ismemberof-input"
                             id="rek-ismemberof-input"
@@ -109,7 +109,7 @@ exports[`AddSection component should render default view 1`] = `
                           >
                             <button
                               aria-label="Open"
-                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-1sulyqv-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                               tabindex="-1"
                               title="Open"
                               type="button"
@@ -127,7 +127,7 @@ exports[`AddSection component should render default view 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         id="rek-display-type-label"
                       >
@@ -141,7 +141,7 @@ exports[`AddSection component should render default view 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -149,7 +149,7 @@ exports[`AddSection component should render default view 1`] = `
                           aria-haspopup="listbox"
                           aria-labelledby="rek-display-type-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-display-type-select"
                           id="rek-display-type-select"
                           role="combobox"
@@ -206,7 +206,7 @@ exports[`AddSection component should render default view 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-zgmru4-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-51iw83-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="cancel-work"
                           data-testid="cancel-work"
                           id="cancel-work"
@@ -220,7 +220,7 @@ exports[`AddSection component should render default view 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="submit-work"
                           data-testid="submit-work"
                           disabled=""
@@ -254,7 +254,7 @@ exports[`AddSection component should render with subtypes 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-czwdwx-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -281,13 +281,13 @@ exports[`AddSection component should render with subtypes 1`] = `
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -314,7 +314,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           for="rek-ismemberof"
                           id="rek-ismemberof-label"
@@ -329,7 +329,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                           </span>
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1bepcjx-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-autocomplete="list"
@@ -337,7 +337,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                             aria-invalid="false"
                             autocapitalize="none"
                             autocomplete="off"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1jyne0q-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-ismemberof-input"
                             data-testid="rek-ismemberof-input"
                             id="rek-ismemberof-input"
@@ -353,7 +353,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                           >
                             <button
                               aria-label="Open"
-                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-1sulyqv-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                               tabindex="-1"
                               title="Open"
                               type="button"
@@ -371,7 +371,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         id="rek-display-type-label"
                       >
@@ -385,7 +385,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -393,7 +393,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                           aria-haspopup="listbox"
                           aria-labelledby="rek-display-type-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-display-type-select"
                           id="rek-display-type-select"
                           role="combobox"
@@ -440,7 +440,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                         style="width: 100%;"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="rek-subtype-label"
                         >
@@ -454,7 +454,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                           </span>
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           required=""
                         >
                           <div
@@ -462,7 +462,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                             aria-haspopup="listbox"
                             aria-labelledby="rek-subtype-select"
                             aria-required="true"
-                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             data-testid="rek-subtype-select"
                             id="rek-subtype-select"
                             role="combobox"
@@ -512,7 +512,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-zgmru4-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-51iw83-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="cancel-work"
                           data-testid="cancel-work"
                           id="cancel-work"
@@ -526,7 +526,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="submit-work"
                           data-testid="submit-work"
                           disabled=""
@@ -560,7 +560,7 @@ exports[`AddSection component with coverage should render with default doc type 
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-czwdwx-MuiTypography-root"
           data-analyticsid="page-title"
           data-testid="page-title"
           id="page-title"
@@ -587,13 +587,13 @@ exports[`AddSection component with coverage should render with default doc type 
               style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
             >
               <div
-                class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+                class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
               >
                 <div
                   class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -620,7 +620,7 @@ exports[`AddSection component with coverage should render with default doc type 
                         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           for="rek-ismemberof"
                           id="rek-ismemberof-label"
@@ -635,18 +635,18 @@ exports[`AddSection component with coverage should render with default doc type 
                           </span>
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1c6hv5l-MuiInputBase-root-MuiInput-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1bepcjx-MuiInputBase-root-MuiInput-root"
                         >
                           <div
-                            class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-bksnwi-MuiButtonBase-root-MuiChip-root"
+                            class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1wlkk87-MuiButtonBase-root-MuiChip-root"
                             data-tag-index="0"
                             data-testid="rek-ismemberof-0"
                             id="rek-ismemberof-0"
                             role="button"
-                            tabindex="-1"
+                            tabindex="0"
                           >
                             <span
-                              class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
+                              class="MuiChip-label MuiChip-labelMedium css-1glixai-MuiChip-label"
                             >
                               School of Languages and Cultures Publications
                             </span>
@@ -668,7 +668,7 @@ exports[`AddSection component with coverage should render with default doc type 
                             aria-invalid="false"
                             autocapitalize="none"
                             autocomplete="off"
-                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1yrc8ca-MuiInputBase-input-MuiInput-input"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1jyne0q-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-ismemberof-input"
                             data-testid="rek-ismemberof-input"
                             id="rek-ismemberof-input"
@@ -684,7 +684,7 @@ exports[`AddSection component with coverage should render with default doc type 
                           >
                             <button
                               aria-label="Open"
-                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-gso163-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-1sulyqv-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                               tabindex="-1"
                               title="Open"
                               type="button"
@@ -702,7 +702,7 @@ exports[`AddSection component with coverage should render with default doc type 
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         id="rek-display-type-label"
                       >
@@ -716,7 +716,7 @@ exports[`AddSection component with coverage should render with default doc type 
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
@@ -725,7 +725,7 @@ exports[`AddSection component with coverage should render with default doc type 
                           aria-haspopup="listbox"
                           aria-labelledby="rek-display-type-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-display-type-select"
                           id="rek-display-type-select"
                           role="combobox"
@@ -777,7 +777,7 @@ exports[`AddSection component with coverage should render with default doc type 
                         style="width: 100%;"
                       >
                         <label
-                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="true"
                           id="rek-subtype-label"
                         >
@@ -791,7 +791,7 @@ exports[`AddSection component with coverage should render with default doc type 
                           </span>
                         </label>
                         <div
-                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                           required=""
                         >
                           <div
@@ -800,7 +800,7 @@ exports[`AddSection component with coverage should render with default doc type 
                             aria-haspopup="listbox"
                             aria-labelledby="rek-subtype-select"
                             aria-required="true"
-                            class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                            class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             data-testid="rek-subtype-select"
                             id="rek-subtype-select"
                             role="combobox"
@@ -855,7 +855,7 @@ exports[`AddSection component with coverage should render with default doc type 
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-zgmru4-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-51iw83-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="cancel-work"
                           data-testid="cancel-work"
                           id="cancel-work"
@@ -869,7 +869,7 @@ exports[`AddSection component with coverage should render with default doc type 
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                       >
                         <button
-                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="submit-work"
                           data-testid="submit-work"
                           disabled=""

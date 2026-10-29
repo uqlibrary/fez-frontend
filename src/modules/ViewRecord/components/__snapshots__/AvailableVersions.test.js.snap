@@ -12,13 +12,13 @@ exports[`Available Versions Component  should render component 1`] = `
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+        class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
       >
         <div
           class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
             data-testid="standard-card-available-versions-header"
             id="standard-card-available-versions-header"
           >
@@ -37,7 +37,7 @@ exports[`Available Versions Component  should render component 1`] = `
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
               data-testid="rek-isderivationof-current"
             >
               Data collection mock testing record
@@ -48,7 +48,7 @@ exports[`Available Versions Component  should render component 1`] = `
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
               data-testid="rek-has-derivations-0"
             >
               <a

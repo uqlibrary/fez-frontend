@@ -9,7 +9,7 @@ exports[`Component Orcid  should render if account doesnt have first name and la
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-czwdwx-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -43,13 +43,13 @@ exports[`Component Orcid  should render if account doesnt have first name and la
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+              class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
                   data-testid="standard-card-i-already-have-an-orcid-id-header"
                   id="standard-card-i-already-have-an-orcid-id-header"
                 >
@@ -64,7 +64,7 @@ exports[`Component Orcid  should render if account doesnt have first name and la
               id="standard-card-i-already-have-an-orcid-id-content"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-u4uxyt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-x3imyp-MuiTypography-root"
               >
                 This option enables you to link your existing ORCID iD to UQ.
               </span>
@@ -79,7 +79,7 @@ exports[`Component Orcid  should render if account doesnt have first name and la
                 >
                   <button
                     aria-label="Link your existing ORCID iD"
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                     tabindex="0"
                     type="button"
                   >
@@ -100,13 +100,13 @@ exports[`Component Orcid  should render if account doesnt have first name and la
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+              class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-bzkawh-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-fbeme-MuiTypography-root"
                   data-testid="standard-card-i-need-an-orcid-id-header"
                   id="standard-card-i-need-an-orcid-id-header"
                 >
@@ -121,7 +121,7 @@ exports[`Component Orcid  should render if account doesnt have first name and la
               id="standard-card-i-need-an-orcid-id-content"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-u4uxyt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-x3imyp-MuiTypography-root"
               >
                 <p>
                   This option enables you to create a new ORCID iD and link it with UQ.
@@ -141,7 +141,7 @@ exports[`Component Orcid  should render if account doesnt have first name and la
                 >
                   <button
                     aria-label="Create a new ORCID iD"
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-x152mb-MuiButtonBase-root-MuiButton-root"
                     tabindex="0"
                     type="button"
                   >

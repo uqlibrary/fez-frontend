@@ -18,14 +18,14 @@ exports[`AdminCard component should render StyledCard with same props 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <hr
-              class="MuiBox-root css-1a7sacs"
+              class="MuiBox-root css-19tp3v2"
             />
           </div>
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
           >
             <h4
-              class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
             >
                
             </h4>
@@ -58,14 +58,14 @@ exports[`Cards component renders with title and no help icon 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
           >
             <hr
-              class="MuiBox-root css-1a7sacs"
+              class="MuiBox-root css-19tp3v2"
             />
           </div>
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-1v3ltag-MuiGrid-root"
           >
             <h4
-              class="MuiTypography-root MuiTypography-body1 css-hvfu6b-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-s81dst-MuiTypography-root"
             >
                
               card title

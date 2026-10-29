@@ -7,7 +7,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-tonggy-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-tvzsph-MuiFormLabel-root"
       id="test-label"
     >
       text
@@ -21,7 +21,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-148k3xm-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-h363cw-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
             class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -60,7 +60,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
         >
           Option A
         </span>
@@ -69,7 +69,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-148k3xm-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-h363cw-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
             class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -108,7 +108,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
         >
           Option B
         </span>
@@ -125,7 +125,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
     style="width: 100%;"
   >
     <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-tonggy-MuiFormLabel-root"
+      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-tvzsph-MuiFormLabel-root"
       id="test-label"
     >
       text
@@ -139,7 +139,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-148k3xm-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-h363cw-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
             class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -178,7 +178,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
         >
           Option A
         </span>
@@ -187,7 +187,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
         class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-148k3xm-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
+          class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-h363cw-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
             class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -226,14 +226,14 @@ exports[`RadioGroupField tests renders an error 1`] = `
           </span>
         </span>
         <span
-          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
         >
           Option B
         </span>
       </label>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-1puf113-MuiFormHelperText-root"
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-3wbiaq-MuiFormHelperText-root"
     >
       Something bad happened
     </p>

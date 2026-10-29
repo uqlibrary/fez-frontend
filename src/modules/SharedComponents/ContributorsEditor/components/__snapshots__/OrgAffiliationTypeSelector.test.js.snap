@@ -6,7 +6,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="org-affiliation-label"
       id="org-affiliation-label"
@@ -14,7 +14,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
       Org affiliation
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
     >
       <div
@@ -22,7 +22,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
         aria-required="true"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="org-affiliation-select"
         id="org-affiliation-select"
         role="combobox"
@@ -61,7 +61,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="true"
       data-testid="org-affiliation-label"
       id="org-affiliation-label"
@@ -69,7 +69,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
       Org affiliation
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
     >
       <div
@@ -77,7 +77,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
         aria-required="true"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="org-affiliation-select"
         id="org-affiliation-select"
         role="combobox"
@@ -116,7 +116,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
     class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
   >
     <label
-      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-1ber1zf-MuiFormLabel-root-MuiInputLabel-root"
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-wswkbx-MuiFormLabel-root-MuiInputLabel-root"
       data-shrink="false"
       data-testid="org-affiliation-label"
       id="org-affiliation-label"
@@ -124,7 +124,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
       Org affiliation
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
       required=""
     >
       <div
@@ -132,7 +132,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
         aria-haspopup="listbox"
         aria-labelledby="org-affiliation-label org-affiliation-select"
         aria-required="true"
-        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
         data-testid="org-affiliation-select"
         id="org-affiliation-select"
         role="combobox"

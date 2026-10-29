@@ -9,7 +9,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-czwdwx-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -22,7 +22,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
     >
       <button
         aria-label="Click for more information"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1956hvo-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
@@ -67,7 +67,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-191k0aw-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-czwdwx-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
