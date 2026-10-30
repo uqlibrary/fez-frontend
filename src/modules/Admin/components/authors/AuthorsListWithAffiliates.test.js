@@ -13,6 +13,7 @@ import {
 } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
+import { AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE } from '../../../../config/general';
 
 const props = {
     contributorEditorId: 'rek-author',
@@ -865,5 +866,102 @@ describe('AuthorsListWithAffiliates', () => {
 
         expect(getByTestId('orgChip-881')).toHaveTextContent('50%');
         expect(getByTestId('orgChip-968')).toHaveTextContent('50%');
+    });
+
+    it('should be able to add and update external identifier', () => {
+        const externalId = '0000-0000-0000-0001';
+        const updatedExternalId = '02mhbdp94';
+        const { getByTestId, container, getByText } = setup({
+            showExternalIdentifierInput: true,
+        });
+
+        // add a new author
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
+        fireEvent.click(getByText('Orcid'));
+        fireEvent.click(getByTestId('rek-author-add-save'));
+
+        expect(container).toHaveTableRowsLength(1);
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+
+        // update author
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: updatedExternalId } });
+        fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
+        fireEvent.click(getByText('ROR'));
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(updatedExternalId);
+    });
+
+    it('should be able to add and update external identifier with default value', () => {
+        const externalId = '0000-0000-0000-0001';
+        const { getByTestId, container, queryByText } = setup({
+            showExternalIdentifierInput: true,
+            defaultExternalIdentifierType: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
+        });
+
+        // add a new author
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        expect(queryByText('Orcid')).toBeInTheDocument();
+        fireEvent.click(getByTestId('rek-author-add-save'));
+
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+        expect(container).toHaveTableRowsLength(1);
+
+        // update author
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(queryByText('Orcid')).toBeInTheDocument();
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+    });
+
+    it('should delete row correctly', async () => {
+        const { getByTestId, findByTestId } = setup({
+            showRoleInput: true,
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                    aut_id: 1234,
+                },
+            ],
+        });
+        fireEvent.click(getByTestId('rek-author-list-row-0-delete'));
+        await findByTestId('rek-author-delete-author-confirmation');
+        fireEvent.click(getByTestId('confirm-rek-author-delete-author-confirmation'));
+        await waitForElementToBeRemoved(() => getByTestId('rek-author-delete-author-confirmation'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('test 2');
+    });
+
+    it('should clear uq identifier column', () => {
+        const { getByTestId, getByTitle } = setup({
+            showRoleInput: true,
+            list: [
+                {
+                    nameAsPublished: 'test 1',
+                },
+                {
+                    nameAsPublished: 'test 2',
+                    uqIdentifier: '1234',
+                    aut_id: 1234,
+                },
+            ],
+        });
+        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
+        fireEvent.click(getByTitle('Clear'));
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-1-uq-identifiers')).toHaveTextContent('');
     });
 });

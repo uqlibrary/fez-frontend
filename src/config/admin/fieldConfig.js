@@ -17,6 +17,7 @@ import {
     COLLECTION_VIEW_TYPE,
     AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
     SUSTAINABLE_DEVELOPMENT_GOAL_VOCAB_ID,
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -921,6 +922,8 @@ export default {
             componentProps: {
                 name: 'authorsSection.authors',
                 showIdentifierLookup: true,
+                showExternalIdentifierInput: true,
+                defaultExternalIdentifierType: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
                 locale: locale.components.authorsList('author').field,
                 contributorEditorId: 'rek-author',
                 isAdmin: true,
@@ -933,6 +936,8 @@ export default {
             componentProps: {
                 name: 'authorsSection.editors',
                 showIdentifierLookup: true,
+                showExternalIdentifierInput: true,
+                defaultExternalIdentifierType: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
                 locale: locale.components.authorsList('editor').field,
                 isAdmin: true,
                 contributorEditorId: 'rek-contributor',
