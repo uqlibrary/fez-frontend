@@ -2659,28 +2659,32 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
         <div
           class="MuiBox-root css-wsew38"
         >
-          <button
+          <span
             aria-label="Add rek-author"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+            class=""
             data-mui-internal-clone-element="true"
-            data-testid="test-add-rek-author"
-            id="test-add-rek-author"
-            tabindex="0"
-            type="button"
           >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-              data-testid="test-add"
-              focusable="false"
-              id="test-add"
-              viewBox="0 0 24 24"
+            <button
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+              data-testid="test-add-rek-author"
+              id="test-add-rek-author"
+              tabindex="0"
+              type="button"
             >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-              />
-            </svg>
-          </button>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                data-testid="test-add"
+                focusable="false"
+                id="test-add"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                />
+              </svg>
+            </button>
+          </span>
           <div
             class="MuiBox-root css-1p0wbhh"
           >
@@ -2695,18 +2699,18 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
         class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
       >
         <table
-          class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+          class="MuiTable-root MuiTable-stickyHeader css-1siqyiz-MuiTable-root"
+          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
-            class="MuiTableHead-root css-7psuou-MuiTableHead-root"
+            class="MuiTableHead-root css-1e5wupo-MuiTableHead-root"
           >
             <tr
-              class="MuiTableRow-root MuiTableRow-head css-1hwldci-MuiTableRow-root"
+              class="MuiTableRow-root MuiTableRow-head css-espywj-MuiTableRow-root"
             >
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-a0ao22-MuiTableCell-root"
                 colspan="1"
                 data-index="0"
                 scope="col"
@@ -2728,7 +2732,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ohzejf-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="1"
@@ -2744,7 +2748,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
                       class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                     >
                       <div
-                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qr6nax-MuiGrid-root"
+                        class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-zjhuaj-MuiGrid-root"
                       >
                         <div
                           class="MuiGrid-root MuiGrid-direction-xs-row css-onm6gp-MuiGrid-root"
@@ -2810,7 +2814,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-g5x26p-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -2869,7 +2873,7 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-s3j1z4-MuiTableCell-root"
                 colspan="1"
                 data-index="3"
                 scope="col"
@@ -2894,14 +2898,11 @@ exports[`ContributorsEditor render authors list component for admin interface 1`
             </tr>
           </thead>
           <tbody
-            class="MuiTableBody-root css-1d5b2yu-MuiTableBody-root"
+            class="MuiTableBody-root css-6jvq2p-MuiTableBody-root"
           >
-            <tr
-              style="display: grid;"
-            >
+            <tr>
               <td
                 colspan="4"
-                style="display: grid;"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
@@ -7173,7 +7174,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
       >
         <table
           class="MuiTable-root MuiTable-stickyHeader css-1siqyiz-MuiTable-root"
-          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
             class="MuiTableHead-root css-1e5wupo-MuiTableHead-root"
@@ -7287,7 +7288,7 @@ exports[`ContributorsEditor renders full component for admin user with affiliati
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10z0bd3-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-g5x26p-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7505,7 +7506,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
       >
         <table
           class="MuiTable-root MuiTable-stickyHeader css-1siqyiz-MuiTable-root"
-          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 300; --col-uqIdentifier-size: 300; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+          style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
         >
           <thead
             class="MuiTableHead-root css-1e5wupo-MuiTableHead-root"
@@ -7619,7 +7620,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
               </th>
               <th
                 aria-sort="none"
-                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10z0bd3-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-g5x26p-MuiTableCell-root"
                 colspan="1"
                 data-can-sort="true"
                 data-index="2"
@@ -7783,7 +7784,7 @@ exports[`ContributorsEditor renders full component for admin user with record af
                 </div>
               </td>
               <td
-                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-138fxh8-MuiTableCell-root"
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-18tgpge-MuiTableCell-root"
                 data-index="2"
               >
                 <p

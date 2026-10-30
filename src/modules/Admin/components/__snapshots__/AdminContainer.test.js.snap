@@ -3330,28 +3330,32 @@ exports[`AdminContainer component should render default view 1`] = `
                                   <div
                                     class="MuiBox-root css-wsew38"
                                   >
-                                    <button
+                                    <span
                                       aria-label="Add author"
-                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                                      class=""
                                       data-mui-internal-clone-element="true"
-                                      data-testid="rek-author-add-author"
-                                      id="rek-author-add-author"
-                                      tabindex="0"
-                                      type="button"
                                     >
-                                      <svg
-                                        aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                                        data-testid="rek-author-add"
-                                        focusable="false"
-                                        id="rek-author-add"
-                                        viewBox="0 0 24 24"
+                                      <button
+                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                                        data-testid="rek-author-add-author"
+                                        id="rek-author-add-author"
+                                        tabindex="0"
+                                        type="button"
                                       >
-                                        <path
-                                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                                        />
-                                      </svg>
-                                    </button>
+                                        <svg
+                                          aria-hidden="true"
+                                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                                          data-testid="rek-author-add"
+                                          focusable="false"
+                                          id="rek-author-add"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                                          />
+                                        </svg>
+                                      </button>
+                                    </span>
                                     <div
                                       class="MuiBox-root css-1p0wbhh"
                                     >
@@ -3366,18 +3370,18 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                                 >
                                   <table
-                                    class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                                    style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                                    class="MuiTable-root MuiTable-stickyHeader css-1siqyiz-MuiTable-root"
+                                    style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                                   >
                                     <thead
-                                      class="MuiTableHead-root css-7psuou-MuiTableHead-root"
+                                      class="MuiTableHead-root css-1e5wupo-MuiTableHead-root"
                                     >
                                       <tr
-                                        class="MuiTableRow-root MuiTableRow-head css-1hwldci-MuiTableRow-root"
+                                        class="MuiTableRow-root MuiTableRow-head css-espywj-MuiTableRow-root"
                                       >
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-a0ao22-MuiTableCell-root"
                                           colspan="1"
                                           data-index="0"
                                           scope="col"
@@ -3399,7 +3403,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ohzejf-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="1"
@@ -3415,7 +3419,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                               >
                                                 <div
-                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
+                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
                                                 >
                                                   <div
                                                     class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -3481,7 +3485,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-g5x26p-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="2"
@@ -3540,9 +3544,127 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1bm249v-MuiTableCell-root"
                                           colspan="1"
+                                          data-can-sort="true"
                                           data-index="3"
+                                          scope="col"
+                                        >
+                                          <div
+                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                                          >
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                            >
+                                              <div
+                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                              >
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                                >
+                                                  External identifier
+                                                </span>
+                                              </div>
+                                              <span
+                                                aria-label="Sort by External identifier ascending"
+                                                class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                                data-mui-internal-clone-element="true"
+                                              >
+                                                <span
+                                                  aria-label="Sort by External identifier ascending"
+                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                  role="button"
+                                                  tabindex="0"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                    data-testid="SyncAltIcon"
+                                                    focusable="false"
+                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                                    />
+                                                  </svg>
+                                                </span>
+                                                <span
+                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                                >
+                                                  0
+                                                </span>
+                                              </span>
+                                            </div>
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                                            />
+                                          </div>
+                                        </th>
+                                        <th
+                                          aria-sort="none"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-l8l4bg-MuiTableCell-root"
+                                          colspan="1"
+                                          data-can-sort="true"
+                                          data-index="4"
+                                          scope="col"
+                                        >
+                                          <div
+                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                                          >
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                            >
+                                              <div
+                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                              >
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                                >
+                                                  External identifier type
+                                                </span>
+                                              </div>
+                                              <span
+                                                aria-label="Sort by External identifier type ascending"
+                                                class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                                data-mui-internal-clone-element="true"
+                                              >
+                                                <span
+                                                  aria-label="Sort by External identifier type ascending"
+                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                  role="button"
+                                                  tabindex="0"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                    data-testid="SyncAltIcon"
+                                                    focusable="false"
+                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                                    />
+                                                  </svg>
+                                                </span>
+                                                <span
+                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                                >
+                                                  0
+                                                </span>
+                                              </span>
+                                            </div>
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                                            />
+                                          </div>
+                                        </th>
+                                        <th
+                                          aria-sort="none"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-s3j1z4-MuiTableCell-root"
+                                          colspan="1"
+                                          data-index="5"
                                           scope="col"
                                         >
                                           <div
@@ -3565,16 +3687,16 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </tr>
                                     </thead>
                                     <tbody
-                                      class="MuiTableBody-root css-tlrxt6-MuiTableBody-root"
+                                      class="MuiTableBody-root css-1768eoe-MuiTableBody-root"
                                     >
                                       <tr
-                                        class="MuiTableRow-root css-e9t0og-MuiTableRow-root"
+                                        class="MuiTableRow-root css-1mh7ixc-MuiTableRow-root"
                                         data-index="0"
                                         data-testid="rek-author-list-row-0"
                                         id="rek-author-list-row-0"
                                       >
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-15fffb1-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1loir7x-MuiTableCell-root"
                                           data-index="0"
                                         >
                                           <span
@@ -3584,7 +3706,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           >
                                             <button
                                               aria-label="Expand"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1cx15j9-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-11msszc-MuiButtonBase-root-MuiIconButton-root"
                                               data-testid="expandPanelIcon-6168"
                                               id="expandPanelIcon-6168"
                                               tabindex="0"
@@ -3606,11 +3728,11 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </span>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-oov9ou-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-2k2q4r-MuiTableCell-root"
                                           data-index="1"
                                         >
                                           <div
-                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
+                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
                                           >
                                             <div
                                               class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -3648,7 +3770,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </div>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-ny6ss8-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-18tgpge-MuiTableCell-root"
                                           data-index="2"
                                         >
                                           <p
@@ -3660,119 +3782,155 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </p>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1yezn55-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lnogw-MuiTableCell-root"
                                           data-index="3"
+                                        >
+                                          <p
+                                            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                                            data-testid="rek-author-list-row-0-external-identifier"
+                                            id="rek-author-list-row-0-external-identifier"
+                                          />
+                                        </td>
+                                        <td
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-9qz0bt-MuiTableCell-root"
+                                          data-index="4"
+                                        >
+                                          <p
+                                            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                                            data-testid="rek-author-list-row-0-external-identifier-type"
+                                            id="rek-author-list-row-0-external-identifier-type"
+                                          />
+                                        </td>
+                                        <td
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rk4eo5-MuiTableCell-root"
+                                          data-index="5"
                                         >
                                           <div
                                             class="MuiBox-root css-4knjz3"
                                           >
-                                            <button
-                                              aria-label="Move item up the order"
-                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-move-up"
-                                              disabled=""
-                                              id="rek-author-list-row-0-move-up"
-                                              tabindex="-1"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowUpIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Move item down the order"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-move-down"
-                                              id="rek-author-list-row-0-move-down"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowDownIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Edit this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-edit"
-                                              id="rek-author-list-row-0-edit"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="EditIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
+                                            <span
                                               aria-label="Remove this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class=""
                                               data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-0-delete"
-                                              id="rek-author-list-row-0-delete"
-                                              tabindex="0"
-                                              type="button"
                                             >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="DeleteIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
+                                              <button
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-0-delete"
+                                                id="rek-author-list-row-0-delete"
+                                                tabindex="0"
+                                                type="button"
                                               >
-                                                <path
-                                                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                                                />
-                                              </svg>
-                                            </button>
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="DeleteIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
+                                            <span
+                                              aria-label="Edit this item"
+                                              class=""
+                                              data-mui-internal-clone-element="true"
+                                            >
+                                              <button
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-0-edit"
+                                                id="rek-author-list-row-0-edit"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="EditIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
+                                            <span
+                                              aria-label="Move item down the order"
+                                              class=""
+                                              data-mui-internal-clone-element="true"
+                                            >
+                                              <button
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-0-move-down"
+                                                id="rek-author-list-row-0-move-down"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="KeyboardArrowDownIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
+                                            <span
+                                              aria-label="Move item up the order"
+                                              class=""
+                                              data-mui-internal-clone-element="true"
+                                            >
+                                              <button
+                                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-0-move-up"
+                                                disabled=""
+                                                id="rek-author-list-row-0-move-up"
+                                                tabindex="-1"
+                                                type="button"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="KeyboardArrowUpIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
                                           </div>
                                         </td>
                                       </tr>
                                       <tr
-                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-1t4kkhn-MuiTableRow-root"
+                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-isoipy-MuiTableRow-root"
                                         data-index="1"
                                         data-testid="rek-author-list-row-0-detailPanel"
                                         id="rek-author-list-row-0-detailPanel"
                                       >
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-1ld75bz-MuiTableCell-root"
-                                          colspan="4"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-12iq70z-MuiTableCell-root"
+                                          colspan="6"
                                         />
                                       </tr>
                                       <tr
-                                        class="MuiTableRow-root css-e9t0og-MuiTableRow-root"
+                                        class="MuiTableRow-root css-1mh7ixc-MuiTableRow-root"
                                         data-index="2"
                                         data-testid="rek-author-list-row-1"
                                         id="rek-author-list-row-1"
                                       >
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-15fffb1-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1loir7x-MuiTableCell-root"
                                           data-index="0"
                                         >
                                           <span
@@ -3782,7 +3940,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           >
                                             <button
                                               aria-label="Expand"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1cx15j9-MuiButtonBase-root-MuiIconButton-root"
+                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-11msszc-MuiButtonBase-root-MuiIconButton-root"
                                               data-testid="expandPanelIcon-84025"
                                               id="expandPanelIcon-84025"
                                               tabindex="0"
@@ -3804,11 +3962,11 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </span>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-oov9ou-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-2k2q4r-MuiTableCell-root"
                                           data-index="1"
                                         >
                                           <div
-                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
+                                            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
                                           >
                                             <div
                                               class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -3846,7 +4004,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </div>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-ny6ss8-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-18tgpge-MuiTableCell-root"
                                           data-index="2"
                                         >
                                           <p
@@ -3858,109 +4016,145 @@ exports[`AdminContainer component should render default view 1`] = `
                                           </p>
                                         </td>
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1yezn55-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-lnogw-MuiTableCell-root"
                                           data-index="3"
+                                        >
+                                          <p
+                                            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                                            data-testid="rek-author-list-row-1-external-identifier"
+                                            id="rek-author-list-row-1-external-identifier"
+                                          />
+                                        </td>
+                                        <td
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-9qz0bt-MuiTableCell-root"
+                                          data-index="4"
+                                        >
+                                          <p
+                                            class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                                            data-testid="rek-author-list-row-1-external-identifier-type"
+                                            id="rek-author-list-row-1-external-identifier-type"
+                                          />
+                                        </td>
+                                        <td
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-rk4eo5-MuiTableCell-root"
+                                          data-index="5"
                                         >
                                           <div
                                             class="MuiBox-root css-4knjz3"
                                           >
-                                            <button
-                                              aria-label="Move item up the order"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-move-up"
-                                              id="rek-author-list-row-1-move-up"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowUpIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Move item down the order"
-                                              class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-move-down"
-                                              disabled=""
-                                              id="rek-author-list-row-1-move-down"
-                                              tabindex="-1"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="KeyboardArrowDownIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
-                                              aria-label="Edit this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
-                                              data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-edit"
-                                              id="rek-author-list-row-1-edit"
-                                              tabindex="0"
-                                              type="button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="EditIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
-                                              >
-                                                <path
-                                                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
-                                                />
-                                              </svg>
-                                            </button>
-                                            <button
+                                            <span
                                               aria-label="Remove this item"
-                                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                              class=""
                                               data-mui-internal-clone-element="true"
-                                              data-testid="rek-author-list-row-1-delete"
-                                              id="rek-author-list-row-1-delete"
-                                              tabindex="0"
-                                              type="button"
                                             >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
-                                                data-testid="DeleteIcon"
-                                                focusable="false"
-                                                viewBox="0 0 24 24"
+                                              <button
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-1-delete"
+                                                id="rek-author-list-row-1-delete"
+                                                tabindex="0"
+                                                type="button"
                                               >
-                                                <path
-                                                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                                                />
-                                              </svg>
-                                            </button>
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="DeleteIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
+                                            <span
+                                              aria-label="Edit this item"
+                                              class=""
+                                              data-mui-internal-clone-element="true"
+                                            >
+                                              <button
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-1-edit"
+                                                id="rek-author-list-row-1-edit"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="EditIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
+                                            <span
+                                              aria-label="Move item down the order"
+                                              class=""
+                                              data-mui-internal-clone-element="true"
+                                            >
+                                              <button
+                                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-1-move-down"
+                                                disabled=""
+                                                id="rek-author-list-row-1-move-down"
+                                                tabindex="-1"
+                                                type="button"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="KeyboardArrowDownIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
+                                            <span
+                                              aria-label="Move item up the order"
+                                              class=""
+                                              data-mui-internal-clone-element="true"
+                                            >
+                                              <button
+                                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall css-6bswbt-MuiButtonBase-root-MuiIconButton-root"
+                                                data-testid="rek-author-list-row-1-move-up"
+                                                id="rek-author-list-row-1-move-up"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+                                                  data-testid="KeyboardArrowUpIcon"
+                                                  focusable="false"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <path
+                                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                                  />
+                                                </svg>
+                                              </button>
+                                            </span>
                                           </div>
                                         </td>
                                       </tr>
                                       <tr
-                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-1t4kkhn-MuiTableRow-root"
+                                        class="MuiTableRow-root Mui-TableBodyCell-DetailPanel css-isoipy-MuiTableRow-root"
                                         data-index="3"
                                         data-testid="rek-author-list-row-1-detailPanel"
                                         id="rek-author-list-row-1-detailPanel"
                                       >
                                         <td
-                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-1ld75bz-MuiTableCell-root"
-                                          colspan="4"
+                                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium Mui-TableBodyCell-DetailPanel css-12iq70z-MuiTableCell-root"
+                                          colspan="6"
                                         />
                                       </tr>
                                     </tbody>
@@ -4087,28 +4281,32 @@ exports[`AdminContainer component should render default view 1`] = `
                                   <div
                                     class="MuiBox-root css-wsew38"
                                   >
-                                    <button
+                                    <span
                                       aria-label="Add editor"
-                                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                                      class=""
                                       data-mui-internal-clone-element="true"
-                                      data-testid="rek-contributor-add-editor"
-                                      id="rek-contributor-add-editor"
-                                      tabindex="0"
-                                      type="button"
                                     >
-                                      <svg
-                                        aria-hidden="true"
-                                        class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                                        data-testid="rek-contributor-add"
-                                        focusable="false"
-                                        id="rek-contributor-add"
-                                        viewBox="0 0 24 24"
+                                      <button
+                                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                                        data-testid="rek-contributor-add-editor"
+                                        id="rek-contributor-add-editor"
+                                        tabindex="0"
+                                        type="button"
                                       >
-                                        <path
-                                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                                        />
-                                      </svg>
-                                    </button>
+                                        <svg
+                                          aria-hidden="true"
+                                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                                          data-testid="rek-contributor-add"
+                                          focusable="false"
+                                          id="rek-contributor-add"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                                          />
+                                        </svg>
+                                      </button>
+                                    </span>
                                     <div
                                       class="MuiBox-root css-1p0wbhh"
                                     >
@@ -4123,18 +4321,18 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiTableContainer-root css-bhavhl-MuiTableContainer-root"
                                 >
                                   <table
-                                    class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                                    style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                                    class="MuiTable-root MuiTable-stickyHeader css-1siqyiz-MuiTable-root"
+                                    style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 400; --col-nameAsPublished-size: 400; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                                   >
                                     <thead
-                                      class="MuiTableHead-root css-7psuou-MuiTableHead-root"
+                                      class="MuiTableHead-root css-1e5wupo-MuiTableHead-root"
                                     >
                                       <tr
-                                        class="MuiTableRow-root MuiTableRow-head css-1hwldci-MuiTableRow-root"
+                                        class="MuiTableRow-root MuiTableRow-head css-espywj-MuiTableRow-root"
                                       >
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10odl3f-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-a0ao22-MuiTableCell-root"
                                           colspan="1"
                                           data-index="0"
                                           scope="col"
@@ -4156,7 +4354,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1djevyp-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1ohzejf-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="1"
@@ -4172,7 +4370,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                                 class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
                                               >
                                                 <div
-                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-k7akr5-MuiGrid-root"
+                                                  class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1cv1tdv-MuiGrid-root"
                                                 >
                                                   <div
                                                     class="MuiGrid-root MuiGrid-direction-xs-row css-ilvgd9-MuiGrid-root"
@@ -4238,7 +4436,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-d1tmtq-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-g5x26p-MuiTableCell-root"
                                           colspan="1"
                                           data-can-sort="true"
                                           data-index="2"
@@ -4297,9 +4495,127 @@ exports[`AdminContainer component should render default view 1`] = `
                                         </th>
                                         <th
                                           aria-sort="none"
-                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-1bm249v-MuiTableCell-root"
                                           colspan="1"
+                                          data-can-sort="true"
                                           data-index="3"
+                                          scope="col"
+                                        >
+                                          <div
+                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                                          >
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                            >
+                                              <div
+                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                              >
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                                >
+                                                  External identifier
+                                                </span>
+                                              </div>
+                                              <span
+                                                aria-label="Sort by External identifier descending"
+                                                class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                                data-mui-internal-clone-element="true"
+                                              >
+                                                <span
+                                                  aria-label="Sort by External identifier descending"
+                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                  role="button"
+                                                  tabindex="0"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                    data-testid="SyncAltIcon"
+                                                    focusable="false"
+                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                                    />
+                                                  </svg>
+                                                </span>
+                                                <span
+                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                                >
+                                                  0
+                                                </span>
+                                              </span>
+                                            </div>
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                                            />
+                                          </div>
+                                        </th>
+                                        <th
+                                          aria-sort="none"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-l8l4bg-MuiTableCell-root"
+                                          colspan="1"
+                                          data-can-sort="true"
+                                          data-index="4"
+                                          scope="col"
+                                        >
+                                          <div
+                                            class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                                          >
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                                            >
+                                              <div
+                                                class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                              >
+                                                <span
+                                                  class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                                >
+                                                  External identifier type
+                                                </span>
+                                              </div>
+                                              <span
+                                                aria-label="Sort by External identifier type descending"
+                                                class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                                data-mui-internal-clone-element="true"
+                                              >
+                                                <span
+                                                  aria-label="Sort by External identifier type descending"
+                                                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                                  role="button"
+                                                  tabindex="0"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                                    data-testid="SyncAltIcon"
+                                                    focusable="false"
+                                                    style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <path
+                                                      d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                                    />
+                                                  </svg>
+                                                </span>
+                                                <span
+                                                  class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                                >
+                                                  0
+                                                </span>
+                                              </span>
+                                            </div>
+                                            <div
+                                              class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                                            />
+                                          </div>
+                                        </th>
+                                        <th
+                                          aria-sort="none"
+                                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-s3j1z4-MuiTableCell-root"
+                                          colspan="1"
+                                          data-index="5"
                                           scope="col"
                                         >
                                           <div
@@ -4322,14 +4638,11 @@ exports[`AdminContainer component should render default view 1`] = `
                                       </tr>
                                     </thead>
                                     <tbody
-                                      class="MuiTableBody-root css-1d5b2yu-MuiTableBody-root"
+                                      class="MuiTableBody-root css-6jvq2p-MuiTableBody-root"
                                     >
-                                      <tr
-                                        style="display: grid;"
-                                      >
+                                      <tr>
                                         <td
-                                          colspan="4"
-                                          style="display: grid;"
+                                          colspan="6"
                                         >
                                           <p
                                             class="MuiTypography-root MuiTypography-body1 css-5moy9q-MuiTypography-root"
