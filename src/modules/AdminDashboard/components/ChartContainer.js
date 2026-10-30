@@ -15,7 +15,10 @@ const ChartContainer = ({ label, subtext, tooltip, children, id }) => {
                 {label}
             </SectionTitle>
             {subtext && (
-                <SectionTitle sx={{ textAlign: 'center', textTransform: 'none' }} data-testid={`${id}-subtitle`}>
+                <SectionTitle
+                    sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                    data-testid={`${id}-subtitle`}
+                >
                     {isStringSubtext ? (
                         <Typography variant="span" sx={{ fontSize: '0.875rem', fontWeight: 200 }}>
                             {subtext}
