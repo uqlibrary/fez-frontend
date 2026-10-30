@@ -264,6 +264,25 @@ const AppClass = ({
         location.pathname?.startsWith('/records/claim') ||
         false;
 
+    const insertAlertList = () => {
+        if (!!isAdminPage) {
+            return null; // admins don't need to see this (enough to use up the sapce)
+        }
+
+        const alertElement = document.getElementById('alert-list');
+        if (!!alertElement) {
+            return null; // already created
+        }
+
+        const html = '<alert-list id="alert-list" system="espace" />';
+        const alertTemplate = document.createElement('template');
+        alertTemplate.innerHTML = html;
+        const alertBlock = document.getElementById('espace-alerts-area');
+        !!alertBlock && !!alertTemplate && alertBlock.appendChild(alertTemplate.content.cloneNode(true));
+
+        return null;
+    };
+
     return (
         <StyledGrid container sx={{ width: '100%' }}>
             <Meta routesConfig={routesConfig} />
@@ -381,8 +400,8 @@ const AppClass = ({
             <div className="content-container" id="content-container" style={containerStyle}>
                 <ScrollTop show containerId="content-container" />
 
-                <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
-                    {!isAdminPage && <alert-list system="espace" />}
+                <div id="espace-alerts-area" role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
+                    {insertAlertList()}
                 </div>
                 <ConfirmDialogBox
                     hideCancelButton
