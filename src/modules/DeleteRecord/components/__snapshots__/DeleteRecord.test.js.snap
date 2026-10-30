@@ -233,7 +233,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                       title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css-19k1sqg"
@@ -254,7 +254,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                                       title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -1269,7 +1269,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                       title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css-19k1sqg"
@@ -1290,7 +1290,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                                       title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -2303,7 +2303,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                       title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css-19k1sqg"
@@ -2324,7 +2324,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                                       title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span

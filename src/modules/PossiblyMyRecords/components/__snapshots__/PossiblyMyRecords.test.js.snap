@@ -354,7 +354,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                           title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -476,7 +476,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                           title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -598,7 +598,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                           title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span

@@ -99,11 +99,11 @@ export const PublicationStats = ({ publicationsStats, showHindexHelpLink = false
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={txt.hindexHelpAriaLabel}
-                                    size="small"
+                                    size="medium"
                                     data-testid="hindex-help-link"
                                     sx={{ p: 0 }}
                                 >
-                                    <HelpIcon fontSize="small" color="primary" />
+                                    <HelpIcon fontSize="medium" color="primary" />
                                 </IconButton>
                             </Tooltip>
                         </Box>

@@ -529,7 +529,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                           title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -895,7 +895,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                           title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span

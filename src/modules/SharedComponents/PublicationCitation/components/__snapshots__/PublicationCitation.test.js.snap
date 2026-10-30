@@ -436,7 +436,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -457,7 +457,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -675,7 +675,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -696,7 +696,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Scopus will open in a new window"
                       >
                         <span
-                          class="fez-icon scopus large"
+                          class="fez-icon scopus xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -717,7 +717,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Altmetric will open in a new window"
                       >
                         <span
-                          class="fez-icon altmetric large"
+                          class="fez-icon altmetric xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -738,7 +738,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -833,7 +833,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -854,7 +854,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Scopus will open in a new window"
                       >
                         <span
-                          class="fez-icon scopus large"
+                          class="fez-icon scopus xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -875,7 +875,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Altmetric will open in a new window"
                       >
                         <span
-                          class="fez-icon altmetric large"
+                          class="fez-icon altmetric xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -896,7 +896,7 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -1088,7 +1088,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -1109,7 +1109,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -1318,7 +1318,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -1339,7 +1339,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -1567,7 +1567,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -1588,7 +1588,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -1897,7 +1897,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -1918,7 +1918,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Scopus will open in a new window"
                       >
                         <span
-                          class="fez-icon scopus large"
+                          class="fez-icon scopus xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -1939,7 +1939,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Altmetric will open in a new window"
                       >
                         <span
-                          class="fez-icon altmetric large"
+                          class="fez-icon altmetric xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -1960,7 +1960,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -2252,7 +2252,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2273,7 +2273,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Scopus will open in a new window"
                       >
                         <span
-                          class="fez-icon scopus large"
+                          class="fez-icon scopus xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2294,7 +2294,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Altmetric will open in a new window"
                       >
                         <span
-                          class="fez-icon altmetric large"
+                          class="fez-icon altmetric xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2315,7 +2315,7 @@ exports[`PublicationCitation  should render component with default item with ima
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -2570,7 +2570,7 @@ exports[`PublicationCitation  should render component with default item without 
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2591,7 +2591,7 @@ exports[`PublicationCitation  should render component with default item without 
                         title="Full citation in Scopus will open in a new window"
                       >
                         <span
-                          class="fez-icon scopus large"
+                          class="fez-icon scopus xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2612,7 +2612,7 @@ exports[`PublicationCitation  should render component with default item without 
                         title="Full citation in Altmetric will open in a new window"
                       >
                         <span
-                          class="fez-icon altmetric large"
+                          class="fez-icon altmetric xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2633,7 +2633,7 @@ exports[`PublicationCitation  should render component with default item without 
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -2820,7 +2820,7 @@ exports[`PublicationCitation  should render component with default item without 
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2841,7 +2841,7 @@ exports[`PublicationCitation  should render component with default item without 
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -2946,7 +2946,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -2967,7 +2967,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -3176,7 +3176,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -3197,7 +3197,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -3406,7 +3406,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -3427,7 +3427,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -3636,7 +3636,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -3657,7 +3657,7 @@ exports[`PublicationCitation  should render component with empty custom actions 
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -3873,7 +3873,7 @@ exports[`PublicationCitation  should render component with publication from mult
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -3894,7 +3894,7 @@ exports[`PublicationCitation  should render component with publication from mult
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -4126,7 +4126,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -4147,7 +4147,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -4492,7 +4492,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -4513,7 +4513,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                         title="Full citation in Scopus will open in a new window"
                       >
                         <span
-                          class="fez-icon scopus large"
+                          class="fez-icon scopus xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -4534,7 +4534,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                         title="Full citation in Altmetric will open in a new window"
                       >
                         <span
-                          class="fez-icon altmetric large"
+                          class="fez-icon altmetric xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -4555,7 +4555,7 @@ exports[`PublicationCitation  should render component without image if whitelist
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -4747,7 +4747,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -4768,7 +4768,7 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -5041,7 +5041,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -5062,7 +5062,7 @@ exports[`PublicationCitation  should render publication citation metric with cou
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -5312,7 +5312,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -5333,7 +5333,7 @@ exports[`PublicationCitation  should render publication citation metric without 
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span
@@ -5578,7 +5578,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                         title="Full citation in Web of science will open in a new window"
                       >
                         <span
-                          class="fez-icon wos large"
+                          class="fez-icon wos xxlarge"
                         />
                         <span
                           class="MuiBox-root css-19k1sqg"
@@ -5599,7 +5599,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                         title="Full citation in Google scholar will open in a new window"
                       >
                         <span
-                          class="fez-icon google large"
+                          class="fez-icon google xxlarge"
                         />
                       </a>
                       <span

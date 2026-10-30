@@ -46,7 +46,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                                               size="medium"
                                               disabled={!copyEnabled}
                                           >
-                                              <Copy color={copyEnabled ? 'secondary' : 'disabled'} fontSize="small" />
+                                              <Copy color={copyEnabled ? 'secondary' : 'disabled'} fontSize="medium" />
                                           </IconButton>
                                       </span>
                                   </Tooltip>

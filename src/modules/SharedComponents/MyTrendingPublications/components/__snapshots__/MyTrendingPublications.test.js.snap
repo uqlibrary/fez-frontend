@@ -344,7 +344,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Web of science will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon wos large"
+                                    class="fez-icon wos xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -365,7 +365,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Scopus will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon scopus large"
+                                    class="fez-icon scopus xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -386,7 +386,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Altmetric will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon altmetric large"
+                                    class="fez-icon altmetric xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -407,7 +407,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Google scholar will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon google large"
+                                    class="fez-icon google xxlarge"
                                   />
                                 </a>
                                 <span
@@ -712,7 +712,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Web of science will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon wos large"
+                                    class="fez-icon wos xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -733,7 +733,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Scopus will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon scopus large"
+                                    class="fez-icon scopus xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -754,7 +754,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Altmetric will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon altmetric large"
+                                    class="fez-icon altmetric xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -775,7 +775,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Google scholar will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon google large"
+                                    class="fez-icon google xxlarge"
                                   />
                                 </a>
                                 <span
@@ -1065,7 +1065,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Web of science will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon wos large"
+                                    class="fez-icon wos xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -1086,7 +1086,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Scopus will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon scopus large"
+                                    class="fez-icon scopus xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -1107,7 +1107,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Altmetric will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon altmetric large"
+                                    class="fez-icon altmetric xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -1128,7 +1128,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                                   title="Full citation in Google scholar will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon google large"
+                                    class="fez-icon google xxlarge"
                                   />
                                 </a>
                                 <span

@@ -515,11 +515,10 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                 },
                 muiTableBodyCellProps: {
                     sx: {
-                        justifyContent: 'flex-end',
                         '& > div': {
+                            justifyContent: 'space-evenly',
                             gap: 0,
                             flexDirection: 'row-reverse',
-                            justifyContent: 'center',
                             [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
                                 '& button[aria-label=Save]': { order: 1 },
                                 '& button[aria-label=Cancel]': { order: 2 },
@@ -580,6 +579,40 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     id={`${contributorEditorId}-${!!editingRow ? 'update' : 'add'}-cancel`}
                     data-testid={`${contributorEditorId}-${!!editingRow ? 'update' : 'add'}-cancel`}
                     color="secondary"
+                    {...props}
+                />
+            ),
+            SearchIcon: props => (
+                <tableIcons.Search
+                    id={`${contributorEditorId}-list-search`}
+                    data-testid={`${contributorEditorId}-list-search`}
+                    color="secondary"
+                    {...props}
+                    fontSize="large"
+                />
+            ),
+            SearchOffIcon: props => (
+                <tableIcons.SearchOff
+                    id={`${contributorEditorId}-list-search-off`}
+                    data-testid={`${contributorEditorId}-list-search-off`}
+                    color="secondary"
+                    {...props}
+                    fontSize="large"
+                />
+            ),
+            ChevronLeftIcon: props => (
+                <tableIcons.ChevronLeft
+                    id={`${contributorEditorId}-prev-results`}
+                    data-testid={`${contributorEditorId}-prev-results`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronRightIcon: props => (
+                <tableIcons.ChevronRight
+                    id={`${contributorEditorId}-next-results`}
+                    data-testid={`${contributorEditorId}-next-results`}
+                    fontSize="large"
                     {...props}
                 />
             ),

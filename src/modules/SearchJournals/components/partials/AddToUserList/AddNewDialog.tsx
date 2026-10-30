@@ -85,7 +85,7 @@ const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate
                     size="medium"
                     disabled={isSubmitting}
                 >
-                    <CloseIcon fontSize="small" />
+                    <CloseIcon fontSize="medium" />
                 </IconButton>
             </DialogTitle>
             <DialogContent>

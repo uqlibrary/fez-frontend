@@ -845,6 +845,22 @@ export const AuthorsList = ({
                     {...props}
                 />
             ),
+            ChevronLeftIcon: props => (
+                <tableIcons.ChevronLeft
+                    id={`${contributorEditorId}-prev-results`}
+                    data-testid={`${contributorEditorId}-prev-results`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronRightIcon: props => (
+                <tableIcons.ChevronRight
+                    id={`${contributorEditorId}-next-results`}
+                    data-testid={`${contributorEditorId}-next-results`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
         },
         muiExpandButtonProps: ({ table, row }) => ({
             id: `expandPanelIcon-${row.original.aut_id}`,
@@ -947,7 +963,7 @@ export const AuthorsList = ({
                             size="medium"
                             color="primary"
                         >
-                            <KeyboardArrowDown />
+                            <KeyboardArrowDown fontSize="medium" />
                         </IconButton>
                     </Tooltip>
 

@@ -26,7 +26,7 @@ const ChartContainer = ({ label, subtext, tooltip, children, id }) => {
 
                     {tooltip && (
                         <Tooltip title={tooltip} arrow>
-                            <HelpIcon fontSize="small" />
+                            <HelpIcon fontSize="medium" />
                         </Tooltip>
                     )}
                 </SectionTitle>

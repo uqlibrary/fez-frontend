@@ -20,7 +20,7 @@ export const CitationCountView = ({ source, count, link, title }) => {
                 title={title}
                 openInNewIcon={false}
             >
-                <span className={`fez-icon ${source} large`} />
+                <span className={`fez-icon ${source} xxlarge`} />
                 {count !== null && (
                     <Box component={'span'} sx={{ marginLeft: '0.4em' }}>
                         {count}

@@ -205,7 +205,7 @@ export const ViewJournal = () => {
                                 onClick={() => openPublishAsOASearch(searchUrl, buildPublishAsOASearch(journalDetails))}
                             >
                                 {txt.publishAsOAButton.text}
-                                <OpenInNew fontSize="small" sx={{ ml: 1 }} />
+                                <OpenInNew fontSize="medium" sx={{ ml: 1 }} />
                             </Button>
                         </Tooltip>
                     )}

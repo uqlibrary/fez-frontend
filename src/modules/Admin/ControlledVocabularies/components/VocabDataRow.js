@@ -74,7 +74,7 @@ export const VocabDataRow = ({ row }) => {
                             {row.cvo_hide === 1 && (
                                 <Tooltip title={txt.admin.tooltip.hidden} data-testid={`row-hidden-icon-${row.cvo_id}`}>
                                     <VisibilityOffIcon
-                                        fontSize="small"
+                                        fontSize="medium"
                                         sx={{ display: 'inline-block', paddingLeft: 1 }}
                                     />
                                 </Tooltip>
@@ -84,7 +84,7 @@ export const VocabDataRow = ({ row }) => {
                                     title={txt.admin.tooltip.readonly}
                                     data-testid={`row-locked-icon-${row.cvo_id}`}
                                 >
-                                    <LockOutlinedIcon fontSize="small" color={'secondary'} />
+                                    <LockOutlinedIcon fontSize="medium" color={'secondary'} />
                                 </Tooltip>
                             )}
                         </Grid>
@@ -107,7 +107,7 @@ export const VocabDataRow = ({ row }) => {
                                     size="large"
                                     disabled={state.isOpen}
                                 >
-                                    <Edit fontSize="small" />
+                                    <Edit fontSize="medium" />
                                 </IconButton>
                             )}
                         </Grid>
